@@ -1,0 +1,113 @@
+{
+  "summary": {
+    "strategy_id": "gen-000-strat-01",
+    "name": "Test Direct Write",
+    "archetype": "SHARPE_HUNTER",
+    "generation": 0,
+    "final_composite_fitness": null,
+    "final_sharpe_1Y": null,
+    "final_return_1Y": null,
+    "final_max_drawdown_1Y": null,
+    "final_std_dev": null,
+    "optimization_delta": null,
+    "passed_rough_cut": null,
+    "disqualified": false,
+    "status": "PENDING",
+    "rebalance_frequency": "daily"
+  },
+  "identity": {
+    "strategy_id": "gen-000-strat-01",
+    "name": "Test Direct Write",
+    "generation": 0,
+    "archetype": "SHARPE_HUNTER",
+    "slot_number": 1,
+    "created_at": "2026-04-10T19:29:31.629370+00:00",
+    "rebalance_frequency": "daily",
+    "composer_rebalance_value": {
+      "asset-class": "EQUITIES",
+      "rebalance-frequency": "daily"
+    },
+    "composer_symphony_id": null
+  },
+  "strategy": {
+    "description": {},
+    "composer_json": {
+      "step": "wt-cash-equal",
+      "rebalanceFrequency": {
+        "asset-class": "EQUITIES",
+        "rebalance-frequency": "daily"
+      },
+      "children": [
+        {
+          "id": "6328a794-86b4-4655-938c-1bdc8b265be6",
+          "step": "wt-cash-equal",
+          "children": [
+            {
+              "id": "f831c7e2-fb20-46e6-859c-de52fa6765dc",
+              "step": "asset",
+              "ticker": "BIL",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "lineage": {
+    "parent_ids": [],
+    "parent_patterns": [],
+    "generation_type": "NOVEL",
+    "mutation_description": null,
+    "is_seed": false,
+    "seed_source": null
+  },
+  "nominal_result": null,
+  "optimizer_data": null,
+  "final_result": null,
+  "logic_audit": {
+    "status": "PENDING",
+    "completed_at": null,
+    "checks": {
+      "crash_guard_present": null,
+      "bil_in_defensive_branch": null,
+      "weights_sum_to_100": null,
+      "no_leverage_in_defense": null,
+      "if_structure_valid": null,
+      "all_assets_in_universe": null,
+      "valid_node_types_only": null,
+      "window_days_string_format": null,
+      "has_else_condition": null
+    },
+    "failures": [],
+    "warnings": [],
+    "quarantined": false
+  },
+  "pipeline": {
+    "current_status": "PENDING",
+    "status_history": [
+      {
+        "status": "PENDING",
+        "timestamp": "2026-04-10T19:29:31.629370+00:00"
+      }
+    ],
+    "error_log": [],
+    "retry_count": 0,
+    "disqualified": false,
+    "disqualification_reason": null,
+    "disqualified_at": null,
+    "archived": false,
+    "archived_at": null,
+    "archive_path": null
+  },
+  "learner_metadata": {
+    "processed": false,
+    "processed_at": null,
+    "lessons_extracted": 0,
+    "lesson_ids": [],
+    "patterns_contributed": [],
+    "contributed_to_graveyard": false,
+    "graveyard_entry_id": null,
+    "contributed_to_lineage": true,
+    "notes": null
+  }
+}

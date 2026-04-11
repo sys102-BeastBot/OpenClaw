@@ -1,0 +1,709 @@
+2026-03-22T05:21:07Z [INFO] [monitor] API call call-001 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T05:21:07Z [INFO] [monitor] API call call-002 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T05:21:07Z [INFO] [monitor] API call call-003 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T05:21:07Z [INFO] [monitor] API call call-004 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T05:21:07Z [INFO] [monitor] API call call-005 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T05:21:07Z [WARNING] [monitor] API call call-006 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T05:21:07Z [WARNING] [monitor] API call call-007 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T05:21:07Z [WARNING] [monitor] API call call-008 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Unexpected error
+2026-03-22T05:21:07Z [WARNING] [monitor] API call call-009 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Unexpected error
+2026-03-22T05:21:07Z [INFO] [monitor] API call call-010 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T05:21:07Z [INFO] [monitor] API call call-011 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T05:21:07Z [WARNING] [monitor] API call call-012 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T05:21:07Z [WARNING] [monitor] API call call-013 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T05:22:46Z [INFO] [monitor] API call call-014 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T05:22:46Z [INFO] [monitor] API call call-015 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T05:22:46Z [INFO] [monitor] API call call-016 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T05:22:46Z [INFO] [monitor] API call call-017 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T05:22:46Z [INFO] [monitor] API call call-018 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T05:22:46Z [WARNING] [monitor] API call call-019 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T05:22:46Z [WARNING] [monitor] API call call-020 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T05:22:46Z [WARNING] [monitor] API call call-021 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Unexpected error
+2026-03-22T05:22:46Z [WARNING] [monitor] API call call-022 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Unexpected error
+2026-03-22T05:22:46Z [INFO] [monitor] API call call-023 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T05:22:46Z [INFO] [monitor] API call call-024 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T05:22:46Z [WARNING] [monitor] API call call-025 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T05:22:46Z [WARNING] [monitor] API call call-026 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T05:23:48Z [INFO] [monitor] API call call-027 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T05:23:48Z [INFO] [monitor] API call call-028 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T05:23:48Z [INFO] [monitor] API call call-029 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T05:23:48Z [INFO] [monitor] API call call-030 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T05:23:48Z [INFO] [monitor] API call call-031 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T05:23:48Z [WARNING] [monitor] API call call-032 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T05:23:48Z [WARNING] [monitor] API call call-033 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T05:23:48Z [WARNING] [monitor] API call call-034 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Unexpected error
+2026-03-22T05:23:48Z [WARNING] [monitor] API call call-035 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Unexpected error
+2026-03-22T05:23:48Z [INFO] [monitor] API call call-036 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T05:23:48Z [INFO] [monitor] API call call-037 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T05:23:48Z [WARNING] [monitor] API call call-038 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T05:23:48Z [WARNING] [monitor] API call call-039 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T05:37:00Z [INFO] [monitor] API call call-040 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T05:37:00Z [INFO] [monitor] API call call-041 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T05:37:00Z [INFO] [monitor] API call call-042 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T05:37:00Z [INFO] [monitor] API call call-043 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T05:37:00Z [INFO] [monitor] API call call-044 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T05:37:00Z [WARNING] [monitor] API call call-045 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T05:37:00Z [WARNING] [monitor] API call call-046 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T05:37:00Z [WARNING] [monitor] API call call-047 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Unexpected error
+2026-03-22T05:37:00Z [WARNING] [monitor] API call call-048 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Unexpected error
+2026-03-22T05:37:00Z [INFO] [monitor] API call call-049 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T05:37:00Z [INFO] [monitor] API call call-050 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T05:37:00Z [WARNING] [monitor] API call call-051 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T05:37:00Z [WARNING] [monitor] API call call-052 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=1ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T05:39:56Z [INFO] [monitor] API call call-053 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T05:39:56Z [INFO] [monitor] API call call-054 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T05:39:56Z [INFO] [monitor] API call call-055 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T05:39:56Z [INFO] [monitor] API call call-056 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T05:39:56Z [INFO] [monitor] API call call-057 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T05:39:56Z [WARNING] [monitor] API call call-058 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T05:39:56Z [WARNING] [monitor] API call call-059 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T05:39:56Z [WARNING] [monitor] API call call-060 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Unexpected error
+2026-03-22T05:39:56Z [WARNING] [monitor] API call call-061 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Unexpected error
+2026-03-22T05:39:56Z [INFO] [monitor] API call call-062 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T05:39:56Z [INFO] [monitor] API call call-063 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T05:39:56Z [WARNING] [monitor] API call call-064 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T05:39:56Z [WARNING] [monitor] API call call-065 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T05:40:23Z [INFO] [monitor] API call call-066 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T05:40:23Z [INFO] [monitor] API call call-067 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T05:40:23Z [INFO] [monitor] API call call-068 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T05:40:23Z [INFO] [monitor] API call call-069 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T05:40:23Z [INFO] [monitor] API call call-070 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T05:40:23Z [WARNING] [monitor] API call call-071 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T05:40:23Z [WARNING] [monitor] API call call-072 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T05:40:23Z [WARNING] [monitor] API call call-073 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Unexpected error
+2026-03-22T05:40:23Z [WARNING] [monitor] API call call-074 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Unexpected error
+2026-03-22T05:40:23Z [INFO] [monitor] API call call-075 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T05:40:23Z [INFO] [monitor] API call call-076 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T05:40:23Z [WARNING] [monitor] API call call-077 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T05:40:23Z [WARNING] [monitor] API call call-078 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T05:40:39Z [INFO] [monitor] API call call-079 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T05:40:39Z [INFO] [monitor] API call call-080 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T05:40:39Z [INFO] [monitor] API call call-081 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T05:40:39Z [INFO] [monitor] API call call-082 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T05:40:39Z [INFO] [monitor] API call call-083 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T05:40:39Z [WARNING] [monitor] API call call-084 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T05:40:39Z [WARNING] [monitor] API call call-085 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T05:40:39Z [WARNING] [monitor] API call call-086 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Unexpected error
+2026-03-22T05:40:39Z [WARNING] [monitor] API call call-087 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Unexpected error
+2026-03-22T05:40:39Z [INFO] [monitor] API call call-088 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T05:40:39Z [INFO] [monitor] API call call-089 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T05:40:39Z [WARNING] [monitor] API call call-090 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T05:40:39Z [WARNING] [monitor] API call call-091 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T05:41:19Z [INFO] [monitor] API call call-092 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T05:41:19Z [INFO] [monitor] API call call-093 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T05:41:19Z [INFO] [monitor] API call call-094 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T05:41:19Z [INFO] [monitor] API call call-095 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T05:41:19Z [INFO] [monitor] API call call-096 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T05:41:19Z [WARNING] [monitor] API call call-097 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T05:41:19Z [WARNING] [monitor] API call call-098 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T05:41:19Z [WARNING] [monitor] API call call-099 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Unexpected error
+2026-03-22T05:41:19Z [WARNING] [monitor] API call call-100 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Unexpected error
+2026-03-22T05:41:19Z [INFO] [monitor] API call call-101 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T05:41:19Z [INFO] [monitor] API call call-102 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T05:41:19Z [WARNING] [monitor] API call call-103 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T05:41:19Z [WARNING] [monitor] API call call-104 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T05:45:40Z [INFO] [monitor] API call call-105 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T05:45:40Z [INFO] [monitor] API call call-106 type=GENERATOR gen=1 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T05:45:40Z [WARNING] [monitor] API call call-107 type=GENERATOR gen=1 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T05:45:40Z [INFO] [monitor] API call call-108 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=1ms status=OK
+2026-03-22T05:45:40Z [WARNING] [monitor] API call call-109 type=GENERATOR gen=1 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T05:45:40Z [INFO] [monitor] API call call-110 type=GENERATOR gen=2 in=2000 out=800 cost=$0.018000 dur=1ms status=OK
+2026-03-22T05:45:40Z [INFO] [monitor] API call call-111 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T05:46:23Z [INFO] [monitor] API call call-112 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T05:46:23Z [INFO] [monitor] API call call-113 type=GENERATOR gen=1 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T05:46:23Z [WARNING] [monitor] API call call-114 type=GENERATOR gen=1 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T05:46:23Z [INFO] [monitor] API call call-115 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T05:46:23Z [WARNING] [monitor] API call call-116 type=GENERATOR gen=1 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T05:46:23Z [INFO] [monitor] API call call-117 type=GENERATOR gen=2 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T05:46:23Z [INFO] [monitor] API call call-118 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T05:46:24Z [INFO] [monitor] API call call-119 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T05:46:24Z [INFO] [monitor] API call call-120 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T05:46:24Z [INFO] [monitor] API call call-121 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T05:46:24Z [INFO] [monitor] API call call-122 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T05:46:24Z [INFO] [monitor] API call call-123 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T05:46:24Z [WARNING] [monitor] API call call-124 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T05:46:24Z [WARNING] [monitor] API call call-125 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T05:46:24Z [WARNING] [monitor] API call call-126 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Unexpected error
+2026-03-22T05:46:24Z [WARNING] [monitor] API call call-127 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Unexpected error
+2026-03-22T05:46:24Z [INFO] [monitor] API call call-128 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T05:46:24Z [INFO] [monitor] API call call-129 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T05:46:24Z [WARNING] [monitor] API call call-130 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T05:46:24Z [WARNING] [monitor] API call call-131 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T17:20:51Z [INFO] [monitor] API call call-132 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T17:20:51Z [INFO] [monitor] API call call-133 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T17:20:51Z [INFO] [monitor] API call call-134 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T17:20:51Z [INFO] [monitor] API call call-135 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T17:20:51Z [INFO] [monitor] API call call-136 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T17:22:48Z [INFO] [monitor] API call call-137 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T17:22:48Z [INFO] [monitor] API call call-138 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T17:22:48Z [INFO] [monitor] API call call-139 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T17:22:48Z [INFO] [monitor] API call call-140 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T17:22:48Z [INFO] [monitor] API call call-141 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T17:22:48Z [INFO] [monitor] API call call-142 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T17:22:48Z [INFO] [monitor] API call call-143 type=GENERATOR gen=1 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T17:22:48Z [WARNING] [monitor] API call call-144 type=GENERATOR gen=1 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T17:22:48Z [INFO] [monitor] API call call-145 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T17:22:48Z [WARNING] [monitor] API call call-146 type=GENERATOR gen=1 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T17:22:48Z [INFO] [monitor] API call call-147 type=GENERATOR gen=2 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T17:22:48Z [INFO] [monitor] API call call-148 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T17:22:48Z [INFO] [monitor] API call call-149 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T17:22:48Z [INFO] [monitor] API call call-150 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T17:22:48Z [INFO] [monitor] API call call-151 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T17:22:48Z [INFO] [monitor] API call call-152 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T17:22:48Z [INFO] [monitor] API call call-153 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T17:22:48Z [WARNING] [monitor] API call call-154 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T17:22:48Z [WARNING] [monitor] API call call-155 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T17:22:48Z [WARNING] [monitor] API call call-156 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Unexpected error
+2026-03-22T17:22:48Z [WARNING] [monitor] API call call-157 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Unexpected error
+2026-03-22T17:22:48Z [INFO] [monitor] API call call-158 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T17:22:48Z [INFO] [monitor] API call call-159 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T17:22:48Z [WARNING] [monitor] API call call-160 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T17:22:48Z [WARNING] [monitor] API call call-161 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T17:24:51Z [INFO] [monitor] API call call-162 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T17:24:51Z [INFO] [monitor] API call call-163 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T17:24:52Z [INFO] [monitor] API call call-164 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T17:24:52Z [INFO] [monitor] API call call-165 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T17:24:52Z [INFO] [monitor] API call call-166 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T17:27:28Z [INFO] [monitor] API call call-167 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T17:27:28Z [INFO] [monitor] API call call-168 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T17:27:31Z [INFO] [monitor] API call call-169 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T17:29:34Z [INFO] [monitor] API call call-170 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T17:29:34Z [INFO] [monitor] API call call-171 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T17:29:37Z [INFO] [monitor] API call call-172 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=1ms status=OK
+2026-03-22T17:29:37Z [INFO] [monitor] API call call-173 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T17:29:37Z [INFO] [monitor] API call call-174 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T17:29:38Z [INFO] [monitor] API call call-175 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T17:30:03Z [INFO] [monitor] API call call-176 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T17:30:03Z [INFO] [monitor] API call call-177 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T17:30:05Z [INFO] [monitor] API call call-178 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T17:30:05Z [INFO] [monitor] API call call-179 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T17:30:05Z [INFO] [monitor] API call call-180 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T17:30:06Z [INFO] [monitor] API call call-181 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T17:30:06Z [INFO] [monitor] API call call-182 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T17:30:06Z [INFO] [monitor] API call call-183 type=GENERATOR gen=1 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T17:30:06Z [WARNING] [monitor] API call call-184 type=GENERATOR gen=1 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T17:30:06Z [INFO] [monitor] API call call-185 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T17:30:06Z [WARNING] [monitor] API call call-186 type=GENERATOR gen=1 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T17:30:06Z [INFO] [monitor] API call call-187 type=GENERATOR gen=2 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T17:30:06Z [INFO] [monitor] API call call-188 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T17:30:06Z [INFO] [monitor] API call call-189 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T17:30:06Z [INFO] [monitor] API call call-190 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T17:30:06Z [INFO] [monitor] API call call-191 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T17:30:06Z [INFO] [monitor] API call call-192 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T17:30:06Z [INFO] [monitor] API call call-193 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=1ms status=OK
+2026-03-22T17:30:06Z [WARNING] [monitor] API call call-194 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T17:30:06Z [WARNING] [monitor] API call call-195 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T17:30:06Z [WARNING] [monitor] API call call-196 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Unexpected error
+2026-03-22T17:30:06Z [WARNING] [monitor] API call call-197 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Unexpected error
+2026-03-22T17:30:06Z [INFO] [monitor] API call call-198 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T17:30:06Z [INFO] [monitor] API call call-199 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T17:30:06Z [WARNING] [monitor] API call call-200 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T17:30:06Z [WARNING] [monitor] API call call-201 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T17:33:54Z [INFO] [monitor] API call call-202 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T17:33:54Z [INFO] [monitor] API call call-203 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T17:33:57Z [INFO] [monitor] API call call-204 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T17:33:57Z [INFO] [monitor] API call call-205 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T17:33:57Z [INFO] [monitor] API call call-206 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T17:33:58Z [INFO] [monitor] API call call-207 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T17:33:58Z [INFO] [monitor] API call call-208 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T17:33:58Z [INFO] [monitor] API call call-209 type=GENERATOR gen=1 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T17:33:58Z [WARNING] [monitor] API call call-210 type=GENERATOR gen=1 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T17:33:58Z [INFO] [monitor] API call call-211 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T17:33:58Z [WARNING] [monitor] API call call-212 type=GENERATOR gen=1 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T17:33:58Z [INFO] [monitor] API call call-213 type=GENERATOR gen=2 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T17:33:58Z [INFO] [monitor] API call call-214 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T17:33:58Z [INFO] [monitor] API call call-215 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=1ms status=OK
+2026-03-22T17:33:58Z [INFO] [monitor] API call call-216 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T17:33:58Z [INFO] [monitor] API call call-217 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T17:33:58Z [INFO] [monitor] API call call-218 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T17:33:58Z [INFO] [monitor] API call call-219 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T17:33:58Z [WARNING] [monitor] API call call-220 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T17:33:58Z [WARNING] [monitor] API call call-221 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T17:33:58Z [WARNING] [monitor] API call call-222 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Unexpected error
+2026-03-22T17:33:58Z [WARNING] [monitor] API call call-223 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Unexpected error
+2026-03-22T17:33:58Z [INFO] [monitor] API call call-224 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T17:33:58Z [INFO] [monitor] API call call-225 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T17:33:58Z [WARNING] [monitor] API call call-226 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T17:33:58Z [WARNING] [monitor] API call call-227 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T17:39:03Z [INFO] [monitor] API call call-228 type=GENERATOR gen=0 in=117 out=113 cost=$0.002046 dur=3032ms status=OK
+2026-03-22T17:42:10Z [INFO] [monitor] API call call-229 type=GENERATOR gen=0 in=2413 out=1805 cost=$0.034314 dur=24317ms status=OK
+2026-03-22T18:08:11Z [INFO] [monitor] API call call-230 type=GENERATOR gen=0 in=2413 out=1650 cost=$0.031989 dur=22506ms status=OK
+2026-03-22T18:08:48Z [INFO] [monitor] API call call-231 type=LEARNER gen=0 in=2770 out=1969 cost=$0.037845 dur=27667ms status=OK
+2026-03-22T18:12:56Z [INFO] [monitor] API call call-232 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T18:12:56Z [INFO] [monitor] API call call-233 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T18:12:56Z [INFO] [monitor] API call call-234 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T18:12:56Z [INFO] [monitor] API call call-235 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T18:12:56Z [INFO] [monitor] API call call-236 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T18:12:56Z [INFO] [monitor] API call call-237 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T18:12:56Z [INFO] [monitor] API call call-238 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T18:12:56Z [INFO] [monitor] API call call-239 type=GENERATOR gen=1 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T18:12:56Z [WARNING] [monitor] API call call-240 type=GENERATOR gen=1 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T18:12:56Z [INFO] [monitor] API call call-241 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T18:12:56Z [WARNING] [monitor] API call call-242 type=GENERATOR gen=1 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T18:12:56Z [INFO] [monitor] API call call-243 type=GENERATOR gen=2 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T18:12:56Z [INFO] [monitor] API call call-244 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T18:12:56Z [INFO] [monitor] API call call-245 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T18:12:56Z [INFO] [monitor] API call call-246 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T18:12:56Z [INFO] [monitor] API call call-247 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T18:12:56Z [INFO] [monitor] API call call-248 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T18:12:56Z [INFO] [monitor] API call call-249 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T18:12:56Z [WARNING] [monitor] API call call-250 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=1ms status=ERROR: Connection refused
+2026-03-22T18:12:56Z [WARNING] [monitor] API call call-251 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T18:12:56Z [WARNING] [monitor] API call call-252 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Unexpected error
+2026-03-22T18:12:56Z [WARNING] [monitor] API call call-253 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Unexpected error
+2026-03-22T18:12:56Z [INFO] [monitor] API call call-254 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T18:12:56Z [INFO] [monitor] API call call-255 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T18:12:56Z [WARNING] [monitor] API call call-256 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T18:12:56Z [WARNING] [monitor] API call call-257 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T18:17:36Z [INFO] [monitor] API call call-258 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T18:17:36Z [INFO] [monitor] API call call-259 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T18:17:36Z [INFO] [monitor] API call call-260 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T18:17:36Z [INFO] [monitor] API call call-261 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T18:17:36Z [INFO] [monitor] API call call-262 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T18:17:36Z [INFO] [monitor] API call call-263 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T18:17:36Z [INFO] [monitor] API call call-264 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T18:17:36Z [INFO] [monitor] API call call-265 type=GENERATOR gen=1 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T18:17:36Z [WARNING] [monitor] API call call-266 type=GENERATOR gen=1 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T18:17:36Z [INFO] [monitor] API call call-267 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T18:17:36Z [WARNING] [monitor] API call call-268 type=GENERATOR gen=1 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T18:17:36Z [INFO] [monitor] API call call-269 type=GENERATOR gen=2 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T18:17:36Z [INFO] [monitor] API call call-270 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T18:17:37Z [INFO] [monitor] API call call-271 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T18:17:37Z [INFO] [monitor] API call call-272 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T18:17:37Z [INFO] [monitor] API call call-273 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T18:17:37Z [INFO] [monitor] API call call-274 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T18:17:37Z [INFO] [monitor] API call call-275 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T18:17:37Z [WARNING] [monitor] API call call-276 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T18:17:37Z [WARNING] [monitor] API call call-277 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T18:17:37Z [WARNING] [monitor] API call call-278 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Unexpected error
+2026-03-22T18:17:37Z [WARNING] [monitor] API call call-279 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Unexpected error
+2026-03-22T18:17:37Z [INFO] [monitor] API call call-280 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T18:17:37Z [INFO] [monitor] API call call-281 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T18:17:37Z [WARNING] [monitor] API call call-282 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T18:17:37Z [WARNING] [monitor] API call call-283 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T18:18:48Z [INFO] [monitor] API call call-284 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T18:18:48Z [INFO] [monitor] API call call-285 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T18:18:48Z [INFO] [monitor] API call call-286 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T18:18:48Z [INFO] [monitor] API call call-287 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T18:18:49Z [INFO] [monitor] API call call-288 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T18:18:49Z [INFO] [monitor] API call call-289 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T18:18:49Z [INFO] [monitor] API call call-290 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T18:18:49Z [INFO] [monitor] API call call-291 type=GENERATOR gen=1 in=100 out=50 cost=$0.001050 dur=1ms status=OK
+2026-03-22T18:18:49Z [WARNING] [monitor] API call call-292 type=GENERATOR gen=1 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T18:18:49Z [INFO] [monitor] API call call-293 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T18:18:49Z [WARNING] [monitor] API call call-294 type=GENERATOR gen=1 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T18:18:49Z [INFO] [monitor] API call call-295 type=GENERATOR gen=2 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T18:18:49Z [INFO] [monitor] API call call-296 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T18:18:49Z [INFO] [monitor] API call call-297 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T18:18:49Z [INFO] [monitor] API call call-298 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T18:18:49Z [INFO] [monitor] API call call-299 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T18:18:49Z [INFO] [monitor] API call call-300 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T18:18:49Z [INFO] [monitor] API call call-301 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T18:18:49Z [WARNING] [monitor] API call call-302 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T18:18:49Z [WARNING] [monitor] API call call-303 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T18:18:49Z [WARNING] [monitor] API call call-304 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Unexpected error
+2026-03-22T18:18:49Z [WARNING] [monitor] API call call-305 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Unexpected error
+2026-03-22T18:18:49Z [INFO] [monitor] API call call-306 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T18:18:49Z [INFO] [monitor] API call call-307 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T18:18:49Z [WARNING] [monitor] API call call-308 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T18:18:49Z [WARNING] [monitor] API call call-309 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T18:19:30Z [INFO] [monitor] API call call-310 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T18:19:30Z [INFO] [monitor] API call call-311 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T18:19:33Z [INFO] [monitor] API call call-312 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T18:19:33Z [INFO] [monitor] API call call-313 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T18:19:33Z [INFO] [monitor] API call call-314 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T18:19:34Z [INFO] [monitor] API call call-315 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T18:19:34Z [INFO] [monitor] API call call-316 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T18:19:34Z [INFO] [monitor] API call call-317 type=GENERATOR gen=1 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T18:19:34Z [WARNING] [monitor] API call call-318 type=GENERATOR gen=1 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T18:19:34Z [INFO] [monitor] API call call-319 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T18:19:34Z [WARNING] [monitor] API call call-320 type=GENERATOR gen=1 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T18:19:34Z [INFO] [monitor] API call call-321 type=GENERATOR gen=2 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T18:19:34Z [INFO] [monitor] API call call-322 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T18:19:34Z [INFO] [monitor] API call call-323 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T18:19:34Z [INFO] [monitor] API call call-324 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T18:19:34Z [INFO] [monitor] API call call-325 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T18:19:34Z [INFO] [monitor] API call call-326 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T18:19:34Z [INFO] [monitor] API call call-327 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T18:19:34Z [WARNING] [monitor] API call call-328 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T18:19:34Z [WARNING] [monitor] API call call-329 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T18:19:34Z [WARNING] [monitor] API call call-330 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Unexpected error
+2026-03-22T18:19:34Z [WARNING] [monitor] API call call-331 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Unexpected error
+2026-03-22T18:19:34Z [INFO] [monitor] API call call-332 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T18:19:34Z [INFO] [monitor] API call call-333 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T18:19:34Z [WARNING] [monitor] API call call-334 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T18:19:34Z [WARNING] [monitor] API call call-335 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T18:22:34Z [INFO] [monitor] API call call-336 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T18:22:34Z [INFO] [monitor] API call call-337 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T18:22:37Z [INFO] [monitor] API call call-338 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T18:22:37Z [INFO] [monitor] API call call-339 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T18:22:37Z [INFO] [monitor] API call call-340 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T18:22:38Z [INFO] [monitor] API call call-341 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T18:22:38Z [INFO] [monitor] API call call-342 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T18:22:38Z [INFO] [monitor] API call call-343 type=GENERATOR gen=1 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T18:22:38Z [WARNING] [monitor] API call call-344 type=GENERATOR gen=1 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T18:22:38Z [INFO] [monitor] API call call-345 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T18:22:38Z [WARNING] [monitor] API call call-346 type=GENERATOR gen=1 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T18:22:39Z [INFO] [monitor] API call call-347 type=GENERATOR gen=2 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T18:22:39Z [INFO] [monitor] API call call-348 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T18:22:39Z [INFO] [monitor] API call call-349 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T18:22:39Z [INFO] [monitor] API call call-350 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T18:22:39Z [INFO] [monitor] API call call-351 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T18:22:39Z [INFO] [monitor] API call call-352 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T18:22:39Z [INFO] [monitor] API call call-353 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T18:22:39Z [WARNING] [monitor] API call call-354 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T18:22:39Z [WARNING] [monitor] API call call-355 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=1ms status=ERROR: Connection refused
+2026-03-22T18:22:39Z [WARNING] [monitor] API call call-356 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Unexpected error
+2026-03-22T18:22:39Z [WARNING] [monitor] API call call-357 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Unexpected error
+2026-03-22T18:22:39Z [INFO] [monitor] API call call-358 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T18:22:39Z [INFO] [monitor] API call call-359 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T18:22:39Z [WARNING] [monitor] API call call-360 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T18:22:39Z [WARNING] [monitor] API call call-361 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T20:59:23Z [INFO] [monitor] API call call-362 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T20:59:23Z [INFO] [monitor] API call call-363 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T20:59:26Z [INFO] [monitor] API call call-364 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T20:59:26Z [INFO] [monitor] API call call-365 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T20:59:26Z [INFO] [monitor] API call call-366 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T20:59:27Z [INFO] [monitor] API call call-367 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T20:59:27Z [INFO] [monitor] API call call-368 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T20:59:27Z [INFO] [monitor] API call call-369 type=GENERATOR gen=1 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T20:59:27Z [WARNING] [monitor] API call call-370 type=GENERATOR gen=1 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T20:59:27Z [INFO] [monitor] API call call-371 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T20:59:27Z [WARNING] [monitor] API call call-372 type=GENERATOR gen=1 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T20:59:27Z [INFO] [monitor] API call call-373 type=GENERATOR gen=2 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T20:59:27Z [INFO] [monitor] API call call-374 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T20:59:28Z [INFO] [monitor] API call call-375 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T20:59:28Z [INFO] [monitor] API call call-376 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T20:59:28Z [INFO] [monitor] API call call-377 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T20:59:28Z [INFO] [monitor] API call call-378 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T20:59:28Z [INFO] [monitor] API call call-379 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T20:59:28Z [WARNING] [monitor] API call call-380 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T20:59:28Z [WARNING] [monitor] API call call-381 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T20:59:28Z [WARNING] [monitor] API call call-382 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Unexpected error
+2026-03-22T20:59:28Z [WARNING] [monitor] API call call-383 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Unexpected error
+2026-03-22T20:59:28Z [INFO] [monitor] API call call-384 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T20:59:28Z [INFO] [monitor] API call call-385 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T20:59:28Z [WARNING] [monitor] API call call-386 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T20:59:28Z [WARNING] [monitor] API call call-387 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T21:00:30Z [INFO] [monitor] API call call-388 type=GENERATOR gen=0 in=2413 out=1668 cost=$0.032259 dur=22269ms status=OK
+2026-03-22T21:01:38Z [INFO] [monitor] API call call-389 type=GENERATOR gen=0 in=2469 out=1335 cost=$0.027432 dur=19514ms status=OK
+2026-03-22T21:02:26Z [INFO] [monitor] API call call-390 type=LEARNER gen=0 in=2725 out=1740 cost=$0.034275 dur=26483ms status=OK
+2026-03-22T21:02:45Z [INFO] [monitor] API call call-391 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=1ms status=OK
+2026-03-22T21:02:45Z [INFO] [monitor] API call call-392 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T21:02:48Z [INFO] [monitor] API call call-393 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T21:02:48Z [INFO] [monitor] API call call-394 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T21:02:48Z [INFO] [monitor] API call call-395 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T21:02:49Z [INFO] [monitor] API call call-396 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T21:02:49Z [INFO] [monitor] API call call-397 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T21:02:49Z [INFO] [monitor] API call call-398 type=GENERATOR gen=1 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T21:02:49Z [WARNING] [monitor] API call call-399 type=GENERATOR gen=1 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T21:02:49Z [INFO] [monitor] API call call-400 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T21:02:49Z [WARNING] [monitor] API call call-401 type=GENERATOR gen=1 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T21:02:49Z [INFO] [monitor] API call call-402 type=GENERATOR gen=2 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T21:02:49Z [INFO] [monitor] API call call-403 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T21:02:49Z [INFO] [monitor] API call call-404 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T21:02:49Z [INFO] [monitor] API call call-405 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T21:02:49Z [INFO] [monitor] API call call-406 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T21:02:49Z [INFO] [monitor] API call call-407 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T21:02:49Z [INFO] [monitor] API call call-408 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T21:02:49Z [WARNING] [monitor] API call call-409 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T21:02:49Z [WARNING] [monitor] API call call-410 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T21:02:49Z [WARNING] [monitor] API call call-411 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Unexpected error
+2026-03-22T21:02:49Z [WARNING] [monitor] API call call-412 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=1ms status=ERROR: Unexpected error
+2026-03-22T21:02:49Z [INFO] [monitor] API call call-413 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T21:02:49Z [INFO] [monitor] API call call-414 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T21:02:49Z [WARNING] [monitor] API call call-415 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=1ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T21:02:49Z [WARNING] [monitor] API call call-416 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T21:07:10Z [INFO] [monitor] API call call-417 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T21:07:10Z [INFO] [monitor] API call call-418 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T21:07:13Z [INFO] [monitor] API call call-419 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T21:07:13Z [INFO] [monitor] API call call-420 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T21:07:13Z [INFO] [monitor] API call call-421 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T21:07:14Z [INFO] [monitor] API call call-422 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T21:07:14Z [INFO] [monitor] API call call-423 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T21:07:14Z [INFO] [monitor] API call call-424 type=GENERATOR gen=1 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T21:07:14Z [WARNING] [monitor] API call call-425 type=GENERATOR gen=1 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T21:07:14Z [INFO] [monitor] API call call-426 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T21:07:14Z [WARNING] [monitor] API call call-427 type=GENERATOR gen=1 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T21:07:14Z [INFO] [monitor] API call call-428 type=GENERATOR gen=2 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T21:07:14Z [INFO] [monitor] API call call-429 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T21:07:14Z [INFO] [monitor] API call call-430 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T21:07:14Z [INFO] [monitor] API call call-431 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T21:07:14Z [INFO] [monitor] API call call-432 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T21:07:14Z [INFO] [monitor] API call call-433 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T21:07:14Z [INFO] [monitor] API call call-434 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T21:07:14Z [WARNING] [monitor] API call call-435 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T21:07:14Z [WARNING] [monitor] API call call-436 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T21:07:14Z [WARNING] [monitor] API call call-437 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Unexpected error
+2026-03-22T21:07:14Z [WARNING] [monitor] API call call-438 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Unexpected error
+2026-03-22T21:07:14Z [INFO] [monitor] API call call-439 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T21:07:14Z [INFO] [monitor] API call call-440 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T21:07:14Z [WARNING] [monitor] API call call-441 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T21:07:14Z [WARNING] [monitor] API call call-442 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T21:08:10Z [INFO] [monitor] API call call-443 type=GENERATOR gen=0 in=2413 out=1319 cost=$0.027024 dur=18081ms status=OK
+2026-03-22T21:08:54Z [INFO] [monitor] API call call-444 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T21:08:54Z [INFO] [monitor] API call call-445 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T21:08:57Z [INFO] [monitor] API call call-446 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T21:08:57Z [INFO] [monitor] API call call-447 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T21:08:57Z [INFO] [monitor] API call call-448 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T21:08:58Z [INFO] [monitor] API call call-449 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T21:08:58Z [INFO] [monitor] API call call-450 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T21:08:58Z [INFO] [monitor] API call call-451 type=GENERATOR gen=1 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T21:08:58Z [WARNING] [monitor] API call call-452 type=GENERATOR gen=1 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T21:08:58Z [INFO] [monitor] API call call-453 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T21:08:58Z [WARNING] [monitor] API call call-454 type=GENERATOR gen=1 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T21:08:58Z [INFO] [monitor] API call call-455 type=GENERATOR gen=2 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T21:08:58Z [INFO] [monitor] API call call-456 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T21:08:58Z [INFO] [monitor] API call call-457 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T21:08:58Z [INFO] [monitor] API call call-458 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T21:08:58Z [INFO] [monitor] API call call-459 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T21:08:58Z [INFO] [monitor] API call call-460 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T21:08:58Z [INFO] [monitor] API call call-461 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T21:08:58Z [WARNING] [monitor] API call call-462 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T21:08:58Z [WARNING] [monitor] API call call-463 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T21:08:58Z [WARNING] [monitor] API call call-464 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Unexpected error
+2026-03-22T21:08:58Z [WARNING] [monitor] API call call-465 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Unexpected error
+2026-03-22T21:08:58Z [INFO] [monitor] API call call-466 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T21:08:58Z [INFO] [monitor] API call call-467 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T21:08:58Z [WARNING] [monitor] API call call-468 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T21:08:58Z [WARNING] [monitor] API call call-469 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T21:09:44Z [INFO] [monitor] API call call-470 type=LEARNER gen=0 in=2681 out=1964 cost=$0.037503 dur=28634ms status=OK
+2026-03-22T21:12:23Z [INFO] [monitor] API call call-471 type=GENERATOR gen=0 in=2413 out=1363 cost=$0.027684 dur=18527ms status=OK
+2026-03-22T21:17:21Z [INFO] [monitor] API call call-472 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T21:17:21Z [INFO] [monitor] API call call-473 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T21:17:24Z [INFO] [monitor] API call call-474 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T21:17:24Z [INFO] [monitor] API call call-475 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T21:17:24Z [INFO] [monitor] API call call-476 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T21:17:25Z [INFO] [monitor] API call call-477 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T21:17:25Z [INFO] [monitor] API call call-478 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T21:17:25Z [INFO] [monitor] API call call-479 type=GENERATOR gen=1 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T21:17:25Z [WARNING] [monitor] API call call-480 type=GENERATOR gen=1 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T21:17:25Z [INFO] [monitor] API call call-481 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T21:17:25Z [WARNING] [monitor] API call call-482 type=GENERATOR gen=1 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T21:17:25Z [INFO] [monitor] API call call-483 type=GENERATOR gen=2 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T21:17:25Z [INFO] [monitor] API call call-484 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T21:17:26Z [INFO] [monitor] API call call-485 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T21:17:26Z [INFO] [monitor] API call call-486 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T21:17:26Z [INFO] [monitor] API call call-487 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T21:17:26Z [INFO] [monitor] API call call-488 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T21:17:26Z [INFO] [monitor] API call call-489 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T21:17:26Z [WARNING] [monitor] API call call-490 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T21:17:26Z [WARNING] [monitor] API call call-491 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T21:17:26Z [WARNING] [monitor] API call call-492 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Unexpected error
+2026-03-22T21:17:26Z [WARNING] [monitor] API call call-493 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Unexpected error
+2026-03-22T21:17:26Z [INFO] [monitor] API call call-494 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T21:17:26Z [INFO] [monitor] API call call-495 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T21:17:26Z [WARNING] [monitor] API call call-496 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T21:17:26Z [WARNING] [monitor] API call call-497 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T21:28:07Z [INFO] [monitor] API call call-498 type=LEARNER gen=0 in=2680 out=1695 cost=$0.033465 dur=25990ms status=OK
+2026-03-22T21:35:03Z [INFO] [monitor] API call call-499 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T21:35:03Z [INFO] [monitor] API call call-500 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T21:35:06Z [INFO] [monitor] API call call-501 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T21:35:06Z [INFO] [monitor] API call call-502 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T21:35:06Z [INFO] [monitor] API call call-503 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T21:35:07Z [INFO] [monitor] API call call-504 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=1ms status=OK
+2026-03-22T21:35:07Z [INFO] [monitor] API call call-505 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T21:35:07Z [INFO] [monitor] API call call-506 type=GENERATOR gen=1 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T21:35:07Z [WARNING] [monitor] API call call-507 type=GENERATOR gen=1 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T21:35:07Z [INFO] [monitor] API call call-508 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T21:35:07Z [WARNING] [monitor] API call call-509 type=GENERATOR gen=1 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T21:35:07Z [INFO] [monitor] API call call-510 type=GENERATOR gen=2 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T21:35:07Z [INFO] [monitor] API call call-511 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T21:35:07Z [INFO] [monitor] API call call-512 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T21:35:07Z [INFO] [monitor] API call call-513 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T21:35:07Z [INFO] [monitor] API call call-514 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=1ms status=OK
+2026-03-22T21:35:07Z [INFO] [monitor] API call call-515 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T21:35:07Z [INFO] [monitor] API call call-516 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T21:35:07Z [WARNING] [monitor] API call call-517 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T21:35:07Z [WARNING] [monitor] API call call-518 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T21:35:07Z [WARNING] [monitor] API call call-519 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Unexpected error
+2026-03-22T21:35:07Z [WARNING] [monitor] API call call-520 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Unexpected error
+2026-03-22T21:35:07Z [INFO] [monitor] API call call-521 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T21:35:07Z [INFO] [monitor] API call call-522 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T21:35:07Z [WARNING] [monitor] API call call-523 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T21:35:07Z [WARNING] [monitor] API call call-524 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T22:00:29Z [INFO] [monitor] API call call-525 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T22:00:29Z [INFO] [monitor] API call call-526 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T22:00:32Z [INFO] [monitor] API call call-527 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T22:00:32Z [INFO] [monitor] API call call-528 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T22:00:32Z [INFO] [monitor] API call call-529 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T22:00:33Z [INFO] [monitor] API call call-530 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T22:00:33Z [INFO] [monitor] API call call-531 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T22:00:33Z [INFO] [monitor] API call call-532 type=GENERATOR gen=1 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T22:00:33Z [WARNING] [monitor] API call call-533 type=GENERATOR gen=1 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T22:00:33Z [INFO] [monitor] API call call-534 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T22:00:33Z [WARNING] [monitor] API call call-535 type=GENERATOR gen=1 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T22:00:33Z [INFO] [monitor] API call call-536 type=GENERATOR gen=2 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T22:00:33Z [INFO] [monitor] API call call-537 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T22:00:33Z [INFO] [monitor] API call call-538 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T22:00:33Z [INFO] [monitor] API call call-539 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T22:00:33Z [INFO] [monitor] API call call-540 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T22:00:33Z [INFO] [monitor] API call call-541 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T22:00:33Z [INFO] [monitor] API call call-542 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T22:00:33Z [WARNING] [monitor] API call call-543 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T22:00:33Z [WARNING] [monitor] API call call-544 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T22:00:33Z [WARNING] [monitor] API call call-545 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Unexpected error
+2026-03-22T22:00:33Z [WARNING] [monitor] API call call-546 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Unexpected error
+2026-03-22T22:00:33Z [INFO] [monitor] API call call-547 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T22:00:33Z [INFO] [monitor] API call call-548 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T22:00:33Z [WARNING] [monitor] API call call-549 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T22:00:33Z [WARNING] [monitor] API call call-550 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T22:37:47Z [INFO] [monitor] API call call-551 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T22:37:47Z [INFO] [monitor] API call call-552 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T22:37:50Z [INFO] [monitor] API call call-553 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T22:37:50Z [INFO] [monitor] API call call-554 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T22:37:50Z [INFO] [monitor] API call call-555 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T22:37:51Z [INFO] [monitor] API call call-556 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T22:37:51Z [INFO] [monitor] API call call-557 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T22:37:51Z [INFO] [monitor] API call call-558 type=GENERATOR gen=1 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T22:37:51Z [WARNING] [monitor] API call call-559 type=GENERATOR gen=1 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T22:37:52Z [INFO] [monitor] API call call-560 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T22:37:52Z [WARNING] [monitor] API call call-561 type=GENERATOR gen=1 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T22:37:52Z [INFO] [monitor] API call call-562 type=GENERATOR gen=2 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T22:37:52Z [INFO] [monitor] API call call-563 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T22:37:52Z [INFO] [monitor] API call call-564 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T22:37:52Z [INFO] [monitor] API call call-565 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T22:37:52Z [INFO] [monitor] API call call-566 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T22:37:52Z [INFO] [monitor] API call call-567 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T22:37:52Z [INFO] [monitor] API call call-568 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T22:37:52Z [WARNING] [monitor] API call call-569 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T22:37:52Z [WARNING] [monitor] API call call-570 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T22:37:52Z [WARNING] [monitor] API call call-571 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=1ms status=ERROR: Unexpected error
+2026-03-22T22:37:52Z [WARNING] [monitor] API call call-572 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Unexpected error
+2026-03-22T22:37:52Z [INFO] [monitor] API call call-573 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T22:37:52Z [INFO] [monitor] API call call-574 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T22:37:52Z [WARNING] [monitor] API call call-575 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T22:37:52Z [WARNING] [monitor] API call call-576 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T22:38:47Z [INFO] [monitor] API call call-577 type=GENERATOR gen=0 in=2413 out=1440 cost=$0.028839 dur=20417ms status=OK
+2026-03-22T22:49:26Z [INFO] [monitor] API call call-578 type=LEARNER gen=0 in=3352 out=2093 cost=$0.041451 dur=32235ms status=OK
+2026-03-22T23:17:40Z [INFO] [monitor] API call call-579 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T23:17:40Z [INFO] [monitor] API call call-580 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T23:17:43Z [INFO] [monitor] API call call-581 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T23:17:43Z [INFO] [monitor] API call call-582 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T23:17:43Z [INFO] [monitor] API call call-583 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T23:17:44Z [INFO] [monitor] API call call-584 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T23:17:44Z [INFO] [monitor] API call call-585 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T23:17:44Z [INFO] [monitor] API call call-586 type=GENERATOR gen=1 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T23:17:44Z [WARNING] [monitor] API call call-587 type=GENERATOR gen=1 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T23:17:44Z [INFO] [monitor] API call call-588 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T23:17:44Z [WARNING] [monitor] API call call-589 type=GENERATOR gen=1 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T23:17:44Z [INFO] [monitor] API call call-590 type=GENERATOR gen=2 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T23:17:44Z [INFO] [monitor] API call call-591 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T23:17:44Z [INFO] [monitor] API call call-592 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T23:17:44Z [INFO] [monitor] API call call-593 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T23:17:44Z [INFO] [monitor] API call call-594 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T23:17:44Z [INFO] [monitor] API call call-595 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T23:17:44Z [INFO] [monitor] API call call-596 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T23:17:44Z [WARNING] [monitor] API call call-597 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T23:17:44Z [WARNING] [monitor] API call call-598 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T23:17:44Z [WARNING] [monitor] API call call-599 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Unexpected error
+2026-03-22T23:17:44Z [WARNING] [monitor] API call call-600 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Unexpected error
+2026-03-22T23:17:44Z [INFO] [monitor] API call call-601 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T23:17:44Z [INFO] [monitor] API call call-602 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T23:17:44Z [WARNING] [monitor] API call call-603 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T23:17:44Z [WARNING] [monitor] API call call-604 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=1ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T23:19:04Z [INFO] [monitor] API call call-605 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T23:19:04Z [INFO] [monitor] API call call-606 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T23:19:07Z [INFO] [monitor] API call call-607 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T23:19:07Z [INFO] [monitor] API call call-608 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T23:19:07Z [INFO] [monitor] API call call-609 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T23:19:08Z [INFO] [monitor] API call call-610 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T23:19:08Z [INFO] [monitor] API call call-611 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T23:19:08Z [INFO] [monitor] API call call-612 type=GENERATOR gen=1 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T23:19:08Z [WARNING] [monitor] API call call-613 type=GENERATOR gen=1 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T23:19:08Z [INFO] [monitor] API call call-614 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T23:19:08Z [WARNING] [monitor] API call call-615 type=GENERATOR gen=1 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T23:19:08Z [INFO] [monitor] API call call-616 type=GENERATOR gen=2 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T23:19:08Z [INFO] [monitor] API call call-617 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T23:19:08Z [INFO] [monitor] API call call-618 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T23:19:08Z [INFO] [monitor] API call call-619 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T23:19:08Z [INFO] [monitor] API call call-620 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T23:19:08Z [INFO] [monitor] API call call-621 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T23:19:08Z [INFO] [monitor] API call call-622 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T23:19:08Z [WARNING] [monitor] API call call-623 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T23:19:08Z [WARNING] [monitor] API call call-624 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T23:19:08Z [WARNING] [monitor] API call call-625 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Unexpected error
+2026-03-22T23:19:08Z [WARNING] [monitor] API call call-626 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Unexpected error
+2026-03-22T23:19:08Z [INFO] [monitor] API call call-627 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T23:19:08Z [INFO] [monitor] API call call-628 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T23:19:08Z [WARNING] [monitor] API call call-629 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T23:19:08Z [WARNING] [monitor] API call call-630 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T23:23:13Z [INFO] [monitor] API call call-631 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T23:23:13Z [INFO] [monitor] API call call-632 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T23:23:16Z [INFO] [monitor] API call call-633 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T23:23:16Z [INFO] [monitor] API call call-634 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T23:23:16Z [INFO] [monitor] API call call-635 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T23:23:17Z [INFO] [monitor] API call call-636 type=LEARNER gen=1 in=3000 out=1200 cost=$0.027000 dur=0ms status=OK
+2026-03-22T23:23:17Z [INFO] [monitor] API call call-637 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T23:23:17Z [INFO] [monitor] API call call-638 type=GENERATOR gen=1 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T23:23:17Z [WARNING] [monitor] API call call-639 type=GENERATOR gen=1 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T23:23:17Z [INFO] [monitor] API call call-640 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T23:23:17Z [WARNING] [monitor] API call call-641 type=GENERATOR gen=1 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T23:23:18Z [INFO] [monitor] API call call-642 type=GENERATOR gen=2 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T23:23:18Z [INFO] [monitor] API call call-643 type=GENERATOR gen=1 in=2000 out=800 cost=$0.018000 dur=0ms status=OK
+2026-03-22T23:23:18Z [INFO] [monitor] API call call-644 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=1ms status=OK
+2026-03-22T23:23:18Z [INFO] [monitor] API call call-645 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T23:23:18Z [INFO] [monitor] API call call-646 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T23:23:18Z [INFO] [monitor] API call call-647 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T23:23:18Z [INFO] [monitor] API call call-648 type=LEARNER gen=3 in=100 out=50 cost=$0.001050 dur=0ms status=OK
+2026-03-22T23:23:18Z [WARNING] [monitor] API call call-649 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T23:23:18Z [WARNING] [monitor] API call call-650 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Connection refused
+2026-03-22T23:23:18Z [WARNING] [monitor] API call call-651 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Unexpected error
+2026-03-22T23:23:18Z [WARNING] [monitor] API call call-652 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: Unexpected error
+2026-03-22T23:23:18Z [INFO] [monitor] API call call-653 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T23:23:18Z [INFO] [monitor] API call call-654 type=LEARNER gen=3 in=1000 out=500 cost=$0.010500 dur=0ms status=OK
+2026-03-22T23:23:18Z [WARNING] [monitor] API call call-655 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-22T23:23:18Z [WARNING] [monitor] API call call-656 type=LEARNER gen=3 in=0 out=0 cost=$0.000000 dur=0ms status=ERROR: HTTP 429: Rate limit exceeded
+2026-03-23T02:46:19Z [INFO] [monitor] API call call-657 type=LEARNER gen=0 in=7477 out=2992 cost=$0.067311 dur=40832ms status=OK
+2026-04-09T02:45:16Z [INFO] [monitor] API call call-658 type=GENERATOR gen=0 in=9177 out=1464 cost=$0.049491 dur=24007ms status=OK
+2026-04-09T02:45:51Z [INFO] [monitor] API call call-659 type=GENERATOR gen=0 in=9177 out=2411 cost=$0.063696 dur=33895ms status=OK
+2026-04-09T02:46:20Z [INFO] [monitor] API call call-660 type=GENERATOR gen=0 in=9177 out=1531 cost=$0.050496 dur=27603ms status=OK
+2026-04-09T02:46:56Z [INFO] [monitor] API call call-661 type=GENERATOR gen=0 in=9231 out=1841 cost=$0.055308 dur=30679ms status=OK
+2026-04-09T02:47:35Z [INFO] [monitor] API call call-662 type=GENERATOR gen=0 in=9231 out=2053 cost=$0.058488 dur=36967ms status=OK
+2026-04-09T02:48:02Z [INFO] [monitor] API call call-663 type=GENERATOR gen=0 in=9231 out=1786 cost=$0.054483 dur=25940ms status=OK
+2026-04-09T02:48:34Z [INFO] [monitor] API call call-664 type=GENERATOR gen=0 in=9069 out=1813 cost=$0.054402 dur=31053ms status=OK
+2026-04-09T02:49:08Z [INFO] [monitor] API call call-665 type=GENERATOR gen=0 in=9069 out=2108 cost=$0.058827 dur=32314ms status=OK
+2026-04-09T02:49:36Z [INFO] [monitor] API call call-666 type=GENERATOR gen=0 in=9069 out=1999 cost=$0.057192 dur=27370ms status=OK
+2026-04-09T02:50:03Z [INFO] [monitor] API call call-667 type=GENERATOR gen=0 in=9069 out=1936 cost=$0.056247 dur=25398ms status=OK
+2026-04-09T02:50:33Z [INFO] [monitor] API call call-668 type=GENERATOR gen=0 in=9069 out=1726 cost=$0.053097 dur=28054ms status=OK
+2026-04-09T02:51:12Z [INFO] [monitor] API call call-669 type=GENERATOR gen=0 in=9069 out=2448 cost=$0.063927 dur=37871ms status=OK
+2026-04-09T03:03:01Z [INFO] [monitor] API call call-670 type=GENERATOR gen=0 in=9177 out=1566 cost=$0.051021 dur=27698ms status=OK
+2026-04-09T03:03:36Z [INFO] [monitor] API call call-671 type=GENERATOR gen=0 in=9213 out=1821 cost=$0.054954 dur=29973ms status=OK
+2026-04-09T03:04:05Z [INFO] [monitor] API call call-672 type=GENERATOR gen=0 in=9247 out=1369 cost=$0.048276 dur=22109ms status=OK
+2026-04-09T03:04:30Z [INFO] [monitor] API call call-673 type=GENERATOR gen=0 in=9247 out=1234 cost=$0.046251 dur=22863ms status=OK
+2026-04-09T03:05:02Z [INFO] [monitor] API call call-674 type=GENERATOR gen=0 in=9282 out=1606 cost=$0.051936 dur=26506ms status=OK
+2026-04-09T03:05:35Z [INFO] [monitor] API call call-675 type=GENERATOR gen=0 in=9315 out=1952 cost=$0.057225 dur=27345ms status=OK
+2026-04-09T03:06:06Z [INFO] [monitor] API call call-676 type=GENERATOR gen=0 in=9069 out=1207 cost=$0.045312 dur=25943ms status=OK
+2026-04-09T03:06:44Z [INFO] [monitor] API call call-677 type=GENERATOR gen=0 in=9112 out=1827 cost=$0.054741 dur=31346ms status=OK
+2026-04-09T03:07:30Z [INFO] [monitor] API call call-678 type=GENERATOR gen=0 in=9139 out=2556 cost=$0.065757 dur=39923ms status=OK
+2026-04-09T03:08:04Z [INFO] [monitor] API call call-679 type=GENERATOR gen=0 in=9184 out=1661 cost=$0.052467 dur=28538ms status=OK
+2026-04-09T03:08:55Z [INFO] [monitor] API call call-680 type=GENERATOR gen=0 in=9222 out=2963 cost=$0.072111 dur=46267ms status=OK
+2026-04-09T03:09:34Z [INFO] [monitor] API call call-681 type=GENERATOR gen=0 in=9267 out=1978 cost=$0.057471 dur=32885ms status=OK
+2026-04-09T03:10:20Z [INFO] [monitor] API call call-682 type=GENERATOR gen=0 in=9178 out=2717 cost=$0.068289 dur=39903ms status=OK
+2026-04-09T03:10:53Z [INFO] [monitor] API call call-683 type=GENERATOR gen=0 in=9240 out=1257 cost=$0.046575 dur=26204ms status=OK
+2026-04-09T03:11:29Z [INFO] [monitor] API call call-684 type=GENERATOR gen=0 in=9289 out=2308 cost=$0.062487 dur=30984ms status=OK
+2026-04-09T03:11:58Z [INFO] [monitor] API call call-685 type=GENERATOR gen=0 in=9331 out=1195 cost=$0.045918 dur=22938ms status=OK
+2026-04-09T03:12:37Z [INFO] [monitor] API call call-686 type=GENERATOR gen=0 in=9366 out=2356 cost=$0.063438 dur=33675ms status=OK
+2026-04-09T03:13:25Z [INFO] [monitor] API call call-687 type=GENERATOR gen=0 in=9412 out=2958 cost=$0.072606 dur=41943ms status=OK
+2026-04-09T03:13:53Z [INFO] [monitor] API call call-688 type=GENERATOR gen=0 in=9193 out=1157 cost=$0.044934 dur=22553ms status=OK
+2026-04-09T03:14:28Z [INFO] [monitor] API call call-689 type=GENERATOR gen=0 in=9250 out=2045 cost=$0.058425 dur=29253ms status=OK
+2026-04-09T03:15:07Z [INFO] [monitor] API call call-690 type=GENERATOR gen=0 in=9297 out=2136 cost=$0.059931 dur=34037ms status=OK
+2026-04-09T03:15:48Z [INFO] [monitor] API call call-691 type=GENERATOR gen=0 in=9343 out=2426 cost=$0.064419 dur=35349ms status=OK
+2026-04-09T03:16:18Z [INFO] [monitor] API call call-692 type=GENERATOR gen=0 in=9381 out=1140 cost=$0.045243 dur=24864ms status=OK
+2026-04-09T03:16:48Z [INFO] [monitor] API call call-693 type=GENERATOR gen=0 in=9427 out=1728 cost=$0.054201 dur=25135ms status=OK
+2026-04-09T03:20:04Z [INFO] [monitor] API call call-694 type=LEARNER gen=0 in=14512 out=3181 cost=$0.091251 dur=78044ms status=OK
+2026-04-10T18:54:10Z [INFO] [monitor] API call call-695 type=GENERATOR gen=0 in=12543 out=445 cost=$0.044304 dur=7261ms status=OK
+2026-04-10T18:55:46Z [INFO] [monitor] API call call-696 type=GENERATOR gen=0 in=12543 out=496 cost=$0.045069 dur=8113ms status=OK
+2026-04-10T19:03:43Z [INFO] [monitor] API call call-697 type=GENERATOR gen=0 in=12655 out=501 cost=$0.045480 dur=8281ms status=OK
+2026-04-10T19:07:08Z [INFO] [monitor] API call call-698 type=GENERATOR gen=0 in=12655 out=448 cost=$0.044685 dur=7469ms status=OK
+2026-04-10T19:19:20Z [INFO] [monitor] API call call-699 type=GENERATOR gen=0 in=12655 out=454 cost=$0.044775 dur=7190ms status=OK
+2026-04-10T19:26:50Z [INFO] [monitor] API call call-700 type=GENERATOR gen=0 in=12655 out=422 cost=$0.044295 dur=9795ms status=OK
+2026-04-10T19:34:44Z [WARNING] [monitor] API call call-701 type=GENERATOR gen=0 in=0 out=0 cost=$0.000000 dur=228ms status=ERROR: HTTP 400: {"type":"error","error":{"type":"invalid_request_error","message":"You have reached your specified API usage limits. You will regain access on 2026-05-01 at 00:00 UTC."},"request_id":"req_011CZveiUxxe
+2026-04-10T19:35:13Z [WARNING] [monitor] API call call-702 type=GENERATOR gen=0 in=0 out=0 cost=$0.000000 dur=185ms status=ERROR: HTTP 400: {"type":"error","error":{"type":"invalid_request_error","message":"You have reached your specified API usage limits. You will regain access on 2026-05-01 at 00:00 UTC."},"request_id":"req_011CZvekdx1b
+2026-04-10T19:39:15Z [INFO] [monitor] API call call-703 type=GENERATOR gen=0 in=12655 out=448 cost=$0.044685 dur=7690ms status=OK
+2026-04-10T19:51:24Z [INFO] [monitor] API call call-704 type=GENERATOR gen=0 in=12655 out=628 cost=$0.047385 dur=9456ms status=OK
+2026-04-10T20:07:25Z [WARNING] [monitor] API call call-705 type=GENERATOR gen=0 in=0 out=0 cost=$0.000000 dur=3947ms status=ERROR: HTTP 500: {"type":"error","error":{"type":"api_error","message":"Internal server error"},"request_id":"req_011CZvhCnvTmYRdDetRgSUAs"}
+2026-04-10T20:08:43Z [WARNING] [monitor] API call call-706 type=GENERATOR gen=0 in=0 out=0 cost=$0.000000 dur=1162ms status=ERROR: HTTP 500: {"type":"error","error":{"type":"api_error","message":"Internal server error"},"request_id":"req_011CZvhJhvkEKP1ADPK5swWQ"}
+2026-04-10T20:15:15Z [INFO] [monitor] API call call-707 type=GENERATOR gen=0 in=13045 out=423 cost=$0.045480 dur=7074ms status=OK
+2026-04-10T20:28:58Z [INFO] [monitor] API call call-708 type=GENERATOR gen=0 in=13353 out=497 cost=$0.047514 dur=7815ms status=OK
+2026-04-10T20:36:08Z [INFO] [monitor] API call call-709 type=GENERATOR gen=0 in=15019 out=663 cost=$0.055002 dur=10498ms status=OK
