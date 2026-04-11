@@ -1,0 +1,151 @@
+{
+  "step": "root",
+  "name": "Tech Fortress \u2014 4-Layer Cumulative Return Guard with TECL Core",
+  "description": "R4 seed 2 \u2014 SHARPE_HUNTER",
+  "rebalance": "daily",
+  "children": [
+    {
+      "step": "if",
+      "children": [
+        {
+          "step": "if-child",
+          "is-else-condition?": false,
+          "lhs-fn": "cumulative-return",
+          "lhs-fn-params": {
+            "window-days": 5
+          },
+          "lhs-val": "UVXY",
+          "comparator": "gt",
+          "rhs-val": "45",
+          "rhs-fixed-value?": true,
+          "children": [
+            {
+              "step": "asset",
+              "ticker": "BIL",
+              "children": [],
+              "id": "b014e79f-18f6-4f57-8af6-b12d77977d58"
+            }
+          ],
+          "id": "7429abb5-012a-4d75-9a06-ca840e54afe0"
+        },
+        {
+          "step": "if-child",
+          "is-else-condition?": true,
+          "children": [
+            {
+              "step": "if",
+              "children": [
+                {
+                  "step": "if-child",
+                  "is-else-condition?": false,
+                  "lhs-fn": "cumulative-return",
+                  "lhs-fn-params": {
+                    "window-days": 20
+                  },
+                  "lhs-val": "SPY",
+                  "comparator": "gt",
+                  "rhs-val": "-8",
+                  "rhs-fixed-value?": true,
+                  "children": [
+                    {
+                      "step": "if",
+                      "children": [
+                        {
+                          "step": "if-child",
+                          "is-else-condition?": false,
+                          "lhs-fn": "cumulative-return",
+                          "lhs-fn-params": {
+                            "window-days": 10
+                          },
+                          "lhs-val": "QQQ",
+                          "comparator": "gt",
+                          "rhs-val": "2",
+                          "rhs-fixed-value?": true,
+                          "children": [
+                            {
+                              "step": "if",
+                              "children": [
+                                {
+                                  "step": "if-child",
+                                  "is-else-condition?": false,
+                                  "lhs-fn": "cumulative-return",
+                                  "lhs-fn-params": {
+                                    "window-days": 1
+                                  },
+                                  "lhs-val": "TECL",
+                                  "comparator": "gt",
+                                  "rhs-val": "4.8",
+                                  "rhs-fixed-value?": true,
+                                  "children": [
+                                    {
+                                      "step": "asset",
+                                      "ticker": "TECL",
+                                      "children": [],
+                                      "id": "4297b599-ae12-416f-8c9a-f18b0b8e1995"
+                                    }
+                                  ],
+                                  "id": "d4320b64-5df3-4837-8dac-e57f883241ba"
+                                },
+                                {
+                                  "step": "if-child",
+                                  "is-else-condition?": true,
+                                  "children": [
+                                    {
+                                      "step": "asset",
+                                      "ticker": "SPY",
+                                      "children": [],
+                                      "id": "3cb2ebb3-72cb-439e-bf59-aed01f739d5d"
+                                    }
+                                  ],
+                                  "id": "7e880a7b-29ba-4be7-a597-3374405adc55"
+                                }
+                              ],
+                              "id": "ca9fc0e1-0b77-4537-b638-f5065634ab47"
+                            }
+                          ],
+                          "id": "f15e8921-04ac-4b11-983a-f91690b30b9e"
+                        },
+                        {
+                          "step": "if-child",
+                          "is-else-condition?": true,
+                          "children": [
+                            {
+                              "step": "asset",
+                              "ticker": "QQQ",
+                              "children": [],
+                              "id": "675236cc-0e14-454e-a7d9-252be83da638"
+                            }
+                          ],
+                          "id": "3dc6002c-7bca-45b7-b62e-61c805ee68c8"
+                        }
+                      ],
+                      "id": "9896986c-881c-454e-876e-14882f597b6f"
+                    }
+                  ],
+                  "id": "e04a1961-94bf-43a1-ab62-e42e6f6fe2ff"
+                },
+                {
+                  "step": "if-child",
+                  "is-else-condition?": true,
+                  "children": [
+                    {
+                      "step": "asset",
+                      "ticker": "BIL",
+                      "children": [],
+                      "id": "91518319-6e08-43af-8d07-ed38a2346e57"
+                    }
+                  ],
+                  "id": "59799f44-29ab-4f6d-8a0b-ea6638ef7a52"
+                }
+              ],
+              "id": "1045ab73-91cb-4e05-8165-825ff10cc921"
+            }
+          ],
+          "id": "91eafcca-8ad8-4e54-a89b-799511e48e3e"
+        }
+      ],
+      "id": "db98c747-bef6-49c4-8579-61fd8531f7d2"
+    }
+  ],
+  "id": "35894d6e-867e-4fcc-8f75-cea8b16b8e7d"
+}

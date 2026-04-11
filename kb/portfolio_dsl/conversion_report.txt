@@ -1,0 +1,71 @@
+Portfolio DSL Conversion Report
+Date: 2026-04-10
+Symphonies: 8 total, 8 OK, 0 failed
+
+── Results ──────────────────────────────────────────────────
+
+[OK]  Benchmark_TQQQ
+      ID: 0JAbjs58FYRqXhRky7fY
+      Slug: benchmark_tqqq
+      DSL: 4 lines, 122 bytes (74% compression)
+      Files: benchmark_tqqq.dsl  |  benchmark_tqqq_compiled.json
+
+[OK]  Bitcoin Strategy by Derecknielsen
+      ID: im5F6HTk3OFj7cmewwCC
+      Slug: bitcoin_strategy_by_derecknielsen
+      DSL: 6 lines, 272 bytes (70% compression)
+      Files: bitcoin_strategy_by_derecknielsen.dsl  |  bitcoin_strategy_by_derecknielsen_compiled.json
+
+[OK]  Extended OOS Outliers (FNGG)
+      ID: F5raZUZDJvTXjebUJL5F
+      Slug: extended_oos_outliers_fngg
+      DSL: 9527 lines, 1,325,947 bytes (-31% compression)
+      Files: extended_oos_outliers_fngg.dsl  |  extended_oos_outliers_fngg_compiled.json
+
+[OK]  01 s90 50/40 maxDD
+      ID: QgwrvzhG0qZWnd6o88vb
+      Slug: 01_s90_50_40_maxdd
+      DSL: 210 lines, 11,634 bytes (52% compression)
+      Files: 01_s90_50_40_maxdd.dsl  |  01_s90_50_40_maxdd_compiled.json
+
+[OK]  NOVA Best Leverage Mashup v1
+      ID: ab8vNQbry0qMdvT3YMLG
+      Slug: nova_best_leverage_mashup_v1
+      DSL: 5639 lines, 614,583 bytes (-18% compression)
+      Files: nova_best_leverage_mashup_v1.dsl  |  nova_best_leverage_mashup_v1_compiled.json
+
+[OK]  Custom Foreign RINF mod
+      ID: bUwysuNlSGuyS7XzNdqG
+      Slug: custom_foreign_rinf_mod
+      DSL: 3400 lines, 335,336 bytes (16% compression)
+      Files: custom_foreign_rinf_mod.dsl  |  custom_foreign_rinf_mod_compiled.json
+
+[OK]  Beta Baller TESTPORT
+      ID: q8cfmpmiJFnS0byO3myO
+      Slug: beta_baller_testport
+      DSL: 8029 lines, 729,674 bytes (25% compression)
+      Files: beta_baller_testport.dsl  |  beta_baller_testport_compiled.json
+
+[OK]  Combined Wild West and RSI Frankenfest
+      ID: 1y5tnTt3FSTKo8FRnFal
+      Slug: combined_wild_west_and_rsi_frankenfest
+      DSL: 4032 lines, 312,595 bytes (42% compression)
+      Files: combined_wild_west_and_rsi_frankenfest.dsl  |  combined_wild_west_and_rsi_frankenfest_compiled.json
+
+── Round-trip backtest ───────────────────────────────────────
+
+NOTE: Backtest round-trip (Step 3) deferred — manual Composer UI
+import required. User will handle imports and log Sharpe/MaxDD results.
+
+To complete round-trip validation:
+  1. Import each *_compiled.json into Composer UI
+  2. Save to get new symphony ID
+  3. Backtest original ID (2022-01-01 to 2022-12-31)
+  4. Backtest new ID same period
+  5. Compare Sharpe / MaxDD
+
+── Summary ───────────────────────────────────────────────────
+
+Total original JSON:  3,459,832 bytes
+Total DSL:            3,330,163 bytes  (4% avg compression)
+Total compiled JSON:  3,351,642 bytes

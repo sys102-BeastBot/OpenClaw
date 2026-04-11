@@ -1,0 +1,124 @@
+{
+  "step": "root",
+  "name": "SOXL Volatility-Scaled Rotator",
+  "description": "R4 seed 1 \u2014 SHARPE_HUNTER",
+  "rebalance": "daily",
+  "children": [
+    {
+      "step": "if",
+      "children": [
+        {
+          "step": "if-child",
+          "is-else-condition?": false,
+          "lhs-fn": "standard-deviation-return",
+          "lhs-window-days": "10",
+          "lhs-val": "UVXY",
+          "comparator": "gt",
+          "rhs-val": "12",
+          "rhs-fixed-value?": true,
+          "children": [
+            {
+              "step": "asset",
+              "ticker": "BIL",
+              "children": [],
+              "id": "87d51ccf-7008-497c-9183-67016d62c3d3"
+            }
+          ],
+          "id": "3b0048cf-9f64-4a8d-b873-be399daedc57"
+        },
+        {
+          "step": "if-child",
+          "is-else-condition?": true,
+          "children": [
+            {
+              "step": "if",
+              "children": [
+                {
+                  "step": "if-child",
+                  "is-else-condition?": false,
+                  "lhs-fn": "max-drawdown",
+                  "lhs-window-days": "5",
+                  "lhs-val": "SPY",
+                  "comparator": "gt",
+                  "rhs-val": "8",
+                  "rhs-fixed-value?": true,
+                  "children": [
+                    {
+                      "step": "asset",
+                      "ticker": "BIL",
+                      "children": [],
+                      "id": "8ae156e3-7c2c-4326-ba54-08ff211ffa04"
+                    }
+                  ],
+                  "id": "57fc1887-4683-4aa2-9d2f-242059ec5dbf"
+                },
+                {
+                  "step": "if-child",
+                  "is-else-condition?": true,
+                  "children": [
+                    {
+                      "step": "if",
+                      "children": [
+                        {
+                          "step": "if-child",
+                          "is-else-condition?": false,
+                          "lhs-fn": "cumulative-return",
+                          "lhs-window-days": "2",
+                          "lhs-val": "SOXL",
+                          "comparator": "gt",
+                          "rhs-val": "4.0",
+                          "rhs-fixed-value?": true,
+                          "children": [
+                            {
+                              "step": "wt-inverse-vol",
+                              "window-days": "10",
+                              "children": [
+                                {
+                                  "step": "asset",
+                                  "ticker": "SOXL",
+                                  "children": [],
+                                  "id": "1a9fd8c3-9d13-4541-a912-f9afc7bf0bf9"
+                                },
+                                {
+                                  "step": "asset",
+                                  "ticker": "TECL",
+                                  "children": [],
+                                  "id": "064a1a64-60b4-410e-b5f2-fb0c225a38e6"
+                                }
+                              ],
+                              "id": "64233708-95ad-46d7-af81-993839439325"
+                            }
+                          ],
+                          "id": "31df7ca0-53d9-490e-a927-edfa4f2aa3cb"
+                        },
+                        {
+                          "step": "if-child",
+                          "is-else-condition?": true,
+                          "children": [
+                            {
+                              "step": "asset",
+                              "ticker": "SPY",
+                              "children": [],
+                              "id": "c451786c-f817-4012-a037-6ef41e1a63c2"
+                            }
+                          ],
+                          "id": "55d20546-641a-4844-b1f3-302124e1b454"
+                        }
+                      ],
+                      "id": "7511320c-4d98-42c9-bef4-b0e3035c625c"
+                    }
+                  ],
+                  "id": "316ed21d-6969-48e6-99e0-4aff08d5340b"
+                }
+              ],
+              "id": "ebad7dc1-9f71-4489-9c2b-559906eff2fe"
+            }
+          ],
+          "id": "c4494c08-d81a-4033-adeb-66bc9674dbc6"
+        }
+      ],
+      "id": "cce70cbc-7f2b-4772-9436-3a00d02e95b0"
+    }
+  ],
+  "id": "c1dec14c-b0e8-4eff-9b7b-db829464bb7d"
+}

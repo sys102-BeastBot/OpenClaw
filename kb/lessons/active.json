@@ -1,0 +1,1220 @@
+{
+  "version": "1.0.0",
+  "last_updated_at": "2026-04-10T20:25:40.190943+00:00",
+  "lessons": [
+    {
+      "id": "lesson-001",
+      "category": "hard_rule",
+      "subcategory": "crash_guard",
+      "confidence": 0.9,
+      "decay": false,
+      "archetypes": [
+        "ALL"
+      ],
+      "lesson": "Mock lesson for dry run.",
+      "parameter_data": null,
+      "regime_context": null,
+      "supporting_evidence": [
+        "mock"
+      ],
+      "merge_candidate_ids": [],
+      "apply_to_next": true,
+      "times_reinforced": 0,
+      "times_contradicted": 0,
+      "created_at": "2026-03-23T01:31:17.418377+00:00",
+      "last_seen_generation": 0,
+      "source": "BOTH",
+      "conflict_flag": false,
+      "conflict_notes": null
+    },
+    {
+      "id": "lesson-002",
+      "category": "structure",
+      "subcategory": "seed_insight",
+      "confidence": 0.65,
+      "decay": true,
+      "archetypes": [
+        "ALL"
+      ],
+      "lesson": "Mock seed lesson for dry run.",
+      "parameter_data": null,
+      "regime_context": null,
+      "supporting_evidence": [
+        "gen-000-strat-01"
+      ],
+      "merge_candidate_ids": [],
+      "apply_to_next": true,
+      "times_reinforced": 0,
+      "times_contradicted": 0,
+      "created_at": "2026-03-23T01:31:17.432649+00:00",
+      "last_seen_generation": 0,
+      "source": "R3",
+      "conflict_flag": false,
+      "conflict_notes": null
+    },
+    {
+      "id": "lesson-003",
+      "category": "hard_rule",
+      "subcategory": "crash_guard",
+      "confidence": 0.9,
+      "decay": false,
+      "archetypes": [
+        "ALL"
+      ],
+      "lesson": "Mock lesson for dry run.",
+      "parameter_data": null,
+      "regime_context": null,
+      "supporting_evidence": [
+        "mock"
+      ],
+      "merge_candidate_ids": [],
+      "apply_to_next": true,
+      "times_reinforced": 0,
+      "times_contradicted": 0,
+      "created_at": "2026-03-23T01:32:25.520376+00:00",
+      "last_seen_generation": 0,
+      "source": "BOTH",
+      "conflict_flag": false,
+      "conflict_notes": null
+    },
+    {
+      "id": "lesson-004",
+      "category": "structure",
+      "subcategory": "seed_insight",
+      "confidence": 0.65,
+      "decay": true,
+      "archetypes": [
+        "ALL"
+      ],
+      "lesson": "Mock seed lesson for dry run.",
+      "parameter_data": null,
+      "regime_context": null,
+      "supporting_evidence": [
+        "gen-000-strat-01"
+      ],
+      "merge_candidate_ids": [],
+      "apply_to_next": true,
+      "times_reinforced": 0,
+      "times_contradicted": 0,
+      "created_at": "2026-03-23T01:32:25.528940+00:00",
+      "last_seen_generation": 0,
+      "source": "R3",
+      "conflict_flag": false,
+      "conflict_notes": null
+    },
+    {
+      "id": "lesson-005",
+      "category": "hard_rule",
+      "subcategory": "baseline_requirement",
+      "confidence": 0.5,
+      "decay": false,
+      "archetypes": [
+        "ALL"
+      ],
+      "lesson": "Cannot generate lessons without input data. This placeholder knowledge base requires R1 (community pattern mining across 150+ symphonies) and R2 (symphony autopsy of Beta Baller and 3 other strategies) analysis results. The synthesis engine is ready but has no findings to reconcile.",
+      "parameter_data": null,
+      "regime_context": null,
+      "supporting_evidence": [
+        "synthesis_engine: no R1 input received",
+        "synthesis_engine: no R2 input received"
+      ],
+      "merge_candidate_ids": [],
+      "apply_to_next": true,
+      "times_reinforced": 0,
+      "times_contradicted": 0,
+      "created_at": "2026-03-23T02:45:37.004417+00:00",
+      "last_seen_generation": 0,
+      "source": "BOTH",
+      "conflict_flag": false,
+      "conflict_notes": null
+    },
+    {
+      "id": "lesson-006",
+      "category": "anti_pattern",
+      "subcategory": "data_dependency",
+      "confidence": 0.5,
+      "decay": false,
+      "archetypes": [
+        "ALL"
+      ],
+      "lesson": "Placeholder lesson 2. Awaiting actual analysis results to populate with actionable trading strategy insights.",
+      "parameter_data": null,
+      "regime_context": null,
+      "supporting_evidence": [
+        "synthesis_engine: empty R1 dataset",
+        "synthesis_engine: empty R2 dataset"
+      ],
+      "merge_candidate_ids": [],
+      "apply_to_next": true,
+      "times_reinforced": 0,
+      "times_contradicted": 0,
+      "created_at": "2026-03-23T02:45:37.004431+00:00",
+      "last_seen_generation": 0,
+      "source": "BOTH",
+      "conflict_flag": false,
+      "conflict_notes": null
+    },
+    {
+      "id": "lesson-007",
+      "category": "structure",
+      "subcategory": "placeholder",
+      "confidence": 0.5,
+      "decay": true,
+      "archetypes": [
+        "ALL"
+      ],
+      "lesson": "Placeholder lesson 3. Structural patterns from community analysis required.",
+      "parameter_data": null,
+      "regime_context": null,
+      "supporting_evidence": [
+        "synthesis_engine: awaiting R1 structural patterns"
+      ],
+      "merge_candidate_ids": [],
+      "apply_to_next": true,
+      "times_reinforced": 0,
+      "times_contradicted": 0,
+      "created_at": "2026-03-23T02:45:37.004435+00:00",
+      "last_seen_generation": 0,
+      "source": "R1",
+      "conflict_flag": false,
+      "conflict_notes": null
+    },
+    {
+      "id": "lesson-008",
+      "category": "indicator",
+      "subcategory": "placeholder",
+      "confidence": 0.5,
+      "decay": true,
+      "archetypes": [
+        "ALL"
+      ],
+      "lesson": "Placeholder lesson 4. Parameter values from Beta Baller autopsy required.",
+      "parameter_data": {
+        "function": "unknown",
+        "asset": null,
+        "optimal_window": null,
+        "window_range": null,
+        "optimal_threshold": null,
+        "threshold_range": null,
+        "sensitivity": null,
+        "archetype_overrides": {}
+      },
+      "regime_context": null,
+      "supporting_evidence": [
+        "synthesis_engine: awaiting R2 parameter data"
+      ],
+      "merge_candidate_ids": [],
+      "apply_to_next": true,
+      "times_reinforced": 0,
+      "times_contradicted": 0,
+      "created_at": "2026-03-23T02:45:37.004438+00:00",
+      "last_seen_generation": 0,
+      "source": "R2",
+      "conflict_flag": false,
+      "conflict_notes": null
+    },
+    {
+      "id": "lesson-009",
+      "category": "risk",
+      "subcategory": "placeholder",
+      "confidence": 0.5,
+      "decay": true,
+      "archetypes": [
+        "ALL"
+      ],
+      "lesson": "Placeholder lesson 5. Risk management patterns required from both analyses.",
+      "parameter_data": null,
+      "regime_context": null,
+      "supporting_evidence": [
+        "synthesis_engine: no risk patterns available"
+      ],
+      "merge_candidate_ids": [],
+      "apply_to_next": true,
+      "times_reinforced": 0,
+      "times_contradicted": 0,
+      "created_at": "2026-03-23T02:45:37.004440+00:00",
+      "last_seen_generation": 0,
+      "source": "BOTH",
+      "conflict_flag": false,
+      "conflict_notes": null
+    },
+    {
+      "id": "lesson-010",
+      "category": "indicator",
+      "subcategory": "placeholder",
+      "confidence": 0.5,
+      "decay": true,
+      "archetypes": [
+        "ALL"
+      ],
+      "lesson": "Placeholder lesson 6. Indicator parameter priors required.",
+      "parameter_data": {
+        "function": "unknown",
+        "asset": null,
+        "optimal_window": null,
+        "window_range": null,
+        "optimal_threshold": null,
+        "threshold_range": null,
+        "sensitivity": null,
+        "archetype_overrides": {}
+      },
+      "regime_context": null,
+      "supporting_evidence": [
+        "synthesis_engine: awaiting indicator analysis"
+      ],
+      "merge_candidate_ids": [],
+      "apply_to_next": true,
+      "times_reinforced": 0,
+      "times_contradicted": 0,
+      "created_at": "2026-03-23T02:45:37.004442+00:00",
+      "last_seen_generation": 0,
+      "source": "BOTH",
+      "conflict_flag": false,
+      "conflict_notes": null
+    },
+    {
+      "id": "lesson-011",
+      "category": "asset",
+      "subcategory": "placeholder",
+      "confidence": 0.5,
+      "decay": true,
+      "archetypes": [
+        "ALL"
+      ],
+      "lesson": "Placeholder lesson 7. Asset combination insights required.",
+      "parameter_data": null,
+      "regime_context": null,
+      "supporting_evidence": [
+        "synthesis_engine: no asset patterns available"
+      ],
+      "merge_candidate_ids": [],
+      "apply_to_next": true,
+      "times_reinforced": 0,
+      "times_contradicted": 0,
+      "created_at": "2026-03-23T02:45:37.004444+00:00",
+      "last_seen_generation": 0,
+      "source": "BOTH",
+      "conflict_flag": false,
+      "conflict_notes": null
+    },
+    {
+      "id": "lesson-012",
+      "category": "structure",
+      "subcategory": "placeholder",
+      "confidence": 0.5,
+      "decay": true,
+      "archetypes": [
+        "ALL"
+      ],
+      "lesson": "Placeholder lesson 8. Node nesting patterns required.",
+      "parameter_data": null,
+      "regime_context": null,
+      "supporting_evidence": [
+        "synthesis_engine: awaiting structural analysis"
+      ],
+      "merge_candidate_ids": [],
+      "apply_to_next": true,
+      "times_reinforced": 0,
+      "times_contradicted": 0,
+      "created_at": "2026-03-23T02:45:37.004447+00:00",
+      "last_seen_generation": 0,
+      "source": "R1",
+      "conflict_flag": false,
+      "conflict_notes": null
+    },
+    {
+      "id": "lesson-013",
+      "category": "anti_pattern",
+      "subcategory": "placeholder",
+      "confidence": 0.5,
+      "decay": false,
+      "archetypes": [
+        "ALL"
+      ],
+      "lesson": "Placeholder lesson 9. Anti-pattern identification required from community analysis.",
+      "parameter_data": null,
+      "regime_context": null,
+      "supporting_evidence": [
+        "synthesis_engine: no anti-patterns identified"
+      ],
+      "merge_candidate_ids": [],
+      "apply_to_next": true,
+      "times_reinforced": 0,
+      "times_contradicted": 0,
+      "created_at": "2026-03-23T02:45:37.004450+00:00",
+      "last_seen_generation": 0,
+      "source": "R1",
+      "conflict_flag": false,
+      "conflict_notes": null
+    },
+    {
+      "id": "lesson-014",
+      "category": "indicator",
+      "subcategory": "placeholder",
+      "confidence": 0.5,
+      "decay": true,
+      "archetypes": [
+        "ALL"
+      ],
+      "lesson": "Placeholder lesson 10. Additional indicator priors required.",
+      "parameter_data": {
+        "function": "unknown",
+        "asset": null,
+        "optimal_window": null,
+        "window_range": null,
+        "optimal_threshold": null,
+        "threshold_range": null,
+        "sensitivity": null,
+        "archetype_overrides": {}
+      },
+      "regime_context": null,
+      "supporting_evidence": [
+        "synthesis_engine: awaiting more parameter data"
+      ],
+      "merge_candidate_ids": [],
+      "apply_to_next": true,
+      "times_reinforced": 0,
+      "times_contradicted": 0,
+      "created_at": "2026-03-23T02:45:37.004452+00:00",
+      "last_seen_generation": 0,
+      "source": "R2",
+      "conflict_flag": false,
+      "conflict_notes": null
+    },
+    {
+      "id": "lesson-015",
+      "category": "risk",
+      "subcategory": "placeholder",
+      "confidence": 0.5,
+      "decay": true,
+      "archetypes": [
+        "ALL"
+      ],
+      "lesson": "Placeholder lesson 11. Regime-specific risk management required.",
+      "parameter_data": null,
+      "regime_context": null,
+      "supporting_evidence": [
+        "synthesis_engine: no regime analysis available"
+      ],
+      "merge_candidate_ids": [],
+      "apply_to_next": true,
+      "times_reinforced": 0,
+      "times_contradicted": 0,
+      "created_at": "2026-03-23T02:45:37.004455+00:00",
+      "last_seen_generation": 0,
+      "source": "BOTH",
+      "conflict_flag": false,
+      "conflict_notes": null
+    },
+    {
+      "id": "lesson-016",
+      "category": "structure",
+      "subcategory": "placeholder",
+      "confidence": 0.5,
+      "decay": true,
+      "archetypes": [
+        "ALL"
+      ],
+      "lesson": "Placeholder lesson 12. Guard pattern analysis required.",
+      "parameter_data": null,
+      "regime_context": null,
+      "supporting_evidence": [
+        "synthesis_engine: awaiting guard patterns"
+      ],
+      "merge_candidate_ids": [],
+      "apply_to_next": true,
+      "times_reinforced": 0,
+      "times_contradicted": 0,
+      "created_at": "2026-03-23T02:45:37.004457+00:00",
+      "last_seen_generation": 0,
+      "source": "R1",
+      "conflict_flag": false,
+      "conflict_notes": null
+    },
+    {
+      "id": "lesson-017",
+      "category": "anti_pattern",
+      "subcategory": "placeholder",
+      "confidence": 0.5,
+      "decay": false,
+      "archetypes": [
+        "ALL"
+      ],
+      "lesson": "Placeholder lesson 13. Additional anti-patterns from failed strategies required.",
+      "parameter_data": null,
+      "regime_context": null,
+      "supporting_evidence": [
+        "synthesis_engine: no failure analysis available"
+      ],
+      "merge_candidate_ids": [],
+      "apply_to_next": true,
+      "times_reinforced": 0,
+      "times_contradicted": 0,
+      "created_at": "2026-03-23T02:45:37.004459+00:00",
+      "last_seen_generation": 0,
+      "source": "R2",
+      "conflict_flag": false,
+      "conflict_notes": null
+    },
+    {
+      "id": "lesson-018",
+      "category": "indicator",
+      "subcategory": "placeholder",
+      "confidence": 0.5,
+      "decay": true,
+      "archetypes": [
+        "ALL"
+      ],
+      "lesson": "Placeholder lesson 14. More indicator parameter ranges required.",
+      "parameter_data": {
+        "function": "unknown",
+        "asset": null,
+        "optimal_window": null,
+        "window_range": null,
+        "optimal_threshold": null,
+        "threshold_range": null,
+        "sensitivity": null,
+        "archetype_overrides": {}
+      },
+      "regime_context": null,
+      "supporting_evidence": [
+        "synthesis_engine: incomplete parameter coverage"
+      ],
+      "merge_candidate_ids": [],
+      "apply_to_next": true,
+      "times_reinforced": 0,
+      "times_contradicted": 0,
+      "created_at": "2026-03-23T02:45:37.004462+00:00",
+      "last_seen_generation": 0,
+      "source": "BOTH",
+      "conflict_flag": false,
+      "conflict_notes": null
+    },
+    {
+      "id": "lesson-019",
+      "category": "asset",
+      "subcategory": "placeholder",
+      "confidence": 0.5,
+      "decay": true,
+      "archetypes": [
+        "ALL"
+      ],
+      "lesson": "Placeholder lesson 15. Asset correlation insights required.",
+      "parameter_data": null,
+      "regime_context": null,
+      "supporting_evidence": [
+        "synthesis_engine: no correlation data available"
+      ],
+      "merge_candidate_ids": [],
+      "apply_to_next": true,
+      "times_reinforced": 0,
+      "times_contradicted": 0,
+      "created_at": "2026-03-23T02:45:37.004464+00:00",
+      "last_seen_generation": 0,
+      "source": "R1",
+      "conflict_flag": false,
+      "conflict_notes": null
+    },
+    {
+      "id": "lesson-020",
+      "category": "structure",
+      "subcategory": "placeholder",
+      "confidence": 0.5,
+      "decay": true,
+      "archetypes": [
+        "ALL"
+      ],
+      "lesson": "Placeholder lesson 16. Complexity vs performance analysis required.",
+      "parameter_data": null,
+      "regime_context": null,
+      "supporting_evidence": [
+        "synthesis_engine: no complexity metrics available"
+      ],
+      "merge_candidate_ids": [],
+      "apply_to_next": true,
+      "times_reinforced": 0,
+      "times_contradicted": 0,
+      "created_at": "2026-03-23T02:45:37.004466+00:00",
+      "last_seen_generation": 0,
+      "source": "R1",
+      "conflict_flag": false,
+      "conflict_notes": null
+    },
+    {
+      "id": "lesson-021",
+      "category": "indicator",
+      "subcategory": "placeholder",
+      "confidence": 0.5,
+      "decay": true,
+      "archetypes": [
+        "ALL"
+      ],
+      "lesson": "Placeholder lesson 17. Final indicator prior required.",
+      "parameter_data": {
+        "function": "unknown",
+        "asset": null,
+        "optimal_window": null,
+        "window_range": null,
+        "optimal_threshold": null,
+        "threshold_range": null,
+        "sensitivity": null,
+        "archetype_overrides": {}
+      },
+      "regime_context": null,
+      "supporting_evidence": [
+        "synthesis_engine: awaiting final parameters"
+      ],
+      "merge_candidate_ids": [],
+      "apply_to_next": true,
+      "times_reinforced": 0,
+      "times_contradicted": 0,
+      "created_at": "2026-03-23T02:45:37.004468+00:00",
+      "last_seen_generation": 0,
+      "source": "R2",
+      "conflict_flag": false,
+      "conflict_notes": null
+    },
+    {
+      "id": "lesson-022",
+      "category": "anti_pattern",
+      "subcategory": "placeholder",
+      "confidence": 0.5,
+      "decay": false,
+      "archetypes": [
+        "ALL"
+      ],
+      "lesson": "Placeholder lesson 18. Common failure modes required.",
+      "parameter_data": null,
+      "regime_context": null,
+      "supporting_evidence": [
+        "synthesis_engine: no failure mode data"
+      ],
+      "merge_candidate_ids": [],
+      "apply_to_next": true,
+      "times_reinforced": 0,
+      "times_contradicted": 0,
+      "created_at": "2026-03-23T02:45:37.004471+00:00",
+      "last_seen_generation": 0,
+      "source": "BOTH",
+      "conflict_flag": false,
+      "conflict_notes": null
+    },
+    {
+      "id": "lesson-023",
+      "category": "asset",
+      "subcategory": "placeholder",
+      "confidence": 0.5,
+      "decay": true,
+      "archetypes": [
+        "ALL"
+      ],
+      "lesson": "Placeholder lesson 19. Final asset combination insight required.",
+      "parameter_data": null,
+      "regime_context": null,
+      "supporting_evidence": [
+        "synthesis_engine: incomplete asset analysis"
+      ],
+      "merge_candidate_ids": [],
+      "apply_to_next": true,
+      "times_reinforced": 0,
+      "times_contradicted": 0,
+      "created_at": "2026-03-23T02:45:37.004473+00:00",
+      "last_seen_generation": 0,
+      "source": "R2",
+      "conflict_flag": false,
+      "conflict_notes": null
+    },
+    {
+      "id": "lesson-024",
+      "category": "structure",
+      "subcategory": "placeholder",
+      "confidence": 0.5,
+      "decay": true,
+      "archetypes": [
+        "ALL"
+      ],
+      "lesson": "Placeholder lesson 20. Final structural insight required.",
+      "parameter_data": null,
+      "regime_context": null,
+      "supporting_evidence": [
+        "synthesis_engine: awaiting final structural pattern"
+      ],
+      "merge_candidate_ids": [],
+      "apply_to_next": true,
+      "times_reinforced": 0,
+      "times_contradicted": 0,
+      "created_at": "2026-03-23T02:45:37.004475+00:00",
+      "last_seen_generation": 0,
+      "source": "R1",
+      "conflict_flag": false,
+      "conflict_notes": null
+    },
+    {
+      "id": "lesson-025",
+      "category": "structure",
+      "subcategory": "archetype_performance",
+      "confidence": 0.75,
+      "decay": false,
+      "archetypes": [
+        "ALL"
+      ],
+      "lesson": "CONSISTENCY archetype dominated generation 0, holding all top 6 ranks (fitness 79-84) with avg_fitness=81.5. SHARPE_HUNTER performed worst with avg_fitness=63.5, an 18-point gap. This suggests the fitness function rewards stable, risk-adjusted performance over pure return maximization or sharpe optimization.",
+      "parameter_data": null,
+      "regime_context": null,
+      "supporting_evidence": [
+        "gen-000-strat-24 (rank 1, fitness 84.0)",
+        "gen-000-strat-23 (rank 2, fitness 83.0)",
+        "gen-000-strat-22 (rank 3, fitness 82.0)",
+        "gen-000-strat-21 (rank 4, fitness 81.0)",
+        "gen-000-strat-20 (rank 5, fitness 80.0)",
+        "gen-000-strat-19 (rank 6, fitness 79.0)",
+        "CONSISTENCY avg: 81.5 vs SHARPE_HUNTER avg: 63.5"
+      ],
+      "merge_candidate_ids": [],
+      "apply_to_next": true,
+      "times_reinforced": 0,
+      "times_contradicted": 0,
+      "created_at": "2026-03-23T02:46:19.957637+00:00",
+      "last_seen_generation": 0,
+      "source": "R3",
+      "conflict_flag": false,
+      "conflict_notes": null
+    },
+    {
+      "id": "lesson-026",
+      "category": "structure",
+      "subcategory": "archetype_ranking",
+      "confidence": 0.7,
+      "decay": false,
+      "archetypes": [
+        "ALL"
+      ],
+      "lesson": "Clear archetype hierarchy emerged: CONSISTENCY (81.5) > RISK_MINIMIZER (75.5) > RETURN_CHASER (69.5) > SHARPE_HUNTER (63.5). RISK_MINIMIZER strategies occupied ranks 7-12, showing consistent mid-tier performance. For generation 1, allocate more strategy budget to CONSISTENCY and RISK_MINIMIZER variants.",
+      "parameter_data": null,
+      "regime_context": null,
+      "supporting_evidence": [
+        "CONSISTENCY: 6 strategies, avg 81.5",
+        "RISK_MINIMIZER: 6 strategies, avg 75.5 (ranks 7-12)",
+        "RETURN_CHASER: 6 strategies, avg 69.5",
+        "SHARPE_HUNTER: 6 strategies, avg 63.5"
+      ],
+      "merge_candidate_ids": [],
+      "apply_to_next": true,
+      "times_reinforced": 0,
+      "times_contradicted": 0,
+      "created_at": "2026-03-23T02:46:19.957646+00:00",
+      "last_seen_generation": 0,
+      "source": "R3",
+      "conflict_flag": false,
+      "conflict_notes": null
+    },
+    {
+      "id": "lesson-027",
+      "category": "structure",
+      "subcategory": "rebalance_frequency",
+      "confidence": 0.65,
+      "decay": true,
+      "archetypes": [
+        "ALL"
+      ],
+      "lesson": "All 24 seed strategies used daily rebalancing, including all top performers. While this prevents comparison across frequencies, it establishes daily rebalancing as a viable baseline. Generation 1 should test weekly and monthly frequencies to validate whether this pattern holds or was an artifact of seed generation.",
+      "parameter_data": null,
+      "regime_context": null,
+      "supporting_evidence": [
+        "All top 12 strategies use daily rebalancing",
+        "No alternative frequencies tested in generation 0"
+      ],
+      "merge_candidate_ids": [],
+      "apply_to_next": true,
+      "times_reinforced": 0,
+      "times_contradicted": 0,
+      "created_at": "2026-03-23T02:46:19.957649+00:00",
+      "last_seen_generation": 0,
+      "source": "R3",
+      "conflict_flag": false,
+      "conflict_notes": null
+    },
+    {
+      "id": "lesson-028",
+      "category": "anti_pattern",
+      "subcategory": "archetype_weakness",
+      "confidence": 0.7,
+      "decay": false,
+      "archetypes": [
+        "SHARPE_HUNTER"
+      ],
+      "lesson": "SHARPE_HUNTER archetype underperformed dramatically in generation 0 (avg 63.5 vs population avg 72.5). Zero SHARPE_HUNTER strategies reached top 12. This archetype may be overfit to short-term sharpe optimization at expense of consistency. Avoid pure sharpe-optimization structures unless paired with strong drawdown guards.",
+      "parameter_data": null,
+      "regime_context": null,
+      "supporting_evidence": [
+        "SHARPE_HUNTER avg_fitness: 63.5 (worst of 4 archetypes)",
+        "18-point gap vs CONSISTENCY (81.5)",
+        "9-point gap vs population avg (72.5)"
+      ],
+      "merge_candidate_ids": [],
+      "apply_to_next": true,
+      "times_reinforced": 0,
+      "times_contradicted": 0,
+      "created_at": "2026-03-23T02:46:19.957651+00:00",
+      "last_seen_generation": 0,
+      "source": "R3",
+      "conflict_flag": false,
+      "conflict_notes": null
+    },
+    {
+      "id": "lesson-029",
+      "category": "structure",
+      "subcategory": "fitness_distribution",
+      "confidence": 0.6,
+      "decay": true,
+      "archetypes": [
+        "ALL"
+      ],
+      "lesson": "Generation 0 showed narrow fitness distribution (std_dev=7.07) with range 61-84. All strategies passed rough_cut with zero disqualifications. This suggests seed strategies were conservatively designed. Generation 1 should explore more aggressive parameter ranges to stress-test the boundaries of viable strategy space.",
+      "parameter_data": null,
+      "regime_context": null,
+      "supporting_evidence": [
+        "std_dev_fitness: 7.0711",
+        "range: 61-84 (23 points)",
+        "0 disqualifications out of 24 strategies"
+      ],
+      "merge_candidate_ids": [],
+      "apply_to_next": true,
+      "times_reinforced": 0,
+      "times_contradicted": 0,
+      "created_at": "2026-03-23T02:46:19.957654+00:00",
+      "last_seen_generation": 0,
+      "source": "R3",
+      "conflict_flag": false,
+      "conflict_notes": null
+    },
+    {
+      "id": "lesson-030",
+      "category": "structure",
+      "subcategory": "optimization_status",
+      "confidence": 0.55,
+      "decay": true,
+      "archetypes": [
+        "ALL"
+      ],
+      "lesson": "No strategies in generation 0 were optimized (all marked 'not_optimized'). This is expected for seed strategies but means no parameter sensitivity data is available. Generation 1 must run optimizer on promising structures to extract parameter lessons and validate Generator priors.",
+      "parameter_data": null,
+      "regime_context": null,
+      "supporting_evidence": [
+        "All 24 strategies: delta_interpretation='not_optimized'",
+        "parameter_sensitivity.strategies_with_optimizer_data: 0"
+      ],
+      "merge_candidate_ids": [],
+      "apply_to_next": true,
+      "times_reinforced": 0,
+      "times_contradicted": 0,
+      "created_at": "2026-03-23T02:46:19.957656+00:00",
+      "last_seen_generation": 0,
+      "source": "R3",
+      "conflict_flag": false,
+      "conflict_notes": null
+    },
+    {
+      "id": "lesson-031",
+      "category": "hard_rule",
+      "subcategory": "archetype_allocation",
+      "confidence": 0.65,
+      "decay": false,
+      "archetypes": [
+        "ALL"
+      ],
+      "lesson": "For generation 1, shift archetype allocation based on seed performance: CONSISTENCY 40% (up from 25%), RISK_MINIMIZER 30% (up from 25%), RETURN_CHASER 20% (down from 25%), SHARPE_HUNTER 10% (down from 25%). This prioritizes archetypes with proven performance while maintaining exploration.",
+      "parameter_data": null,
+      "regime_context": null,
+      "supporting_evidence": [
+        "CONSISTENCY: 81.5 avg (6/6 top performers)",
+        "RISK_MINIMIZER: 75.5 avg (consistent mid-tier)",
+        "RETURN_CHASER: 69.5 avg",
+        "SHARPE_HUNTER: 63.5 avg (worst)"
+      ],
+      "merge_candidate_ids": [],
+      "apply_to_next": true,
+      "times_reinforced": 0,
+      "times_contradicted": 0,
+      "created_at": "2026-03-23T02:46:19.957658+00:00",
+      "last_seen_generation": 0,
+      "source": "R3",
+      "conflict_flag": false,
+      "conflict_notes": null
+    },
+    {
+      "id": "lesson-032",
+      "category": "structure",
+      "subcategory": "performance_clustering",
+      "confidence": 0.7,
+      "decay": true,
+      "archetypes": [
+        "CONSISTENCY",
+        "RISK_MINIMIZER"
+      ],
+      "lesson": "Top 12 strategies show archetype clustering: ranks 1-6 all CONSISTENCY (79-84 fitness), ranks 7-12 all RISK_MINIMIZER (73-78 fitness). This clean separation suggests these archetypes share structural patterns that the fitness function rewards. Generation 1 should analyze structural commonalities between CONSISTENCY and RISK_MINIMIZER seeds.",
+      "parameter_data": null,
+      "regime_context": null,
+      "supporting_evidence": [
+        "Ranks 1-6: 100% CONSISTENCY (n=6)",
+        "Ranks 7-12: 100% RISK_MINIMIZER (n=6)",
+        "Zero archetype mixing in top 12"
+      ],
+      "merge_candidate_ids": [],
+      "apply_to_next": true,
+      "times_reinforced": 0,
+      "times_contradicted": 0,
+      "created_at": "2026-03-23T02:46:19.957660+00:00",
+      "last_seen_generation": 0,
+      "source": "R3",
+      "conflict_flag": false,
+      "conflict_notes": null
+    },
+    {
+      "id": "lesson-033",
+      "category": "structure",
+      "subcategory": "archetype_performance",
+      "confidence": 0.85,
+      "decay": false,
+      "archetypes": [
+        "ALL"
+      ],
+      "lesson": "SHARPE_HUNTER and RETURN_CHASER archetypes dominated generation 0, with SHARPE_HUNTER achieving avg_fitness=53.6 (ranks 1-5) and RETURN_CHASER avg_fitness=52.7 (ranks 6-10). RISK_MINIMIZER (avg 40.1) and CONSISTENCY (avg 37.0) underperformed significantly. This contradicts lesson-025's claim that CONSISTENCY dominated - the seed brief contains placeholder lessons with fabricated data.",
+      "parameter_data": null,
+      "regime_context": null,
+      "supporting_evidence": [
+        "gen-000-strat-01 (SHARPE_HUNTER, fitness 53.6)",
+        "gen-000-strat-07 (RETURN_CHASER, fitness 52.7)",
+        "gen-000-strat-13 (RISK_MINIMIZER, fitness 40.1)",
+        "archetype_stats showing 17.5 point gap between top and bottom"
+      ],
+      "merge_candidate_ids": [],
+      "apply_to_next": true,
+      "times_reinforced": 0,
+      "times_contradicted": 0,
+      "created_at": "2026-04-09T03:20:04.481879+00:00",
+      "last_seen_generation": 0,
+      "source": "R3",
+      "conflict_flag": false,
+      "conflict_notes": null
+    },
+    {
+      "id": "lesson-034",
+      "category": "structure",
+      "subcategory": "rebalance_frequency",
+      "confidence": 0.75,
+      "decay": true,
+      "archetypes": [
+        "ALL"
+      ],
+      "lesson": "Strategies with 5-10% threshold rebalancing dominated top ranks: 5 of top 6 used 5% or 10% frequency, while only 1 used daily. All 12 displayed strategies used non-daily rebalancing except ranks 5 and 7. This suggests threshold-based rebalancing reduces whipsaw and transaction costs for leveraged ETF strategies without sacrificing performance.",
+      "parameter_data": null,
+      "regime_context": null,
+      "supporting_evidence": [
+        "gen-000-strat-01 (rank 1, 5% rebal, fitness 53.6)",
+        "gen-000-strat-02 (rank 2, 10% rebal, fitness 53.6)",
+        "gen-000-strat-04 (rank 3, 10% rebal, fitness 53.6)",
+        "gen-000-strat-09 (rank 8, 5% rebal, fitness 52.7)"
+      ],
+      "merge_candidate_ids": [],
+      "apply_to_next": true,
+      "times_reinforced": 0,
+      "times_contradicted": 0,
+      "created_at": "2026-04-09T03:20:04.481892+00:00",
+      "last_seen_generation": 0,
+      "source": "R3",
+      "conflict_flag": false,
+      "conflict_notes": null
+    },
+    {
+      "id": "lesson-035",
+      "category": "asset",
+      "subcategory": "core_leveraged_etf",
+      "confidence": 0.7,
+      "decay": true,
+      "archetypes": [
+        "SHARPE_HUNTER",
+        "RETURN_CHASER"
+      ],
+      "lesson": "SOXL (semiconductor 3x) appeared as core asset in 4 of top 10 strategies across both winning archetypes, with fitness scores 52.7-53.6. TECL (tech 3x) appeared in 3 top performers, SPXL in 2, and UPRO in 2. Semiconductor and tech sector exposure with 3x leverage outperformed broad market 3x ETFs in this generation's market regime.",
+      "parameter_data": null,
+      "regime_context": null,
+      "supporting_evidence": [
+        "gen-000-strat-01 (SOXL, fitness 53.6)",
+        "gen-000-strat-04 (SOXL, fitness 53.6)",
+        "gen-000-strat-07 (SOXL, fitness 52.7)",
+        "gen-000-strat-10 (SOXL, fitness 52.7)"
+      ],
+      "merge_candidate_ids": [],
+      "apply_to_next": true,
+      "times_reinforced": 0,
+      "times_contradicted": 0,
+      "created_at": "2026-04-09T03:20:04.481896+00:00",
+      "last_seen_generation": 0,
+      "source": "R3",
+      "conflict_flag": false,
+      "conflict_notes": null
+    },
+    {
+      "id": "lesson-036",
+      "category": "indicator",
+      "subcategory": "volatility_crash_guard",
+      "confidence": 0.8,
+      "decay": true,
+      "archetypes": [
+        "ALL"
+      ],
+      "lesson": "UVXY standard-deviation-return with window=10 and threshold=10-12 appeared in 6 of top 10 strategies as Layer 0 crash guard. All 6 achieved fitness >= 52.7. The 10-day window captures multi-day volatility regime shifts while threshold of 10-12 detects elevated vol without false positives during normal market fluctuations.",
+      "parameter_data": {
+        "function": "standard-deviation-return",
+        "asset": "UVXY",
+        "optimal_window": 10,
+        "optimal_threshold": "10",
+        "threshold_range": "10-12",
+        "sensitivity": "MEDIUM",
+        "archetype_overrides": {}
+      },
+      "regime_context": null,
+      "supporting_evidence": [
+        "gen-000-strat-01 (UVXY stddev 10/12, fitness 53.6)",
+        "gen-000-strat-04 (referenced in compound guard)",
+        "gen-000-strat-05 (UVXY stddev 10/10, fitness 53.6)",
+        "gen-000-strat-10 (UVXY stddev 10/10, fitness 52.7)"
+      ],
+      "merge_candidate_ids": [],
+      "apply_to_next": true,
+      "times_reinforced": 0,
+      "times_contradicted": 0,
+      "created_at": "2026-04-09T03:20:04.481898+00:00",
+      "last_seen_generation": 0,
+      "source": "R3",
+      "conflict_flag": false,
+      "conflict_notes": null
+    },
+    {
+      "id": "lesson-037",
+      "category": "indicator",
+      "subcategory": "vol_product_crash_detection",
+      "confidence": 0.75,
+      "decay": true,
+      "archetypes": [
+        "SHARPE_HUNTER",
+        "RETURN_CHASER"
+      ],
+      "lesson": "SVXY RSI(10) < 31 as crash guard appeared in 4 top-10 strategies with consistent fitness 52.7-53.6. Combined with SVXY 1-day return < -6% in compound guards for 3 strategies. The RSI(10) window and 31 threshold specifically detect vol-product stress, while -6% daily threshold catches acute crashes.",
+      "parameter_data": {
+        "function": "relative-strength-index",
+        "asset": "SVXY",
+        "optimal_window": 10,
+        "optimal_threshold": "31",
+        "threshold_range": "31",
+        "sensitivity": "HIGH",
+        "archetype_overrides": {}
+      },
+      "regime_context": null,
+      "supporting_evidence": [
+        "gen-000-strat-04 (SVXY RSI 10/31, fitness 53.6)",
+        "gen-000-strat-05 (SVXY RSI 10/31, fitness 53.6)",
+        "gen-000-strat-06 (SVXY 1-day < -6%, fitness 53.6)",
+        "gen-000-strat-11 (SVXY RSI 10/31 + return -6%, fitness 52.7)"
+      ],
+      "merge_candidate_ids": [],
+      "apply_to_next": true,
+      "times_reinforced": 0,
+      "times_contradicted": 0,
+      "created_at": "2026-04-09T03:20:04.481901+00:00",
+      "last_seen_generation": 0,
+      "source": "R3",
+      "conflict_flag": false,
+      "conflict_notes": null
+    },
+    {
+      "id": "lesson-038",
+      "category": "structure",
+      "subcategory": "compound_guards",
+      "confidence": 0.7,
+      "decay": true,
+      "archetypes": [
+        "SHARPE_HUNTER",
+        "RETURN_CHASER"
+      ],
+      "lesson": "Compound/all guards requiring 3 simultaneous conditions for crash detection appeared in 6 top-10 strategies. Typical pattern: UVXY vol spike AND SPY drawdown AND vol-product stress must ALL fire together. This reduces false exits compared to single-condition guards while maintaining crash protection.",
+      "parameter_data": null,
+      "regime_context": null,
+      "supporting_evidence": [
+        "gen-000-strat-05 (triple stress gate, fitness 53.6)",
+        "gen-000-strat-06 (compound guard, fitness 53.6)",
+        "gen-000-strat-08 (3 conditions compound, fitness 52.7)",
+        "gen-000-strat-09 (compound guard, fitness 52.7)"
+      ],
+      "merge_candidate_ids": [],
+      "apply_to_next": true,
+      "times_reinforced": 0,
+      "times_contradicted": 0,
+      "created_at": "2026-04-09T03:20:04.481903+00:00",
+      "last_seen_generation": 0,
+      "source": "R3",
+      "conflict_flag": false,
+      "conflict_notes": null
+    },
+    {
+      "id": "lesson-039",
+      "category": "indicator",
+      "subcategory": "momentum_confirmation",
+      "confidence": 0.65,
+      "decay": true,
+      "archetypes": [
+        "RETURN_CHASER"
+      ],
+      "lesson": "Leveraged ETF momentum gates with 1-3 day cumulative return windows and 4.0-8.0% thresholds appeared in all 5 RETURN_CHASER strategies. SOXL used 4.0-6.0% thresholds (2-day windows), TECL used 4.8-6.5% (1-3 day), SPXL used 2-8% (1-5 day). Higher beta assets required higher thresholds to filter noise.",
+      "parameter_data": {
+        "function": "cumulative-return",
+        "asset": "varies",
+        "optimal_window": 2,
+        "optimal_threshold": "6.0",
+        "threshold_range": "4.0-8.0",
+        "sensitivity": "MEDIUM",
+        "archetype_overrides": {
+          "RETURN_CHASER": {
+            "optimal_threshold": "6.0",
+            "threshold_range": "4.0-8.0"
+          }
+        }
+      },
+      "regime_context": null,
+      "supporting_evidence": [
+        "gen-000-strat-07 (SOXL 1-day > 6%, fitness 52.7)",
+        "gen-000-strat-08 (TECL 1-day > 6.5%, fitness 52.7)",
+        "gen-000-strat-09 (UPRO 3-day > 8%, fitness 52.7)",
+        "gen-000-strat-10 (SOXL 2-day > 8%, fitness 52.7)"
+      ],
+      "merge_candidate_ids": [],
+      "apply_to_next": true,
+      "times_reinforced": 0,
+      "times_contradicted": 0,
+      "created_at": "2026-04-09T03:20:04.481905+00:00",
+      "last_seen_generation": 0,
+      "source": "R3",
+      "conflict_flag": false,
+      "conflict_notes": null
+    },
+    {
+      "id": "lesson-040",
+      "category": "anti_pattern",
+      "subcategory": "archetype_weakness",
+      "confidence": 0.8,
+      "decay": false,
+      "archetypes": [
+        "RISK_MINIMIZER",
+        "CONSISTENCY"
+      ],
+      "lesson": "RISK_MINIMIZER and CONSISTENCY archetypes significantly underperformed with avg_fitness 40.1 and 37.0 respectively, 12-16 points below winning archetypes. All RISK_MINIMIZER strategies clustered at ranks 11-12 with identical fitness scores (40.1), suggesting overly conservative structures that sacrificed returns without proportional risk reduction. Generation 1 should only explore these archetypes if paired with momentum layers.",
+      "parameter_data": null,
+      "regime_context": null,
+      "supporting_evidence": [
+        "gen-000-strat-13 (RISK_MINIMIZER, fitness 40.1, rank 11)",
+        "gen-000-strat-14 (RISK_MINIMIZER, fitness 40.1, rank 12)",
+        "archetype_stats showing 13-point fitness gap vs winners",
+        "CONSISTENCY avg_fitness 37.0 (worst performing)"
+      ],
+      "merge_candidate_ids": [],
+      "apply_to_next": true,
+      "times_reinforced": 0,
+      "times_contradicted": 0,
+      "created_at": "2026-04-09T03:20:04.481907+00:00",
+      "last_seen_generation": 0,
+      "source": "R3",
+      "conflict_flag": false,
+      "conflict_notes": null
+    },
+    {
+      "id": "lesson-gen0-001",
+      "category": "hard_rule",
+      "subcategory": "crash_guard",
+      "confidence": 0.95,
+      "decay": false,
+      "archetypes": [
+        "ALL"
+      ],
+      "lesson": "When a max-drawdown or RSI condition fires (true branch = crash detected), the true branch must NEVER contain leveraged ETFs (TQQQ, SOXL, TECL, SPXL, UPRO). Crash detection true branch must route to BIL, SPY, or VIXM only. Leveraged ETFs belong in the ELSE branch (normal/bull conditions).",
+      "parameter_data": null,
+      "regime_context": null,
+      "supporting_evidence": [
+        "gen-0 slot-1: TQQQ in max-drawdown>6 true branch \u2014 auditor correctly rejected"
+      ],
+      "conflict_flag": false,
+      "conflict_notes": null,
+      "source": "AUDIT_FAILURE",
+      "apply_to_active": true,
+      "apply_to_next": true,
+      "created_at": "2026-04-10T19:01:30.740830+00:00"
+    },
+    {
+      "id": "lesson-gen0-002",
+      "category": "hard_rule",
+      "subcategory": "crash_guard",
+      "confidence": 0.95,
+      "decay": false,
+      "archetypes": [
+        "ALL"
+      ],
+      "lesson": "Crash guards must use OR logic (any condition triggers defense), not AND logic (all conditions must fire simultaneously). Example: (and (< rsi SVXY 31) (< cumret SVXY -6) (> maxdd SPY 6)) requires all three to fire at once \u2014 in gradual bear markets this almost never triggers, leaving capital exposed. CORRECT: Use compound crash guard with OR: (or (< rsi SVXY 31) (< cumret SVXY -6) (> maxdd SPY 6)) OR use a simpler single strong condition: (> maxdd SVXY 2 10)",
+      "parameter_data": null,
+      "regime_context": null,
+      "supporting_evidence": [
+        "gen-0 slot-1: AND compound guard required simultaneous RSI + cumret + drawdown \u2014 rarely fires in slow bears",
+        "Research: single-condition SVXY max-drawdown(2) > 10 appears in all 5 reference symphonies"
+      ],
+      "conflict_flag": false,
+      "conflict_notes": null,
+      "source": "GEN_0_OBSERVATION",
+      "apply_to_active": true,
+      "apply_to_next": true,
+      "created_at": "2026-04-10T20:25:40.190943+00:00"
+    },
+    {
+      "id": "lesson-gen0-003",
+      "category": "indicator",
+      "subcategory": "vol_entry",
+      "confidence": 0.88,
+      "decay": false,
+      "archetypes": [
+        "ALL"
+      ],
+      "lesson": "UVXY RSI(21) > 65 as a simple entry signal buys volatility when it is already elevated \u2014 this is buying high. UVXY decays via futures contango so holding extended vol positions destroys capital. The correct entry is the RSI BAND: RSI(10) > 74 AND RSI(10) < 84. This captures vol momentum (above 74) without buying exhausted spikes (below 84). See pat-020 in the DSL fragment library for the correct pattern.",
+      "parameter_data": {
+        "indicator": "relative-strength-index",
+        "asset": "UVXY",
+        "wrong_window": 21,
+        "wrong_threshold": 65,
+        "correct_lower": 74,
+        "correct_upper": 84,
+        "correct_window": 10
+      },
+      "regime_context": null,
+      "supporting_evidence": [
+        "gen-0 slot-1: UVXY RSI(21) > 65 not present but RSI(21) pattern would buy into exhaustion",
+        "pat-020: RSI band 74-84 found 61x in Sisyphus \u2014 standard vol profit entry",
+        "pat-015: RSI > 84 = exhaustion exit, confirming 84 as upper bound"
+      ],
+      "conflict_flag": false,
+      "conflict_notes": null,
+      "source": "GEN_0_OBSERVATION",
+      "apply_to_active": true,
+      "apply_to_next": true,
+      "created_at": "2026-04-10T20:25:40.190943+00:00"
+    }
+  ],
+  "last_updated": "2026-03-22T23:23:21Z",
+  "last_compacted_generation": 6,
+  "next_compaction_generation": 9,
+  "total_lessons": 43,
+  "category_counts": {
+    "hard_rule": 0,
+    "indicator": 0,
+    "structure": 0,
+    "asset": 0,
+    "risk": 0,
+    "anti_pattern": 0
+  }
+}

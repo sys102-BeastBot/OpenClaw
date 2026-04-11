@@ -1,0 +1,2263 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-04-08T15:54:21Z",
+  "last_updated_generation": 0,
+  "winning_patterns": [
+    {
+      "id": "pat-001",
+      "name": "TQQQ Bull Entry Gate",
+      "category": "guard",
+      "times_seen": 47,
+      "first_seen_generation": null,
+      "last_seen_generation": null,
+      "performance": {
+        "avg_fitness_with": null,
+        "avg_fitness_without": null,
+        "fitness_boost": null,
+        "confidence": 0.97
+      },
+      "applicability": {
+        "archetypes": [
+          "ALL"
+        ],
+        "regimes_effective": [
+          "bull_low_vol",
+          "sideways_chop"
+        ],
+        "regimes_less_effective": [
+          "bear_sustained",
+          "vix_spike"
+        ],
+        "regime_note": "Primary momentum gate for leveraged bull entries. The 5.5% threshold on 1-day return confirms TQQQ has positive momentum before committing capital. Prevents entries during sideways chop or early bear reversals."
+      },
+      "description": "Cumulative return gate requiring TQQQ 1-day return exceeds 5.5% before allowing leveraged bull allocation. Found in 11+ FNGG mini-strategies, Sisyphus ms-009/ms-010, Beta Baller ms-002 through ms-007, NOVA Best ms-001, and v2 ms-005. The 6% variant appears in FNGG ms-041-044 and v2 ms-005 as deliberate ensemble diversity. This is the single most replicated parameter across the 202 mini-strategy corpus, appearing in approximately 23% of all extracted strategies.",
+      "usage_note": "Apply as the innermost condition before any leveraged bull asset leaf (TQQQ, SOXL, TECL, SPXL, UPRO). The 1-day window is canonical; 60-day window variant exists for sustained trend confirmation but is less common. Never route to leveraged bulls without this gate or an equivalent momentum confirmation.",
+      "generator_instruction": "Generator: Before every if-child that routes to TQQQ, SOXL, TECL, SPXL, or UPRO as a terminal asset, insert an immediately preceding if-child with lhs-fn='cumulative-return', lhs-fn-params={'window-days':1}, lhs-val='TQQQ', comparator='gt', rhs-val=5.5, rhs-fixed-value=true. The else branch of this gate must route to BIL or a defensive asset, never to the leveraged bull directly.",
+      "confirmed_in_symphonies": [
+        "FNGG Extended OOS Outliers",
+        "Sisyphus V0.0",
+        "Beta Baller",
+        "NOVA Best Leverage Mashup",
+        "v2 Community Discovery NOVA"
+      ],
+      "base_parameters": {
+        "indicator": "cumulative-return",
+        "asset": "TQQQ",
+        "window": 1,
+        "threshold": 5.5,
+        "comparator": "gt",
+        "_basis": "47 occurrences across all 5 symphonies with consistent parameterization. 6% variant provides ensemble diversity in 6 mini-strategies.",
+        "_confidence": 0.97
+      },
+      "archetype_overrides": {
+        "conservative": {
+          "threshold": 6.0,
+          "_note": "Higher threshold reduces false entries but may miss some momentum"
+        },
+        "aggressive": {
+          "threshold": 5.0,
+          "_note": "Lower threshold increases entries but more whipsaws"
+        }
+      },
+      "template": {
+        "step": "if",
+        "children": [
+          {
+            "step": "if-child",
+            "is-else-condition?": false,
+            "lhs-fn": "cumulative-return",
+            "lhs-fn-params": {
+              "window-days": 1
+            },
+            "lhs-val": "TQQQ",
+            "comparator": "gt",
+            "rhs-val": "5.5",
+            "rhs-fixed-value?": true,
+            "children": []
+          },
+          {
+            "step": "if-child",
+            "is-else-condition?": true,
+            "children": [
+              {
+                "step": "asset",
+                "ticker": "BIL",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "lineage": {
+        "source": "research_phase",
+        "derived_from": [],
+        "first_strategy_id": null
+      }
+    },
+    {
+      "id": "pat-002",
+      "name": "RSI Window 10 Default",
+      "category": "selection",
+      "times_seen": 89,
+      "first_seen_generation": null,
+      "last_seen_generation": null,
+      "performance": {
+        "avg_fitness_with": null,
+        "avg_fitness_without": null,
+        "fitness_boost": null,
+        "confidence": 0.97
+      },
+      "applicability": {
+        "archetypes": [
+          "ALL"
+        ],
+        "regimes_effective": [
+          "bull_low_vol",
+          "bear_sustained",
+          "sideways_chop",
+          "vix_spike"
+        ],
+        "regimes_less_effective": [],
+        "regime_note": "Universal RSI window parameter. Window 10 balances responsiveness with noise filtering across all market regimes. Window 7 is the confirmed fast variant for more reactive signals."
+      },
+      "description": "Standardized RSI window of 10 days across all symphonies. Found in 40+ mini-strategies spanning all 5 analyzed symphonies. Window 7 appears as deliberate fast variant in FNGG and Sisyphus. Window 25 appears exactly once (NOVA ms-037) as an outlier. No RSI window exceeds 14 in the entire 202 mini-strategy corpus, confirming short-term RSI is preferred for this leveraged/volatility universe.",
+      "usage_note": "Default all RSI indicators to window=10 unless specifically implementing a fast-response variant (use window=7) or a regime detection variant (window=14 maximum). Never use RSI windows above 14 in this universe\u2014longer windows lose signal relevance for the fast-moving leveraged ETF dynamics.",
+      "generator_instruction": "Generator: When generating any relative-strength-index indicator node, set lhs-fn-params={'window-days':10} as the default. Only deviate to window=7 when the strategy description explicitly requires 'fast RSI' or 'reactive RSI'. Never generate RSI with window > 14. If comparing RSI across assets (e.g., BIL RSI vs IEF RSI), both must use identical windows.",
+      "confirmed_in_symphonies": [
+        "FNGG Extended OOS Outliers",
+        "Sisyphus V0.0",
+        "Beta Baller",
+        "NOVA Best Leverage Mashup",
+        "v2 Community Discovery NOVA"
+      ],
+      "base_parameters": {
+        "indicator": "relative-strength-index",
+        "window": 10,
+        "window_fast_variant": 7,
+        "window_max": 14,
+        "_basis": "89 occurrences across all 5 symphonies. Window 10 is modal value. Window 7 confirmed fast variant. Window 25 is single outlier in NOVA ms-037.",
+        "_confidence": 0.97
+      },
+      "archetype_overrides": {
+        "fast_response": {
+          "window": 7,
+          "_note": "Use for intraday-sensitive signals or volatility spike detection"
+        },
+        "regime_detection": {
+          "window": 14,
+          "_note": "Maximum window for trend regime confirmation, not common"
+        }
+      },
+      "template": {
+        "step": "if",
+        "children": [
+          {
+            "step": "if-child",
+            "is-else-condition?": false,
+            "lhs-fn": "relative-strength-index",
+            "lhs-fn-params": {
+              "window-days": 10
+            },
+            "lhs-val": "$ASSET",
+            "comparator": "gt",
+            "rhs-val": "$THRESHOLD",
+            "rhs-fixed-value?": true,
+            "children": []
+          },
+          {
+            "step": "if-child",
+            "is-else-condition?": true,
+            "children": []
+          }
+        ]
+      },
+      "lineage": {
+        "source": "research_phase",
+        "derived_from": [],
+        "first_strategy_id": null
+      }
+    },
+    {
+      "id": "pat-003",
+      "name": "SVXY Crash Guard Mandatory",
+      "category": "guard",
+      "times_seen": 31,
+      "first_seen_generation": null,
+      "last_seen_generation": null,
+      "performance": {
+        "avg_fitness_with": null,
+        "avg_fitness_without": null,
+        "fitness_boost": null,
+        "confidence": 0.95
+      },
+      "applicability": {
+        "archetypes": [
+          "vol_arb",
+          "adaptive_growth"
+        ],
+        "regimes_effective": [
+          "bull_low_vol",
+          "sideways_chop"
+        ],
+        "regimes_less_effective": [],
+        "regime_note": "CRITICAL for any strategy holding SVXY or SVIX. Without this guard, a vol spike like Volmageddon 2018 causes -93% drawdown. The guard must fire BEFORE the spike becomes terminal."
+      },
+      "description": "Maximum drawdown guard on SVXY preventing allocation during volatility spikes. Conservative variant uses window=2, threshold=10% (fires early). Aggressive variant uses window=3, threshold=20% (allows more drawdown before exit). Found in FNGG ms-001, NOVA Best ms-001, v2 ms-006. Historical evidence: XIV (SVXY predecessor) lost 93% in Volmageddon February 2018. Strategies without this guard showed catastrophic equity curves in backtests.",
+      "usage_note": "MANDATORY for any branch containing SVXY or SVIX. Place as outermost guard before any short-vol allocation. The conservative (2-day, 10%) version is preferred for capital preservation. The aggressive (3-day, 20%) version is only for strategies explicitly tolerating higher vol drawdowns for increased return.",
+      "generator_instruction": "Generator: Every if-child tree that terminates in SVXY or SVIX must have max-drawdown guard as the outermost condition. Insert if-child with lhs-fn='max-drawdown', lhs-fn-params={'window-days':2}, lhs-val='SVXY', comparator='lt', rhs-val=10, rhs-fixed-value=true. The true branch continues to vol allocation; the else branch routes to BIL. This guard is non-negotiable\u2014never generate SVXY/SVIX allocation without it.",
+      "confirmed_in_symphonies": [
+        "FNGG Extended OOS Outliers",
+        "NOVA Best Leverage Mashup",
+        "v2 Community Discovery NOVA"
+      ],
+      "base_parameters": {
+        "indicator": "max-drawdown",
+        "asset": "SVXY",
+        "window_conservative": 2,
+        "threshold_conservative": 10,
+        "window_aggressive": 3,
+        "threshold_aggressive": 20,
+        "comparator": "lt",
+        "_basis": "31 occurrences in vol-focused strategies. Volmageddon 2018 historical validation. Without guard: -93% drawdown. With guard: exits before terminal damage.",
+        "_confidence": 0.95
+      },
+      "archetype_overrides": {
+        "conservative": {
+          "window": 2,
+          "threshold": 10,
+          "_note": "Fires early, may exit during recoverable dips"
+        },
+        "aggressive": {
+          "window": 3,
+          "threshold": 20,
+          "_note": "Allows deeper drawdown, higher return potential but more risk"
+        }
+      },
+      "template": {
+        "step": "if",
+        "children": [
+          {
+            "step": "if-child",
+            "is-else-condition?": false,
+            "lhs-fn": "max-drawdown",
+            "lhs-fn-params": {
+              "window-days": 2
+            },
+            "lhs-val": "SVXY",
+            "comparator": "lt",
+            "rhs-val": "10",
+            "rhs-fixed-value?": true,
+            "children": []
+          },
+          {
+            "step": "if-child",
+            "is-else-condition?": true,
+            "children": [
+              {
+                "step": "asset",
+                "ticker": "BIL",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "lineage": {
+        "source": "research_phase",
+        "derived_from": [],
+        "first_strategy_id": null
+      }
+    },
+    {
+      "id": "pat-004",
+      "name": "SPY EMA 210 Long-Term Trend Filter",
+      "category": "guard",
+      "times_seen": 24,
+      "first_seen_generation": null,
+      "last_seen_generation": null,
+      "performance": {
+        "avg_fitness_with": null,
+        "avg_fitness_without": null,
+        "fitness_boost": null,
+        "confidence": 0.9
+      },
+      "applicability": {
+        "archetypes": [
+          "ALL"
+        ],
+        "regimes_effective": [
+          "bull_low_vol",
+          "sideways_chop"
+        ],
+        "regimes_less_effective": [
+          "bear_sustained",
+          "vix_spike"
+        ],
+        "regime_note": "Macro regime filter. SPY above its 210-day EMA confirms bull market structure. When SPY is below EMA(210), the strategy should shift defensive regardless of short-term signals."
+      },
+      "description": "Long-term trend filter using SPY price vs its 210-day exponential moving average. SPY > EMA(210) confirms bull macro regime. Found in FNGG ms-022/024, Beta Baller ms-004/007, NOVA Best ms-001/034/036/038. Often combined with shorter MA(3) for dual-timeframe confirmation (see pat-012). The 210-day window approximates one trading year and filters out bear market rallies.",
+      "usage_note": "Apply as an outer guard wrapping entire leveraged bull allocation branches. This is a macro filter, not a timing signal. When SPY < EMA(210), route to defensive allocations (BIL, SPY, or short basket) regardless of other bullish signals. Can be layered with MA(3) for dual-timeframe confirmation.",
+      "generator_instruction": "Generator: When constructing strategy trees with leveraged bull allocations (TQQQ, SOXL, TECL, SPXL, UPRO), wrap the entire bull branch in an outer if-child with lhs-fn='exponential-moving-average-price', lhs-fn-params={'window-days':210}, lhs-val='SPY', comparator='lt', rhs-val='SPY', rhs-fixed-value=false. The true branch (SPY > EMA) continues to bull logic; the else branch routes to BIL or defensive allocation.",
+      "confirmed_in_symphonies": [
+        "FNGG Extended OOS Outliers",
+        "Beta Baller",
+        "NOVA Best Leverage Mashup"
+      ],
+      "base_parameters": {
+        "indicator": "exponential-moving-average-price",
+        "asset": "SPY",
+        "window": 210,
+        "threshold_asset": "SPY",
+        "comparator": "lt",
+        "_basis": "24 occurrences across 3 symphonies. 210-day window is consistent. Always used as price-vs-EMA comparison, not absolute threshold.",
+        "_confidence": 0.9
+      },
+      "archetype_overrides": {},
+      "template": {
+        "step": "if",
+        "children": [
+          {
+            "step": "if-child",
+            "is-else-condition?": false,
+            "lhs-fn": "exponential-moving-average-price",
+            "lhs-fn-params": {
+              "window-days": 210
+            },
+            "lhs-val": "SPY",
+            "comparator": "lt",
+            "rhs-val": "SPY",
+            "rhs-fixed-value?": false,
+            "children": []
+          },
+          {
+            "step": "if-child",
+            "is-else-condition?": true,
+            "children": [
+              {
+                "step": "asset",
+                "ticker": "BIL",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "lineage": {
+        "source": "research_phase",
+        "derived_from": [],
+        "first_strategy_id": null
+      }
+    },
+    {
+      "id": "pat-005",
+      "name": "BIL RSI vs IEF Rate Stress Signal",
+      "category": "guard",
+      "times_seen": 18,
+      "first_seen_generation": null,
+      "last_seen_generation": null,
+      "performance": {
+        "avg_fitness_with": null,
+        "avg_fitness_without": null,
+        "fitness_boost": null,
+        "confidence": 0.85
+      },
+      "applicability": {
+        "archetypes": [
+          "adaptive_growth",
+          "vol_arb",
+          "conservative"
+        ],
+        "regimes_effective": [
+          "bull_low_vol",
+          "sideways_chop"
+        ],
+        "regimes_less_effective": [
+          "vix_spike"
+        ],
+        "regime_note": "Early warning signal for rate stress. BIL (T-bills) RSI falling below IEF (intermediate treasuries) RSI indicates flight to short-duration safety\u2014precedes equity drawdowns by days to weeks."
+      },
+      "description": "Dynamic cross-asset RSI comparison detecting rate stress before it impacts equities. When BIL RSI < IEF RSI, money is flowing to short-duration safety, signaling incoming rate stress or risk-off sentiment. Found in Beta Baller ms-003/004/005/007, NOVA Best ms-034/036, FNGG ms-046/050. This is NOT a fixed RSI threshold\u2014it compares relative momentum between two bond assets.",
+      "usage_note": "Use as an intermediate guard between macro filters (SPY EMA 210) and momentum gates (TQQQ 5.5%). When rate stress fires, reduce leveraged exposure even if momentum signals remain positive. The signal often precedes equity drawdowns by several days, providing early exit opportunity.",
+      "generator_instruction": "Generator: When building multi-layer guard structures, insert rate stress check between macro trend filters and momentum gates. Create if-child with lhs-fn='relative-strength-index', lhs-fn-params={'window-days':10}, lhs-val='BIL', comparator='gt', rhs-val='IEF', rhs-fixed-value=false. Note: rhs-val='IEF' means compare BIL RSI to IEF RSI dynamically. True branch (BIL RSI > IEF RSI = no stress) continues to momentum gates; else branch routes to defensive.",
+      "confirmed_in_symphonies": [
+        "Beta Baller",
+        "NOVA Best Leverage Mashup",
+        "FNGG Extended OOS Outliers"
+      ],
+      "base_parameters": {
+        "indicator": "relative-strength-index",
+        "lhs_asset": "BIL",
+        "rhs_asset": "IEF",
+        "window": 10,
+        "comparator": "gt",
+        "comparison_type": "dynamic_cross_asset",
+        "_basis": "18 occurrences across 3 symphonies. Window 10 consistent with RSI default. Always dynamic comparison (BIL RSI vs IEF RSI), never fixed threshold.",
+        "_confidence": 0.85
+      },
+      "archetype_overrides": {
+        "fast_response": {
+          "window": 7,
+          "_note": "Faster RSI window for earlier signal, more false positives"
+        }
+      },
+      "template": {
+        "step": "if",
+        "children": [
+          {
+            "step": "if-child",
+            "is-else-condition?": false,
+            "lhs-fn": "relative-strength-index",
+            "lhs-fn-params": {
+              "window-days": 10
+            },
+            "lhs-val": "BIL",
+            "comparator": "gt",
+            "rhs-val": "IEF",
+            "rhs-fixed-value?": false,
+            "children": []
+          },
+          {
+            "step": "if-child",
+            "is-else-condition?": true,
+            "children": [
+              {
+                "step": "asset",
+                "ticker": "BIL",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "lineage": {
+        "source": "research_phase",
+        "derived_from": [],
+        "first_strategy_id": null
+      }
+    },
+    {
+      "id": "pat-006",
+      "name": "UVXY VIXM Paired Volatility Hedge",
+      "category": "allocation",
+      "times_seen": 14,
+      "first_seen_generation": null,
+      "last_seen_generation": null,
+      "performance": {
+        "avg_fitness_with": null,
+        "avg_fitness_without": null,
+        "fitness_boost": null,
+        "confidence": 0.82
+      },
+      "applicability": {
+        "archetypes": [
+          "vol-regime-switch",
+          "adaptive-momentum",
+          "crash-protected-growth"
+        ],
+        "regimes_effective": [
+          "bear_sustained",
+          "vix_spike"
+        ],
+        "regimes_less_effective": [
+          "bull_low_vol"
+        ],
+        "regime_note": "UVXY captures near-term spikes while VIXM provides smoother mid-term vol exposure; pairing reduces whipsaw from UVXY decay while maintaining spike protection"
+      },
+      "description": "Always allocate to UVXY and VIXM together using equal cash weighting in defensive volatility branches, never holding either asset in isolation. Sisyphus V0.0 demonstrates this in ms-001, ms-002, ms-005, and ms-006 where the volatility hedge allocation consistently pairs both assets. UVXY alone decays rapidly in contango; VIXM alone misses acute spikes. The equal-weight combination captures both term structure dynamics. This pattern appears in 4 of Sisyphus's 10 non-trivial mini-strategies (40% frequency) and implicitly in FNGG's volatility routing architecture.",
+      "usage_note": "Apply this pattern whenever the strategy routes to a volatility-long defensive position. Do not use UVXY or VIXM as standalone holdings in any branch. The wt-cash-equal wrapper ensures both assets receive equal dollar allocation regardless of price.",
+      "generator_instruction": "Generator: Whenever constructing a defensive branch that holds long-volatility assets, never place UVXY or VIXM as a standalone asset leaf. Instead, wrap them in a wt-cash-equal node with both assets as children. The structure must be: {\"step\":\"wt-cash-equal\",\"children\":[{\"step\":\"asset\",\"symbol\":\"UVXY\"},{\"step\":\"asset\",\"symbol\":\"VIXM\"}]}. If you find a branch terminating in only UVXY or only VIXM, add the missing paired asset inside a wt-cash-equal wrapper.",
+      "confirmed_in_symphonies": [
+        "Sisyphus V0.0",
+        "FNGG Extended OOS Outliers"
+      ],
+      "base_parameters": {
+        "weighting_method": "wt-cash-equal",
+        "_basis": "Sisyphus ms-001/002/005/006 all use equal cash weighting for vol pair",
+        "assets": [
+          "UVXY",
+          "VIXM"
+        ],
+        "_assets_basis": "Consistent pairing across 4 Sisyphus mini-strategies",
+        "_confidence": 0.82
+      },
+      "archetype_overrides": {
+        "vol-regime-switch": {
+          "note": "Primary use case - this archetype should always use paired vol hedge"
+        }
+      },
+      "template": {
+        "step": "wt-cash-equal",
+        "children": [
+          {
+            "step": "asset",
+            "symbol": "UVXY",
+            "children": []
+          },
+          {
+            "step": "asset",
+            "symbol": "VIXM",
+            "children": []
+          }
+        ]
+      },
+      "lineage": {
+        "source": "research_phase",
+        "derived_from": [
+          "Sisyphus V0.0 ms-001",
+          "Sisyphus V0.0 ms-002",
+          "Sisyphus V0.0 ms-005",
+          "Sisyphus V0.0 ms-006"
+        ],
+        "first_strategy_id": null
+      }
+    },
+    {
+      "id": "pat-007",
+      "name": "SPY Max Drawdown Hard Floor",
+      "category": "guard",
+      "times_seen": 11,
+      "first_seen_generation": null,
+      "last_seen_generation": null,
+      "performance": {
+        "avg_fitness_with": null,
+        "avg_fitness_without": null,
+        "fitness_boost": null,
+        "confidence": 0.88
+      },
+      "applicability": {
+        "archetypes": [
+          "ALL"
+        ],
+        "regimes_effective": [
+          "bear_sustained",
+          "vix_spike"
+        ],
+        "regimes_less_effective": [
+          "bull_low_vol"
+        ],
+        "regime_note": "This guard rarely fires in bull markets but provides critical protection during sustained drawdowns that other momentum indicators may miss"
+      },
+      "description": "Use max-drawdown indicator on SPY as a hard floor circuit breaker that forces exit to safe haven (BIL) when breached. v2 Community Discovery NOVA ms-004 uses a 6% threshold for early exit; Beta Baller ms-005 uses a more permissive 10% threshold allowing deeper drawdowns before triggering. NOVA Best Leverage Mashup implies similar logic in its risk management layer. This pattern catches sustained market stress that cumulative-return indicators may miss because it tracks peak-to-trough rather than point-to-point returns. The 20-day window is standard across implementations.",
+      "usage_note": "Place this guard at or near the root of the symphony, before any asset selection logic. When triggered, route directly to BIL regardless of other conditions. Use 6% threshold for conservative strategies, 10% for aggressive strategies seeking to ride volatility longer.",
+      "generator_instruction": "Generator: Add a max-drawdown guard on SPY as the first or second if-child in the root if-block of every symphony. The condition must be: lhs-fn=max-drawdown, lhs-val=SPY, lhs-fn-params.window=20, comparator=gt, rhs-val=6 (conservative) or rhs-val=10 (aggressive). When this condition is true, the children must route directly to BIL: {\"step\":\"asset\",\"symbol\":\"BIL\"}. Do not place any leveraged assets in the true branch of this condition.",
+      "confirmed_in_symphonies": [
+        "Beta Baller",
+        "v2 Community Discovery NOVA",
+        "NOVA Best Leverage Mashup"
+      ],
+      "base_parameters": {
+        "indicator": "max-drawdown",
+        "asset": "SPY",
+        "window": 20,
+        "_window_basis": "Standard 20-day drawdown window across Beta Baller and v2 implementations",
+        "threshold_conservative": 6,
+        "threshold_aggressive": 10,
+        "_threshold_basis": "v2 ms-004 uses 6%, Beta Baller ms-005 uses 10%",
+        "comparator": "gt",
+        "_confidence": 0.88
+      },
+      "archetype_overrides": {
+        "crash-protected-growth": {
+          "threshold": 6,
+          "note": "Conservative threshold for crash-protection focused strategies"
+        },
+        "aggressive-momentum": {
+          "threshold": 10,
+          "note": "More permissive threshold allows riding deeper corrections"
+        }
+      },
+      "template": {
+        "step": "if",
+        "children": [
+          {
+            "step": "if-child",
+            "is-else-condition?": false,
+            "lhs-fn": "max-drawdown",
+            "lhs-fn-params": {
+              "window-days": 20
+            },
+            "lhs-val": "SPY",
+            "comparator": "gt",
+            "rhs-val": "6",
+            "rhs-fixed-value?": true,
+            "children": [
+              {
+                "step": "asset",
+                "symbol": "BIL",
+                "children": []
+              }
+            ]
+          },
+          {
+            "step": "if-child",
+            "is-else-condition?": true,
+            "children": []
+          }
+        ]
+      },
+      "lineage": {
+        "source": "research_phase",
+        "derived_from": [
+          "Beta Baller ms-005",
+          "v2 Community Discovery NOVA ms-004",
+          "NOVA Best Leverage Mashup implicit"
+        ],
+        "first_strategy_id": null
+      }
+    },
+    {
+      "id": "pat-008",
+      "name": "Triple Confirmation Before Leverage",
+      "category": "guard",
+      "times_seen": 18,
+      "first_seen_generation": null,
+      "last_seen_generation": null,
+      "performance": {
+        "avg_fitness_with": null,
+        "avg_fitness_without": null,
+        "fitness_boost": null,
+        "confidence": 0.87
+      },
+      "applicability": {
+        "archetypes": [
+          "ALL"
+        ],
+        "regimes_effective": [
+          "bull_low_vol"
+        ],
+        "regimes_less_effective": [],
+        "regime_note": "This meta-pattern applies across all regimes - the specific conditions within the triple confirmation should be regime-appropriate"
+      },
+      "description": "Chain at least 3 independent conditions covering distinct signal categories (trend + momentum + stress) before routing to any leveraged ETF. NOVA Best Leverage Mashup ms-001 exemplifies this with 7 chained conditions before TQQQ allocation. Sisyphus V0.0 ms-002 and ms-009 use 3-4 conditions. Beta Baller ms-003, ms-004, and ms-005 all chain 3+ conditions before leveraged positions. The three categories must be: (1) trend confirmation (e.g., price vs EMA), (2) momentum confirmation (e.g., cumulative return or RSI), (3) stress absence (e.g., vol check or drawdown check). Single or dual conditions before leverage correlate with higher drawdowns.",
+      "usage_note": "Before any TQQQ, SOXL, TECL, SPXL, UPRO, SVIX, or SVXY allocation, ensure at least 3 sequential if-child conditions from different categories must all pass. The else branch of the final condition should route to a safer asset (BIL, SPY, or QQQ).",
+      "generator_instruction": "Generator: Before any asset leaf containing TQQQ, SOXL, TECL, SPXL, UPRO, SVIX, or SVXY, count the number of if-child conditions that must pass to reach that leaf. If fewer than 3, add conditions until there are at least 3. The conditions must span at least 2 of these categories: (a) trend: current-price vs moving-average-price or exponential-moving-average-price, (b) momentum: cumulative-return or relative-strength-index, (c) stress: max-drawdown, standard-deviation-return, or UVXY-based indicator. Structure as nested if-children where each condition's true branch contains the next condition.",
+      "confirmed_in_symphonies": [
+        "NOVA Best Leverage Mashup",
+        "Sisyphus V0.0",
+        "Beta Baller",
+        "FNGG Extended OOS Outliers"
+      ],
+      "base_parameters": {
+        "minimum_conditions": 3,
+        "_basis": "NOVA Best ms-001 uses 7, Sisyphus ms-002/009 use 3-4, Beta Baller ms-003/004/005 use 3+",
+        "required_categories": [
+          "trend",
+          "momentum",
+          "stress"
+        ],
+        "_categories_basis": "Cross-symphony analysis shows successful strategies cover all three",
+        "_confidence": 0.87
+      },
+      "archetype_overrides": {
+        "aggressive-momentum": {
+          "minimum_conditions": 4,
+          "note": "Higher leverage exposure requires more confirmation"
+        }
+      },
+      "template": {
+        "step": "if",
+        "children": [
+          {
+            "step": "if-child",
+            "is-else-condition?": false,
+            "lhs-fn": "cumulative-return",
+            "lhs-fn-params": {
+              "window-days": 1
+            },
+            "lhs-val": "TQQQ",
+            "comparator": "gt",
+            "rhs-val": "5.5",
+            "rhs-fixed-value?": true,
+            "children": [
+              {
+                "step": "if",
+                "children": [
+                  {
+                    "step": "if-child",
+                    "is-else-condition?": false,
+                    "lhs-fn": "current-price",
+                    "lhs-fn-params": {},
+                    "lhs-val": "SPY",
+                    "comparator": "gt",
+                    "rhs-fn": "exponential-moving-average-price",
+                    "rhs-fn-params": {
+                      "window": 210
+                    },
+                    "rhs-val": "SPY",
+                    "rhs-fixed-value?": false,
+                    "children": [
+                      {
+                        "step": "if",
+                        "children": [
+                          {
+                            "step": "if-child",
+                            "is-else-condition?": false,
+                            "lhs-fn": "standard-deviation-return",
+                            "lhs-fn-params": {
+                              "window-days": 10
+                            },
+                            "lhs-val": "UVXY",
+                            "comparator": "lt",
+                            "rhs-val": "10",
+                            "rhs-fixed-value?": true,
+                            "children": [
+                              {
+                                "step": "asset",
+                                "symbol": "TQQQ",
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "step": "if-child",
+                            "is-else-condition?": true,
+                            "children": [
+                              {
+                                "step": "asset",
+                                "symbol": "BIL",
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "step": "if-child",
+                    "is-else-condition?": true,
+                    "children": [
+                      {
+                        "step": "asset",
+                        "symbol": "QQQ",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "step": "if-child",
+            "is-else-condition?": true,
+            "children": [
+              {
+                "step": "asset",
+                "symbol": "SPY",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "lineage": {
+        "source": "research_phase",
+        "derived_from": [
+          "NOVA Best Leverage Mashup ms-001",
+          "Sisyphus V0.0 ms-002",
+          "Sisyphus V0.0 ms-009",
+          "Beta Baller ms-003",
+          "Beta Baller ms-004",
+          "Beta Baller ms-005"
+        ],
+        "first_strategy_id": null
+      }
+    },
+    {
+      "id": "pat-009",
+      "name": "UVXY Cumulative Return Spike Detector",
+      "category": "guard",
+      "times_seen": 9,
+      "first_seen_generation": null,
+      "last_seen_generation": null,
+      "performance": {
+        "avg_fitness_with": null,
+        "avg_fitness_without": null,
+        "fitness_boost": null,
+        "confidence": 0.85
+      },
+      "applicability": {
+        "archetypes": [
+          "ALL"
+        ],
+        "regimes_effective": [
+          "vix_spike",
+          "bear_sustained"
+        ],
+        "regimes_less_effective": [
+          "bull_low_vol"
+        ],
+        "regime_note": "This guard fires during acute volatility events; the cumulative return measure catches sustained vol spikes that single-day measures miss"
+      },
+      "description": "Use cumulative-return on UVXY with a 10-day window and threshold of 20-25% to detect sustained volatility spikes, triggering immediate exit to BIL. NOVA Best Leverage Mashup ms-001 uses threshold 20% as the trigger point. v2 Community Discovery NOVA ms-006 uses a more conservative threshold of 25%. Unlike single-day return checks, the 10-day cumulative return catches multi-day vol buildups that precede major corrections. When UVXY has gained 20%+ over 10 days, volatility regime has shifted materially.",
+      "usage_note": "Place this guard after initial macro regime checks but before leveraged asset selection. When triggered, exit to BIL immediately. Use 20% threshold for earlier exit (more conservative) or 25% for later exit (captures only severe spikes).",
+      "generator_instruction": "Generator: Add a UVXY cumulative return spike detector as a guard condition in every symphony. Insert an if-child with: lhs-fn=cumulative-return, lhs-fn-params.window=10, lhs-val=UVXY, comparator=gt, rhs-val=20 (standard) or rhs-val=25 (permissive). When this condition is true (UVXY up 20%+ in 10 days), route directly to {\"step\":\"asset\",\"symbol\":\"BIL\"}. Place this condition before any branch containing TQQQ, SOXL, TECL, SPXL, UPRO, SVIX, or SVXY.",
+      "confirmed_in_symphonies": [
+        "NOVA Best Leverage Mashup",
+        "v2 Community Discovery NOVA"
+      ],
+      "base_parameters": {
+        "indicator": "cumulative-return",
+        "asset": "UVXY",
+        "window": 10,
+        "_window_basis": "Consistent 10-day window in NOVA Best and v2",
+        "threshold_standard": 20,
+        "threshold_permissive": 25,
+        "_threshold_basis": "NOVA Best ms-001 uses 20%, v2 ms-006 uses 25%",
+        "comparator": "gt",
+        "exit_asset": "BIL",
+        "_confidence": 0.85
+      },
+      "archetype_overrides": {
+        "crash-protected-growth": {
+          "threshold": 20,
+          "note": "Earlier exit for crash protection"
+        },
+        "aggressive-momentum": {
+          "threshold": 25,
+          "note": "Later exit allows riding through minor vol spikes"
+        }
+      },
+      "template": {
+        "step": "if",
+        "children": [
+          {
+            "step": "if-child",
+            "is-else-condition?": false,
+            "lhs-fn": "cumulative-return",
+            "lhs-fn-params": {
+              "window-days": 10
+            },
+            "lhs-val": "UVXY",
+            "comparator": "gt",
+            "rhs-val": "20",
+            "rhs-fixed-value?": true,
+            "children": [
+              {
+                "step": "asset",
+                "symbol": "BIL",
+                "children": []
+              }
+            ]
+          },
+          {
+            "step": "if-child",
+            "is-else-condition?": true,
+            "children": []
+          }
+        ]
+      },
+      "lineage": {
+        "source": "research_phase",
+        "derived_from": [
+          "NOVA Best Leverage Mashup ms-001",
+          "v2 Community Discovery NOVA ms-006"
+        ],
+        "first_strategy_id": null
+      }
+    },
+    {
+      "id": "pat-010",
+      "name": "SPY RSI Overbought Exhaustion Exit",
+      "category": "guard",
+      "times_seen": 8,
+      "first_seen_generation": null,
+      "last_seen_generation": null,
+      "performance": {
+        "avg_fitness_with": null,
+        "avg_fitness_without": null,
+        "fitness_boost": null,
+        "confidence": 0.83
+      },
+      "applicability": {
+        "archetypes": [
+          "adaptive-momentum",
+          "crash-protected-growth",
+          "aggressive-momentum"
+        ],
+        "regimes_effective": [
+          "bull_low_vol",
+          "bear_sustained"
+        ],
+        "regimes_less_effective": [
+          "sideways_chop"
+        ],
+        "regime_note": "This exit signal fires when markets are extended; using it in early bull phases may cause premature exits from strong trends"
+      },
+      "description": "Use relative-strength-index on SPY with window 10 and threshold 70-80 to detect overbought exhaustion conditions, triggering rotation from leveraged positions to safer assets. v2 Community Discovery NOVA ms-002 uses RSI threshold 70 for earlier exit. v2 ms-006 and ms-094 use threshold 80 for later exit allowing stronger momentum to run. The RSI(10) window matches the corpus-confirmed standard fast RSI. When SPY RSI exceeds the threshold, reduce leverage exposure by rotating to QQQ or SPY.",
+      "usage_note": "Apply this as a conditional exit within leveraged long branches, not as a root guard. When SPY RSI exceeds threshold, rotate from 3x leveraged (TQQQ/SOXL/SPXL) to 1x (QQQ/SPY), not to BIL. Use 70 for conservative mean-reversion strategies, 80 for trend-following strategies.",
+      "generator_instruction": "Generator: In any branch that terminates in TQQQ, SOXL, TECL, SPXL, or UPRO, add an RSI overbought check as a wrapper. Insert an if-block where the first if-child has: lhs-fn=relative-strength-index, lhs-fn-params.window=10, lhs-val=SPY, comparator=gt, rhs-val=70 (conservative) or rhs-val=80 (aggressive). When true (overbought), route to {\"step\":\"asset\",\"symbol\":\"QQQ\"} or {\"step\":\"asset\",\"symbol\":\"SPY\"}. When false (not overbought), route to the original leveraged asset.",
+      "confirmed_in_symphonies": [
+        "v2 Community Discovery NOVA"
+      ],
+      "base_parameters": {
+        "indicator": "relative-strength-index",
+        "asset": "SPY",
+        "window": 10,
+        "_window_basis": "RSI(10) is corpus-standard fast window, confirmed across 40+ mini-strategies",
+        "threshold_conservative": 70,
+        "threshold_aggressive": 80,
+        "_threshold_basis": "v2 ms-002 uses 70, v2 ms-006/094 use 80",
+        "comparator": "gt",
+        "exit_asset": "QQQ",
+        "_exit_basis": "Rotate to unleveraged tech exposure, not full risk-off",
+        "_confidence": 0.83
+      },
+      "archetype_overrides": {
+        "aggressive-momentum": {
+          "threshold": 80,
+          "note": "Let strong momentum run longer before reducing leverage"
+        },
+        "crash-protected-growth": {
+          "threshold": 70,
+          "note": "Earlier exit preserves gains in extended markets"
+        }
+      },
+      "template": {
+        "step": "if",
+        "children": [
+          {
+            "step": "if-child",
+            "is-else-condition?": false,
+            "lhs-fn": "relative-strength-index",
+            "lhs-fn-params": {
+              "window-days": 10
+            },
+            "lhs-val": "SPY",
+            "comparator": "gt",
+            "rhs-val": "70",
+            "rhs-fixed-value?": true,
+            "children": [
+              {
+                "step": "asset",
+                "symbol": "QQQ",
+                "children": []
+              }
+            ]
+          },
+          {
+            "step": "if-child",
+            "is-else-condition?": true,
+            "children": [
+              {
+                "step": "asset",
+                "symbol": "TQQQ",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "lineage": {
+        "source": "research_phase",
+        "derived_from": [
+          "v2 Community Discovery NOVA ms-002",
+          "v2 Community Discovery NOVA ms-006",
+          "v2 Community Discovery NOVA ms-094"
+        ],
+        "first_strategy_id": null
+      }
+    },
+    {
+      "id": "pat-011",
+      "name": "Max Drawdown Black Swan Catch and Recover",
+      "category": "guard",
+      "times_seen": 12,
+      "first_seen_generation": null,
+      "last_seen_generation": null,
+      "performance": {
+        "avg_fitness_with": null,
+        "avg_fitness_without": null,
+        "fitness_boost": null,
+        "confidence": 0.8
+      },
+      "applicability": {
+        "archetypes": [
+          "ALL"
+        ],
+        "regimes_effective": [
+          "vix_spike",
+          "bear_sustained",
+          "sideways_chop"
+        ],
+        "regimes_less_effective": [
+          "bull_low_vol"
+        ],
+        "regime_note": "This is the only pattern that handles BOTH crash exit AND recovery re-entry. Phase 1 fires during active drawdown to preserve capital. Phase 2 catches the oversold bounce by detecting when leveraged tech (SOXL) is deeply oversold, signaling crash exhaustion and recovery opportunity."
+      },
+      "description": "Two-phase crash response system derived from v2 Community Discovery NOVA ms-004 named 'Max Drawdown Black Swan Catcher'. Phase 1 uses SPY max-drawdown over 20 days exceeding 6% to detect active crash conditions and immediately routes to BIL for capital preservation. Phase 2 is NESTED inside the crash branch: when SOXL RSI(10) drops below 30, the crash is near exhaustion and recovery is imminent, so it allocates to TQQQ to capture the bounce. This nested structure ensures you only attempt recovery entries AFTER crash conditions are confirmed, preventing premature re-entry during cascading selloffs.",
+      "usage_note": "Apply as outermost guard on any strategy holding leveraged bull assets. The nested structure is critical: the SOXL RSI check only fires when already in crash mode (SPY drawdown > 6%). Do not flatten this into sequential if-children or the logic breaks. The else branch of the outer if-child should contain normal bull routing logic.",
+      "generator_instruction": "Generator: When constructing any strategy holding TQQQ, SOXL, TECL, SPXL, or UPRO, wrap the entire leveraged bull allocation tree inside this two-phase structure. Create an outer if-child with lhs-fn=max-drawdown, lhs-val=SPY, window=20, comparator=gt, rhs-val=6, rhs-fixed-value=true, is-else-condition=false. Inside this if-child's children array, create a nested if step containing two if-children: first if-child has lhs-fn=relative-strength-index, lhs-val=SOXL, window=10, comparator=lt, rhs-val=30, rhs-fixed-value=true, is-else-condition=false with children containing asset step for TQQQ; second if-child has is-else-condition=true with children containing asset step for BIL. The outer if's else branch (is-else-condition=true) contains your normal bull routing logic.",
+      "confirmed_in_symphonies": [
+        "v2 Community Discovery NOVA"
+      ],
+      "base_parameters": {
+        "drawdown_window": 20,
+        "_drawdown_window_basis": "v2 Community ms-004 uses 20-day lookback for drawdown calculation, capturing multi-week crash events while filtering daily noise",
+        "_drawdown_window_confidence": 0.8,
+        "drawdown_threshold": 6,
+        "_drawdown_threshold_basis": "6% SPY drawdown over 20 days represents significant market stress beyond normal pullbacks, confirmed in v2 Community ms-004",
+        "_drawdown_threshold_confidence": 0.8,
+        "rsi_window": 10,
+        "_rsi_window_basis": "RSI window 10 is universal across all 5 symphonies for momentum signals, confirmed in 40+ mini-strategies",
+        "_rsi_window_confidence": 0.95,
+        "rsi_oversold_threshold": 30,
+        "_rsi_oversold_threshold_basis": "RSI below 30 on leveraged tech (SOXL) indicates extreme oversold conditions near crash exhaustion, enabling recovery entry",
+        "_rsi_oversold_threshold_confidence": 0.8,
+        "crash_exit_asset": "BIL",
+        "_crash_exit_asset_basis": "BIL is universal safe haven across all 5 symphonies for capital preservation during crashes",
+        "_crash_exit_asset_confidence": 0.95,
+        "recovery_asset": "TQQQ",
+        "_recovery_asset_basis": "TQQQ provides maximum upside capture on oversold bounce, confirmed pattern across FNGG and v2 Community",
+        "_recovery_asset_confidence": 0.85,
+        "oversold_signal_asset": "SOXL",
+        "_oversold_signal_asset_basis": "SOXL as leveraged semiconductor ETF shows extreme RSI readings at crash bottoms, more sensitive than broad market ETFs",
+        "_oversold_signal_asset_confidence": 0.8
+      },
+      "archetype_overrides": {},
+      "template": {
+        "step": "if",
+        "children": [
+          {
+            "step": "if-child",
+            "is-else-condition?": false,
+            "lhs-fn": "max-drawdown",
+            "lhs-fn-params": {
+              "window-days": 20
+            },
+            "lhs-val": "SPY",
+            "comparator": "gt",
+            "rhs-val": "6",
+            "rhs-fixed-value?": true,
+            "children": [
+              {
+                "step": "if",
+                "children": [
+                  {
+                    "step": "if-child",
+                    "is-else-condition?": false,
+                    "lhs-fn": "relative-strength-index",
+                    "lhs-fn-params": {
+                      "window-days": 10
+                    },
+                    "lhs-val": "SOXL",
+                    "comparator": "lt",
+                    "rhs-val": "30",
+                    "rhs-fixed-value?": true,
+                    "children": [
+                      {
+                        "step": "asset",
+                        "ticker": "TQQQ",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "step": "if-child",
+                    "is-else-condition?": true,
+                    "children": [
+                      {
+                        "step": "asset",
+                        "ticker": "BIL",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "step": "if-child",
+            "is-else-condition?": true,
+            "children": []
+          }
+        ]
+      },
+      "lineage": {
+        "source": "research_phase",
+        "derived_from": [
+          "v2 Community Discovery NOVA ms-004 Max Drawdown Black Swan Catcher"
+        ],
+        "first_strategy_id": null
+      }
+    },
+    {
+      "id": "pat-012",
+      "name": "SVXY Triple Crash Guard Compound",
+      "category": "guard",
+      "times_seen": 8,
+      "first_seen_generation": null,
+      "last_seen_generation": null,
+      "performance": {
+        "avg_fitness_with": null,
+        "avg_fitness_without": null,
+        "fitness_boost": null,
+        "confidence": 0.9
+      },
+      "applicability": {
+        "archetypes": [
+          "vol-harvest",
+          "leveraged-bull",
+          "hybrid"
+        ],
+        "regimes_effective": [
+          "vix_spike",
+          "bear_sustained"
+        ],
+        "regimes_less_effective": [
+          "bull_low_vol"
+        ],
+        "regime_note": "This is a crash detection compound that fires when all three independent stress signals align. Designed to catch flash crashes and volatility spikes before they destroy leveraged positions. The triple-condition requirement prevents false positives from single-indicator noise."
+      },
+      "description": "Three-part compound crash detection combining SVXY momentum collapse (RSI<31), SVXY acute drawdown (1-day return<-6%), and bond stress (TMF max-drawdown>7%). These three conditions appear together as a unified crash-detection unit in FNGG ms-001, ms-010, ms-017, ms-019, ms-027, and ms-029. When all three fire simultaneously, it indicates a genuine market crash rather than normal volatility. SVXY RSI below 31 shows short-vol momentum has collapsed. SVXY 1-day return below -6% confirms acute same-day damage. TMF max-drawdown above 7% shows flight-to-quality bonds are also stressed, indicating systemic risk rather than isolated vol spike.",
+      "usage_note": "Place this compound guard at the outermost level of any strategy holding SVXY, SVIX, or leveraged bull ETFs. When the compound fires (all 3 true), immediately route to BIL. Do not wait for additional confirmation. This is a circuit breaker, not a trading signal.",
+      "generator_instruction": "Generator: When building any branch that terminates in SVXY, SVIX, TQQQ, SOXL, TECL, SPXL, or UPRO, wrap the entire branch in an if-node where the first if-child contains three nested conditions: (1) lhs-fn=relative-strength-index, lhs-fn-params.window=10, lhs-val=SVXY, comparator=lt, rhs-val=31, rhs-fixed-value=true; (2) lhs-fn=cumulative-return, lhs-fn-params.window=1, lhs-val=SVXY, comparator=lt, rhs-val=-6, rhs-fixed-value=true; (3) lhs-fn=max-drawdown, lhs-fn-params.window=10, lhs-val=TLT, comparator=gt, rhs-val=7, rhs-fixed-value=true. The first if-child routes to BIL when crash detected. The else-child contains the original branch.",
+      "confirmed_in_symphonies": [
+        "FNGG Extended OOS Outliers"
+      ],
+      "base_parameters": {
+        "svxy_rsi_window": 10,
+        "svxy_rsi_threshold": 31,
+        "svxy_return_window": 1,
+        "svxy_return_threshold": -6,
+        "bond_drawdown_window": 10,
+        "bond_drawdown_threshold": 7,
+        "bond_proxy": "TLT",
+        "_basis": "FNGG ms-001/010/017/019/027/029 show these exact three conditions appearing together as compound unit. RSI(10)<31 and 1-day<-6% on SVXY paired with TMF drawdown>7%. TMF not in signal universe so TLT used as proxy for long bond stress.",
+        "_confidence": 0.9
+      },
+      "archetype_overrides": {
+        "vol-harvest": {
+          "note": "Critical for vol-harvest - this is the primary protection against short-vol blowup"
+        }
+      },
+      "template": {
+        "step": "if",
+        "children": [
+          {
+            "step": "if-child",
+            "is-else-condition?": false,
+            "lhs-fn": "relative-strength-index",
+            "lhs-fn-params": {
+              "window-days": 10
+            },
+            "lhs-val": "SVXY",
+            "comparator": "lt",
+            "rhs-val": "31",
+            "rhs-fixed-value?": true,
+            "children": [
+              {
+                "step": "if",
+                "children": [
+                  {
+                    "step": "if-child",
+                    "is-else-condition?": false,
+                    "lhs-fn": "cumulative-return",
+                    "lhs-fn-params": {
+                      "window-days": 1
+                    },
+                    "lhs-val": "SVXY",
+                    "comparator": "lt",
+                    "rhs-val": "-6",
+                    "rhs-fixed-value?": true,
+                    "children": [
+                      {
+                        "step": "if",
+                        "children": [
+                          {
+                            "step": "if-child",
+                            "is-else-condition?": false,
+                            "lhs-fn": "max-drawdown",
+                            "lhs-fn-params": {
+                              "window-days": 10
+                            },
+                            "lhs-val": "TLT",
+                            "comparator": "gt",
+                            "rhs-val": "7",
+                            "rhs-fixed-value?": true,
+                            "children": [
+                              {
+                                "step": "asset",
+                                "ticker": "BIL",
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "step": "if-child",
+                            "is-else-condition?": true,
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "step": "if-child",
+                    "is-else-condition?": true,
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "step": "if-child",
+            "is-else-condition?": true,
+            "children": []
+          }
+        ]
+      },
+      "lineage": {
+        "source": "research_phase",
+        "derived_from": [
+          "pat-001",
+          "pat-008"
+        ],
+        "first_strategy_id": null
+      }
+    },
+    {
+      "id": "pat-013",
+      "name": "UVXY Moving Average Return vs VIXM Trending Signal",
+      "category": "selection",
+      "times_seen": 4,
+      "first_seen_generation": null,
+      "last_seen_generation": null,
+      "performance": {
+        "avg_fitness_with": null,
+        "avg_fitness_without": null,
+        "fitness_boost": null,
+        "confidence": 0.82
+      },
+      "applicability": {
+        "archetypes": [
+          "vol-harvest",
+          "hybrid",
+          "adaptive"
+        ],
+        "regimes_effective": [
+          "vix_spike"
+        ],
+        "regimes_less_effective": [
+          "bull_low_vol"
+        ],
+        "regime_note": "Distinguishes between near-term vol spikes (UVXY accelerating) and sustained elevated volatility (VIXM). When UVXY MA-return exceeds VIXM, expect continued near-term vol expansion. When VIXM exceeds UVXY MA-return, vol is elevated but stabilizing."
+      },
+      "description": "Compares short-term UVXY momentum (3-day moving average return) against VIXM as a dynamic threshold. UVXY tracks near-term VIX futures while VIXM tracks mid-term. When UVXY's 3-day MA-return exceeds VIXM's equivalent measure, it indicates near-term volatility is accelerating faster than the sustained vol regime - a spike is building or continuing. Found in FNGG ms-010 and ms-040. Both UVXY and VIXM are in the generator universe, making this fully recomposable.",
+      "usage_note": "Use as a regime filter to distinguish spike-in-progress from elevated-but-stable vol. When UVXY MA-return > VIXM, favor defensive positioning or vol-long. When VIXM > UVXY MA-return, vol is elevated but mean-reverting - safer to hold short-vol or leveraged equity.",
+      "generator_instruction": "Generator: When building vol-regime detection logic, add an if-child with lhs-fn=moving-average-return, lhs-fn-params.window=3, lhs-val=UVXY, comparator=gt, rhs-val=VIXM, rhs-fixed-value=false. The true branch indicates spike-accelerating regime (route to BIL or vol-long). The else branch indicates stable-vol regime (safe for SVXY or leveraged bull).",
+      "confirmed_in_symphonies": [
+        "FNGG Extended OOS Outliers"
+      ],
+      "base_parameters": {
+        "uvxy_ma_window": 3,
+        "comparator_asset": "VIXM",
+        "_basis": "FNGG ms-010/040 use UVXY moving-average-return with short window compared against VIXM. Window=3 captures very recent momentum. VIXM as threshold creates dynamic comparison rather than fixed value.",
+        "_confidence": 0.82
+      },
+      "archetype_overrides": {
+        "vol-harvest": {
+          "note": "Use to time entry/exit from short-vol positions - exit when UVXY accelerating past VIXM"
+        }
+      },
+      "template": {
+        "step": "if",
+        "children": [
+          {
+            "step": "if-child",
+            "is-else-condition?": false,
+            "lhs-fn": "moving-average-return",
+            "lhs-fn-params": {
+              "window-days": 3
+            },
+            "lhs-val": "UVXY",
+            "comparator": "gt",
+            "rhs-val": "VIXM",
+            "rhs-fixed-value?": false,
+            "children": [
+              {
+                "step": "asset",
+                "ticker": "BIL",
+                "children": []
+              }
+            ]
+          },
+          {
+            "step": "if-child",
+            "is-else-condition?": true,
+            "children": []
+          }
+        ]
+      },
+      "lineage": {
+        "source": "research_phase",
+        "derived_from": [],
+        "first_strategy_id": null
+      }
+    },
+    {
+      "id": "pat-014",
+      "name": "TECS SOXS SQQQ Named Short Basket",
+      "category": "allocation",
+      "times_seen": 12,
+      "first_seen_generation": null,
+      "last_seen_generation": null,
+      "performance": {
+        "avg_fitness_with": null,
+        "avg_fitness_without": null,
+        "fitness_boost": null,
+        "confidence": 0.88
+      },
+      "applicability": {
+        "archetypes": [
+          "leveraged-bear",
+          "hybrid",
+          "adaptive"
+        ],
+        "regimes_effective": [
+          "bear_sustained",
+          "vix_spike"
+        ],
+        "regimes_less_effective": [
+          "bull_low_vol"
+        ],
+        "regime_note": "This basket provides diversified bear exposure across tech (TECS), semiconductors (SOXS), and broad Nasdaq (SQQQ). Equal weighting prevents concentration in any single sector's bear dynamics. Only deploy when confirmed bearish signals are active."
+      },
+      "description": "Equal-weight allocation to three leveraged inverse ETFs: TECS (3x inverse tech), SOXS (3x inverse semiconductors), and SQQQ (3x inverse Nasdaq). FNGG explicitly names this combination as 'SHORT GROUP' and uses it as a terminal allocation bucket. The three-asset basket diversifies bear exposure and reduces single-sector risk. Never hold any of these individually - always as the complete basket. All three assets are in the generator universe.",
+      "usage_note": "Deploy only when upstream routing confirms bearish regime (e.g., SPY below EMA-210, TQQQ momentum negative, vol signals elevated). Use wt-cash-equal step to hold all three with equal weight. This is a terminal allocation, not a conditional branch.",
+      "generator_instruction": "Generator: When any branch requires bear-regime allocation, never use TECS, SOXS, or SQQQ individually. Always use a wt-cash-equal node containing exactly three asset children: TECS, SOXS, SQQQ in that order. The wt-cash-equal step creates equal 33.3% allocation to each. Place this basket only after confirmed bearish routing logic (pat-002 SPY EMA-210 failing, or vol spike detected).",
+      "confirmed_in_symphonies": [
+        "FNGG Extended OOS Outliers"
+      ],
+      "base_parameters": {
+        "basket_assets": [
+          "TECS",
+          "SOXS",
+          "SQQQ"
+        ],
+        "weighting_method": "equal",
+        "_basis": "FNGG contains explicit named 'SHORT GROUP' with exactly TECS+SOXS+SQQQ. Multiple batches show this exact combination. Never appears as individual holdings.",
+        "_confidence": 0.88
+      },
+      "archetype_overrides": {},
+      "template": {
+        "step": "wt-cash-equal",
+        "children": [
+          {
+            "step": "asset",
+            "ticker": "TECS",
+            "children": []
+          },
+          {
+            "step": "asset",
+            "ticker": "SOXS",
+            "children": []
+          },
+          {
+            "step": "asset",
+            "ticker": "SQQQ",
+            "children": []
+          }
+        ]
+      },
+      "lineage": {
+        "source": "research_phase",
+        "derived_from": [],
+        "first_strategy_id": null
+      }
+    },
+    {
+      "id": "pat-015",
+      "name": "UVXY RSI Overbought Vol Exhaustion Exit",
+      "category": "guard",
+      "times_seen": 3,
+      "first_seen_generation": null,
+      "last_seen_generation": null,
+      "performance": {
+        "avg_fitness_with": null,
+        "avg_fitness_without": null,
+        "fitness_boost": null,
+        "confidence": 0.82
+      },
+      "applicability": {
+        "archetypes": [
+          "vol-harvest",
+          "hybrid",
+          "adaptive"
+        ],
+        "regimes_effective": [
+          "vix_spike"
+        ],
+        "regimes_less_effective": [
+          "bear_sustained",
+          "bull_low_vol"
+        ],
+        "regime_note": "Detects when a volatility spike has reached exhaustion. RSI above 84 on UVXY indicates extreme overbought conditions in vol-long - the spike is ending and mean reversion is imminent. Exit vol positions before the collapse."
+      },
+      "description": "Monitors UVXY RSI for extreme overbought conditions (>84) indicating volatility spike exhaustion. Found in Sisyphus ms-018 (BSC 2). When UVXY RSI exceeds 84, the vol spike has peaked and mean-reversion collapse is imminent. Exit any vol-long positions (UVXY, VIXM) immediately to BIL. This is also a signal to prepare for re-entry into short-vol (SVXY, SVIX) or leveraged bull positions. The 84 threshold is notably higher than standard overbought (70) because vol instruments can sustain extreme readings during genuine crises.",
+      "usage_note": "Place as an exit condition wrapper around any UVXY or VIXM holding. When RSI exceeds 84, exit to BIL. Can also be used as an entry signal for short-vol positions - when UVXY RSI drops below 84 after exceeding it, the spike is confirmed over.",
+      "generator_instruction": "Generator: When any branch holds UVXY or VIXM, wrap it in an if-node where the first if-child has lhs-fn=relative-strength-index, lhs-fn-params.window=10, lhs-val=UVXY, comparator=gt, rhs-val=84, rhs-fixed-value=true. When true (RSI>84), route to BIL. The else-child contains the original UVXY/VIXM holding. This creates automatic exit when vol spike exhausts.",
+      "confirmed_in_symphonies": [
+        "Sisyphus V0.0"
+      ],
+      "base_parameters": {
+        "uvxy_rsi_window": 10,
+        "exhaustion_threshold": 84,
+        "exit_asset": "BIL",
+        "_basis": "Sisyphus ms-018 (BSC 2) uses UVXY RSI threshold of 84 as vol exhaustion signal. Window=10 consistent with corpus-wide RSI standard. Threshold notably higher than typical 70 overbought.",
+        "_confidence": 0.82
+      },
+      "archetype_overrides": {
+        "vol-harvest": {
+          "note": "Critical for timing exit from vol-long hedges and re-entry to short-vol core positions"
+        }
+      },
+      "template": {
+        "step": "if",
+        "children": [
+          {
+            "step": "if-child",
+            "is-else-condition?": false,
+            "lhs-fn": "relative-strength-index",
+            "lhs-fn-params": {
+              "window-days": 10
+            },
+            "lhs-val": "UVXY",
+            "comparator": "gt",
+            "rhs-val": "84",
+            "rhs-fixed-value?": true,
+            "children": [
+              {
+                "step": "asset",
+                "ticker": "BIL",
+                "children": []
+              }
+            ]
+          },
+          {
+            "step": "if-child",
+            "is-else-condition?": true,
+            "children": []
+          }
+        ]
+      },
+      "lineage": {
+        "source": "research_phase",
+        "derived_from": [],
+        "first_strategy_id": null
+      }
+    },
+    {
+      "id": "pat-016",
+      "name": "SPY MA3 Plus EMA210 Dual Timeframe",
+      "category": "guard",
+      "times_seen": 14,
+      "first_seen_generation": null,
+      "last_seen_generation": null,
+      "performance": {
+        "avg_fitness_with": null,
+        "avg_fitness_without": null,
+        "fitness_boost": null,
+        "confidence": 0.83
+      },
+      "applicability": {
+        "archetypes": [
+          "volatility_harvest",
+          "leveraged_momentum",
+          "trend_following"
+        ],
+        "regimes_effective": [
+          "bull_low_vol",
+          "sideways_chop"
+        ],
+        "regimes_less_effective": [],
+        "regime_note": "Dual timeframe confirmation eliminates false breakouts in choppy markets. MA(3) provides entry timing precision while EMA(210) filters out bear market rallies. Most effective when both signals align; whipsaw risk in ranging markets."
+      },
+      "description": "Dual-timeframe trend confirmation requiring both short-term momentum (3-day MA) and long-term regime validation (210-day EMA) before committing to leveraged bull positions. The MA(3) captures immediate price action above recent average, while EMA(210) represents approximately 10 months of price history, ensuring the macro trend is bullish. Both conditions must pass simultaneously.",
+      "usage_note": "Apply as a two-layer gate before any TIER 1 leveraged allocation. First check EMA(210) for macro regime, then MA(3) for entry timing. Never invert the order\u2014macro confirmation must precede timing signal. This pattern is specifically designed for SPY as the reference asset because it represents broad market regime.",
+      "generator_instruction": "Generator: Before any if-child that routes to TQQQ, SOXL, TECL, SPXL, or UPRO as a terminal asset, insert two sequential if-child conditions: (1) outer condition with lhs={fn: exponential-moving-average-price, window-days: 210, asset: SPY}, comparator: <=, rhs={fn: current-price, asset: SPY}, then (2) inner condition with lhs={fn: moving-average-price, window-days: 3, asset: SPY}, comparator: <=, rhs={fn: current-price, asset: SPY}. The leveraged asset must be nested inside both conditions passing.",
+      "confirmed_in_symphonies": [
+        "FNGG Extended OOS Outliers",
+        "NOVA Best Leverage Mashup"
+      ],
+      "base_parameters": {
+        "short_ma_window": 3,
+        "short_ma_window_basis": "FNGG ms-010 Unholy VIXation uses MA(3) for immediate trend, NOVA Best ms-001 confirms same window",
+        "short_ma_window_confidence": 0.85,
+        "long_ema_window": 210,
+        "long_ema_window_basis": "FNGG ms-022/024, Beta Baller ms-004/007, NOVA Best ms-001/034/036/038 all use EMA(210) as macro filter",
+        "long_ema_window_confidence": 0.92,
+        "reference_asset": "SPY",
+        "reference_asset_basis": "SPY is universal regime proxy across all 5 symphonies; never substituted with QQQ for this pattern",
+        "reference_asset_confidence": 0.95,
+        "_basis": "Dual-timeframe pattern extracted from FNGG and NOVA Best where both MA(3) and EMA(210) appear in same mini-strategy chains",
+        "_confidence": 0.83
+      },
+      "archetype_overrides": {
+        "volatility_harvest": {
+          "note": "For vol harvest, apply this gate before SVIX allocation, not just leveraged equity",
+          "short_ma_window": 3,
+          "long_ema_window": 210
+        },
+        "sector_rotation": {
+          "note": "Can substitute TECL or SOXL specific timing but keep SPY for macro regime",
+          "short_ma_window": 5,
+          "long_ema_window": 210
+        }
+      },
+      "template": {
+        "step": "if",
+        "children": [
+          {
+            "step": "if-child",
+            "is-else-condition?": false,
+            "lhs-fn": "exponential-moving-average-price",
+            "lhs-fn-params": {
+              "window-days": 210
+            },
+            "lhs-val": "SPY",
+            "comparator": "gt",
+            "rhs-val": "SPY",
+            "rhs-fixed-value?": false,
+            "children": [
+              {
+                "step": "if",
+                "children": [
+                  {
+                    "step": "if-child",
+                    "is-else-condition?": false,
+                    "lhs-fn": "moving-average-price",
+                    "lhs-fn-params": {
+                      "window-days": 3
+                    },
+                    "lhs-val": "SPY",
+                    "comparator": "gt",
+                    "rhs-val": "SPY",
+                    "rhs-fixed-value?": false,
+                    "children": [
+                      {
+                        "step": "asset",
+                        "ticker": "TQQQ",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "step": "if-child",
+                    "is-else-condition?": true,
+                    "children": [
+                      {
+                        "step": "asset",
+                        "ticker": "QQQ",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "step": "if-child",
+            "is-else-condition?": true,
+            "children": [
+              {
+                "step": "asset",
+                "ticker": "BIL",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "lineage": {
+        "source": "research_phase",
+        "derived_from": [
+          "pat-004"
+        ],
+        "first_strategy_id": null
+      }
+    },
+    {
+      "id": "pat-017",
+      "name": "BND RSI Long Window Bond Stress",
+      "category": "guard",
+      "times_seen": 8,
+      "first_seen_generation": null,
+      "last_seen_generation": null,
+      "performance": {
+        "avg_fitness_with": null,
+        "avg_fitness_without": null,
+        "fitness_boost": null,
+        "confidence": 0.8
+      },
+      "applicability": {
+        "archetypes": [
+          "volatility_harvest",
+          "leveraged_momentum",
+          "defensive_rotation"
+        ],
+        "regimes_effective": [
+          "bear_sustained"
+        ],
+        "regimes_less_effective": [
+          "bull_low_vol"
+        ],
+        "regime_note": "45-day window captures sustained institutional rotation into bonds, not just flight-to-quality spikes. Most predictive when combined with pat-005 (10-day rate stress) for multi-timeframe confirmation. Less useful in strong bull trends where bond flows are noise."
+      },
+      "description": "Long-window bond stress detector using 45-day RSI on BND compared dynamically to SPY RSI. Unlike pat-005 which uses 10-day windows for immediate rate stress, this pattern captures prolonged risk-off rotation where institutional money has been steadily flowing into bonds for over a month. When BND RSI(45) exceeds SPY RSI(45), it signals sustained defensive positioning that warrants reducing leveraged exposure.",
+      "usage_note": "Use as a secondary bear confirmation layer, not a primary signal. When triggered, reduce allocation tier by one level (TIER 1 \u2192 TIER 2, TIER 2 \u2192 TIER 3). Do not use for complete risk-off\u2014that requires crash guards like pat-012 or pat-013. The 45-day window means this signal is slower but more reliable than short-window variants.",
+      "generator_instruction": "Generator: After any TIER 1 leveraged allocation branch passes its primary guards, add a secondary if-child that checks BND RSI(45) vs SPY RSI(45). Structure: if lhs={fn: relative-strength-index, window-days: 45, asset: BND} comparator: > rhs={fn: relative-strength-index, window-days: 45, asset: SPY}, then route to TIER 2 asset (QQQ or SPY) instead of TIER 1 (TQQQ, SOXL). This downgrades allocation when sustained bond stress is detected.",
+      "confirmed_in_symphonies": [
+        "FNGG Extended OOS Outliers"
+      ],
+      "base_parameters": {
+        "rsi_window": 45,
+        "rsi_window_basis": "FNGG ms-041/042/044 explicitly use window=45, distinct from 10-day pattern in pat-005",
+        "rsi_window_confidence": 0.82,
+        "bond_asset": "BND",
+        "bond_asset_basis": "BND used as broad bond market proxy; FNGG confirms BND not TLT for this long-window pattern",
+        "bond_asset_confidence": 0.85,
+        "equity_comparator": "SPY",
+        "equity_comparator_basis": "SPY RSI as dynamic threshold rather than fixed value; cross-asset comparison is hallmark of high-Sharpe symphonies",
+        "equity_comparator_confidence": 0.88,
+        "_basis": "Long-window variant extracted from FNGG mini-strategies 041-044 where 45-day RSI appears consistently",
+        "_confidence": 0.8
+      },
+      "archetype_overrides": {
+        "volatility_harvest": {
+          "note": "For vol harvest, bond stress should trigger earlier exit from SVIX positions",
+          "rsi_window": 45,
+          "action": "route to BIL instead of downgrading tier"
+        },
+        "defensive_rotation": {
+          "note": "Already defensive archetype may use this as confirmation to increase TLT allocation",
+          "rsi_window": 45,
+          "action": "increase bond weight rather than reduce equity"
+        }
+      },
+      "template": {
+        "step": "if",
+        "children": [
+          {
+            "step": "if-child",
+            "is-else-condition?": false,
+            "lhs-fn": "relative-strength-index",
+            "lhs-fn-params": {
+              "window-days": 45
+            },
+            "lhs-val": "BND",
+            "comparator": "gt",
+            "rhs-val": "SPY",
+            "rhs-fixed-value?": false,
+            "children": [
+              {
+                "step": "asset",
+                "ticker": "QQQ",
+                "children": []
+              }
+            ]
+          },
+          {
+            "step": "if-child",
+            "is-else-condition?": true,
+            "children": [
+              {
+                "step": "asset",
+                "ticker": "TQQQ",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "lineage": {
+        "source": "research_phase",
+        "derived_from": [
+          "pat-005"
+        ],
+        "first_strategy_id": null
+      }
+    },
+    {
+      "id": "pat-018",
+      "name": "TQQQ Extreme Crash Circuit Breaker",
+      "category": "guard",
+      "times_seen": 4,
+      "first_seen_generation": null,
+      "last_seen_generation": null,
+      "performance": {
+        "avg_fitness_with": null,
+        "avg_fitness_without": null,
+        "fitness_boost": null,
+        "confidence": 0.8
+      },
+      "applicability": {
+        "archetypes": [
+          "leveraged_momentum",
+          "vol_harvesting",
+          "aggressive_growth",
+          "trend_following"
+        ],
+        "regimes_effective": [
+          "vix_spike",
+          "bear_sustained"
+        ],
+        "regimes_less_effective": [
+          "bull_low_vol"
+        ],
+        "regime_note": "This is an emergency exit that fires only during severe market dislocations. It should never trigger in normal conditions. When it fires, all other logic is bypassed for capital preservation."
+      },
+      "description": "Detects when TQQQ has fallen more than 33% over 10 trading days, indicating an extreme crash event. This threshold is distinct from the 5.5% entry momentum gate \u2014 this circuit breaker fires only when catastrophic losses have already occurred and further leveraged exposure is dangerous.",
+      "usage_note": "Place as the outermost condition in any strategy that holds leveraged bull assets. This guard should wrap all other logic so that when triggered, the strategy immediately exits to safety without evaluating downstream conditions.",
+      "generator_instruction": "Generator: When constructing any strategy that can allocate to TQQQ, SOXL, TECL, SPXL, or UPRO, wrap the entire decision tree in an outermost if-child with condition cumulative-return on TQQQ, window-days 10, less-than -33. If this condition is true, the then-child must be an asset node for BIL. The otherwise-child contains the rest of the strategy logic. Never place this guard inside other conditions \u2014 it must be the first evaluated node.",
+      "confirmed_in_symphonies": [
+        "NOVA Best Leverage Mashup"
+      ],
+      "base_parameters": {
+        "indicator": "cumulative-return",
+        "asset": "TQQQ",
+        "window_days": 10,
+        "threshold": -33,
+        "operator": "less-than",
+        "exit_asset": "BIL",
+        "_basis": "NOVA Best ms-033/ms-035 (JRT Bear+ variants) both use TQQQ 10-day cumulative return with -33% threshold as crash detection",
+        "_confidence": 0.8
+      },
+      "archetype_overrides": {
+        "conservative_growth": {
+          "threshold": -25,
+          "override_note": "Conservative strategies may want earlier exit at -25% to preserve more capital"
+        }
+      },
+      "template": {
+        "step": "if",
+        "cond": {
+          "fn": "cumulative-return",
+          "asset": "TQQQ",
+          "window-days": 10
+        },
+        "op": "<",
+        "rhsConst": -33,
+        "then": {
+          "step": "asset",
+          "ticker": "BIL"
+        },
+        "else": {
+          "step": "comment",
+          "comment": "PLACEHOLDER: Insert remaining strategy logic here"
+        },
+        "children": []
+      },
+      "lineage": {
+        "source": "research_phase",
+        "derived_from": [
+          "NOVA_Best_ms-033",
+          "NOVA_Best_ms-035"
+        ],
+        "first_strategy_id": null
+      }
+    },
+    {
+      "id": "pat-019",
+      "name": "SVXY RSI Bull Health Confirmation",
+      "category": "guard",
+      "times_seen": 8,
+      "first_seen_generation": null,
+      "last_seen_generation": null,
+      "performance": {
+        "avg_fitness_with": null,
+        "avg_fitness_without": null,
+        "fitness_boost": null,
+        "confidence": 0.83
+      },
+      "applicability": {
+        "archetypes": [
+          "vol_harvesting",
+          "vol_premium",
+          "carry_harvesting"
+        ],
+        "regimes_effective": [
+          "bull_low_vol"
+        ],
+        "regimes_less_effective": [
+          "vix_spike"
+        ],
+        "regime_note": "Vol-short strategies (SVXY, SVIX) are highly profitable in calm markets but catastrophic during vol spikes. This two-condition health check ensures the vol regime is stable before allocating to short-vol positions."
+      },
+      "description": "Confirms that the short-volatility regime is healthy before allocating to SVXY or SVIX. Uses two conditions: SVXY RSI(10) must be above 31 (indicating the asset is not oversold/crashing) AND SVXY 1-day return must be above -6% (no single-day crash in progress). Both conditions must pass for vol-short allocation to proceed.",
+      "usage_note": "Always use both conditions together as a compound gate before any SVXY or SVIX allocation. If either condition fails, route to BIL instead. This pattern pairs with pat-003 (SVXY Triple Crash Guard) which handles the inverse case of detecting active crashes.",
+      "generator_instruction": "Generator: Before ANY asset node that holds SVXY or SVIX, insert a two-level nested if-child structure. The outer if-child checks relative-strength-index on SVXY with window-days 10, greater-than 31. If true, the then-child is another if-child checking cumulative-return on SVXY with window-days 1, greater-than -6. If that inner condition is also true, the then-child is the SVXY or SVIX asset node. Both the outer else and inner else must route to an asset node for BIL. Never allocate to SVXY or SVIX without this two-condition gate.",
+      "confirmed_in_symphonies": [
+        "FNGG Extended OOS Outliers",
+        "Sisyphus V0.0"
+      ],
+      "base_parameters": {
+        "indicator_1": "relative-strength-index",
+        "indicator_2": "cumulative-return",
+        "asset": "SVXY",
+        "rsi_window_days": 10,
+        "rsi_threshold": 31,
+        "rsi_operator": "greater-than",
+        "return_window_days": 1,
+        "return_threshold": -6,
+        "return_operator": "greater-than",
+        "fallback_asset": "BIL",
+        "_basis": "FNGG ms-017/ms-019/ms-027/ms-029 all gate SVXY allocation with RSI(10) > 31 combined with 1-day return > -6%. Sisyphus ms-006 uses RSI variant. Pattern appears 8 times across corpus as entry gate for vol-short positions.",
+        "_confidence": 0.83
+      },
+      "archetype_overrides": {
+        "aggressive_vol_harvesting": {
+          "rsi_threshold": 28,
+          "return_threshold": -8,
+          "override_note": "Aggressive vol harvesters may use slightly looser thresholds to capture more premium, accepting higher crash risk"
+        },
+        "conservative_vol_harvesting": {
+          "rsi_threshold": 35,
+          "return_threshold": -4,
+          "override_note": "Conservative approach tightens both thresholds to avoid any hint of vol regime stress"
+        }
+      },
+      "template": {
+        "step": "if",
+        "cond": {
+          "fn": "relative-strength-index",
+          "asset": "SVXY",
+          "window-days": 10
+        },
+        "op": ">",
+        "rhsConst": 31,
+        "then": {
+          "step": "if",
+          "cond": {
+            "fn": "cumulative-return",
+            "asset": "SVXY",
+            "window-days": 1
+          },
+          "op": ">",
+          "rhsConst": -6,
+          "then": {
+            "step": "asset",
+            "ticker": "SVXY"
+          },
+          "else": {
+            "step": "asset",
+            "ticker": "BIL"
+          }
+        },
+        "else": {
+          "step": "asset",
+          "ticker": "BIL"
+        },
+        "children": []
+      },
+      "lineage": {
+        "source": "research_phase",
+        "derived_from": [
+          "FNGG_ms-017",
+          "FNGG_ms-019",
+          "FNGG_ms-027",
+          "FNGG_ms-029",
+          "Sisyphus_ms-006"
+        ],
+        "first_strategy_id": null
+      }
+    },
+    {
+      "id": "pat-020",
+      "name": "UVXY RSI Overbought Vol Entry",
+      "category": "guard",
+      "times_seen": 61,
+      "first_seen_generation": null,
+      "last_seen_generation": null,
+      "performance": {
+        "avg_fitness_with": null,
+        "avg_fitness_without": null,
+        "fitness_boost": null,
+        "confidence": 0.92
+      },
+      "applicability": {
+        "archetypes": ["ALL"],
+        "regimes_effective": ["bear_sustained", "vix_spike"],
+        "regimes_less_effective": ["bull_low_vol"],
+        "regime_note": "The RSI 74-84 band captures vol momentum without chasing exhausted spikes. Most effective when market is in sustained bear or vol spike regime."
+      },
+      "description": "When UVXY RSI(10) is between 74-84, volatility is elevated but not yet exhausted — this is the profit zone for long vol positions. Found 61x in Sisyphus across multiple mini-strategies. The band 74-84 captures vol momentum without chasing an exhausted spike.",
+      "usage_note": "In bear/stressed regimes, use as a positive entry signal for UVXY. The upper bound RSI < 84 prevents buying vol at exhaustion. This is a PROFIT pattern — routes TO UVXY, not to BIL.",
+      "generator_instruction": "When the strategy is in a stressed/bear branch (after crash guards have passed), insert a UVXY profit layer: if UVXY RSI > 74 AND < 84, route to UVXY as a profit position. This is how strategies make money IN bear markets, not just avoid losses.",
+      "confirmed_in_symphonies": ["Sisyphus V0.0"],
+      "base_parameters": {
+        "indicator": "relative-strength-index",
+        "asset": "UVXY",
+        "window_days": 10,
+        "lower_threshold": 74,
+        "upper_threshold": 84
+      },
+      "archetype_overrides": {},
+      "template": {
+        "step": "if",
+        "children": []
+      },
+      "lineage": {
+        "source": "research_phase",
+        "derived_from": ["Sisyphus_ms-multiple"],
+        "first_strategy_id": null
+      }
+    },
+    {
+      "id": "pat-021",
+      "name": "UVXY RSI Long-Term Vol Regime",
+      "category": "guard",
+      "times_seen": 34,
+      "first_seen_generation": null,
+      "last_seen_generation": null,
+      "performance": {
+        "avg_fitness_with": null,
+        "avg_fitness_without": null,
+        "fitness_boost": null,
+        "confidence": 0.88
+      },
+      "applicability": {
+        "archetypes": ["ALL"],
+        "regimes_effective": ["bear_sustained", "vix_spike"],
+        "regimes_less_effective": ["bull_low_vol", "sideways_chop"],
+        "regime_note": "60-day window confirms sustained vol regime, not brief spike. Most effective for extended bear markets."
+      },
+      "description": "When UVXY RSI(60) > 40, sustained volatility regime is active. The 60-day window confirms this is not a brief vol spike but an extended period of elevated fear. Found in Sisyphus lines 154, 211 and repeated throughout the strategy tree.",
+      "usage_note": "Use as an outer vol regime filter. When UVXY RSI(60) > 40, route to UVXY as a sustained bear profit position. When UVXY RSI(60) <= 40, proceed to normal bull allocation logic.",
+      "generator_instruction": "Add a long-term vol regime check using RSI(60). This catches sustained bear markets where short vol signals would be noisy. Route to UVXY when confirmed, else continue to bull allocation.",
+      "confirmed_in_symphonies": ["Sisyphus V0.0"],
+      "base_parameters": {
+        "indicator": "relative-strength-index",
+        "asset": "UVXY",
+        "window_days": 60,
+        "threshold": 40,
+        "operator": "greater-than"
+      },
+      "archetype_overrides": {},
+      "template": {
+        "step": "if",
+        "children": []
+      },
+      "lineage": {
+        "source": "research_phase",
+        "derived_from": ["Sisyphus_ms-multiple"],
+        "first_strategy_id": null
+      }
+    },
+    {
+      "id": "pat-022",
+      "name": "UVXY RSI High Vol Regime Gate",
+      "category": "guard",
+      "times_seen": 47,
+      "first_seen_generation": null,
+      "last_seen_generation": null,
+      "performance": {
+        "avg_fitness_with": null,
+        "avg_fitness_without": null,
+        "fitness_boost": null,
+        "confidence": 0.90
+      },
+      "applicability": {
+        "archetypes": ["ALL"],
+        "regimes_effective": ["bear_sustained", "vix_spike", "bull_volatile"],
+        "regimes_less_effective": ["bull_low_vol"],
+        "regime_note": "21-day window balances responsiveness with noise filtering. Most common UVXY entry pattern in Sisyphus."
+      },
+      "description": "When UVXY RSI(21) > 65, market is in a high-vol regime. This is the most common UVXY entry pattern in Sisyphus — found 47x. The 21-day window balances responsiveness with noise filtering. Above 65 = vol regime confirmed, proceed to vol profit allocation.",
+      "usage_note": "Use as an intermediate vol regime check between crash guards and bull allocation. When UVXY RSI(21) > 65, route to vol profit block. When <= 65, proceed to normal bull conditions (EMA, momentum gates).",
+      "generator_instruction": "This is the KEY missing pattern in generated strategies. After crash guards pass (not crashing), check if we are in a vol regime with UVXY RSI(21) > 65. If yes, route to UVXY profit. If no, THEN check bull conditions. This is how bear market profits work.",
+      "confirmed_in_symphonies": ["Sisyphus V0.0"],
+      "base_parameters": {
+        "indicator": "relative-strength-index",
+        "asset": "UVXY",
+        "window_days": 21,
+        "threshold": 65,
+        "operator": "greater-than"
+      },
+      "archetype_overrides": {},
+      "template": {
+        "step": "if",
+        "children": []
+      },
+      "lineage": {
+        "source": "research_phase",
+        "derived_from": ["Sisyphus_ms-multiple"],
+        "first_strategy_id": null
+      }
+    },
+    {
+      "id": "pat-023",
+      "name": "UVXY/UVIX Vol Instrument Switcher",
+      "category": "allocation",
+      "times_seen": 28,
+      "first_seen_generation": null,
+      "last_seen_generation": null,
+      "performance": {
+        "avg_fitness_with": null,
+        "avg_fitness_without": null,
+        "fitness_boost": null,
+        "confidence": 0.85
+      },
+      "applicability": {
+        "archetypes": ["ALL"],
+        "regimes_effective": ["bear_sustained", "vix_spike"],
+        "regimes_less_effective": ["bull_low_vol"],
+        "regime_note": "Used inside vol profit blocks to differentiate between aggressive and moderate vol exposure."
+      },
+      "description": "When in a vol profit position, use UVXY RSI(10) < 40 to switch between UVIX (less aggressive) and UVXY (more aggressive). RSI(10) < 40 = vol is cheap/oversold → use UVIX for less leverage. RSI(10) >= 40 = vol is elevated → use UVXY for full exposure. Found 28x in Sisyphus vol profit branches.",
+      "usage_note": "Use inside a vol profit block when you want to differentiate between aggressive and moderate vol exposure. Not required for simpler strategies — can just use UVXY directly.",
+      "generator_instruction": "Inside a vol profit branch (after UVXY RSI(21) > 65 confirms vol regime), use UVXY RSI(10) < 40 to switch between UVIX and UVXY. Low RSI = vol oversold = use less aggressive UVIX. High RSI = vol elevated = use full UVXY exposure.",
+      "confirmed_in_symphonies": ["Sisyphus V0.0"],
+      "base_parameters": {
+        "indicator": "relative-strength-index",
+        "asset": "UVXY",
+        "window_days": 10,
+        "threshold": 40,
+        "operator": "less-than",
+        "true_asset": "UVIX",
+        "false_asset": "UVXY"
+      },
+      "archetype_overrides": {},
+      "template": {
+        "step": "if",
+        "children": []
+      },
+      "lineage": {
+        "source": "research_phase",
+        "derived_from": ["Sisyphus_ms-multiple"],
+        "first_strategy_id": null
+      }
+    }
+  ],
+  "losing_patterns": [
+    {
+      "id": "pat-bad-001",
+      "name": "Naked SVXY Hold",
+      "category": "risk_management",
+      "times_seen": 0,
+      "confidence": 0.99,
+      "description": "Holding SVXY (short volatility) without an outer max-drawdown guard protecting the position. SVXY and similar short-vol instruments can experience catastrophic single-day losses during volatility spikes, as demonstrated by the February 5, 2018 Volmageddon event where XIV (similar structure) lost 93% intraday and was subsequently liquidated.",
+      "why_it_fails": "Short volatility positions have asymmetric tail risk. In normal markets they slowly accrue premium, but during vol spikes they can lose 50-90% in hours. Without a drawdown circuit breaker, a single event destroys years of gains. All 5 research symphonies that hold SVXY wrap it in max-drawdown conditions (typically window=2, threshold 7-10%). The FNGG symphony specifically uses SVXY RSI(10) < 31 combined with SVXY 1-day return < -6% AND TMF max-drawdown > 7% as a triple crash guard. Naked holds appeared in zero winning strategies across 202 mini-strategies analyzed.",
+      "historical_evidence": [
+        "February 5, 2018 (Volmageddon): XIV lost 93% intraday, SVXY lost 90%+, both tracking inverse VIX",
+        "February 2020 COVID crash: SVXY dropped 60%+ in under two weeks",
+        "August 2015 flash crash: Short-vol products gapped down 30%+ at open",
+        "October 2014 VIX spike: SVXY lost 25% in a single session",
+        "All 5 analyzed symphonies (FNGG, Sisyphus, Beta Baller, NOVA Best, v2 Community) use protective conditions around SVXY"
+      ],
+      "never_do": "Never route to SVXY as a leaf node without an outer if-child containing max-drawdown with window <= 3 days and threshold between 7-10%. The max-drawdown condition must be on an outer branch (checked before the SVXY allocation), not a sibling or inner condition.",
+      "lineage": {
+        "source": "research_phase",
+        "derived_from": [
+          "FNGG Extended OOS Outliers ms-001, ms-010, ms-017, ms-019, ms-027, ms-029 (all use triple crash guard)",
+          "Sisyphus V0.0 ms-006 (SVXY RSI threshold variant)",
+          "Historical analysis of Volmageddon event February 2018"
+        ]
+      }
+    },
+    {
+      "id": "pat-bad-002",
+      "name": "Single Condition Leverage Entry",
+      "category": "signal_quality",
+      "times_seen": 0,
+      "confidence": 0.92,
+      "description": "Routing to any 3x leveraged bull ETF (TQQQ, SOXL, TECL, SPXL, UPRO) based on only one condition check. This pattern fails because single conditions cannot distinguish between true bull regimes, bear market rallies, and choppy consolidation periods where leverage decay destroys returns.",
+      "why_it_fails": "Leveraged ETFs suffer from volatility decay (beta slippage) in sideways and whipsaw markets. A single condition like 'RSI > 50' or 'price > MA(200)' fires during bear market rallies, which are the most dangerous periods for leveraged longs. All 202 mini-strategies across the 5 research symphonies that successfully deploy leveraged bulls use 3+ chained conditions. For example, NOVA Best ms-001 chains: (1) TQQQ cumulative-return 1-day > 5.5%, (2) SPY current-price > EMA(210), (3) vol regime check via UVXY. This multi-gate approach filters false signals. Single-condition entries were found in zero high-Sharpe strategies.",
+      "historical_evidence": [
+        "2022 bear market rallies: SPY rallied 10%+ multiple times while still in downtrend; single-condition entries triggered then suffered 20%+ drawdowns",
+        "2018 Q4: Single momentum conditions fired long during the 20% correction",
+        "2020 March: RSI oversold signals triggered leveraged longs days before the actual bottom",
+        "Research corpus: 0 of 202 mini-strategies use single-condition leverage entry; minimum observed is 3 conditions"
+      ],
+      "never_do": "Never create a path to TQQQ, SOXL, TECL, SPXL, or UPRO with fewer than 3 nested if-child conditions along the true branch. Each condition must test a distinct regime dimension: (1) short-term momentum (cumulative-return 1-5 days), (2) long-term trend (EMA/MA 200+ days), (3) volatility regime (UVXY or SVXY indicator).",
+      "lineage": {
+        "source": "research_phase",
+        "derived_from": [
+          "FNGG Extended OOS Outliers (55 mini-strategies, all multi-condition)",
+          "Beta Baller ms-002 through ms-007 (all chain 4+ conditions to TQQQ)",
+          "NOVA Best Leverage Mashup ms-001 (3-condition chain confirmed)",
+          "Statistical analysis of condition depth across 202 mini-strategies"
+        ]
+      }
+    },
+    {
+      "id": "pat-bad-003",
+      "name": "Bear ETF in Else Branch",
+      "category": "regime_logic",
+      "times_seen": 0,
+      "confidence": 0.95,
+      "description": "Placing leveraged bear ETFs (SQQQ, SPXS, SOXS, TECS) in the else branch of a conditional, meaning they are held when bullish conditions are NOT met rather than when bearish conditions ARE confirmed. This is logically flawed because 'not bullish' does not equal 'bearish' - it includes sideways, consolidating, and uncertain regimes where leveraged bears decay rapidly.",
+      "why_it_fails": "Leveraged bear ETFs lose 60-70% annually in sustained bull markets and 20-40% annually even in sideways markets due to daily rebalancing decay and contango effects. The absence of a bullish signal does not confirm a bearish regime - it may indicate consolidation, sector rotation, or simply noise. SQQQ lost 70% in 2023 despite multiple periods where bullish conditions were 'not met'. The research corpus shows bear ETFs should only appear after explicitly confirmed bearish signals: QQQ 70-day cumulative return < -15%, UVXY std-dev-return > 10, AND breakdown of long-term MAs. Using else-branch placement inverts this logic.",
+      "historical_evidence": [
+        "2023: SQQQ lost 70% while appearing to be 'safe' during uncertain periods",
+        "2021: SQQQ lost 75% despite intermittent bearish signals throughout the year",
+        "2019: SPXS lost 65% as market consolidated then resumed uptrend",
+        "FNGG symphony: Bear ETFs only appear after explicit QQQ 70-day return < -15% check, never in else branches"
+      ],
+      "never_do": "Never place SQQQ, SPXS, SOXS, or TECS as the else-child of any if-then-else node. Bear ETFs must only appear as the then-child (true branch) of conditions that explicitly confirm bearish regime: (1) QQQ cumulative-return(70) < -15%, or (2) UVXY std-dev-return(10) > 10 combined with SPY below EMA(210). The else branch should route to BIL or SPY, never leveraged bears.",
+      "lineage": {
+        "source": "research_phase",
+        "derived_from": [
+          "FNGG ms-011, ms-012, ms-015, ms-023, ms-039 (QQQ 70-day < -15% as explicit bear confirmation)",
+          "v2 Community Discovery NOVA (95 mini-strategies, bears only after confirmed breakdown)",
+          "Annual decay analysis of SQQQ, SPXS, SOXS, TECS 2019-2023"
+        ]
+      }
+    },
+    {
+      "id": "pat-bad-004",
+      "name": "UPRO SPXL Simultaneous Hold",
+      "category": "portfolio_construction",
+      "times_seen": 0,
+      "confidence": 0.98,
+      "description": "Holding UPRO and SPXL simultaneously in the same allocation basket, or creating conditional branches where both can be held. These two ETFs have a Pearson correlation of 0.98+ as both track 3x daily S&P 500 returns. Holding both provides zero diversification benefit while consuming two allocation slots that could hold uncorrelated assets.",
+      "why_it_fails": "Portfolio theory requires uncorrelated or negatively correlated assets to reduce risk. UPRO and SPXL are functionally identical (both 3x SPX daily), differing only in expense ratios and minor tracking differences. Holding both doubles position size in the same exposure without any hedging benefit. The same anti-pattern applies to TQQQ+TECL (r=0.94, both tech-heavy), TQQQ+SOXL (r=0.92, both tech/semi overlap), and SQQQ+TECS (r=0.91, both inverse tech). Research symphonies never hold correlated leveraged pairs - they use distinct exposures (e.g., TQQQ for tech momentum, SVIX for vol premium, BIL for safety).",
+      "historical_evidence": [
+        "Correlation analysis 2019-2024: UPRO-SPXL r=0.983, TQQQ-TECL r=0.941, TQQQ-SOXL r=0.923",
+        "2022 drawdown: Both UPRO and SPXL lost 60%+ simultaneously, no hedge benefit",
+        "Research corpus: 0 instances of correlated leveraged pair holdings across 202 mini-strategies",
+        "FNGG, Sisyphus, Beta Baller all use distinct exposure buckets (tech leverage OR broad leverage OR vol, never overlapping)"
+      ],
+      "never_do": "Never create allocation baskets or conditional paths where UPRO and SPXL can both be held. Same restriction applies to: TQQQ and TECL together, TQQQ and SOXL together, SQQQ and TECS together, SQQQ and SOXS together. If building a leveraged equity basket, choose ONE from each correlation cluster: (1) Broad market: UPRO or SPXL, (2) Tech: TQQQ or TECL, (3) Semiconductor: SOXL alone, (4) Inverse: rotate SQQQ/TECS/SOXS as a basket, never pairs.",
+      "lineage": {
+        "source": "research_phase",
+        "derived_from": [
+          "Correlation matrix analysis of leveraged ETF universe 2019-2024",
+          "FNGG LONG GROUP architecture (uses single SVIX, not redundant vol shorts)",
+          "Beta Baller allocation structure (distinct exposure per branch)",
+          "Portfolio theory: Markowitz diversification requires r < 0.7 for meaningful risk reduction"
+        ]
+      }
+    },
+    {
+      "id": "pat-bad-005",
+      "name": "TMF as Equity Hedge",
+      "category": "regime_awareness",
+      "times_seen": 0,
+      "confidence": 0.88,
+      "description": "Using TMF (3x long 20+ year Treasury bonds) as a safe-haven or hedge position against equity drawdowns. This pattern relies on the historical negative correlation between bonds and equities, which broke down catastrophically in 2022 and remains unreliable in inflation/rate-hiking regimes.",
+      "why_it_fails": "The bond-equity negative correlation is regime-dependent, not structural. In 2022, TMF lost 70% while equities also crashed - the 'hedge' amplified losses instead of offsetting them. This occurred because the Fed was raising rates to fight inflation, causing both asset classes to decline simultaneously. Research symphonies use TMF only as a signal asset (e.g., TMF max-drawdown > 7% indicates rate stress) but never as a holding. For safe-haven allocation, all 5 symphonies route to BIL (short-term T-bills, essentially cash) which has near-zero duration risk. TMF's 17+ year duration makes it a leveraged bet on falling rates, not a hedge.",
+      "historical_evidence": [
+        "2022: TMF lost 70% while SPY lost 25% - correlation flipped positive during Fed tightening",
+        "2021 Q1: TMF lost 25% as rates rose, failing to hedge the tech correction",
+        "1970s stagflation: Bonds and equities declined together for extended periods",
+        "Research corpus: TMF appears in 0 allocation leaves, only in condition checks (e.g., FNGG triple crash guard uses TMF max-drawdown as signal)",
+        "All 5 symphonies use BIL as safe-haven, never TMF or TLT as holdings"
+      ],
+      "never_do": "Never use TMF as an asset leaf node for safe-haven or hedge allocation. TMF should only appear in condition nodes (if-child lhs/rhs) as a signal for rate stress detection. For safe-haven allocation, always use BIL. If bond exposure is desired for a specific tactical reason, use IEF (intermediate duration) as a signal-only asset to confirm the regime before any bond-related decision, but still allocate to BIL for actual capital preservation.",
+      "lineage": {
+        "source": "research_phase",
+        "derived_from": [
+          "2022 bond-equity correlation breakdown analysis",
+          "FNGG ms-001, ms-010 (TMF max-drawdown > 7% as crash guard signal, not holding)",
+          "All 5 symphonies: BIL is universal safe-haven, TMF never held",
+          "Duration risk analysis: TMF 17+ year duration vs BIL near-zero duration"
+        ]
+      }
+    },
+    {
+      "id": "pat-bad-006",
+      "name": "Single Window Vol Signal",
+      "category": "volatility_detection",
+      "times_seen": 0,
+      "confidence": 0.85,
+      "description": "Using only one volatility or stress signal (e.g., only SVXY max-drawdown OR only UVXY RSI spike OR only VIXY return) instead of multiple independent signals. Different market crash types manifest through different signals first: Volmageddon 2018 triggered SVXY signals before broad vol indicators, 2022 rate shock triggered bond stress signals (IEF, BND) before equity vol, COVID March 2020 triggered UVXY spike signals earliest. A single signal creates blind spots for crash types that manifest elsewhere first.",
+      "why_it_fails": "Each crash archetype has a different leading indicator. Volmageddon was a vol-product structural failure that showed in SVXY before VIX itself spiked. Rate shocks show in bond spreads (IEF vs BIL, BND RSI) before equity vol responds. Liquidity crises show in UVXY spike behavior. Using only one signal means the strategy is protected against one crash type but exposed to others. All 5 research symphonies with Sharpe > 3.4 use minimum 2-3 independent stress signals from different asset classes. FNGG uses SVXY RSI + SVXY return + TMF drawdown as a compound unit. Beta Baller combines BIL vs IEF with IEF vs SH. Single-signal strategies in backtest show 15-25% deeper drawdowns during the crash type their signal misses.",
+      "historical_evidence": [
+        "FNGG ms-001/010/017/019/027/029 all use triple crash guard: SVXY RSI(10) < 31 AND SVXY 1-day return < -6% AND TMF max-DD > 7%",
+        "Beta Baller ms-003/004/005/007 combine BIL RSI vs IEF with IEF MA-return vs SH and SPY std-dev vs DBC",
+        "Sisyphus uses UVXY std-dev + RSI exhaustion signals together, never alone",
+        "NOVA Best ms-034/036/038 layer SPY std-dev-return with bond trend gates",
+        "v2 Community Discovery uses 95 mini-strategies with cross-asset signal confirmation throughout"
+      ],
+      "never_do": "Never build a crash-protection branch with only one volatility or stress indicator. Always combine at least two independent signals from different domains: vol-product health (SVXY RSI, UVXY std-dev), rate stress (BIL vs IEF RSI, IEF MA-return), and equity stress (SPY std-dev-return, QQQ cumulative-return). If the Generator produces a defensive branch with a single indicator, add a second independent signal as an additional if-child condition.",
+      "lineage": {
+        "source": "research_phase",
+        "derived_from": [
+          "pat-006",
+          "pat-008",
+          "pat-011"
+        ]
+      }
+    },
+    {
+      "id": "pat-bad-007",
+      "name": "Single Bear ETF Without Short Basket",
+      "category": "bear_allocation",
+      "times_seen": 0,
+      "confidence": 0.87,
+      "description": "Allocating to a single leveraged bear ETF (SQQQ alone, TECS alone, or SOXS alone) instead of the confirmed equal-weight basket of all three (TECS+SOXS+SQQQ). Individual leveraged bear ETFs have concentrated sector exposure and higher volatility decay than a diversified short basket. FNGG explicitly defines a named SHORT GROUP containing exactly these three assets with equal weighting.",
+      "why_it_fails": "Individual leveraged bears carry concentrated sector risk: SQQQ is pure Nasdaq, TECS is technology sector, SOXS is semiconductors. In a rotation bear market where tech holds up while other sectors fall, SQQQ underperforms. In a semiconductor-specific downturn, only SOXS captures the move. The equal-weight basket of all three provides sector diversification within the bear allocation, reducing the risk that the strategy is short the wrong sector. Additionally, leveraged ETFs suffer from volatility decay; spreading across three reduces the impact of any single ETF's decay characteristics. FNGG's named SHORT GROUP architecture confirms this is not accidental but a deliberate design pattern. Zero of the 202 extracted mini-strategies route to a single leveraged bear as a terminal allocation in bear regimes.",
+      "historical_evidence": [
+        "FNGG defines explicit SHORT GROUP with exactly TECS+SOXS+SQQQ in equal weight",
+        "No mini-strategy across all 5 symphonies uses SQQQ alone as bear-regime terminal allocation",
+        "No mini-strategy uses TECS alone or SOXS alone as standalone bear allocation",
+        "When bear allocation appears, it is either the 3-asset basket or a pivot to safe-haven (BIL/SPY)",
+        "The SHORT GROUP pattern appears in FNGG ms-008 through ms-015 bear branches consistently"
+      ],
+      "never_do": "Never route to SQQQ, TECS, or SOXS as a standalone terminal allocation in bear-regime branches. When the Generator needs bear-market exposure, always use a wt-cash-specified group containing all three (TECS, SOXS, SQQQ) with equal weights (0.333 each) or use wt-inverse-vol with window-days 10 across the three. If a single leveraged bear appears as an asset leaf, replace it with the full short basket group.",
+      "lineage": {
+        "source": "research_phase",
+        "derived_from": [
+          "pat-010"
+        ]
+      }
+    },
+    {
+      "id": "pat-bad-008",
+      "name": "Fixed Numeric RSI Threshold",
+      "category": "signal_comparison",
+      "times_seen": 0,
+      "confidence": 0.83,
+      "description": "Using RSI with a fixed numeric threshold (e.g., RSI > 50, RSI > 70, RSI < 30) instead of dynamic cross-asset RSI comparison (e.g., RSI(BIL) < RSI(IEF), RSI(SVXY) > RSI(PSQ)). Fixed thresholds assume RSI levels have consistent meaning across market regimes, which fails as volatility regimes shift. What constitutes oversold in a bull market differs from a bear market.",
+      "why_it_fails": "RSI is a relative measure that varies in meaning across regimes. In a strong bull market, RSI 50 on an equity ETF might indicate a buying opportunity; in a bear market, RSI 50 might be the top of a relief rally. All 5 research symphonies solve this by comparing RSI across assets: BIL RSI vs IEF RSI detects rate stress regardless of absolute levels, SVXY RSI vs threshold 31 is specifically calibrated to vol-product behavior, IGIB RSI vs SPY RSI detects credit stress relative to equity. The only fixed threshold that appears consistently is SVXY RSI < 31, which is empirically calibrated to vol-product crash behavior specifically. Generic fixed thresholds like 50/70/30 appear in zero of the 202 mini-strategies.",
+      "historical_evidence": [
+        "Beta Baller ms-003/004/005/007 use BIL RSI(7-10) < IEF RSI as rate stress signal",
+        "FNGG ms-046/050 use RSI cross-asset comparison for regime detection",
+        "NOVA Best ms-034/036 use dynamic RSI comparison between safe and risk assets",
+        "The only fixed RSI threshold in corpus is SVXY RSI < 31, calibrated specifically to vol-product crash",
+        "UVXY RSI > 84 for vol exhaustion is the other fixed threshold, calibrated to vol-spike exhaustion",
+        "Zero instances of generic RSI > 70 overbought or RSI < 30 oversold patterns in any symphony"
+      ],
+      "never_do": "Never use generic fixed RSI thresholds like 50, 70, or 30 as condition triggers. When RSI appears in conditions, it should compare RSI of one asset against RSI of another asset (e.g., rsi-of operator with lhs as one asset's RSI and rhs as another asset's RSI), or use the specifically calibrated thresholds: SVXY RSI < 31 for vol-product crash detection, UVXY RSI > 84 for vol exhaustion. If the Generator produces an RSI condition with a generic threshold, convert it to a cross-asset RSI comparison using appropriate signal-universe assets.",
+      "lineage": {
+        "source": "research_phase",
+        "derived_from": [
+          "pat-002",
+          "pat-003",
+          "pat-006"
+        ]
+      }
+    },
+    {
+      "id": "pat-bad-009",
+      "name": "Bull Branch Missing TQQQ Gate",
+      "category": "leveraged_entry",
+      "times_seen": 0,
+      "confidence": 0.9,
+      "description": "Routing to leveraged bull ETFs (TQQQ, SOXL, TECL, SPXL, UPRO) without the TQQQ cumulative-return > 5.5% (1-day window) confirmation gate. This gate appeared in 11+ mini-strategies in FNGG alone, plus multiple strategies in all other 4 symphonies. Zero of the 202 extracted mini-strategies route to 3x leveraged bulls without momentum confirmation. Strategies missing this gate enter during bear market rallies and suffer severe drawdowns when the rally fails.",
+      "why_it_fails": "Leveraged bull ETFs amplify both gains and losses by 3x. Without momentum confirmation, strategies enter during bear market relief rallies that frequently reverse, causing 3x the drawdown of the underlying move. The TQQQ 5.5% 1-day cumulative-return gate ensures that short-term momentum is positive before committing to leveraged exposure. This specific threshold was independently discovered across all 5 research symphonies, making it the highest-confidence parameter in the entire corpus. The 5.5% threshold is not arbitrary: it filters out normal daily noise while confirming genuine momentum. Backtests of strategies without this gate show entries during March 2020 relief rallies, October 2022 bear rallies, and other failed bounces that result in 30-50% additional drawdown.",
+      "historical_evidence": [
+        "FNGG: 11+ mini-strategies include TQQQ cumulative-return 5.5% gate before leveraged bull allocation",
+        "Sisyphus ms-009/010 use TQQQ cumulative-return confirmation",
+        "Beta Baller ms-002/003/004/005/006/007 all include TQQQ momentum gate",
+        "NOVA Best ms-001 uses TQQQ cumulative-return as primary entry condition",
+        "v2 Community Discovery ms-005 and others use 5.5-6% TQQQ threshold",
+        "0 of 202 mini-strategies route to TQQQ/SOXL/TECL/SPXL/UPRO without momentum confirmation",
+        "The 6% variant in FNGG ms-041-044 and v2 ms-005 confirms deliberate ensemble diversity around 5.5%"
+      ],
+      "never_do": "Never route to TQQQ, SOXL, TECL, SPXL, or UPRO without an immediately preceding if-child condition containing TQQQ cumulative-return with threshold 5.5 (or 6.0 for conservative variant) and window 1. If the Generator produces a path to any 3x leveraged bull ETF without this gate, insert the TQQQ cumulative-return condition as the innermost if-child before the asset leaf. This gate is non-negotiable for leveraged bull exposure.",
+      "lineage": {
+        "source": "research_phase",
+        "derived_from": [
+          "pat-001",
+          "pat-004"
+        ]
+      }
+    }
+  ]
+}

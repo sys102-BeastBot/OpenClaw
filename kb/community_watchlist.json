@@ -1,0 +1,333 @@
+{
+  "created": "2026-04-10",
+  "description": "Community strategies identified for analysis and potential KB contribution",
+  "strategies": [
+    {
+      "id": "er9pVe7F4r5XeO7ULgwn",
+      "name": "Copy of The Holy Grail"
+    },
+    {
+      "id": "yaP88hHuOyULF8Uevx9Y",
+      "name": "Copy of TQQQ For The Long Term V2"
+    },
+    {
+      "id": "eokGOhyYTFxUrF6hqhzI",
+      "name": "Copy of Simple Regime Switching and Dip Buying with 2X SPY V0.3"
+    },
+    {
+      "id": "DOmqDINpNS25BPPyKAon",
+      "name": "Copy of reversed UVXY RSI Band Test 32/4D"
+    },
+    {
+      "id": "l1uZUN4LXpmLT664aSiq",
+      "name": "Copy of Slow and Steady Growth"
+    },
+    {
+      "id": "w0ElVz7EXhLSU64iPl1H",
+      "name": "Copy of Dip Buying Tech Below 10d RSI of 30"
+    },
+    {
+      "id": "E4jQ7ZPowO0ew47oc5Yr",
+      "name": "Copy of Exhibit 3 | ADAPTIVE ASSET ALLOCATION | 5C2"
+    },
+    {
+      "id": "PIZS5Uvi7CHDt3lwrW55",
+      "name": "Copy of WIP Beat Market rules + Actively Managed S&P 10"
+    },
+    {
+      "id": "CsTVZFTEdLy30CvyxekJ",
+      "name": "Copy of VIXn 1.0.0"
+    },
+    {
+      "id": "hdp1NlF6Tz4kWKYBhmRz",
+      "name": "Copy of Exhibit 4 | Adaptive Asset Allocation | 4 choose 2"
+    },
+    {
+      "id": "qoFgi3oPRtU1U0Vjgft8",
+      "name": "Copy of QQQ For The Long Term V2 WITH UVXY"
+    },
+    {
+      "id": "fjeXNkW85HwGSgqj6gWs",
+      "name": "Copy of OG V1.1 QQQ 1DMR - 2X LETF edition"
+    },
+    {
+      "id": "iRZti2wCCDC5fUNcOF6x",
+      "name": "Copy of Drawdown/Skim Bots"
+    },
+    {
+      "id": "gw6zjTvdtRxYt5akhhQR",
+      "name": "Copy of BE's 2nd Opus l HnL + Commodities"
+    },
+    {
+      "id": "WJIQKU87myVfIPWCwhhg",
+      "name": "Copy of v2.1.0 Double Pop Bots"
+    },
+    {
+      "id": "yFjj6uwR3h7J4AuvSfbu",
+      "name": "Copy of Beat The Market V2"
+    },
+    {
+      "id": "Y6kUz1f1hptJjfB1r1mc",
+      "name": "Copy of The Sandy Dragon"
+    },
+    {
+      "id": "OCE4srIuCV1rPB4rMMbs",
+      "name": "Copy of BLACK SWAN CATCHER + BIL CANARY + EQUITY"
+    },
+    {
+      "id": "SaPNRUQ5rXRrMxWNFPPo",
+      "name": "Copy of V2 Safety Mix"
+    },
+    {
+      "id": "oCF4AaGyGnTdPJX4f3pH",
+      "name": "Copy of SOXL Growth v2.4.5 RL"
+    },
+    {
+      "id": "tUuo2r1n66ByxLeoYkr9",
+      "name": "Copy of RSI FrankenFest v1.4"
+    },
+    {
+      "id": "EXKPWhtGCtdwZ1zlUld4",
+      "name": "Copy of Macro Oscillator Engine"
+    },
+    {
+      "id": "aIBl5xshv8S2CyuaeBkD",
+      "name": "Copy of 10 day Oversold Block"
+    },
+    {
+      "id": "D9NRTRWjbxn0fUGnhUkD",
+      "name": "Copy of Growth Blend v2.2 RL"
+    },
+    {
+      "id": "v9ueglUdSu8Ei2HizAfG",
+      "name": "Copy of Tame the Beta Baller WM 74"
+    },
+    {
+      "id": "wMlZXeI0agUSVWsVYjvK",
+      "name": "Copy of Portfolio Experiment Volatility Minimization"
+    },
+    {
+      "id": "RQ4QIX7G1WVtwmEv6v3G",
+      "name": "Copy of CounterBalancer Low Risk"
+    },
+    {
+      "id": "NXLPas0UP2pMtoHLos7n",
+      "name": "Copy of SPY minimum drawdown V3"
+    },
+    {
+      "id": "aWw8tL43K3SwbiBx7Oip",
+      "name": "Copy of VIX Mid-Term Futures SPY RSI"
+    }
+  ],
+  "backtest_2022": [
+    {
+      "id": "v9ueglUdSu8Ei2HizAfG",
+      "name": "Copy of Tame the Beta Baller WM 74",
+      "sharpe": 5.094928288923239,
+      "maxdd": 12.614145183449487,
+      "annret": 801.9746379084035
+    },
+    {
+      "id": "aIBl5xshv8S2CyuaeBkD",
+      "name": "Copy of 10 day Oversold Block",
+      "sharpe": 4.877951313993487,
+      "maxdd": 0.12180000000000524,
+      "annret": 1.2948713714746374
+    },
+    {
+      "id": "er9pVe7F4r5XeO7ULgwn",
+      "name": "Copy of The Holy Grail",
+      "sharpe": 2.556523711303019,
+      "maxdd": 47.98340796156073,
+      "annret": 585.7366835815346
+    },
+    {
+      "id": "gw6zjTvdtRxYt5akhhQR",
+      "name": "Copy of BE's 2nd Opus l HnL + Commodities",
+      "sharpe": 2.11588882998592,
+      "maxdd": 9.971374073588724,
+      "annret": 61.780948475555356
+    },
+    {
+      "id": "WJIQKU87myVfIPWCwhhg",
+      "name": "Copy of v2.1.0 Double Pop Bots",
+      "sharpe": 1.9127866100810127,
+      "maxdd": 18.17747145491705,
+      "annret": 99.90683643412038
+    },
+    {
+      "id": "Y6kUz1f1hptJjfB1r1mc",
+      "name": "Copy of The Sandy Dragon",
+      "sharpe": 1.8241326039988783,
+      "maxdd": 13.70995808868325,
+      "annret": 49.05439941825276
+    },
+    {
+      "id": "yaP88hHuOyULF8Uevx9Y",
+      "name": "Copy of TQQQ For The Long Term V2",
+      "sharpe": 1.5871285163728521,
+      "maxdd": 52.19536170278124,
+      "annret": 182.72743981655802
+    },
+    {
+      "id": "oCF4AaGyGnTdPJX4f3pH",
+      "name": "Copy of SOXL Growth v2.4.5 RL",
+      "sharpe": 1.1957708336601105,
+      "maxdd": 65.97011057959625,
+      "annret": 104.70894726677625
+    },
+    {
+      "id": "EXKPWhtGCtdwZ1zlUld4",
+      "name": "Copy of Macro Oscillator Engine",
+      "sharpe": 1.1552748328199294,
+      "maxdd": 6.500961456488175,
+      "annret": 11.36656677528216
+    },
+    {
+      "id": "qoFgi3oPRtU1U0Vjgft8",
+      "name": "Copy of QQQ For The Long Term V2 WITH UVXY",
+      "sharpe": 1.1426841216436543,
+      "maxdd": 18.881499999999996,
+      "annret": 35.63786795377668
+    },
+    {
+      "id": "CsTVZFTEdLy30CvyxekJ",
+      "name": "Copy of VIXn 1.0.0",
+      "sharpe": 0.802296670635623,
+      "maxdd": 31.9689,
+      "annret": 29.64439845135576
+    },
+    {
+      "id": "E4jQ7ZPowO0ew47oc5Yr",
+      "name": "Copy of Exhibit 3 | ADAPTIVE ASSET ALLOCATION | 5C2",
+      "sharpe": 0.5342542851808784,
+      "maxdd": 9.70314235182823,
+      "annret": 6.942279800302598
+    },
+    {
+      "id": "SaPNRUQ5rXRrMxWNFPPo",
+      "name": "Copy of V2 Safety Mix",
+      "sharpe": 0.5214294929535679,
+      "maxdd": 6.9063727444308665,
+      "annret": 3.4037332705114
+    },
+    {
+      "id": "fjeXNkW85HwGSgqj6gWs",
+      "name": "Copy of OG V1.1 QQQ 1DMR - 2X LETF edition",
+      "sharpe": 0.28360066652704685,
+      "maxdd": 26.617899999999995,
+      "annret": 3.8895298008934764
+    },
+    {
+      "id": "DOmqDINpNS25BPPyKAon",
+      "name": "Copy of reversed UVXY RSI Band Test 32/4D",
+      "sharpe": 0.01547683060928898,
+      "maxdd": 26.50714645585156,
+      "annret": -13.109064333245701
+    },
+    {
+      "id": "tUuo2r1n66ByxLeoYkr9",
+      "name": "Copy of RSI FrankenFest v1.4",
+      "sharpe": -0.053494933540006964,
+      "maxdd": 25.667299999999994,
+      "annret": -5.130027993858411
+    },
+    {
+      "id": "w0ElVz7EXhLSU64iPl1H",
+      "name": "Copy of Dip Buying Tech Below 10d RSI of 30",
+      "sharpe": -0.1144172968081945,
+      "maxdd": 15.599300000000005,
+      "annret": -4.302502202715686
+    },
+    {
+      "id": "iRZti2wCCDC5fUNcOF6x",
+      "name": "Copy of Drawdown/Skim Bots",
+      "sharpe": -0.12173545462002278,
+      "maxdd": 6.5078000000000085,
+      "annret": -1.5018147833887663
+    },
+    {
+      "id": "OCE4srIuCV1rPB4rMMbs",
+      "name": "Copy of BLACK SWAN CATCHER + BIL CANARY + EQUITY",
+      "sharpe": -0.28843882954296673,
+      "maxdd": 20.34107259031581,
+      "annret": -9.058774250962799
+    },
+    {
+      "id": "hdp1NlF6Tz4kWKYBhmRz",
+      "name": "Copy of Exhibit 4 | Adaptive Asset Allocation | 4 choose 2",
+      "sharpe": -0.43614399230227213,
+      "maxdd": 5.083727382859826,
+      "annret": -2.858680903739974
+    },
+    {
+      "id": "yFjj6uwR3h7J4AuvSfbu",
+      "name": "Copy of Beat The Market V2",
+      "sharpe": -0.6809545214990212,
+      "maxdd": 23.3201,
+      "annret": -17.31250067064356
+    },
+    {
+      "id": "eokGOhyYTFxUrF6hqhzI",
+      "name": "Copy of Simple Regime Switching and Dip Buying with 2X SPY V0.3",
+      "sharpe": -0.9393551947811247,
+      "maxdd": 21.4367,
+      "annret": -13.930452086524369
+    },
+    {
+      "id": "l1uZUN4LXpmLT664aSiq",
+      "name": "Copy of Slow and Steady Growth",
+      "sharpe": -1.2134720937749952,
+      "maxdd": 15.815499999999993,
+      "annret": -14.332505354585056
+    },
+    {
+      "id": "PIZS5Uvi7CHDt3lwrW55",
+      "name": "Copy of WIP Beat Market rules + Actively Managed S&P 10",
+      "sharpe": -1.4651680966655014,
+      "maxdd": 28.6397,
+      "annret": -28.116730686351545
+    },
+    {
+      "id": "D9NRTRWjbxn0fUGnhUkD",
+      "name": "Copy of Growth Blend v2.2 RL",
+      "sharpe": -99,
+      "maxdd": 0,
+      "annret": 0,
+      "error": "Composer API error 422 for /api/v0.1/symphonies/D9NRTRWjbxn0fUGnhUkD/backtest"
+    },
+    {
+      "id": "wMlZXeI0agUSVWsVYjvK",
+      "name": "Copy of Portfolio Experiment Volatility Minimization",
+      "sharpe": -99,
+      "maxdd": 0,
+      "annret": 0,
+      "error": "Composer API 429 after 3 retries"
+    },
+    {
+      "id": "RQ4QIX7G1WVtwmEv6v3G",
+      "name": "Copy of CounterBalancer Low Risk",
+      "sharpe": -99,
+      "maxdd": 0,
+      "annret": 0,
+      "error": "Composer API 429 after 3 retries"
+    },
+    {
+      "id": "NXLPas0UP2pMtoHLos7n",
+      "name": "Copy of SPY minimum drawdown V3",
+      "sharpe": -99,
+      "maxdd": 0,
+      "annret": 0,
+      "error": "Composer API 429 after 3 retries"
+    },
+    {
+      "id": "aWw8tL43K3SwbiBx7Oip",
+      "name": "Copy of VIX Mid-Term Futures SPY RSI",
+      "sharpe": -99,
+      "maxdd": 0,
+      "annret": 0,
+      "error": "Composer API error 422 for /api/v0.1/symphonies/aWw8tL43K3SwbiBx7Oip/backtest"
+    }
+  ],
+  "backtest_date": "2026-04-10"
+}

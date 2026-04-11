@@ -1,0 +1,237 @@
+{
+  "generated_at": "2026-04-09T03:21:46.077740+00:00",
+  "symphonies": [
+    "FNGG",
+    "Sisyphus",
+    "Beta Baller",
+    "NOVA Best",
+    "v2 Community"
+  ],
+  "periods": [
+    "2020",
+    "2021",
+    "2022",
+    "2023",
+    "2024"
+  ],
+  "results": {
+    "FNGG": {},
+    "Sisyphus": {
+      "2022": {
+        "sharpe": 5.609,
+        "return_ann": 395.35,
+        "return_tot": 236.28,
+        "max_dd": 7.28,
+        "volatility": 29.53,
+        "win_rate": 63.16,
+        "sortino": 14.271,
+        "calmar": 54.342,
+        "spy_sharpe": -0.766,
+        "spy_return": -19.97,
+        "alpha": 1.598,
+        "beta": -0.302
+      },
+      "2023": {
+        "sharpe": 6.477,
+        "return_ann": 281.63,
+        "return_tot": 277.6,
+        "max_dd": 4.66,
+        "volatility": 21.16,
+        "win_rate": 64.26,
+        "sortino": 15.895,
+        "calmar": 60.376,
+        "spy_sharpe": 1.896,
+        "spy_return": 26.95,
+        "alpha": 1.243,
+        "beta": 0.514
+      },
+      "2024": {
+        "sharpe": 4.868,
+        "return_ann": 320.72,
+        "return_tot": 320.72,
+        "max_dd": 6.14,
+        "volatility": 30.63,
+        "win_rate": 68.13,
+        "sortino": 14.089,
+        "calmar": 52.264,
+        "spy_sharpe": 1.882,
+        "spy_return": 25.59,
+        "alpha": 1.511,
+        "beta": -0.083
+      }
+    },
+    "Beta Baller": {
+      "2023": {
+        "sharpe": 1.527,
+        "return_ann": 58.47,
+        "return_tot": 57.89,
+        "max_dd": 17.89,
+        "volatility": 34.07,
+        "win_rate": 53.41,
+        "sortino": 2.367,
+        "calmar": 3.268,
+        "spy_sharpe": 1.896,
+        "spy_return": 26.95,
+        "alpha": 0.548,
+        "beta": -0.112
+      },
+      "2021": {
+        "sharpe": 4.288,
+        "return_ann": 281.68,
+        "return_tot": 39.77,
+        "max_dd": 5.0,
+        "volatility": 33.06,
+        "win_rate": 56.45,
+        "sortino": 8.771,
+        "calmar": 56.295,
+        "spy_sharpe": 3.249,
+        "spy_return": 52.88,
+        "alpha": 0.973,
+        "beta": 1.01
+      },
+      "2022": {
+        "sharpe": 5.071,
+        "return_ann": 518.6,
+        "return_tot": 514.14,
+        "max_dd": 16.25,
+        "volatility": 37.6,
+        "win_rate": 61.2,
+        "sortino": 9.215,
+        "calmar": 31.913,
+        "spy_sharpe": -0.735,
+        "spy_return": -18.71,
+        "alpha": 1.814,
+        "beta": -0.518
+      },
+      "2024": {
+        "sharpe": 2.821,
+        "return_ann": 131.5,
+        "return_tot": 131.5,
+        "max_dd": 15.84,
+        "volatility": 31.73,
+        "win_rate": 56.97,
+        "sortino": 4.331,
+        "calmar": 8.302,
+        "spy_sharpe": 1.882,
+        "spy_return": 25.59,
+        "alpha": 0.961,
+        "beta": -0.277
+      }
+    },
+    "NOVA Best": {
+      "2022": {
+        "sharpe": 6.712,
+        "return_ann": 1193.45,
+        "return_tot": 91.58,
+        "max_dd": 4.55,
+        "volatility": 40.1,
+        "win_rate": 60.32,
+        "sortino": 18.128,
+        "calmar": 262.15,
+        "spy_sharpe": 1.286,
+        "spy_return": 33.24,
+        "alpha": 2.596,
+        "beta": 0.297
+      },
+      "2024": {
+        "sharpe": 5.012,
+        "return_ann": 405.29,
+        "return_tot": 405.29,
+        "max_dd": 13.01,
+        "volatility": 33.61,
+        "win_rate": 64.14,
+        "sortino": 13.733,
+        "calmar": 31.157,
+        "spy_sharpe": 1.882,
+        "spy_return": 25.59,
+        "alpha": 1.605,
+        "beta": 0.334
+      },
+      "2023": {
+        "sharpe": 6.178,
+        "return_ann": 368.3,
+        "return_tot": 362.6,
+        "max_dd": 6.85,
+        "volatility": 25.7,
+        "win_rate": 66.67,
+        "sortino": 13.753,
+        "calmar": 53.729,
+        "spy_sharpe": 1.896,
+        "spy_return": 26.95,
+        "alpha": 1.438,
+        "beta": 0.601
+      }
+    },
+    "v2 Community": {
+      "2023": {
+        "sharpe": 3.989,
+        "return_ann": 34.16,
+        "return_tot": 33.85,
+        "max_dd": 2.76,
+        "volatility": 7.47,
+        "win_rate": 64.26,
+        "sortino": 8.941,
+        "calmar": 12.367,
+        "spy_sharpe": 1.896,
+        "spy_return": 26.95,
+        "alpha": 0.264,
+        "beta": 0.135
+      },
+      "2021": {
+        "sharpe": 8.639,
+        "return_ann": 42.95,
+        "return_tot": 5.39,
+        "max_dd": 0.47,
+        "volatility": 4.26,
+        "win_rate": 61.11,
+        "sortino": 26.394,
+        "calmar": 92.347,
+        "spy_sharpe": 0.922,
+        "spy_return": 14.27,
+        "alpha": 0.36,
+        "beta": 0.056
+      },
+      "2022": {
+        "sharpe": 4.507,
+        "return_ann": 46.38,
+        "return_tot": 46.16,
+        "max_dd": 2.88,
+        "volatility": 8.57,
+        "win_rate": 59.6,
+        "sortino": 10.996,
+        "calmar": 16.101,
+        "spy_sharpe": -0.735,
+        "spy_return": -18.71,
+        "alpha": 0.406,
+        "beta": 0.111
+      },
+      "2024": {
+        "sharpe": 5.048,
+        "return_ann": 38.3,
+        "return_tot": 38.3,
+        "max_dd": 1.68,
+        "volatility": 6.49,
+        "win_rate": 63.35,
+        "sortino": 13.911,
+        "calmar": 22.758,
+        "spy_sharpe": 1.882,
+        "spy_return": 25.59,
+        "alpha": 0.297,
+        "beta": 0.131
+      }
+    }
+  },
+  "errors": [
+    "FNGG 2022: HTTP 422",
+    "FNGG 2021: HTTP 422",
+    "FNGG 2020: HTTP 422",
+    "Sisyphus 2020: HTTP 422",
+    "Sisyphus 2021: HTTP 422",
+    "FNGG 2024: HTTP 422",
+    "FNGG 2023: HTTP 422",
+    "Beta Baller 2020: HTTP 422",
+    "NOVA Best 2020: HTTP 422",
+    "NOVA Best 2021: HTTP 422",
+    "v2 Community 2020: HTTP 422"
+  ]
+}

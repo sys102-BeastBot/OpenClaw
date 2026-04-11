@@ -1,0 +1,81 @@
+{
+  "step": "root",
+  "name": "SOXL Prime \u2014 2-Layer RSI Cross-Asset Fortress",
+  "description": "R4 seed 3 \u2014 SHARPE_HUNTER",
+  "rebalance": "daily",
+  "children": [
+    {
+      "step": "if",
+      "children": [
+        {
+          "step": "if-child",
+          "is-else-condition?": false,
+          "lhs-fn": "relative-strength-index",
+          "lhs-window-days": "10",
+          "lhs-val": "SVXY",
+          "comparator": "lt",
+          "rhs-val": "31",
+          "rhs-fixed-value?": true,
+          "children": [
+            {
+              "step": "asset",
+              "ticker": "BIL",
+              "children": [],
+              "id": "8c5a7ce5-3dd0-46ee-afa4-1e9fdb6180b9"
+            }
+          ],
+          "id": "22f5a4d9-248c-4a35-9c15-bc0a03857c2a"
+        },
+        {
+          "step": "if-child",
+          "is-else-condition?": true,
+          "children": [
+            {
+              "step": "if",
+              "children": [
+                {
+                  "step": "if-child",
+                  "is-else-condition?": false,
+                  "lhs-fn": "relative-strength-index",
+                  "lhs-window-days": "14",
+                  "lhs-val": "SOXL",
+                  "comparator": "gt",
+                  "rhs-val": "SPY",
+                  "rhs-fn": "relative-strength-index",
+                  "rhs-window-days": "14",
+                  "rhs-fixed-value?": false,
+                  "children": [
+                    {
+                      "step": "asset",
+                      "ticker": "SOXL",
+                      "children": [],
+                      "id": "05d0ed24-de76-42f4-bc11-5e373562ab46"
+                    }
+                  ],
+                  "id": "484d6465-3c8c-4b4d-acbf-f3d92764e85c"
+                },
+                {
+                  "step": "if-child",
+                  "is-else-condition?": true,
+                  "children": [
+                    {
+                      "step": "asset",
+                      "ticker": "QQQ",
+                      "children": [],
+                      "id": "bf1531a2-8260-4142-81ec-2fc21a1d4ddb"
+                    }
+                  ],
+                  "id": "3fc8b62a-9d6b-41a6-8df0-601afec48261"
+                }
+              ],
+              "id": "ac1e7582-6937-430f-8c32-0060c1275bd4"
+            }
+          ],
+          "id": "bff560eb-3d0a-4a0f-8b57-c66a96bb1790"
+        }
+      ],
+      "id": "f4841bca-4423-42ee-a678-230b8d360276"
+    }
+  ],
+  "id": "2aa1deee-30fe-47ae-b213-86bd1bc61359"
+}

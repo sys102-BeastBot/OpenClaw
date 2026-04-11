@@ -1,0 +1,8 @@
+Feature,Avg Sharpe WITH,Avg Sharpe WITHOUT,Delta,N With,N Without
+has filter nodes,1.321,3.04,-1.719,23,2
+has managed futures,0.977,1.838,-0.861,11,14
+has kmlm,0.962,1.79,-0.829,10,15
+has defensive,1.36,2.181,-0.821,22,3
+has btal,1.347,1.905,-0.558,20,5
+uses relative comparison,1.494,1.199,0.295,22,3
+has short etfs,1.474,1.289,0.184,23,2

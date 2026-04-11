@@ -1,0 +1,210 @@
+{
+  "version": "1.1",
+  "last_updated": "2026-04-07",
+  "notes": "v1.1 — Added signal_universe: read-only signal assets the Generator can use in conditions but never hold. Motivated by research phase finding that high-Sharpe symphonies (Sharpe 2.0+) use bond and volatility behavior as leading indicators for equity crashes — not as holdings. The generator without bond signals is deaf to early warning and will always exit too late.",
+
+  "generator_approved": {
+    "description": "Tickers the Generator is allowed to HOLD (allocate capital to). Expand only after Research Phase confirms utility.",
+    "volatility_short": ["SVIX", "SVXY"],
+    "volatility_long":  ["UVXY", "VIXM"],
+    "leveraged_bull":   ["TQQQ", "TECL", "SOXL", "SPXL", "UPRO"],
+    "leveraged_bear":   ["SQQQ", "SOXS", "SPXS", "TECS"],
+    "safe_haven":       ["BIL", "SPY", "QQQ"],
+    "total": 19,
+    "expansion_candidates": {
+      "rationale": "Add after Research Phase confirms utility in high-Sharpe symphonies",
+      "tickers": ["TLT", "GLD", "KMLM", "BTAL", "FTLS"],
+      "notes": "TLT — Research Phase found it used as signal in 6/17 mini-strategies across FNGG+Sisyphus. Backtest as holdable safe-haven alternative to BIL before adding. GLD — appears in Sisyphus as alternative asset. KMLM/BTAL/FTLS — managed futures, no in-universe equivalent found."
+    }
+  },
+
+  "signal_universe": {
+    "description": "Tickers the Generator can USE IN CONDITIONS (lhs-val, rhs-val comparators) but NEVER allocate capital to. These are read-only market indicators. This is the fix for the bond-signal gap identified in Research Phase: high-Sharpe symphonies use bond/volatility behavior as LEADING INDICATORS for equity crashes, not as holdings. Without these signals the generator exits positions too late.",
+    "usage_rule": "Signal assets appear only as lhs-val or rhs-val in if-child condition nodes. They must NEVER appear as asset leaf nodes (step: asset). The Generator must check this rule before outputting any strategy.",
+    "bonds": {
+      "tickers": ["TLT", "IEF", "BND"],
+      "what_they_signal": "Treasury/bond market stress. When bond RSI drops or bond price falls below MA, credit stress is incoming — exit leveraged longs BEFORE equity drawdown shows up in SPY price. IEF and TLT often lead equities by 1-5 days.",
+      "confirmed_uses": [
+        "IEF RSI(10) vs PSQ threshold — bond strength vs inverse equity as regime gate (FNGG ms-002, Sisyphus ms-002, ms-006)",
+        "TLT 15-day MA return vs UDN threshold — bond trend vs dollar as macro regime signal (Sisyphus ms-009, ms-010)",
+        "BND 2-day cumulative return < 0 — bond flight signal, exits to BIL (FNGG ms-001)",
+        "TMF max-drawdown > 7% — bond dislocation crash guard (FNGG ms-006, ms-007)"
+      ]
+    },
+    "volatility_index_proxies": {
+      "tickers": ["UVXY", "VIXY"],
+      "what_they_signal": "VIX futures market stress. Standard deviation of UVXY price is a real-time volatility gauge. When UVXY std-dev spikes, regime has shifted. Note: UVXY is also in generator_approved as a holdable asset — when used as lhs-val in a condition it functions as a signal.",
+      "confirmed_uses": [
+        "UVXY standard-deviation-price(5) vs UVXY threshold — vol regime gate (FNGG ms-007)",
+        "UVXY standard-deviation-return(10) < 10 — low vol confirmation before entering SVXY (FNGG ms-002)"
+      ]
+    },
+    "equity_proxies": {
+      "tickers": ["QLD", "UPRO", "PSQ", "QID"],
+      "what_they_signal": "Leveraged price levels used as dynamic thresholds. QLD (2x QQQ) price vs QLD threshold = bull market price confirmation. PSQ (1x inverse QQQ) as RSI threshold comparator = bear pressure gauge. These are already in generator_approved (UPRO) or close analogs — their use as signal assets is about comparing leveraged price levels as regime confirmation.",
+      "confirmed_uses": [
+        "QLD current-price vs QLD threshold — bull market price confirmation (Sisyphus ms-009, ms-010)",
+        "UPRO RSI(60) > 31 — bull regime RSI floor before entering leveraged positions (Sisyphus ms-009, ms-010)",
+        "PSQ as RSI threshold comparator — inverse QQQ pressure signal (FNGG ms-002, Sisyphus ms-002, ms-006)"
+      ]
+    },
+    "credit_market": {
+      "tickers": ["IEI", "IGIB", "CORP"],
+      "what_they_signal": "Investment-grade credit market health. IGIB RSI dropping signals credit stress before it appears in equity prices. CORP cumulative return vs BIL measures whether credit is outperforming cash — a leading risk-on/risk-off indicator.",
+      "confirmed_uses": [
+        "IGIB RSI(10) vs SPY RSI threshold — credit market regime signal for EM routing (Sisyphus ms-004, ms-007)",
+        "CORP 60-day cumulative return vs BIL — credit excess return over cash as risk-on gate (Sisyphus ms-006)"
+      ]
+    }
+  },
+
+  "generator_rules": {
+    "leveraged_bear_note": "SQQQ, SOXS, SPXS, TECS require a confirmed bearish signal. Never place in the else branch (normal market conditions). Holding a bear ETF in a bull market causes severe decay losses.",
+    "volatility_long_note": "UVXY and VIXM lose 75-90% annually from futures roll decay in calm markets. Use only in crash/spike branches with strict exit conditions.",
+    "volatility_short_note": "SVIX and SVXY have extreme crash risk. Always require a max-drawdown guard as the outermost condition.",
+    "signal_asset_rule": "TLT, IEF, BND, IGIB, CORP, IEI, QLD, PSQ, QID may appear as lhs-val or rhs-val in conditions ONLY. They must never appear as asset leaf nodes. Violating this rule produces invalid JSON (unrecognized ticker in asset node).",
+    "bond_signal_principle": "The relative change between bonds (IEF/TLT), equities (SPY/QQQ), and volatility (UVXY) indicates market direction BEFORE price drawdown appears in equity ETFs. Use bond RSI drops, bond MA crossovers, and credit return vs cash as leading crash indicators. A strategy that only watches equity price will always exit too late."
+  },
+
+  "confirmed_parameter_priors": {
+    "description": "Parameters confirmed by appearing identically in 2+ independent high-Sharpe symphonies. Use these as generator defaults — do not randomize away from these without specific reason.",
+    "source": "Research Phase pilot: FNGG (Sharpe 2.13) + Sisyphus V0.0 (Sharpe 1.92)",
+    "priors": [
+      {
+        "parameter":    "RSI window",
+        "value":        10,
+        "confirmed_in": ["FNGG ms-001, ms-002, ms-003", "Sisyphus ms-001, ms-002, ms-004, ms-005, ms-007"],
+        "confidence":   0.90,
+        "note":         "RSI(10) is the dominant short-term momentum window across both symphonies. Default to 10 unless a specific regime requires longer lookback."
+      },
+      {
+        "parameter":    "TQQQ cumulative-return threshold",
+        "value":        5.5,
+        "confirmed_in": ["FNGG ms-002, ms-004, ms-006, ms-007", "Sisyphus ms-009, ms-010"],
+        "confidence":   0.92,
+        "note":         "TQQQ cumulative-return > 5.5% appears as the consensus bull-entry gate across two independent symphonies. This is a high-confidence prior. Window varies (1-day to 60-day) but threshold is stable at 5.5%."
+      },
+      {
+        "parameter":    "SPY price-level gate",
+        "value":        "SPY current-price vs SPY threshold",
+        "confirmed_in": ["FNGG ms-002", "Sisyphus ms-001, ms-006"],
+        "confidence":   0.85,
+        "note":         "SPY price compared to its own threshold (moving average crossover) is a universal regime confirmation. Always include at least one SPY price-level condition in regime_router patterns."
+      },
+      {
+        "parameter":    "Long lookback window",
+        "value":        60,
+        "confirmed_in": ["Sisyphus ms-002, ms-006, ms-009"],
+        "confidence":   0.75,
+        "note":         "60-day is the dominant long-lookback window for cumulative return calculations. Use for bear-market circuit breakers (QQQ 60-day return < -12% type conditions)."
+      },
+      {
+        "parameter":    "UPRO RSI bull-regime floor",
+        "value":        31,
+        "confirmed_in": ["Sisyphus ms-009, ms-010"],
+        "confidence":   0.70,
+        "note":         "UPRO RSI(60) > 31 used as minimum RSI floor before entering leveraged bull positions. Confirms trend is not deeply oversold. Needs Beta Baller confirmation to raise confidence."
+      },
+      {
+        "parameter":    "SVXY max-drawdown crash guard",
+        "value":        "window=2, threshold=10",
+        "confirmed_in": ["FNGG ms-001"],
+        "confidence":   0.80,
+        "note":         "max-drawdown(2) > 10% on SVXY is the standard Volmageddon-style crash guard. Short window catches rapid crashes. This is a MANDATORY pattern whenever SVXY is held."
+      },
+      {
+        "parameter":    "Volatility hedge pair",
+        "value":        "UVXY + VIXM together",
+        "confirmed_in": ["Sisyphus ms-001, ms-002, ms-005, ms-006"],
+        "confidence":   0.78,
+        "note":         "UVXY and VIXM appear together as paired volatility hedges, not alone. UVXY for acute spikes, VIXM for sustained elevated vol. Use both when routing to volatility defensive positions."
+      }
+    ]
+  },
+
+  "critical_risk_notes": {
+    "description": "Historical events Claude must know. These facts may be underweighted without explicit injection.",
+    "SVXY":  "Dropped 93% intraday on Feb 5 2018 (Volmageddon). A rebalancing cascade caused near-total wipeout in hours. Never hold without an outer max-drawdown crash guard. Confirmed guard parameters: max-drawdown(window=2) > 10%.",
+    "UVXY":  "Loses 75-90% of value annually from VIX futures roll decay in low-volatility regimes. Only useful during volatility spikes. Short hold periods only — days not weeks.",
+    "TQQQ":  "2022 bear market drawdown: -80%. 3x leverage amplifies crashes non-linearly. Guard conditions are mandatory. Confirmed momentum gate: cumulative-return > 5.5% before entering.",
+    "SOXL":  "2022 drawdown: -90%. Semiconductor concentration makes it the most volatile 3x ETF in the universe. Requires strict guard conditions.",
+    "TECL":  "2022 drawdown: -75%. Similar profile to SOXL but technology-broad rather than semiconductor-specific.",
+    "SQQQ":  "3x short Nasdaq. Severe negative decay in bull markets — loses value daily from leverage rebalancing. Use only when bearish signal is actively confirmed.",
+    "SPXS":  "3x short S&P 500. Same decay risk as SQQQ. Never hold in neutral or bullish regime branches.",
+    "SOXS":  "3x short semiconductors. Extreme decay outside confirmed bear markets.",
+    "TECS":  "3x short technology. Same decay profile as SOXS.",
+    "TMF":   "2022 was historically unusual — 3x long treasury fell simultaneously with equities due to rapid Fed rate hikes. The historical negative equity correlation is unreliable post-2022. Do not assume TMF will protect in all equity drawdowns.",
+    "TLT":   "Signal asset only (v1.1). Use as condition signal (RSI, MA return, cumulative return) to detect bond-market stress as a leading equity crash indicator. Do not hold as position until Research Phase confirms backtest value as safe haven."
+  },
+
+  "known_high_correlation_pairs": {
+    "description": "Pre-loaded to prevent Generator from combining near-identical assets.",
+    "pairs": [
+      {
+        "tickers": ["UPRO", "SPXL"],
+        "correlation": 0.98,
+        "note": "Near identical — both 3x S&P 500. Never use both in the same strategy."
+      },
+      {
+        "tickers": ["TQQQ", "TECL"],
+        "correlation": 0.94,
+        "note": "Near identical — both 3x tech. Use filter top-1 to choose between them."
+      },
+      {
+        "tickers": ["TQQQ", "SOXL"],
+        "correlation": 0.92,
+        "note": "Both 3x tech-adjacent. No meaningful diversification. Use filter top-1."
+      },
+      {
+        "tickers": ["FNGU", "BULZ"],
+        "correlation": 0.96,
+        "note": "Near identical FANG+ products. Out of generator universe but flag if seen in community symphonies."
+      },
+      {
+        "tickers": ["SVXY", "UVXY"],
+        "correlation": -0.85,
+        "note": "Inverse pair — short vol vs long vol. Never hold simultaneously."
+      }
+    ]
+  },
+
+  "full_reference": {
+    "description": "Complete ticker list for R1 community symphony analysis. Not injected into Generator prompts — used by research_phase.py to categorize community symphony tickers.",
+    "volatility": {
+      "short_vol":  ["SVIX", "SVXY"],
+      "long_vol":   ["UVXY", "UVIX", "VIXM", "VIXY", "VXX"]
+    },
+    "leveraged_equity": {
+      "broad_bull": ["UPRO", "SPXL", "TQQQ", "QLD", "TNA", "UMDD"],
+      "broad_bear": ["SPXS", "SPXU", "SH", "SQQQ", "QID", "PSQ"],
+      "sector_bull": ["TECL", "SOXL", "FNGU", "BULZ", "EDC", "ERX", "UCO", "UGL"],
+      "sector_bear": ["TECS", "SOXS", "FNGD", "EDZ", "TYO"]
+    },
+    "fixed_income": {
+      "long_duration_bull": ["TMF", "TLT", "IEF", "GOVT"],
+      "long_duration_bear": ["TMV", "TYO"],
+      "short_duration":     ["BIL", "SHV", "SHY"],
+      "credit":             ["BND", "BOND", "IGIB", "CORP", "IEI"]
+    },
+    "safe_haven_hedge": ["GLD", "UGL", "UUP", "USDU", "DBC", "KMLM", "FTLS", "BTAL"],
+    "broad_market_etf": ["SPY", "QQQ", "VTI", "DIA", "EEM", "EEMV", "EFA", "SMH", "SPHB", "SPLV"],
+    "sector_etf": ["XLK", "XLF", "XLE", "XLV", "XLU", "XLI", "XLP", "XLB", "XLRE"],
+    "individual_stocks": [
+      "AAPL", "MSFT", "NVDA", "AMZN", "GOOGL", "GOOG", "META", "TSLA",
+      "AVGO", "AMD", "ADBE", "CRM", "NFLX", "LLY", "NVO",
+      "JPM", "GS", "AXP", "V", "BRK/B",
+      "JNJ", "UNH", "AMGN",
+      "COST", "HD", "MCD", "PEP",
+      "BA", "CAT", "HON", "GE", "CSCO", "TRV",
+      "XOM"
+    ],
+    "other": ["USD", "PUI"]
+  },
+
+  "spy_correlation_thresholds": {
+    "description": "Thresholds for R1 correlation classification task.",
+    "high_correlation":    {"r_squared_min": 0.85, "label": "Tracks SPY — limited diversification value"},
+    "uncorrelated":        {"pearson_r_min": -0.15, "pearson_r_max": 0.15, "label": "Independent return stream — highest portfolio value"},
+    "negative_correlation":{"pearson_r_max": -0.85, "label": "Inverse SPY — rare, extremely valuable as hedge"}
+  }
+}

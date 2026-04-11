@@ -1,0 +1,1649 @@
+
+============================================================
+SYMPHONY REVIEW — 2026-04-07 22:11
+============================================================
+Symphony: Beta Baller (vNP5oYsbpV8tS9USqGEL)
+Sharpe: 4.06  CAGR: 108.0%  Max DD: 5.3%
+
+── EXTRACTION SUMMARY ──
+  Total mini-strategies:           34
+  Named groups:                    34
+  Structural:                      0
+  Compression ratio:               192.4x
+  Round-trip verified:             ✓ PASS
+  Claude parse success:            ✓ YES
+
+  Taxonomy notes:
+  [batch 1] All 5 mini-strategies are logic_only due to heavy presence 
+  of out-of-universe assets including managed futures (KMLM, BTAL), 
+  fixed income (TMV, TMF, TLT, IEF, SHY, TYO), currency ETFs (UUP, USDU, 
+  YCS, EUO), commodities (DBC, UCO), and emerging market ETFs (EEM, EWZ, 
+  EPI). The symphony's core structural logic is complex regime-routing 
+  with 6-12 signal parameters per node. The 5.5% TQQQ cumulative return 
+  threshold appears in both ms-003 and ms-005, suggesting it is a key 
+  architectural parameter of the Beta Baller symphony. RSI of BIL vs IEF 
+  threshold appears identically in ms-001 and ms-005, indicating a 
+  shared bond-market stress signal reused across sub-strategies. The 
+  symphony's exceptional Sharpe (4.06) and CAGR (108%) likely derives 
+  from this dense multi-signal conditioning rather than any single asset 
+  bet. | [batch 2] All 5 mini-strategies share the same fundamental 
+  5-signal regime-routing architecture: (1) TQQQ cumulative return > 
+  5.5% threshold, (2) SPY EMA crossover, (3) RSI(BIL) vs RSI(IEF) 
+  comparison, (4) moving-average-return comparison (SPY vs DBC or IEF vs 
+  SH), (5) std-dev(DBC) vs std-dev(SPY). Variations across strategies 
+  are primarily: window parameters (unspecified → 7 → 10 for RSI; 10 for 
+  MA; 20 for std-dev; 210-day EMA), asset pool size (16 → 30 → 32), and 
+  the specific defensive asset set. ms-006 and ms-009 are near-identical 
+  (prototype vs cleaned-up version). ms-007 adds 'anti-twitch' explicit 
+  windows. ms-008 is a specialized risk-off/falling-rates branch. ms-010 
+  is the maximally expanded version. All are logic_only due to bonds 
+  (TMF, TMV, TLT, SHY, TYO), managed futures (BTAL), commodities (UCO, 
+  DBC), currencies (UUP, YCS, EUO), EM (EEM, EEMV, EPI, EWZ), and sector 
+  ETFs (SPHB, SMH) being outside the generator universe. | [batch 3] All 
+  five mini-strategies are logic_only due to heavy OOU asset exposure 
+  across fixed income (TLT, TMF, TYO, TMV, SHY), managed futures (BTAL), 
+  currency (UUP, USDU), commodity (UCO, DBC used as signal benchmark), 
+  and sector ETFs (SPHB, SMH, XLU used as RSI benchmark). The core 
+  signal architecture is highly consistent and reusable: the TQQQ 5.5% 
+  1-day cumulative return gate, SPY EMA(210) trend filter, IEF MA(10) vs 
+  SH bond trend, and DBC volatility vs SPY appear across ms-011, ms-012, 
+  ms-013, and ms-015. This suggests a shared parent conditional tree 
+  with branching sub-conditions. ms-014 is structurally simpler using 
+  only SPY RSI vs XLU. ms-015 is the most comprehensive and likely the 
+  top-level orchestrator of the Beta Baller symphony given its version 
+  tag and signal richness. | [batch 4] All 5 mini-strategies in this 
+  batch share a core TCCC (Trend-Confirmation, Crash-Control) filter 
+  stack. The recurring signal parameters—TQQQ 1-day cumulative return 
+  >5.5%, SPY EMA (window 210 where specified), IEF 10-day moving-average 
+  vs SH, DBC 20-day std-dev vs SPY, and BIL RSI vs IEF—appear 
+  identically or near-identically across ms-016, ms-018, ms-019, and 
+  ms-020, confirming a shared regime-routing module being reused across 
+  sub-strategies. ms-017 substitutes SPY max-drawdown <10% and UPRO vs 
+  SPXU relative cumulative return for two of the five conditions, 
+  suggesting a variant of the same logic. All 5 are classified 
+  logic_only due to heavy out-of-universe asset contamination (fixed 
+  income ETFs TLT/TMF/TYO/SHY, managed futures BTAL, EM equity EEM/EEMV, 
+  commodity UUP/UCO). The generator should treat the 5-condition TCCC 
+  gate as a first-class reusable pattern. | [batch 5] This batch is 
+  dominated by multi-signal regime routers (ms-021, ms-022, ms-023, 
+  ms-024) that share a structural family: the TQQQ 5.5% cumulative 
+  return gate appears in all four, acting as a universal momentum 
+  prerequisite. ms-021 and ms-023 are mirror images (falling vs rising 
+  rate regimes) with nearly identical signal stacks but different 
+  terminal assets. ms-024 is the master composite with explicit window 
+  parameters revealing the underlying parameter choices for the whole 
+  symphony. ms-025 is the simplest node — a single in-universe asset 
+  used as a crash guard terminal. The heavy out-of-universe presence 
+  (TMF, TMV, BTAL, UCO, EEM, TLT) forces logic_only recomposability for 
+  four of five mini-strategies; only ms-025 is fully recomposable. The 
+  BIL RSI vs IEF RSI signal (appearing in ms-021, ms-023, ms-024) is a 
+  recurring rate-regime detector that the generator should learn as a 
+  fixed-income sentiment proxy even when IEF itself is not held. | 
+  [batch 6] All five mini-strategies in this batch are logic_only due to 
+  heavy reliance on fixed-income LETFs (TMF, TMV), commodity instruments 
+  (UCO, DBC), international ETFs (EEM, EFA, EPI), and managed-futures 
+  hedges (BTAL). A highly consistent five-signal gating framework 
+  appears across ms-026, ms-027, ms-029, and ms-030: (1) SPY EMA trend, 
+  (2) BIL RSI vs IEF, (3) TQQQ 1-day cumulative return vs 5.5% 
+  threshold, (4) moving-average-return cross vs a commodity/rate 
+  benchmark, and (5) standard-deviation-return comparison between a rate 
+  instrument and a commodity/equity benchmark. ms-028 is structurally 
+  simpler, using only SPY RSI vs XLU as a single crash-guard trigger. 
+  The rate-direction logic (TMF vs TMV routing) is the primary 
+  differentiator between the falling-rates and rising-rates variants. | 
+  [batch 7] All four mini-strategies share a core signal stack that 
+  appears to be a modular TCCC (Trend-Confirmation-Cumulative-Crash) 
+  filter system: (1) SPY EMA210 as long-term trend gate, (2) TQQQ 1-day 
+  cumulative return at 5.5% as momentum pulse gate, (3) TQQQ RSI at 77 
+  as overbought brake in ms-032 and ms-034, (4) IEF/SH MA return cross 
+  as bond regime signal in ms-031 and ms-033, and (5) DBC volatility vs 
+  SPY or TMV volatility vs DBC as commodity/macro stress filter. The 
+  5.5% TQQQ threshold and SPY EMA210 appear in all four, suggesting a 
+  shared base template with module-specific overlays. All four are 
+  logic_only due to heavy use of bond ETFs (TLT, IEF, SHY, TMF, TMV), 
+  commodity ETFs (UCO, ERX, DBC), EM ETFs (EEM), and managed futures 
+  (BTAL). The ms-033 name explicitly flags this as a defensive/safety 
+  branch, distinguishing it functionally from the others despite 
+  near-identical signal parameters. 
+
+  Cross-strategy patterns:
+    • TQQQ cumulative-return threshold of 5.5% appears in both ms-003 and ms-005 — a core momentum gate used as a prerequisite for bull positioning
+    • RSI of BIL compared against IEF threshold appears identically in ms-001 and ms-005 — a shared bond-market stress / flight-to-safety signal
+    • Standard-deviation-return of a bond/rate instrument (TMV or DBC) used as volatility filter in ms-001, ms-003, and ms-005
+    • SPY EMA crossover (EMA of SPY vs current SPY price) appears in both ms-003 and ms-005 as a trend confirmation layer
+    • VIXM appears as a defensive holding across ms-002, ms-003, ms-004, and ms-005 — functions as a persistent crash-guard fallback
+    • ERX and TNA appear as leveraged bull assets in ms-003 and ms-005, suggesting a consistent energy+small-cap momentum pairing for risk-on legs
+    • TQQQ cumulative-return threshold of 5.5% appears in all 5 mini-strategies as the primary momentum gate
+    • RSI(BIL) vs RSI(IEF) as a cash/bond regime signal appears in all 5 mini-strategies
+    • SPY EMA crossover (SPY vs its own EMA) appears in all 5 mini-strategies as the trend confirmation filter
+    • DBC std-dev vs SPY std-dev as a commodity volatility filter appears in all 5 mini-strategies
+    • cumulative-return.window = 1 appears explicitly in ms-007, ms-008, ms-010 (short-term momentum confirmation)
+    • moving-average-return.window = 10 appears in ms-007 and ms-010
+    • RSI window varies systematically: unspecified (ms-006, ms-009), 10 (ms-007), 7 (ms-010) — suggesting iterative tuning
+    • EMA window of 210 days appears only in ms-010, indicating long-trend filtering in the largest asset-pool variant
+    • VIXM appears as a sample asset in all 5 mini-strategies, suggesting it is a consistent defensive routing target
+    • TQQQ 1-day cumulative return threshold of 5.5% appears as a signal gate in ms-011, ms-012, ms-013, and ms-015 — a defining feature of the Beta Baller regime filter stack
+    • SPY exponential-moving-average-price (asset=SPY, threshold=SPY) appears in ms-011, ms-012, ms-013, and ms-015 — used universally as a bull/bear equity regime gate
+    • IEF moving-average-return (window=10, threshold=SH) appears in ms-011 and ms-012 as a bond trend signal
+    • DBC standard-deviation-return vs SPY threshold appears in ms-011, ms-012, ms-013, and ms-015 as a cross-asset volatility regime filter
+    • SPY moving-average-return vs DBC threshold appears in ms-013 and ms-015 as a cross-asset momentum comparison signal
+    • BIL RSI(7) vs IEF threshold appears in ms-011 and ms-013 as a rate stress / liquidity signal
+    • TQQQ 1-day cumulative-return threshold of 5.5% appears in ms-016, ms-018, ms-019, ms-020 — consistent momentum pulse gate
+    • SPY EMA (window=210) vs SPY price as primary trend filter appears in ms-016, ms-018, ms-019, ms-020
+    • IEF 10-day moving-average-return vs SH as a bond-trend/risk-off confirmation signal appears in ms-016, ms-018, ms-019
+    • DBC 20-day standard-deviation-return vs SPY as a commodity volatility filter appears in ms-016, ms-018, ms-019, ms-020
+    • BIL RSI vs IEF as a cash/short-rate stress signal appears in ms-016, ms-017, ms-019, ms-020
+    • SPY max-drawdown threshold of 10% used in ms-017 as an alternative crash-guard gate not present in other strategies
+    • UPRO cumulative-return vs SPXU used in ms-017 as a relative leveraged-bull-vs-bear momentum signal unique to that sub-strategy
+    • All 5 strategies are classified regime_router, confirming this batch is a set of TCCC regime-detection wrappers over different asset pools
+    • TQQQ cumulative-return threshold of 5.5% appears as a momentum gate in ms-021, ms-022, ms-023, and ms-024 — this is the symphony's universal bull-market prerequisite signal.
+    • SPY EMA crossover (ms-021, ms-023, ms-024) and SPY vs DBC moving-average comparison (ms-021, ms-023, ms-024) form a paired trend + commodity-relative-strength filter used consistently across rate-regime routers.
+    • BIL RSI vs IEF RSI comparison appears in ms-021, ms-023, and ms-024 as a fixed-income sentiment / rate-direction proxy.
+    • DBC standard-deviation vs another asset appears in ms-021 (vs SPY) and ms-023/ms-024 (vs TMV/DBC) as a commodity volatility regime signal.
+    • VIXM appears as a sample asset or terminal hold in ms-021, ms-022, ms-023, ms-024, and ms-025 — it is a recurring crash-guard fallback across the entire symphony.
+    • PSQ (inverse QQQ) appears in ms-021, ms-022, and ms-023 as a consistent bear-equity fallback substitute.
+    • EMA window of 210 days (ms-024) and RSI window of 7 days (ms-024) are the explicit parameter values underlying the SPY trend and RSI signals used implicitly across sibling strategies.
+    • TQQQ 1-day cumulative return threshold of 5.5% appears as a momentum gate in ms-026, ms-027, ms-029, and ms-030 — consistent cross-strategy entry filter
+    • SPY exponential moving average (210-day window in ms-026, unspecified in others) vs SPY price is the primary trend filter in ms-026, ms-027, ms-029, ms-030
+    • BIL RSI(7) vs IEF as a bill/bond relative-strength signal appears in ms-026, ms-027, ms-029, ms-030 — likely a rate-regime discriminator
+    • Standard-deviation-return of a rate asset (TMV or DBC) vs an equity/commodity benchmark appears in ms-026, ms-027, ms-029, ms-030 as a volatility-regime gate
+    • Moving-average-return cross using a commodity/rate benchmark (STIP or DBC) vs an equity proxy (SH or SPY) appears in ms-026, ms-027, ms-029, ms-030
+    • The five-signal stack (EMA + RSI + cumulative-return + moving-avg-return + std-dev-return) is the canonical multi-condition regime gate used across ms-026, ms-027, ms-029, ms-030
+    • ms-026 and ms-030 share identical parameter structure (same signal assets, same thresholds, same window=5 for moving-avg and std-dev) — they appear to be the same regime gate applied to differently sized asset baskets
+    • TQQQ cumulative-return threshold of 5.5% (1-day window) appears in all four mini-strategies as a universal momentum pulse gate
+    • SPY exponential-moving-average-price (window 210) vs SPY as long-term bull/bear regime filter appears in all four mini-strategies
+    • TQQQ RSI threshold of 77 as an overbought guard appears in ms-032 and ms-034
+    • IEF moving-average-return (window 10) vs SH as a bond trend / risk-off signal appears in ms-031 and ms-033
+    • BIL RSI vs IEF as a short-rate vs intermediate-rate regime signal appears in ms-031 and ms-033
+    • DBC standard-deviation-return vs SPY (or TMV std-dev vs DBC) as a commodity volatility / macro stress filter appears in ms-031, ms-032, ms-033, and ms-034
+    • SPY moving-average-return vs DBC as a relative equity-vs-commodity momentum signal appears in ms-032 and ms-034
+
+============================================================
+MINI-STRATEGIES
+============================================================
+
+── ms-001 — Defense | Modified ──
+  Source:                          named
+  Assets:                          14 total
+    Tickers:                       EPI, YCS, SH, TMV, UCO, SPXS, EUO, EWZ, EEM, PSQ, DBC, UPRO, EFA, SMH
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            regime_router
+  Confidence:                      72%
+
+  Plain English:
+    If standard deviation of TMV return exceeds DBC threshold and RSI 
+    of BIL exceeds IEF threshold, hold inverse/defensive assets (SPXS, 
+    SH); otherwise rotate into emerging market or commodity exposures 
+    (EPI, EWZ, UCO). 
+
+  Extractable pattern:
+    Use standard-deviation-return of a bond/rate instrument as a 
+    volatility regime gate to route between inverse equity and risk-on 
+    emerging market or commodity assets. 
+
+  Regime tags:
+    bear_sustained         effective    [inferred]
+    vix_spike              effective    [inferred]
+    bull_low_vol           ineffective  [inferred]
+
+  No substitute: TMV
+    no_substitute: fixed income not in universe
+
+  Parameters:
+    relative-strength-index.asset          BIL
+    relative-strength-index.threshold      IEF
+    standard-deviation-return.asset        TMV
+    standard-deviation-return.threshold    DBC
+
+  Role note: Routes between defensive/inverse and risk-on assets based on volatility (std-dev of TMV) and RSI of BIL vs IEF threshold — a multi-signal regime gate across 14 assets
+
+── ms-002 — KMLM switcher (single pops)| BT 4/13/22 = A.R. 466% / D.D. 22% ──
+  Source:                          named
+  Assets:                          10 total
+    Tickers:                       KMLM, SVXY, TMV, TMF, VIXM, SPHB, UUP, QQQ, FTLS, SMH
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            regime_router
+  Confidence:                      78%
+
+  Plain English:
+    If RSI of XLK over a 10-period window exceeds the KMLM threshold, 
+    hold equity or volatility-selling assets (SVXY, QQQ); otherwise 
+    hold managed futures or defensive instruments (KMLM, TMF, VIXM). 
+
+  Extractable pattern:
+    Use a 10-period RSI on a tech sector proxy (XLK/TQQQ) as a regime 
+    gate to route between volatility-selling assets and 
+    defensive/alternative assets. 
+
+  Regime tags:
+    bull_low_vol           effective    [inferred]
+    bear_sustained         effective    [inferred]
+    sideways_chop          ineffective  [inferred]
+
+  No substitute: KMLM
+    no_substitute: managed futures category not in universe
+
+  Parameters:
+    relative-strength-index.asset          XLK
+    relative-strength-index.threshold      KMLM
+    relative-strength-index.window         10
+
+  Role note: Routes between managed futures (KMLM), volatility products (SVXY, VIXM), bonds (TMF), and equity (QQQ) based on RSI of XLK vs KMLM threshold — tech sector momentum determines regime pathway
+
+── ms-003 — V3.0.4.5 | ?? Beta Baller + TCCC | Anansi Clean Up | 2011-10-04 ──
+  Source:                          named
+  Assets:                          17 total
+    First 10:                      SH, TMV, TMF, UCO, VIXM, ERX, TNA, UUP, EEM, GLD  (+7 more)
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            regime_router
+  Confidence:                      82%
+
+  Plain English:
+    If TQQQ cumulative return exceeds 5.5% AND SPY EMA is above SPY 
+    price AND RSI of TQQQ exceeds 77, hold leveraged bull assets (TNA, 
+    ERX); if SPY moving-average return exceeds DBC threshold, hold 
+    inverse assets (SH, SPXS); otherwise hold safe or bond-adjacent 
+    instruments (VIXM, UUP). 
+
+  Extractable pattern:
+    Chain a TQQQ 5.5% cumulative-return threshold with a TQQQ RSI>77 
+    overbought check and SPY EMA crossover to gate entry into 
+    leveraged bull positions, using std-dev of a rate instrument as a 
+    secondary volatility filter. 
+
+  Regime tags:
+    bull_low_vol           effective    [inferred]
+    bear_sustained         effective    [inferred]
+    vix_spike              effective    [inferred]
+
+  No substitute: TMV
+    no_substitute: fixed income not in universe
+
+  Parameters:
+    cumulative-return.asset                TQQQ
+    cumulative-return.threshold            5.5
+    current-price.asset                    TLT
+    current-price.threshold                TLT
+    exponential-moving-average-price.asset SPY
+    exponential-moving-average-price.threshold SPY
+    moving-average-return.asset            SPY
+    moving-average-return.threshold        DBC
+    relative-strength-index.asset          TQQQ
+    relative-strength-index.threshold      77
+    standard-deviation-return.asset        TMV
+    standard-deviation-return.threshold    DBC
+
+  Role note: Highly parameterized multi-signal router combining RSI, EMA, cumulative return (5.5% TQQQ gate), moving-average return, std-dev, and price-level checks — likely the core orchestra conductor of the symphony
+
+── ms-004 — Bull or Safety Town - Base 2 ──
+  Source:                          named
+  Assets:                          7 total
+    Tickers:                       SVXY, TMF, VIXM, ERX, USDU, QQQ, BTAL
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            regime_router
+  Confidence:                      76%
+
+  Plain English:
+    If RSI of SPY exceeds the XLU threshold, hold risk-on assets 
+    (SVXY, ERX, QQQ); otherwise hold defensive or alternative assets 
+    (VIXM, TMF, BTAL, USDU). 
+
+  Extractable pattern:
+    Use SPY RSI compared against a sector defensive proxy threshold 
+    (e.g. utilities) as a binary bull/safety router to toggle between 
+    volatility-selling equity assets and defensive alternatives. 
+
+  Regime tags:
+    bull_low_vol           effective    [inferred]
+    bear_sustained         effective    [inferred]
+    sideways_chop          ineffective  [inferred]
+
+  No substitute: BTAL
+    no_substitute: managed futures category not in universe
+
+  Parameters:
+    relative-strength-index.asset          SPY
+    relative-strength-index.threshold      XLU
+
+  Role note: Routes between volatility products, leveraged equity, defensive alternatives, and cash-like assets based on RSI of SPY vs XLU (utilities) threshold — utilities RSI as a risk-off signal
+
+── ms-005 — Bear Stock Market - High Inflation - [STRIPPED] V2.0.2b | A Better LETF Basket | DJKeyhole | BIL and TMV ──
+  Source:                          named
+  Assets:                          30 total
+    First 10:                      EPI, ERX, SPHB, VIXM, TNA, EEM, BTAL, SHY, SMH, TYO  (+20 more)
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            regime_router
+  Confidence:                      79%
+
+  Plain English:
+    If TQQQ cumulative return over 1 period exceeds 5.5% AND SPY EMA 
+    is above SPY price AND RSI of BIL exceeds IEF threshold AND 
+    moving-average return of IEF exceeds SH threshold, rotate into 
+    inflation-beneficiary or leveraged assets (ERX, TNA, EPI); 
+    otherwise hold volatility or defensive instruments (VIXM, BTAL, 
+    SPHB). 
+
+  Extractable pattern:
+    Layer a 1-period TQQQ 5.5% cumulative-return gate with a 10-period 
+    moving-average on a bond/rate ETF and RSI of BIL vs IEF to 
+    identify bear/inflation regimes, then rotate into commodity-linked 
+    leveraged ETFs as the risk-on leg. 
+
+  Regime tags:
+    bear_sustained         effective    [inferred]
+    bull_low_vol           ineffective  [inferred]
+    vix_spike              effective    [inferred]
+
+  No substitute: BTAL
+    no_substitute: managed futures category not in universe
+
+  Parameters:
+    cumulative-return.asset                TQQQ
+    cumulative-return.threshold            5.5
+    cumulative-return.window               1
+    exponential-moving-average-price.asset SPY
+    exponential-moving-average-price.threshold SPY
+    moving-average-return.asset            IEF
+    moving-average-return.threshold        SH
+    moving-average-return.window           10
+    relative-strength-index.asset          BIL
+    relative-strength-index.threshold      IEF
+    standard-deviation-return.asset        DBC
+    standard-deviation-return.threshold    SPY
+
+  Role note: Large 30-asset bear/inflation regime router combining moving-average return of IEF, SPY EMA crossover, RSI of BIL vs IEF, TQQQ 5.5% cumulative return gate, and std-dev of DBC — designed to navigate high-inflation bear environments
+
+── ms-006 — V3.0.4.5 | ?? Beta Baller + TCCC | Cleaned Up | 2011-10-04 ──
+  Source:                          named
+  Assets:                          16 total
+    First 10:                      SH, TMV, TMF, UCO, VIXM, ERX, TNA, UUP, EEM, GLD  (+6 more)
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            regime_router
+  Confidence:                      82%
+
+  Plain English:
+    If TQQQ cumulative return exceeds 5.5% AND SPY is above its EMA 
+    AND RSI(BIL) > RSI(IEF) AND SPY moving-average-return > DBC AND 
+    DBC std-dev < SPY std-dev, hold bull/risk-on assets (ERX, TNA, 
+    etc.); otherwise route to defensive or inverse positions (SH, TMF, 
+    etc.). 
+
+  Extractable pattern:
+    Use a 5-signal regime gate (TQQQ 5.5% cumulative return, SPY EMA 
+    crossover, BIL/IEF RSI comparison, SPY/DBC momentum comparison, 
+    DBC/SPY volatility comparison) to route between leveraged bull and 
+    defensive/inverse assets. 
+
+  Regime tags:
+    bull_low_vol           effective    [inferred]
+    bear_sustained         effective    [inferred]
+    vix_spike              ineffective  [inferred]
+
+  No substitute: TMV
+    no_substitute: fixed income not in universe
+
+  Parameters:
+    cumulative-return.asset                TQQQ
+    cumulative-return.threshold            5.5
+    exponential-moving-average-price.asset SPY
+    exponential-moving-average-price.threshold SPY
+    moving-average-return.asset            SPY
+    moving-average-return.threshold        DBC
+    relative-strength-index.asset          BIL
+    relative-strength-index.threshold      IEF
+    standard-deviation-return.asset        DBC
+    standard-deviation-return.threshold    SPY
+
+  Role note: Multi-signal regime filter using RSI(BIL vs IEF), EMA(SPY vs SPY), cumulative return(TQQQ > 5.5%), moving-average-return(SPY vs DBC), and std-dev(DBC vs SPY) to route across a 16-asset universe covering bull, bear, rates, commodities, and currency exposures.
+
+── ms-007 — "V3.0.4.2a" [HTX anti-twitch]| Beta Baller + TCCC | Deez, BrianE, HinnomTX, DereckN, Garen, DJKeyhole, comrade ──
+  Source:                          named
+  Assets:                          30 total
+    First 10:                      EPI, VIXM, SPHB, ERX, TNA, EEM, BTAL, SHY, SMH, TYO  (+20 more)
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            regime_router
+  Confidence:                      81%
+
+  Plain English:
+    If TQQQ 1-period cumulative return exceeds 5.5% AND SPY is above 
+    its EMA AND RSI(BIL,10) > RSI(IEF,10) AND IEF 
+    moving-average-return(10) > SH AND DBC std-dev < SPY std-dev, hold 
+    risk-on assets (EPI, TNA, ERX, etc.); otherwise route to defensive 
+    positions (BTAL, SHY, VIXM, etc.). 
+
+  Extractable pattern:
+    Apply explicit short windows (RSI=10, MA=10, cumret=1) to the 
+    5-signal regime gate to reduce signal lag and whipsaw 
+    ('anti-twitch'), while expanding the routable asset universe to 
+    include EM and alternative risk premia. 
+
+  Regime tags:
+    bull_low_vol           effective    [inferred]
+    bear_sustained         effective    [inferred]
+    sideways_chop          ineffective  [inferred]
+
+  No substitute: BTAL
+    no_substitute: managed futures category not in universe
+
+  Parameters:
+    cumulative-return.asset                TQQQ
+    cumulative-return.threshold            5.5
+    cumulative-return.window               1
+    exponential-moving-average-price.asset SPY
+    exponential-moving-average-price.threshold SPY
+    moving-average-return.asset            IEF
+    moving-average-return.threshold        SH
+    moving-average-return.window           10
+    relative-strength-index.asset          BIL
+    relative-strength-index.threshold      IEF
+    relative-strength-index.window         10
+    standard-deviation-return.asset        DBC
+    standard-deviation-return.threshold    SPY
+
+  Role note: Near-identical signal stack to ms-006 but with explicit windows (RSI=10, MA=10, cumulative=1) and 30 assets including EM, managed futures (BTAL), and bonds (SHY, TYO), suggesting a broader diversified routing version with anti-whipsaw ('anti-twitch') modifications.
+
+── ms-008 — A.B.B.B: Risk Off, Falling Rates (TMF)* ──
+  Source:                          named
+  Assets:                          16 total
+    First 10:                      YCS, SPXS, TMF, UCO, EUO, ERX, VIXM, EWZ, UUP, SPHB  (+6 more)
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            regime_router
+  Confidence:                      80%
+
+  Plain English:
+    If TQQQ 1-period cumulative return exceeds 5.5% AND SPY is above 
+    its EMA AND RSI(BIL) > RSI(IEF) AND SPY moving-average-return > 
+    DBC AND DBC std-dev < SPY std-dev, hold risk-on assets; otherwise 
+    hold risk-off/falling-rate assets (TMF, SPXS, VIXM, YCS, EUO). 
+
+  Extractable pattern:
+    Design a dedicated risk-off sub-branch that combines inverse 
+    equity (SPXS), long-vol (VIXM), and currency/rate instruments 
+    using the same 5-signal regime gate, specifically targeting 
+    falling-rate bear environments. 
+
+  Regime tags:
+    bear_sustained         effective    [inferred]
+    vix_spike              effective    [inferred]
+    bull_low_vol           ineffective  [inferred]
+
+  No substitute: TMF
+    no_substitute: fixed income not in universe
+
+  Parameters:
+    cumulative-return.asset                TQQQ
+    cumulative-return.threshold            5.5
+    cumulative-return.window               1
+    exponential-moving-average-price.asset SPY
+    exponential-moving-average-price.threshold SPY
+    moving-average-return.asset            SPY
+    moving-average-return.threshold        DBC
+    relative-strength-index.asset          BIL
+    relative-strength-index.threshold      IEF
+    standard-deviation-return.asset        DBC
+    standard-deviation-return.threshold    SPY
+
+  Role note: Named 'Risk Off, Falling Rates' — suggests this branch specifically targets a risk-off + falling rates regime. Signal stack is nearly identical to ms-006 (same 5 indicators, same thresholds) but the asset pool includes TMF, SPXS, VIXM, YCS, EUO, indicating explicit rate and currency overlays.
+
+── ms-009 — V0.2.1 | TCCC ? | Version A ──
+  Source:                          named
+  Assets:                          16 total
+    First 10:                      SH, TMV, TMF, UCO, VIXM, ERX, TNA, UUP, EEM, GLD  (+6 more)
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            regime_router
+  Confidence:                      83%
+
+  Plain English:
+    If TQQQ cumulative return exceeds 5.5% AND SPY is above its EMA 
+    AND RSI(BIL) > RSI(IEF) AND SPY moving-average-return > DBC AND 
+    DBC std-dev < SPY std-dev, hold bull assets (ERX, TNA, etc.); 
+    otherwise hold defensive/inverse assets (SH, TMV, TMF, VIXM). 
+
+  Extractable pattern:
+    The unwindowed (default-period) version of the 5-signal regime 
+    gate serves as the structural prototype; adding explicit short 
+    windows (10-period RSI/MA) refines responsiveness without changing 
+    the fundamental routing logic. 
+
+  Regime tags:
+    bull_low_vol           effective    [inferred]
+    bear_sustained         effective    [inferred]
+    vix_spike              ineffective  [inferred]
+
+  No substitute: TMV
+    no_substitute: fixed income not in universe
+
+  Parameters:
+    cumulative-return.asset                TQQQ
+    cumulative-return.threshold            5.5
+    exponential-moving-average-price.asset SPY
+    exponential-moving-average-price.threshold SPY
+    moving-average-return.asset            SPY
+    moving-average-return.threshold        DBC
+    relative-strength-index.asset          BIL
+    relative-strength-index.threshold      IEF
+    standard-deviation-return.asset        DBC
+    standard-deviation-return.threshold    SPY
+
+  Role note: Structurally identical to ms-006 (same parameters, same 16-asset count, same sample assets including SH, TMV, TMF, UCO, VIXM, ERX, TNA, UUP). This appears to be an earlier version (V0.2.1) of the same routing logic with no window specifications, suggesting it is the prototype the later versions evolved from.
+
+── ms-010 — BWC Modified Madness ──
+  Source:                          named
+  Assets:                          32 total
+    First 10:                      EPI, VIXM, SPHB, ERX, TNA, EEM, TLT, EEMV, BTAL, SHY  (+22 more)
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            regime_router
+  Confidence:                      80%
+
+  Plain English:
+    If TQQQ 1-period cumulative return exceeds 5.5% AND SPY is above 
+    its 210-day EMA AND RSI(BIL,7) > RSI(IEF,7) AND IEF 10-period 
+    moving-average-return > SH AND DBC 20-period std-dev < SPY 
+    std-dev, hold risk-on assets (EPI, TNA, ERX, SPHB, SMH, etc.); 
+    otherwise hold defensive assets (TLT, BTAL, EEMV, VIXM, etc.). 
+
+  Extractable pattern:
+    Use a long 210-day EMA window for the SPY trend filter and a 
+    7-period RSI for the BIL/IEF comparison to create a slower, more 
+    deliberate regime gate that reduces false signals in sideways 
+    markets while managing a large diversified asset pool. 
+
+  Regime tags:
+    bull_low_vol           effective    [inferred]
+    bear_sustained         effective    [inferred]
+    sideways_chop          ineffective  [inferred]
+
+  No substitute: BTAL
+    no_substitute: managed futures category not in universe
+
+  Parameters:
+    cumulative-return.asset                TQQQ
+    cumulative-return.threshold            5.5
+    cumulative-return.window               1
+    exponential-moving-average-price.asset SPY
+    exponential-moving-average-price.threshold SPY
+    exponential-moving-average-price.window 210
+    moving-average-return.asset            IEF
+    moving-average-return.threshold        SH
+    moving-average-return.window           10
+    relative-strength-index.asset          BIL
+    relative-strength-index.threshold      IEF
+    relative-strength-index.window         7
+    standard-deviation-return.asset        DBC
+    standard-deviation-return.threshold    SPY
+    standard-deviation-return.window       20
+
+  Role note: Largest asset pool (32 assets) with explicit long EMA window (210-day) and std-dev window (20-day), RSI window of 7. Includes EEM, EEMV, TLT, BTAL — heavy EM and bond exposure. The 'Modified Madness' label and 32-asset count suggest a maximally diversified variant of the same 5-signal routing architecture.
+
+── ms-011 — B: If long term TLT is trending down, safety: Long Term, 2 Least Volatile* ──
+  Source:                          named
+  Assets:                          24 total
+    First 10:                      ERX, TNA, VIXM, SPHB, EEM, EEMV, BTAL, SHY, SMH, TYO  (+14 more)
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            regime_router
+  Confidence:                      78%
+
+  Plain English:
+    If IEF 10-day moving-average return is below SH threshold AND SPY 
+    is below its 210-day EMA AND BIL RSI(7) is below IEF AND TQQQ 
+    1-day cumulative return exceeds 5.5% AND DBC 20-day return std-dev 
+    exceeds SPY, hold the 2 least-volatile assets from the safety 
+    basket; otherwise route to risk-on holdings. 
+
+  Extractable pattern:
+    Use a multi-signal conjunction gate (bond-trend via IEF MA, 
+    equity-trend via SPY EMA, rate-stress via BIL RSI, momentum via 
+    TQQQ 5.5% cumulative return, commodity volatility vs SPY) to route 
+    into a minimum-volatility safety selection from the available 
+    asset basket. 
+
+  Regime tags:
+    bear_sustained         effective    [inferred]
+    vix_spike              effective    [inferred]
+    bull_low_vol           ineffective  [inferred]
+
+  No substitute: EEM,EEMV,BTAL,SHY,SPHB,SMH,ERX,TNA,UGL,SH
+    no_substitute: large multi-category OOU universe — EEM/EEMV are EM equity, BTAL is managed futures, SHY is fixed income, SPHB/SMH are sector ETFs with no direct in-universe analog; logic_only applies
+
+  Parameters:
+    cumulative-return.asset                TQQQ
+    cumulative-return.threshold            5.5
+    cumulative-return.window               1
+    exponential-moving-average-price.asset SPY
+    exponential-moving-average-price.threshold SPY
+    exponential-moving-average-price.window 210
+    moving-average-return.asset            IEF
+    moving-average-return.threshold        SH
+    moving-average-return.window           10
+    relative-strength-index.asset          BIL
+    relative-strength-index.threshold      IEF
+    relative-strength-index.window         7
+    standard-deviation-return.asset        DBC
+    standard-deviation-return.threshold    SPY
+    standard-deviation-return.window       20
+
+  Role note: Routes between risky and safety assets based on multiple regime signals: IEF moving-average trend, SPY EMA price trend, BIL RSI vs IEF, TQQQ cumulative return gate, and DBC volatility vs SPY. Safety branch selects 2 least-volatile assets from a 24-asset basket.
+
+── ms-012 — B.A.B: Risk Off, Falling Rates (TMF)* - LETF Basket ──
+  Source:                          named
+  Assets:                          17 total
+    First 10:                      TYO, EPI, TMF, SPXS, VIXM, SPHB, EWZ, UGL, QQQ, PSQ  (+7 more)
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            regime_router
+  Confidence:                      82%
+
+  Plain English:
+    If SPY is below its exponential moving average AND IEF 10-day 
+    moving-average return is below SH threshold AND TQQQ 1-day 
+    cumulative return exceeds 5.5% AND DBC return volatility exceeds 
+    SPY, hold the risk-off LETF basket (SPXS, TYO, TMF, VIXM); 
+    otherwise route to risk-on holdings. 
+
+  Extractable pattern:
+    Use the same multi-signal regime gate (SPY EMA, IEF MA-return vs 
+    SH, TQQQ 5.5% 1-day cumulative return, DBC volatility vs SPY) to 
+    activate a dedicated risk-off LETF basket including equity inverse 
+    and volatility assets. 
+
+  Regime tags:
+    bear_sustained         effective    [inferred]
+    vix_spike              effective    [inferred]
+    bull_low_vol           ineffective  [inferred]
+
+  No substitute: TYO,TMF,BTAL,SHY,SPHB,SMH,EPI,EWZ,UGL,PSQ
+    no_substitute: TYO and TMF are fixed income LETFs with no in-universe analog; BTAL is managed futures; SHY is fixed income; SPHB/SMH are sector ETFs; remaining EM/commodity ETFs have partial substitutes but overall structure is logic_only
+
+  Parameters:
+    cumulative-return.asset                TQQQ
+    cumulative-return.threshold            5.5
+    exponential-moving-average-price.asset SPY
+    exponential-moving-average-price.threshold SPY
+    moving-average-return.asset            IEF
+    moving-average-return.threshold        SH
+    moving-average-return.window           10
+    standard-deviation-return.asset        DBC
+    standard-deviation-return.threshold    SPY
+
+  Role note: Named 'Risk Off, Falling Rates' — routes into a leveraged bear/bond basket (SPXS, TYO, TMF, VIXM) when rate and equity regime signals align for risk-off conditions. Same core signal parameters as ms-011 appear here.
+
+── ms-013 — A.B: Medium term TLT may be overbought* ──
+  Source:                          named
+  Assets:                          21 total
+    First 10:                      ERX, SPHB, VIXM, BTAL, SHY, SMH, UCO, UGL, CURE, YCS  (+11 more)
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            regime_router
+  Confidence:                      72%
+
+  Plain English:
+    If SPY 5-day moving-average return exceeds DBC threshold AND SPY 
+    is above its EMA AND BIL RSI(7) is below IEF AND TQQQ 1-day 
+    cumulative return exceeds 5.5% AND DBC volatility exceeds SPY, 
+    hold the medium-term risk asset basket; otherwise route to safety 
+    assets. 
+
+  Extractable pattern:
+    Use SPY moving-average return benchmarked against a commodity ETF 
+    (DBC) as a cross-asset momentum signal to determine whether bond 
+    overbought conditions warrant a rotation into equity risk assets. 
+
+  Regime tags:
+    bull_low_vol           effective    [inferred]
+    sideways_chop          ineffective  [inferred]
+    bear_sustained         ineffective  [inferred]
+
+  No substitute: BTAL,SHY,UCO,TMV,SPHB,SMH,ERX,UGL,CURE,YCS
+    no_substitute: BTAL is managed futures; SHY and TMV are fixed income instruments; UCO is a commodity LETF; SPHB/SMH are sector ETFs; overall basket too OOU for substitution
+
+  Parameters:
+    cumulative-return.asset                TQQQ
+    cumulative-return.threshold            5.5
+    cumulative-return.window               1
+    exponential-moving-average-price.asset SPY
+    exponential-moving-average-price.threshold SPY
+    moving-average-return.asset            SPY
+    moving-average-return.threshold        DBC
+    moving-average-return.window           5
+    relative-strength-index.asset          BIL
+    relative-strength-index.threshold      IEF
+    standard-deviation-return.asset        DBC
+    standard-deviation-return.threshold    SPY
+
+  Role note: Named 'Medium term TLT may be overbought' — implies this branch activates when bond overbought conditions are detected, routing away from fixed income and into alternative risk assets. Uses SPY MA-return vs DBC as an additional signal variant.
+
+── ms-014 — FTLT or Safety Town ──
+  Source:                          named
+  Assets:                          9 total
+    Tickers:                       SVXY, TMF, VIXM, ERX, SPHB, USDU, QQQ, BTAL, SMH
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            crash_guard
+  Confidence:                      80%
+
+  Plain English:
+    If SPY RSI is below the XLU RSI threshold, exit to safety assets 
+    (VIXM, QQQ, BTAL); otherwise hold risk-on assets (SVXY, ERX, 
+    SPHB). 
+
+  Extractable pattern:
+    Use SPY RSI benchmarked against a defensive sector ETF (XLU) RSI 
+    as a relative-strength crash guard signal — when equities 
+    underperform defensives on RSI basis, rotate to safety holdings. 
+
+  Regime tags:
+    vix_spike              effective    [inferred]
+    bear_sustained         effective    [inferred]
+    bull_low_vol           ineffective  [inferred]
+
+  No substitute: TMF,USDU,BTAL,SPHB,SMH,ERX
+    no_substitute: TMF is fixed income LETF; USDU is a currency ETF; BTAL is managed futures; SPHB and SMH are sector ETFs with no direct in-universe analog; ERX has partial substitute but overall is logic_only
+
+  Parameters:
+    relative-strength-index.asset          SPY
+    relative-strength-index.threshold      XLU
+
+  Role note: Named 'FTLT or Safety Town' — FTLT likely means 'Follow the Leader Trend'; the RSI of SPY vs XLU (utilities, a defensive sector) is used as a risk-stress signal. When SPY RSI weakens relative to XLU RSI threshold, the strategy routes to 'Safety Town' holdings (VIXM, BTAL, QQQ defensively).
+
+── ms-015 — V3.0.4e | ?? Beta Baller + TCCC | Cleaned Up | 2011-10-04 ──
+  Source:                          named
+  Assets:                          15 total
+    Tickers:                       SH, TMV, TMF, UCO, VIXM, ERX, UUP, EEM, QQQ, PSQ, AGG, BIL, UPRO, SHY, SMH
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            regime_router
+  Confidence:                      85%
+
+  Plain English:
+    If TQQQ RSI exceeds 77 AND TLT current price is above TLT moving 
+    average AND SPY MA-return exceeds DBC AND SPY is above its EMA AND 
+    TQQQ 1-day cumulative return exceeds 5.5% AND TMV return 
+    volatility exceeds DBC, hold the primary risk-on basket; otherwise 
+    route to bear or safety assets. 
+
+  Extractable pattern:
+    Use TQQQ RSI overbought threshold (77) as a momentum exhaustion 
+    signal combined with TLT price-vs-MA bond trend confirmation and 
+    TQQQ 5.5% 1-day cumulative return gate to construct a 
+    comprehensive multi-regime routing decision tree. 
+
+  Regime tags:
+    bull_low_vol           effective    [inferred]
+    bear_sustained         effective    [inferred]
+    vix_spike              effective    [inferred]
+
+  No substitute: TMV,TMF,UCO,UUP,SMH,SH,ERX,PSQ,AGG
+    no_substitute: TMV/TMF are fixed income LETFs; UCO is commodity LETF; UUP is currency ETF; SMH is sector ETF; AGG is fixed income; SH/ERX/PSQ have partial in-universe substitutes but overall structure requires logic_only due to OOU signal assets (TLT, DBC, TMV)
+
+  Parameters:
+    cumulative-return.asset                TQQQ
+    cumulative-return.threshold            5.5
+    current-price.asset                    TLT
+    current-price.threshold                TLT
+    exponential-moving-average-price.asset SPY
+    exponential-moving-average-price.threshold SPY
+    moving-average-return.asset            SPY
+    moving-average-return.threshold        DBC
+    relative-strength-index.asset          TQQQ
+    relative-strength-index.threshold      77
+    standard-deviation-return.asset        TMV
+    standard-deviation-return.threshold    DBC
+
+  Role note: Version-tagged master strategy node combining multiple regime signals: TQQQ RSI with a fixed threshold of 77 (overbought), TLT current price vs TLT moving average (bond trend), SPY MA-return vs DBC, SPY EMA trend, TQQQ 5.5% cumulative return gate, and TMV volatility vs DBC. Routes across bull/bear/bond regimes.
+
+── ms-016 — V0.2.1 | TCCC Stop the Bleed | DJKeyhole | 1/2 of Momentum Mean Reversion ──
+  Source:                          named
+  Assets:                          30 total
+    First 10:                      EPI, VIXM, SPHB, ERX, TNA, EEM, BTAL, SHY, SMH, TYO  (+20 more)
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            regime_router
+  Confidence:                      82%
+
+  Plain English:
+    If TQQQ 1-day cumulative return > 5.5% AND SPY is above its EMA 
+    AND IEF moving-average-return > SH AND BIL RSI threshold vs IEF is 
+    met AND DBC std-dev < SPY, hold momentum-favored assets from the 
+    basket; otherwise route to defensive/safe-haven assets (SHY, BIL, 
+    BTAL). 
+
+  Extractable pattern:
+    Use a 5-layer conditional gate (TQQQ 1-day cumulative >5.5%, SPY 
+    EMA trend, IEF vs SH moving-average, BIL RSI vs IEF, DBC std-dev 
+    vs SPY) to route between risk-on and risk-off asset pools in a 
+    large multi-asset basket. 
+
+  Regime tags:
+    bull_low_vol           effective    [inferred]
+    bear_sustained         effective    [inferred]
+    vix_spike              ineffective  [inferred]
+
+  No substitute: EEM
+    no_substitute: broad EM equity ETF not in universe
+
+  Parameters:
+    cumulative-return.asset                TQQQ
+    cumulative-return.threshold            5.5
+    cumulative-return.window               1
+    exponential-moving-average-price.asset SPY
+    exponential-moving-average-price.threshold SPY
+    moving-average-return.asset            IEF
+    moving-average-return.threshold        SH
+    moving-average-return.window           10
+    relative-strength-index.asset          BIL
+    relative-strength-index.threshold      IEF
+    standard-deviation-return.asset        DBC
+    standard-deviation-return.threshold    SPY
+
+  Role note: Routes across a large multi-asset basket using layered RSI, moving-average, EMA, cumulative-return, and volatility filters to determine market regime before selecting from 30 assets.
+
+── ms-017 — Extended Frontrunner | TCCC Basic Logic ──
+  Source:                          named
+  Assets:                          13 total
+    Tickers:                       VWO, SH, TMV, BIL, TMF, VIXM, SSG, UUP, QQQ, PSQ, SPLV, UPRO, SMH
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            regime_router
+  Confidence:                      83%
+
+  Plain English:
+    If SPY max-drawdown < 10% AND SPY EMA > SPY price threshold AND 
+    SPY moving-average-return > DBC AND BIL RSI > IEF threshold AND 
+    UPRO cumulative-return > SPXU, hold bull-side assets (SMH, VWO); 
+    otherwise hold defensive assets (BIL, TMV, SH). 
+
+  Extractable pattern:
+    Use SPY max-drawdown threshold (10%) combined with UPRO vs SPXU 
+    relative cumulative-return comparison as a regime gate to 
+    distinguish bull from bear market conditions before routing to 
+    leveraged long or inverse positions. 
+
+  Regime tags:
+    bull_low_vol           effective    [inferred]
+    bear_sustained         effective    [inferred]
+    sideways_chop          ineffective  [inferred]
+
+  No substitute: TMF
+    no_substitute: fixed income not in universe
+
+  Parameters:
+    cumulative-return.asset                UPRO
+    cumulative-return.threshold            SPXU
+    exponential-moving-average-price.asset SPY
+    exponential-moving-average-price.threshold SPY
+    max-drawdown.asset                     SPY
+    max-drawdown.threshold                 0.1
+    moving-average-return.asset            SPY
+    moving-average-return.threshold        DBC
+    relative-strength-index.asset          BIL
+    relative-strength-index.threshold      IEF
+
+  Role note: Routes between bull and bear assets using SPY max-drawdown, EMA, moving-average, RSI, and UPRO vs SPXU cumulative-return comparisons to detect market regime.
+
+── ms-018 — B.A.B: Risk Off, Falling Rates (TMF)* - LETF Basket ──
+  Source:                          named
+  Assets:                          16 total
+    First 10:                      TYO, TMF, SPXS, VIXM, SPHB, EEMV, EEM, UGL, QQQ, PSQ  (+6 more)
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            regime_router
+  Confidence:                      85%
+
+  Plain English:
+    If SPY is below its 210-day EMA AND TQQQ 1-day cumulative return > 
+    5.5% signal triggers AND IEF 10-day moving-average-return > SH AND 
+    DBC 20-day std-dev < SPY, hold risk-off LETF assets (SPXS, VIXM, 
+    TYO, TMF); otherwise hold safer alternatives. 
+
+  Extractable pattern:
+    Use a 210-day SPY EMA as the primary bear-regime gate, then 
+    confirm with TQQQ 1-day >5.5% momentum pulse and IEF vs SH 
+    moving-average-return to qualify entry into an inverse/defensive 
+    LETF basket during falling-rate bear regimes. 
+
+  Regime tags:
+    bear_sustained         effective    [inferred]
+    vix_spike              effective    [inferred]
+    bull_low_vol           ineffective  [inferred]
+
+  No substitute: TYO
+    no_substitute: fixed income not in universe
+
+  Parameters:
+    cumulative-return.asset                TQQQ
+    cumulative-return.threshold            5.5
+    cumulative-return.window               1
+    exponential-moving-average-price.asset SPY
+    exponential-moving-average-price.threshold SPY
+    exponential-moving-average-price.window 210
+    moving-average-return.asset            IEF
+    moving-average-return.threshold        SH
+    moving-average-return.window           10
+    standard-deviation-return.asset        DBC
+    standard-deviation-return.threshold    SPY
+    standard-deviation-return.window       20
+
+  Role note: Risk-off LETF basket specifically designed for falling-rates / bear environments, using the same 5-signal filter stack (EMA-210, TQQQ 1-day cumulative, IEF moving-average, DBC std-dev) to gate entry into the defensive LETF basket.
+
+── ms-019 — Vegan TCCC Wrapper | Modded ──
+  Source:                          named
+  Assets:                          25 total
+    First 10:                      TLT, VIXM, ERX, TNA, EEM, SPHB, EEMV, BTAL, SHY, SMH  (+15 more)
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            regime_router
+  Confidence:                      88%
+
+  Plain English:
+    If SPY is above its 210-day EMA AND TQQQ 1-day return > 5.5% AND 
+    IEF 10-day moving-average-return > SH AND DBC 20-day std-dev < SPY 
+    AND BIL 7-day RSI > IEF, route to risk-on assets from the 25-asset 
+    pool; otherwise rotate to defensive holdings (BTAL, VIXM, 
+    SHY-equivalents). 
+
+  Extractable pattern:
+    The full 5-condition TCCC gate (SPY EMA-210, TQQQ 1-day cumulative 
+    >5.5%, IEF 10-day MA vs SH, DBC 20-day std-dev vs SPY, BIL 7-day 
+    RSI vs IEF) is the most complete regime-routing signal stack in 
+    this symphony and should be extracted as a reusable 
+    regime-detection module. 
+
+  Regime tags:
+    bull_low_vol           effective    [inferred]
+    bear_sustained         effective    [inferred]
+    vix_spike              effective    [inferred]
+
+  No substitute: BTAL
+    no_substitute: managed futures category not in universe
+
+  Parameters:
+    cumulative-return.asset                TQQQ
+    cumulative-return.threshold            5.5
+    cumulative-return.window               1
+    exponential-moving-average-price.asset SPY
+    exponential-moving-average-price.threshold SPY
+    exponential-moving-average-price.window 210
+    moving-average-return.asset            IEF
+    moving-average-return.threshold        SH
+    moving-average-return.window           10
+    relative-strength-index.asset          BIL
+    relative-strength-index.threshold      IEF
+    relative-strength-index.window         7
+    standard-deviation-return.asset        DBC
+    standard-deviation-return.threshold    SPY
+    standard-deviation-return.window       20
+
+  Role note: A 'Vegan TCCC' wrapper over a 25-asset pool using the most complete version of the shared 5-signal filter stack (EMA-210, TQQQ cumulative, IEF moving-average, DBC std-dev, BIL RSI window=7), implying the fullest expression of the TCCC regime-routing logic in this symphony.
+
+── ms-020 — A.B.B.B: Falling Rates (BIL) ──
+  Source:                          named
+  Assets:                          12 total
+    Tickers:                       SH, TMF, UCO, ERX, VIXM, UUP, QQQ, PSQ, BIL, UPRO, SHY, SMH
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            regime_router
+  Confidence:                      82%
+
+  Plain English:
+    If SPY is above its EMA AND TQQQ 1-day return > 5.5% AND SPY 
+    moving-average-return > DBC AND BIL RSI > IEF AND DBC std-dev < 
+    SPY, hold risk-on assets (QQQ, ERX, SMH); otherwise hold BIL or 
+    inverse positions (SH, PSQ). 
+
+  Extractable pattern:
+    In falling-rate regimes, use BIL as a safe-haven anchor while 
+    gating risk-on exposure via SPY EMA + TQQQ 1-day cumulative >5.5% 
+    + DBC volatility filter, creating an adaptive switch between 
+    leveraged sector exposure and cash-like safety. 
+
+  Regime tags:
+    bull_low_vol           effective    [inferred]
+    bear_sustained         effective    [inferred]
+    sideways_chop          ineffective  [inferred]
+
+  No substitute: TMF
+    no_substitute: fixed income not in universe
+
+  Parameters:
+    cumulative-return.asset                TQQQ
+    cumulative-return.threshold            5.5
+    exponential-moving-average-price.asset SPY
+    exponential-moving-average-price.threshold SPY
+    moving-average-return.asset            SPY
+    moving-average-return.threshold        DBC
+    relative-strength-index.asset          BIL
+    relative-strength-index.threshold      IEF
+    standard-deviation-return.asset        DBC
+    standard-deviation-return.threshold    SPY
+
+  Role note: Falling-rates specific sub-strategy using BIL as a safe-haven anchor, routing between risk assets and defensive positions using SPY EMA, TQQQ cumulative return, SPY moving-average vs DBC, BIL RSI vs IEF, and DBC std-dev vs SPY.
+
+── ms-021 — B.A.B: Falling Rates (TMF) ──
+  Source:                          named
+  Assets:                          10 total
+    Tickers:                       SH, TMF, VIXM, EEM, QQQ, PSQ, AGG, BIL, UPRO, SMH
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            regime_router
+  Confidence:                      78%
+
+  Plain English:
+    If SPY is above its EMA and TQQQ cumulative return exceeds 5.5% 
+    and SPY outperforms DBC on moving average return and BIL RSI is 
+    above IEF RSI, hold TMF or risk assets (EEM, QQQ); otherwise route 
+    to inverse or safe-haven assets (SH, PSQ, BIL) depending on 
+    sub-conditions. 
+
+  Extractable pattern:
+    Use a four-signal confluence gate (SPY EMA crossover + TQQQ 5.5% 
+    cumulative return + SPY vs DBC momentum + BIL/IEF RSI comparison) 
+    to route between bull, bear, and safe-haven allocations in a 
+    falling-rate regime context. 
+
+  Regime tags:
+    bull_low_vol           effective    [inferred]
+    bear_sustained         effective    [inferred]
+    vix_spike              ineffective  [inferred]
+
+  No substitute: TMF
+    no_substitute: fixed income not in universe
+
+  Parameters:
+    cumulative-return.asset                TQQQ
+    cumulative-return.threshold            5.5
+    exponential-moving-average-price.asset SPY
+    exponential-moving-average-price.threshold SPY
+    moving-average-return.asset            SPY
+    moving-average-return.threshold        DBC
+    relative-strength-index.asset          BIL
+    relative-strength-index.threshold      IEF
+    standard-deviation-return.asset        DBC
+    standard-deviation-return.threshold    SPY
+
+  Role note: Routes between falling-rate beneficiaries (TMF), inverse equity (SH, PSQ), and safe haven (BIL) based on multi-signal regime detection using SPY EMA, TQQQ cumulative return, SPY vs DBC moving average, and BIL RSI vs IEF.
+
+── ms-022 — Base 2 - FTLT or Bull or Bonds (UVXY) ──
+  Source:                          named
+  Assets:                          10 total
+    Tickers:                       SVXY, TMF, VIXM, SPHB, ERX, USDU, QQQ, PSQ, BTAL, SMH
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            regime_router
+  Confidence:                      75%
+
+  Plain English:
+    If SPY RSI is above XLU RSI and TQQQ cumulative return exceeds 
+    5.5%, hold SVXY or bull assets (QQQ, SPHB); otherwise route to 
+    inverse (PSQ), volatility (UVXY, VIXM), or alternative (BTAL, TMF) 
+    assets based on sub-conditions. 
+
+  Extractable pattern:
+    Use SPY RSI vs defensive sector (XLU) RSI as a risk-appetite 
+    signal combined with TQQQ 5.5% cumulative return gate to route 
+    between volatility-short, trend-following, and inverse equity 
+    positions. 
+
+  Regime tags:
+    bull_low_vol           effective    [inferred]
+    bear_sustained         effective    [inferred]
+    sideways_chop          ineffective  [inferred]
+
+  No substitute: BTAL
+    no_substitute: managed futures category not in universe
+
+  Parameters:
+    cumulative-return.asset                TQQQ
+    cumulative-return.threshold            5.5
+    relative-strength-index.asset          SPY
+    relative-strength-index.threshold      XLU
+
+  Role note: Routes between volatility-shorting (SVXY), trend-following alternatives (BTAL), and inverse/safe assets (PSQ, TMF, VIXM) based on SPY RSI vs XLU and TQQQ cumulative return threshold.
+
+── ms-023 — B.A.A: Rising Rates (TMV) ──
+  Source:                          named
+  Assets:                          12 total
+    Tickers:                       SH, TMV, UCO, ERX, TNA, VIXM, EEM, PSQ, QQQ, BIL, UPRO, SMH
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            regime_router
+  Confidence:                      80%
+
+  Plain English:
+    If SPY is above its EMA and TQQQ cumulative return exceeds 5.5% 
+    and SPY outperforms DBC on moving average and BIL RSI is above IEF 
+    and DBC standard deviation exceeds TMV's, hold TMV or 
+    commodity-linked leveraged assets (UCO, ERX, TNA); otherwise route 
+    to inverse (SH, PSQ) or safe haven (VIXM, BIL). 
+
+  Extractable pattern:
+    Pair rising-rate regime detection (SPY EMA + SPY/DBC momentum + 
+    volatility comparison of commodity vs rate instrument) with the 
+    recurring TQQQ 5.5% cumulative gate to select between leveraged 
+    commodity/sector longs and inverse equity fallbacks. 
+
+  Regime tags:
+    bull_low_vol           effective    [inferred]
+    bear_sustained         effective    [inferred]
+    vix_spike              ineffective  [inferred]
+
+  No substitute: TMV
+    no_substitute: fixed income not in universe
+
+  Parameters:
+    cumulative-return.asset                TQQQ
+    cumulative-return.threshold            5.5
+    exponential-moving-average-price.asset SPY
+    exponential-moving-average-price.threshold SPY
+    moving-average-return.asset            SPY
+    moving-average-return.threshold        DBC
+    relative-strength-index.asset          BIL
+    relative-strength-index.threshold      IEF
+    standard-deviation-return.asset        TMV
+    standard-deviation-return.threshold    DBC
+
+  Role note: Mirrors ms-021 in structure but routes toward rising-rate beneficiaries (TMV, UCO, ERX, TNA) instead of falling-rate assets; uses identical SPY EMA, TQQQ cumulative, and SPY vs DBC signals plus DBC vs TMV volatility comparison.
+
+── ms-024 — V4.0.0.3 | ?? Beta Baller + Modded TCCC  | Anansi + BWC + WHSmacon + HTX ──
+  Source:                          named
+  Assets:                          25 total
+    First 10:                      VIXM, TLT, ERX, TNA, EEM, SPHB, EEMV, BTAL, SHY, SMH  (+15 more)
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            regime_router
+  Confidence:                      82%
+
+  Plain English:
+    If BIL RSI (7-day) exceeds IEF RSI and IEF 10-day moving average 
+    return exceeds SH's and TQQQ 1-day cumulative return exceeds 5.5% 
+    and DBC 20-day standard deviation exceeds SPY's and SPY 210-day 
+    EMA is above SPY price, route to risk assets (ERX, TNA, SPHB, 
+    EEM); otherwise cascade through sub-conditions to BTAL, TLT, VIXM, 
+    or BIL. 
+
+  Extractable pattern:
+    Use a fully parameterized five-signal composite router (RSI 
+    window=7, MA window=10, cumulative window=1 threshold=5.5%, StdDev 
+    window=20, EMA window=210) as a meta-regime classifier that 
+    cascades through bull, commodity-vol, rate, and managed-futures 
+    allocations. 
+
+  Regime tags:
+    bull_low_vol           effective    [inferred]
+    bear_sustained         effective    [inferred]
+    vix_spike              effective    [inferred]
+
+  No substitute: BTAL
+    no_substitute: managed futures category not in universe
+
+  Parameters:
+    cumulative-return.asset                TQQQ
+    cumulative-return.threshold            5.5
+    cumulative-return.window               1
+    exponential-moving-average-price.asset SPY
+    exponential-moving-average-price.threshold SPY
+    exponential-moving-average-price.window 210
+    moving-average-return.asset            IEF
+    moving-average-return.threshold        SH
+    moving-average-return.window           10
+    relative-strength-index.asset          BIL
+    relative-strength-index.threshold      IEF
+    relative-strength-index.window         7
+    standard-deviation-return.asset        DBC
+    standard-deviation-return.threshold    SPY
+    standard-deviation-return.window       20
+
+  Role note: Master composite router combining all four signal types (RSI, moving-average return, cumulative return, standard deviation, and EMA) with explicit window parameters; routes across a 25-asset universe spanning international equity, managed futures, leveraged bull/bear, and volatility instruments.
+
+── ms-025 — Overbought S&P. Sell the rip. Buy volatility. ──
+  Source:                          named
+  Assets:                          1 total
+    Tickers:                       VIXM
+  In-universe:                     ✓ YES
+  Recomposable:                    full
+  Role:                            crash_guard
+  Confidence:                      91%
+
+  Plain English:
+    Unconditionally hold VIXM as a volatility hedge when the parent 
+    symphony routes to this branch on an overbought S&P signal. 
+
+  Extractable pattern:
+    Deploy VIXM as a single-asset unconditional terminal node when an 
+    overbought equity condition is detected upstream, converting 
+    parent-level RSI or momentum signals into a pure volatility-long 
+    position. 
+
+  Regime tags:
+    vix_spike              effective    [inferred]
+    bear_sustained         effective    [inferred]
+    bull_low_vol           ineffective  [inferred]
+
+  Role note: Single-asset unconditional hold of VIXM, acting as a crash/volatility hedge when the overbought S&P condition triggers this branch; the strategy name explicitly frames this as 'buy volatility' on S&P rip.
+
+── ms-026 — B.A.A: Risk Off, Rising Rates (TMV)* - LETF Basket^ ──
+  Source:                          named
+  Assets:                          17 total
+    First 10:                      SH, TMV, UCO, SPXS, ERX, TNA, VIXM, EEM, UGL, PSQ  (+7 more)
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            regime_router
+  Confidence:                      78%
+
+  Plain English:
+    If SPY is above its 210-day EMA AND BIL RSI(7) exceeds IEF AND 
+    TQQQ 1-day cumulative return exceeds 5.5% AND SH 5-day 
+    moving-avg-return exceeds STIP AND TMV 5-day std-dev exceeds DBC, 
+    route into the risk-off rising-rates LETF basket (SH, TMV, SPXS, 
+    etc.); otherwise hold safe assets. 
+
+  Extractable pattern:
+    Stack five independent regime signals (EMA trend, RSI cross, 
+    momentum gate, moving-avg-return cross, vol-regime cross) to gate 
+    entry into a risk-off leveraged basket, requiring all conditions 
+    to confirm before allocation. 
+
+  Regime tags:
+    bear_sustained         effective    [inferred]
+    vix_spike              effective    [inferred]
+    bull_low_vol           ineffective  [inferred]
+
+  No substitute: TMV
+    no_substitute: fixed income not in universe
+
+  Parameters:
+    cumulative-return.asset                TQQQ
+    cumulative-return.threshold            5.5
+    cumulative-return.window               1
+    exponential-moving-average-price.asset SPY
+    exponential-moving-average-price.threshold SPY
+    exponential-moving-average-price.window 210
+    moving-average-return.asset            SH
+    moving-average-return.threshold        STIP
+    moving-average-return.window           5
+    relative-strength-index.asset          BIL
+    relative-strength-index.threshold      IEF
+    relative-strength-index.window         7
+    standard-deviation-return.asset        TMV
+    standard-deviation-return.threshold    DBC
+    standard-deviation-return.window       5
+
+  Role note: Multi-signal regime detection routes between risk-off rising-rate assets and broader LETF basket based on SPY EMA trend, BIL RSI vs IEF, TQQQ momentum gate, and volatility comparisons
+
+── ms-027 — A.B.B.B: Falling Rates (TMF) ──
+  Source:                          named
+  Assets:                          14 total
+    Tickers:                       SH, TMF, UCO, ERX, VIXM, UUP, EEM, GLD, PSQ, QQQ, BIL, UPRO, SHY, SMH
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            regime_router
+  Confidence:                      76%
+
+  Plain English:
+    If SPY is above its EMA AND BIL RSI exceeds IEF AND TQQQ 
+    cumulative return exceeds 5.5% AND SPY moving-avg-return exceeds 
+    DBC AND DBC std-dev exceeds SPY, allocate to the falling-rates 
+    LETF basket (TMF, GLD, EEM, etc.); otherwise hold safe assets. 
+
+  Extractable pattern:
+    Use commodity (DBC) volatility relative to SPY as a macro-regime 
+    discriminator to distinguish falling-rate from rising-rate 
+    environments before routing into duration-sensitive leveraged 
+    positions. 
+
+  Regime tags:
+    bull_low_vol           effective    [inferred]
+    bear_sustained         ineffective  [inferred]
+    sideways_chop          ineffective  [inferred]
+
+  No substitute: TMF
+    no_substitute: fixed income not in universe
+
+  Parameters:
+    cumulative-return.asset                TQQQ
+    cumulative-return.threshold            5.5
+    exponential-moving-average-price.asset SPY
+    exponential-moving-average-price.threshold SPY
+    moving-average-return.asset            SPY
+    moving-average-return.threshold        DBC
+    relative-strength-index.asset          BIL
+    relative-strength-index.threshold      IEF
+    standard-deviation-return.asset        DBC
+    standard-deviation-return.threshold    SPY
+
+  Role note: Routes into a falling-rates basket (TMF, GLD, etc.) using the same multi-signal framework of SPY EMA, BIL RSI, TQQQ momentum gate, and DBC volatility comparison
+
+── ms-028 — FTLT or Safety Town ──
+  Source:                          named
+  Assets:                          9 total
+    Tickers:                       SVXY, TMF, VIXM, ERX, SPHB, USDU, QQQ, BTAL, SMH
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            crash_guard
+  Confidence:                      82%
+
+  Plain English:
+    If SPY RSI falls below XLU (utilities outperform on 
+    relative-strength basis, signaling defensive rotation), hold 
+    safety assets (VIXM, BTAL, QQQ); otherwise hold risk-on assets 
+    (SVXY, ERX, SPHB). 
+
+  Extractable pattern:
+    Use SPY RSI relative to a defensive sector benchmark 
+    (utilities/XLU) as a crash-guard trigger to pivot from leveraged 
+    risk-on assets to volatility-damping safe-haven holdings. 
+
+  Regime tags:
+    vix_spike              effective    [inferred]
+    bear_sustained         effective    [inferred]
+    bull_low_vol           ineffective  [inferred]
+
+  No substitute: BTAL
+    no_substitute: managed futures category not in universe
+
+  Parameters:
+    relative-strength-index.asset          SPY
+    relative-strength-index.threshold      XLU
+
+  Role note: SPY RSI(window unspecified) vs XLU as a defensive trigger; routes between risk assets (SVXY, ERX) and safety assets (VIXM, BTAL, QQQ) — name 'FTLT or Safety Town' confirms explicit crash-guard intent
+
+── ms-029 — B.A.B: Falling Rates (TMF) ──
+  Source:                          named
+  Assets:                          11 total
+    Tickers:                       SH, TMV, TMF, VIXM, TNA, EEM, QQQ, PSQ, BIL, UPRO, SMH
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            regime_router
+  Confidence:                      77%
+
+  Plain English:
+    If SPY is above its EMA AND TQQQ 1-day return exceeds 5.5% AND SPY 
+    moving-avg-return exceeds DBC AND BIL RSI exceeds IEF AND DBC 
+    std-dev exceeds SPY, allocate to the falling-rates basket (TMF, 
+    QQQ); otherwise route to rising-rates / inverse basket (TMV, SH, 
+    PSQ, EEM). 
+
+  Extractable pattern:
+    Combine commodity volatility vs equity volatility comparison with 
+    a TQQQ momentum gate and BIL/IEF RSI cross to distinguish 
+    falling-rate from rising-rate regimes and route between 
+    duration-opposite leveraged instruments. 
+
+  Regime tags:
+    bull_low_vol           effective    [inferred]
+    bear_sustained         effective    [inferred]
+    sideways_chop          ineffective  [inferred]
+
+  No substitute: TMF
+    no_substitute: fixed income not in universe
+
+  Parameters:
+    cumulative-return.asset                TQQQ
+    cumulative-return.threshold            5.5
+    exponential-moving-average-price.asset SPY
+    exponential-moving-average-price.threshold SPY
+    moving-average-return.asset            SPY
+    moving-average-return.threshold        DBC
+    relative-strength-index.asset          BIL
+    relative-strength-index.threshold      IEF
+    standard-deviation-return.asset        DBC
+    standard-deviation-return.threshold    SPY
+
+  Role note: Routes between falling-rates assets (TMF) and inverse/bear assets (TMV, SH, PSQ) using the same five-signal framework, distinguishing rate direction within a risk-off context
+
+── ms-030 — B.A.A: Risk Off, Rising Rates (TMV)* - LETF Basket^ ──
+  Source:                          named
+  Assets:                          20 total
+    First 10:                      EPI, ERX, TNA, VIXM, EEM, BTAL, SMH, UCO, UGL, EFA  (+10 more)
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            regime_router
+  Confidence:                      76%
+
+  Plain English:
+    If SPY is above its EMA AND BIL RSI exceeds IEF AND TQQQ 
+    cumulative return exceeds 5.5% AND SH 5-day moving-avg-return 
+    exceeds STIP AND TMV 5-day std-dev exceeds DBC, allocate to the 
+    expanded risk-off rising-rates LETF basket (ERX, TNA, EEM, EPI, 
+    SMH, UCO, etc.); otherwise hold safe assets. 
+
+  Extractable pattern:
+    Scale the same five-signal regime gate across a larger diversified 
+    LETF basket (including international and commodity leveraged ETFs) 
+    to capture broader risk-off rising-rate environments without 
+    concentrating in a single sector. 
+
+  Regime tags:
+    bear_sustained         effective    [inferred]
+    vix_spike              effective    [inferred]
+    bull_low_vol           ineffective  [inferred]
+
+  No substitute: BTAL
+    no_substitute: managed futures category not in universe
+
+  Parameters:
+    cumulative-return.asset                TQQQ
+    cumulative-return.threshold            5.5
+    exponential-moving-average-price.asset SPY
+    exponential-moving-average-price.threshold SPY
+    moving-average-return.asset            SH
+    moving-average-return.threshold        STIP
+    moving-average-return.window           5
+    relative-strength-index.asset          BIL
+    relative-strength-index.threshold      IEF
+    standard-deviation-return.asset        TMV
+    standard-deviation-return.threshold    DBC
+
+  Role note: Variant of ms-026 with a larger 20-asset basket including international (EEM, EFA, EPI) and commodity (UCO) exposures; identical five-signal logic gates the risk-off rising-rates allocation
+
+── ms-031 — Beta Baller + TCCC | Modded ──
+  Source:                          named
+  Assets:                          25 total
+    First 10:                      TLT, VIXM, ERX, TNA, EEM, SPHB, EEMV, BTAL, SHY, SMH  (+15 more)
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            regime_router
+  Confidence:                      78%
+
+  Plain English:
+    If SPY is above its 210-period EMA and TQQQ 1-day cumulative 
+    return exceeds 5.5% and BIL RSI is above IEF and IEF 10-period MA 
+    return exceeds SH and DBC std-dev return is below SPY, hold 
+    high-beta/risk assets; otherwise rotate toward safer or inverse 
+    positions. 
+
+  Extractable pattern:
+    Stack five independent regime signals (RSI cross, MA return cross, 
+    1-day cumulative return threshold, volatility comparison, 
+    long-term EMA price trend) to gate entry into high-beta assets, 
+    requiring multi-condition alignment before risk-on exposure. 
+
+  Regime tags:
+    bull_low_vol           effective    [inferred]
+    bear_sustained         effective    [inferred]
+    vix_spike              ineffective  [inferred]
+
+  No substitute: TLT
+    no_substitute: fixed income not in universe
+
+  Parameters:
+    cumulative-return.asset                TQQQ
+    cumulative-return.threshold            5.5
+    cumulative-return.window               1
+    exponential-moving-average-price.asset SPY
+    exponential-moving-average-price.threshold SPY
+    exponential-moving-average-price.window 210
+    moving-average-return.asset            IEF
+    moving-average-return.threshold        SH
+    moving-average-return.window           10
+    relative-strength-index.asset          BIL
+    relative-strength-index.threshold      IEF
+    relative-strength-index.window         7
+    standard-deviation-return.asset        DBC
+    standard-deviation-return.threshold    SPY
+    standard-deviation-return.window       20
+
+  Role note: Multi-signal regime router using RSI on BIL vs IEF, moving average return on IEF vs SH, TQQQ cumulative return threshold, DBC volatility vs SPY, and SPY EMA210 trend — routes across a large 25-asset universe based on composite market state
+
+── ms-032 — B.A.A: Rising Rates (TMV) ──
+  Source:                          named
+  Assets:                          9 total
+    Tickers:                       TMV, UCO, VIXM, EEM, QQQ, PSQ, BIL, UPRO, SMH
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            regime_router
+  Confidence:                      80%
+
+  Plain English:
+    If SPY is above its EMA and TQQQ RSI is below 77 and TQQQ 1-day 
+    return exceeds 5.5% and SPY MA return exceeds DBC and TMV std-dev 
+    is below DBC, hold risk-on assets like UPRO or QQQ; otherwise hold 
+    inverse/safe assets like PSQ or BIL. 
+
+  Extractable pattern:
+    Use TQQQ RSI threshold of 77 as an overbought gate combined with a 
+    5.5% cumulative return trigger to prevent chasing overextended 
+    momentum, pairing it with SPY EMA trend confirmation before 
+    entering leveraged bull positions. 
+
+  Regime tags:
+    bear_sustained         effective    [inferred]
+    bull_low_vol           effective    [inferred]
+    vix_spike              ineffective  [inferred]
+
+  No substitute: TMV
+    no_substitute: fixed income not in universe
+
+  Parameters:
+    cumulative-return.asset                TQQQ
+    cumulative-return.threshold            5.5
+    exponential-moving-average-price.asset SPY
+    exponential-moving-average-price.threshold SPY
+    moving-average-return.asset            SPY
+    moving-average-return.threshold        DBC
+    relative-strength-index.asset          TQQQ
+    relative-strength-index.threshold      77
+    standard-deviation-return.asset        TMV
+    standard-deviation-return.threshold    DBC
+
+  Role note: Routes between rate-sensitive bear assets (TMV, inverse/commodity), neutral, and risk-on (UPRO, QQQ) based on SPY EMA trend, TQQQ RSI overbought threshold (77), TQQQ cumulative return gate, SPY MA return vs DBC, and TMV volatility vs DBC
+
+── ms-033 — B: If long term TLT is trending down, safety: Long Term, 2 Least Volatile* ──
+  Source:                          named
+  Assets:                          27 total
+    First 10:                      EPI, ERX, TNA, VIXM, SPHB, EEM, BTAL, SHY, SMH, TYO  (+17 more)
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            crash_guard
+  Confidence:                      82%
+
+  Plain English:
+    If IEF 10-period MA return is below SH and BIL RSI is below IEF 
+    and TQQQ 1-day cumulative return is below 5.5% and DBC std-dev 
+    return exceeds SPY and SPY is below its EMA, rotate into the 2 
+    least volatile assets from the candidate universe as a safety 
+    hold. 
+
+  Extractable pattern:
+    When multiple risk-off signals align (bond trend breakdown, RSI 
+    deterioration, momentum failure, volatility spike), select the N 
+    least-volatile assets from the broader universe as a 
+    minimum-variance safety rotation rather than a fixed defensive 
+    ticker. 
+
+  Regime tags:
+    bear_sustained         effective    [inferred]
+    vix_spike              effective    [inferred]
+    bull_low_vol           ineffective  [inferred]
+
+  No substitute: SHY
+    no_substitute: fixed income not in universe
+
+  Parameters:
+    cumulative-return.asset                TQQQ
+    cumulative-return.threshold            5.5
+    exponential-moving-average-price.asset SPY
+    exponential-moving-average-price.threshold SPY
+    moving-average-return.asset            IEF
+    moving-average-return.threshold        SH
+    moving-average-return.window           10
+    relative-strength-index.asset          BIL
+    relative-strength-index.threshold      IEF
+    standard-deviation-return.asset        DBC
+    standard-deviation-return.threshold    SPY
+
+  Role note: Explicitly named as a safety branch triggered when long-term TLT is trending down; selects the 2 least volatile assets from a 27-asset universe using IEF MA return vs SH, BIL RSI vs IEF, TQQQ cumulative return, DBC std-dev vs SPY, and SPY EMA210 as layered exit conditions
+
+── ms-034 — V0.2.1 | TCCC ? ──
+  Source:                          named
+  Assets:                          15 total
+    Tickers:                       SH, TMV, TMF, UCO, ERX, VIXM, UUP, EEM, QQQ, PSQ, AGG, BIL, UPRO, SHY, SMH
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            regime_router
+  Confidence:                      79%
+
+  Plain English:
+    If TLT current price is above its TLT threshold and SPY is above 
+    its EMA and TQQQ 1-day return exceeds 5.5% and TQQQ RSI is below 
+    77 and SPY MA return exceeds DBC and TMV std-dev is below DBC, 
+    hold risk-on assets; otherwise hold inverse bond or defensive 
+    positions. 
+
+  Extractable pattern:
+    Incorporate a rates-regime signal (current price of a 
+    long-duration bond ETF vs its own moving average) as a primary 
+    gate before applying equity momentum and volatility filters, 
+    enabling separate bull/bear routing for rising-rate vs 
+    falling-rate environments. 
+
+  Regime tags:
+    bear_sustained         effective    [inferred]
+    bull_low_vol           effective    [inferred]
+    sideways_chop          ineffective  [inferred]
+
+  No substitute: TMF
+    no_substitute: fixed income not in universe
+
+  Parameters:
+    cumulative-return.asset                TQQQ
+    cumulative-return.threshold            5.5
+    current-price.asset                    TLT
+    current-price.threshold                TLT
+    exponential-moving-average-price.asset SPY
+    exponential-moving-average-price.threshold SPY
+    moving-average-return.asset            SPY
+    moving-average-return.threshold        DBC
+    relative-strength-index.asset          TQQQ
+    relative-strength-index.threshold      77
+    standard-deviation-return.asset        TMV
+    standard-deviation-return.threshold    DBC
+
+  Role note: Uses TLT current price vs TLT moving average as a rates regime signal alongside SPY EMA, TQQQ cumulative return, TQQQ RSI overbought (77), SPY MA return vs DBC, and TMV volatility vs DBC to route between inverse rate plays, commodities, and risk-on assets
+
+  Recomposability summary:
+    full=1  partial=0  logic_only=33
+
+============================================================
+PASS/FAIL CHECKLIST
+============================================================
+  ✓ PASS  ≥1 mini-strategy extracted
+  ✓ PASS  Round-trip verification passed
+  ✓ PASS  All have role (not unknown/missing)
+  ✓ PASS  All have plain_english
+  ✓ PASS  All have ≥1 regime tag
+  ✓ PASS  All have extractable_pattern
+  ✓ PASS  Claude parsed successfully
+
+  ══ ALL CHECKS PASSED ══
+

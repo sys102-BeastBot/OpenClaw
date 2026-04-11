@@ -1,0 +1,195 @@
+You are a senior quantitative strategy architect synthesizing research findings from 5 high-Sharpe Composer.trade symphonies into a definitive pattern library for an autonomous strategy generator.
+
+The generator produces Composer.trade symphony JSON using a locked universe of 19 tickers:
+  Volatility short: SVIX, SVXY
+  Volatility long:  UVXY, VIXM
+  Leveraged bull:   TQQQ, TECL, SOXL, SPXL, UPRO
+  Leveraged bear:   SQQQ, SOXS, SPXS, TECS
+  Safe haven:       BIL, SPY, QQQ
+
+Signal-only assets (usable in conditions but never held):
+  Bonds:    TLT, IEF, BND
+  Vol:      UVXY (dual role), VIXY
+  Credit:   IGIB, CORP, IEI
+  Equity:   QLD, UPRO, PSQ, QID
+
+Valid indicator functions: relative-strength-index, cumulative-return, moving-average-price, max-drawdown, standard-deviation-return, exponential-moving-average-price, moving-average-return, standard-deviation-price, current-price
+
+The 5 symphonies analyzed (all 7/7 checks passed):
+  FNGG Extended OOS Outliers:    Sharpe 4.08, 55 mini-strategies
+  Sisyphus V0.0:                 Sharpe 4.47 avg, 21 mini-strategies  
+  Beta Baller:                   Sharpe 4.06 (short OOS), 21 mini-strategies
+  NOVA Best Leverage Mashup:     Sharpe 4.48, 10 mini-strategies
+  v2 Community Discovery NOVA:   Sharpe 3.46, 95 mini-strategies
+
+TOTAL CORPUS: 202 named mini-strategies extracted across 5 symphonies.
+
+---
+CROSS-SYMPHONY CONFIRMED PARAMETERS (appearing in 3+ symphonies):
+
+TQQQ cumulative-return threshold 5.5%:
+  FNGG: 11+ mini-strategies | Sisyphus: ms-009, ms-010 | Beta Baller: ms-002-007 | NOVA Best: ms-001 | v2: ms-005
+  Windows: 1-day (most common), 60-day (sustained trend version)
+  Variant: 6% appears in FNGG ms-041-044 and v2 ms-005 — deliberate ensemble diversity
+
+RSI window = 10:
+  All 5 symphonies, 40+ mini-strategies. Window 7 is confirmed fast variant. Window 25 appears once (NOVA ms-037). Never > 14 in this universe.
+
+SPY EMA(210) as long-term trend filter:
+  FNGG ms-022/024, Beta Baller ms-004/007, NOVA Best ms-001, NOVA Best ms-034/036/038
+  Always: current-price > EMA(210) = bull macro regime
+
+SVXY triple crash guard (RSI + 1-day return + drawdown):
+  FNGG ms-001/010/017/019/027/029 — SVXY RSI(10) < 31, SVXY 1-day return < -6%, TMF max-DD > 7%
+  These three conditions appear together as a compound crash-detection unit
+
+BIL RSI vs IEF (rate stress signal):
+  Beta Baller ms-003/004/005/007, NOVA Best ms-034/036, FNGG ms-046/050
+  Pattern: RSI(7-10) on BIL < RSI on IEF = rate stress incoming
+
+IEF MA-return vs SH (bond trend gate):
+  Beta Baller ms-003/004/007, NOVA Best ms-034/036, FNGG ms-022/024/046/050
+  Pattern: moving-average-return(10) on IEF > SH = bonds trending, safe to hold leveraged equities
+
+SPY std-dev-return(20) vs DBC (commodity vol filter):
+  Beta Baller ms-003/004/007, NOVA Best ms-034/036/038, FNGG ms-022/024
+  Pattern: SPY return volatility < DBC commodity volatility = macro stress elevated
+
+UVXY std-dev-return(10) > 10 (vol spike circuit breaker):
+  FNGG ms-008/010/040, Sisyphus (implicit), v2 ms-006
+  Pattern: 10-day return std-dev on UVXY > 10% = vol-spike regime active
+
+QQQ 70-day cumulative return < -15% (deep bear gate):
+  FNGG ms-011/012/015/023/039 — consistent bear-market circuit breaker
+  Most extreme lookback in corpus — catches sustained bear not just corrections
+
+SVXY RSI(10) > 31 (vol regime health check):
+  FNGG ms-017/019/027/029, Sisyphus ms-006 variant
+  Pattern: SVXY RSI above 31 = short-vol regime healthy, safe to allocate
+
+UVXY moving-average-return > VIXM (vol trend signal):
+  FNGG ms-010/040, Sisyphus implicit
+  Pattern: UVXY trending faster than VIXM = near-term spike vs sustained vol
+
+PSQ as dynamic RSI comparator:
+  All 5 symphonies — PSQ RSI used as a threshold, not a held asset
+  Confirms PSQ is a signal asset for measuring inverse-equity momentum pressure
+
+TECS + SOXS + SQQQ as short basket:
+  FNGG: recurring named "SHORT GROUP" with exactly these three
+  Pattern: equal-weight these three for bear-regime allocation, not individual leveraged bears
+
+UVXY RSI > 84 (vol exhaustion exit):
+  Sisyphus ms-018 (BSC 2) — confirmed: when UVXY RSI exceeds 84, vol spike is exhausting
+  Exit vol positions into BIL at RSI 84, not before
+
+SPY MA(3) + EMA(210) dual-timeframe:
+  FNGG ms-010, NOVA Best ms-001 — both use very short MA(3) layered on EMA(210)
+  Short window confirms recent trend, long window confirms macro regime
+
+TQQQ -33% circuit breaker:
+  NOVA Best ms-033/035 — TQQQ 10-day cumulative return < -33% as extreme crash trigger
+  Distinct from 5.5% gate — this fires when crash is already severe
+
+invvol_window = 10:
+  FNGG ms-001/017/019/027/029, Sisyphus, Beta Baller — universal position-sizing window
+  Always wt-inverse-vol with window-days="10" for basket allocation
+
+---
+NEW PATTERNS FROM DEEPER EXTRACTION (not in previous patterns.json):
+
+SVXY RSI(10) < 31 as standalone crash signal:
+  Not just combined with return — RSI alone below 31 fires crash guard in multiple strategies
+  Recomposable: SVXY is in universe, IEF is signal asset
+
+UVXY moving-average-return(3) > VIXM as trending-vol signal:
+  Short 3-day MA on UVXY vs VIXM as threshold — UVXY trending faster than mid-term vol = spike incoming
+  Recomposable: both in universe
+
+Named LONG GROUP / SHORT GROUP architecture:
+  FNGG has explicit named buckets: LONG GROUP (SVIX) and SHORT GROUP (UVXY: TECS+SOXS+SQQQ)
+  Pattern: define terminal allocation buckets as named groups, activated by upstream routers
+  Recomposable: short group is TECS+SOXS+SQQQ — all in universe
+
+TQQQ price-vs-self (current-price.asset=TQQQ, threshold=TQQQ):
+  FNGG ms-022, Beta Baller ms-002, NOVA Best ms-038
+  This is a moving-average crossover encoded as current-price vs price threshold
+  Confirms TQQQ is in uptrend before entry
+
+BND RSI vs SPY (bond relative strength gate):
+  FNGG ms-041/042/044 with explicit RSI window=45 — longer window for sustained bond stress detection
+  Pattern: when bonds RSI > equity RSI, risk-off regime is solidifying
+
+---
+RECOMPOSABLE PATTERNS CONFIRMED IN-UNIVERSE:
+
+These patterns use ONLY generator-universe or signal-universe assets:
+1. TQQQ 5.5% 1-day gate + SPY EMA(210) — fully recomposable
+2. BIL RSI vs IEF (rate stress) — fully recomposable  
+3. SVXY RSI(10) < 31 + SVXY 1-day return < -6% (crash guard) — fully recomposable
+4. UVXY std-dev-return(10) > 10 (vol spike) — fully recomposable
+5. UVXY MA-return(3) > VIXM — fully recomposable
+6. TECS + SOXS + SQQQ short basket — fully recomposable
+7. UVXY RSI > 84 exit to BIL — fully recomposable
+8. SPY MA(3) + EMA(210) dual-timeframe — fully recomposable
+9. IEF MA-return(10) vs SH — recomposable (IEF in signal universe, SH not in universe but SHY available — use BIL as proxy)
+10. SPY std-dev-return(20) vs DBC — partially recomposable (DBC not in universe — use UVXY std-dev as commodity-stress proxy)
+
+---
+YOUR TASK:
+
+Produce a complete updated patterns.json with the following improvements:
+
+1. WINNING PATTERNS — update existing 11 patterns with:
+   - Higher confidence values where evidence now spans 5 symphonies
+   - Add `generator_instruction` field: a specific, actionable instruction to the Generator
+     (NOT a description of what it does — a direct instruction of HOW to use it)
+     Example good: "When building any leveraged bull branch, always include this as the innermost if-child condition before the asset leaf."
+     Example bad: "This pattern detects momentum."
+   - Add `confirmed_in_symphonies` field listing the actual symphony names
+   - Update `times_seen` to reflect 202 mini-strategy corpus
+
+2. Add NEW winning patterns for:
+   - SVXY Triple Crash Guard (RSI + 1-day return + drawdown compound)
+   - UVXY Moving Average Return vs VIXM Trending Signal
+   - TECS SOXS SQQQ Named Short Basket
+   - UVXY RSI > 84 Vol Exhaustion Exit
+   - SPY MA(3) + EMA(210) Dual-Timeframe Confirmation
+   - BND RSI vs SPY Long-Window Bond Stress (RSI window 45)
+   - TQQQ -33% Extreme Crash Circuit Breaker
+
+3. LOSING PATTERNS — add:
+   - Holding individual leveraged bears (SQQQ alone, TECS alone) instead of the confirmed short basket
+   - Using fixed RSI thresholds instead of dynamic cross-asset RSI comparisons
+   - Any pattern where bear ETFs appear without confirmed bearish signal
+
+4. GENERATOR INSTRUCTIONS — for each pattern, write the instruction as if talking to Claude:
+   Format: "Generator: [specific instruction]"
+   Must be implementable — reference specific node types, field names, asset names
+   Example: "Generator: In any if-child that routes to TQQQ, SOXL, TECL, SPXL, or UPRO, the immediately preceding if-child must contain TQQQ cumulative-return with threshold 5.5 and window 1. If it does not, add it."
+
+5. PARAMETER CONFIDENCE TABLE — produce a final ranked table of all confirmed parameters:
+   | Parameter | Value | Window | Appearances | Confidence | Source symphonies |
+   Include every confirmed prior from the corpus.
+
+Output format: complete valid JSON matching the patterns.json schema exactly.
+Schema requirements:
+  winning_patterns[]: id, name, category, times_seen, first_seen_generation(null), 
+    last_seen_generation(null), performance{avg_fitness_with(null), avg_fitness_without(null), 
+    fitness_boost(null), confidence}, applicability{archetypes, regimes_effective, 
+    regimes_less_effective, regime_note}, description, usage_note, generator_instruction(NEW),
+    confirmed_in_symphonies(NEW), base_parameters{with _basis and _confidence meta-fields}, 
+    archetype_overrides{}, template{valid Composer JSON node}, 
+    lineage{source, derived_from[], first_strategy_id(null)}
+  losing_patterns[]: id, name, category, times_seen, confidence, description, 
+    why_it_fails, historical_evidence[], never_do, lineage{source, derived_from[]}
+
+Top-level: version("1.0"), last_updated(ISO), last_updated_generation(0), 
+  winning_patterns[], losing_patterns[]
+
+CRITICAL: 
+- Every template must be valid Composer JSON using only valid step types
+- generator_instruction must be actionable and specific, not descriptive
+- Confidence values must reflect 5-symphony evidence (not 3-symphony prior values)
+- Do not truncate — complete all patterns fully
+- Output ONLY the JSON object, no preamble, no explanation

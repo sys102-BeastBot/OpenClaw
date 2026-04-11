@@ -1,0 +1,183 @@
+{
+  "step": "root",
+  "name": "Four-Layer Semiconductor Regime Router",
+  "description": "R4 seed 6 \u2014 CONSISTENCY",
+  "rebalance": "daily",
+  "children": [
+    {
+      "step": "if",
+      "children": [
+        {
+          "step": "if-child",
+          "is-else-condition?": false,
+          "condition": {
+            "condition-type": "compound",
+            "operator": "all",
+            "conditions": [
+              {
+                "condition-type": "binary",
+                "lhs": {
+                  "fn": "relative-strength-index",
+                  "params": {
+                    "window": 14
+                  },
+                  "ticker": "UVXY"
+                },
+                "comparator": "gt",
+                "rhs": {
+                  "constant": 84
+                }
+              },
+              {
+                "condition-type": "binary",
+                "lhs": {
+                  "fn": "standard-deviation-return",
+                  "params": {
+                    "window": 10
+                  },
+                  "ticker": "SPY"
+                },
+                "comparator": "gt",
+                "rhs": {
+                  "constant": 8
+                }
+              }
+            ]
+          },
+          "lhs-fn": "relative-strength-index",
+          "lhs-window-days": "14",
+          "lhs-val": "UVXY",
+          "comparator": "gt",
+          "rhs-val": "84",
+          "rhs-fixed-value?": true,
+          "children": [
+            {
+              "step": "asset",
+              "ticker": "BIL",
+              "children": [],
+              "id": "3feb86fb-3cb4-459a-8274-4a5ce58a9def"
+            }
+          ],
+          "id": "9f092033-50ff-4f95-bb46-7356b1c7e1e1"
+        },
+        {
+          "step": "if-child",
+          "is-else-condition?": true,
+          "children": [
+            {
+              "step": "if",
+              "children": [
+                {
+                  "step": "if-child",
+                  "is-else-condition?": false,
+                  "lhs-fn": "cumulative-return",
+                  "lhs-fn-params": {
+                    "window-days": 5
+                  },
+                  "lhs-val": "UVXY",
+                  "comparator": "lt",
+                  "rhs-val": "-12",
+                  "rhs-fixed-value?": true,
+                  "children": [
+                    {
+                      "step": "if",
+                      "children": [
+                        {
+                          "step": "if-child",
+                          "is-else-condition?": false,
+                          "lhs-fn": "moving-average-price",
+                          "lhs-fn-params": {
+                            "window-days": 150
+                          },
+                          "lhs-val": "QQQ",
+                          "comparator": "gt",
+                          "rhs-val": "QQQ",
+                          "rhs-fixed-value?": false,
+                          "children": [
+                            {
+                              "step": "if",
+                              "children": [
+                                {
+                                  "step": "if-child",
+                                  "is-else-condition?": false,
+                                  "lhs-fn": "cumulative-return",
+                                  "lhs-fn-params": {
+                                    "window-days": 3
+                                  },
+                                  "lhs-val": "SOXL",
+                                  "comparator": "gt",
+                                  "rhs-val": "8",
+                                  "rhs-fixed-value?": true,
+                                  "children": [
+                                    {
+                                      "step": "asset",
+                                      "ticker": "SOXL",
+                                      "children": [],
+                                      "id": "6702c73d-50f7-4423-a815-046fb98981cb"
+                                    }
+                                  ],
+                                  "id": "e09697e4-31ea-4b5f-9d63-dd59ee308885"
+                                },
+                                {
+                                  "step": "if-child",
+                                  "is-else-condition?": true,
+                                  "children": [
+                                    {
+                                      "step": "asset",
+                                      "ticker": "QQQ",
+                                      "children": [],
+                                      "id": "31e0770d-f049-453d-9ec1-489cf2e6b9c3"
+                                    }
+                                  ],
+                                  "id": "3192bcc8-a8ad-4a05-a316-dda9177824c0"
+                                }
+                              ],
+                              "id": "18cc22d1-5a1e-49b9-a4d1-a9c59f672976"
+                            }
+                          ],
+                          "id": "3f3d3e7c-8ff8-49e6-8718-bdd35e7e0ade"
+                        },
+                        {
+                          "step": "if-child",
+                          "is-else-condition?": true,
+                          "children": [
+                            {
+                              "step": "asset",
+                              "ticker": "SPY",
+                              "children": [],
+                              "id": "832fae5e-fc32-4838-abcd-9a66cf43fc96"
+                            }
+                          ],
+                          "id": "558989cf-3cc8-4250-b997-bb4786a5e2fc"
+                        }
+                      ],
+                      "id": "7e9e24cf-fe3f-4f4d-8041-206453f40910"
+                    }
+                  ],
+                  "id": "4229b869-7386-407a-a5df-ee738eec9ed3"
+                },
+                {
+                  "step": "if-child",
+                  "is-else-condition?": true,
+                  "children": [
+                    {
+                      "step": "asset",
+                      "ticker": "SPY",
+                      "children": [],
+                      "id": "f603c00e-4688-471d-b007-eed20c7467d2"
+                    }
+                  ],
+                  "id": "348a50db-9ba8-493a-a61d-077b9b79ca29"
+                }
+              ],
+              "id": "e67513d6-7d97-49c9-8544-5725a234f4b5"
+            }
+          ],
+          "id": "4b92f40d-211d-45b7-91e6-756485b80457"
+        }
+      ],
+      "id": "41b71cd6-066c-4110-aa1b-6f35a0a592ed"
+    }
+  ],
+  "id": "db261459-0b83-491f-afd1-772350118ecc"
+}

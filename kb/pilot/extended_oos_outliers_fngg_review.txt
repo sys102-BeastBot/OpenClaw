@@ -1,0 +1,2896 @@
+
+============================================================
+SYMPHONY REVIEW — 2026-04-07 21:59
+============================================================
+Symphony: Extended OOS Outliers FNGG (n9J6L8weCzu2vAUrMWnm)
+Sharpe: 4.08  CAGR: 0.0%  Max DD: 0.0%
+
+── EXTRACTION SUMMARY ──
+  Total mini-strategies:           55
+  Named groups:                    55
+  Structural:                      0
+  Compression ratio:               797.7x
+  Round-trip verified:             ✓ PASS
+  Claude parse success:            ✓ YES
+
+  Taxonomy notes:
+  [batch 1] Several recurring structural patterns appear across these 
+  mini-strategies: (1) TQQQ 5.5% cumulative-return threshold appears in 
+  both ms-003 and ms-004 as a momentum gate — likely a shared upstream 
+  condition. (2) TMF max-drawdown(10) > 7% appears in both ms-001 and 
+  ms-004 as a risk-off trigger — despite TMF being out-of-universe, this 
+  signal is a consistent architectural feature. (3) The symphony uses a 
+  layered guard architecture: ms-001 and ms-004 function as outer regime 
+  guards, while ms-003 and ms-005 handle inner rotational selection. 
+  ms-002 appears to be a pure bear-routing leaf node. The FNGG reference 
+  in the symphony name suggests FNGU/FNGD (3x FANG+) instruments are 
+  central to the intended exposure, yet most are out-of-universe. TQQQ 
+  serves as the primary in-universe proxy throughout. | [batch 2] This 
+  batch reveals a heavily engineered volatility-detection symphony. The 
+  5.5% TQQQ 1-day cumulative return threshold appears in ms-007 and 
+  ms-008 — a recurring momentum burst signal. UVXY 10-day standard 
+  deviation > 10% appears in ms-008 and ms-010 as a shared vol-regime 
+  circuit breaker. SPY MA(3) as a short-term trend confirmation appears 
+  in ms-007 (EMA 210 for trend) and ms-010. The 'Volmageddon' theme 
+  (ms-008, ms-010) indicates the symphony was designed to survive 
+  vol-crash events (e.g., Feb 2018, Feb 2020). ms-009 is structurally 
+  anomalous — it is a pure unconditional short basket with no internal 
+  logic, dependent entirely on upstream routing. The large asset counts 
+  in ms-007 (31) and ms-010 (57) reflect portfolio-level diversification 
+  attempts rather than signal complexity. Fixed income absence from the 
+  generator universe is the primary recomposability constraint across 
+  all five strategies. | [batch 3] This batch exhibits a dominant 
+  recurring triple-condition signal pattern shared identically across 
+  ms-011, ms-012, and ms-015: QQQ 70-day cumulative return < -15%, SPY 
+  current-price cross, and SQQQ RSI(10) < 31. This signal cluster 
+  appears to be the symphony's primary bear-market detection mechanism. 
+  Ms-013 is the only unconditional short sleeve. Ms-014 uses a distinct 
+  normal-market detection logic via TMF drawdown and BND RSI. Heavy 
+  out-of-universe asset presence (bonds, gold, currency, defensive 
+  sector ETFs) limits recomposability for ms-011 and ms-014 to 
+  logic_only. | [batch 4] ms-017 and ms-019 share identical parameter 
+  sets (SVXY RSI(10)<31, 1-day cumulative return <-6%, SVXY price 
+  threshold, 10-period invvol weighting) and nearly identical asset 
+  universes — ms-019 appears to be a conditional branch of ms-017 
+  triggered by a higher-order bond>equity regime filter. ms-020 is the 
+  pure bear/short leaf node that ms-017 and ms-019 route into. ms-018 
+  uses an unusual cross-asset signal (IEF RSI vs PSQ threshold) 
+  suggesting a bond-relative-to-equity momentum discriminator not seen 
+  elsewhere in the batch. SPXU in ms-018 has a clean SPXS substitute. 
+  FNGU and FNGD referenced in oou_summary are not in sample_assets but 
+  would map to TQQQ and SQQQ respectively. | [batch 5] ms-022 and ms-024 
+  share an almost identical four-parameter signal stack (SPY EMA210, 
+  TQQQ 1-day cumulative return >5.5%, IEF 10-day MA-return vs SH, DBC 
+  StdDev vs SPY), suggesting they are sibling strategies from the same 
+  parent framework ('Beta Baller' / 'B.A.B'). ms-021 (LONG GROUP SVIX) 
+  and ms-025 (SHORT GROUP UVXY) appear to be the terminal allocation 
+  legs of a broader conditional tree — one activated in bull/low-vol, 
+  the other in bear/crash regimes. ms-023 introduces an independent 
+  crash-guard logic using QQQ 70-day cumulative return and inverse-ETF 
+  RSI that is structurally distinct from the EMA-based routing in 
+  ms-022/ms-024. The 5.5% TQQQ 1-day cumulative return gate is a 
+  recurring momentum spike filter appearing in both ms-022 and ms-024. | 
+  [batch 6] ms-027 and ms-029 share identical parameter sets (SVXY 
+  RSI(10)>31, SVXY 1-day return>-6%, SVXY price self-comparison, 
+  invvol_window=10) and nearly identical asset universes — MAIN BASE 
+  (ms-029) appears to be the canonical version with ms-027 as a named 
+  variant. The TQQQ 5.5% cumulative-return threshold recurs in both 
+  ms-026 and ms-030, suggesting it is a symphony-wide momentum gate. 
+  SVXY RSI(10) thresholds appear as the primary volatility-regime signal 
+  across multiple sub-strategies. The symphony heavily uses UVXY as both 
+  a signal asset (standard deviation, moving average) and a holdable 
+  asset for crash protection. KMLM/FTLS managed futures in ms-028 create 
+  an irrecoverable substitution gap. ms-030's 41-asset universe with 32 
+  out-of-universe assets makes it logic_only by necessity. | [batch 7] 
+  This batch shows a consistent multi-signal cascading architecture: 
+  nearly every mini-strategy combines 3-4 independent signal types (RSI, 
+  cumulative return, max-drawdown, current price, standard deviation) 
+  before making a routing decision. The TQQQ 5.5% 1-day cumulative 
+  return threshold appears in both ms-032 and ms-033, suggesting it is a 
+  shared crash/spike detection parameter across the broader symphony. 
+  The TMF 10-day max-drawdown threshold of 7% appears in both ms-032 and 
+  ms-034, serving as a bond-stress proxy for equity regime detection. 
+  SVXY is used both as a signal source (RSI, price, cumulative return in 
+  ms-034) and as a held asset (ms-033), suggesting the symphony treats 
+  realized-vol ETFs as both a market state indicator and a return 
+  vehicle. The PSQ RSI signal appears in both ms-031 and ms-033 as an 
+  inverted-equity momentum proxy. Fixed income and managed futures 
+  substitution gaps (BTAL, GOVT, TLT, GLD, USDU) significantly constrain 
+  recomposability in ms-031 and ms-032. | [batch 8] This batch exhibits 
+  a consistent pattern of cross-asset signal stacking: PSQ RSI and IEF 
+  RSI appear as secondary market-stress filters across ms-036, ms-038, 
+  and ms-040, suggesting a shared signal layer in the parent symphony. 
+  UVXY is used both as a held asset (ms-037, ms-040) and as a signal 
+  source (ms-040), which is architecturally notable. The symphony 
+  appears to have distinct 'bull' and 'bear' sub-systems with ms-037 
+  acting as a dedicated short basket and ms-036/ms-038 toggling between 
+  sides. The 70-day -15% QQQ threshold in ms-039 is a strong structural 
+  anchor for deep bear regime detection. BTAL's absence from the 
+  in-universe substitution pool is a material gap for ms-036's 
+  anti-correlation hedge role. | [batch 9] This batch is dominated by 
+  variants of a single crash-guard pattern (ms-041, ms-042, ms-044) 
+  sharing the same 4-signal compound gate: BND RSI vs SPY, TQQQ 6% 
+  cumulative return, TMF 7% max-drawdown, and QQQ price check. The 
+  differences are parameter window specifications and asset tier count. 
+  BTAL appears in 4 of 5 mini-strategies as an out-of-universe 
+  managed-futures diversifier with no substitute. VIXY appears in 4 of 5 
+  and maps consistently to UVXY. ms-043 and ms-045 are genuinely 
+  distinct regimes (EM routing and long-term bond-trend routing 
+  respectively) but both are logic_only due to heavy out-of-universe 
+  asset counts. The 5.5% vs 6.0% TQQQ cumulative return threshold 
+  variation across strategies suggests deliberate parameter diversity 
+  for ensemble robustness. | [batch 10] This batch represents 
+  increasingly complex nested regime routers culminating in ms-050, 
+  which is the apparent master wrapper with 9+ simultaneous signals 
+  across 80 assets. The TQQQ 1-day cumulative return threshold of 5.5% 
+  appears in ms-046, ms-049, and ms-050 — a highly recurring gate. TMF 
+  max-drawdown(10) vs 7% appears in ms-049 and ms-050. IEF RSI vs PSQ 
+  appears in ms-047 and ms-050. IEF moving-average return(10) vs SH 
+  appears in ms-046 and ms-050. DBC stddev(20) vs SPY appears in ms-046 
+  and ms-050. SPY 210-day EMA appears in ms-046 and ms-050. The fixed 
+  income proxies (BND, IEF, TLT, TYO, TMF, GOVT) are pervasive as signal 
+  assets even though they are not in the generator universe — their RSI, 
+  MA, and drawdown values serve as macro regime indicators rather than 
+  as held positions. Ms-048 is anomalous with 32 individual stocks and 
+  no parameters — likely a simple equal-weight or inv-vol risk-on basket 
+  with no conditional logic. | [batch 11] This final batch (11/11) 
+  reveals the terminal structural layers of the symphony: named long and 
+  short groups (ms-054, ms-055) that serve as pre-defined allocation 
+  buckets activated by upstream regime routers (ms-052, ms-053). The 
+  UVXY Replacement (ms-051) is a crash-guard module substituting for 
+  direct VIX exposure. A recurring pattern across ms-052 and ms-053 is 
+  the TQQQ 1-day 5.5% cumulative return threshold used as a momentum 
+  gate — this appears across multiple batches and is a critical 
+  extractable signal. The heavy presence of out-of-universe bonds (SHY, 
+  TMF, IEF), commodities (UCO, DBC), and managed futures (BTAL) in 
+  ms-052 and ms-053 forces both to logic_only recomposability. The short 
+  group (ms-055) is the cleanest fully recomposable unit in this batch. 
+
+  Cross-strategy patterns:
+    • TQQQ cumulative-return threshold of 5.5% (1-day window) appears as a momentum gate in both ms-003 and ms-004
+    • TMF max-drawdown(10) > 7% appears as a risk-off trigger in both ms-001 and ms-004
+    • SPY and QQQ price/RSI comparisons used as secondary regime confirmation signals in ms-003, ms-004, and ms-005
+    • SVXY RSI and return signals used as volatility-regime sensors in ms-001, consistent with SVIX presence in ms-005
+    • Inverse-volatility (invvol) weighting used in ms-001 for basket allocation — structural pattern reusable with in-universe leveraged ETFs
+    • TQQQ 1-day cumulative return > 5.5% used as momentum burst gate in ms-007 and ms-008
+    • UVXY 10-day standard deviation threshold of 10% used as vol-regime circuit breaker in ms-008 and ms-010
+    • SPY moving average cross (short window) used as trend confirmation in ms-008 (MA-3) and ms-010 (MA-3)
+    • SVXY RSI and return signals used as volatility-selling regime monitor in ms-006 (SOXX RSI analog) and ms-010
+    • QQQ/SPY max-drawdown window (10-15 days) used as drawdown gate in ms-006 and ms-010
+    • IEF moving-average or RSI as a bond-stress cross-asset signal appearing in ms-006, ms-007, and ms-008 — despite IEF being out-of-universe
+    • Triple-condition bear gate appears in ms-011, ms-012, and ms-015: QQQ cumulative-return.window=70, threshold=-15%; SQQQ RSI window=10, threshold=31; SPY current-price cross — this is the symphony's core regime-detection fingerprint
+    • SQQQ RSI(10) < 31 used as oversold tech-inverse confirmation across ms-011, ms-012, ms-015 — signals extreme short-side exhaustion as a dip-buy or bear-protection trigger
+    • QQQ 70-day cumulative return threshold of -15% appears in ms-011, ms-012, and ms-015 as the primary drawdown severity gate
+    • TQQQ, SQQQ, SOXL appear as core holdings across ms-011, ms-012, ms-013, ms-015 — leveraged long/short tech and semiconductor are the primary instruments throughout the symphony
+    • SPY current-price cross used as secondary trend confirmation in ms-011, ms-012, ms-014, ms-015
+    • SVXY RSI(10) < 31 threshold appears in both ms-017 and ms-019 as a shared crash-detection signal
+    • SVXY 1-day cumulative return < -6% appears in both ms-017 and ms-019 as a shared vol-crash trigger
+    • 10-period inverse volatility weighting (invvol_window=10) is shared across ms-017 and ms-019
+    • SVXY price-vs-itself threshold (current-price.asset=SVXY, threshold=SVXY) appears in both ms-017 and ms-019 — likely a moving-average crossover on SVXY
+    • The short group (TECS, SOXS, SQQQ, UVXY) appears as sample assets in ms-017, ms-019, and ms-020 — it is the shared bear-leg destination across multiple routing strategies
+    • TQQQ 1-day cumulative-return threshold of 5.5% appears as a momentum gate in both ms-022 and ms-024
+    • SPY 210-day EMA price crossover used as primary trend filter in both ms-022 and ms-024
+    • IEF 10-day moving-average-return vs SH as a bond-vs-inverse-bond regime signal appears in both ms-022 and ms-024
+    • DBC 20-day standard-deviation-return vs SPY as a commodity volatility vs equity volatility signal appears in both ms-022 and ms-024
+    • UVXY appears in ms-021 (long group context), ms-022, ms-023, ms-024, and ms-025 — used both as a crash hedge and as a signal asset across the symphony
+    • ms-021 (LONG GROUP SVIX) and ms-025 (SHORT GROUP UVXY) form a complementary long/short pair likely activated by the same parent conditional
+    • TQQQ cumulative-return threshold of 5.5% (1-day window) appears in ms-026 and ms-030 as a shared momentum gate
+    • SVXY RSI(10) > 31 combined with SVXY 1-day return > -6% appears identically in ms-027 and ms-029
+    • UVXY is used as both a signal asset (std-dev, moving-average) and a tradable holding across ms-026, ms-027, ms-028, ms-029, and ms-030
+    • invvol_window=10 appears in both ms-027 and ms-029 as the position-sizing mechanism
+    • RSI window of 10 is the universal RSI lookback across all five mini-strategies
+    • SHV substituted by BIL appears in both ms-027 and ms-029 as the cash-equivalent anchor
+    • FNGU/FNGD pair (substitute TECL/TECS) appears in both ms-027 and ms-029 as the leveraged tech bull/bear axis
+    • TQQQ 1-day cumulative-return threshold of 5.5% appears as a crash/spike signal in both ms-032 and ms-033.
+    • TMF 10-day max-drawdown threshold of 7% is used as a bond-stress regime indicator in both ms-032 and ms-034.
+    • PSQ RSI threshold is used as an inverted-equity momentum proxy in both ms-031 and ms-033.
+    • 20-day inverse-volatility weighting window appears in both ms-031 and ms-035 for position sizing.
+    • 10-day RSI window appears in both ms-033 and ms-034.
+    • SVXY current-price and RSI signals are used as a vol-regime proxy in ms-034, consistent with SVXY's role as a tradeable asset in ms-033.
+    • QQQ current-price threshold is used as a bull/bear gate in both ms-031 and ms-032.
+    • PSQ RSI threshold (65 in ms-036, used as comparative benchmark in ms-038 and ms-040) appears as a recurring secondary stress filter across three mini-strategies
+    • IEF RSI vs PSQ cross-comparison appears identically in both ms-038 and ms-040 as a bond-market stress gate
+    • UVXY appears as both a held long-volatility asset (ms-037, ms-040) and as a signal generation source (ms-040), creating a dual role
+    • TQQQ price-vs-self comparison is used as a trend confirmation in ms-038, consistent with the 5.5% cumulative-return gate also in ms-038
+    • SOXL appears in ms-036 (bull asset) and ms-039 (bull asset), consistently representing the semiconductor leveraged bull position across sub-strategies
+    • SVIX appears in ms-039 as a routing destination, consistent with its presence in the broader symphony universe as a short-volatility instrument
+    • TQQQ cumulative-return threshold (6% in ms-041/042/043/044, 5.5% in ms-045) appears as a universal momentum gate across all 5 mini-strategies
+    • TMF max-drawdown threshold of 7% over 10-day window appears as a bond-stress signal in ms-041, ms-042, ms-043, ms-044
+    • BND RSI vs SPY as a relative bond-strength signal appears in ms-041, ms-042, ms-044 with RSI window=45 explicit in ms-042
+    • QQQ current-price self-comparison as a market-level filter appears in ms-041, ms-042, ms-044
+    • BTAL as out-of-universe managed-futures crash hedge appears alongside VIXY/UVXY in ms-041, ms-042, ms-043, ms-044 — consistent ensemble diversification intent
+    • SPY 210-period EMA as a long-term trend filter is structurally significant in ms-045 and consistent with the broader symphony's regime-detection theme
+    • TQQQ 1-day cumulative-return threshold of 5.5% used as momentum gate in ms-046, ms-049, ms-050
+    • TMF 10-day max-drawdown threshold of 7% used as rate-stress filter in ms-049 and ms-050
+    • IEF RSI(10) vs PSQ RSI as bond-vs-inverse-Nasdaq divergence signal in ms-047 and ms-050
+    • IEF moving-average return(10) vs SH as bond trend filter in ms-046 and ms-050
+    • DBC 20-day standard deviation vs SPY as commodity volatility filter in ms-046 and ms-050
+    • SPY 210-day exponential moving average as long-term trend anchor in ms-046 and ms-050
+    • Fixed income ETFs (IEF, BND, TLT, TMF) used exclusively as signal/threshold assets, not as held positions
+    • Inverse-volatility weighting (invvol_window=10) present in ms-050 as position-sizing mechanism
+    • TQQQ 1-day cumulative return > 5.5% appears as a momentum gate in ms-053 and likely in upstream batches — consistent high-frequency momentum trigger across the symphony
+    • Named LONG GROUP (ms-054) and SHORT GROUP (ms-055) are modular allocation buckets activated by regime routers (ms-052, ms-053), forming a consistent bull/bear switching architecture
+    • SPY EMA(210) appears as the primary long-term trend filter in ms-053 and SPY current-price threshold in ms-052 — both use SPY as the macro regime anchor
+    • BTAL appears in both ms-051 and ms-053 as an alternative risk hedge component, indicating a systematic managed-futures allocation layer throughout the symphony
+    • TECS + SOXS + SQQQ short basket recurs as the bear-regime allocation unit across multiple mini-strategies in this symphony
+
+============================================================
+MINI-STRATEGIES
+============================================================
+
+── ms-001 — Mean Rev ──
+  Source:                          named
+  Assets:                          14 total
+    Tickers:                       TECS, TQQQ, SOXS, SQQQ, VIXM, SOXL, SHV, UVXY, FNGU, SVXY, FNGD, UPRO, TECL, SPXS
+  In-universe:                     ✗ NO
+  Recomposable:                    partial
+  Role:                            crash_guard
+  Confidence:                      82%
+
+  Plain English:
+    If SVXY RSI(10) < 31, or SVXY 1-day cumulative return < -6%, or 
+    TMF max-drawdown(10) > 7%, exit to safety; otherwise allocate 
+    across leveraged tech/vol assets (TECS, TQQQ, SOXS, SQQQ, SOXL, 
+    UVXY, etc.) using inverse-volatility weighting. 
+
+  Extractable pattern:
+    Use a triple-condition crash guard (SVXY RSI < 31, SVXY 1-day 
+    return < -6%, TMF max-drawdown > 7%) to gate entry into leveraged 
+    positions, with inverse-volatility weighting across the held 
+    basket. 
+
+  Regime tags:
+    vix_spike              effective    [inferred]
+    bear_sustained         effective    [inferred]
+    bull_low_vol           ineffective  [inferred]
+
+  Substitute: SHV → BIL
+    SHV is a short-term Treasury bill ETF — BIL is the closest in-universe equivalent for cash/safe-haven allocation
+
+  Parameters:
+    cumulative-return.asset                SVXY
+    cumulative-return.threshold            -6
+    cumulative-return.window               1
+    current-price.asset                    SVXY
+    current-price.threshold                SVXY
+    invvol_window                          10
+    max-drawdown.asset                     TMF
+    max-drawdown.threshold                 7
+    max-drawdown.window                    10
+    relative-strength-index.asset          SVXY
+    relative-strength-index.threshold      31
+    relative-strength-index.window         10
+
+  Role note: Multi-signal guard using SVXY RSI, SVXY 1-day return, and TMF max-drawdown to detect volatility regime breaks before allocating across leveraged assets via inverse-vol weighting.
+
+── ms-002 — Volatility ──
+  Source:                          named
+  Assets:                          2 total
+    Tickers:                       VIXY, PSQ
+  In-universe:                     ✗ NO
+  Recomposable:                    partial
+  Role:                            regime_router
+  Confidence:                      72%
+
+  Plain English:
+    Hold VIXY (long volatility) or PSQ (inverse QQQ) based on an 
+    upstream regime condition not fully captured in extracted 
+    parameters. 
+
+  Extractable pattern:
+    Pair a long-volatility instrument with an inverse-equity 
+    instrument as a bear-market routing module, activated when 
+    upstream crash or regime signals trigger. 
+
+  Regime tags:
+    bear_sustained         effective    [inferred]
+    vix_spike              effective    [inferred]
+    bull_low_vol           ineffective  [inferred]
+
+  Substitute: VIXY → UVXY
+    VIXY is a long-volatility ETP — UVXY is the closest in-universe leveraged long-vol substitute; PSQ (inverse QQQ 1x) maps to SQQQ as the nearest in-universe inverse-tech instrument
+
+  Role note: Routes between inverse-equity (PSQ) and long-vol (VIXY) assets — both out-of-universe but with substitutes; no explicit signal parameters present, suggesting conditional routing logic exists upstream or in parent node.
+
+── ms-003 — MAIN STRATEGY ──
+  Source:                          named
+  Assets:                          37 total
+    First 10:                      TECS, SOXS, XOM, ADBE, TRV, HD, UVXY, V, AMGN, BRK/B  (+27 more)
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            asset_rotator
+  Confidence:                      78%
+
+  Plain English:
+    If TQQQ cumulative return exceeds 5.5% and TYO RSI crosses the QQQ 
+    threshold, rotate into the best-performing asset from a large 
+    mixed universe of leveraged ETFs and individual stocks; otherwise 
+    hold a defensive position. 
+
+  Extractable pattern:
+    Use TQQQ 5.5% cumulative-return threshold as a momentum gate 
+    before entering a broad rotational selection across leveraged and 
+    equity assets; treat the RSI of a rate-inverse ETF vs. an equity 
+    benchmark as a secondary regime filter. 
+
+  Regime tags:
+    bull_low_vol           effective    [inferred]
+    bear_sustained         ineffective  [inferred]
+    sideways_chop          ineffective  [inferred]
+
+  No substitute: TYO
+    no_substitute: fixed income not in universe
+
+  Parameters:
+    cumulative-return.asset                TQQQ
+    cumulative-return.threshold            5.5
+    relative-strength-index.asset          TYO
+    relative-strength-index.threshold      QQQ
+
+  Role note: Large 37-asset universe including individual stocks (ADBE, HD, V, XOM, TRV etc.) plus leveraged ETFs; uses TQQQ 5.5% cumulative-return and TYO RSI vs QQQ threshold as gating signals before rotating across the broad set.
+
+── ms-004 — Huge volatility ──
+  Source:                          named
+  Assets:                          16 total
+    First 10:                      GOVT, SOXS, TQQQ, TLT, SQQQ, XLB, XLV, SOXL, XLI, XLU  (+6 more)
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            regime_router
+  Confidence:                      85%
+
+  Plain English:
+    If TQQQ 1-day return > 5.5% and BND RSI(45) > SPY level and TMF 
+    max-drawdown(10) < 7% and QQQ price is above its own threshold, 
+    route to leveraged bull assets (TQQQ, SOXL); otherwise route to 
+    defensive or bear assets (SOXS, SQQQ, GOVT, TLT, sector ETFs, 
+    GLD). 
+
+  Extractable pattern:
+    Combine a TQQQ 1-day 5.5% momentum gate, a bond RSI vs equity 
+    benchmark cross, a leveraged-bond max-drawdown threshold, and a 
+    price-vs-price comparison on QQQ as a four-condition regime router 
+    to switch between leveraged bull and defensive/bear allocations. 
+
+  Regime tags:
+    bull_low_vol           effective    [inferred]
+    bear_sustained         effective    [inferred]
+    vix_spike              effective    [inferred]
+
+  No substitute: GOVT
+    no_substitute: fixed income not in universe
+
+  No substitute: TLT
+    no_substitute: fixed income not in universe
+
+  No substitute: GLD
+    no_substitute: commodity/gold ETF not in universe
+
+  No substitute: USDU
+    no_substitute: currency ETF not in universe
+
+  No substitute: XLB
+    XLB fills materials sector role — no direct in-universe substitute
+
+  No substitute: XLV
+    XLV fills healthcare sector role — no direct in-universe substitute
+
+  No substitute: XLI
+    XLI fills industrials sector role — no direct in-universe substitute
+
+  No substitute: BND
+    no_substitute: fixed income not in universe
+
+  No substitute: TMF
+    no_substitute: fixed income not in universe
+
+  Parameters:
+    cumulative-return.asset                TQQQ
+    cumulative-return.threshold            5.5
+    cumulative-return.window               1
+    current-price.asset                    QQQ
+    current-price.threshold                QQQ
+    max-drawdown.asset                     TMF
+    max-drawdown.threshold                 7
+    max-drawdown.window                    10
+    relative-strength-index.asset          BND
+    relative-strength-index.threshold      SPY
+    relative-strength-index.window         45
+
+  Role note: Routes between leveraged bull (TQQQ, SOXL), leveraged bear (SOXS, SQQQ), bonds (GOVT, TLT), sector ETFs (XLB, XLV, XLI), and gold (GLD) based on TQQQ momentum, BND RSI vs SPY, TMF max-drawdown, and QQQ price level — a comprehensive multi-signal regime switch.
+
+── ms-005 — Bull Market ──
+  Source:                          named
+  Assets:                          10 total
+    Tickers:                       TQQQ, TMF, BULZ, FNGU, UUP, XLP, VIXY, SVIX, SPLV, TECL
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            momentum_selector
+  Confidence:                      83%
+
+  Plain English:
+    If SPY RSI(60) > 60, hold leveraged bull assets (TQQQ, BULZ, FNGU, 
+    SVIX); otherwise rotate to defensive positions (XLP, SPLV, UUP, 
+    VIXY, TMF). 
+
+  Extractable pattern:
+    Use a long-window SPY RSI(60) > 60 threshold as a bull-market 
+    confirmation gate to switch between leveraged growth assets and a 
+    defensive basket of volatility, sector, and currency instruments. 
+
+  Regime tags:
+    bull_low_vol           effective    [inferred]
+    bear_sustained         ineffective  [inferred]
+    sideways_chop          ineffective  [inferred]
+
+  No substitute: TMF
+    no_substitute: fixed income not in universe
+
+  No substitute: UUP
+    no_substitute: currency ETF not in universe
+
+  No substitute: XLP
+    XLP fills consumer staples defensive sector role — no direct in-universe substitute
+
+  No substitute: SPLV
+    SPLV fills low-volatility equity defensive role — no direct in-universe substitute
+
+  Substitute: BULZ → TQQQ
+    BULZ is a 3x leveraged mega-cap tech ETF — TQQQ is the closest in-universe 3x tech-oriented substitute
+
+  Substitute: FNGU → TQQQ
+    FNGU is a 3x leveraged FANG+ ETF — TQQQ is the closest in-universe 3x tech-adjacent substitute
+
+  Substitute: VIXY → UVXY
+    VIXY is a long-volatility ETP — UVXY is the closest in-universe long-vol substitute
+
+  Parameters:
+    relative-strength-index.asset          SPY
+    relative-strength-index.threshold      60
+    relative-strength-index.window         60
+
+  Role note: Uses SPY RSI(60) > 60 as a bull-market confirmation signal to select among leveraged long (TQQQ, BULZ, FNGU), volatility (VIXY, SVIX), defensive sector (XLP, SPLV), and dollar (UUP) assets.
+
+── ms-006 — 60d BND vs 60d BIL ──
+  Source:                          named
+  Assets:                          10 total
+    Tickers:                       TQQQ, SOXL, GLD, TMF, PSQ, SVXY, VIXY, IEF, UUP, BIL
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            regime_router
+  Confidence:                      78%
+
+  Plain English:
+    If SOXX RSI(10) > 30 and BND 2-day return > 0% and QQQ 15-day max 
+    drawdown < 5%, hold leveraged long (TQQQ/SOXL); if volatility or 
+    bond signals deteriorate, rotate to defensive assets (GLD, IEF, 
+    SVXY); otherwise hold inverse/cash (PSQ, BIL). 
+
+  Extractable pattern:
+    Use a three-factor regime gate combining sector RSI threshold 
+    (RSI(10) < 30 as oversold signal on semis), bond short-term 
+    momentum (2-day BND return direction), and equity max-drawdown 
+    (QQQ 15-day < 5%) to route between leveraged long, defensive, and 
+    inverse positions. 
+
+  Regime tags:
+    bull_low_vol           effective    [inferred]
+    bear_sustained         effective    [inferred]
+    vix_spike              ineffective  [inferred]
+
+  No substitute: GLD
+    no_substitute: commodity/gold ETF not in universe
+
+  No substitute: TMF
+    no_substitute: fixed income not in universe
+
+  No substitute: IEF
+    no_substitute: fixed income not in universe
+
+  No substitute: UUP
+    no_substitute: currency ETF not in universe
+
+  Substitute: PSQ → SQQQ
+    PSQ is 1x inverse QQQ; SQQQ is 3x inverse QQQ — closest available inverse-QQQ proxy in universe
+
+  Substitute: VIXY → UVXY
+    VIXY is 1x long VIX; UVXY is 1.5x long VIX — closest available VIX long proxy in universe
+
+  Substitute: SOXX → SOXL
+    SOXX is the semiconductor index; SOXL tracks the same index with 3x leverage — sector signal proxy
+
+  Parameters:
+    cumulative-return.asset                BND
+    cumulative-return.threshold            0
+    cumulative-return.window               2
+    max-drawdown.asset                     QQQ
+    max-drawdown.threshold                 5
+    max-drawdown.window                    15
+    relative-strength-index.asset          SOXX
+    relative-strength-index.threshold      30
+    relative-strength-index.window         10
+
+  Role note: Routes between long/short and safe-haven assets based on RSI of SOXX, BND 2-day return, and QQQ max drawdown — a multi-signal regime gate
+
+── ms-007 — Vegan TCCC Wrapper | Modded ──
+  Source:                          named
+  Assets:                          31 total
+    First 10:                      TECS, SOXS, SPXL, UVXY, TQQQ, TYO, SQQQ, PUI, SOXL, EEMV  (+21 more)
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            regime_router
+  Confidence:                      75%
+
+  Plain English:
+    If SPY price > SPY EMA(210) and TQQQ 1-day return > 5.5% and IEF 
+    moving-average return exceeds SH and BIL RSI(7) > IEF RSI, hold 
+    aggressive leveraged longs (TQQQ, SPXL); if volatility regime (DBC 
+    std-dev vs SPY) signals stress, rotate to hedges (UVXY, SQQQ, 
+    TYO); otherwise hold defensive/cash assets. 
+
+  Extractable pattern:
+    Use TQQQ 1-day cumulative return > 5.5% as a momentum burst gate 
+    combined with SPY EMA(210) trend filter and cross-asset RSI 
+    comparison (BIL RSI vs IEF RSI) to distinguish bull momentum 
+    regimes from defensive rotation triggers. 
+
+  Regime tags:
+    bull_low_vol           effective    [inferred]
+    bear_sustained         effective    [inferred]
+    vix_spike              effective    [inferred]
+
+  No substitute: TYO
+    no_substitute: fixed income not in universe
+
+  No substitute: EEMV
+    no_substitute: EM low-vol equity ETF not in universe
+
+  No substitute: TMV
+    no_substitute: fixed income not in universe
+
+  No substitute: TLT
+    no_substitute: fixed income not in universe
+
+  No substitute: IEF
+    no_substitute: fixed income not in universe
+
+  No substitute: DBC
+    no_substitute: commodity basket ETF not in universe
+
+  Substitute: PUI → UPRO
+    PUI is a leveraged equity product; UPRO (3x SPX) is the closest leveraged long substitute
+
+  Substitute: SH → SPXS
+    SH is 1x inverse SPX; SPXS is 3x inverse SPX — closest available inverse-SPX proxy
+
+  Substitute: SPXU → SPXS
+    SPXU is 3x inverse SPX; SPXS is equivalent
+
+  Substitute: QLD → TQQQ
+    QLD is 2x QQQ; TQQQ is 3x QQQ — closest leveraged Nasdaq proxy in universe
+
+  Parameters:
+    cumulative-return.asset                TQQQ
+    cumulative-return.threshold            5.5
+    cumulative-return.window               1
+    exponential-moving-average-price.asset SPY
+    exponential-moving-average-price.threshold SPY
+    exponential-moving-average-price.window 210
+    moving-average-return.asset            IEF
+    moving-average-return.threshold        SH
+    moving-average-return.window           10
+    relative-strength-index.asset          BIL
+    relative-strength-index.threshold      IEF
+    relative-strength-index.window         7
+    standard-deviation-return.asset        DBC
+    standard-deviation-return.threshold    SPY
+    standard-deviation-return.window       20
+
+  Role note: Complex multi-signal router using IEF moving average, TQQQ 1-day return, SPY EMA(210), DBC volatility, and BIL RSI to select among a large universe of bull/bear/safe assets across 31 instruments
+
+── ms-008 — 200D Cross | Volmageddeon ──
+  Source:                          named
+  Assets:                          12 total
+    Tickers:                       TQQQ, SQQQ, UGL, TMF, SPXU, UVXY, VTI, UPRO, SVXY, VIXY, TECL, BIL
+  In-universe:                     ✗ NO
+  Recomposable:                    partial
+  Role:                            regime_router
+  Confidence:                      82%
+
+  Plain English:
+    If SPY current price > SPY MA(3) and SPY max drawdown > 0% 
+    threshold and TQQQ 1-day return > 5.5% and UVXY 10-day std dev < 
+    10%, hold leveraged longs (TQQQ, UPRO); if IEF RSI(10) exceeds PSQ 
+    RSI, rotate to bonds/defensive; otherwise hold inverse or vol 
+    assets (SQQQ, UVXY). 
+
+  Extractable pattern:
+    Combine SPY MA cross (short 3-day window) with UVXY 10-day 
+    standard deviation threshold (10%) and TQQQ 1-day return > 5.5% to 
+    gate leveraged long entries, using vol regime as a circuit breaker 
+    before committing to directional positions. 
+
+  Regime tags:
+    bull_low_vol           effective    [inferred]
+    vix_spike              effective    [inferred]
+    bear_sustained         effective    [inferred]
+
+  No substitute: TMF
+    no_substitute: fixed income not in universe
+
+  No substitute: IEF
+    no_substitute: fixed income not in universe
+
+  No substitute: UGL
+    no_substitute: leveraged gold ETF not in universe
+
+  Substitute: SPXU → SPXS
+    SPXU is 3x inverse SPX; SPXS is equivalent in universe
+
+  Substitute: VTI → SPY
+    VTI is total US market; SPY is S&P 500 — closest broad equity substitute
+
+  Substitute: PSQ → SQQQ
+    PSQ is 1x inverse QQQ; SQQQ is 3x inverse QQQ — closest inverse Nasdaq proxy
+
+  Substitute: VIXY → UVXY
+    VIXY is 1x VIX long; UVXY is 1.5x VIX long — closest VIX long proxy in universe
+
+  Parameters:
+    cumulative-return.asset                TQQQ
+    cumulative-return.threshold            5.5
+    current-price.asset                    SPY
+    current-price.threshold                SPY
+    max-drawdown.asset                     SPY
+    max-drawdown.threshold                 0
+    moving-average-price.asset             SPY
+    moving-average-price.threshold         SPY
+    moving-average-price.window            3
+    relative-strength-index.asset          IEF
+    relative-strength-index.threshold      PSQ
+    relative-strength-index.window         10
+    standard-deviation-return.asset        UVXY
+    standard-deviation-return.threshold    10
+    standard-deviation-return.window       10
+
+  Role note: Routes between leveraged long, inverse, and volatility assets using SPY 200-day MA cross, TQQQ 1-day return threshold, UVXY volatility standard deviation, and IEF RSI — the 'Volmageddon' label suggests acute vol-event sensitivity
+
+── ms-009 — SHORT GROUP (NO UVXY) ──
+  Source:                          named
+  Assets:                          3 total
+    Tickers:                       TECS, SOXS, SQQQ
+  In-universe:                     ✓ YES
+  Recomposable:                    full
+  Role:                            safe_haven
+  Confidence:                      80%
+
+  Plain English:
+    Unconditionally hold a basket of inverse leveraged ETFs (TECS, 
+    SOXS, SQQQ) as the designated short-side group with no internal 
+    signal logic. 
+
+  Extractable pattern:
+    Define a dedicated short group of inverse leveraged ETFs (TECS, 
+    SOXS, SQQQ) as an unconditional bear-regime allocation slot, 
+    activated by an upstream regime router rather than internal signal 
+    logic. 
+
+  Regime tags:
+    bear_sustained         effective    [inferred]
+    vix_spike              effective    [inferred]
+    bull_low_vol           ineffective  [inferred]
+
+  Role note: Pure bear-side basket holding only inverse/short leveraged ETFs (TECS, SOXS, SQQQ) — functions as the 'short group' allocation when crash/bear signals are active; analogous to a safe haven in a bear-regime context
+
+── ms-010 — V1 BWC: Unholy VIXation | Vol-Mageddon CB ──
+  Source:                          named
+  Assets:                          57 total
+    First 10:                      TECS, SOXS, XOM, ADBE, XLV, XLI, XLB, XLU, USDU, UVXY  (+47 more)
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            crash_guard
+  Confidence:                      88%
+
+  Plain English:
+    If TMF 10-day max drawdown > 7% or SVXY RSI(10) < 31 or SVXY 1-day 
+    return < -6% or UVXY 10-day std dev > 10% or UVXY moving-average 
+    return > VIXM, exit to defensive assets (TECS, SOXS, sector ETFs, 
+    individual stocks); otherwise hold volatility-selling or broad 
+    equity positions (SVXY, SPXL). 
+
+  Extractable pattern:
+    Use a multi-layer volatility crash-guard combining SVXY RSI(10) < 
+    31, SVXY 1-day return < -6%, UVXY 10-day std dev > 10%, and UVXY 
+    moving-average return vs VIXM as redundant trip-wires for 
+    vol-spike events, with SPY MA(3) as an equity trend confirmation 
+    layer. 
+
+  Regime tags:
+    vix_spike              effective    [inferred]
+    bear_sustained         effective    [inferred]
+    bull_low_vol           ineffective  [inferred]
+
+  No substitute: USDU
+    no_substitute: currency ETF not in universe
+
+  No substitute: GOVT
+    no_substitute: fixed income not in universe
+
+  No substitute: TYO
+    no_substitute: fixed income not in universe
+
+  No substitute: TLT
+    no_substitute: fixed income not in universe
+
+  No substitute: TMF
+    no_substitute: fixed income not in universe
+
+  No substitute: XLV
+    XLV fills healthcare sector role — no direct in-universe substitute
+
+  No substitute: XLI
+    XLI fills industrials sector role — no direct in-universe substitute
+
+  No substitute: XLB
+    XLB fills materials sector role — no direct in-universe substitute
+
+  No substitute: XOM
+    logic_only: large equity universe — extract RSI/momentum logic, not tickers
+
+  No substitute: ADBE
+    logic_only: large equity universe — extract RSI/momentum logic, not tickers
+
+  No substitute: V
+    logic_only: large equity universe — extract RSI/momentum logic, not tickers
+
+  Parameters:
+    cumulative-return.asset                SVXY
+    cumulative-return.threshold            -6
+    cumulative-return.window               1
+    current-price.asset                    SVXY
+    current-price.threshold                SVXY
+    invvol_window                          10
+    max-drawdown.asset                     TMF
+    max-drawdown.threshold                 7
+    max-drawdown.window                    10
+    moving-average-price.asset             SPY
+    moving-average-price.threshold         SPY
+    moving-average-price.window            3
+    moving-average-return.asset            UVXY
+    moving-average-return.threshold        VIXM
+    moving-average-return.window           3
+    relative-strength-index.asset          SVXY
+    relative-strength-index.threshold      31
+    relative-strength-index.window         10
+    standard-deviation-price.asset         UVXY
+    standard-deviation-price.threshold     UVXY
+    standard-deviation-price.window        5
+    standard-deviation-return.asset        UVXY
+    standard-deviation-return.threshold    10
+    standard-deviation-return.window       10
+
+  Role note: Highly complex crash-detection system monitoring SVXY drawdown, UVXY volatility std dev, SVXY RSI and 1-day return, and SPY MA to detect vol-crash events (Volmageddon-style); routes across 57 assets including sector ETFs and individual stocks when not in crash mode
+
+── ms-011 — BSC / Drop Those Pops Combo - Huge Volatility ──
+  Source:                          named
+  Assets:                          21 total
+    First 10:                      QID, SVIX, TQQQ, SQQQ, SOXL, PSQ, XLP, TMV, TECL, SMH  (+11 more)
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            regime_router
+  Confidence:                      82%
+
+  Plain English:
+    If QQQ 70-day cumulative return < -15% AND SPY is below its own 
+    price threshold AND SQQQ RSI(10) < 31, rotate into 
+    bear/volatility/short assets; otherwise hold bull or neutral 
+    assets. 
+
+  Extractable pattern:
+    Use a triple-condition gate (QQQ 70-day cumulative return < -15%, 
+    SPY price cross, SQQQ RSI(10) < 31) to identify deeply oversold 
+    bear regimes and route into short/volatility assets. 
+
+  Regime tags:
+    bear_sustained         effective    [inferred]
+    vix_spike              effective    [inferred]
+    bull_low_vol           ineffective  [inferred]
+
+  No substitute: TMV
+    no_substitute: fixed income not in universe
+
+  No substitute: SHY
+    no_substitute: fixed income not in universe
+
+  No substitute: TMF
+    no_substitute: fixed income not in universe
+
+  No substitute: UUP
+    no_substitute: currency ETF — no analog in generator universe
+
+  No substitute: XLP
+    XLP fills consumer staples defensive sector role — no direct in-universe substitute
+
+  Substitute: SMH → SOXL
+    SMH fills semiconductor sector role — SOXL is the leveraged semiconductor proxy in-universe
+
+  Substitute: SPLV → SPY
+    SPLV fills low-volatility equity role — SPY is the closest in-universe proxy
+
+  Substitute: QID → SQQQ
+    QID is 2x inverse QQQ — SQQQ is the 3x inverse QQQ available in-universe
+
+  Substitute: PSQ → SQQQ
+    PSQ is 1x inverse QQQ — SQQQ is the closest inverse QQQ in-universe
+
+  Substitute: BULZ → TQQQ
+    BULZ is leveraged tech bull — TQQQ is the closest in-universe equivalent
+
+  Substitute: DIA → SPY
+    DIA tracks Dow Jones — SPY is the broadest large-cap in-universe proxy
+
+  Parameters:
+    cumulative-return.asset                QQQ
+    cumulative-return.threshold            -15
+    cumulative-return.window               70
+    current-price.asset                    SPY
+    current-price.threshold                SPY
+    relative-strength-index.asset          SQQQ
+    relative-strength-index.threshold      31
+    relative-strength-index.window         10
+
+  Role note: Routes between bear/volatility assets and bull/recovery assets based on QQQ cumulative return, SPY price, and SQQQ RSI signals — complex multi-condition routing logic
+
+── ms-012 — Dip Buy Strategy ──
+  Source:                          named
+  Assets:                          13 total
+    Tickers:                       TQQQ, SQQQ, SOXL, DIA, PSQ, FNGU, SHY, UPRO, XLP, QQQ, TECL, SPY, SMH
+  In-universe:                     ✗ NO
+  Recomposable:                    partial
+  Role:                            regime_router
+  Confidence:                      85%
+
+  Plain English:
+    If SQQQ RSI(10) < 31 AND QQQ 70-day return < -15% AND SPY price is 
+    below its own threshold, enter dip-buy leveraged bull positions 
+    (TQQQ, SOXL, UPRO); otherwise hold inverse or safe assets. 
+
+  Extractable pattern:
+    Use SQQQ RSI(10) < 31 combined with QQQ 70-day return < -15% as a 
+    dip-buy confirmation signal to enter leveraged long 
+    (TQQQ/SOXL/UPRO) positions after extreme tech oversold conditions. 
+
+  Regime tags:
+    bear_sustained         effective    [inferred]
+    vix_spike              effective    [inferred]
+    bull_low_vol           ineffective  [inferred]
+
+  No substitute: SHY
+    no_substitute: fixed income not in universe
+
+  No substitute: XLP
+    XLP fills consumer staples defensive sector role — no direct in-universe substitute
+
+  Substitute: SMH → SOXL
+    SMH fills semiconductor sector role — SOXL is the leveraged semiconductor proxy in-universe
+
+  Substitute: DIA → SPY
+    DIA tracks Dow Jones — SPY is the broadest large-cap in-universe proxy
+
+  Substitute: PSQ → SQQQ
+    PSQ is 1x inverse QQQ — SQQQ is the closest inverse QQQ in-universe
+
+  Substitute: FNGU → TQQQ
+    FNGU is 3x leveraged tech/FAANG — TQQQ is the closest in-universe leveraged tech proxy
+
+  Parameters:
+    cumulative-return.asset                QQQ
+    cumulative-return.threshold            -15
+    cumulative-return.window               70
+    current-price.asset                    SPY
+    current-price.threshold                SPY
+    relative-strength-index.asset          SQQQ
+    relative-strength-index.threshold      31
+    relative-strength-index.window         10
+
+  Role note: Routes between leveraged bull and defensive/inverse assets using identical triple-condition signal as ms-011 but with fewer assets; 'Dip Buy' framing suggests bull re-entry after oversold dip confirmation
+
+── ms-013 — SHORT (Negative Beta -1 to -3) ──
+  Source:                          named
+  Assets:                          4 total
+    Tickers:                       TECS, SOXS, SQQQ, UVXY
+  In-universe:                     ✓ YES
+  Recomposable:                    full
+  Role:                            crash_guard
+  Confidence:                      80%
+
+  Plain English:
+    Unconditionally hold a basket of short/inverse assets (TECS, SOXS, 
+    SQQQ, UVXY) to profit from market declines and volatility spikes. 
+
+  Extractable pattern:
+    Maintain a dedicated negative-beta sleeve using a mix of 3x 
+    inverse sector ETFs (TECS, SOXS) and inverse index (SQQQ) plus 
+    volatility (UVXY) to provide crash protection across tech, 
+    semiconductors, and broad equity. 
+
+  Regime tags:
+    bear_sustained         effective    [inferred]
+    vix_spike              effective    [inferred]
+    bull_low_vol           ineffective  [inferred]
+
+  Role note: Holds a basket of negative-beta leveraged inverse and volatility assets; functions as a pure bear/crash exposure sleeve rather than a conditional guard
+
+── ms-014 — Normal market ──
+  Source:                          named
+  Assets:                          13 total
+    Tickers:                       GOVT, TQQQ, TLT, XLB, XLV, XLI, GLD, XLU, USDU, XLE, XLP, BTAL, XLRE
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            regime_router
+  Confidence:                      75%
+
+  Plain English:
+    If TMF 10-day max drawdown < 7% AND QQQ price is above its own 
+    threshold AND BND RSI(45) is above the SPY-referenced threshold, 
+    hold a diversified normal-market basket (TQQQ, sector ETFs, bonds, 
+    gold); otherwise exit. 
+
+  Extractable pattern:
+    Use TMF max-drawdown (10-day, <7%) as a bond-stress regime filter 
+    combined with QQQ price and BND RSI to confirm 'normal market' 
+    conditions before allocating to a diversified multi-asset basket. 
+
+  Regime tags:
+    bull_low_vol           effective    [inferred]
+    sideways_chop          effective    [inferred]
+    bear_sustained         ineffective  [inferred]
+
+  No substitute: GOVT
+    no_substitute: fixed income not in universe
+
+  No substitute: TLT
+    no_substitute: fixed income not in universe
+
+  No substitute: GLD
+    no_substitute: commodity/gold ETF — no analog in generator universe
+
+  No substitute: USDU
+    no_substitute: currency ETF — no analog in generator universe
+
+  No substitute: XLB
+    XLB fills materials sector role — no direct in-universe substitute
+
+  No substitute: XLV
+    XLV fills healthcare sector role — no direct in-universe substitute
+
+  No substitute: XLI
+    XLI fills industrials sector role — no direct in-universe substitute
+
+  No substitute: TMF
+    no_substitute: fixed income not in universe
+
+  No substitute: BND
+    no_substitute: fixed income not in universe
+
+  Parameters:
+    current-price.asset                    QQQ
+    current-price.threshold                QQQ
+    max-drawdown.asset                     TMF
+    max-drawdown.threshold                 7
+    max-drawdown.window                    10
+    relative-strength-index.asset          BND
+    relative-strength-index.threshold      SPY
+    relative-strength-index.window         45
+
+  Role note: Routes into a diversified 'normal market' asset mix (bonds, sectors, gold, equities) when TMF max-drawdown, QQQ price, and BND RSI conditions indicate stable market regime
+
+── ms-015 — Bear Market Sideways Protection ──
+  Source:                          named
+  Assets:                          9 total
+    Tickers:                       TQQQ, SQQQ, SOXL, DIA, PSQ, XLP, QQQ, SPY, SMH
+  In-universe:                     ✗ NO
+  Recomposable:                    partial
+  Role:                            crash_guard
+  Confidence:                      87%
+
+  Plain English:
+    If QQQ 70-day cumulative return < -15% AND SPY price is below its 
+    own threshold AND SQQQ RSI(10) < 31, hold bear-protection assets 
+    (SQQQ, PSQ, XLP, QQQ, SPY); otherwise hold bull assets. 
+
+  Extractable pattern:
+    Apply a triple-condition bear-market gate (QQQ 70-day < -15%, SPY 
+    price cross, SQQQ RSI(10) < 31) to shift into a sideways/bear 
+    protection sleeve combining inverse ETFs and low-beta equity. 
+
+  Regime tags:
+    bear_sustained         effective    [inferred]
+    sideways_chop          effective    [inferred]
+    bull_low_vol           ineffective  [inferred]
+
+  No substitute: XLP
+    XLP fills consumer staples defensive sector role — no direct in-universe substitute
+
+  Substitute: SMH → SOXL
+    SMH fills semiconductor sector role — SOXL is the leveraged semiconductor proxy in-universe
+
+  Substitute: DIA → SPY
+    DIA tracks Dow Jones — SPY is the broadest large-cap in-universe proxy
+
+  Substitute: PSQ → SQQQ
+    PSQ is 1x inverse QQQ — SQQQ is the closest inverse QQQ in-universe
+
+  Parameters:
+    cumulative-return.asset                QQQ
+    cumulative-return.threshold            -15
+    cumulative-return.window               70
+    current-price.asset                    SPY
+    current-price.threshold                SPY
+    relative-strength-index.asset          SQQQ
+    relative-strength-index.threshold      31
+    relative-strength-index.window         10
+
+  Role note: Activates bear/sideways protection assets when the same triple-condition signal (QQQ cumulative return, SPY price, SQQQ RSI) triggers; name explicitly indicates bear/sideways defensive posture
+
+── ms-016 — LONG (High Beta) ──
+  Source:                          named
+  Assets:                          5 total
+    Tickers:                       TQQQ, BULZ, FNGU, SVIX, TECL
+  In-universe:                     ✗ NO
+  Recomposable:                    partial
+  Role:                            asset_rotator
+  Confidence:                      78%
+
+  Plain English:
+    Hold a basket of high-beta long positions (TQQQ, BULZ, FNGU, SVIX, 
+    TECL) weighted by inverse volatility or equal weight to capture 
+    aggressive upside in risk-on environments. 
+
+  Extractable pattern:
+    Construct a high-beta long group using 3x leveraged tech and 
+    inverse-vol ETFs (TQQQ, TECL, SVIX) as the bullish leg of a 
+    regime-conditional rotator. 
+
+  Regime tags:
+    bull_low_vol           effective    [inferred]
+    bear_sustained         ineffective  [inferred]
+    vix_spike              ineffective  [inferred]
+
+  Substitute: BULZ → TECL
+    BULZ is a 3x mega-cap tech ETF — TECL is the closest in-universe 3x tech leveraged analog
+
+  Role note: Selects among high-beta long instruments including 3x leveraged tech and vol-suppression ETFs for maximum upside capture in bull regimes.
+
+── ms-017 — MAIN STRATEGY ──
+  Source:                          named
+  Assets:                          14 total
+    Tickers:                       TECS, SOXS, TQQQ, SQQQ, VIXM, SOXL, SHV, UVXY, FNGU, UPRO, SVXY, FNGD, TECL, SPXS
+  In-universe:                     ✗ NO
+  Recomposable:                    partial
+  Role:                            regime_router
+  Confidence:                      88%
+
+  Plain English:
+    If SVXY 1-day cumulative return is below -6% OR SVXY RSI(10) is 
+    below 31, route into bear/short instruments (TECS, SOXS, SQQQ, 
+    UVXY); otherwise route into bull instruments (TQQQ, SOXL, FNGU) or 
+    vol-suppression assets (SHV), weighted by 10-period inverse 
+    volatility. 
+
+  Extractable pattern:
+    Use SVXY 1-day return threshold of -6% and RSI(10) < 31 as dual 
+    crash-detection gates to flip from leveraged bull to leveraged 
+    bear instruments, with 10-period inverse-vol weighting across the 
+    selected group. 
+
+  Regime tags:
+    vix_spike              effective    [inferred]
+    bear_sustained         effective    [inferred]
+    bull_low_vol           effective    [inferred]
+
+  Substitute: SHV → BIL
+    SHV is an ultra-short Treasury ETF serving a cash/safe-haven role — BIL is the direct in-universe equivalent
+
+  Parameters:
+    cumulative-return.asset                SVXY
+    cumulative-return.threshold            -6
+    cumulative-return.window               1
+    current-price.asset                    SVXY
+    current-price.threshold                SVXY
+    invvol_window                          10
+    relative-strength-index.asset          SVXY
+    relative-strength-index.threshold      31
+    relative-strength-index.window         10
+
+  Role note: Routes across a 14-asset universe using SVXY cumulative return, RSI, and price-vs-moving-average signals to switch between bull, bear, and vol-suppression instruments. Inverse-vol weighting applied across selected instruments.
+
+── ms-018 — SVXY or SPXU ──
+  Source:                          named
+  Assets:                          2 total
+    Tickers:                       SVXY, SPXU
+  In-universe:                     ✗ NO
+  Recomposable:                    partial
+  Role:                            regime_router
+  Confidence:                      75%
+
+  Plain English:
+    If IEF RSI(10) is above the PSQ threshold, hold SVXY (long 
+    volatility suppression); otherwise hold SPXU (3x inverse S&P 500). 
+
+  Extractable pattern:
+    Use bond ETF RSI relative to an equity ETF price threshold as a 
+    cross-asset regime signal to toggle between a vol-suppression 
+    asset (SVXY) and an inverse equity ETF (SPXS). 
+
+  Regime tags:
+    bull_low_vol           effective    [inferred]
+    bear_sustained         effective    [inferred]
+    sideways_chop          ineffective  [inferred]
+
+  Substitute: SPXU → SPXS
+    SPXU is a 3x inverse S&P 500 ETF — SPXS is the direct in-universe equivalent
+
+  Parameters:
+    relative-strength-index.asset          IEF
+    relative-strength-index.threshold      PSQ
+    relative-strength-index.window         10
+
+  Role note: Routes between SVXY (long vol-suppression) and SPXU (3x inverse SPX) based on IEF RSI relative to PSQ threshold — a bond-vs-equity momentum signal used as regime discriminator.
+
+── ms-019 — Bond > Stock ──
+  Source:                          named
+  Assets:                          15 total
+    Tickers:                       TECS, SOXS, TQQQ, SQQQ, VIXM, SOXL, SHV, UVXY, FNGU, UPRO, SVXY, BIL, FNGD, TECL, SPXS
+  In-universe:                     ✗ NO
+  Recomposable:                    partial
+  Role:                            regime_router
+  Confidence:                      82%
+
+  Plain English:
+    When bonds are outperforming equities, apply the same SVXY-based 
+    routing logic: if SVXY 1-day return < -6% or SVXY RSI(10) < 31, 
+    shift to bear/short instruments; otherwise hold bull or cash 
+    instruments weighted by 10-period inverse volatility. 
+
+  Extractable pattern:
+    Nest SVXY crash-detection logic (1-day return < -6%, RSI(10) < 31) 
+    inside a higher-order bond-vs-equity regime condition so that bear 
+    routing only activates when both bond outperformance and vol 
+    stress signals align simultaneously. 
+
+  Regime tags:
+    bear_sustained         effective    [inferred]
+    vix_spike              effective    [inferred]
+    bull_low_vol           ineffective  [inferred]
+
+  Substitute: SHV → BIL
+    SHV serves a cash/near-risk-free role — BIL is the direct in-universe substitute
+
+  Parameters:
+    cumulative-return.asset                SVXY
+    cumulative-return.threshold            -6
+    cumulative-return.window               1
+    current-price.asset                    SVXY
+    current-price.threshold                SVXY
+    invvol_window                          10
+    relative-strength-index.asset          SVXY
+    relative-strength-index.threshold      31
+    relative-strength-index.window         10
+
+  Role note: Structurally near-identical to ms-017 (same SVXY RSI/cumulative-return/price parameters, same 14-15 asset universe, same invvol weighting), but named 'Bond > Stock' suggesting it activates when bond momentum exceeds equity momentum — likely a parent branch condition layer above ms-017.
+
+── ms-020 — SHORT GROUP (UVXY) ──
+  Source:                          named
+  Assets:                          4 total
+    Tickers:                       TECS, SOXS, SQQQ, UVXY
+  In-universe:                     ✓ YES
+  Recomposable:                    full
+  Role:                            crash_guard
+  Confidence:                      87%
+
+  Plain English:
+    Hold a basket of leveraged inverse and long-volatility instruments 
+    (TECS, SOXS, SQQQ, UVXY) to profit during market drawdowns, 
+    crashes, or sustained bear regimes. 
+
+  Extractable pattern:
+    Maintain a dedicated short/inverse group (TECS, SOXS, SQQQ, UVXY) 
+    as the crash-guard leg of a regime router, activated by vol-stress 
+    or momentum-failure signals on SVXY. 
+
+  Regime tags:
+    bear_sustained         effective    [inferred]
+    vix_spike              effective    [inferred]
+    bull_low_vol           ineffective  [inferred]
+
+  Role note: All-in-universe group of inverse and vol-long instruments (TECS, SOXS, SQQQ, UVXY) used as the defensive/short leg activated during risk-off or crash regimes.
+
+── ms-021 — LONG GROUP (SVIX) ──
+  Source:                          named
+  Assets:                          5 total
+    Tickers:                       TQQQ, BULZ, FNGU, SVIX, TECL
+  In-universe:                     ✗ NO
+  Recomposable:                    partial
+  Role:                            asset_rotator
+  Confidence:                      72%
+
+  Plain English:
+    Hold a basket drawn from leveraged tech and short-volatility 
+    assets (TQQQ, TECL, SVIX, BULZ, FNGU), rotating or weighting among 
+    them based on relative performance in low-volatility bull regimes. 
+
+  Extractable pattern:
+    Combine short-volatility (SVIX) with leveraged tech ETFs (TQQQ, 
+    TECL) in a long-group basket to capture compounding returns during 
+    sustained low-vol bull markets. 
+
+  Regime tags:
+    bull_low_vol           effective    [inferred]
+    bear_sustained         ineffective  [inferred]
+    vix_spike              ineffective  [inferred]
+
+  Substitute: BULZ → TECL
+    BULZ is 3x leveraged tech/growth — TECL is a close in-universe analog covering technology sector with 3x leverage
+
+  Role note: Selects from a long-volatility-suppressed/leveraged-tech basket anchored by SVIX as the volatility-selling component alongside leveraged tech ETFs.
+
+── ms-022 — V4.0.0.3 | ?? Beta Baller Wrapper + A Better LETF  | Anansi + BWC + WHSmacon + HTX ──
+  Source:                          named
+  Assets:                          33 total
+    First 10:                      TECS, SOXS, SPXL, UVXY, TQQQ, TYO, SQQQ, PUI, SOXL, EEMV  (+23 more)
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            regime_router
+  Confidence:                      85%
+
+  Plain English:
+    If SPY is above its 210-day EMA and TQQQ 1-day cumulative return 
+    exceeds 5.5% and IEF 10-day MA-return exceeds SH and BIL RSI(7) 
+    exceeds IEF RSI and DBC 20-day StdDev exceeds SPY StdDev, route to 
+    leveraged bull assets; otherwise route to defensive or inverse 
+    assets. 
+
+  Extractable pattern:
+    Stack five independent regime filters (EMA trend, 1-day momentum 
+    spike gate, bond-vs-cash MA-return, commodity volatility vs equity 
+    volatility, and RSI crossover) to create a high-confidence 
+    multi-confirmation routing system before deploying leveraged 
+    assets. 
+
+  Regime tags:
+    bull_low_vol           effective    [inferred]
+    bear_sustained         effective    [inferred]
+    vix_spike              effective    [inferred]
+
+  No substitute: TYO
+    no_substitute: fixed income not in universe
+
+  No substitute: TLT
+    no_substitute: fixed income not in universe
+
+  No substitute: TMV
+    no_substitute: fixed income not in universe
+
+  No substitute: EEMV
+    no_substitute: low-volatility emerging market ETF has no in-universe analog
+
+  Substitute: FNGU → TQQQ
+    FNGU is 3x leveraged tech — TQQQ is the closest in-universe 3x Nasdaq substitute
+
+  Substitute: PUI → SPXL
+    PUI is a leveraged utilities play; SPXL is the closest broad leveraged long substitute available in-universe
+
+  Substitute: SH → SPXS
+    SH is inverse S&P — SPXS is the in-universe 3x inverse S&P substitute
+
+  Substitute: SPXU → SPXS
+    SPXU is 3x inverse S&P — SPXS is the direct in-universe equivalent
+
+  No substitute: IEF
+    no_substitute: fixed income not in universe
+
+  Substitute: BIL → BIL
+    BIL is already in the generator-approved universe
+
+  Parameters:
+    cumulative-return.asset                TQQQ
+    cumulative-return.threshold            5.5
+    cumulative-return.window               1
+    exponential-moving-average-price.asset SPY
+    exponential-moving-average-price.threshold SPY
+    exponential-moving-average-price.window 210
+    moving-average-return.asset            IEF
+    moving-average-return.threshold        SH
+    moving-average-return.window           10
+    relative-strength-index.asset          BIL
+    relative-strength-index.threshold      IEF
+    relative-strength-index.window         7
+    standard-deviation-return.asset        DBC
+    standard-deviation-return.threshold    SPY
+    standard-deviation-return.window       20
+
+  Role note: Complex multi-signal router using RSI, moving average return, cumulative return, standard deviation, and EMA price to route among bull, bear, and volatility assets across a large 33-asset universe.
+
+── ms-023 — Large Cap Tech ──
+  Source:                          named
+  Assets:                          24 total
+    First 10:                      QID, UVXY, SVIX, TQQQ, SQQQ, SOXL, PSQ, XLP, TMV, TECL  (+14 more)
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            crash_guard
+  Confidence:                      80%
+
+  Plain English:
+    If QQQ 70-day cumulative return is below -15% and SQQQ RSI(10) is 
+    below 31 and TMF max-drawdown(10) exceeds 7% and SPY current price 
+    is above SPY threshold, shift to inverse or defensive assets; 
+    otherwise hold leveraged long tech positions. 
+
+  Extractable pattern:
+    Use a 70-day cumulative return threshold of -15% on QQQ combined 
+    with inverse-ETF RSI oversold signal (SQQQ RSI < 31) as a 
+    dual-confirmation bear market crash guard to trigger rotation into 
+    inverse or defensive holdings. 
+
+  Regime tags:
+    bear_sustained         effective    [inferred]
+    vix_spike              effective    [inferred]
+    bull_low_vol           ineffective  [inferred]
+
+  No substitute: TMV
+    no_substitute: fixed income not in universe
+
+  No substitute: SHY
+    no_substitute: fixed income not in universe
+
+  No substitute: BTAL
+    no_substitute: managed futures category not in universe
+
+  No substitute: TMF
+    no_substitute: fixed income not in universe
+
+  No substitute: XLP
+    XLP fills consumer staples defensive sector role — no direct in-universe substitute
+
+  Substitute: SMH → SOXL
+    SMH is semiconductor sector ETF — SOXL is the in-universe leveraged semiconductor proxy
+
+  No substitute: SPLV
+    SPLV fills low-volatility equity defensive role — no direct in-universe substitute
+
+  Substitute: QID → SQQQ
+    QID is 2x inverse Nasdaq — SQQQ is the closest in-universe 3x inverse Nasdaq substitute
+
+  Substitute: PSQ → SQQQ
+    PSQ is 1x inverse Nasdaq — SQQQ is the available in-universe inverse Nasdaq asset
+
+  Substitute: BULZ → TQQQ
+    BULZ is 3x leveraged tech/growth — TQQQ is closest in-universe equivalent
+
+  Substitute: DIA → SPY
+    DIA tracks Dow Jones — SPY is the closest broad large-cap in-universe substitute
+
+  Parameters:
+    cumulative-return.asset                QQQ
+    cumulative-return.threshold            -15
+    cumulative-return.window               70
+    current-price.asset                    SPY
+    current-price.threshold                SPY
+    max-drawdown.asset                     TMF
+    max-drawdown.threshold                 7
+    max-drawdown.window                    10
+    relative-strength-index.asset          SQQQ
+    relative-strength-index.threshold      31
+    relative-strength-index.window         10
+
+  Role note: Uses QQQ 70-day cumulative return threshold of -15%, SQQQ RSI(10) below 31, TMF max-drawdown, and SPY price comparison as a multi-signal crash/bear detection system to switch between long and short/defensive assets.
+
+── ms-024 — B.A.B: Risk Off, Falling Rates (TMF)* - LETF Basket ──
+  Source:                          named
+  Assets:                          21 total
+    First 10:                      TECS, SOXS, SPXL, UVXY, TQQQ, TYO, SQQQ, PUI, SOXL, EEMV  (+11 more)
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            regime_router
+  Confidence:                      83%
+
+  Plain English:
+    If SPY is above its 210-day EMA and TQQQ 1-day return exceeds 5.5% 
+    and IEF 10-day MA-return exceeds SH and DBC 20-day StdDev exceeds 
+    SPY StdDev, route to risk-on LETF basket; otherwise route to 
+    risk-off or inverse assets including short bond proxies. 
+
+  Extractable pattern:
+    Mirror the ms-022 four-signal stacking pattern (EMA210 trend + 
+    1-day TQQQ spike gate + bond MA-return + commodity volatility) in 
+    a risk-off context to confirm falling-rates regimes before 
+    rotating to inverse or defensive LETF positions. 
+
+  Regime tags:
+    bear_sustained         effective    [inferred]
+    bull_low_vol           effective    [inferred]
+    vix_spike              effective    [inferred]
+
+  No substitute: TYO
+    no_substitute: fixed income not in universe
+
+  No substitute: EEMV
+    no_substitute: low-volatility emerging market ETF has no in-universe analog
+
+  No substitute: SHY
+    no_substitute: fixed income not in universe
+
+  No substitute: BTAL
+    no_substitute: managed futures category not in universe
+
+  Substitute: PUI → SPXL
+    PUI is a leveraged utilities play; SPXL is the closest broad leveraged long substitute in-universe
+
+  Substitute: QLD → TQQQ
+    QLD is 2x Nasdaq — TQQQ is the in-universe 3x Nasdaq leveraged substitute
+
+  Substitute: USD → SPXL
+    USD is 2x S&P500 — SPXL is the closest in-universe leveraged S&P substitute
+
+  Substitute: UMDD → SPXL
+    UMDD is 3x mid-cap — SPXL is the closest available in-universe leveraged broad equity substitute
+
+  No substitute: IEF
+    no_substitute: fixed income not in universe
+
+  Parameters:
+    cumulative-return.asset                TQQQ
+    cumulative-return.threshold            5.5
+    cumulative-return.window               1
+    exponential-moving-average-price.asset SPY
+    exponential-moving-average-price.threshold SPY
+    exponential-moving-average-price.window 210
+    moving-average-return.asset            IEF
+    moving-average-return.threshold        SH
+    moving-average-return.window           10
+    standard-deviation-return.asset        DBC
+    standard-deviation-return.threshold    SPY
+    standard-deviation-return.window       20
+
+  Role note: Risk-off/falling-rates regime router using SPY EMA, TQQQ momentum spike, IEF MA-return, and DBC volatility signals to route a LETF basket. Structurally near-identical to ms-022 with a smaller 21-asset universe.
+
+── ms-025 — SHORT GROUP (UVXY) ──
+  Source:                          named
+  Assets:                          4 total
+    Tickers:                       TECS, SOXS, SQQQ, UVXY
+  In-universe:                     ✓ YES
+  Recomposable:                    full
+  Role:                            crash_guard
+  Confidence:                      90%
+
+  Plain English:
+    Hold a basket of inverse and volatility-long assets (TECS, SOXS, 
+    SQQQ, UVXY) as the crash or bear-regime allocation when the parent 
+    routing condition routes to the short group. 
+
+  Extractable pattern:
+    Maintain a dedicated short-group basket of inverse leveraged ETFs 
+    (SOXS, TECS, SQQQ) combined with long-volatility (UVXY) to hedge 
+    or profit during bear and VIX-spike regimes as the counterpart to 
+    a leveraged-long group. 
+
+  Regime tags:
+    bear_sustained         effective    [inferred]
+    vix_spike              effective    [inferred]
+    bull_low_vol           ineffective  [inferred]
+
+  Role note: Pure short group holding inverse and long-volatility assets (TECS, SOXS, SQQQ, UVXY) — activated as the bear/crash leg of a broader routing system.
+
+── ms-026 — Volmageddon 2.0 ──
+  Source:                          named
+  Assets:                          6 total
+    Tickers:                       SPXU, UVXY, VIXY, SVIX, SPY, BIL
+  In-universe:                     ✗ NO
+  Recomposable:                    partial
+  Role:                            crash_guard
+  Confidence:                      82%
+
+  Plain English:
+    If UVXY's standard deviation of returns (10-day) exceeds 10 AND 
+    UVXY's moving average return (3-day) exceeds VIXM's level AND 
+    TQQQ's 1-day cumulative return exceeds 5.5% AND IEF's RSI(10) 
+    exceeds PSQ's level, hold SVIX or SPY; otherwise hold BIL as a 
+    safe exit. 
+
+  Extractable pattern:
+    Use UVXY standard-deviation-return(10) > 10 combined with UVXY 
+    moving-average-return(3) vs. VIXM as a multi-signal volatility 
+    spike detector before routing to safety assets like BIL. 
+
+  Regime tags:
+    vix_spike              effective    [inferred]
+    bear_sustained         effective    [inferred]
+    bull_low_vol           ineffective  [inferred]
+
+  Substitute: SPXU → SPXS
+    SPXS is a -3x S&P 500 ETF — direct functional equivalent to SPXU
+
+  Substitute: VIXY → UVXY
+    UVXY covers short-term VIX futures long exposure — VIXY is the 1x analog, UVXY is 1.5x but is the closest in-universe equivalent
+
+  Parameters:
+    cumulative-return.asset                TQQQ
+    cumulative-return.threshold            5.5
+    cumulative-return.window               1
+    moving-average-return.asset            UVXY
+    moving-average-return.threshold        VIXM
+    moving-average-return.window           3
+    relative-strength-index.asset          IEF
+    relative-strength-index.threshold      PSQ
+    relative-strength-index.window         10
+    standard-deviation-price.asset         UVXY
+    standard-deviation-price.threshold     UVXY
+    standard-deviation-price.window        5
+    standard-deviation-return.asset        UVXY
+    standard-deviation-return.threshold    10
+    standard-deviation-return.window       10
+
+  Role note: Named 'Volmageddon 2.0' — explicitly designed to detect and respond to volatility spike events analogous to the Feb 2018 VIX explosion.
+
+── ms-027 — Bond Mid-term < Long-term ──
+  Source:                          named
+  Assets:                          15 total
+    Tickers:                       TECS, SOXS, TQQQ, SQQQ, VIXM, SOXL, SHV, UVXY, FNGU, UPRO, SVXY, BIL, FNGD, TECL, SPXS
+  In-universe:                     ✗ NO
+  Recomposable:                    partial
+  Role:                            regime_router
+  Confidence:                      80%
+
+  Plain English:
+    If SVXY's RSI(10) is above 31 AND SVXY's 1-day cumulative return 
+    is above -6% AND SVXY's current price is above its own threshold, 
+    allocate across bull leveraged ETFs (TQQQ, SOXL) using 
+    inverse-volatility weighting; otherwise rotate to bear ETFs (TECS, 
+    SOXS, SQQQ) or UVXY/VIXM. 
+
+  Extractable pattern:
+    Gate leveraged bull vs. bear routing using SVXY RSI(10) > 31 
+    combined with SVXY 1-day return > -6% as a compound 
+    volatility-regime filter, then apply inverse-volatility weighting 
+    to the selected basket. 
+
+  Regime tags:
+    bull_low_vol           effective    [inferred]
+    bear_sustained         effective    [inferred]
+    vix_spike              effective    [inferred]
+
+  Substitute: SHV → BIL
+    BIL is an ultra-short T-bill ETF — near-identical cash proxy to SHV
+
+  Substitute: FNGU → TECL
+    FNGU is a 3x tech/FANG ETF — TECL is 3x technology sector, closest in-universe leveraged tech analog
+
+  Substitute: FNGD → TECS
+    FNGD is the inverse 3x FANG ETF — TECS is the in-universe inverse 3x tech equivalent
+
+  Parameters:
+    cumulative-return.asset                SVXY
+    cumulative-return.threshold            -6
+    cumulative-return.window               1
+    current-price.asset                    SVXY
+    current-price.threshold                SVXY
+    invvol_window                          10
+    relative-strength-index.asset          SVXY
+    relative-strength-index.threshold      31
+    relative-strength-index.window         10
+
+  Role note: Routes among leveraged bull/bear equity and volatility assets based on SVXY RSI, cumulative return, and price signals — 'Bond Mid-term < Long-term' name suggests a macro regime condition gates asset selection.
+
+── ms-028 — KMLM switcher (single pops)| BT 4/13/22 = A.R. 466% / D.D. 22% ──
+  Source:                          named
+  Assets:                          12 total
+    Tickers:                       KMLM, FTLS, SOXL, TMF, SPXL, UVXY, UUP, SVXY, TMV, SVIX, VIXM, TECL
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            momentum_selector
+  Confidence:                      72%
+
+  Plain English:
+    If XLK's RSI(10) exceeds KMLM's level, hold SOXL or SPXL 
+    (leveraged bull); otherwise hold KMLM, FTLS, or SVXY based on 
+    trend conditions, with TMF and UVXY as tail hedges. 
+
+  Extractable pattern:
+    Use a sector ETF RSI(10) compared against an alternative-asset 
+    threshold as a cross-asset momentum gate to switch between 
+    leveraged equity longs and diversifying alternative positions. 
+
+  Regime tags:
+    bull_low_vol           effective    [inferred]
+    bear_sustained         ineffective  [inferred]
+    sideways_chop          ineffective  [inferred]
+
+  No substitute: KMLM
+    no_substitute: managed futures category not in universe
+
+  No substitute: FTLS
+    no_substitute: managed futures category not in universe
+
+  No substitute: TMF
+    no_substitute: fixed income not in universe
+
+  No substitute: UUP
+    no_substitute: currency ETF category not in universe
+
+  Parameters:
+    relative-strength-index.asset          XLK
+    relative-strength-index.threshold      KMLM
+    relative-strength-index.window         10
+
+  Role note: Name suggests single-pop momentum entries with managed futures as core holdings; XLK RSI vs KMLM threshold suggests a tech-momentum gate for entering trend-following positions.
+
+── ms-029 — MAIN BASE ──
+  Source:                          named
+  Assets:                          14 total
+    Tickers:                       TECS, TQQQ, SOXS, SQQQ, VIXM, SOXL, SHV, UVXY, FNGU, UPRO, SVXY, FNGD, TECL, SPXS
+  In-universe:                     ✗ NO
+  Recomposable:                    partial
+  Role:                            regime_router
+  Confidence:                      83%
+
+  Plain English:
+    If SVXY's RSI(10) exceeds 31 AND SVXY's 1-day cumulative return 
+    exceeds -6% AND SVXY's current price exceeds its own moving 
+    threshold, allocate inverse-volatility-weighted to bull leveraged 
+    ETFs (TQQQ, SOXL); otherwise hold bear ETFs (TECS, SOXS, SQQQ) or 
+    volatility assets (UVXY, VIXM). 
+
+  Extractable pattern:
+    Combine SVXY RSI(10) > 31, SVXY 1-day return > -6%, and SVXY price 
+    self-comparison as a three-layer volatility-regime confirmation 
+    system before committing to inverse-volatility-weighted leveraged 
+    equity positions. 
+
+  Regime tags:
+    bull_low_vol           effective    [inferred]
+    bear_sustained         effective    [inferred]
+    vix_spike              effective    [inferred]
+
+  Substitute: SHV → BIL
+    BIL is an ultra-short T-bill ETF — near-identical cash proxy to SHV
+
+  Substitute: FNGU → TECL
+    FNGU is 3x FANG/tech — TECL is the closest in-universe 3x technology analog
+
+  Substitute: FNGD → TECS
+    FNGD is inverse 3x FANG — TECS is the in-universe inverse 3x tech equivalent
+
+  Parameters:
+    cumulative-return.asset                SVXY
+    cumulative-return.threshold            -6
+    cumulative-return.window               1
+    current-price.asset                    SVXY
+    current-price.threshold                SVXY
+    invvol_window                          10
+    relative-strength-index.asset          SVXY
+    relative-strength-index.threshold      31
+    relative-strength-index.window         10
+
+  Role note: Labeled 'MAIN BASE' — shares identical parameters to ms-027, indicating this is the core routing structure from which ms-027 may be derived or branched.
+
+── ms-030 — Pareto's Portfolio: [230706] Basic RSI OB/OS Framework v1.01 (Shared) ──
+  Source:                          named
+  Assets:                          41 total
+    First 10:                      TECS, SOXS, XOM, ADBE, TRV, HD, UVXY, V, AMGN, BRK/B  (+31 more)
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            asset_rotator
+  Confidence:                      78%
+
+  Plain English:
+    If TYO's RSI(10) exceeds QQQ's RSI level AND TQQQ's cumulative 
+    return exceeds 5.5%, rotate into top-ranked assets from a broad 
+    universe of stocks and leveraged ETFs; otherwise rotate to bear or 
+    defensive positions including TECS, SOXS, or UVXY. 
+
+  Extractable pattern:
+    Use a cross-asset RSI comparison (bond-inverse ETF RSI vs. equity 
+    benchmark RSI) combined with TQQQ 5.5% cumulative return threshold 
+    as a dual-gate before selecting top performers from a diversified 
+    rotational universe. 
+
+  Regime tags:
+    bull_low_vol           effective    [inferred]
+    bear_sustained         effective    [inferred]
+    sideways_chop          ineffective  [inferred]
+
+  No substitute: XOM
+    logic_only: large equity universe — extract RSI/momentum logic, not tickers
+
+  No substitute: ADBE
+    logic_only: large equity universe — extract RSI/momentum logic, not tickers
+
+  No substitute: TRV
+    logic_only: large equity universe — extract RSI/momentum logic, not tickers
+
+  No substitute: HD
+    logic_only: large equity universe — extract RSI/momentum logic, not tickers
+
+  No substitute: V
+    logic_only: large equity universe — extract RSI/momentum logic, not tickers
+
+  No substitute: TYO
+    no_substitute: fixed income inverse ETF not in universe
+
+  Parameters:
+    cumulative-return.asset                TQQQ
+    cumulative-return.threshold            5.5
+    relative-strength-index.asset          TYO
+    relative-strength-index.threshold      QQQ
+
+  Role note: 41-asset RSI overbought/oversold framework with a large individual stock universe (XOM, ADBE, TRV, HD, V etc.) plus leveraged ETFs — classified as asset_rotator because RSI OB/OS gates select among a ranked candidate set.
+
+── ms-031 — Just Run This FTLT | 2011-09-13 ──
+  Source:                          named
+  Assets:                          9 total
+    Tickers:                       COST, SOXL, GE, VIXY, BTAL, SPHB, TECL, NVO, LLY
+  In-universe:                     ✗ NO
+  Recomposable:                    partial
+  Role:                            regime_router
+  Confidence:                      72%
+
+  Plain English:
+    If QQQ is above its current price threshold and PSQ RSI is below 
+    65, hold an inverse-vol blend of SOXL, TECL, COST, GE, NVO (and 
+    others); otherwise route to defensive or inverse volatility assets 
+    (VIXY, BTAL). 
+
+  Extractable pattern:
+    Use QQQ current-price level combined with an inverted-ETF RSI 
+    threshold (PSQ RSI < 65) as a dual gate to switch between a 
+    leveraged-growth inverse-vol blend and a defensive allocation. 
+
+  Regime tags:
+    bull_low_vol           effective    [inferred]
+    bear_sustained         ineffective  [inferred]
+    vix_spike              ineffective  [inferred]
+
+  No substitute: BTAL
+    no_substitute: managed futures category not in universe
+
+  Parameters:
+    current-price.asset                    QQQ
+    current-price.threshold                QQQ
+    invvol_window                          20
+    relative-strength-index.asset          PSQ
+    relative-strength-index.threshold      65
+
+  Role note: Routes between a mixed basket of growth/vol/defensive names using QQQ price level and PSQ RSI as dual regime signals, with inverse-vol weighting among selected assets.
+
+── ms-032 — V3.1 QQQ BlackSwanCatcher K-1 Free ──
+  Source:                          named
+  Assets:                          16 total
+    First 10:                      GOVT, SOXS, TQQQ, TLT, SQQQ, XLB, XLV, SOXL, XLI, XLU  (+6 more)
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            crash_guard
+  Confidence:                      82%
+
+  Plain English:
+    If TMF max-drawdown exceeds 7% (10-day), or TQQQ 1-day return 
+    exceeds 5.5%, or BND RSI crosses SPY level, or QQQ is below its 
+    price threshold, rotate into SOXS/SQQQ or bond/gold safety; 
+    otherwise hold SOXL/TQQQ and sector ETFs weighted by relative 
+    strength. 
+
+  Extractable pattern:
+    Combine a 1-day TQQQ cumulative-return threshold of 5.5%, a 10-day 
+    TMF max-drawdown threshold of 7%, a BND RSI vs SPY cross, and a 
+    QQQ price-level check as a four-layer crash detection cascade to 
+    rotate between leveraged bull and leveraged bear ETFs. 
+
+  Regime tags:
+    bear_sustained         effective    [inferred]
+    vix_spike              effective    [inferred]
+    bull_low_vol           ineffective  [inferred]
+
+  No substitute: GOVT
+    no_substitute: fixed income not in universe
+
+  No substitute: TLT
+    no_substitute: fixed income not in universe
+
+  No substitute: GLD
+    no_substitute: fixed income not in universe
+
+  No substitute: USDU
+    no_substitute: fixed income not in universe
+
+  No substitute: XLB
+    XLB fills materials sector role — no direct in-universe substitute
+
+  No substitute: XLV
+    XLV fills healthcare sector role — no direct in-universe substitute
+
+  No substitute: XLI
+    XLI fills industrials sector role — no direct in-universe substitute
+
+  Parameters:
+    cumulative-return.asset                TQQQ
+    cumulative-return.threshold            5.5
+    cumulative-return.window               1
+    current-price.asset                    QQQ
+    current-price.threshold                QQQ
+    max-drawdown.asset                     TMF
+    max-drawdown.threshold                 7
+    max-drawdown.window                    10
+    relative-strength-index.asset          BND
+    relative-strength-index.threshold      SPY
+    relative-strength-index.window         45
+
+  Role note: Multi-signal crash detection system: monitors BND RSI vs SPY, TQQQ 1-day cumulative return threshold of 5.5%, TMF max-drawdown of 7% over 10 days, and QQQ price level to route into bear/inverse ETFs (SOXS, SQQQ) or safe fixed income; exits to bull assets when signals clear.
+
+── ms-033 — Volmageddon | Extended Frontrunner -> Long/Short ──
+  Source:                          named
+  Assets:                          7 total
+    Tickers:                       SPXU, UVXY, VTI, SVXY, VIXY, TECL, BIL
+  In-universe:                     ✗ NO
+  Recomposable:                    partial
+  Role:                            regime_router
+  Confidence:                      80%
+
+  Plain English:
+    If TQQQ 1-day return exceeds 5.5% or SPY max-drawdown exceeds 0% 
+    or UVXY 10-day return standard deviation exceeds 10 or IEF RSI 
+    crosses PSQ level, route to UVXY/SPXU/BIL crash protection; 
+    otherwise hold SVXY/TECL in a vol-selling regime. 
+
+  Extractable pattern:
+    Use UVXY 10-day return standard deviation (threshold 10) combined 
+    with SPY max-drawdown and TQQQ 5.5% cumulative return as a 
+    multi-signal vol-regime detector to switch between inverse-vol 
+    long and long-vol/inverse-equity positions. 
+
+  Regime tags:
+    vix_spike              effective    [inferred]
+    bear_sustained         effective    [inferred]
+    bull_low_vol           effective    [inferred]
+
+  Substitute: SPXU → SPXS
+    SPXU is a 3x inverse S&P 500 ETF — SPXS is the direct in-universe equivalent
+
+  Parameters:
+    cumulative-return.asset                TQQQ
+    cumulative-return.threshold            5.5
+    max-drawdown.asset                     SPY
+    max-drawdown.threshold                 0
+    relative-strength-index.asset          IEF
+    relative-strength-index.threshold      PSQ
+    relative-strength-index.window         10
+    standard-deviation-return.asset        UVXY
+    standard-deviation-return.threshold    10
+    standard-deviation-return.window       10
+
+  Role note: Routes between long-vol (UVXY), inverse-vol (SVXY), leveraged tech (TECL), inverse equity (SPXU), and safety (BIL) using a stack of IEF RSI vs PSQ, SPY max-drawdown, TQQQ 5.5% cumulative return, and UVXY standard-deviation signals.
+
+── ms-034 — Normal market ──
+  Source:                          named
+  Assets:                          15 total
+    Tickers:                       TECS, TQQQ, SOXS, SQQQ, VIXM, SOXL, SHV, UVXY, FNGU, SVXY, SPXS, FNGD, UPRO, TECL, BIL
+  In-universe:                     ✗ NO
+  Recomposable:                    partial
+  Role:                            regime_router
+  Confidence:                      85%
+
+  Plain English:
+    If SVXY RSI drops below 31 or SVXY 1-day return drops below -6% or 
+    SVXY current price falls below its threshold or TMF max-drawdown 
+    exceeds 7% (10-day), hold bear/inverse-vol assets (SQQQ, SOXS, 
+    TECS, UVXY, VIXM); otherwise hold leveraged bull assets (TQQQ, 
+    SOXL) weighted by inverse volatility. 
+
+  Extractable pattern:
+    Use SVXY RSI < 31, SVXY 1-day return < -6%, SVXY price-level, and 
+    TMF 10-day max-drawdown > 7% as a four-condition vol-regime 
+    cascade to switch an inverse-vol-weighted portfolio between 
+    leveraged bull and leveraged bear ETFs. 
+
+  Regime tags:
+    vix_spike              effective    [inferred]
+    bear_sustained         effective    [inferred]
+    bull_low_vol           effective    [inferred]
+
+  Substitute: SHV → BIL
+    SHV is a short-term Treasury bill ETF — BIL is the direct in-universe cash-equivalent substitute
+
+  Parameters:
+    cumulative-return.asset                SVXY
+    cumulative-return.threshold            -6
+    cumulative-return.window               1
+    current-price.asset                    SVXY
+    current-price.threshold                SVXY
+    invvol_window                          10
+    max-drawdown.asset                     TMF
+    max-drawdown.threshold                 7
+    max-drawdown.window                    10
+    relative-strength-index.asset          SVXY
+    relative-strength-index.threshold      31
+    relative-strength-index.window         10
+
+  Role note: Uses SVXY RSI, SVXY price level, SVXY 1-day cumulative return, and TMF max-drawdown to detect vol-crush vs vol-spike regimes, then routes into leveraged bull (TQQQ, SOXL), leveraged bear (SQQQ, SOXS, TECS), or vol ETFs (VIXM, UVXY) via inverse-vol weighting.
+
+── ms-035 — Frontrunner -> Inverse Vol Blend ──
+  Source:                          named
+  Assets:                          5 total
+    Tickers:                       COST, GE, VIXY, NVO, LLY
+  In-universe:                     ✗ NO
+  Recomposable:                    partial
+  Role:                            asset_rotator
+  Confidence:                      74%
+
+  Plain English:
+    If VOX RSI exceeds 79 (overbought communications sector), rotate 
+    defensively (possibly toward VIXY or reduced risk); otherwise hold 
+    an inverse-vol-weighted blend of COST, GE, NVO, LLY. 
+
+  Extractable pattern:
+    Use a sector-ETF RSI overbought threshold (VOX RSI > 79) as a 
+    rotation gate, then apply 20-day inverse-volatility weighting 
+    among a basket of individual growth/defensive stocks to size 
+    positions dynamically. 
+
+  Regime tags:
+    bull_low_vol           effective    [inferred]
+    sideways_chop          ineffective  [inferred]
+    bear_sustained         ineffective  [inferred]
+
+  Substitute: COST/GE/NVO/LLY → SPY
+    logic_only: large equity universe of individual stocks across consumer staples, industrials, healthcare — extract RSI/momentum logic, not tickers; SPY approximates blended large-cap exposure
+
+  Parameters:
+    invvol_window                          20
+    relative-strength-index.asset          VOX
+    relative-strength-index.threshold      79
+
+  Role note: Selects among a small set of individual stocks (COST, GE, NVO, LLY) with VIXY as a potential defensive allocation, using VOX RSI threshold of 79 as the rotation gate and inverse-vol weighting (20-day window) among selected assets.
+
+── ms-036 — Dip Buy -> High/Low Beta ──
+  Source:                          named
+  Assets:                          4 total
+    Tickers:                       SPHB, TECL, BTAL, SOXL
+  In-universe:                     ✗ NO
+  Recomposable:                    partial
+  Role:                            regime_router
+  Confidence:                      78%
+
+  Plain English:
+    If QQQ is above its own price threshold AND PSQ RSI is below 65 
+    (no inverse-momentum stress), hold high-beta assets (SPHB, TECL, 
+    SOXL); otherwise hold anti-beta hedge (BTAL) as crash protection. 
+
+  Extractable pattern:
+    Use PSQ RSI threshold (65) combined with QQQ price-vs-self 
+    comparison as a dual gate to toggle between high-beta leveraged 
+    longs and anti-correlation hedges during dip-buy setups. 
+
+  Regime tags:
+    bull_low_vol           effective    [inferred]
+    bear_sustained         ineffective  [inferred]
+    vix_spike              ineffective  [inferred]
+
+  No substitute: BTAL
+    no_substitute: managed futures category not in universe
+
+  Substitute: SPHB → TQQQ
+    SPHB fills high-beta equity role — TQQQ is closest in-universe high-beta proxy for large-cap tech-heavy exposure
+
+  Parameters:
+    current-price.asset                    QQQ
+    current-price.threshold                QQQ
+    relative-strength-index.asset          PSQ
+    relative-strength-index.threshold      65
+
+  Role note: Routes between high-beta bull assets (SPHB, TECL, SOXL) and an anti-beta hedge (BTAL) based on QQQ price level and PSQ RSI dip signal.
+
+── ms-037 — SHORT (Negative Beta -1 to -3) ──
+  Source:                          named
+  Assets:                          4 total
+    Tickers:                       TECS, SOXS, SQQQ, UVXY
+  In-universe:                     ✓ YES
+  Recomposable:                    full
+  Role:                            crash_guard
+  Confidence:                      90%
+
+  Plain English:
+    Unconditionally hold a basket of inverse and volatility-long 
+    assets (TECS, SOXS, SQQQ, UVXY) to generate positive returns 
+    during equity drawdowns. 
+
+  Extractable pattern:
+    Combine multiple negative-beta instruments (3x inverse sector, 
+    inverse index, long-vol ETF) into a crash basket that captures 
+    drawdown profit across tech, semiconductors, and broad equity 
+    simultaneously. 
+
+  Regime tags:
+    bear_sustained         effective    [inferred]
+    vix_spike              effective    [inferred]
+    bull_low_vol           ineffective  [inferred]
+
+  Role note: Holds a basket of short/inverse and long-volatility assets (TECS, SOXS, SQQQ, UVXY) — all negative-beta instruments designed to profit during market stress.
+
+── ms-038 — Sometimes TQQQ ──
+  Source:                          named
+  Assets:                          10 total
+    Tickers:                       TQQQ, SQQQ, PSQ, UVXY, UPRO, VIXY, QQQ, TECL, SPY, BIL
+  In-universe:                     ✗ NO
+  Recomposable:                    partial
+  Role:                            momentum_selector
+  Confidence:                      85%
+
+  Plain English:
+    If TQQQ 1-day cumulative return exceeds 5.5% AND TQQQ price is 
+    above its own threshold AND IEF RSI is below PSQ threshold, hold 
+    leveraged bull assets (TQQQ, UPRO, TECL); if momentum is flat or 
+    bond stress signals trigger, hold QQQ; otherwise hold 
+    inverse/volatility assets (SQQQ, UVXY, VIXY, PSQ). 
+
+  Extractable pattern:
+    Use TQQQ 1-day 5.5% cumulative-return spike as a momentum trigger 
+    gate before entering leveraged bull positions, layered with an IEF 
+    RSI bond-stress cross-check to filter false positives. 
+
+  Regime tags:
+    bull_low_vol           effective    [inferred]
+    vix_spike              effective    [inferred]
+    bear_sustained         ineffective  [inferred]
+
+  Substitute: PSQ → SQQQ
+    PSQ is 1x inverse QQQ — SQQQ (3x inverse) is closest in-universe directional substitute, though with higher magnitude
+
+  Substitute: VIXY → UVXY
+    VIXY is short-term VIX futures ETF — UVXY is the in-universe leveraged VIX analog serving the same long-volatility role
+
+  Parameters:
+    cumulative-return.asset                TQQQ
+    cumulative-return.threshold            5.5
+    cumulative-return.window               1
+    current-price.asset                    TQQQ
+    current-price.threshold                TQQQ
+    relative-strength-index.asset          IEF
+    relative-strength-index.threshold      PSQ
+    relative-strength-index.window         10
+
+  Role note: Uses TQQQ cumulative return (1-day, 5.5% threshold) and price-vs-self as primary momentum gates, with IEF RSI vs PSQ threshold as a secondary market-stress filter, to select between bull leveraged (TQQQ, UPRO, TECL), safe (QQQ), and bear (SQQQ, UVXY, VIXY, PSQ) assets.
+
+── ms-039 — Another Jason tweak ──
+  Source:                          named
+  Assets:                          21 total
+    First 10:                      QID, SVIX, TQQQ, SQQQ, SOXL, PSQ, XLP, TMV, TECL, SMH  (+11 more)
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            regime_router
+  Confidence:                      82%
+
+  Plain English:
+    If QQQ 70-day return is below -15% (deep bear regime) AND SPY is 
+    below its own price AND SQQQ RSI is below 31 (oversold inverse), 
+    rotate into defensive/bear assets (SQQQ, SOXS, XLP, TMV, SVIX); if 
+    SPY holds above threshold, route to leveraged bulls (TQQQ, SOXL); 
+    otherwise hold intermediate assets (QID, PSQ, SVIX, SPLV). 
+
+  Extractable pattern:
+    Use QQQ 70-day cumulative return with a -15% deep-bear threshold 
+    as the primary regime detector, combined with SPY price-vs-self 
+    and SQQQ RSI(31) oversold check, to construct a three-state router 
+    (bull/transition/bear) across a large multi-asset universe. 
+
+  Regime tags:
+    bear_sustained         effective    [inferred]
+    sideways_chop          effective    [inferred]
+    bull_low_vol           ineffective  [inferred]
+
+  No substitute: TMV
+    no_substitute: fixed income not in universe
+
+  No substitute: SHY
+    no_substitute: fixed income not in universe
+
+  No substitute: TMF
+    no_substitute: fixed income not in universe
+
+  No substitute: UUP
+    no_substitute: currency ETF has no analog in the generator universe
+
+  No substitute: XLP
+    XLP fills consumer staples defensive sector role — no direct in-universe substitute
+
+  Substitute: SMH → SOXL
+    SMH is semiconductor sector ETF — SOXL (3x semiconductor) is the in-universe leveraged analog
+
+  Substitute: SPLV → SPY
+    SPLV fills low-volatility large-cap defensive role — SPY is the closest in-universe broad-market substitute
+
+  Substitute: QID → SQQQ
+    QID is 2x inverse QQQ — SQQQ (3x inverse) is the closest in-universe directional substitute
+
+  Substitute: PSQ → SQQQ
+    PSQ is 1x inverse QQQ — SQQQ is the in-universe inverse QQQ proxy
+
+  Substitute: BULZ → TQQQ
+    BULZ is 3x leveraged tech ETF — TQQQ is the closest in-universe leveraged tech-adjacent substitute
+
+  Substitute: DIA → SPY
+    DIA tracks DJIA — SPY is the closest in-universe broad large-cap substitute
+
+  Parameters:
+    cumulative-return.asset                QQQ
+    cumulative-return.threshold            -15
+    cumulative-return.window               70
+    current-price.asset                    SPY
+    current-price.threshold                SPY
+    relative-strength-index.asset          SQQQ
+    relative-strength-index.threshold      31
+    relative-strength-index.window         10
+
+  Role note: Complex multi-signal router using QQQ 70-day cumulative return (-15% threshold), SPY price-vs-self, and SQQQ RSI (31) to navigate between bull leveraged, bear inverse, sector defensive, bond, and currency assets across a large 21-asset universe.
+
+── ms-040 — Volatility BSC 1.0a ──
+  Source:                          named
+  Assets:                          6 total
+    Tickers:                       SPXU, UVXY, VIXY, SVIX, SPY, BIL
+  In-universe:                     ✗ NO
+  Recomposable:                    partial
+  Role:                            crash_guard
+  Confidence:                      87%
+
+  Plain English:
+    If UVXY return standard deviation (10-day) exceeds 10 AND UVXY 
+    price standard deviation (5-day) is elevated relative to UVXY AND 
+    UVXY 3-day moving-average return exceeds VIXM AND IEF RSI is below 
+    PSQ threshold, hold long-volatility assets (UVXY, VIXY, SPXU); if 
+    volatility is moderate, hold SPY; otherwise hold BIL as cash. 
+
+  Extractable pattern:
+    Layer three UVXY-based volatility signals (return std-dev 
+    threshold, price std-dev relative comparison, short-window 
+    moving-average return vs a vol benchmark) to build a graduated 
+    volatility-regime detector that selects between leveraged inverse 
+    equity, long-vol, broad equity, and cash. 
+
+  Regime tags:
+    vix_spike              effective    [inferred]
+    bear_sustained         effective    [inferred]
+    bull_low_vol           ineffective  [inferred]
+
+  Substitute: SPXU → SPXS
+    SPXU is 3x inverse S&P 500 — SPXS is the direct in-universe equivalent
+
+  Substitute: VIXY → UVXY
+    VIXY is short-term VIX futures ETF — UVXY serves the same long-volatility role in-universe
+
+  Parameters:
+    moving-average-return.asset            UVXY
+    moving-average-return.threshold        VIXM
+    moving-average-return.window           3
+    relative-strength-index.asset          IEF
+    relative-strength-index.threshold      PSQ
+    relative-strength-index.window         10
+    standard-deviation-price.asset         UVXY
+    standard-deviation-price.threshold     UVXY
+    standard-deviation-price.window        5
+    standard-deviation-return.asset        UVXY
+    standard-deviation-return.threshold    10
+    standard-deviation-return.window       10
+
+  Role note: Uses multiple UVXY volatility metrics (return std-dev, price std-dev, moving-average return vs VIXM) plus IEF RSI vs PSQ to determine whether to hold inverse equity (SPXU), long-vol (UVXY/VIXY), neutral (SPY), or cash (BIL).
+
+── ms-041 — Huge volatility ──
+  Source:                          named
+  Assets:                          4 total
+    Tickers:                       TQQQ, VIXY, BIL, BTAL
+  In-universe:                     ✗ NO
+  Recomposable:                    partial
+  Role:                            crash_guard
+  Confidence:                      82%
+
+  Plain English:
+    If TQQQ 1-day cumulative return exceeds 6% OR BND RSI exceeds SPY 
+    OR TMF max-drawdown exceeds 7% OR QQQ current price signals 
+    stress, hold VIXY or BIL (safety); otherwise hold TQQQ. 
+
+  Extractable pattern:
+    Use a compound 4-signal gate (momentum threshold on leveraged 
+    asset, bond RSI vs equity benchmark, drawdown threshold on bond 
+    proxy, price-level check) to rotate from leveraged equity into 
+    volatility or cash during stress. 
+
+  Regime tags:
+    vix_spike              effective    [inferred]
+    bear_sustained         effective    [inferred]
+    bull_low_vol           ineffective  [inferred]
+
+  Substitute: VIXY → UVXY
+    UVXY is a VIX-linked long-volatility ETF serving the same crash-hedge role as VIXY
+
+  No substitute: BTAL
+    no_substitute: managed futures category not in universe
+
+  Parameters:
+    cumulative-return.asset                TQQQ
+    cumulative-return.threshold            6
+    current-price.asset                    QQQ
+    current-price.threshold                QQQ
+    max-drawdown.asset                     TMF
+    max-drawdown.threshold                 7
+    relative-strength-index.asset          BND
+    relative-strength-index.threshold      SPY
+
+  Role note: Multi-signal crash detection: uses TQQQ cumulative return, BND RSI vs SPY, TMF max-drawdown, and QQQ price-vs-self to route between risk-on and safety assets.
+
+── ms-042 — TQQQ or not | BlackSwan MeanRev BondSignal ──
+  Source:                          named
+  Assets:                          5 total
+    Tickers:                       TQQQ, UVXY, VIXY, BTAL, BIL
+  In-universe:                     ✗ NO
+  Recomposable:                    partial
+  Role:                            crash_guard
+  Confidence:                      85%
+
+  Plain English:
+    If TQQQ 1-day cumulative return exceeds 6% OR 45-period RSI of BND 
+    exceeds SPY OR 10-day max-drawdown of TMF exceeds 7% OR QQQ price 
+    signals stress, hold UVXY/VIXY/BTAL/BIL; otherwise hold TQQQ. 
+
+  Extractable pattern:
+    Use RSI window=45 on a bond ETF relative to an equity benchmark as 
+    one leg of a multi-condition crash-guard gate routing leveraged 
+    tech into tiered volatility hedges. 
+
+  Regime tags:
+    vix_spike              effective    [inferred]
+    bear_sustained         effective    [inferred]
+    bull_low_vol           ineffective  [inferred]
+
+  Substitute: VIXY → UVXY
+    UVXY is a VIX-linked long-volatility ETF serving the same crash-hedge role as VIXY
+
+  No substitute: BTAL
+    no_substitute: managed futures category not in universe
+
+  Parameters:
+    cumulative-return.asset                TQQQ
+    cumulative-return.threshold            6
+    cumulative-return.window               1
+    current-price.asset                    QQQ
+    current-price.threshold                QQQ
+    max-drawdown.asset                     TMF
+    max-drawdown.threshold                 7
+    max-drawdown.window                    10
+    relative-strength-index.asset          BND
+    relative-strength-index.threshold      SPY
+    relative-strength-index.window         45
+
+  Role note: Near-identical logic to ms-041 but with explicit windows (RSI=45, cumret=1d, drawdown=10d); adds UVXY as an intermediate safety tier between VIXY and BIL, and BTAL as a further hedge layer.
+
+── ms-043 — Modified Foreign Rat ──
+  Source:                          named
+  Assets:                          6 total
+    Tickers:                       TQQQ, EDZ, VIXY, BTAL, EDC, BIL
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            regime_router
+  Confidence:                      78%
+
+  Plain English:
+    If 14-period RSI of IEI exceeds EEM AND TQQQ cumulative return 
+    exceeds 6% AND TMF max-drawdown exceeds 7% AND EEM current price 
+    signals a bear, hold EDZ/VIXY/BTAL/BIL; otherwise route to TQQQ or 
+    EDC based on EM momentum. 
+
+  Extractable pattern:
+    Apply a bond RSI signal (IEI vs EEM) combined with TQQQ momentum 
+    and TMF drawdown to route between leveraged long, leveraged short, 
+    volatility, and cash tiers across both EM and US tech regimes. 
+
+  Regime tags:
+    bear_sustained         effective    [inferred]
+    bull_low_vol           effective    [inferred]
+    sideways_chop          ineffective  [inferred]
+
+  Substitute: VIXY → UVXY
+    UVXY is a VIX-linked long-volatility ETF serving the same crash-hedge role as VIXY
+
+  No substitute: EDZ
+    no_substitute: 3x inverse EM ETF — no EM exposure in generator universe
+
+  No substitute: BTAL
+    no_substitute: managed futures category not in universe
+
+  No substitute: EDC
+    no_substitute: 3x leveraged EM bull ETF — no EM exposure in generator universe
+
+  Parameters:
+    cumulative-return.asset                TQQQ
+    cumulative-return.threshold            6
+    current-price.asset                    EEM
+    current-price.threshold                EEM
+    max-drawdown.asset                     TMF
+    max-drawdown.threshold                 7
+    relative-strength-index.asset          IEI
+    relative-strength-index.threshold      EEM
+    relative-strength-index.window         14
+
+  Role note: Routes between EM bull (EDC), EM bear (EDZ), US tech (TQQQ), volatility (VIXY), managed futures (BTAL), and cash (BIL) based on EM RSI, TQQQ momentum, TMF drawdown, and EEM price signals — a multi-regime EM + tech router.
+
+── ms-044 — TQQQ or not | BlackSwan MeanRev BondSignal ──
+  Source:                          named
+  Assets:                          4 total
+    Tickers:                       TQQQ, VIXY, BIL, BTAL
+  In-universe:                     ✗ NO
+  Recomposable:                    partial
+  Role:                            crash_guard
+  Confidence:                      87%
+
+  Plain English:
+    If BND RSI exceeds SPY OR TQQQ cumulative return exceeds 6% OR TMF 
+    max-drawdown exceeds 7% OR QQQ price signals stress, hold VIXY or 
+    BIL; otherwise hold TQQQ. 
+
+  Extractable pattern:
+    Replicate the same 4-condition crash gate (BND RSI vs SPY, TQQQ 6% 
+    cumret, TMF 7% drawdown, QQQ price check) without explicit windows 
+    to use broker-default lookbacks as a robustness variant. 
+
+  Regime tags:
+    vix_spike              effective    [inferred]
+    bear_sustained         effective    [inferred]
+    bull_low_vol           ineffective  [inferred]
+
+  Substitute: VIXY → UVXY
+    UVXY is a VIX-linked long-volatility ETF serving the same crash-hedge role as VIXY
+
+  No substitute: BTAL
+    no_substitute: managed futures category not in universe
+
+  Parameters:
+    cumulative-return.asset                TQQQ
+    cumulative-return.threshold            6
+    current-price.asset                    QQQ
+    current-price.threshold                QQQ
+    max-drawdown.asset                     TMF
+    max-drawdown.threshold                 7
+    relative-strength-index.asset          BND
+    relative-strength-index.threshold      SPY
+
+  Role note: Structurally identical to ms-041 (same 4-signal compound gate, same asset set) but without explicit parameter windows — likely a stripped-down or default-window variant of the same crash-guard pattern.
+
+── ms-045 — B: If long term TLT is trending down, safety: Long Term, 2 Least Volatile* ──
+  Source:                          named
+  Assets:                          29 total
+    First 10:                      TECS, SOXS, SPXL, UVXY, TQQQ, TYO, SQQQ, PUI, SOXL, EEMV  (+19 more)
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            regime_router
+  Confidence:                      75%
+
+  Plain English:
+    If IEF 10-period moving-average return is below SH AND SPY is 
+    below its 210-period EMA AND BIL 7-period RSI exceeds IEF AND TQQQ 
+    1-day return exceeds 5.5% AND DBC 20-day vol exceeds SPY, route to 
+    the 2 least-volatile assets from a broad leveraged universe; 
+    otherwise hold TQQQ or other bull-trending assets. 
+
+  Extractable pattern:
+    Use a 5-condition long-term regime filter (bond trend, 210-period 
+    SPY EMA, cash RSI vs bonds, TQQQ 5.5% day-return spike, commodity 
+    vol vs equity vol) to switch a large leveraged asset pool into a 
+    minimum-volatility 2-asset selection during stress regimes. 
+
+  Regime tags:
+    bear_sustained         effective    [inferred]
+    bull_low_vol           effective    [inferred]
+    vix_spike              effective    [inferred]
+
+  No substitute: TYO
+    no_substitute: fixed income not in universe
+
+  Substitute: PUI → SPXL
+    PUI is a leveraged utility proxy; SPXL fills a broad leveraged equity role as closest in-universe analog
+
+  Substitute: SPXU → SPXS
+    SPXU is 3x inverse S&P — SPXS is the direct in-universe equivalent
+
+  Substitute: QLD → TQQQ
+    QLD is 2x NASDAQ — TQQQ is 3x NASDAQ, closest leveraged tech analog in universe
+
+  No substitute: EEMV
+    no_substitute: low-volatility EM ETF — no EM exposure in generator universe
+
+  No substitute: TMV
+    no_substitute: fixed income not in universe
+
+  No substitute: UCO
+    no_substitute: leveraged commodity ETF — no commodity exposure in generator universe
+
+  Parameters:
+    cumulative-return.asset                TQQQ
+    cumulative-return.threshold            5.5
+    cumulative-return.window               1
+    exponential-moving-average-price.asset SPY
+    exponential-moving-average-price.threshold SPY
+    exponential-moving-average-price.window 210
+    moving-average-return.asset            IEF
+    moving-average-return.threshold        SH
+    moving-average-return.window           10
+    relative-strength-index.asset          BIL
+    relative-strength-index.threshold      IEF
+    relative-strength-index.window         7
+    standard-deviation-return.asset        DBC
+    standard-deviation-return.threshold    SPY
+    standard-deviation-return.window       20
+
+  Role note: Complex multi-signal long-term regime router: uses IEF moving-average return vs SH, SPY 210-period EMA, BIL RSI vs IEF, TQQQ 1-day 5.5% cumret, and DBC volatility vs SPY to select from a 29-asset universe spanning leveraged bull, leveraged bear, volatility, and commodity proxies. Volatile asset selection by low standard-deviation ranking in safety mode.
+
+── ms-046 — Beta Baller Wrapper | Modded ──
+  Source:                          named
+  Assets:                          33 total
+    First 10:                      TECS, SOXS, SPXL, UVXY, TQQQ, TYO, SQQQ, PUI, SOXL, EEMV  (+23 more)
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            regime_router
+  Confidence:                      82%
+
+  Plain English:
+    If SPY is above its 210-day EMA and TQQQ 1-day cumulative return 
+    exceeds 5.5% and IEF moving-average return beats SH and BIL RSI(7) 
+    exceeds IEF RSI and DBC 20-day stddev is below SPY stddev, hold 
+    leveraged bull assets (SPXL/TQQQ/TECL); otherwise route toward 
+    bear or defensive assets (SQQQ/SOXS/TECS/UVXY). 
+
+  Extractable pattern:
+    Combine SPY 210-day EMA trend filter, TQQQ 1-day 5.5% 
+    cumulative-return gate, IEF moving-average return vs SH, BIL 
+    RSI(7) vs IEF RSI, and DBC volatility vs SPY stddev as a layered 
+    multi-signal regime router before allocating to leveraged bull or 
+    bear ETFs. 
+
+  Regime tags:
+    bull_low_vol           effective    [inferred]
+    bear_sustained         effective    [inferred]
+    vix_spike              ineffective  [inferred]
+
+  No substitute: TYO
+    no_substitute: fixed income not in universe
+
+  Parameters:
+    cumulative-return.asset                TQQQ
+    cumulative-return.threshold            5.5
+    cumulative-return.window               1
+    exponential-moving-average-price.asset SPY
+    exponential-moving-average-price.threshold SPY
+    exponential-moving-average-price.window 210
+    moving-average-return.asset            IEF
+    moving-average-return.threshold        SH
+    moving-average-return.window           10
+    relative-strength-index.asset          BIL
+    relative-strength-index.threshold      IEF
+    relative-strength-index.window         7
+    standard-deviation-return.asset        DBC
+    standard-deviation-return.threshold    SPY
+    standard-deviation-return.window       20
+
+  Role note: Multi-signal regime filter using RSI on BIL vs IEF, moving-average return on IEF vs SH, TQQQ cumulative return threshold, DBC volatility vs SPY, and SPY 210-day EMA — routes across a 33-asset universe including leveraged bull/bear ETFs
+
+── ms-047 — Normal Logic ──
+  Source:                          named
+  Assets:                          2 total
+    Tickers:                       SPXU, SVIX
+  In-universe:                     ✗ NO
+  Recomposable:                    partial
+  Role:                            regime_router
+  Confidence:                      80%
+
+  Plain English:
+    If IEF RSI(10) exceeds PSQ RSI(10), hold SVIX (short volatility); 
+    otherwise hold SPXU (3x inverse S&P). 
+
+  Extractable pattern:
+    Use IEF RSI(10) vs PSQ RSI(10) as a bond-vs-inverse-Nasdaq 
+    divergence signal to toggle between short-volatility (SVIX) and 
+    inverse-equity (SPXS) positions. 
+
+  Regime tags:
+    bull_low_vol           effective    [inferred]
+    bear_sustained         effective    [inferred]
+    sideways_chop          ineffective  [inferred]
+
+  Substitute: SPXU → SPXS
+    SPXU is 3x inverse S&P 500 — SPXS is the direct in-universe equivalent
+
+  Parameters:
+    relative-strength-index.asset          IEF
+    relative-strength-index.threshold      PSQ
+    relative-strength-index.window         10
+
+  Role note: Two-asset router between inverse equity (SPXU) and short-vol (SVIX) conditioned on RSI(10) of IEF vs PSQ — uses bond vs inverse-Nasdaq RSI divergence as the regime signal
+
+── ms-048 — Risk-On ──
+  Source:                          named
+  Assets:                          32 total
+    First 10:                      XOM, ADBE, TRV, HD, V, AMGN, BRK/B, JPM, NFLX, LLY  (+22 more)
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            asset_rotator
+  Confidence:                      72%
+
+  Plain English:
+    Unconditionally rotate among a 32-stock large-cap equity universe 
+    (energy, tech, financials, industrials, healthcare) selecting the 
+    highest-ranked assets by an implicit momentum or 
+    inverse-volatility weighting. 
+
+  Extractable pattern:
+    Apply inverse-volatility or momentum ranking across a broad 
+    multi-sector large-cap equity universe as the risk-on allocation 
+    leg, with no defensive filter — structure is reusable by 
+    substituting diversified in-universe proxies (SPY/QQQ/SPXL) for 
+    the individual stock basket. 
+
+  Regime tags:
+    bull_low_vol           effective    [inferred]
+    bear_sustained         ineffective  [inferred]
+    sideways_chop          ineffective  [inferred]
+
+  No substitute: XOM
+    logic_only: large equity universe — extract RSI/momentum logic, not tickers
+
+  Role note: 32-stock risk-on universe (individual equities across sectors — energy, tech, financials, industrials, healthcare) with no explicit conditional parameters; likely equal-weight or inverse-volatility ranked rotation among large-cap individual stocks
+
+── ms-049 — Risk-On - Elevated VIX - Stable/Normal rates ──
+  Source:                          named
+  Assets:                          38 total
+    First 10:                      SOXS, XOM, ADBE, XLV, XLI, XLB, XLU, USDU, V, BRK/B  (+28 more)
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            regime_router
+  Confidence:                      78%
+
+  Plain English:
+    If BND RSI(45) exceeds SPY RSI and TQQQ 1-day cumulative return 
+    exceeds 5.5% and TMF max-drawdown over 10 days is below 7% and QQQ 
+    current price is above QQQ threshold, hold risk-on assets (sector 
+    ETFs, individual stocks); otherwise route to defensive or bear 
+    assets (SOXS, USDU). 
+
+  Extractable pattern:
+    Layer BND RSI(45) vs SPY RSI, TQQQ 1-day 5.5% cumulative-return 
+    gate, TMF 10-day max-drawdown below 7%, and a QQQ self-referential 
+    price check as compound regime filters for 
+    elevated-VIX/stable-rate market conditions before allocating to 
+    risk-on sector positions. 
+
+  Regime tags:
+    vix_spike              effective    [inferred]
+    bull_low_vol           ineffective  [inferred]
+    bear_sustained         effective    [inferred]
+
+  No substitute: USDU
+    no_substitute: currency/dollar ETF category not in universe
+
+  Parameters:
+    cumulative-return.asset                TQQQ
+    cumulative-return.threshold            5.5
+    cumulative-return.window               1
+    current-price.asset                    QQQ
+    current-price.threshold                QQQ
+    max-drawdown.asset                     TMF
+    max-drawdown.threshold                 7
+    max-drawdown.window                    10
+    relative-strength-index.asset          BND
+    relative-strength-index.threshold      SPY
+    relative-strength-index.window         45
+
+  Role note: Elevated-VIX, stable-rates regime branch: routes among a 38-asset universe (individual stocks, sector ETFs, bear ETFs, fixed income) using BND RSI(45) vs SPY, TQQQ 1-day cumulative return, TMF max-drawdown(10) vs 7%, and QQQ price vs QQQ (self-referential price gate)
+
+── ms-050 — This is How BWC Beta Balls ──
+  Source:                          named
+  Assets:                          80 total
+    First 10:                      XLB, XLV, USDU, XLU, LLY, AMD, CSCO, SVXY, META, XLP  (+70 more)
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            regime_router
+  Confidence:                      85%
+
+  Plain English:
+    If SPY is above its 210-day EMA and TQQQ 1-day cumulative return 
+    exceeds 5.5% and IEF moving-average return(10) beats SH and IEF 
+    RSI(10) beats PSQ RSI and TMF max-drawdown(10) is below 7% and DBC 
+    stddev(20) is below SPY stddev and TQQQ price is above TQQQ MA and 
+    SPY 3-day MA is rising and UVXY price stddev(5) is below 
+    threshold, allocate to risk-on assets (individual stocks, sector 
+    ETFs, SVXY); otherwise route to bear or volatility assets (SOXS, 
+    UVXY, SQQQ). 
+
+  Extractable pattern:
+    Combine nine layered regime signals (SPY 210-day EMA, TQQQ 1-day 
+    5.5% cumulative-return gate, IEF MA-return vs SH, IEF RSI(10) vs 
+    PSQ, TMF 10-day max-drawdown <7%, DBC stddev vs SPY, TQQQ 
+    self-referential price, SPY 3-day MA, UVXY price stddev(5)) with 
+    inverse-vol weighting as a comprehensive bull/bear/vol regime 
+    router across a large multi-asset universe. 
+
+  Regime tags:
+    bull_low_vol           effective    [inferred]
+    bear_sustained         effective    [inferred]
+    vix_spike              effective    [inferred]
+
+  No substitute: USDU
+    no_substitute: currency/dollar ETF category not in universe
+
+  Parameters:
+    cumulative-return.asset                TQQQ
+    cumulative-return.threshold            5.5
+    cumulative-return.window               1
+    current-price.asset                    TQQQ
+    current-price.threshold                TQQQ
+    exponential-moving-average-price.asset SPY
+    exponential-moving-average-price.threshold SPY
+    exponential-moving-average-price.window 210
+    invvol_window                          10
+    max-drawdown.asset                     TMF
+    max-drawdown.threshold                 7
+    max-drawdown.window                    10
+    moving-average-price.asset             SPY
+    moving-average-price.threshold         SPY
+    moving-average-price.window            3
+    moving-average-return.asset            IEF
+    moving-average-return.threshold        SH
+    moving-average-return.window           10
+    relative-strength-index.asset          IEF
+    relative-strength-index.threshold      PSQ
+    relative-strength-index.window         10
+    standard-deviation-price.asset         UVXY
+    standard-deviation-price.threshold     UVXY
+    standard-deviation-price.window        5
+    standard-deviation-return.asset        DBC
+    standard-deviation-return.threshold    SPY
+    standard-deviation-return.window       20
+
+  Role note: Master 80-asset wrapper combining the full signal stack: TMF max-drawdown, IEF RSI vs PSQ, TQQQ cumulative return, DBC stddev vs SPY, TQQQ self-referential price, SPY 3-day MA, UVXY price stddev(5), IEF moving-average return vs SH, inverse-vol weighting, and SPY 210-day EMA — the comprehensive parent router across bull/bear/vol/defensive assets
+
+── ms-051 — UVXY Replacement ──
+  Source:                          named
+  Assets:                          3 total
+    Tickers:                       VIXY, BIL, BTAL
+  In-universe:                     ✗ NO
+  Recomposable:                    partial
+  Role:                            crash_guard
+  Confidence:                      78%
+
+  Plain English:
+    If volatility conditions warrant protection, hold VIXY (VIX 
+    futures proxy) and BTAL (anti-beta hedge); otherwise hold BIL as 
+    safe haven. 
+
+  Extractable pattern:
+    Combine a volatility long (VIXY/UVXY) with an anti-beta hedge as a 
+    dual-layer crash guard, falling back to BIL when neither signal 
+    triggers. 
+
+  Regime tags:
+    vix_spike              effective    [inferred]
+    bear_sustained         effective    [inferred]
+    bull_low_vol           ineffective  [inferred]
+
+  No substitute: BTAL
+    no_substitute: managed futures category not in universe
+
+  Role note: VIXY/BTAL combination serves as volatility spike protection; BIL as safe fallback
+
+── ms-052 — TQQQ FTLT ──
+  Source:                          named
+  Assets:                          19 total
+    First 10:                      SVIX, TQQQ, SQQQ, SOXL, PSQ, XLP, TECL, SMH, BULZ, DIA  (+9 more)
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            regime_router
+  Confidence:                      82%
+
+  Plain English:
+    If SPY is above its current price threshold AND SQQQ RSI(10) < 31 
+    AND QQQ 70-day cumulative return > -15%, hold bull tech assets 
+    (TQQQ/TECL/SOXL); if bearish signals trigger hold SQQQ/inverse 
+    assets; otherwise hold SHY/TMF/BIL. 
+
+  Extractable pattern:
+    Use SPY price vs MA as primary regime gate, SQQQ RSI(10) < 31 as 
+    oversold re-entry signal, and QQQ 70-day cumulative return > -15% 
+    as trend confirmation before routing to leveraged bull tech 
+    positions. 
+
+  Regime tags:
+    bull_low_vol           effective    [inferred]
+    bear_sustained         effective    [inferred]
+    sideways_chop          ineffective  [inferred]
+
+  No substitute: SHY
+    no_substitute: fixed income not in universe
+
+  No substitute: TMF
+    no_substitute: fixed income not in universe
+
+  No substitute: UUP
+    no_substitute: currency ETF not in universe
+
+  No substitute: XLP
+    XLP fills consumer staples defensive sector role — no direct in-universe substitute
+
+  Substitute: SMH → SOXL
+    SMH fills semiconductor sector role — SOXL is the 3x leveraged semiconductor analog
+
+  No substitute: SPLV
+    SPLV fills low-volatility equity sector role — no direct in-universe substitute
+
+  Substitute: PSQ → SQQQ
+    PSQ is 1x inverse QQQ — SQQQ is the 3x inverse analog available in universe
+
+  Substitute: BULZ → TQQQ
+    BULZ is 3x tech bull — TQQQ is equivalent leveraged tech bull
+
+  Substitute: FNGU → TECL
+    FNGU is 3x FANG+ — TECL is equivalent 3x tech bull in universe
+
+  Parameters:
+    cumulative-return.asset                QQQ
+    cumulative-return.threshold            -15
+    cumulative-return.window               70
+    current-price.asset                    SPY
+    current-price.threshold                SPY
+    relative-strength-index.asset          SQQQ
+    relative-strength-index.threshold      31
+    relative-strength-index.window         10
+
+  Role note: Routes between bull leveraged tech, bear leveraged tech, and safe assets based on SPY price vs MA, SQQQ RSI, and QQQ cumulative return thresholds
+
+── ms-053 — B.A.A: Risk Off, Rising Rates (TMV)* - LETF Basket^ ──
+  Source:                          named
+  Assets:                          20 total
+    First 10:                      TECS, SOXS, UVXY, TQQQ, SQQQ, SOXL, TMV, TECL, SPXS, UCO  (+10 more)
+  In-universe:                     ✗ NO
+  Recomposable:                    logic_only
+  Role:                            regime_router
+  Confidence:                      75%
+
+  Plain English:
+    If SPY is above its EMA(210) AND BIL RSI(7) exceeds IEF RSI 
+    threshold AND TQQQ 1-day return > 5.5% AND SH 5-day MA return 
+    exceeds STIP AND TMV 5-day return std-dev exceeds DBC, hold 
+    leveraged bull basket (TQQQ/TECL/SOXL); if rising-rate bear 
+    signals dominate hold TECS/SOXS/SQQQ/TMV; otherwise hold safe 
+    assets. 
+
+  Extractable pattern:
+    Use a 5-signal cascade (EMA(210) trend, relative RSI between rate 
+    instruments, TQQQ 1-day 5.5% momentum gate, inverse-equity MA 
+    return, and volatility dispersion) to route between leveraged 
+    bull, leveraged bear, and safe-haven allocations in rising-rate 
+    regimes. 
+
+  Regime tags:
+    bear_sustained         effective    [inferred]
+    vix_spike              effective    [inferred]
+    bull_low_vol           ineffective  [inferred]
+
+  No substitute: TMV
+    no_substitute: fixed income inverse ETF not in universe
+
+  No substitute: UCO
+    no_substitute: commodity/oil ETF not in universe
+
+  No substitute: BTAL
+    no_substitute: managed futures category not in universe
+
+  No substitute: EFA
+    no_substitute: international equity ETF not in universe
+
+  Substitute: SPXU → SPXS
+    SPXU is 3x inverse S&P 500 — SPXS is the direct in-universe equivalent
+
+  No substitute: UGL
+    no_substitute: gold 2x leveraged ETF not in universe
+
+  No substitute: TNA
+    no_substitute: small-cap leveraged ETF not in universe
+
+  No substitute: ERX
+    no_substitute: energy sector leveraged ETF not in universe
+
+  Parameters:
+    cumulative-return.asset                TQQQ
+    cumulative-return.threshold            5.5
+    cumulative-return.window               1
+    exponential-moving-average-price.asset SPY
+    exponential-moving-average-price.threshold SPY
+    exponential-moving-average-price.window 210
+    moving-average-return.asset            SH
+    moving-average-return.threshold        STIP
+    moving-average-return.window           5
+    relative-strength-index.asset          BIL
+    relative-strength-index.threshold      IEF
+    relative-strength-index.window         7
+    standard-deviation-return.asset        TMV
+    standard-deviation-return.threshold    DBC
+    standard-deviation-return.window       5
+
+  Role note: Complex multi-signal router for risk-off rising rates environment; uses EMA(210), RSI(7), 1-day TQQQ return, SH moving average return, and TMV volatility to navigate leveraged long/short/bond positions
+
+── ms-054 — LONG GROUP (NO SVIX) ──
+  Source:                          named
+  Assets:                          4 total
+    Tickers:                       TECL, BULZ, FNGU, TQQQ
+  In-universe:                     ✗ NO
+  Recomposable:                    partial
+  Role:                            asset_rotator
+  Confidence:                      85%
+
+  Plain English:
+    Hold an equal-weighted or momentum-ranked basket of leveraged tech 
+    bull ETFs (TECL, BULZ, FNGU, TQQQ) when bullish conditions are 
+    confirmed by the parent strategy. 
+
+  Extractable pattern:
+    Construct a leveraged tech bull basket (TECL + TQQQ + analogs) as 
+    a named long group that can be swapped in as a unit when regime 
+    signals turn bullish. 
+
+  Regime tags:
+    bull_low_vol           effective    [inferred]
+    bear_sustained         ineffective  [inferred]
+    sideways_chop          ineffective  [inferred]
+
+  Substitute: BULZ → TQQQ
+    BULZ is 3x tech bull — TQQQ is equivalent leveraged tech bull in universe
+
+  Substitute: FNGU → TECL
+    FNGU is 3x FANG+ — TECL is equivalent 3x tech bull in universe
+
+  Role note: Equal or momentum-weighted basket of leveraged long tech ETFs; selects best performers from TECL, BULZ, FNGU, TQQQ
+
+── ms-055 — SHORT GROUP (NO UVXY) ──
+  Source:                          named
+  Assets:                          3 total
+    Tickers:                       TECS, SOXS, SQQQ
+  In-universe:                     ✓ YES
+  Recomposable:                    full
+  Role:                            asset_rotator
+  Confidence:                      90%
+
+  Plain English:
+    Hold an equal-weighted or momentum-ranked basket of leveraged tech 
+    bear ETFs (TECS, SOXS, SQQQ) when bearish conditions are confirmed 
+    by the parent strategy. 
+
+  Extractable pattern:
+    Construct a named leveraged bear basket (TECS + SOXS + SQQQ) as a 
+    modular short group that activates as a unit under bearish regime 
+    signals, providing diversified inverse tech exposure. 
+
+  Regime tags:
+    bear_sustained         effective    [inferred]
+    vix_spike              effective    [inferred]
+    bull_low_vol           ineffective  [inferred]
+
+  Role note: Equal or momentum-weighted basket of leveraged bear tech ETFs held when bearish conditions trigger; all assets fully in-universe
+
+  Recomposability summary:
+    full=6  partial=26  logic_only=23
+
+============================================================
+PASS/FAIL CHECKLIST
+============================================================
+  ✓ PASS  ≥1 mini-strategy extracted
+  ✓ PASS  Round-trip verification passed
+  ✓ PASS  All have role (not unknown/missing)
+  ✓ PASS  All have plain_english
+  ✓ PASS  All have ≥1 regime tag
+  ✓ PASS  All have extractable_pattern
+  ✓ PASS  Claude parsed successfully
+
+  ══ ALL CHECKS PASSED ══
+

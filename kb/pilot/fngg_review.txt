@@ -1,0 +1,296 @@
+
+============================================================
+FNGG PILOT REVIEW — 2026-04-07 18:15
+============================================================
+Symphony: Extended OOS Outliers (n9J6L8weCzu2vAUrMWnm)
+Sharpe: 2.13  CAGR: 60.5%  Max DD: 9.2%
+
+── EXTRACTION SUMMARY ──
+  Total mini-strategies:       7
+  Named groups:                7
+  Structural:                  0
+  Compression ratio:           797.7x
+  Round-trip verified:         ✓ PASS
+  Claude parse success:        ✓ YES
+
+  Claude taxonomy notes:
+  "Several observations: (1) All 7 mini-strategies have substantial out-of-universe asset exposure, with ms-007 being extreme at 1736 assets and ~80 out-of-universe tickers — this symphony appears to be assembled from external strategies not designed for this generator's universe. (2) ms-001 and ms-006 both use TMF/bond-stress signals as crash guards, suggesting the symphony uses bond-market dislocation as a key risk-off trigger — TMF is out-of-universe but appears repeatedly as a signal asset rather than a held asset. (3) ms-004's RSI OB/OS framework with 491 assets is anomalous — it functions more like a stock-picker overlaid on leveraged ETFs than a pure rotator; the individual equity universe is entirely out-of-universe. (4) The TQQQ cumulative-return threshold of 5.5% appears in ms-002, ms-004, ms-006, and ms-007 — this is a shared momentum trigger across multiple sub-strategies, suggesting a coordinated TQQQ momentum gate is embedded throughout the symphony. (5) ms-007's 210-day EMA on SPY combined with 3-day MA creates a dual-timeframe trend filter (long-term regime + short-term entry), which is a sophisticated but difficult-to-classify pattern sitting between regime_router and momentum_selector — regime_router was chosen as the primary classification given SPY is the signal asset."
+
+============================================================
+MINI-STRATEGIES
+============================================================
+
+── ms-001 — 60d BND vs 60d BIL ──
+  Source:                      named
+  Assets:                      UUP, PSQ, VIXY, TQQQ, SOXL, SVXY, GLD, IEF, TMF, BIL
+  In-universe:                 ✗ NO (see substitute)
+  Role:                        crash_guard
+  Confidence:                  78%
+
+  Plain English:
+    If QQQ's 15-day max drawdown exceeds 5%, or BND's 2-day cumulative 
+    return is below 0%, or SOXX RSI(10) falls below 30, exit leveraged 
+    positions and hold BIL; otherwise hold TQQQ or SOXL. 
+
+  Regime tags:
+    vix_spike            effective    [inferred]
+    bear_sustained       effective    [inferred]
+    bull_low_vol         ineffective  [inferred]
+
+  Out-of-universe substitute:
+    VIXY → UVXY
+    Reason: Both are long-volatility VIX-linked products; UVXY is the in-universe equivalent for long-vol exposure
+
+  Parameters:
+    cumulative-return.asset             BND
+    cumulative-return.threshold         0
+    cumulative-return.window            2
+    max-drawdown.asset                  QQQ
+    max-drawdown.threshold              5
+    max-drawdown.window                 15
+    relative-strength-index.asset       SOXX
+    relative-strength-index.threshold   30
+    relative-strength-index.window      10
+
+  Role note: Primary signal is QQQ max-drawdown over 15 days with a 5% threshold, combined with BND 2-day cumulative return and SOXX RSI(10) at 30. The dominant crash-protection logic is the QQQ drawdown gate that routes to safety assets (BIL) when drawdown exceeds 5%. The BND relative return acts as a secondary bond-flight signal. This is a multi-signal crash guard rather than a pure momentum selector.
+
+── ms-002 — 200D Cross | Volmageddeon ──
+  Source:                      named
+  Assets:                      SQQQ, SPXU, VTI, UPRO, UGL, VIXY, TQQQ, SVXY, UVXY, TECL, TMF, BIL
+  In-universe:                 ✗ NO (see substitute)
+  Role:                        regime_router
+  Confidence:                  82%
+
+  Plain English:
+    If SPY is above its 3-day moving average and SPY max-drawdown is 
+    above 0% and TQQQ cumulative return exceeds 5.5% and UVXY return 
+    standard deviation is below 10, hold TQQQ or UPRO; if SPY crosses 
+    below its moving average or drawdown triggers, route to SQQQ or 
+    BIL; otherwise hold SVXY or TECL. 
+
+  Regime tags:
+    bull_low_vol         effective    [inferred]
+    bear_sustained       effective    [inferred]
+    vix_spike            effective    [inferred]
+
+  Out-of-universe substitute:
+    SPXU → SPXS
+    Reason: Both are 3x inverse S&P 500 ETFs; SPXS is the in-universe equivalent
+
+  Parameters:
+    cumulative-return.asset             TQQQ
+    cumulative-return.threshold         5.5
+    current-price.asset                 SPY
+    current-price.threshold             SPY
+    max-drawdown.asset                  SPY
+    max-drawdown.threshold              0
+    moving-average-price.asset          SPY
+    moving-average-price.threshold      SPY
+    moving-average-price.window         3
+    relative-strength-index.asset       IEF
+    relative-strength-index.threshold   PSQ
+    relative-strength-index.window      10
+    standard-deviation-return.asset     UVXY
+    standard-deviation-return.threshold 10
+    standard-deviation-return.window    10
+
+  Role note: Multiple SPY-based signals (SPY current price vs SPY threshold, SPY 3-day moving average vs SPY threshold, SPY max-drawdown) are used to route capital between bull-mode leveraged assets (TQQQ, UPRO, TECL) and bear-mode inverse/safe assets (SQQQ, BIL). TQQQ cumulative return and UVXY standard deviation add volatility-regime overlays. The dominant pattern is broad market state detection via SPY signals.
+
+── ms-003 — KMLM switcher (single pops)| BT 4/13/22 = A.R. 466% / D.D. 22% ──
+  Source:                      named
+  Assets:                      FTLS, UUP, VIXM, SPXL, SOXL, SVXY, KMLM, SVIX, UVXY, TECL, TMV, TMF
+  In-universe:                 ✗ NO (see substitute)
+  Role:                        asset_rotator
+  Confidence:                  72%
+
+  Plain English:
+    If XLK RSI(10) exceeds the KMLM RSI level (used as dynamic 
+    threshold), rotate into leveraged equity longs (SPXL, SOXL, TECL, 
+    SVIX, SVXY); otherwise rotate into volatility or defensive assets 
+    (VIXM, UVXY). 
+
+  Regime tags:
+    bull_low_vol         effective    [inferred]
+    bear_sustained       effective    [inferred]
+    sideways_chop        ineffective  [inferred]
+
+  Out-of-universe substitute:
+    KMLM → VIXM
+    Reason: KMLM is a managed futures/trend-following ETF used as a defensive benchmark; VIXM is the closest in-universe defensive/volatility asset
+
+  Parameters:
+    relative-strength-index.asset       XLK
+    relative-strength-index.threshold   KMLM
+    relative-strength-index.window      10
+
+  Role note: The sole parameter is RSI(10) on XLK compared against KMLM as a dynamic threshold, which functions as a relative-strength ranking signal to rotate between trend/momentum assets (SVIX, SVXY, SPXL, SOXL, TECL) and defensive/volatility assets (VIXM, UVXY). This is best classified as an asset rotator using RSI to select between candidate sets. The name references KMLM (a managed futures ETF) as a benchmark comparator.
+
+── ms-004 — Pareto's Portfolio: [230706] Basic RSI OB/OS Framework v1.01 (Shared) ──
+  Source:                      named
+  Assets:                      BA, AMZN, HON, TQQQ, SOXL, SVXY, TRV, JNJ, GS, AAPL, SOXS, XOM, HD, GOOG, LLY, UNH, COST, PEP, MCD, TECS, BRK/B, AMGN, JPM, ADBE, UVXY, META, NVDA, AVGO, SQQQ, V, NFLX, CAT, MSFT, GOOGL, AXP, AMD, TSLA, CRM, TECL, CSCO, BIL
+  In-universe:                 ✗ NO (see substitute)
+  Role:                        asset_rotator
+  Confidence:                  75%
+
+  Plain English:
+    If TYO RSI(unspecified window) is below the QQQ RSI level and TQQQ 
+    cumulative return exceeds 5.5%, rotate into top RSI-ranked 
+    leveraged bull ETFs (TQQQ, SOXL, TECL, SVXY); if RSI is overbought 
+    relative to QQQ threshold, rotate into inverse ETFs (SOXS, TECS, 
+    SQQQ); otherwise hold BIL. 
+
+  Regime tags:
+    bull_low_vol         effective    [inferred]
+    bear_sustained       effective    [inferred]
+    sideways_chop        effective    [inferred]
+
+  Out-of-universe substitute:
+    BA → SPY
+    Reason: The large individual equity universe (BA, AMZN, AAPL, etc.) has no direct single in-universe substitute; SPY is the broadest in-universe proxy for large-cap equity exposure
+
+  Parameters:
+    cumulative-return.asset             TQQQ
+    cumulative-return.threshold         5.5
+    relative-strength-index.asset       TYO
+    relative-strength-index.threshold   QQQ
+
+  Role note: RSI on TYO compared against QQQ as threshold, combined with TQQQ cumulative return threshold of 5.5%, is used to select among a very large universe of individual equities and leveraged ETFs (TQQQ, SOXL, SOXS, TECS, TECL, UVXY, SQQQ, SVXY) plus BIL as safe haven. With 491 assets and RSI OB/OS framework in the name, this is a classic RSI-based rotator selecting best/worst performers. The individual stock universe is massive but the in-universe assets are the leveraged ETFs and BIL.
+
+── ms-005 — Just Run This FTLT | 2011-09-13 ──
+  Source:                      named
+  Assets:                      SPHB, VIXY, SOXL, LLY, BTAL, GE, TECL, NVO, COST
+  In-universe:                 ✗ NO (see substitute)
+  Role:                        regime_router
+  Confidence:                  74%
+
+  Plain English:
+    If QQQ current price is above the QQQ threshold level and PSQ 
+    RSI(unspecified window) is below 65, hold TECL (leveraged tech 
+    bull); otherwise route to safe assets (BIL or SOXL depending on 
+    sub-regime), using a 20-day inverse-volatility weighting across 
+    candidate assets. 
+
+  Regime tags:
+    bull_low_vol         effective    [inferred]
+    bear_sustained       effective    [inferred]
+    vix_spike            ineffective  [inferred]
+
+  Out-of-universe substitute:
+    SPHB → TQQQ
+    Reason: SPHB is a high-beta S&P 500 ETF; TQQQ is the closest in-universe high-beta leveraged equivalent
+
+  Parameters:
+    current-price.asset                 QQQ
+    current-price.threshold             QQQ
+    invvol_window                       20
+    relative-strength-index.asset       PSQ
+    relative-strength-index.threshold   65
+
+  Role note: QQQ current price compared against QQQ threshold (price vs. own level, likely a moving average cross encoded as current price vs benchmark) and PSQ RSI(unspecified) above 65 together route between TECL (bull) and safe/inverse allocations. The invvol_window of 20 suggests inverse-volatility weighting within branches. The QQQ price signal is the primary regime detector.
+
+── ms-006 — Modified Foreign Rat ──
+  Source:                      named
+  Assets:                      VIXY, TQQQ, EDZ, BTAL, EDC, BIL
+  In-universe:                 ✗ NO (see substitute)
+  Role:                        crash_guard
+  Confidence:                  76%
+
+  Plain English:
+    If TMF's max drawdown exceeds 7%, or TQQQ's cumulative return 
+    falls below 6%, or IEI RSI(14) falls below the EEM RSI level, or 
+    EEM current price is below the EEM threshold, hold BIL as safe 
+    haven; otherwise hold TQQQ. 
+
+  Regime tags:
+    vix_spike            effective    [inferred]
+    bear_sustained       effective    [inferred]
+    bull_low_vol         ineffective  [inferred]
+
+  Out-of-universe substitute:
+    EDC → SPXL
+    Reason: EDC is a 3x leveraged emerging markets bull ETF; SPXL (3x S&P 500 bull) is the closest in-universe leveraged long substitute
+
+  Parameters:
+    cumulative-return.asset             TQQQ
+    cumulative-return.threshold         6
+    current-price.asset                 EEM
+    current-price.threshold             EEM
+    max-drawdown.asset                  TMF
+    max-drawdown.threshold              7
+    relative-strength-index.asset       IEI
+    relative-strength-index.threshold   EEM
+    relative-strength-index.window      14
+
+  Role note: TMF max-drawdown threshold of 7% acts as a bond-stress crash signal. TQQQ cumulative return threshold of 6% and IEI RSI(14) vs EEM threshold, plus EEM current price vs EEM threshold, form a multi-signal crash detection system. When bond stress (TMF drawdown) or equity momentum failure signals trigger, the strategy exits to BIL. This is a crash guard with an international/EM overlay.
+
+── ms-007 — This is How BWC Beta Balls ──
+  Source:                      named
+  Assets:                      AMZN, TYO, SH, XLV, SOXL, SVXY, GLD, UCO, SHY, SOXS, QLD, UNH, TMV, EEM, PEP, PUI, UPRO, UMDD, TMF, SQQQ, TLT, TNA, PSQ, SMH, JNJ, AAPL, SPLV, USD, DBC, BTAL, XLI, SPY, UVXY, FNGU, USDU, NVDA, BULZ, GOOGL, TSLA, TECL, SPXU, QQQ, VIXM, XLE, VIXY, FNGD, UVIX, XLP, XOM, LLY, TECS, XLRE, JPM, META, QID, XLU, SPXL, SVIX, DIA, CSCO, BIL, UGL, XLB, TQQQ, ERX, GOOG, EEMV, COST, BRK/B, GOVT, SHV, ADBE, AVGO, V, UUP, NFLX, SPXS, MSFT, AMD, EFA
+  In-universe:                 ✗ NO (see substitute)
+  Role:                        regime_router
+  Confidence:                  80%
+
+  Plain English:
+    If SPY is above its 3-day MA and above its 210-day EMA and TQQQ 
+    current price exceeds TQQQ threshold and TQQQ 1-day return exceeds 
+    5.5% and TMF drawdown is below 7% and IEF RSI(10) exceeds PSQ 
+    level and DBC volatility is below SPY level and UVXY price 
+    volatility is low, hold leveraged bull ETFs (TQQQ, UPRO, SPXL, 
+    TECL, SOXL, SVXY, SVIX); if any regime signal flips, route to 
+    inverse ETFs (SQQQ, SPXS, TECS, SOXS), volatility products (UVXY, 
+    VIXM), or BIL based on sub-condition hierarchy. 
+
+  Regime tags:
+    bull_low_vol         effective    [inferred]
+    bear_sustained       effective    [inferred]
+    vix_spike            effective    [inferred]
+
+  Out-of-universe substitute:
+    FNGU → TQQQ
+    Reason: FNGU is a 3x leveraged FANG+ ETF; TQQQ is the closest in-universe 3x tech-adjacent leveraged bull ETF
+
+  Parameters:
+    cumulative-return.asset             TQQQ
+    cumulative-return.threshold         5.5
+    cumulative-return.window            1
+    current-price.asset                 TQQQ
+    current-price.threshold             TQQQ
+    exponential-moving-average-price.asset SPY
+    exponential-moving-average-price.threshold SPY
+    exponential-moving-average-price.window 210
+    invvol_window                       10
+    max-drawdown.asset                  TMF
+    max-drawdown.threshold              7
+    max-drawdown.window                 10
+    moving-average-price.asset          SPY
+    moving-average-price.threshold      SPY
+    moving-average-price.window         3
+    moving-average-return.asset         IEF
+    moving-average-return.threshold     SH
+    moving-average-return.window        10
+    relative-strength-index.asset       IEF
+    relative-strength-index.threshold   PSQ
+    relative-strength-index.window      10
+    standard-deviation-price.asset      UVXY
+    standard-deviation-price.threshold  UVXY
+    standard-deviation-price.window     5
+    standard-deviation-return.asset     DBC
+    standard-deviation-return.threshold SPY
+    standard-deviation-return.window    20
+
+  Role note: This is the most complex mini-strategy with 8+ parameters spanning SPY moving average (3-day MA vs SPY threshold), SPY exponential moving average (210-day EMA vs SPY threshold), TQQQ current price vs TQQQ threshold, TQQQ 1-day cumulative return >5.5%, TMF max-drawdown >7%, IEF RSI(10) vs PSQ threshold, DBC standard deviation vs SPY threshold, UVXY standard deviation-price, and IEF moving average return vs SH threshold. The dominant architecture is multi-signal broad market regime detection using SPY MA signals as the spine, routing across a massive universe of leveraged ETFs, inverse ETFs, volatility products, and BIL.
+
+============================================================
+PASS/FAIL CHECKLIST
+============================================================
+  ✓ PASS  At least 1 mini-strategy extracted
+  ✓ PASS  Round-trip verification passed
+  ✓ PASS  All mini-strategies have role assigned
+  ✓ PASS  All mini-strategies have plain_english
+  ✓ PASS  All mini-strategies have at least one regime tag
+  ✓ PASS  Claude parsed successfully
+  ✓ PASS  No roles returned as "unknown"
+
+  ══ ALL CHECKS PASSED — pipeline validated ══
+  Ready to run on additional portfolio symphonies.
+

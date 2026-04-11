@@ -1,0 +1,180 @@
+======================================================================
+SYMPHONY ANALYSIS REPORT
+Generated: 2026-03-23
+Symphonies analyzed: 25
+======================================================================
+
+── PERFORMANCE RANKING (by 1Y Sharpe) ──
+SYMPHONY                                              6Msh  1Ysh  2Ysh  3Ysh     1Yar     1Ydd
+────────────────────────────────────────────────────────────────────────────────────────────────────
+Vigilante Bio - Mach BETA 3yr (Buy Copy)              4.73  5.06  3.32  3.27   5161.1%     18.9%
+Custom Sisyphus_Pareto_01s90_Nova                     0.61  2.86  3.19  3.61     64.2%      6.7%
+Combined Wild West and RSI Frankenfest                1.26  2.23  2.20  2.43     63.2%      8.7%
+Custom Growth Blend v2.2 RL + EMA (Buy Copy)          2.38  2.09  2.09  2.09     82.1%     18.1%
+Sisyphus V0.0 (291,7,2022) (Invest Copy)              1.18  1.79  3.03  3.51     52.4%     12.0%
+01 s90 50/40 maxDD (190/40 s10-18-11) 2.36sh 50.2sd  -0.27  1.78  1.75  1.88    175.2%     20.4%
+Extended OOS Outliers 9/7/24 (Invest Copy)            1.36  1.74  1.74  1.74     45.9%      9.7%
+NOVA | Best Leverage Mashup w/Vol Check (VIXM) | v1  -0.00  1.61  2.21  3.26     45.1%     15.4%
+NOVA | Best Leverage Mashup w/Vol Check (VIXM) | v1  -0.00  1.61  2.21  3.26     45.1%     15.4%
+ema of Pareto/S9 (watch)                             -0.69  1.58  1.65  2.41     30.1%     17.0%
+NOVA | KMLM switcher | Crypto Juice (single pops) |   1.37  1.50  1.85  2.33    127.2%     26.1%
+Custom_Giga_Ema (Buy Copy)                           -0.36  1.43  2.76  2.76     29.6%     18.7%
+The Futurist | Gobi + Beta Baller 12_27_2024          0.78  1.41  2.21  2.21    102.6%     43.1%
+Holy Grail simplified (Invest Copy) (Buy Copy)       -0.37  1.20  1.09  1.44     80.1%     36.0%
+Extended OOS Outliers (FNGG)                          1.45  1.14  2.07  2.76     52.4%     22.1%
+Extended OOS Outliers 11_25_2024                      1.45  1.14  2.07  2.76     52.4%     22.1%
+The Holy Grail (Buy Copy)                            -0.47  1.14  0.96  1.39     69.1%     36.8%
+v2 | Community Discovery Symphony | NOVA (Invest Co   2.02  1.13  2.03  2.35      7.6%      4.6%
+Beta Baller with Rotators Final_(Reduced Leverage)    4.49  1.12  1.05  1.09     33.3%     28.9%
+[*] VT | QQQ Indicator | Template (Buy Copy)         -0.72  1.02  1.06  1.84     48.0%     33.4%
+Uncorrelated Outliers | FM removed and INVERSE  | B   0.17  0.82  1.50  2.32     19.0%     12.1%
+Giga-Symph 2025 (Investor Copy) 3_20_25              -0.17  0.60  2.29  2.87     17.3%     23.4%
+Giga-Symph 2025 (Investor Copy)                      -0.17  0.60  2.29  2.87     17.3%     23.4%
+BTC/FAANGT Rally + VIX Checks 7/18/2023 (Invest Cop   0.63  0.35  1.56  2.10      0.8%     36.3%
+Better Balance Master | 4.8.25 (Invest Copy)         -1.52 -0.48 -0.48 -0.48    -19.2%     31.1%
+
+── YEAR-BY-YEAR SHARPE MATRIX ──
+SYMPHONY                                             2017    2018    2019    2020    2021    2022    2023    2024
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+Giga-Symph 2025 (Investor Copy) 3_20_25               N/A     N/A     N/A     N/A     N/A     N/A    5.38    4.81
+Giga-Symph 2025 (Investor Copy)                       N/A     N/A     N/A     N/A     N/A     N/A    5.38    4.81
+The Futurist | Gobi + Beta Baller 12_27_2024          N/A     N/A     N/A     N/A     N/A     N/A     N/A    4.79
+Custom Sisyphus_Pareto_01s90_Nova                     N/A     N/A     N/A     N/A     N/A     N/A    4.07    4.65
+Uncorrelated Outliers | FM removed and INVERSE  |     N/A     N/A     N/A     N/A     N/A    3.36    5.78    4.57
+Extended OOS Outliers (FNGG)                          N/A     N/A     N/A     N/A     N/A    4.74    6.13    4.55
+Extended OOS Outliers 11_25_2024                      N/A     N/A     N/A     N/A     N/A    4.74    6.13    4.55
+NOVA | Best Leverage Mashup w/Vol Check (VIXM) |      N/A     N/A     N/A     N/A     N/A    6.40    5.62    4.54
+NOVA | Best Leverage Mashup w/Vol Check (VIXM) |      N/A     N/A     N/A     N/A     N/A    6.40     N/A    4.54
+Custom_Giga_Ema (Buy Copy)                            N/A     N/A     N/A     N/A     N/A     N/A     N/A    4.31
+Custom Foreign RINF mod updated with 1x below spy     N/A     N/A    0.83    3.04    2.66    2.93    5.51    3.94
+v2 | Community Discovery Symphony | NOVA (Invest      N/A     N/A     N/A     N/A    6.52    3.02    2.85    3.79
+BTC/FAANGT Rally + VIX Checks 7/18/2023 (Invest C     N/A     N/A     N/A     N/A     N/A     N/A    4.46    3.23
+01 s90 50/40 maxDD (190/40 s10-18-11) 2.36sh 50.2    0.67    2.15    2.36    4.42    3.57    3.15    2.01    3.08
+[*] VT | QQQ Indicator | Template (Buy Copy)          N/A     N/A     N/A     N/A     N/A   -0.89    2.84    3.07
+Combined Wild West and RSI Frankenfest                N/A     N/A     N/A     N/A    3.96    1.14    2.74    2.87
+NOVA | KMLM switcher | Crypto Juice (single pops)     N/A     N/A     N/A     N/A     N/A     N/A    6.42    2.82
+ema of Pareto/S9 (watch)                              N/A     N/A    1.07    3.20    2.72    1.59    4.07    2.35
+Beta Baller with Rotators Final_(Reduced Leverage     N/A     N/A     N/A     N/A    3.64    4.39    0.95    2.08
+Holy Grail simplified (Invest Copy) (Buy Copy)       2.60    0.35    2.51    2.88    1.84    1.86    2.60    1.31
+The Holy Grail (Buy Copy)                            2.29    0.65    2.27    3.64    1.91    2.56    2.78    1.31
+Vigilante Bio - Mach BETA 3yr (Buy Copy)             0.54    0.23   -0.23    0.16   -1.45   -0.39    2.47    1.21
+Extended OOS Outliers 9/7/24 (Invest Copy)            N/A     N/A     N/A     N/A     N/A     N/A     N/A     N/A
+Sisyphus V0.0 (291,7,2022) (Invest Copy)              N/A     N/A     N/A     N/A     N/A    5.21    5.97     N/A
+Better Balance Master | 4.8.25 (Invest Copy)          N/A     N/A     N/A     N/A     N/A     N/A     N/A     N/A
+Custom Growth Blend v2.2 RL + EMA (Buy Copy)          N/A     N/A     N/A     N/A     N/A     N/A     N/A     N/A
+
+── FEATURE CORRELATION WITH 1Y SHARPE ──
+FEATURE                                WITH   WITHOUT   DELTA  N_WITH
+──────────────────────────────────────────────────────────────────────
+has_filter_nodes                      1.321     3.040  -1.719      23
+has_managed_futures                   0.977     1.838  -0.861      11
+has_kmlm                              0.962     1.790  -0.829      10
+has_defensive                         1.360     2.181  -0.821      22
+has_btal                              1.347     1.905  -0.558      20
+uses_relative_comparison              1.494     1.199   0.295      22
+has_short_etfs                        1.474     1.289   0.184      23
+
+── REGIME ANALYSIS ──
+
+  2017 [BULL_CALM]  (median Sharpe: 2.29)
+  Top 3:
+    Holy Grail simplified (Invest Copy) (Buy Copy)           sh=2.60
+    The Holy Grail (Buy Copy)                                sh=2.29
+    01 s90 50/40 maxDD (190/40 s10-18-11) 2.36sh 50.2sd      sh=0.67
+  Bottom 3:
+    The Holy Grail (Buy Copy)                                sh=2.29
+    01 s90 50/40 maxDD (190/40 s10-18-11) 2.36sh 50.2sd      sh=0.67
+    Vigilante Bio - Mach BETA 3yr (Buy Copy)                 sh=0.54
+
+  2018 [VOLATILE]  (median Sharpe: 0.65)
+  Top 3:
+    01 s90 50/40 maxDD (190/40 s10-18-11) 2.36sh 50.2sd      sh=2.15
+    The Holy Grail (Buy Copy)                                sh=0.65
+    Holy Grail simplified (Invest Copy) (Buy Copy)           sh=0.35
+  Bottom 3:
+    The Holy Grail (Buy Copy)                                sh=0.65
+    Holy Grail simplified (Invest Copy) (Buy Copy)           sh=0.35
+    Vigilante Bio - Mach BETA 3yr (Buy Copy)                 sh=0.23
+
+  2019 [BULL_STRONG]  (median Sharpe: 2.27)
+  Top 3:
+    Holy Grail simplified (Invest Copy) (Buy Copy)           sh=2.51
+    01 s90 50/40 maxDD (190/40 s10-18-11) 2.36sh 50.2sd      sh=2.36
+    The Holy Grail (Buy Copy)                                sh=2.27
+  Bottom 3:
+    ema of Pareto/S9 (watch)                                 sh=1.07
+    Custom Foreign RINF mod updated with 1x below spy200d a  sh=0.83
+    Vigilante Bio - Mach BETA 3yr (Buy Copy)                 sh=-0.23
+
+  2020 [CRASH_RECOVERY]  (median Sharpe: 3.20)
+  Top 3:
+    01 s90 50/40 maxDD (190/40 s10-18-11) 2.36sh 50.2sd      sh=4.42
+    The Holy Grail (Buy Copy)                                sh=3.64
+    ema of Pareto/S9 (watch)                                 sh=3.20
+  Bottom 3:
+    Custom Foreign RINF mod updated with 1x below spy200d a  sh=3.04
+    Holy Grail simplified (Invest Copy) (Buy Copy)           sh=2.88
+    Vigilante Bio - Mach BETA 3yr (Buy Copy)                 sh=0.16
+
+  2021 [BULL_SPECULATIVE]  (median Sharpe: 2.72)
+  Top 3:
+    v2 | Community Discovery Symphony | NOVA (Invest Copy)   sh=6.52
+    Combined Wild West and RSI Frankenfest                   sh=3.96
+    Beta Baller with Rotators Final_(Reduced Leverage) (Buy  sh=3.64
+  Bottom 3:
+    The Holy Grail (Buy Copy)                                sh=1.91
+    Holy Grail simplified (Invest Copy) (Buy Copy)           sh=1.84
+    Vigilante Bio - Mach BETA 3yr (Buy Copy)                 sh=-1.45
+
+  2022 [BEAR]  (median Sharpe: 3.15)
+  Top 3:
+    NOVA | Best Leverage Mashup w/Vol Check (VIXM) | v1 (In  sh=6.40
+    NOVA | Best Leverage Mashup w/Vol Check (VIXM) | v1 (In  sh=6.40
+    Sisyphus V0.0 (291,7,2022) (Invest Copy)                 sh=5.21
+  Bottom 3:
+    Combined Wild West and RSI Frankenfest                   sh=1.14
+    Vigilante Bio - Mach BETA 3yr (Buy Copy)                 sh=-0.39
+    [*] VT | QQQ Indicator | Template (Buy Copy)             sh=-0.89
+
+  2023 [RECOVERY]  (median Sharpe: 4.46)
+  Top 3:
+    NOVA | KMLM switcher | Crypto Juice (single pops) | (pu  sh=6.42
+    Extended OOS Outliers (FNGG)                             sh=6.13
+    Extended OOS Outliers 11_25_2024                         sh=6.13
+  Bottom 3:
+    Vigilante Bio - Mach BETA 3yr (Buy Copy)                 sh=2.47
+    01 s90 50/40 maxDD (190/40 s10-18-11) 2.36sh 50.2sd      sh=2.01
+    Beta Baller with Rotators Final_(Reduced Leverage) (Buy  sh=0.95
+
+  2024 [BULL_AI]  (median Sharpe: 3.94)
+  Top 3:
+    Giga-Symph 2025 (Investor Copy) 3_20_25                  sh=4.81
+    Giga-Symph 2025 (Investor Copy)                          sh=4.81
+    The Futurist | Gobi + Beta Baller 12_27_2024             sh=4.79
+  Bottom 3:
+    Holy Grail simplified (Invest Copy) (Buy Copy)           sh=1.31
+    The Holy Grail (Buy Copy)                                sh=1.31
+    Vigilante Bio - Mach BETA 3yr (Buy Copy)                 sh=1.21
+
+── LEGO BLOCK INSIGHTS ──
+
+Features present in TOP 5 performers:
+  has_leveraged                       5/5 top symphonies
+  has_btal                            4/5 top symphonies
+  uses_relative_comparison            4/5 top symphonies
+  has_filter_nodes                    4/5 top symphonies
+  has_short_etfs                      4/5 top symphonies
+  has_defensive                       4/5 top symphonies
+
+Features present in BOTTOM performers:
+  has_leveraged                       8/8 bottom symphonies
+  has_btal                            7/8 bottom symphonies
+  has_filter_nodes                    7/8 bottom symphonies
+  has_short_etfs                      7/8 bottom symphonies
+  has_defensive                       7/8 bottom symphonies
+  has_managed_futures                 6/8 bottom symphonies
+  uses_relative_comparison            6/8 bottom symphonies
+  has_kmlm                            5/8 bottom symphonies
+
+RSI Overbought thresholds in top 5: [71, 80, 71, 80, 79]
+RSI Oversold thresholds in top 5:   [31, 30, 13, 30, 30]

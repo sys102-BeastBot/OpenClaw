@@ -1,0 +1,83 @@
+{
+  "step": "root",
+  "name": "SOXL Momentum Surge \u2014 2-Layer Conviction Ride",
+  "description": "R4 seed 4 \u2014 RETURN_CHASER",
+  "rebalance": "daily",
+  "children": [
+    {
+      "step": "if",
+      "children": [
+        {
+          "step": "if-child",
+          "is-else-condition?": false,
+          "lhs-fn": "cumulative-return",
+          "lhs-fn-params": {
+            "window-days": 1
+          },
+          "lhs-val": "SVXY",
+          "comparator": "lt",
+          "rhs-val": "-8",
+          "rhs-fixed-value?": true,
+          "children": [
+            {
+              "step": "asset",
+              "ticker": "BIL",
+              "children": [],
+              "id": "f013978d-af84-44c9-afd8-7db99817685f"
+            }
+          ],
+          "id": "d58c4edd-5cca-4ad2-9980-47bb1d024517"
+        },
+        {
+          "step": "if-child",
+          "is-else-condition?": true,
+          "children": [
+            {
+              "step": "if",
+              "children": [
+                {
+                  "step": "if-child",
+                  "is-else-condition?": false,
+                  "lhs-fn": "cumulative-return",
+                  "lhs-fn-params": {
+                    "window-days": 1
+                  },
+                  "lhs-val": "SOXL",
+                  "comparator": "gt",
+                  "rhs-val": "6.0",
+                  "rhs-fixed-value?": true,
+                  "children": [
+                    {
+                      "step": "asset",
+                      "ticker": "SOXL",
+                      "children": [],
+                      "id": "a6273ece-8841-4de7-8c37-151a74887d0f"
+                    }
+                  ],
+                  "id": "08389145-d80e-420a-807d-986e42c527aa"
+                },
+                {
+                  "step": "if-child",
+                  "is-else-condition?": true,
+                  "children": [
+                    {
+                      "step": "asset",
+                      "ticker": "QQQ",
+                      "children": [],
+                      "id": "a97b665a-c0e7-4a72-891f-56b40bcb69a4"
+                    }
+                  ],
+                  "id": "a31cab18-793a-41c6-8cde-29feeaceda2e"
+                }
+              ],
+              "id": "c1f32cd4-9755-4583-b72c-8a0bbd7b6f80"
+            }
+          ],
+          "id": "f210d69f-c01e-4365-9bb9-6aea53352fe9"
+        }
+      ],
+      "id": "dd88fc35-5863-4486-a292-2ce954977632"
+    }
+  ],
+  "id": "c66ca9c9-218b-412e-9f69-d2574f988a3e"
+}

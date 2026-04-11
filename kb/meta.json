@@ -1,0 +1,146 @@
+{
+  "system": {
+    "version": "1.0.0",
+    "created_at": "2026-03-22T17:33:01Z",
+    "last_updated_at": "2026-03-22T17:33:01Z",
+    "system_mode": "RESEARCH",
+    "execution_permitted": false,
+    "deploy_permitted": false,
+    "halted": false,
+    "halt_reason": null,
+    "halted_at": null
+  },
+  "generations": {
+    "current": 0,
+    "total_completed": 0,
+    "total_strategies_generated": 0,
+    "total_strategies_backtested": 0,
+    "total_strategies_disqualified": 0,
+    "total_backtest_api_calls": 0,
+    "total_optimizer_api_calls": 0,
+    "last_generation_completed_at": null
+  },
+  "best_ever": null,
+  "best_per_archetype": {
+    "SHARPE_HUNTER": null,
+    "RETURN_CHASER": null,
+    "RISK_MINIMIZER": null,
+    "CONSISTENCY": null
+  },
+  "config": {
+    "strategies_per_generation": 6,
+    "backtest_periods": [
+      "6M",
+      "1Y",
+      "2Y",
+      "3Y"
+    ],
+    "optimizer_rough_cut_threshold": 40.0,
+    "default_rebalance_frequency": "daily",
+    "rebalance_frequency_options": [],
+    "asset_universe": [],
+    "broker": "ALPACA_WHITE_LABEL",
+    "benchmark": "SPY",
+    "capital": 10000,
+    "optimizer_combination_cap": 200
+  },
+  "fitness": {
+    "global_weights": {
+      "sharpe": 0.35,
+      "return": 0.4,
+      "drawdown": 0.25
+    },
+    "archetype_weights": {
+      "SHARPE_HUNTER": {
+        "sharpe": 0.45,
+        "return": 0.3,
+        "drawdown": 0.25
+      },
+      "RETURN_CHASER": {
+        "sharpe": 0.3,
+        "return": 0.45,
+        "drawdown": 0.25
+      },
+      "RISK_MINIMIZER": {
+        "sharpe": 0.25,
+        "return": 0.3,
+        "drawdown": 0.45
+      },
+      "CONSISTENCY": {
+        "sharpe": 0.25,
+        "return": 0.25,
+        "drawdown": 0.5
+      }
+    },
+    "period_weights": {
+      "6M": 0.1,
+      "1Y": 0.3,
+      "2Y": 0.3,
+      "3Y": 0.3
+    },
+    "bonuses": {
+      "sharpe_min_threshold": 2.0,
+      "sharpe_bonus": 3,
+      "drawdown_threshold": 15.0,
+      "drawdown_bonus": 3,
+      "return_threshold": 40.0,
+      "return_bonus": 3,
+      "consistency_std_dev_threshold": 10.0,
+      "consistency_bonus": 2,
+      "beats_benchmark_bonus": 1
+    },
+    "disqualifiers": {
+      "min_return": -20.0,
+      "max_drawdown": 65.0,
+      "min_sharpe": -1.0
+    },
+    "graveyard_thresholds": {
+      "poor_performer_absolute": 20,
+      "poor_performer_std_dev_multiplier": 1.5,
+      "poor_performer_logic": "BOTH"
+    }
+  },
+  "archetype_allocation": {
+    "window_size": 5,
+    "window_size_schedule": {
+      "20": 5,
+      "50": 10,
+      "100": 15,
+      "200": 20
+    },
+    "weighting": "recency",
+    "minimum_per_archetype": 1,
+    "current": {
+      "SHARPE_HUNTER": 2,
+      "RETURN_CHASER": 2,
+      "RISK_MINIMIZER": 1,
+      "CONSISTENCY": 1
+    },
+    "last_rebalanced_generation": 0,
+    "performance_history": {
+      "SHARPE_HUNTER": [],
+      "RETURN_CHASER": [],
+      "RISK_MINIMIZER": [],
+      "CONSISTENCY": []
+    }
+  },
+  "kb_health": {
+    "last_compacted_generation": 0,
+    "next_compaction_due_generation": 3,
+    "active_lesson_count": 0,
+    "total_raw_lessons": 0,
+    "graveyard_count": 0,
+    "pattern_count": {
+      "winning": 0,
+      "losing": 0
+    },
+    "last_quarterly_refresh": null,
+    "next_quarterly_refresh": null,
+    "current_market_regime": "UNKNOWN",
+    "regime_history": [],
+    "patterns_loaded": 19,
+    "losing_patterns_loaded": 9,
+    "active_lessons": 32,
+    "patterns_last_updated": "2026-04-08T15:54:21Z"
+  }
+}

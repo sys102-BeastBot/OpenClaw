@@ -1,0 +1,84 @@
+
+============================================================
+OVERLAP REPORT — 2026-04-07 20:14
+============================================================
+Symphony 1: Extended OOS Outliers (7 mini-strategies)
+Symphony 2: Sisyphus V0.0 (10 mini-strategies)
+
+── EXACT STRUCTURAL MATCHES (identical fingerprint) ──
+  None — no structurally identical sub-trees found.
+  (This is expected for symphonies with different authors.)
+
+── SHARED ROLES ──
+  asset_rotator           Extended OOS Outliers: 2  |  Sisyphus V0.0: 1
+    [1] KMLM switcher (single pops)| BT 4/13/22 = A.R. 466% / D.D. 22%  (?)
+    [1] Pareto's Portfolio: [230706] Basic RSI OB/OS Framework v1.01 (Shared)  (?)
+    [2] HWRT 3 (225,19,2022)  (logic_only)
+  crash_guard             Extended OOS Outliers: 2  |  Sisyphus V0.0: 1
+    [1] 60d BND vs 60d BIL  (?)
+    [1] Modified Foreign Rat  (?)
+    [2] Hg Short Only V0.2 (57,19,2011)  (partial)
+  regime_router           Extended OOS Outliers: 3  |  Sisyphus V0.0: 6
+    [1] 200D Cross | Volmageddeon  (?)
+    [1] Just Run This FTLT | 2011-09-13  (?)
+    [1] This is How BWC Beta Balls  (?)
+    [2] Better KMLM (1042,35,2022)  (partial)
+    [2] QQQ FTLT Bonds - V0.5 - (237,33,2011)  (partial)
+    [2] Bonds Zoop V0.0 (144,38,2011)  (partial)
+    [2] EM ftlt (148,72,2007)  (partial)
+    [2] Four Corners (66,35,2011)  (logic_only)
+    [2] EM Emerging Markets V0.4 (114,69,2009)  (logic_only)
+
+── PARAMETER MATCHES (≥2 shared key parameters) ──
+  [Extended OOS Outliers] ms-002 "200D Cross | Volmageddeon"
+  [Sisyphus V0.0] ms-001 "Better KMLM (1042,35,2022)"
+  Shared params:
+    relative-strength-index.window = 10
+    current-price.threshold = SPY
+
+  [Extended OOS Outliers] ms-002 "200D Cross | Volmageddeon"
+  [Sisyphus V0.0] ms-002 "QQQ FTLT Bonds - V0.5 - (237,33,2011)"
+  Shared params:
+    relative-strength-index.window = 10
+    relative-strength-index.threshold = PSQ
+
+  [Extended OOS Outliers] ms-002 "200D Cross | Volmageddeon"
+  [Sisyphus V0.0] ms-006 "Four Corners (66,35,2011)"
+  Shared params:
+    relative-strength-index.threshold = PSQ
+    current-price.threshold = SPY
+
+  [Extended OOS Outliers] ms-003 "KMLM switcher (single pops)| BT 4/13/22 = A.R. 466% / D.D. 22%"
+  [Sisyphus V0.0] ms-001 "Better KMLM (1042,35,2022)"
+  Shared params:
+    relative-strength-index.threshold = KMLM
+    relative-strength-index.window = 10
+
+  [Extended OOS Outliers] ms-007 "This is How BWC Beta Balls"
+  [Sisyphus V0.0] ms-002 "QQQ FTLT Bonds - V0.5 - (237,33,2011)"
+  Shared params:
+    relative-strength-index.window = 10
+    relative-strength-index.threshold = PSQ
+    current-price.threshold = TQQQ
+
+
+── CROSS-STRATEGY PATTERNS (from Claude analysis) ──
+  Sisyphus V0.0:
+    • RSI window of 10 appears in ms-001, ms-002, ms-004, ms-005, ms-007 — the 10-period RSI is the dominant momentum signal across this symphony
+    • UPRO RSI threshold of 31 and TQQQ cumulative return threshold of 5.5% appear identically in both ms-009 and ms-010 — these are shared core regime-entry gates
+    • QLD price-level gate (current-price.asset=QLD, threshold=QLD) appears in both ms-009 and ms-010 as a synchronized bull-market confirmation signal
+    • TLT MA return vs UDN (moving-average-return.asset=TLT, threshold=UDN, window=15) appears in both ms-009 and ms-010 as a bond trend filter for equity exposure
+    • SPY price vs SPY threshold (current-price.asset=SPY) appears in ms-001 and ms-006 as a broad market price-level gate
+    • IEF RSI used as a bond-stress signal appears in ms-002 and ms-006 with windows of 10 and 7 respectively
+    • IGIB RSI vs SPY threshold appears identically in ms-004 and ms-007 — credit market RSI is the shared EM regime signal
+    • 60-day lookback window appears in ms-002 (cumulative return), ms-006 (cumulative return), and ms-009 (both RSI and cumulative return) — 60-day is the dominant long-window parameter
+    • UVXY and VIXM appear together as paired volatility hedges in ms-001, ms-002, ms-005, and ms-006 — suggesting a dual-layer volatility hedge structure is preferred
+    • TMV/TMF EMA(8) and SMA(15) signal pair appears in both ms-003 and ms-009 — bond trend confirmation via dual moving average is a repeated structural motif
+
+============================================================
+SYNTHESIS
+============================================================
+  Total exact structural overlaps:  0
+  Total shared role categories:     3
+  Total parameter matches:          5
+

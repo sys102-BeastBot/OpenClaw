@@ -1,0 +1,237 @@
+{
+  "generation": 0,
+  "lessons_extracted": 8,
+  "lessons": [
+    {
+      "category": "structure",
+      "subcategory": "archetype_performance",
+      "confidence": 0.85,
+      "decay": false,
+      "archetypes": [
+        "ALL"
+      ],
+      "lesson": "SHARPE_HUNTER and RETURN_CHASER archetypes dominated generation 0, with SHARPE_HUNTER achieving avg_fitness=53.6 (ranks 1-5) and RETURN_CHASER avg_fitness=52.7 (ranks 6-10). RISK_MINIMIZER (avg 40.1) and CONSISTENCY (avg 37.0) underperformed significantly. This contradicts lesson-025's claim that CONSISTENCY dominated - the seed brief contains placeholder lessons with fabricated data.",
+      "parameter_data": null,
+      "regime_context": null,
+      "supporting_evidence": [
+        "gen-000-strat-01 (SHARPE_HUNTER, fitness 53.6)",
+        "gen-000-strat-07 (RETURN_CHASER, fitness 52.7)",
+        "gen-000-strat-13 (RISK_MINIMIZER, fitness 40.1)",
+        "archetype_stats showing 17.5 point gap between top and bottom"
+      ],
+      "merge_candidate_ids": [
+        "lesson-025",
+        "lesson-026",
+        "lesson-028"
+      ],
+      "apply_to_active": true
+    },
+    {
+      "category": "structure",
+      "subcategory": "rebalance_frequency",
+      "confidence": 0.75,
+      "decay": true,
+      "archetypes": [
+        "ALL"
+      ],
+      "lesson": "Strategies with 5-10% threshold rebalancing dominated top ranks: 5 of top 6 used 5% or 10% frequency, while only 1 used daily. All 12 displayed strategies used non-daily rebalancing except ranks 5 and 7. This suggests threshold-based rebalancing reduces whipsaw and transaction costs for leveraged ETF strategies without sacrificing performance.",
+      "parameter_data": null,
+      "regime_context": null,
+      "supporting_evidence": [
+        "gen-000-strat-01 (rank 1, 5% rebal, fitness 53.6)",
+        "gen-000-strat-02 (rank 2, 10% rebal, fitness 53.6)",
+        "gen-000-strat-04 (rank 3, 10% rebal, fitness 53.6)",
+        "gen-000-strat-09 (rank 8, 5% rebal, fitness 52.7)"
+      ],
+      "merge_candidate_ids": [],
+      "apply_to_active": true
+    },
+    {
+      "category": "asset",
+      "subcategory": "core_leveraged_etf",
+      "confidence": 0.7,
+      "decay": true,
+      "archetypes": [
+        "SHARPE_HUNTER",
+        "RETURN_CHASER"
+      ],
+      "lesson": "SOXL (semiconductor 3x) appeared as core asset in 4 of top 10 strategies across both winning archetypes, with fitness scores 52.7-53.6. TECL (tech 3x) appeared in 3 top performers, SPXL in 2, and UPRO in 2. Semiconductor and tech sector exposure with 3x leverage outperformed broad market 3x ETFs in this generation's market regime.",
+      "parameter_data": null,
+      "regime_context": null,
+      "supporting_evidence": [
+        "gen-000-strat-01 (SOXL, fitness 53.6)",
+        "gen-000-strat-04 (SOXL, fitness 53.6)",
+        "gen-000-strat-07 (SOXL, fitness 52.7)",
+        "gen-000-strat-10 (SOXL, fitness 52.7)"
+      ],
+      "merge_candidate_ids": [],
+      "apply_to_active": true
+    },
+    {
+      "category": "indicator",
+      "subcategory": "volatility_crash_guard",
+      "confidence": 0.8,
+      "decay": true,
+      "archetypes": [
+        "ALL"
+      ],
+      "lesson": "UVXY standard-deviation-return with window=10 and threshold=10-12 appeared in 6 of top 10 strategies as Layer 0 crash guard. All 6 achieved fitness >= 52.7. The 10-day window captures multi-day volatility regime shifts while threshold of 10-12 detects elevated vol without false positives during normal market fluctuations.",
+      "parameter_data": {
+        "function": "standard-deviation-return",
+        "asset": "UVXY",
+        "optimal_window": 10,
+        "optimal_threshold": "10",
+        "threshold_range": "10-12",
+        "sensitivity": "MEDIUM",
+        "archetype_overrides": {}
+      },
+      "regime_context": null,
+      "supporting_evidence": [
+        "gen-000-strat-01 (UVXY stddev 10/12, fitness 53.6)",
+        "gen-000-strat-04 (referenced in compound guard)",
+        "gen-000-strat-05 (UVXY stddev 10/10, fitness 53.6)",
+        "gen-000-strat-10 (UVXY stddev 10/10, fitness 52.7)"
+      ],
+      "merge_candidate_ids": [],
+      "apply_to_active": true
+    },
+    {
+      "category": "indicator",
+      "subcategory": "vol_product_crash_detection",
+      "confidence": 0.75,
+      "decay": true,
+      "archetypes": [
+        "SHARPE_HUNTER",
+        "RETURN_CHASER"
+      ],
+      "lesson": "SVXY RSI(10) < 31 as crash guard appeared in 4 top-10 strategies with consistent fitness 52.7-53.6. Combined with SVXY 1-day return < -6% in compound guards for 3 strategies. The RSI(10) window and 31 threshold specifically detect vol-product stress, while -6% daily threshold catches acute crashes.",
+      "parameter_data": {
+        "function": "relative-strength-index",
+        "asset": "SVXY",
+        "optimal_window": 10,
+        "optimal_threshold": "31",
+        "threshold_range": "31",
+        "sensitivity": "HIGH",
+        "archetype_overrides": {}
+      },
+      "regime_context": null,
+      "supporting_evidence": [
+        "gen-000-strat-04 (SVXY RSI 10/31, fitness 53.6)",
+        "gen-000-strat-05 (SVXY RSI 10/31, fitness 53.6)",
+        "gen-000-strat-06 (SVXY 1-day < -6%, fitness 53.6)",
+        "gen-000-strat-11 (SVXY RSI 10/31 + return -6%, fitness 52.7)"
+      ],
+      "merge_candidate_ids": [],
+      "apply_to_active": true
+    },
+    {
+      "category": "structure",
+      "subcategory": "compound_guards",
+      "confidence": 0.7,
+      "decay": true,
+      "archetypes": [
+        "SHARPE_HUNTER",
+        "RETURN_CHASER"
+      ],
+      "lesson": "Compound/all guards requiring 3 simultaneous conditions for crash detection appeared in 6 top-10 strategies. Typical pattern: UVXY vol spike AND SPY drawdown AND vol-product stress must ALL fire together. This reduces false exits compared to single-condition guards while maintaining crash protection.",
+      "parameter_data": null,
+      "regime_context": null,
+      "supporting_evidence": [
+        "gen-000-strat-05 (triple stress gate, fitness 53.6)",
+        "gen-000-strat-06 (compound guard, fitness 53.6)",
+        "gen-000-strat-08 (3 conditions compound, fitness 52.7)",
+        "gen-000-strat-09 (compound guard, fitness 52.7)"
+      ],
+      "merge_candidate_ids": [],
+      "apply_to_active": true
+    },
+    {
+      "category": "indicator",
+      "subcategory": "momentum_confirmation",
+      "confidence": 0.65,
+      "decay": true,
+      "archetypes": [
+        "RETURN_CHASER"
+      ],
+      "lesson": "Leveraged ETF momentum gates with 1-3 day cumulative return windows and 4.0-8.0% thresholds appeared in all 5 RETURN_CHASER strategies. SOXL used 4.0-6.0% thresholds (2-day windows), TECL used 4.8-6.5% (1-3 day), SPXL used 2-8% (1-5 day). Higher beta assets required higher thresholds to filter noise.",
+      "parameter_data": {
+        "function": "cumulative-return",
+        "asset": "varies",
+        "optimal_window": 2,
+        "optimal_threshold": "6.0",
+        "threshold_range": "4.0-8.0",
+        "sensitivity": "MEDIUM",
+        "archetype_overrides": {
+          "RETURN_CHASER": {
+            "optimal_threshold": "6.0",
+            "threshold_range": "4.0-8.0"
+          }
+        }
+      },
+      "regime_context": null,
+      "supporting_evidence": [
+        "gen-000-strat-07 (SOXL 1-day > 6%, fitness 52.7)",
+        "gen-000-strat-08 (TECL 1-day > 6.5%, fitness 52.7)",
+        "gen-000-strat-09 (UPRO 3-day > 8%, fitness 52.7)",
+        "gen-000-strat-10 (SOXL 2-day > 8%, fitness 52.7)"
+      ],
+      "merge_candidate_ids": [],
+      "apply_to_active": true
+    },
+    {
+      "category": "anti_pattern",
+      "subcategory": "archetype_weakness",
+      "confidence": 0.8,
+      "decay": false,
+      "archetypes": [
+        "RISK_MINIMIZER",
+        "CONSISTENCY"
+      ],
+      "lesson": "RISK_MINIMIZER and CONSISTENCY archetypes significantly underperformed with avg_fitness 40.1 and 37.0 respectively, 12-16 points below winning archetypes. All RISK_MINIMIZER strategies clustered at ranks 11-12 with identical fitness scores (40.1), suggesting overly conservative structures that sacrificed returns without proportional risk reduction. Generation 1 should only explore these archetypes if paired with momentum layers.",
+      "parameter_data": null,
+      "regime_context": null,
+      "supporting_evidence": [
+        "gen-000-strat-13 (RISK_MINIMIZER, fitness 40.1, rank 11)",
+        "gen-000-strat-14 (RISK_MINIMIZER, fitness 40.1, rank 12)",
+        "archetype_stats showing 13-point fitness gap vs winners",
+        "CONSISTENCY avg_fitness 37.0 (worst performing)"
+      ],
+      "merge_candidate_ids": [
+        "lesson-028"
+      ],
+      "apply_to_active": true
+    }
+  ],
+  "compaction_hints": {
+    "confirmed_lesson_ids": [],
+    "contradicted_lesson_ids": [
+      "lesson-025",
+      "lesson-026",
+      "lesson-027",
+      "lesson-028",
+      "lesson-031",
+      "lesson-032"
+    ],
+    "merge_suggestions": [
+      {
+        "lesson_a": "lesson-025",
+        "lesson_b": "lesson-026",
+        "reason": "Both describe archetype performance hierarchy with contradictory data - actual results show SHARPE_HUNTER/RETURN_CHASER dominated, not CONSISTENCY"
+      },
+      {
+        "lesson_a": "lesson-028",
+        "lesson_b": "new anti_pattern lesson",
+        "reason": "lesson-028 claims SHARPE_HUNTER underperformed but gen-0 shows it was top archetype - retire lesson-028 and replace with accurate RISK_MINIMIZER/CONSISTENCY anti-pattern"
+      }
+    ],
+    "retire_suggestions": [
+      "lesson-005 through lesson-024 (all placeholder lessons with conf 0.50)",
+      "lesson-025 through lesson-032 (fabricated data contradicted by actual results)"
+    ]
+  },
+  "_extraction_failed": false,
+  "_failure_reason": null,
+  "_attempts": 1,
+  "_input_tokens": 14512,
+  "_output_tokens": 3181
+}

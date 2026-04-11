@@ -1,0 +1,83 @@
+{
+  "step": "root",
+  "name": "RISK_MINIMIZER Seed 14: 2-Layer Cumulative Return Guards with TECL",
+  "description": "R4 seed 5 \u2014 RISK_MINIMIZER",
+  "rebalance": "daily",
+  "children": [
+    {
+      "step": "if",
+      "children": [
+        {
+          "step": "if-child",
+          "is-else-condition?": false,
+          "lhs-fn": "cumulative-return",
+          "lhs-fn-params": {
+            "window-days": 10
+          },
+          "lhs-val": "SPY",
+          "comparator": "lt",
+          "rhs-val": "-8",
+          "rhs-fixed-value?": true,
+          "children": [
+            {
+              "step": "asset",
+              "ticker": "BIL",
+              "children": [],
+              "id": "0666ad67-e0fe-468e-9db0-9c61ad3099ce"
+            }
+          ],
+          "id": "24bba6ce-67b0-4606-8ee6-e6490cdfc473"
+        },
+        {
+          "step": "if-child",
+          "is-else-condition?": true,
+          "children": [
+            {
+              "step": "if",
+              "children": [
+                {
+                  "step": "if-child",
+                  "is-else-condition?": false,
+                  "lhs-fn": "cumulative-return",
+                  "lhs-fn-params": {
+                    "window-days": 3
+                  },
+                  "lhs-val": "TECL",
+                  "comparator": "gt",
+                  "rhs-val": "4",
+                  "rhs-fixed-value?": true,
+                  "children": [
+                    {
+                      "step": "asset",
+                      "ticker": "TECL",
+                      "children": [],
+                      "id": "3566c73c-7e16-4931-b397-7372483a825b"
+                    }
+                  ],
+                  "id": "edeac3c7-3288-49d6-9d68-6b06a90fc55a"
+                },
+                {
+                  "step": "if-child",
+                  "is-else-condition?": true,
+                  "children": [
+                    {
+                      "step": "asset",
+                      "ticker": "SPY",
+                      "children": [],
+                      "id": "698b574a-b084-4262-9ab5-173576a63286"
+                    }
+                  ],
+                  "id": "62125cd6-5c6d-4245-9eeb-f2589e35d19c"
+                }
+              ],
+              "id": "ecc6a2b6-1fab-4ad9-b89a-a3fa0e6ddeab"
+            }
+          ],
+          "id": "d9353e05-bb40-4b30-b7fc-b5266b7bb479"
+        }
+      ],
+      "id": "d3f8a4e8-bb65-4030-b79e-c90c96b09a12"
+    }
+  ],
+  "id": "8e3f7233-4abe-4a39-a647-659aa25c392b"
+}
