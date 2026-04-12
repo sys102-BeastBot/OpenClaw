@@ -707,3 +707,10 @@
 2026-04-10T20:15:15Z [INFO] [monitor] API call call-707 type=GENERATOR gen=0 in=13045 out=423 cost=$0.045480 dur=7074ms status=OK
 2026-04-10T20:28:58Z [INFO] [monitor] API call call-708 type=GENERATOR gen=0 in=13353 out=497 cost=$0.047514 dur=7815ms status=OK
 2026-04-10T20:36:08Z [INFO] [monitor] API call call-709 type=GENERATOR gen=0 in=15019 out=663 cost=$0.055002 dur=10498ms status=OK
+2026-04-12T00:10:54Z [WARNING] [monitor] API call call-710 type=GENERATOR gen=0 in=0 out=0 cost=$0.000000 dur=507ms status=ERROR: HTTP 401: {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CZxuaqfgWvdYJETQszESo"}
+2026-04-12T00:11:19Z [WARNING] [monitor] API call call-711 type=GENERATOR gen=0 in=0 out=0 cost=$0.000000 dur=434ms status=ERROR: HTTP 401: {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CZxucgX5DnS2eMJrj5gSD"}
+2026-04-12T00:12:05Z [INFO] [monitor] API call call-712 type=GENERATOR gen=0 in=52452 out=643 cost=$0.167001 dur=8844ms status=OK
+2026-04-12T00:12:28Z [INFO] [monitor] API call call-713 type=GENERATOR gen=0 in=52452 out=754 cost=$0.168666 dur=9745ms status=OK
+2026-04-12T00:44:17Z [WARNING] [monitor] API call call-714 type=LEARNER gen=0 in=0 out=0 cost=$0.000000 dur=125ms status=ERROR: HTTP 401: {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CZxx8Wm1ks9Rs1vYae5P7"}
+2026-04-12T00:44:17Z [WARNING] [monitor] API call call-715 type=LEARNER gen=0 in=0 out=0 cost=$0.000000 dur=299ms status=ERROR: HTTP 401: {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CZxx8YXvTD3SGWUy2phpz"}
+2026-04-12T01:01:57Z [INFO] [monitor] API call call-716 type=LEARNER gen=0 in=8973 out=2598 cost=$0.065889 dur=41244ms status=OK

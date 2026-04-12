@@ -9,10 +9,10 @@
     "research_phase_active": true
   },
   "current_period": {
-    "date": "2026-04-10",
+    "date": "2026-04-12",
     "month": "2026-04",
-    "daily_cost_usd": 0.508674,
-    "monthly_cost_usd": 2.619567
+    "daily_cost_usd": 0.401556,
+    "monthly_cost_usd": 3.021123
   },
   "pricing": {
     "model": "claude-sonnet-4-6",
@@ -20,97 +20,6 @@
     "output_cost_per_1M_tokens": 15.0
   },
   "call_log": [
-    {
-      "id": "call-210",
-      "timestamp": "2026-03-22T17:33:58Z",
-      "call_type": "GENERATOR",
-      "strategy_id": "gen-001-strat-01",
-      "generation": 1,
-      "input_tokens": 0,
-      "output_tokens": 0,
-      "cost_usd": 0.0,
-      "duration_ms": 0,
-      "success": false,
-      "error": "Connection refused"
-    },
-    {
-      "id": "call-211",
-      "timestamp": "2026-03-22T17:33:58Z",
-      "call_type": "GENERATOR",
-      "strategy_id": "gen-001-strat-01",
-      "generation": 1,
-      "input_tokens": 2000,
-      "output_tokens": 800,
-      "cost_usd": 0.018,
-      "duration_ms": 0,
-      "success": true,
-      "error": null
-    },
-    {
-      "id": "call-212",
-      "timestamp": "2026-03-22T17:33:58Z",
-      "call_type": "GENERATOR",
-      "strategy_id": "gen-001-strat-01",
-      "generation": 1,
-      "input_tokens": 0,
-      "output_tokens": 0,
-      "cost_usd": 0.0,
-      "duration_ms": 0,
-      "success": false,
-      "error": "HTTP 429: Rate limit exceeded"
-    },
-    {
-      "id": "call-213",
-      "timestamp": "2026-03-22T17:33:58Z",
-      "call_type": "GENERATOR",
-      "strategy_id": "gen-002-strat-01",
-      "generation": 2,
-      "input_tokens": 2000,
-      "output_tokens": 800,
-      "cost_usd": 0.018,
-      "duration_ms": 0,
-      "success": true,
-      "error": null
-    },
-    {
-      "id": "call-214",
-      "timestamp": "2026-03-22T17:33:58Z",
-      "call_type": "GENERATOR",
-      "strategy_id": "gen-001-strat-01",
-      "generation": 1,
-      "input_tokens": 2000,
-      "output_tokens": 800,
-      "cost_usd": 0.018,
-      "duration_ms": 0,
-      "success": true,
-      "error": null
-    },
-    {
-      "id": "call-215",
-      "timestamp": "2026-03-22T17:33:58Z",
-      "call_type": "LEARNER",
-      "strategy_id": null,
-      "generation": 3,
-      "input_tokens": 1000,
-      "output_tokens": 500,
-      "cost_usd": 0.0105,
-      "duration_ms": 1,
-      "success": true,
-      "error": null
-    },
-    {
-      "id": "call-216",
-      "timestamp": "2026-03-22T17:33:58Z",
-      "call_type": "LEARNER",
-      "strategy_id": null,
-      "generation": 3,
-      "input_tokens": 100,
-      "output_tokens": 50,
-      "cost_usd": 0.00105,
-      "duration_ms": 0,
-      "success": true,
-      "error": null
-    },
     {
       "id": "call-217",
       "timestamp": "2026-03-22T17:33:58Z",
@@ -6519,6 +6428,97 @@
       "duration_ms": 10498,
       "success": true,
       "error": null
+    },
+    {
+      "id": "call-710",
+      "timestamp": "2026-04-12T00:10:54Z",
+      "call_type": "GENERATOR",
+      "strategy_id": "gen-000-strat-08",
+      "generation": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost_usd": 0.0,
+      "duration_ms": 507,
+      "success": false,
+      "error": "HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CZxuaqfgWvdYJETQszESo\"}"
+    },
+    {
+      "id": "call-711",
+      "timestamp": "2026-04-12T00:11:19Z",
+      "call_type": "GENERATOR",
+      "strategy_id": "gen-000-strat-08",
+      "generation": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost_usd": 0.0,
+      "duration_ms": 434,
+      "success": false,
+      "error": "HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CZxucgX5DnS2eMJrj5gSD\"}"
+    },
+    {
+      "id": "call-712",
+      "timestamp": "2026-04-12T00:12:05Z",
+      "call_type": "GENERATOR",
+      "strategy_id": "gen-000-strat-08",
+      "generation": 0,
+      "input_tokens": 52452,
+      "output_tokens": 643,
+      "cost_usd": 0.167001,
+      "duration_ms": 8844,
+      "success": true,
+      "error": null
+    },
+    {
+      "id": "call-713",
+      "timestamp": "2026-04-12T00:12:28Z",
+      "call_type": "GENERATOR",
+      "strategy_id": "gen-000-strat-08",
+      "generation": 0,
+      "input_tokens": 52452,
+      "output_tokens": 754,
+      "cost_usd": 0.168666,
+      "duration_ms": 9745,
+      "success": true,
+      "error": null
+    },
+    {
+      "id": "call-714",
+      "timestamp": "2026-04-12T00:44:17Z",
+      "call_type": "LEARNER",
+      "strategy_id": null,
+      "generation": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost_usd": 0.0,
+      "duration_ms": 125,
+      "success": false,
+      "error": "HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CZxx8Wm1ks9Rs1vYae5P7\"}"
+    },
+    {
+      "id": "call-715",
+      "timestamp": "2026-04-12T00:44:17Z",
+      "call_type": "LEARNER",
+      "strategy_id": null,
+      "generation": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost_usd": 0.0,
+      "duration_ms": 299,
+      "success": false,
+      "error": "HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CZxx8YXvTD3SGWUy2phpz\"}"
+    },
+    {
+      "id": "call-716",
+      "timestamp": "2026-04-12T01:01:57Z",
+      "call_type": "LEARNER",
+      "strategy_id": null,
+      "generation": 0,
+      "input_tokens": 8973,
+      "output_tokens": 2598,
+      "cost_usd": 0.065889,
+      "duration_ms": 41244,
+      "success": true,
+      "error": null
     }
   ],
   "generation_costs": {
@@ -6535,16 +6535,16 @@
       "call_count": 21
     },
     "gen-000": {
-      "total_cost_usd": 3.083004,
-      "call_count": 66
+      "total_cost_usd": 3.48456,
+      "call_count": 73
     }
   },
   "lifetime": {
-    "total_calls": 709,
-    "total_input_tokens": 1145013,
-    "total_output_tokens": 359281,
-    "total_cost_usd": 8.824254,
+    "total_calls": 716,
+    "total_input_tokens": 1258890,
+    "total_output_tokens": 363276,
+    "total_cost_usd": 9.22581,
     "first_call_at": "2026-03-22T05:21:07Z",
-    "last_call_at": "2026-04-10T20:36:08Z"
+    "last_call_at": "2026-04-12T01:01:57Z"
   }
 }

@@ -3253,3 +3253,23 @@ KB is ready for generation 0.
 2026-04-10T20:35:58Z [INFO] [context_builder] Generator prompt assembled for SHARPE_HUNTER gen-0 slot-7: ~12212 tokens estimated
 2026-04-10T20:36:08Z [INFO] [generator_agent] gen-000-strat-07: audit passed
 2026-04-10T20:36:08Z [INFO] [generator_agent] gen-000-strat-07: written to pending/
+2026-04-12T00:10:44Z [INFO] [context_builder] Generator prompt assembled for SHARPE_HUNTER gen-0 slot-8: ~69931 tokens estimated
+2026-04-12T00:10:51Z [INFO] [generator_agent] gen-000-strat-08: starting generation for SHARPE_HUNTER
+2026-04-12T00:10:53Z [INFO] [context_builder] Generator prompt assembled for SHARPE_HUNTER gen-0 slot-8: ~69931 tokens estimated
+2026-04-12T00:10:54Z [WARNING] [generator_agent] gen-000-strat-08: API call failed — HTTP 401: {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CZxuaqfgWvdYJETQszESo"}
+2026-04-12T00:11:07Z [INFO] [context_builder] Generator prompt assembled for SHARPE_HUNTER gen-0 slot-8: ~69931 tokens estimated
+2026-04-12T00:11:19Z [INFO] [context_builder] Generator prompt assembled for SHARPE_HUNTER gen-0 slot-8: ~69931 tokens estimated
+2026-04-12T00:11:56Z [INFO] [context_builder] Generator prompt assembled for SHARPE_HUNTER gen-0 slot-8: ~69931 tokens estimated
+2026-04-12T00:12:16Z [INFO] [generator_agent] gen-000-strat-08: starting generation for SHARPE_HUNTER
+2026-04-12T00:12:18Z [INFO] [context_builder] Generator prompt assembled for SHARPE_HUNTER gen-0 slot-8: ~69931 tokens estimated
+2026-04-12T00:12:28Z [INFO] [generator_agent] gen-000-strat-08: audit passed
+2026-04-12T00:12:28Z [INFO] [generator_agent] gen-000-strat-08: written to pending/
+2026-04-12T00:42:55Z [INFO] [learner_agent] gen-0: starting lesson extraction, 0 strategies in brief
+2026-04-12T00:44:17Z [INFO] [learner_agent] gen-0: starting lesson extraction, 0 strategies in brief
+2026-04-12T00:44:17Z [WARNING] [learner_agent] gen-0 attempt 1: API call failed — HTTP 401: {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CZxx8Wm1ks9Rs1vYae5P7"}
+2026-04-12T00:44:17Z [INFO] [learner_agent] gen-0: retrying with stricter prompt (attempt 2)
+2026-04-12T00:44:17Z [WARNING] [learner_agent] gen-0 attempt 2: API call failed — HTTP 401: {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CZxx8YXvTD3SGWUy2phpz"}
+2026-04-12T00:44:17Z [WARNING] [learner_agent] gen-0: returning zero lessons. Reason: failed after 2 attempts
+2026-04-12T01:01:16Z [INFO] [learner_agent] gen-0: starting lesson extraction, 0 strategies in brief
+2026-04-12T01:01:57Z [WARNING] [monitor] Slow API call call-716 took 41244ms (threshold 30000ms)
+2026-04-12T01:01:57Z [INFO] [learner_agent] gen-0: extracted 8 lessons on attempt 1

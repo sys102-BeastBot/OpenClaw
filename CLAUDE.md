@@ -45,3 +45,8 @@ Natural language → Composer AI DSL → dsl_compiler.py → JSON
 cd ~/.openclaw/workspace/learning
 python3 src/test_json_to_dsl.py     # 84 tests
 python3 src/dsl_compiler.py         # 40 tests
+
+## Git workflow
+Repo: https://github.com/sys102-BeastBot/OpenClaw.git
+At end of every session: git add -A && git commit -m "description" && git push
+Never commit: credentials, *.pyc, monitor logs

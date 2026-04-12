@@ -5,14 +5,14 @@
     "archetype": "SHARPE_HUNTER",
     "generation": 0,
     "final_composite_fitness": null,
-    "final_sharpe_1Y": null,
-    "final_return_1Y": null,
-    "final_max_drawdown_1Y": null,
+    "final_sharpe_1Y": -2.77,
+    "final_return_1Y": -43.8,
+    "final_max_drawdown_1Y": 43.8,
     "final_std_dev": null,
     "optimization_delta": null,
     "passed_rough_cut": null,
     "disqualified": false,
-    "status": "PENDING",
+    "status": "SCORED",
     "rebalance_frequency": "daily"
   },
   "identity": {
@@ -27,7 +27,7 @@
       "asset-class": "EQUITIES",
       "rebalance-frequency": "daily"
     },
-    "composer_symphony_id": null
+    "composer_symphony_id": "cEXQlmcovlwmS5LPtVWC"
   },
   "strategy": {
     "description": {},
@@ -374,7 +374,28 @@
     "is_seed": false,
     "seed_source": null
   },
-  "nominal_result": null,
+  "nominal_result": {
+    "composite_fitness": {
+      "score": -2.77,
+      "period_scores": {
+        "1Y": -2.77
+      },
+      "std_dev": null
+    },
+    "periods": {
+      "1Y": {
+        "core_metrics": {
+          "sharpe": -2.77,
+          "annualized_return": -0.43799999999999994,
+          "max_drawdown": 0.43799999999999994,
+          "total_return": -0.43799999999999994
+        },
+        "benchmark_comparison": {}
+      }
+    },
+    "backtested_at": "2026-04-12T00:40:01.434708+00:00",
+    "period": "2022-01-01/2022-12-31"
+  },
   "optimizer_data": null,
   "final_result": null,
   "logic_audit": {
@@ -398,7 +419,7 @@
     "quarantined": false
   },
   "pipeline": {
-    "current_status": "PENDING",
+    "current_status": "SCORED",
     "status_history": [
       {
         "status": "PENDING",
