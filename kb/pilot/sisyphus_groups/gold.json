@@ -1,0 +1,484 @@
+{
+  "id": "06691db2-68f9-4a4b-a3d6-a10bea9901c1",
+  "step": "root",
+  "name": "Gold (standalone)",
+  "description": "",
+  "rebalance": "daily",
+  "children": [
+    {
+      "id": "106a28ec-2283-4790-9319-7de46280e1d9",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "id": "fd4202f0-7083-4444-a002-c11d4599d2f9",
+          "step": "group",
+          "name": "Gold - V0.0 - (33,50,2009)",
+          "children": [
+            {
+              "id": "3bbddb81-b7f3-44eb-8fa2-0e746a1f50c6",
+              "step": "wt-cash-equal",
+              "children": [
+                {
+                  "id": "00afeabe-3cbd-40ae-95cb-a6d0311b7159",
+                  "step": "if",
+                  "children": [
+                    {
+                      "id": "2e07080c-c917-4da5-b4ab-7189855cf274",
+                      "step": "if-child",
+                      "is-else-condition?": false,
+                      "lhs-fn": "moving-average-price",
+                      "lhs-window-days": "50",
+                      "lhs-val": "UGL",
+                      "lhs-fn-params": {
+                        "window": 50
+                      },
+                      "comparator": "gt",
+                      "rhs-fn": "moving-average-price",
+                      "rhs-window-days": "200",
+                      "rhs-val": "UGL",
+                      "rhs-fixed-value?": false,
+                      "children": [
+                        {
+                          "id": "975d9666-7964-4bb2-b77d-c8b44ae86554",
+                          "step": "wt-cash-equal",
+                          "children": [
+                            {
+                              "id": "1cc1b6ea-f04d-4945-b1da-28b25fff49af",
+                              "step": "if",
+                              "children": [
+                                {
+                                  "id": "22ab3dcc-0f5c-4f4e-82aa-403c846d331c",
+                                  "step": "if-child",
+                                  "is-else-condition?": false,
+                                  "lhs-fn": "relative-strength-index",
+                                  "lhs-window-days": "20",
+                                  "lhs-val": "UGL",
+                                  "lhs-fn-params": {
+                                    "window": 20
+                                  },
+                                  "comparator": "gt",
+                                  "rhs-val": "80",
+                                  "rhs-fixed-value?": true,
+                                  "children": [
+                                    {
+                                      "id": "67d8910d-8dea-40d0-b09f-46c6a9af8ce5",
+                                      "step": "asset",
+                                      "ticker": "GLL"
+                                    }
+                                  ],
+                                  "collapsed?": false
+                                },
+                                {
+                                  "id": "f4a8febe-3477-407c-9e91-f12a4f746e0d",
+                                  "step": "if-child",
+                                  "is-else-condition?": true,
+                                  "children": [
+                                    {
+                                      "id": "21695c19-5cbb-4881-8311-9700483544b3",
+                                      "step": "wt-cash-equal",
+                                      "children": [
+                                        {
+                                          "id": "df1fa3d2-0570-4e3c-91db-37aed615002e",
+                                          "step": "if",
+                                          "children": [
+                                            {
+                                              "id": "cb4f7f93-67d5-4ce4-84a1-cab18f682f33",
+                                              "step": "if-child",
+                                              "is-else-condition?": false,
+                                              "lhs-fn": "relative-strength-index",
+                                              "lhs-window-days": "10",
+                                              "lhs-val": "UGL",
+                                              "lhs-fn-params": {
+                                                "window": 10
+                                              },
+                                              "comparator": "gt",
+                                              "rhs-val": "90",
+                                              "rhs-fixed-value?": true,
+                                              "children": [
+                                                {
+                                                  "id": "b612ae4d-391a-476d-9928-3a56391a5cc0",
+                                                  "step": "asset",
+                                                  "ticker": "GLL"
+                                                }
+                                              ],
+                                              "collapsed?": false
+                                            },
+                                            {
+                                              "id": "237c8511-22b4-47fd-8fb3-29c62d03f953",
+                                              "step": "if-child",
+                                              "is-else-condition?": true,
+                                              "children": [
+                                                {
+                                                  "id": "7aa9dd3c-7ac0-4a7e-b86c-a4bd5e3b4bba",
+                                                  "step": "wt-cash-equal",
+                                                  "children": [
+                                                    {
+                                                      "id": "a240abab-007e-453b-8289-4ee9b3194d3f",
+                                                      "step": "if",
+                                                      "children": [
+                                                        {
+                                                          "id": "4b13ae0a-59fb-4d3f-ad49-81916126b050",
+                                                          "step": "if-child",
+                                                          "is-else-condition?": false,
+                                                          "lhs-fn": "relative-strength-index",
+                                                          "lhs-window-days": "2",
+                                                          "lhs-val": "UGL",
+                                                          "lhs-fn-params": {
+                                                            "window": 2
+                                                          },
+                                                          "comparator": "gt",
+                                                          "rhs-val": "99.9",
+                                                          "rhs-fixed-value?": true,
+                                                          "children": [
+                                                            {
+                                                              "id": "07024c5b-e835-4970-b7dc-806287880ab5",
+                                                              "step": "asset",
+                                                              "ticker": "GLL"
+                                                            }
+                                                          ],
+                                                          "collapsed?": false
+                                                        },
+                                                        {
+                                                          "id": "373516ba-5885-403a-8b7f-3f30363183ac",
+                                                          "step": "if-child",
+                                                          "is-else-condition?": true,
+                                                          "children": [
+                                                            {
+                                                              "id": "7964b2ef-77f6-4a19-92a0-cfb7eabe17a3",
+                                                              "step": "asset",
+                                                              "ticker": "UGL"
+                                                            }
+                                                          ],
+                                                          "collapsed?": false
+                                                        }
+                                                      ],
+                                                      "collapsed?": false
+                                                    }
+                                                  ],
+                                                  "collapsed?": false
+                                                }
+                                              ],
+                                              "collapsed?": false
+                                            }
+                                          ],
+                                          "collapsed?": false
+                                        }
+                                      ],
+                                      "collapsed?": false
+                                    }
+                                  ],
+                                  "collapsed?": false
+                                }
+                              ],
+                              "collapsed?": false
+                            }
+                          ],
+                          "collapsed?": false
+                        }
+                      ],
+                      "collapsed?": false,
+                      "rhs-fn-params": {
+                        "window": 200
+                      }
+                    },
+                    {
+                      "id": "d831d474-f7e1-4c1f-b38c-6448def9a451",
+                      "step": "if-child",
+                      "is-else-condition?": true,
+                      "children": [
+                        {
+                          "id": "d9f0d635-6d67-4480-a10f-9007cb264c13",
+                          "step": "wt-cash-equal",
+                          "children": [
+                            {
+                              "id": "11ff3992-0de9-46d1-bb09-c41f8e72f952",
+                              "step": "if",
+                              "children": [
+                                {
+                                  "id": "fd22fe62-112d-4e77-91ac-5f8f824bdb7d",
+                                  "step": "if-child",
+                                  "is-else-condition?": false,
+                                  "lhs-fn": "moving-average-price",
+                                  "lhs-window-days": "20",
+                                  "lhs-val": "UGL",
+                                  "lhs-fn-params": {
+                                    "window": 20
+                                  },
+                                  "comparator": "gt",
+                                  "rhs-fn": "moving-average-price",
+                                  "rhs-window-days": "50",
+                                  "rhs-val": "UGL",
+                                  "rhs-fixed-value?": false,
+                                  "children": [
+                                    {
+                                      "id": "3d9e37c0-4e00-4f20-9cea-6326429884bb",
+                                      "step": "wt-cash-equal",
+                                      "children": [
+                                        {
+                                          "id": "bb5cfe10-e7f8-4fc9-8997-c9979958f3b5",
+                                          "step": "if",
+                                          "children": [
+                                            {
+                                              "id": "28f994a0-0b47-49ac-8f6b-1d2fd2830467",
+                                              "step": "if-child",
+                                              "is-else-condition?": false,
+                                              "lhs-fn": "relative-strength-index",
+                                              "lhs-window-days": "20",
+                                              "lhs-val": "UGL",
+                                              "lhs-fn-params": {
+                                                "window": 20
+                                              },
+                                              "comparator": "gt",
+                                              "rhs-val": "75",
+                                              "rhs-fixed-value?": true,
+                                              "children": [
+                                                {
+                                                  "id": "ebf0eba4-baf6-4adc-8f49-797d01ba445b",
+                                                  "step": "asset",
+                                                  "ticker": "GLL"
+                                                }
+                                              ],
+                                              "collapsed?": false
+                                            },
+                                            {
+                                              "id": "28ea75f4-2321-4bfc-8c67-d036e403dbb6",
+                                              "step": "if-child",
+                                              "is-else-condition?": true,
+                                              "children": [
+                                                {
+                                                  "id": "a2d5e7db-350d-4791-9855-819b947012ce",
+                                                  "step": "wt-cash-equal",
+                                                  "children": [
+                                                    {
+                                                      "id": "9104937b-429f-4b8f-a985-154ac85b2188",
+                                                      "step": "if",
+                                                      "children": [
+                                                        {
+                                                          "id": "5c1eff13-2d87-4434-9d37-9789fe5e227f",
+                                                          "step": "if-child",
+                                                          "is-else-condition?": false,
+                                                          "lhs-fn": "relative-strength-index",
+                                                          "lhs-window-days": "2",
+                                                          "lhs-val": "UGL",
+                                                          "lhs-fn-params": {
+                                                            "window": 2
+                                                          },
+                                                          "comparator": "gt",
+                                                          "rhs-val": "99.9",
+                                                          "rhs-fixed-value?": true,
+                                                          "children": [
+                                                            {
+                                                              "id": "1f4ac800-15c3-4533-abba-38e14324dbc3",
+                                                              "step": "asset",
+                                                              "ticker": "GLL"
+                                                            }
+                                                          ],
+                                                          "collapsed?": false
+                                                        },
+                                                        {
+                                                          "id": "bf17de8e-ff99-47e3-978b-042997c3bd22",
+                                                          "step": "if-child",
+                                                          "is-else-condition?": true,
+                                                          "children": [
+                                                            {
+                                                              "id": "9f9f99ab-a941-451b-b47d-a1de691a5a04",
+                                                              "step": "asset",
+                                                              "ticker": "UGL"
+                                                            }
+                                                          ],
+                                                          "collapsed?": false
+                                                        }
+                                                      ],
+                                                      "collapsed?": false
+                                                    }
+                                                  ],
+                                                  "collapsed?": false
+                                                }
+                                              ],
+                                              "collapsed?": false
+                                            }
+                                          ],
+                                          "collapsed?": false
+                                        }
+                                      ],
+                                      "collapsed?": false
+                                    }
+                                  ],
+                                  "collapsed?": false,
+                                  "rhs-fn-params": {
+                                    "window": 50
+                                  }
+                                },
+                                {
+                                  "id": "53c4ac2a-9a29-4fb1-a3d7-2af15d3d2340",
+                                  "step": "if-child",
+                                  "is-else-condition?": true,
+                                  "children": [
+                                    {
+                                      "id": "b287f919-f3f5-4318-84fe-c8a4ce0f3166",
+                                      "step": "wt-cash-equal",
+                                      "children": [
+                                        {
+                                          "id": "601afb20-007c-4afe-9416-8415d777aada",
+                                          "step": "if",
+                                          "children": [
+                                            {
+                                              "id": "cff10785-21ec-4afd-aeae-672489bdbedb",
+                                              "step": "if-child",
+                                              "is-else-condition?": false,
+                                              "lhs-fn": "moving-average-price",
+                                              "lhs-window-days": "5",
+                                              "lhs-val": "UGL",
+                                              "lhs-fn-params": {
+                                                "window": 5
+                                              },
+                                              "comparator": "gt",
+                                              "rhs-fn": "moving-average-price",
+                                              "rhs-window-days": "10",
+                                              "rhs-val": "UGL",
+                                              "rhs-fixed-value?": false,
+                                              "children": [
+                                                {
+                                                  "id": "5f9dfd0f-a152-44bc-912d-1764c301e181",
+                                                  "step": "wt-cash-equal",
+                                                  "children": [
+                                                    {
+                                                      "id": "75913b82-d7fb-478c-90ad-94105676646f",
+                                                      "step": "if",
+                                                      "children": [
+                                                        {
+                                                          "id": "08908493-1844-4ba0-8f39-be17ea541718",
+                                                          "step": "if-child",
+                                                          "is-else-condition?": false,
+                                                          "lhs-fn": "relative-strength-index",
+                                                          "lhs-window-days": "10",
+                                                          "lhs-val": "UGL",
+                                                          "lhs-fn-params": {
+                                                            "window": 10
+                                                          },
+                                                          "comparator": "gt",
+                                                          "rhs-val": "60",
+                                                          "rhs-fixed-value?": true,
+                                                          "children": [
+                                                            {
+                                                              "id": "91f47970-cdb5-4422-8d21-e8306995a5c0",
+                                                              "step": "asset",
+                                                              "ticker": "GLL"
+                                                            }
+                                                          ],
+                                                          "collapsed?": false
+                                                        },
+                                                        {
+                                                          "id": "2d8be873-47dc-46c1-ac9d-7284527ce4cd",
+                                                          "step": "if-child",
+                                                          "is-else-condition?": true,
+                                                          "children": [
+                                                            {
+                                                              "id": "e9d50bf8-c082-438a-947a-b4081ba229c3",
+                                                              "step": "asset",
+                                                              "ticker": "UGL"
+                                                            }
+                                                          ],
+                                                          "collapsed?": false
+                                                        }
+                                                      ],
+                                                      "collapsed?": false
+                                                    }
+                                                  ],
+                                                  "collapsed?": false
+                                                }
+                                              ],
+                                              "collapsed?": false,
+                                              "rhs-fn-params": {
+                                                "window": 10
+                                              }
+                                            },
+                                            {
+                                              "id": "e936d17f-53b5-4a92-af72-40d55a12afe2",
+                                              "step": "if-child",
+                                              "is-else-condition?": true,
+                                              "children": [
+                                                {
+                                                  "id": "a8248692-cc96-4143-831f-86ff2babeed7",
+                                                  "step": "wt-cash-equal",
+                                                  "children": [
+                                                    {
+                                                      "id": "b66aba0c-6051-4684-9f3d-4740ce1d4b86",
+                                                      "step": "if",
+                                                      "children": [
+                                                        {
+                                                          "id": "c1065eca-d119-4f7b-996c-fb72128fd0c0",
+                                                          "step": "if-child",
+                                                          "is-else-condition?": false,
+                                                          "lhs-fn": "relative-strength-index",
+                                                          "lhs-window-days": "20",
+                                                          "lhs-val": "UGL",
+                                                          "lhs-fn-params": {
+                                                            "window": 20
+                                                          },
+                                                          "comparator": "lt",
+                                                          "rhs-val": "30",
+                                                          "rhs-fixed-value?": true,
+                                                          "children": [
+                                                            {
+                                                              "id": "ace3f79f-0171-476c-b0d0-f17f3667cd6b",
+                                                              "step": "asset",
+                                                              "ticker": "UGL"
+                                                            }
+                                                          ],
+                                                          "collapsed?": false
+                                                        },
+                                                        {
+                                                          "id": "a0cc6dad-328c-48e9-8402-5276314aa739",
+                                                          "step": "if-child",
+                                                          "is-else-condition?": true,
+                                                          "children": [
+                                                            {
+                                                              "id": "059caf80-72ac-45d0-859b-5b2d7b3dd06d",
+                                                              "step": "asset",
+                                                              "ticker": "GLL"
+                                                            }
+                                                          ],
+                                                          "collapsed?": false
+                                                        }
+                                                      ],
+                                                      "collapsed?": false
+                                                    }
+                                                  ],
+                                                  "collapsed?": false
+                                                }
+                                              ],
+                                              "collapsed?": false
+                                            }
+                                          ],
+                                          "collapsed?": false
+                                        }
+                                      ],
+                                      "collapsed?": false
+                                    }
+                                  ],
+                                  "collapsed?": false
+                                }
+                              ],
+                              "collapsed?": false
+                            }
+                          ],
+                          "collapsed?": false
+                        }
+                      ],
+                      "collapsed?": false
+                    }
+                  ],
+                  "collapsed?": false
+                }
+              ],
+              "collapsed?": false
+            }
+          ],
+          "collapsed?": false
+        }
+      ],
+      "collapsed?": false
+    }
+  ]
+}

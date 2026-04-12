@@ -1,0 +1,545 @@
+{
+  "id": "773cf6ae-87a5-41f2-b3a6-54d3b7fe45fd",
+  "step": "root",
+  "name": "Bonds Zoop (standalone)",
+  "description": "",
+  "rebalance": "daily",
+  "children": [
+    {
+      "id": "c2d9827b-74b6-4928-9eae-3dfbb3f2add9",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "id": "84c9ea39-d4d6-48bf-9568-46f29d2f8353",
+          "step": "group",
+          "name": "Bonds Zoop V0.0 (144,38,2011)",
+          "children": [
+            {
+              "id": "416ba2bc-3b86-4a66-ae49-48f04f920d7d",
+              "step": "wt-cash-equal",
+              "children": [
+                {
+                  "id": "057d731a-01e2-4859-bf27-c68f4b059bf3",
+                  "step": "wt-cash-equal",
+                  "children": [
+                    {
+                      "id": "acde5e56-758b-48a8-a676-f337adea81e7",
+                      "step": "if",
+                      "children": [
+                        {
+                          "id": "fb95b39c-9249-4250-86b5-97753e17b298",
+                          "step": "if-child",
+                          "is-else-condition?": false,
+                          "lhs-fn": "current-price",
+                          "lhs-window-days": "10",
+                          "lhs-val": "TLT",
+                          "lhs-fn-params": {
+                            "window": 10
+                          },
+                          "comparator": "gt",
+                          "rhs-fn": "moving-average-price",
+                          "rhs-window-days": "200",
+                          "rhs-val": "TLT",
+                          "rhs-fixed-value?": false,
+                          "children": [
+                            {
+                              "id": "fa953212-da06-4b6c-b004-03e0bde077ab",
+                              "step": "wt-cash-equal",
+                              "children": [
+                                {
+                                  "id": "bfd73ac2-b229-4ed8-9cd4-47da0868903e",
+                                  "step": "if",
+                                  "children": [
+                                    {
+                                      "id": "a09b546b-04fd-4755-8a7e-dbc5d6e8d6af",
+                                      "step": "if-child",
+                                      "is-else-condition?": false,
+                                      "lhs-fn": "relative-strength-index",
+                                      "lhs-window-days": "10",
+                                      "lhs-val": "QLD",
+                                      "lhs-fn-params": {
+                                        "window": 10
+                                      },
+                                      "comparator": "gt",
+                                      "rhs-val": "79",
+                                      "rhs-fixed-value?": true,
+                                      "children": [
+                                        {
+                                          "id": "36cab488-2f32-49ec-b31d-3d134b51d86d",
+                                          "step": "asset",
+                                          "ticker": "UVXY"
+                                        }
+                                      ],
+                                      "collapsed?": false
+                                    },
+                                    {
+                                      "id": "a7ea6969-0238-42d1-a97f-a30923298034",
+                                      "step": "if-child",
+                                      "is-else-condition?": true,
+                                      "children": [
+                                        {
+                                          "id": "32fc2415-5717-4fa2-b2c0-a87a354e44d9",
+                                          "step": "wt-cash-equal",
+                                          "children": [
+                                            {
+                                              "id": "1e45db26-72b7-46a4-801b-c8f1a3113677",
+                                              "step": "if",
+                                              "children": [
+                                                {
+                                                  "id": "09c7c735-a943-4007-8eb3-7b5720d8449f",
+                                                  "step": "if-child",
+                                                  "is-else-condition?": false,
+                                                  "lhs-fn": "relative-strength-index",
+                                                  "lhs-window-days": "10",
+                                                  "lhs-val": "TMF",
+                                                  "lhs-fn-params": {
+                                                    "window": 10
+                                                  },
+                                                  "comparator": "lt",
+                                                  "rhs-val": "32",
+                                                  "rhs-fixed-value?": true,
+                                                  "children": [
+                                                    {
+                                                      "id": "b59ace89-fcc5-4c5f-9530-1ca739682ead",
+                                                      "step": "asset",
+                                                      "ticker": "TMF"
+                                                    }
+                                                  ],
+                                                  "collapsed?": false
+                                                },
+                                                {
+                                                  "id": "6bf1b195-86a2-4d8c-9929-362a150c4614",
+                                                  "step": "if-child",
+                                                  "is-else-condition?": true,
+                                                  "children": [
+                                                    {
+                                                      "id": "43ae0143-6c4e-4975-bb73-058ac1ca7ebc",
+                                                      "step": "wt-cash-equal",
+                                                      "children": [
+                                                        {
+                                                          "id": "b74a8db7-abe2-4d00-8afa-bd8dc24b33ac",
+                                                          "step": "if",
+                                                          "children": [
+                                                            {
+                                                              "id": "5b49a035-510f-48f0-ad27-d56d1337dcef",
+                                                              "step": "if-child",
+                                                              "is-else-condition?": false,
+                                                              "lhs-fn": "relative-strength-index",
+                                                              "lhs-window-days": "30",
+                                                              "lhs-val": "BIL",
+                                                              "lhs-fn-params": {
+                                                                "window": 30
+                                                              },
+                                                              "comparator": "lt",
+                                                              "rhs-fn": "relative-strength-index",
+                                                              "rhs-window-days": "20",
+                                                              "rhs-val": "TLT",
+                                                              "rhs-fixed-value?": false,
+                                                              "children": [
+                                                                {
+                                                                  "id": "607af9b7-30db-4db8-b580-39d441da7fea",
+                                                                  "step": "wt-cash-equal",
+                                                                  "children": [
+                                                                    {
+                                                                      "id": "8db57801-178d-4fb9-bc61-dcbaec7e1118",
+                                                                      "step": "if",
+                                                                      "children": [
+                                                                        {
+                                                                          "id": "2ad711cd-46e1-474e-b4d6-055b3509d712",
+                                                                          "step": "if-child",
+                                                                          "is-else-condition?": false,
+                                                                          "lhs-fn": "exponential-moving-average-price",
+                                                                          "lhs-window-days": "8",
+                                                                          "lhs-val": "TMF",
+                                                                          "lhs-fn-params": {
+                                                                            "window": 8
+                                                                          },
+                                                                          "comparator": "lt",
+                                                                          "rhs-fn": "moving-average-price",
+                                                                          "rhs-window-days": "10",
+                                                                          "rhs-val": "TMF",
+                                                                          "rhs-fixed-value?": false,
+                                                                          "children": [
+                                                                            {
+                                                                              "id": "c123b523-fef4-44b1-a117-52c700050e47",
+                                                                              "step": "asset",
+                                                                              "ticker": "TMF"
+                                                                            }
+                                                                          ],
+                                                                          "collapsed?": false,
+                                                                          "rhs-fn-params": {
+                                                                            "window": 10
+                                                                          }
+                                                                        },
+                                                                        {
+                                                                          "id": "ec4cf774-6137-4fdd-a606-4d52da6b6667",
+                                                                          "step": "if-child",
+                                                                          "is-else-condition?": true,
+                                                                          "children": [
+                                                                            {
+                                                                              "id": "bab7e4c3-b03c-4437-8beb-674ee2da5df2",
+                                                                              "step": "asset",
+                                                                              "ticker": "TQQQ"
+                                                                            }
+                                                                          ],
+                                                                          "collapsed?": false
+                                                                        }
+                                                                      ],
+                                                                      "collapsed?": false
+                                                                    }
+                                                                  ],
+                                                                  "collapsed?": false
+                                                                }
+                                                              ],
+                                                              "collapsed?": false,
+                                                              "rhs-fn-params": {
+                                                                "window": 20
+                                                              }
+                                                            },
+                                                            {
+                                                              "id": "72ce442e-a32a-46ca-9581-03c3ba4ac537",
+                                                              "step": "if-child",
+                                                              "is-else-condition?": true,
+                                                              "children": [
+                                                                {
+                                                                  "id": "d2dee91d-cd75-4937-a353-37a1ca267e39",
+                                                                  "step": "wt-cash-equal",
+                                                                  "children": [
+                                                                    {
+                                                                      "id": "753d24b9-9753-4979-993b-77fa455c354e",
+                                                                      "step": "if",
+                                                                      "children": [
+                                                                        {
+                                                                          "id": "7fe82c74-6f9f-44b3-87d7-3fa8cd72daef",
+                                                                          "step": "if-child",
+                                                                          "is-else-condition?": false,
+                                                                          "lhs-fn": "relative-strength-index",
+                                                                          "lhs-window-days": "10",
+                                                                          "lhs-val": "QLD",
+                                                                          "lhs-fn-params": {
+                                                                            "window": 10
+                                                                          },
+                                                                          "comparator": "lt",
+                                                                          "rhs-val": "31",
+                                                                          "rhs-fixed-value?": true,
+                                                                          "children": [
+                                                                            {
+                                                                              "id": "d5367230-7550-4006-a7ef-b6024907b08b",
+                                                                              "step": "asset",
+                                                                              "ticker": "TQQQ"
+                                                                            }
+                                                                          ],
+                                                                          "collapsed?": false
+                                                                        },
+                                                                        {
+                                                                          "id": "3f76b340-53ad-47db-8e7c-d8dbd0210ca0",
+                                                                          "step": "if-child",
+                                                                          "is-else-condition?": true,
+                                                                          "children": [
+                                                                            {
+                                                                              "id": "cac54228-da06-47fd-9594-a833157ac8a4",
+                                                                              "step": "asset",
+                                                                              "ticker": "BIL"
+                                                                            }
+                                                                          ],
+                                                                          "collapsed?": false
+                                                                        }
+                                                                      ],
+                                                                      "collapsed?": false
+                                                                    }
+                                                                  ],
+                                                                  "collapsed?": false
+                                                                }
+                                                              ],
+                                                              "collapsed?": false
+                                                            }
+                                                          ],
+                                                          "collapsed?": false
+                                                        }
+                                                      ],
+                                                      "collapsed?": false
+                                                    }
+                                                  ],
+                                                  "collapsed?": false
+                                                }
+                                              ],
+                                              "collapsed?": false
+                                            }
+                                          ],
+                                          "collapsed?": false
+                                        }
+                                      ],
+                                      "collapsed?": false
+                                    }
+                                  ],
+                                  "collapsed?": false
+                                }
+                              ],
+                              "collapsed?": false
+                            }
+                          ],
+                          "collapsed?": false,
+                          "rhs-fn-params": {
+                            "window": 200
+                          }
+                        },
+                        {
+                          "id": "6fe52557-c5de-4ca1-b3d0-9cd8dc6b8961",
+                          "step": "if-child",
+                          "is-else-condition?": true,
+                          "children": [
+                            {
+                              "id": "0a960553-d898-4547-b0d7-cb5cb9bbea7a",
+                              "step": "wt-cash-equal",
+                              "children": [
+                                {
+                                  "id": "4c937b7a-dab2-47d5-bf7a-ce7973cda5b4",
+                                  "step": "if",
+                                  "children": [
+                                    {
+                                      "id": "300733ca-39cc-40ce-b39d-d64a818672b6",
+                                      "step": "if-child",
+                                      "is-else-condition?": false,
+                                      "lhs-fn": "relative-strength-index",
+                                      "lhs-window-days": "10",
+                                      "lhs-val": "TMF",
+                                      "lhs-fn-params": {
+                                        "window": 10
+                                      },
+                                      "comparator": "lt",
+                                      "rhs-val": "32",
+                                      "rhs-fixed-value?": true,
+                                      "children": [
+                                        {
+                                          "id": "12b42a95-9356-41b2-b022-5e30e43bc306",
+                                          "step": "asset",
+                                          "ticker": "TMF"
+                                        }
+                                      ],
+                                      "collapsed?": false
+                                    },
+                                    {
+                                      "id": "568f51c1-3f6d-4dbb-ae4e-5aa914e689cf",
+                                      "step": "if-child",
+                                      "is-else-condition?": true,
+                                      "children": [
+                                        {
+                                          "id": "ab2f5648-9a23-4218-b828-277b6394df02",
+                                          "step": "wt-cash-equal",
+                                          "children": [
+                                            {
+                                              "id": "90898068-71ca-4b79-a5b9-ad6925021fce",
+                                              "step": "if",
+                                              "children": [
+                                                {
+                                                  "id": "784d0d25-8545-4853-b922-d90caf620011",
+                                                  "step": "if-child",
+                                                  "is-else-condition?": false,
+                                                  "lhs-fn": "moving-average-price",
+                                                  "lhs-window-days": "15",
+                                                  "lhs-val": "TMV",
+                                                  "lhs-fn-params": {
+                                                    "window": 15
+                                                  },
+                                                  "comparator": "gt",
+                                                  "rhs-fn": "moving-average-price",
+                                                  "rhs-window-days": "50",
+                                                  "rhs-val": "TMV",
+                                                  "rhs-fixed-value?": false,
+                                                  "children": [
+                                                    {
+                                                      "id": "0209bd88-5d57-42b2-beb2-a48811a78154",
+                                                      "step": "wt-cash-equal",
+                                                      "children": [
+                                                        {
+                                                          "id": "db3589ce-8222-4c50-bb42-66e1da6dc08b",
+                                                          "step": "if",
+                                                          "children": [
+                                                            {
+                                                              "id": "d0193cc3-5bd1-4ce4-9864-b54f3d30c8f4",
+                                                              "step": "if-child",
+                                                              "is-else-condition?": false,
+                                                              "lhs-fn": "current-price",
+                                                              "lhs-window-days": "10",
+                                                              "lhs-val": "TMV",
+                                                              "lhs-fn-params": {
+                                                                "window": 10
+                                                              },
+                                                              "comparator": "gt",
+                                                              "rhs-fn": "moving-average-price",
+                                                              "rhs-window-days": "135",
+                                                              "rhs-val": "TMV",
+                                                              "rhs-fixed-value?": false,
+                                                              "children": [
+                                                                {
+                                                                  "id": "84bfa677-93ea-4aee-8be1-e196e054f441",
+                                                                  "step": "wt-cash-equal",
+                                                                  "children": [
+                                                                    {
+                                                                      "id": "d00844f9-4d43-4a31-af8e-d98f37595f5f",
+                                                                      "step": "if",
+                                                                      "children": [
+                                                                        {
+                                                                          "id": "bee6885c-1e63-442b-b730-a93a2f992eea",
+                                                                          "step": "if-child",
+                                                                          "is-else-condition?": false,
+                                                                          "lhs-fn": "relative-strength-index",
+                                                                          "lhs-window-days": "10",
+                                                                          "lhs-val": "TMV",
+                                                                          "lhs-fn-params": {
+                                                                            "window": 10
+                                                                          },
+                                                                          "comparator": "gt",
+                                                                          "rhs-val": "65",
+                                                                          "rhs-fixed-value?": true,
+                                                                          "children": [
+                                                                            {
+                                                                              "id": "6c80cbee-8bb4-4746-84d5-06317b68b744",
+                                                                              "step": "asset",
+                                                                              "ticker": "TMV"
+                                                                            }
+                                                                          ],
+                                                                          "collapsed?": false
+                                                                        },
+                                                                        {
+                                                                          "id": "3ef12b95-1ec3-4245-a92d-f29bcedeeb5e",
+                                                                          "step": "if-child",
+                                                                          "is-else-condition?": true,
+                                                                          "children": [
+                                                                            {
+                                                                              "id": "feca4b16-6827-4420-8e3c-450fee4ed960",
+                                                                              "step": "wt-cash-equal",
+                                                                              "children": [
+                                                                                {
+                                                                                  "id": "a5d5501a-5a01-49e9-a276-0f75aa3ba5d9",
+                                                                                  "step": "if",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "id": "3c8d1ffc-b9cc-40dd-9c69-05e79f2d9700",
+                                                                                      "step": "if-child",
+                                                                                      "is-else-condition?": false,
+                                                                                      "lhs-fn": "relative-strength-index",
+                                                                                      "lhs-window-days": "60",
+                                                                                      "lhs-val": "TMV",
+                                                                                      "lhs-fn-params": {
+                                                                                        "window": 60
+                                                                                      },
+                                                                                      "comparator": "gt",
+                                                                                      "rhs-val": "59",
+                                                                                      "rhs-fixed-value?": true,
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "id": "ca363651-b524-467f-a157-360d8a424945",
+                                                                                          "step": "asset",
+                                                                                          "ticker": "TMF"
+                                                                                        }
+                                                                                      ],
+                                                                                      "collapsed?": false
+                                                                                    },
+                                                                                    {
+                                                                                      "id": "7ad97136-935b-4ccb-aa9e-5c4b02ca325a",
+                                                                                      "step": "if-child",
+                                                                                      "is-else-condition?": true,
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "id": "fbf13fd7-9a97-484f-84fb-989d547f449d",
+                                                                                          "step": "asset",
+                                                                                          "ticker": "TMV"
+                                                                                        }
+                                                                                      ],
+                                                                                      "collapsed?": false
+                                                                                    }
+                                                                                  ],
+                                                                                  "collapsed?": false
+                                                                                }
+                                                                              ],
+                                                                              "collapsed?": false
+                                                                            }
+                                                                          ],
+                                                                          "collapsed?": false
+                                                                        }
+                                                                      ],
+                                                                      "collapsed?": false
+                                                                    }
+                                                                  ],
+                                                                  "collapsed?": false
+                                                                }
+                                                              ],
+                                                              "collapsed?": false,
+                                                              "rhs-fn-params": {
+                                                                "window": 135
+                                                              }
+                                                            },
+                                                            {
+                                                              "id": "4e342292-bf5e-4582-83d7-178f01f7fa7d",
+                                                              "step": "if-child",
+                                                              "is-else-condition?": true,
+                                                              "children": [
+                                                                {
+                                                                  "id": "6b0113c7-99e3-4cc9-a925-65d056a7f3c9",
+                                                                  "step": "asset",
+                                                                  "ticker": "TMF"
+                                                                }
+                                                              ],
+                                                              "collapsed?": false
+                                                            }
+                                                          ],
+                                                          "collapsed?": false
+                                                        }
+                                                      ],
+                                                      "collapsed?": false
+                                                    }
+                                                  ],
+                                                  "collapsed?": false,
+                                                  "rhs-fn-params": {
+                                                    "window": 50
+                                                  }
+                                                },
+                                                {
+                                                  "id": "029880bb-1d62-4b51-95d2-3e16a05b4989",
+                                                  "step": "if-child",
+                                                  "is-else-condition?": true,
+                                                  "children": [
+                                                    {
+                                                      "id": "0eb98aa2-98d8-469f-b88d-fcf0dec705ce",
+                                                      "step": "asset",
+                                                      "ticker": "TMF"
+                                                    }
+                                                  ],
+                                                  "collapsed?": false
+                                                }
+                                              ],
+                                              "collapsed?": false
+                                            }
+                                          ],
+                                          "collapsed?": false
+                                        }
+                                      ],
+                                      "collapsed?": false
+                                    }
+                                  ],
+                                  "collapsed?": false
+                                }
+                              ],
+                              "collapsed?": false
+                            }
+                          ],
+                          "collapsed?": false
+                        }
+                      ],
+                      "collapsed?": false
+                    }
+                  ],
+                  "collapsed?": false
+                }
+              ],
+              "collapsed?": false
+            }
+          ],
+          "collapsed?": false
+        }
+      ],
+      "collapsed?": false
+    }
+  ]
+}

@@ -1,0 +1,1147 @@
+{
+  "id": "900ccfb6-7c42-4ea2-998d-7ac2c8a86b2b",
+  "step": "root",
+  "name": "QQQ FTLT Bonds (standalone)",
+  "description": "",
+  "rebalance": "daily",
+  "children": [
+    {
+      "id": "dc4683ad-3ff0-4fc2-b2e4-53b6777aa8eb",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "id": "e749bde0-13e8-463a-8399-2936b8a7221a",
+          "step": "group",
+          "name": "QQQ FTLT Bonds - V0.5 - (237,33,2011)",
+          "children": [
+            {
+              "id": "a9f289ea-9ad9-4348-8398-96803f25b462",
+              "step": "wt-cash-equal",
+              "children": [
+                {
+                  "id": "2b6eb737-4804-4f16-b84d-3cb0cd165dab",
+                  "step": "if",
+                  "children": [
+                    {
+                      "id": "80d3b5ca-728e-4e19-ad7f-4e79215780e9",
+                      "step": "if-child",
+                      "is-else-condition?": false,
+                      "lhs-fn": "relative-strength-index",
+                      "lhs-window-days": "10",
+                      "lhs-val": "SPY",
+                      "lhs-fn-params": {
+                        "window": 10
+                      },
+                      "comparator": "gt",
+                      "rhs-val": "80",
+                      "rhs-fixed-value?": true,
+                      "children": [
+                        {
+                          "id": "a856b0d1-89b5-446b-aea5-78d2184e8ae9",
+                          "step": "asset",
+                          "ticker": "UVXY"
+                        }
+                      ],
+                      "collapsed?": false
+                    },
+                    {
+                      "id": "f028aedd-adc2-4a8b-bdd5-69c7fb2626b3",
+                      "step": "if-child",
+                      "is-else-condition?": true,
+                      "children": [
+                        {
+                          "id": "71e60524-a7cf-42ce-a800-0d923a1c8371",
+                          "step": "wt-cash-equal",
+                          "children": [
+                            {
+                              "id": "320dd5ba-933c-4a5f-a870-178f6afc7503",
+                              "step": "if",
+                              "children": [
+                                {
+                                  "id": "539f3f61-a9e6-49c7-9574-005cb73e570d",
+                                  "step": "if-child",
+                                  "is-else-condition?": false,
+                                  "lhs-fn": "relative-strength-index",
+                                  "lhs-window-days": "10",
+                                  "lhs-val": "QQQ",
+                                  "lhs-fn-params": {
+                                    "window": 10
+                                  },
+                                  "comparator": "gt",
+                                  "rhs-val": "79",
+                                  "rhs-fixed-value?": true,
+                                  "children": [
+                                    {
+                                      "id": "bf995530-b821-47fe-8eeb-2cf547ed514b",
+                                      "step": "asset",
+                                      "ticker": "UVXY"
+                                    }
+                                  ],
+                                  "collapsed?": false
+                                },
+                                {
+                                  "id": "e43e2dbd-8db9-4499-8cc5-b2a44f0543f3",
+                                  "step": "if-child",
+                                  "is-else-condition?": true,
+                                  "children": [
+                                    {
+                                      "id": "e51258e0-1f89-4536-a83f-e442fe50582f",
+                                      "step": "wt-cash-equal",
+                                      "children": [
+                                        {
+                                          "id": "6759a6c5-187b-4608-9595-bc5c212350fb",
+                                          "step": "if",
+                                          "children": [
+                                            {
+                                              "id": "8928299f-057e-4cc8-90e6-65920e3277fb",
+                                              "step": "if-child",
+                                              "is-else-condition?": false,
+                                              "lhs-fn": "relative-strength-index",
+                                              "lhs-window-days": "10",
+                                              "lhs-val": "VTV",
+                                              "lhs-fn-params": {
+                                                "window": 10
+                                              },
+                                              "comparator": "gt",
+                                              "rhs-val": "79",
+                                              "rhs-fixed-value?": true,
+                                              "children": [
+                                                {
+                                                  "id": "7b1261da-2402-45ae-8060-53ca0403048b",
+                                                  "step": "asset",
+                                                  "ticker": "UVXY"
+                                                }
+                                              ],
+                                              "collapsed?": false
+                                            },
+                                            {
+                                              "id": "40365157-9c26-4d45-8a6e-84b638c9e745",
+                                              "step": "if-child",
+                                              "is-else-condition?": true,
+                                              "children": [
+                                                {
+                                                  "id": "a6fdceed-2974-4513-bdbc-5cacf6cb0cfa",
+                                                  "step": "wt-cash-equal",
+                                                  "children": [
+                                                    {
+                                                      "id": "98dda620-a215-442e-8643-3ca19071b8d2",
+                                                      "step": "if",
+                                                      "children": [
+                                                        {
+                                                          "id": "7e0d8d7a-4a6c-4663-aecf-8d971474fbe2",
+                                                          "step": "if-child",
+                                                          "is-else-condition?": false,
+                                                          "lhs-fn": "relative-strength-index",
+                                                          "lhs-window-days": "10",
+                                                          "lhs-val": "VOX",
+                                                          "lhs-fn-params": {
+                                                            "window": 10
+                                                          },
+                                                          "comparator": "gt",
+                                                          "rhs-val": "79",
+                                                          "rhs-fixed-value?": true,
+                                                          "children": [
+                                                            {
+                                                              "id": "b0494a5a-0ac9-4a67-a42d-af7b255dd633",
+                                                              "step": "asset",
+                                                              "ticker": "UVXY"
+                                                            }
+                                                          ],
+                                                          "collapsed?": false
+                                                        },
+                                                        {
+                                                          "id": "6e9277e5-fa75-4c53-814f-dd3ed9b1c0fd",
+                                                          "step": "if-child",
+                                                          "is-else-condition?": true,
+                                                          "children": [
+                                                            {
+                                                              "id": "07e2ee56-0460-4f3b-9eb1-fa5419e708b0",
+                                                              "step": "wt-cash-equal",
+                                                              "children": [
+                                                                {
+                                                                  "id": "c5bd196f-41bb-4fb7-9d9f-39283c975f5d",
+                                                                  "step": "if",
+                                                                  "children": [
+                                                                    {
+                                                                      "id": "d7767b2c-510c-4dbe-9615-853a0bd87c60",
+                                                                      "step": "if-child",
+                                                                      "is-else-condition?": false,
+                                                                      "lhs-fn": "relative-strength-index",
+                                                                      "lhs-window-days": "10",
+                                                                      "lhs-val": "XLK",
+                                                                      "lhs-fn-params": {
+                                                                        "window": 10
+                                                                      },
+                                                                      "comparator": "gt",
+                                                                      "rhs-val": "79",
+                                                                      "rhs-fixed-value?": true,
+                                                                      "children": [
+                                                                        {
+                                                                          "id": "3b7dc421-48a0-4008-951f-6eac53c23e02",
+                                                                          "step": "asset",
+                                                                          "ticker": "UVXY"
+                                                                        }
+                                                                      ],
+                                                                      "collapsed?": false
+                                                                    },
+                                                                    {
+                                                                      "id": "6c250ce9-eafe-4306-84db-9f530f89331e",
+                                                                      "step": "if-child",
+                                                                      "is-else-condition?": true,
+                                                                      "children": [
+                                                                        {
+                                                                          "id": "bf87dadb-93f5-4445-b8fd-169ece318142",
+                                                                          "step": "wt-cash-equal",
+                                                                          "children": [
+                                                                            {
+                                                                              "id": "4a71360c-8b78-401f-82d9-1d61c5b50bfc",
+                                                                              "step": "if",
+                                                                              "children": [
+                                                                                {
+                                                                                  "id": "0dc093c3-5fdb-4389-8b02-3e17e8bc2b41",
+                                                                                  "step": "if-child",
+                                                                                  "is-else-condition?": false,
+                                                                                  "lhs-fn": "relative-strength-index",
+                                                                                  "lhs-window-days": "10",
+                                                                                  "lhs-val": "XLP",
+                                                                                  "lhs-fn-params": {
+                                                                                    "window": 10
+                                                                                  },
+                                                                                  "comparator": "gt",
+                                                                                  "rhs-val": "75",
+                                                                                  "rhs-fixed-value?": true,
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "id": "3b54f28b-60e5-40b5-82f3-b68d416fc041",
+                                                                                      "step": "asset",
+                                                                                      "ticker": "VIXY"
+                                                                                    }
+                                                                                  ],
+                                                                                  "collapsed?": false
+                                                                                },
+                                                                                {
+                                                                                  "id": "7076b303-07f2-4871-b9d9-c638b048b19e",
+                                                                                  "step": "if-child",
+                                                                                  "is-else-condition?": true,
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "id": "db4fa12b-c8b6-488d-883a-c02a5b93ebfe",
+                                                                                      "step": "wt-cash-equal",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "id": "3e549902-b145-4a01-8517-de609ee9c3cd",
+                                                                                          "step": "if",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "id": "076653f3-422b-40b5-beb2-18fcdcfef54b",
+                                                                                              "step": "if-child",
+                                                                                              "is-else-condition?": false,
+                                                                                              "lhs-fn": "relative-strength-index",
+                                                                                              "lhs-window-days": "10",
+                                                                                              "lhs-val": "XLF",
+                                                                                              "lhs-fn-params": {
+                                                                                                "window": 10
+                                                                                              },
+                                                                                              "comparator": "gt",
+                                                                                              "rhs-val": "80",
+                                                                                              "rhs-fixed-value?": true,
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "id": "b7d5186e-1c4c-4999-9c02-7348d2810ff9",
+                                                                                                  "step": "asset",
+                                                                                                  "ticker": "UVXY"
+                                                                                                }
+                                                                                              ],
+                                                                                              "collapsed?": false
+                                                                                            },
+                                                                                            {
+                                                                                              "id": "3079c8f7-4cdf-4804-8195-f2f166954609",
+                                                                                              "step": "if-child",
+                                                                                              "is-else-condition?": true,
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "id": "9b9ea6e8-d1ab-4fc9-b7fb-3f81e99adbe5",
+                                                                                                  "step": "group",
+                                                                                                  "name": "Vol Check",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "id": "4c9e3c9d-e319-4501-8a59-9c2ea7356955",
+                                                                                                      "step": "wt-cash-equal",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "id": "05a86148-2834-4ee8-9b33-2f212f469e03",
+                                                                                                          "step": "if",
+                                                                                                          "children": [
+                                                                                                            {
+                                                                                                              "id": "a09257cf-8713-40f9-b149-bd6818eba68d",
+                                                                                                              "step": "if-child",
+                                                                                                              "is-else-condition?": false,
+                                                                                                              "lhs-fn": "relative-strength-index",
+                                                                                                              "lhs-window-days": "21",
+                                                                                                              "lhs-val": "UVXY",
+                                                                                                              "lhs-fn-params": {
+                                                                                                                "window": 21
+                                                                                                              },
+                                                                                                              "comparator": "gt",
+                                                                                                              "rhs-val": "65",
+                                                                                                              "rhs-fixed-value?": true,
+                                                                                                              "children": [
+                                                                                                                {
+                                                                                                                  "id": "f44b227e-9a34-4f6f-86c4-153178f3b543",
+                                                                                                                  "step": "wt-cash-equal",
+                                                                                                                  "children": [
+                                                                                                                    {
+                                                                                                                      "id": "47160fbe-0d9d-41b6-971d-7eb981a2f79f",
+                                                                                                                      "step": "group",
+                                                                                                                      "name": "BSC",
+                                                                                                                      "children": [
+                                                                                                                        {
+                                                                                                                          "id": "43a4db01-046b-4a7c-9d28-aa5903c5a6a3",
+                                                                                                                          "step": "wt-cash-equal",
+                                                                                                                          "children": [
+                                                                                                                            {
+                                                                                                                              "id": "cd6ee8d5-2053-4f08-a686-f4f4dde1c6f8",
+                                                                                                                              "step": "if",
+                                                                                                                              "children": [
+                                                                                                                                {
+                                                                                                                                  "id": "71f0c584-3a6d-4074-88c1-f8e6c1f935ff",
+                                                                                                                                  "step": "if-child",
+                                                                                                                                  "is-else-condition?": false,
+                                                                                                                                  "lhs-fn": "relative-strength-index",
+                                                                                                                                  "lhs-window-days": "21",
+                                                                                                                                  "lhs-val": "SPY",
+                                                                                                                                  "lhs-fn-params": {
+                                                                                                                                    "window": 21
+                                                                                                                                  },
+                                                                                                                                  "comparator": "gt",
+                                                                                                                                  "rhs-val": "30",
+                                                                                                                                  "rhs-fixed-value?": true,
+                                                                                                                                  "children": [
+                                                                                                                                    {
+                                                                                                                                      "id": "05e1d810-4105-4ebe-bd30-5596b1edb96d",
+                                                                                                                                      "step": "asset",
+                                                                                                                                      "ticker": "VIXM"
+                                                                                                                                    }
+                                                                                                                                  ],
+                                                                                                                                  "collapsed?": false
+                                                                                                                                },
+                                                                                                                                {
+                                                                                                                                  "id": "cd52ebbd-14d7-4d60-a1e8-f23e18742e8f",
+                                                                                                                                  "step": "if-child",
+                                                                                                                                  "is-else-condition?": true,
+                                                                                                                                  "children": [
+                                                                                                                                    {
+                                                                                                                                      "id": "14a49ddb-81ee-4fa0-84f9-4701984e1297",
+                                                                                                                                      "step": "asset",
+                                                                                                                                      "ticker": "SPXL"
+                                                                                                                                    }
+                                                                                                                                  ],
+                                                                                                                                  "collapsed?": false
+                                                                                                                                }
+                                                                                                                              ],
+                                                                                                                              "collapsed?": false
+                                                                                                                            }
+                                                                                                                          ],
+                                                                                                                          "collapsed?": false
+                                                                                                                        }
+                                                                                                                      ],
+                                                                                                                      "collapsed?": false
+                                                                                                                    }
+                                                                                                                  ],
+                                                                                                                  "collapsed?": false
+                                                                                                                }
+                                                                                                              ],
+                                                                                                              "collapsed?": false
+                                                                                                            },
+                                                                                                            {
+                                                                                                              "id": "3452d8cb-b47b-4309-b696-6b50a951024b",
+                                                                                                              "step": "if-child",
+                                                                                                              "is-else-condition?": true,
+                                                                                                              "children": [
+                                                                                                                {
+                                                                                                                  "id": "55d587a0-b186-42f1-ba96-9119582517f2",
+                                                                                                                  "step": "group",
+                                                                                                                  "name": "Vix Low",
+                                                                                                                  "children": [
+                                                                                                                    {
+                                                                                                                      "id": "cd6dcc60-cf29-4d86-91b3-8222e3b7b26f",
+                                                                                                                      "step": "wt-cash-equal",
+                                                                                                                      "children": [
+                                                                                                                        {
+                                                                                                                          "id": "8a947be5-6429-45a5-94a6-da54b4a44c7b",
+                                                                                                                          "step": "if",
+                                                                                                                          "children": [
+                                                                                                                            {
+                                                                                                                              "id": "a9835fa9-3d5d-4d45-b528-c266f7501450",
+                                                                                                                              "step": "if-child",
+                                                                                                                              "is-else-condition?": false,
+                                                                                                                              "lhs-fn": "relative-strength-index",
+                                                                                                                              "lhs-window-days": "10",
+                                                                                                                              "lhs-val": "SOXX",
+                                                                                                                              "lhs-fn-params": {
+                                                                                                                                "window": 10
+                                                                                                                              },
+                                                                                                                              "comparator": "lt",
+                                                                                                                              "rhs-val": "30",
+                                                                                                                              "rhs-fixed-value?": true,
+                                                                                                                              "children": [
+                                                                                                                                {
+                                                                                                                                  "id": "a6e7fdd7-d154-4a03-80c4-ec3110f2c110",
+                                                                                                                                  "step": "asset",
+                                                                                                                                  "ticker": "SOXL"
+                                                                                                                                }
+                                                                                                                              ],
+                                                                                                                              "collapsed?": false
+                                                                                                                            },
+                                                                                                                            {
+                                                                                                                              "id": "a3f31744-1b9a-4356-9da4-f6aea2a01bfe",
+                                                                                                                              "step": "if-child",
+                                                                                                                              "is-else-condition?": true,
+                                                                                                                              "children": [
+                                                                                                                                {
+                                                                                                                                  "id": "07ee3370-0e90-4568-bb05-f6e9b42bd00d",
+                                                                                                                                  "step": "wt-cash-equal",
+                                                                                                                                  "children": [
+                                                                                                                                    {
+                                                                                                                                      "id": "85aad701-9cbc-4b4e-a973-a825815cd39a",
+                                                                                                                                      "step": "if",
+                                                                                                                                      "children": [
+                                                                                                                                        {
+                                                                                                                                          "id": "61edbf31-978a-4ffb-acc2-005b86e5b7ac",
+                                                                                                                                          "step": "if-child",
+                                                                                                                                          "is-else-condition?": false,
+                                                                                                                                          "lhs-fn": "relative-strength-index",
+                                                                                                                                          "lhs-window-days": "10",
+                                                                                                                                          "lhs-val": "QQQ",
+                                                                                                                                          "lhs-fn-params": {
+                                                                                                                                            "window": 10
+                                                                                                                                          },
+                                                                                                                                          "comparator": "lt",
+                                                                                                                                          "rhs-val": "30",
+                                                                                                                                          "rhs-fixed-value?": true,
+                                                                                                                                          "children": [
+                                                                                                                                            {
+                                                                                                                                              "id": "d54a961c-0a3d-4717-b843-f489fdb4fcc4",
+                                                                                                                                              "step": "asset",
+                                                                                                                                              "ticker": "TECL"
+                                                                                                                                            }
+                                                                                                                                          ],
+                                                                                                                                          "collapsed?": false
+                                                                                                                                        },
+                                                                                                                                        {
+                                                                                                                                          "id": "54407047-03a5-42fd-a93b-067c84610e5d",
+                                                                                                                                          "step": "if-child",
+                                                                                                                                          "is-else-condition?": true,
+                                                                                                                                          "children": [
+                                                                                                                                            {
+                                                                                                                                              "id": "e9a02524-ff7c-4820-bc81-b0ce12018745",
+                                                                                                                                              "step": "wt-cash-equal",
+                                                                                                                                              "children": [
+                                                                                                                                                {
+                                                                                                                                                  "id": "1047f92a-4df7-40d8-a213-90dbfbe06a36",
+                                                                                                                                                  "step": "if",
+                                                                                                                                                  "children": [
+                                                                                                                                                    {
+                                                                                                                                                      "id": "34f9a81d-5619-4df3-bd08-9b67583d7dc8",
+                                                                                                                                                      "step": "if-child",
+                                                                                                                                                      "is-else-condition?": false,
+                                                                                                                                                      "lhs-fn": "relative-strength-index",
+                                                                                                                                                      "lhs-window-days": "10",
+                                                                                                                                                      "lhs-val": "SPY",
+                                                                                                                                                      "lhs-fn-params": {
+                                                                                                                                                        "window": 10
+                                                                                                                                                      },
+                                                                                                                                                      "comparator": "lt",
+                                                                                                                                                      "rhs-val": "30",
+                                                                                                                                                      "rhs-fixed-value?": true,
+                                                                                                                                                      "children": [
+                                                                                                                                                        {
+                                                                                                                                                          "id": "a45555ac-f157-4197-8c85-57c9be15d996",
+                                                                                                                                                          "step": "asset",
+                                                                                                                                                          "ticker": "UPRO"
+                                                                                                                                                        }
+                                                                                                                                                      ],
+                                                                                                                                                      "collapsed?": false
+                                                                                                                                                    },
+                                                                                                                                                    {
+                                                                                                                                                      "id": "7b79edef-6160-4ce4-832c-134c46adb340",
+                                                                                                                                                      "step": "if-child",
+                                                                                                                                                      "is-else-condition?": true,
+                                                                                                                                                      "children": [
+                                                                                                                                                        {
+                                                                                                                                                          "id": "a83b084b-e799-4aa1-a3d6-33e604f0324e",
+                                                                                                                                                          "step": "wt-cash-equal",
+                                                                                                                                                          "children": [
+                                                                                                                                                            {
+                                                                                                                                                              "id": "ae8e7434-a3ee-46d3-a38b-fa0c41a2923a",
+                                                                                                                                                              "step": "if",
+                                                                                                                                                              "children": [
+                                                                                                                                                                {
+                                                                                                                                                                  "id": "af800456-ca98-4700-983e-71e99c26751d",
+                                                                                                                                                                  "step": "if-child",
+                                                                                                                                                                  "is-else-condition?": false,
+                                                                                                                                                                  "lhs-fn": "current-price",
+                                                                                                                                                                  "lhs-window-days": "10",
+                                                                                                                                                                  "lhs-val": "SPY",
+                                                                                                                                                                  "lhs-fn-params": {
+                                                                                                                                                                    "window": 10
+                                                                                                                                                                  },
+                                                                                                                                                                  "comparator": "gt",
+                                                                                                                                                                  "rhs-fn": "moving-average-price",
+                                                                                                                                                                  "rhs-window-days": "200",
+                                                                                                                                                                  "rhs-val": "SPY",
+                                                                                                                                                                  "rhs-fixed-value?": false,
+                                                                                                                                                                  "children": [
+                                                                                                                                                                    {
+                                                                                                                                                                      "id": "e71142d5-c67b-482b-b5b2-233410f6e181",
+                                                                                                                                                                      "step": "group",
+                                                                                                                                                                      "name": "20d AGG vs 60d SH",
+                                                                                                                                                                      "children": [
+                                                                                                                                                                        {
+                                                                                                                                                                          "id": "1a18c3ac-7762-43ff-9281-aa614621e984",
+                                                                                                                                                                          "step": "wt-cash-equal",
+                                                                                                                                                                          "children": [
+                                                                                                                                                                            {
+                                                                                                                                                                              "id": "e403bda7-1906-4f7c-98a9-983192a97580",
+                                                                                                                                                                              "step": "if",
+                                                                                                                                                                              "children": [
+                                                                                                                                                                                {
+                                                                                                                                                                                  "id": "499c6578-3ccd-4cee-ab17-aa0d7c3929ab",
+                                                                                                                                                                                  "step": "if-child",
+                                                                                                                                                                                  "is-else-condition?": false,
+                                                                                                                                                                                  "lhs-fn": "relative-strength-index",
+                                                                                                                                                                                  "lhs-window-days": "20",
+                                                                                                                                                                                  "lhs-val": "AGG",
+                                                                                                                                                                                  "lhs-fn-params": {
+                                                                                                                                                                                    "window": 20
+                                                                                                                                                                                  },
+                                                                                                                                                                                  "comparator": "gt",
+                                                                                                                                                                                  "rhs-fn": "relative-strength-index",
+                                                                                                                                                                                  "rhs-window-days": "60",
+                                                                                                                                                                                  "rhs-val": "SH",
+                                                                                                                                                                                  "rhs-fixed-value?": false,
+                                                                                                                                                                                  "children": [
+                                                                                                                                                                                    {
+                                                                                                                                                                                      "id": "7b9fe09b-cbab-4880-ae2d-1dba993feba3",
+                                                                                                                                                                                      "step": "wt-cash-equal",
+                                                                                                                                                                                      "children": [
+                                                                                                                                                                                        {
+                                                                                                                                                                                          "id": "e9dc73c1-59c0-4782-aad7-2a4ed1496587",
+                                                                                                                                                                                          "step": "if",
+                                                                                                                                                                                          "children": [
+                                                                                                                                                                                            {
+                                                                                                                                                                                              "id": "369aeeb5-e601-44db-bc2f-2c52121d9832",
+                                                                                                                                                                                              "step": "if-child",
+                                                                                                                                                                                              "is-else-condition?": false,
+                                                                                                                                                                                              "lhs-fn": "moving-average-return",
+                                                                                                                                                                                              "lhs-window-days": "15",
+                                                                                                                                                                                              "lhs-val": "SPY",
+                                                                                                                                                                                              "lhs-fn-params": {
+                                                                                                                                                                                                "window": 15
+                                                                                                                                                                                              },
+                                                                                                                                                                                              "comparator": "gt",
+                                                                                                                                                                                              "rhs-fn": "moving-average-return",
+                                                                                                                                                                                              "rhs-window-days": "30",
+                                                                                                                                                                                              "rhs-val": "SPY",
+                                                                                                                                                                                              "rhs-fixed-value?": false,
+                                                                                                                                                                                              "children": [
+                                                                                                                                                                                                {
+                                                                                                                                                                                                  "id": "92ccc1ec-0959-4c3a-a0de-0c5203366baf",
+                                                                                                                                                                                                  "step": "asset",
+                                                                                                                                                                                                  "ticker": "TQQQ"
+                                                                                                                                                                                                }
+                                                                                                                                                                                              ],
+                                                                                                                                                                                              "collapsed?": false,
+                                                                                                                                                                                              "rhs-fn-params": {
+                                                                                                                                                                                                "window": 30
+                                                                                                                                                                                              }
+                                                                                                                                                                                            },
+                                                                                                                                                                                            {
+                                                                                                                                                                                              "id": "b3f55ef6-948e-444a-9a81-81b8af56d776",
+                                                                                                                                                                                              "step": "if-child",
+                                                                                                                                                                                              "is-else-condition?": true,
+                                                                                                                                                                                              "children": [
+                                                                                                                                                                                                {
+                                                                                                                                                                                                  "id": "d05480c1-8d23-44fb-9415-003e0c0e4763",
+                                                                                                                                                                                                  "step": "wt-cash-equal",
+                                                                                                                                                                                                  "children": [
+                                                                                                                                                                                                    {
+                                                                                                                                                                                                      "id": "9444bdc2-d194-40a7-88a0-fc0dfed69dd9",
+                                                                                                                                                                                                      "step": "filter",
+                                                                                                                                                                                                      "sort-by-fn": "relative-strength-index",
+                                                                                                                                                                                                      "sort-by-fn-params": {
+                                                                                                                                                                                                        "window": 10
+                                                                                                                                                                                                      },
+                                                                                                                                                                                                      "select-fn": "bottom",
+                                                                                                                                                                                                      "select-n": "1",
+                                                                                                                                                                                                      "select?": true,
+                                                                                                                                                                                                      "sort-by?": true,
+                                                                                                                                                                                                      "children": [
+                                                                                                                                                                                                        {
+                                                                                                                                                                                                          "id": "739cb15f-cfd8-4420-8cea-6542535fc104",
+                                                                                                                                                                                                          "step": "asset",
+                                                                                                                                                                                                          "ticker": "UGE"
+                                                                                                                                                                                                        },
+                                                                                                                                                                                                        {
+                                                                                                                                                                                                          "id": "8439ac32-0bf4-4f42-88b2-39e301896772",
+                                                                                                                                                                                                          "step": "asset",
+                                                                                                                                                                                                          "ticker": "BOND"
+                                                                                                                                                                                                        }
+                                                                                                                                                                                                      ],
+                                                                                                                                                                                                      "collapsed?": false,
+                                                                                                                                                                                                      "sort-by-window-days": "10"
+                                                                                                                                                                                                    }
+                                                                                                                                                                                                  ],
+                                                                                                                                                                                                  "collapsed?": false
+                                                                                                                                                                                                }
+                                                                                                                                                                                              ],
+                                                                                                                                                                                              "collapsed?": false
+                                                                                                                                                                                            }
+                                                                                                                                                                                          ],
+                                                                                                                                                                                          "collapsed?": false
+                                                                                                                                                                                        }
+                                                                                                                                                                                      ],
+                                                                                                                                                                                      "collapsed?": false
+                                                                                                                                                                                    }
+                                                                                                                                                                                  ],
+                                                                                                                                                                                  "collapsed?": false,
+                                                                                                                                                                                  "rhs-fn-params": {
+                                                                                                                                                                                    "window": 60
+                                                                                                                                                                                  }
+                                                                                                                                                                                },
+                                                                                                                                                                                {
+                                                                                                                                                                                  "id": "fc601fdd-ff7a-4cc0-9f57-d6a239976aa8",
+                                                                                                                                                                                  "step": "if-child",
+                                                                                                                                                                                  "is-else-condition?": true,
+                                                                                                                                                                                  "children": [
+                                                                                                                                                                                    {
+                                                                                                                                                                                      "id": "bd14422a-7585-4aa7-b79d-6d5063181ffe",
+                                                                                                                                                                                      "step": "asset",
+                                                                                                                                                                                      "ticker": "PSQ"
+                                                                                                                                                                                    }
+                                                                                                                                                                                  ],
+                                                                                                                                                                                  "collapsed?": false
+                                                                                                                                                                                }
+                                                                                                                                                                              ],
+                                                                                                                                                                              "collapsed?": false
+                                                                                                                                                                            }
+                                                                                                                                                                          ],
+                                                                                                                                                                          "collapsed?": false
+                                                                                                                                                                        }
+                                                                                                                                                                      ],
+                                                                                                                                                                      "collapsed?": false
+                                                                                                                                                                    }
+                                                                                                                                                                  ],
+                                                                                                                                                                  "collapsed?": false,
+                                                                                                                                                                  "rhs-fn-params": {
+                                                                                                                                                                    "window": 200
+                                                                                                                                                                  }
+                                                                                                                                                                },
+                                                                                                                                                                {
+                                                                                                                                                                  "id": "9b93a277-a05e-43a5-9bfd-9f484458c774",
+                                                                                                                                                                  "step": "if-child",
+                                                                                                                                                                  "is-else-condition?": true,
+                                                                                                                                                                  "children": [
+                                                                                                                                                                    {
+                                                                                                                                                                      "id": "81caa932-78f9-4840-b619-d564ce51d0b0",
+                                                                                                                                                                      "step": "wt-cash-equal",
+                                                                                                                                                                      "children": [
+                                                                                                                                                                        {
+                                                                                                                                                                          "id": "f817dd1b-f39c-4cf8-ae60-0de9ce8b3de5",
+                                                                                                                                                                          "step": "if",
+                                                                                                                                                                          "children": [
+                                                                                                                                                                            {
+                                                                                                                                                                              "id": "6357b99e-8564-4a5d-9218-1484c893fb2e",
+                                                                                                                                                                              "step": "if-child",
+                                                                                                                                                                              "is-else-condition?": false,
+                                                                                                                                                                              "lhs-fn": "cumulative-return",
+                                                                                                                                                                              "lhs-window-days": "60",
+                                                                                                                                                                              "lhs-val": "QQQ",
+                                                                                                                                                                              "lhs-fn-params": {
+                                                                                                                                                                                "window": 60
+                                                                                                                                                                              },
+                                                                                                                                                                              "comparator": "lt",
+                                                                                                                                                                              "rhs-val": "-12",
+                                                                                                                                                                              "rhs-fixed-value?": true,
+                                                                                                                                                                              "children": [
+                                                                                                                                                                                {
+                                                                                                                                                                                  "id": "06e39371-6af4-4951-8faa-c81752184afc",
+                                                                                                                                                                                  "step": "wt-cash-equal",
+                                                                                                                                                                                  "children": [
+                                                                                                                                                                                    {
+                                                                                                                                                                                      "id": "903e0bac-8a0e-4bd2-8431-00d18e166a5f",
+                                                                                                                                                                                      "step": "filter",
+                                                                                                                                                                                      "sort-by-fn": "relative-strength-index",
+                                                                                                                                                                                      "sort-by-fn-params": {
+                                                                                                                                                                                        "window": 10
+                                                                                                                                                                                      },
+                                                                                                                                                                                      "select-fn": "bottom",
+                                                                                                                                                                                      "select-n": "1",
+                                                                                                                                                                                      "select?": true,
+                                                                                                                                                                                      "sort-by?": true,
+                                                                                                                                                                                      "children": [
+                                                                                                                                                                                        {
+                                                                                                                                                                                          "id": "fec8bc1b-404f-4ae1-9608-40e1bb801a7d",
+                                                                                                                                                                                          "step": "asset",
+                                                                                                                                                                                          "ticker": "UGE"
+                                                                                                                                                                                        },
+                                                                                                                                                                                        {
+                                                                                                                                                                                          "id": "12153e84-25fd-4a66-bd31-428e3c8199fd",
+                                                                                                                                                                                          "step": "asset",
+                                                                                                                                                                                          "ticker": "BOND"
+                                                                                                                                                                                        }
+                                                                                                                                                                                      ],
+                                                                                                                                                                                      "collapsed?": false,
+                                                                                                                                                                                      "sort-by-window-days": "10"
+                                                                                                                                                                                    }
+                                                                                                                                                                                  ],
+                                                                                                                                                                                  "collapsed?": false
+                                                                                                                                                                                }
+                                                                                                                                                                              ],
+                                                                                                                                                                              "collapsed?": false
+                                                                                                                                                                            },
+                                                                                                                                                                            {
+                                                                                                                                                                              "id": "29b599d5-b9ea-4166-bc9a-0e25c290aa34",
+                                                                                                                                                                              "step": "if-child",
+                                                                                                                                                                              "is-else-condition?": true,
+                                                                                                                                                                              "children": [
+                                                                                                                                                                                {
+                                                                                                                                                                                  "id": "fabaf08b-5da9-4d7c-a1be-81ec0058c14e",
+                                                                                                                                                                                  "step": "wt-cash-equal",
+                                                                                                                                                                                  "children": [
+                                                                                                                                                                                    {
+                                                                                                                                                                                      "id": "3296c11e-1675-4659-94f6-6b645187b724",
+                                                                                                                                                                                      "step": "if",
+                                                                                                                                                                                      "children": [
+                                                                                                                                                                                        {
+                                                                                                                                                                                          "id": "fa4fdd20-2234-4069-8069-4e47f2b21e16",
+                                                                                                                                                                                          "step": "if-child",
+                                                                                                                                                                                          "is-else-condition?": false,
+                                                                                                                                                                                          "lhs-fn": "current-price",
+                                                                                                                                                                                          "lhs-window-days": "10",
+                                                                                                                                                                                          "lhs-val": "TQQQ",
+                                                                                                                                                                                          "lhs-fn-params": {
+                                                                                                                                                                                            "window": 10
+                                                                                                                                                                                          },
+                                                                                                                                                                                          "comparator": "gt",
+                                                                                                                                                                                          "rhs-fn": "moving-average-price",
+                                                                                                                                                                                          "rhs-window-days": "20",
+                                                                                                                                                                                          "rhs-val": "TQQQ",
+                                                                                                                                                                                          "rhs-fixed-value?": false,
+                                                                                                                                                                                          "children": [
+                                                                                                                                                                                            {
+                                                                                                                                                                                              "id": "f892b3df-3ca9-401f-bab8-a9cb4d11a0b5",
+                                                                                                                                                                                              "step": "wt-cash-equal",
+                                                                                                                                                                                              "children": [
+                                                                                                                                                                                                {
+                                                                                                                                                                                                  "id": "e8253a91-da99-4da9-b32b-0189db5c35ee",
+                                                                                                                                                                                                  "step": "if",
+                                                                                                                                                                                                  "children": [
+                                                                                                                                                                                                    {
+                                                                                                                                                                                                      "id": "8a882df7-7fe3-4e65-b025-1d170719dd9e",
+                                                                                                                                                                                                      "step": "if-child",
+                                                                                                                                                                                                      "is-else-condition?": false,
+                                                                                                                                                                                                      "lhs-fn": "relative-strength-index",
+                                                                                                                                                                                                      "lhs-window-days": "10",
+                                                                                                                                                                                                      "lhs-val": "PSQ",
+                                                                                                                                                                                                      "lhs-fn-params": {
+                                                                                                                                                                                                        "window": 10
+                                                                                                                                                                                                      },
+                                                                                                                                                                                                      "comparator": "lt",
+                                                                                                                                                                                                      "rhs-val": "35",
+                                                                                                                                                                                                      "rhs-fixed-value?": true,
+                                                                                                                                                                                                      "children": [
+                                                                                                                                                                                                        {
+                                                                                                                                                                                                          "id": "05eb2621-73ea-4481-800b-7685dc341291",
+                                                                                                                                                                                                          "step": "asset",
+                                                                                                                                                                                                          "ticker": "PSQ"
+                                                                                                                                                                                                        }
+                                                                                                                                                                                                      ],
+                                                                                                                                                                                                      "collapsed?": false
+                                                                                                                                                                                                    },
+                                                                                                                                                                                                    {
+                                                                                                                                                                                                      "id": "d3553f7b-d84d-41c6-9bc6-c63c7d3e69a9",
+                                                                                                                                                                                                      "step": "if-child",
+                                                                                                                                                                                                      "is-else-condition?": true,
+                                                                                                                                                                                                      "children": [
+                                                                                                                                                                                                        {
+                                                                                                                                                                                                          "id": "848a754c-88db-4fd5-b31d-1f40d3c4c35d",
+                                                                                                                                                                                                          "step": "group",
+                                                                                                                                                                                                          "name": "20d AGG vs 60d SH",
+                                                                                                                                                                                                          "children": [
+                                                                                                                                                                                                            {
+                                                                                                                                                                                                              "id": "a53cacd5-8d3f-4c1f-a3aa-608938de3cc8",
+                                                                                                                                                                                                              "step": "wt-cash-equal",
+                                                                                                                                                                                                              "children": [
+                                                                                                                                                                                                                {
+                                                                                                                                                                                                                  "id": "b1cc9aef-bf9e-44f0-86d6-b96ec617b15c",
+                                                                                                                                                                                                                  "step": "if",
+                                                                                                                                                                                                                  "children": [
+                                                                                                                                                                                                                    {
+                                                                                                                                                                                                                      "id": "0e13533d-b47e-42cc-97fd-f84705d81259",
+                                                                                                                                                                                                                      "step": "if-child",
+                                                                                                                                                                                                                      "is-else-condition?": false,
+                                                                                                                                                                                                                      "lhs-fn": "relative-strength-index",
+                                                                                                                                                                                                                      "lhs-window-days": "20",
+                                                                                                                                                                                                                      "lhs-val": "AGG",
+                                                                                                                                                                                                                      "lhs-fn-params": {
+                                                                                                                                                                                                                        "window": 20
+                                                                                                                                                                                                                      },
+                                                                                                                                                                                                                      "comparator": "gt",
+                                                                                                                                                                                                                      "rhs-fn": "relative-strength-index",
+                                                                                                                                                                                                                      "rhs-window-days": "60",
+                                                                                                                                                                                                                      "rhs-val": "SH",
+                                                                                                                                                                                                                      "rhs-fixed-value?": false,
+                                                                                                                                                                                                                      "children": [
+                                                                                                                                                                                                                        {
+                                                                                                                                                                                                                          "id": "3a76e95c-5aa0-4a9f-b5d1-3134f0220219",
+                                                                                                                                                                                                                          "step": "wt-cash-equal",
+                                                                                                                                                                                                                          "children": [
+                                                                                                                                                                                                                            {
+                                                                                                                                                                                                                              "id": "eba0206e-00ce-4250-846f-64990d871c78",
+                                                                                                                                                                                                                              "step": "if",
+                                                                                                                                                                                                                              "children": [
+                                                                                                                                                                                                                                {
+                                                                                                                                                                                                                                  "id": "dd3ea870-eb96-484a-a24a-f8157c939587",
+                                                                                                                                                                                                                                  "step": "if-child",
+                                                                                                                                                                                                                                  "is-else-condition?": false,
+                                                                                                                                                                                                                                  "lhs-fn": "moving-average-return",
+                                                                                                                                                                                                                                  "lhs-window-days": "15",
+                                                                                                                                                                                                                                  "lhs-val": "SPY",
+                                                                                                                                                                                                                                  "lhs-fn-params": {
+                                                                                                                                                                                                                                    "window": 15
+                                                                                                                                                                                                                                  },
+                                                                                                                                                                                                                                  "comparator": "gt",
+                                                                                                                                                                                                                                  "rhs-fn": "moving-average-return",
+                                                                                                                                                                                                                                  "rhs-window-days": "30",
+                                                                                                                                                                                                                                  "rhs-val": "SPY",
+                                                                                                                                                                                                                                  "rhs-fixed-value?": false,
+                                                                                                                                                                                                                                  "children": [
+                                                                                                                                                                                                                                    {
+                                                                                                                                                                                                                                      "id": "2835b47d-e622-44c2-b268-73cfd45cc6c3",
+                                                                                                                                                                                                                                      "step": "asset",
+                                                                                                                                                                                                                                      "ticker": "TQQQ"
+                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                  ],
+                                                                                                                                                                                                                                  "collapsed?": false,
+                                                                                                                                                                                                                                  "rhs-fn-params": {
+                                                                                                                                                                                                                                    "window": 30
+                                                                                                                                                                                                                                  }
+                                                                                                                                                                                                                                },
+                                                                                                                                                                                                                                {
+                                                                                                                                                                                                                                  "id": "2cad1d1f-65bd-4eb0-b4e3-7c4332b788c4",
+                                                                                                                                                                                                                                  "step": "if-child",
+                                                                                                                                                                                                                                  "is-else-condition?": true,
+                                                                                                                                                                                                                                  "children": [
+                                                                                                                                                                                                                                    {
+                                                                                                                                                                                                                                      "id": "236ad0bc-a419-4574-a8af-1022be2fbb49",
+                                                                                                                                                                                                                                      "step": "wt-cash-equal",
+                                                                                                                                                                                                                                      "children": [
+                                                                                                                                                                                                                                        {
+                                                                                                                                                                                                                                          "id": "b438de96-8d6c-4419-9f89-d9f74eefe891",
+                                                                                                                                                                                                                                          "step": "filter",
+                                                                                                                                                                                                                                          "sort-by-fn": "relative-strength-index",
+                                                                                                                                                                                                                                          "sort-by-fn-params": {
+                                                                                                                                                                                                                                            "window": 10
+                                                                                                                                                                                                                                          },
+                                                                                                                                                                                                                                          "select-fn": "bottom",
+                                                                                                                                                                                                                                          "select-n": "1",
+                                                                                                                                                                                                                                          "select?": true,
+                                                                                                                                                                                                                                          "sort-by?": true,
+                                                                                                                                                                                                                                          "children": [
+                                                                                                                                                                                                                                            {
+                                                                                                                                                                                                                                              "id": "2eeef638-2497-43a5-9456-c2d21c1c45bf",
+                                                                                                                                                                                                                                              "step": "asset",
+                                                                                                                                                                                                                                              "ticker": "UGE"
+                                                                                                                                                                                                                                            },
+                                                                                                                                                                                                                                            {
+                                                                                                                                                                                                                                              "id": "81114ed4-842c-4ef7-95b5-2edc81fb338a",
+                                                                                                                                                                                                                                              "step": "asset",
+                                                                                                                                                                                                                                              "ticker": "BOND"
+                                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                                          ],
+                                                                                                                                                                                                                                          "collapsed?": false,
+                                                                                                                                                                                                                                          "sort-by-window-days": "10"
+                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                      ],
+                                                                                                                                                                                                                                      "collapsed?": false
+                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                  ],
+                                                                                                                                                                                                                                  "collapsed?": false
+                                                                                                                                                                                                                                }
+                                                                                                                                                                                                                              ],
+                                                                                                                                                                                                                              "collapsed?": false
+                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                          ],
+                                                                                                                                                                                                                          "collapsed?": false
+                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                      ],
+                                                                                                                                                                                                                      "collapsed?": false,
+                                                                                                                                                                                                                      "rhs-fn-params": {
+                                                                                                                                                                                                                        "window": 60
+                                                                                                                                                                                                                      }
+                                                                                                                                                                                                                    },
+                                                                                                                                                                                                                    {
+                                                                                                                                                                                                                      "id": "02116109-431a-4382-92e4-e6d0a848f549",
+                                                                                                                                                                                                                      "step": "if-child",
+                                                                                                                                                                                                                      "is-else-condition?": true,
+                                                                                                                                                                                                                      "children": [
+                                                                                                                                                                                                                        {
+                                                                                                                                                                                                                          "id": "85541b72-589b-4a5a-830d-cce88570b14f",
+                                                                                                                                                                                                                          "step": "wt-cash-equal",
+                                                                                                                                                                                                                          "children": [
+                                                                                                                                                                                                                            {
+                                                                                                                                                                                                                              "id": "bea37c83-8810-448c-a38d-fb1c824bc449",
+                                                                                                                                                                                                                              "step": "filter",
+                                                                                                                                                                                                                              "sort-by-fn": "relative-strength-index",
+                                                                                                                                                                                                                              "sort-by-fn-params": {
+                                                                                                                                                                                                                                "window": 10
+                                                                                                                                                                                                                              },
+                                                                                                                                                                                                                              "select-fn": "bottom",
+                                                                                                                                                                                                                              "select-n": "1",
+                                                                                                                                                                                                                              "select?": true,
+                                                                                                                                                                                                                              "sort-by?": true,
+                                                                                                                                                                                                                              "children": [
+                                                                                                                                                                                                                                {
+                                                                                                                                                                                                                                  "id": "28e90efa-c71e-4c32-8c13-94eb81267631",
+                                                                                                                                                                                                                                  "step": "asset",
+                                                                                                                                                                                                                                  "ticker": "UGE"
+                                                                                                                                                                                                                                },
+                                                                                                                                                                                                                                {
+                                                                                                                                                                                                                                  "id": "badd11f2-fa67-4977-b3f3-d7d4dacb9ff8",
+                                                                                                                                                                                                                                  "step": "asset",
+                                                                                                                                                                                                                                  "ticker": "BOND"
+                                                                                                                                                                                                                                }
+                                                                                                                                                                                                                              ],
+                                                                                                                                                                                                                              "collapsed?": false,
+                                                                                                                                                                                                                              "sort-by-window-days": "10"
+                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                          ],
+                                                                                                                                                                                                                          "collapsed?": false
+                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                      ],
+                                                                                                                                                                                                                      "collapsed?": false
+                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                  ],
+                                                                                                                                                                                                                  "collapsed?": false
+                                                                                                                                                                                                                }
+                                                                                                                                                                                                              ],
+                                                                                                                                                                                                              "collapsed?": false
+                                                                                                                                                                                                            }
+                                                                                                                                                                                                          ],
+                                                                                                                                                                                                          "collapsed?": false
+                                                                                                                                                                                                        }
+                                                                                                                                                                                                      ],
+                                                                                                                                                                                                      "collapsed?": false
+                                                                                                                                                                                                    }
+                                                                                                                                                                                                  ],
+                                                                                                                                                                                                  "collapsed?": false
+                                                                                                                                                                                                }
+                                                                                                                                                                                              ],
+                                                                                                                                                                                              "collapsed?": false
+                                                                                                                                                                                            }
+                                                                                                                                                                                          ],
+                                                                                                                                                                                          "collapsed?": false,
+                                                                                                                                                                                          "rhs-fn-params": {
+                                                                                                                                                                                            "window": 20
+                                                                                                                                                                                          }
+                                                                                                                                                                                        },
+                                                                                                                                                                                        {
+                                                                                                                                                                                          "id": "9d23e995-18c8-46b1-a85f-b0b80f086244",
+                                                                                                                                                                                          "step": "if-child",
+                                                                                                                                                                                          "is-else-condition?": true,
+                                                                                                                                                                                          "children": [
+                                                                                                                                                                                            {
+                                                                                                                                                                                              "id": "258765ca-00a7-4258-8b0f-a520a414009b",
+                                                                                                                                                                                              "step": "wt-cash-equal",
+                                                                                                                                                                                              "children": [
+                                                                                                                                                                                                {
+                                                                                                                                                                                                  "id": "f2f8cbec-997e-4d73-95f2-3eadc63c1e32",
+                                                                                                                                                                                                  "step": "if",
+                                                                                                                                                                                                  "children": [
+                                                                                                                                                                                                    {
+                                                                                                                                                                                                      "id": "0c57cf4d-eec7-46df-9b22-da019466b2f3",
+                                                                                                                                                                                                      "step": "if-child",
+                                                                                                                                                                                                      "is-else-condition?": false,
+                                                                                                                                                                                                      "lhs-fn": "relative-strength-index",
+                                                                                                                                                                                                      "lhs-window-days": "10",
+                                                                                                                                                                                                      "lhs-val": "IEF",
+                                                                                                                                                                                                      "lhs-fn-params": {
+                                                                                                                                                                                                        "window": 10
+                                                                                                                                                                                                      },
+                                                                                                                                                                                                      "comparator": "gt",
+                                                                                                                                                                                                      "rhs-fn": "relative-strength-index",
+                                                                                                                                                                                                      "rhs-window-days": "20",
+                                                                                                                                                                                                      "rhs-val": "PSQ",
+                                                                                                                                                                                                      "rhs-fixed-value?": false,
+                                                                                                                                                                                                      "children": [
+                                                                                                                                                                                                        {
+                                                                                                                                                                                                          "id": "cf0b807d-9a01-493c-aeb7-0cf1089039a6",
+                                                                                                                                                                                                          "step": "asset",
+                                                                                                                                                                                                          "ticker": "PSQ"
+                                                                                                                                                                                                        }
+                                                                                                                                                                                                      ],
+                                                                                                                                                                                                      "collapsed?": false,
+                                                                                                                                                                                                      "rhs-fn-params": {
+                                                                                                                                                                                                        "window": 20
+                                                                                                                                                                                                      }
+                                                                                                                                                                                                    },
+                                                                                                                                                                                                    {
+                                                                                                                                                                                                      "id": "a417fb77-671a-4a51-b709-fbd77116258f",
+                                                                                                                                                                                                      "step": "if-child",
+                                                                                                                                                                                                      "is-else-condition?": true,
+                                                                                                                                                                                                      "children": [
+                                                                                                                                                                                                        {
+                                                                                                                                                                                                          "id": "febcf9b8-03a3-44ea-be70-d37ce65b0cf6",
+                                                                                                                                                                                                          "step": "asset",
+                                                                                                                                                                                                          "ticker": "SQQQ"
+                                                                                                                                                                                                        }
+                                                                                                                                                                                                      ],
+                                                                                                                                                                                                      "collapsed?": false
+                                                                                                                                                                                                    }
+                                                                                                                                                                                                  ],
+                                                                                                                                                                                                  "collapsed?": false
+                                                                                                                                                                                                }
+                                                                                                                                                                                              ],
+                                                                                                                                                                                              "collapsed?": false
+                                                                                                                                                                                            }
+                                                                                                                                                                                          ],
+                                                                                                                                                                                          "collapsed?": false
+                                                                                                                                                                                        }
+                                                                                                                                                                                      ],
+                                                                                                                                                                                      "collapsed?": false
+                                                                                                                                                                                    }
+                                                                                                                                                                                  ],
+                                                                                                                                                                                  "collapsed?": false
+                                                                                                                                                                                }
+                                                                                                                                                                              ],
+                                                                                                                                                                              "collapsed?": false
+                                                                                                                                                                            }
+                                                                                                                                                                          ],
+                                                                                                                                                                          "collapsed?": false
+                                                                                                                                                                        }
+                                                                                                                                                                      ],
+                                                                                                                                                                      "collapsed?": false
+                                                                                                                                                                    }
+                                                                                                                                                                  ],
+                                                                                                                                                                  "collapsed?": false
+                                                                                                                                                                }
+                                                                                                                                                              ],
+                                                                                                                                                              "collapsed?": false
+                                                                                                                                                            }
+                                                                                                                                                          ],
+                                                                                                                                                          "collapsed?": false
+                                                                                                                                                        }
+                                                                                                                                                      ],
+                                                                                                                                                      "collapsed?": false
+                                                                                                                                                    }
+                                                                                                                                                  ],
+                                                                                                                                                  "collapsed?": false
+                                                                                                                                                }
+                                                                                                                                              ],
+                                                                                                                                              "collapsed?": false
+                                                                                                                                            }
+                                                                                                                                          ],
+                                                                                                                                          "collapsed?": false
+                                                                                                                                        }
+                                                                                                                                      ],
+                                                                                                                                      "collapsed?": false
+                                                                                                                                    }
+                                                                                                                                  ],
+                                                                                                                                  "collapsed?": false
+                                                                                                                                }
+                                                                                                                              ],
+                                                                                                                              "collapsed?": false
+                                                                                                                            }
+                                                                                                                          ],
+                                                                                                                          "collapsed?": false
+                                                                                                                        }
+                                                                                                                      ],
+                                                                                                                      "collapsed?": false
+                                                                                                                    }
+                                                                                                                  ],
+                                                                                                                  "collapsed?": false
+                                                                                                                }
+                                                                                                              ],
+                                                                                                              "collapsed?": false
+                                                                                                            }
+                                                                                                          ],
+                                                                                                          "collapsed?": false
+                                                                                                        }
+                                                                                                      ],
+                                                                                                      "collapsed?": false
+                                                                                                    }
+                                                                                                  ],
+                                                                                                  "collapsed?": false
+                                                                                                }
+                                                                                              ],
+                                                                                              "collapsed?": false
+                                                                                            }
+                                                                                          ],
+                                                                                          "collapsed?": false
+                                                                                        }
+                                                                                      ],
+                                                                                      "collapsed?": false
+                                                                                    }
+                                                                                  ],
+                                                                                  "collapsed?": false
+                                                                                }
+                                                                              ],
+                                                                              "collapsed?": false
+                                                                            }
+                                                                          ],
+                                                                          "collapsed?": false
+                                                                        }
+                                                                      ],
+                                                                      "collapsed?": false
+                                                                    }
+                                                                  ],
+                                                                  "collapsed?": false
+                                                                }
+                                                              ],
+                                                              "collapsed?": false
+                                                            }
+                                                          ],
+                                                          "collapsed?": false
+                                                        }
+                                                      ],
+                                                      "collapsed?": false
+                                                    }
+                                                  ],
+                                                  "collapsed?": false
+                                                }
+                                              ],
+                                              "collapsed?": false
+                                            }
+                                          ],
+                                          "collapsed?": false
+                                        }
+                                      ],
+                                      "collapsed?": false
+                                    }
+                                  ],
+                                  "collapsed?": false
+                                }
+                              ],
+                              "collapsed?": false
+                            }
+                          ],
+                          "collapsed?": false
+                        }
+                      ],
+                      "collapsed?": false
+                    }
+                  ],
+                  "collapsed?": false
+                }
+              ],
+              "collapsed?": false
+            }
+          ],
+          "collapsed?": false
+        }
+      ],
+      "collapsed?": false
+    }
+  ]
+}

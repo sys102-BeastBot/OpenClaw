@@ -1,0 +1,411 @@
+{
+  "id": "059865bf-174c-4699-9635-c6b15ed4f162",
+  "step": "root",
+  "name": "EM ftlt (standalone)",
+  "description": "",
+  "rebalance": "daily",
+  "children": [
+    {
+      "id": "25db96c8-2738-45cc-9de3-5417a052161f",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "id": "ec54b7de-f802-481a-8e45-3e7954e6f988",
+          "step": "group",
+          "name": "EM ftlt (148,72,2007)",
+          "children": [
+            {
+              "id": "c6424b5d-1f63-428b-b3ad-190ee9a0d355",
+              "step": "wt-cash-equal",
+              "children": [
+                {
+                  "id": "8e453ba8-6731-4732-9dbc-f810c422172c",
+                  "step": "if",
+                  "children": [
+                    {
+                      "id": "d2b72bbf-3878-47e4-81cf-387001bf90c0",
+                      "step": "if-child",
+                      "is-else-condition?": false,
+                      "lhs-fn": "relative-strength-index",
+                      "lhs-window-days": "14",
+                      "lhs-val": "EEM",
+                      "lhs-fn-params": {
+                        "window": 14
+                      },
+                      "comparator": "lt",
+                      "rhs-val": "30",
+                      "rhs-fixed-value?": true,
+                      "children": [
+                        {
+                          "id": "ec04506d-5ca1-4b8f-b7e0-0f8336d19a30",
+                          "step": "asset",
+                          "ticker": "EDC"
+                        }
+                      ],
+                      "collapsed?": false
+                    },
+                    {
+                      "id": "a042d8c3-3755-4d66-a0e4-28f91f688c3f",
+                      "step": "if-child",
+                      "is-else-condition?": true,
+                      "children": [
+                        {
+                          "id": "3fc97bc2-0f8e-4e88-89a5-0a085b19afd5",
+                          "step": "wt-cash-equal",
+                          "children": [
+                            {
+                              "id": "3d8632f5-73ac-4e62-ac01-ecae863e2269",
+                              "step": "if",
+                              "children": [
+                                {
+                                  "id": "02790043-52c9-4fe3-a8d9-46f6735ff1ab",
+                                  "step": "if-child",
+                                  "is-else-condition?": false,
+                                  "lhs-fn": "current-price",
+                                  "lhs-window-days": "10",
+                                  "lhs-val": "SHV",
+                                  "lhs-fn-params": {
+                                    "window": 10
+                                  },
+                                  "comparator": "gt",
+                                  "rhs-fn": "moving-average-price",
+                                  "rhs-window-days": "50",
+                                  "rhs-val": "SHV",
+                                  "rhs-fixed-value?": false,
+                                  "children": [
+                                    {
+                                      "id": "ce894c6b-1fb6-4a35-83a2-cab98d5f5f84",
+                                      "step": "wt-cash-equal",
+                                      "children": [
+                                        {
+                                          "id": "291d8658-37f9-4c0f-8e67-0904d214f657",
+                                          "step": "if",
+                                          "children": [
+                                            {
+                                              "id": "a3535b60-d94e-429d-95c6-f5802265e5b1",
+                                              "step": "if-child",
+                                              "is-else-condition?": false,
+                                              "lhs-fn": "current-price",
+                                              "lhs-window-days": "10",
+                                              "lhs-val": "EEM",
+                                              "lhs-fn-params": {
+                                                "window": 10
+                                              },
+                                              "comparator": "gt",
+                                              "rhs-fn": "moving-average-price",
+                                              "rhs-window-days": "200",
+                                              "rhs-val": "EEM",
+                                              "rhs-fixed-value?": false,
+                                              "children": [
+                                                {
+                                                  "id": "d6489623-8ef5-401d-b949-92a5d32e96dd",
+                                                  "step": "group",
+                                                  "name": "IEI vs IWM",
+                                                  "children": [
+                                                    {
+                                                      "id": "2ddd876f-ee6f-46ec-8490-c1b8390a280d",
+                                                      "step": "wt-cash-equal",
+                                                      "children": [
+                                                        {
+                                                          "id": "790930cf-0f8b-4ca5-ab35-c1d85b17c4a1",
+                                                          "step": "if",
+                                                          "children": [
+                                                            {
+                                                              "id": "007330fd-b8b0-4685-9fbf-9db9adbc38ed",
+                                                              "step": "if-child",
+                                                              "is-else-condition?": false,
+                                                              "lhs-fn": "relative-strength-index",
+                                                              "lhs-window-days": "10",
+                                                              "lhs-val": "IEI",
+                                                              "lhs-fn-params": {
+                                                                "window": 10
+                                                              },
+                                                              "comparator": "gt",
+                                                              "rhs-fn": "relative-strength-index",
+                                                              "rhs-window-days": "15",
+                                                              "rhs-val": "IWM",
+                                                              "rhs-fixed-value?": false,
+                                                              "children": [
+                                                                {
+                                                                  "id": "740bc659-69b4-4e2d-af74-2df556352d68",
+                                                                  "step": "asset",
+                                                                  "ticker": "EDC"
+                                                                }
+                                                              ],
+                                                              "collapsed?": false,
+                                                              "rhs-fn-params": {
+                                                                "window": 15
+                                                              }
+                                                            },
+                                                            {
+                                                              "id": "fa8ccc34-2cb4-4aa9-9b6b-e31c691698f6",
+                                                              "step": "if-child",
+                                                              "is-else-condition?": true,
+                                                              "children": [
+                                                                {
+                                                                  "id": "35a1831e-b5dd-4261-af02-f61f7ac532eb",
+                                                                  "step": "asset",
+                                                                  "ticker": "EDZ"
+                                                                }
+                                                              ],
+                                                              "collapsed?": false
+                                                            }
+                                                          ],
+                                                          "collapsed?": false
+                                                        }
+                                                      ],
+                                                      "collapsed?": false
+                                                    }
+                                                  ],
+                                                  "collapsed?": false
+                                                }
+                                              ],
+                                              "collapsed?": false,
+                                              "rhs-fn-params": {
+                                                "window": 200
+                                              }
+                                            },
+                                            {
+                                              "id": "3ab8cf1c-5868-4ea5-8922-aa0f87abbbe3",
+                                              "step": "if-child",
+                                              "is-else-condition?": true,
+                                              "children": [
+                                                {
+                                                  "id": "b371f8f5-5df3-460d-8e04-696182453e34",
+                                                  "step": "wt-cash-equal",
+                                                  "children": [
+                                                    {
+                                                      "id": "bcd36d03-c34b-404b-b795-2be472103bc5",
+                                                      "step": "group",
+                                                      "name": "IGIB vs EEM",
+                                                      "children": [
+                                                        {
+                                                          "id": "81f9ce1a-0fe4-4fc0-ae8b-c85c85e24cd5",
+                                                          "step": "wt-cash-equal",
+                                                          "children": [
+                                                            {
+                                                              "id": "b5131a7d-6818-4b27-9328-8e2d8716756b",
+                                                              "step": "if",
+                                                              "children": [
+                                                                {
+                                                                  "id": "4d681378-bf95-4dbb-a8d8-5861e1cb5c31",
+                                                                  "step": "if-child",
+                                                                  "is-else-condition?": false,
+                                                                  "lhs-fn": "relative-strength-index",
+                                                                  "lhs-window-days": "15",
+                                                                  "lhs-val": "IGIB",
+                                                                  "lhs-fn-params": {
+                                                                    "window": 15
+                                                                  },
+                                                                  "comparator": "gt",
+                                                                  "rhs-fn": "relative-strength-index",
+                                                                  "rhs-window-days": "15",
+                                                                  "rhs-val": "EEM",
+                                                                  "rhs-fixed-value?": false,
+                                                                  "children": [
+                                                                    {
+                                                                      "id": "c40e3edb-240d-43cf-bdef-fd0adf7daf3c",
+                                                                      "step": "asset",
+                                                                      "ticker": "EDC"
+                                                                    }
+                                                                  ],
+                                                                  "collapsed?": false,
+                                                                  "rhs-fn-params": {
+                                                                    "window": 15
+                                                                  }
+                                                                },
+                                                                {
+                                                                  "id": "40e63cc5-855d-4124-9115-a1e06a299463",
+                                                                  "step": "if-child",
+                                                                  "is-else-condition?": true,
+                                                                  "children": [
+                                                                    {
+                                                                      "id": "7af28691-b650-48fd-98a6-a5ebca0b654b",
+                                                                      "step": "asset",
+                                                                      "ticker": "EDZ"
+                                                                    }
+                                                                  ],
+                                                                  "collapsed?": false
+                                                                }
+                                                              ],
+                                                              "collapsed?": false
+                                                            }
+                                                          ],
+                                                          "collapsed?": false
+                                                        }
+                                                      ],
+                                                      "collapsed?": false
+                                                    },
+                                                    {
+                                                      "id": "288a5e66-fc21-4890-844b-cd89b3151c29",
+                                                      "step": "group",
+                                                      "name": "IGIB vs SPY",
+                                                      "children": [
+                                                        {
+                                                          "id": "4d85eb69-4a22-457f-b6a9-9d960f57db77",
+                                                          "step": "wt-cash-equal",
+                                                          "children": [
+                                                            {
+                                                              "id": "d56ae2df-1332-40cf-85af-b7d012efcf70",
+                                                              "step": "if",
+                                                              "children": [
+                                                                {
+                                                                  "id": "eebd90e5-d769-45d4-9b97-b65a4e66ea1f",
+                                                                  "step": "if-child",
+                                                                  "is-else-condition?": false,
+                                                                  "lhs-fn": "relative-strength-index",
+                                                                  "lhs-window-days": "10",
+                                                                  "lhs-val": "IGIB",
+                                                                  "lhs-fn-params": {
+                                                                    "window": 10
+                                                                  },
+                                                                  "comparator": "gt",
+                                                                  "rhs-fn": "relative-strength-index",
+                                                                  "rhs-window-days": "10",
+                                                                  "rhs-val": "SPY",
+                                                                  "rhs-fixed-value?": false,
+                                                                  "children": [
+                                                                    {
+                                                                      "id": "08967893-2de7-43fc-8f62-745befdecb61",
+                                                                      "step": "asset",
+                                                                      "ticker": "EDC"
+                                                                    }
+                                                                  ],
+                                                                  "collapsed?": false,
+                                                                  "rhs-fn-params": {
+                                                                    "window": 10
+                                                                  }
+                                                                },
+                                                                {
+                                                                  "id": "d89e2632-ebec-4814-8aed-121c4b0e0510",
+                                                                  "step": "if-child",
+                                                                  "is-else-condition?": true,
+                                                                  "children": [
+                                                                    {
+                                                                      "id": "92894c98-cc62-4438-88ae-27682dc64ff0",
+                                                                      "step": "asset",
+                                                                      "ticker": "EDZ"
+                                                                    }
+                                                                  ],
+                                                                  "collapsed?": false
+                                                                }
+                                                              ],
+                                                              "collapsed?": false
+                                                            }
+                                                          ],
+                                                          "collapsed?": false
+                                                        }
+                                                      ],
+                                                      "collapsed?": false
+                                                    }
+                                                  ],
+                                                  "collapsed?": false
+                                                }
+                                              ],
+                                              "collapsed?": false
+                                            }
+                                          ],
+                                          "collapsed?": false
+                                        }
+                                      ],
+                                      "collapsed?": false
+                                    }
+                                  ],
+                                  "collapsed?": false,
+                                  "rhs-fn-params": {
+                                    "window": 50
+                                  }
+                                },
+                                {
+                                  "id": "8a96e997-e30b-4f95-b9c0-c7ca3b454456",
+                                  "step": "if-child",
+                                  "is-else-condition?": true,
+                                  "children": [
+                                    {
+                                      "id": "c103d348-d83d-4105-83ba-3260fd8963d0",
+                                      "step": "group",
+                                      "name": "IGIB vs SPY",
+                                      "children": [
+                                        {
+                                          "id": "9e6ed23b-b417-474d-b568-64d58199fa4e",
+                                          "step": "wt-cash-equal",
+                                          "children": [
+                                            {
+                                              "id": "0c5dbb02-97c6-409e-9aa0-f12a40bd91bf",
+                                              "step": "if",
+                                              "children": [
+                                                {
+                                                  "id": "62a95560-aeaa-4a36-a9e5-a7287ee3879d",
+                                                  "step": "if-child",
+                                                  "is-else-condition?": false,
+                                                  "lhs-fn": "relative-strength-index",
+                                                  "lhs-window-days": "10",
+                                                  "lhs-val": "IGIB",
+                                                  "lhs-fn-params": {
+                                                    "window": 10
+                                                  },
+                                                  "comparator": "gt",
+                                                  "rhs-fn": "relative-strength-index",
+                                                  "rhs-window-days": "10",
+                                                  "rhs-val": "SPY",
+                                                  "rhs-fixed-value?": false,
+                                                  "children": [
+                                                    {
+                                                      "id": "715d1f48-19b3-43f3-a071-df4b2333f0d5",
+                                                      "step": "asset",
+                                                      "ticker": "EDC"
+                                                    }
+                                                  ],
+                                                  "collapsed?": false,
+                                                  "rhs-fn-params": {
+                                                    "window": 10
+                                                  }
+                                                },
+                                                {
+                                                  "id": "281c331e-b4ee-43ae-b068-b758be812764",
+                                                  "step": "if-child",
+                                                  "is-else-condition?": true,
+                                                  "children": [
+                                                    {
+                                                      "id": "0dd909f3-97e9-4e63-abd2-ce0306e398be",
+                                                      "step": "asset",
+                                                      "ticker": "EDZ"
+                                                    }
+                                                  ],
+                                                  "collapsed?": false
+                                                }
+                                              ],
+                                              "collapsed?": false
+                                            }
+                                          ],
+                                          "collapsed?": false
+                                        }
+                                      ],
+                                      "collapsed?": false
+                                    }
+                                  ],
+                                  "collapsed?": false
+                                }
+                              ],
+                              "collapsed?": false
+                            }
+                          ],
+                          "collapsed?": false
+                        }
+                      ],
+                      "collapsed?": false
+                    }
+                  ],
+                  "collapsed?": false
+                }
+              ],
+              "collapsed?": false
+            }
+          ],
+          "collapsed?": false
+        }
+      ],
+      "collapsed?": false
+    }
+  ]
+}
