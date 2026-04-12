@@ -1203,12 +1203,85 @@
       "apply_to_active": true,
       "apply_to_next": true,
       "created_at": "2026-04-10T20:25:40.190943+00:00"
+    },
+    {
+      "id": "lesson-gen1-001",
+      "category": "structure",
+      "subcategory": "bull_regime",
+      "confidence": 0.9,
+      "decay": false,
+      "archetypes": [
+        "ALL"
+      ],
+      "lesson": "Strategies tuned for vol/crash conditions collapse in sustained bull markets (2023: -1.51 Sharpe). When ALL vol regime checks fail (UVXY RSI band miss, UVXY RSI(60) < 40, UVXY RSI(21) < 65), the strategy must route AGGRESSIVELY to leveraged bull allocation (TQQQ/SOXL/TECL), NOT to SPY/QQQ. Routing to SPY or QQQ as the 'safe' bull fallback misses the entire bull rally upside. The else branch of all vol checks combined should be: weight-inverse-vol [TQQQ SOXL TECL] gated only by SPY EMA-210 and TQQQ momentum. Never route to SPY as a bull position.",
+      "parameter_data": null,
+      "regime_context": {
+        "regime": "BULL_CALM",
+        "note": "bull regime requires aggressive leveraged allocation"
+      },
+      "supporting_evidence": [
+        "gen-1 strat-01: 2021 Sharpe 0.16, 2022 Sharpe 0.10, 2023 Sharpe -1.51, 2024 Sharpe -0.24",
+        "Sisyphus: consistent 4.5-6.0 Sharpe across all years \u2014 routes to TQQQ/SOXL in bull conditions"
+      ],
+      "conflict_flag": false,
+      "conflict_notes": null,
+      "source": "GEN_1_OBSERVATION",
+      "apply_to_active": true,
+      "apply_to_next": true,
+      "created_at": "2026-04-12T01:53:35.016234+00:00"
+    },
+    {
+      "id": "lesson-gen1-002",
+      "category": "structure",
+      "subcategory": "rebalance",
+      "confidence": 0.75,
+      "decay": false,
+      "archetypes": [
+        "ALL"
+      ],
+      "lesson": "Daily rebalance works well for vol-regime strategies. The strategy checks UVXY/SVXY conditions daily and needs to react quickly to vol spikes. Threshold rebalancing (5-10%) may miss critical entry/exit signals in fast-moving vol environments. Keep daily rebalance for all generated strategies.",
+      "parameter_data": null,
+      "regime_context": null,
+      "supporting_evidence": [
+        "gen-1 strat-01 uses daily rebalance, fitness=0.36 (best gen-1)"
+      ],
+      "conflict_flag": false,
+      "conflict_notes": null,
+      "source": "GEN_1_OBSERVATION",
+      "apply_to_active": true,
+      "apply_to_next": true,
+      "created_at": "2026-04-12T01:57:45.673367+00:00"
+    },
+    {
+      "id": "lesson-gen1-003",
+      "category": "structure",
+      "subcategory": "bull_allocation",
+      "confidence": 0.92,
+      "decay": false,
+      "archetypes": [
+        "SHARPE_HUNTER"
+      ],
+      "lesson": "Bull regime allocation must be aggressive. When vol checks pass (no crash, no vol spike), route to weight-inverse-vol [TQQQ SOXL TECL] NOT to SPY or QQQ. Gen-1 strat-01 scored 2023 Sharpe -1.51 because it routed to SPY/QQQ in bull conditions instead of leveraged ETFs. Sisyphus scores 5.96 in 2023 by being aggressively long TQQQ/SOXL in bull. The ONLY time to hold SPY is as a transition asset when TQQQ momentum gate fails. QQQ is acceptable as a softer bull position but always prefer leveraged over unleveraged.",
+      "parameter_data": null,
+      "regime_context": {
+        "regime": "BULL_CALM"
+      },
+      "supporting_evidence": [
+        "gen-1 strat-01: 2023 Sharpe -1.51 \u2014 routed to SPY/QQQ in bull",
+        "Sisyphus: 2023 Sharpe 5.96 \u2014 aggressively long TQQQ/SOXL in bull"
+      ],
+      "conflict_flag": false,
+      "conflict_notes": null,
+      "source": "GEN_1_OBSERVATION",
+      "apply_to_active": true,
+      "apply_to_next": true,
+      "created_at": "2026-04-12T01:57:45.673389+00:00"
     }
   ],
   "last_updated": "2026-03-22T23:23:21Z",
   "last_compacted_generation": 6,
   "next_compaction_generation": 9,
-  "total_lessons": 43,
+  "total_lessons": 46,
   "category_counts": {
     "hard_rule": 0,
     "indicator": 0,

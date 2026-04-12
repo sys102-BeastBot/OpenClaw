@@ -3281,3 +3281,15 @@ KB is ready for generation 0.
 2026-04-12T01:43:46Z [INFO] [context_builder] Generator prompt assembled for SHARPE_HUNTER gen-1 slot-1: ~10984 tokens estimated
 2026-04-12T01:43:54Z [INFO] [generator_agent] gen-001-strat-01: audit passed
 2026-04-12T01:43:54Z [INFO] [generator_agent] gen-001-strat-01: written to pending/
+2026-04-12T01:54:30Z [INFO] [learner_agent] gen-1: starting lesson extraction, 0 strategies in brief
+2026-04-12T01:55:23Z [WARNING] [monitor] Slow API call call-719 took 52328ms (threshold 30000ms)
+2026-04-12T01:55:23Z [INFO] [learner_agent] gen-1: extracted 8 lessons on attempt 1
+2026-04-12T01:58:17Z [INFO] [generator_agent] gen-002-strat-01: starting generation for SHARPE_HUNTER
+2026-04-12T01:58:17Z [INFO] [context_builder] Generator prompt assembled for SHARPE_HUNTER gen-2 slot-1: ~11366 tokens estimated
+2026-04-12T01:58:24Z [INFO] [generator_agent] gen-002-strat-01: audit passed
+2026-04-12T01:58:24Z [INFO] [generator_agent] gen-002-strat-01: written to pending/
+2026-04-12T02:15:22Z [INFO] [context_builder] Generator prompt assembled for SHARPE_HUNTER gen-3 slot-1: ~12045 tokens estimated
+2026-04-12T02:15:34Z [INFO] [generator_agent] gen-003-strat-01: starting generation for SHARPE_HUNTER
+2026-04-12T02:15:34Z [INFO] [context_builder] Generator prompt assembled for SHARPE_HUNTER gen-3 slot-1: ~12045 tokens estimated
+2026-04-12T02:15:40Z [INFO] [generator_agent] gen-003-strat-01: audit passed
+2026-04-12T02:15:40Z [INFO] [generator_agent] gen-003-strat-01: written to pending/

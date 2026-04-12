@@ -1,0 +1,410 @@
+{
+  "id": "00012b8e-01e6-41bf-bf59-4ae2af049e6f",
+  "step": "root",
+  "name": "Sharpe Hunter Vol Regime Profit Machine",
+  "description": "",
+  "rebalance": "daily",
+  "children": [
+    {
+      "id": "d4601628-1cb7-4a07-9059-847a88e8a0ac",
+      "step": "if",
+      "children": [
+        {
+          "id": "8aeba572-5603-4e46-86f6-c98dcca0465c",
+          "step": "if-child",
+          "is-else-condition?": false,
+          "lhs-fn": "max-drawdown",
+          "lhs-window-days": "3",
+          "lhs-val": "SVXY",
+          "lhs-fn-params": {
+            "window": 3
+          },
+          "comparator": "gt",
+          "rhs-val": "8",
+          "rhs-fixed-value?": true,
+          "children": [
+            {
+              "id": "4235e7fd-af0e-4ab7-9444-a47410a1584d",
+              "step": "asset",
+              "ticker": "BIL"
+            }
+          ],
+          "condition": {
+            "condition-type": "compound",
+            "operator": "any",
+            "conditions": [
+              {
+                "condition-type": "binary",
+                "lhs": {
+                  "fn": "max-drawdown",
+                  "params": {
+                    "window": 3
+                  },
+                  "ticker": "SVXY"
+                },
+                "comparator": "gt",
+                "rhs": {
+                  "constant": 8.0
+                }
+              },
+              {
+                "condition-type": "binary",
+                "lhs": {
+                  "fn": "relative-strength-index",
+                  "params": {
+                    "window": 10
+                  },
+                  "ticker": "SVXY"
+                },
+                "comparator": "lt",
+                "rhs": {
+                  "constant": 31.0
+                }
+              },
+              {
+                "condition-type": "binary",
+                "lhs": {
+                  "fn": "standard-deviation-return",
+                  "params": {
+                    "window": 10
+                  },
+                  "ticker": "UVXY"
+                },
+                "comparator": "gt",
+                "rhs": {
+                  "constant": 11.0
+                }
+              }
+            ]
+          },
+          "collapsed?": false
+        },
+        {
+          "id": "cc0c16fa-221c-4fef-9dde-4bd4d454a54c",
+          "step": "if-child",
+          "is-else-condition?": true,
+          "children": [
+            {
+              "id": "470f5dd9-cecf-46b9-93db-a428825a2298",
+              "step": "if",
+              "children": [
+                {
+                  "id": "133c5ede-4bdd-429f-baab-87ff6dfea474",
+                  "step": "if-child",
+                  "is-else-condition?": false,
+                  "lhs-fn": "relative-strength-index",
+                  "lhs-window-days": "10",
+                  "lhs-val": "UVXY",
+                  "lhs-fn-params": {
+                    "window": 10
+                  },
+                  "comparator": "gt",
+                  "rhs-val": "74",
+                  "rhs-fixed-value?": true,
+                  "children": [
+                    {
+                      "id": "1a3627b3-51a7-4ee7-9bba-21ecb657109e",
+                      "step": "asset",
+                      "ticker": "UVXY"
+                    }
+                  ],
+                  "condition": {
+                    "condition-type": "compound",
+                    "operator": "all",
+                    "conditions": [
+                      {
+                        "condition-type": "binary",
+                        "lhs": {
+                          "fn": "relative-strength-index",
+                          "params": {
+                            "window": 10
+                          },
+                          "ticker": "UVXY"
+                        },
+                        "comparator": "gt",
+                        "rhs": {
+                          "constant": 74.0
+                        }
+                      },
+                      {
+                        "condition-type": "binary",
+                        "lhs": {
+                          "fn": "relative-strength-index",
+                          "params": {
+                            "window": 10
+                          },
+                          "ticker": "UVXY"
+                        },
+                        "comparator": "lt",
+                        "rhs": {
+                          "constant": 84.0
+                        }
+                      }
+                    ]
+                  },
+                  "collapsed?": false
+                },
+                {
+                  "id": "2cc9a050-0940-4fa9-b564-2de67a2ccc03",
+                  "step": "if-child",
+                  "is-else-condition?": true,
+                  "children": [
+                    {
+                      "id": "fdcd9b44-bafc-4385-be89-cf1addf80ec6",
+                      "step": "if",
+                      "children": [
+                        {
+                          "id": "007ac032-142f-4a7f-98f6-fe2be1bd5efa",
+                          "step": "if-child",
+                          "is-else-condition?": false,
+                          "lhs-fn": "relative-strength-index",
+                          "lhs-window-days": "21",
+                          "lhs-val": "UVXY",
+                          "lhs-fn-params": {
+                            "window": 21
+                          },
+                          "comparator": "gt",
+                          "rhs-val": "65",
+                          "rhs-fixed-value?": true,
+                          "children": [
+                            {
+                              "id": "de5bfcd0-9ede-46d0-97dc-f2521091baaf",
+                              "step": "asset",
+                              "ticker": "UVXY"
+                            }
+                          ],
+                          "collapsed?": false
+                        },
+                        {
+                          "id": "429d64be-e608-48a9-9c31-e1379b61be3b",
+                          "step": "if-child",
+                          "is-else-condition?": true,
+                          "children": [
+                            {
+                              "id": "10869749-38df-4d3c-8a71-a6054111c8cc",
+                              "step": "if",
+                              "children": [
+                                {
+                                  "id": "ce3b0434-a651-41a0-ae13-f81680954a43",
+                                  "step": "if-child",
+                                  "is-else-condition?": false,
+                                  "lhs-fn": "relative-strength-index",
+                                  "lhs-window-days": "60",
+                                  "lhs-val": "UVXY",
+                                  "lhs-fn-params": {
+                                    "window": 60
+                                  },
+                                  "comparator": "gt",
+                                  "rhs-val": "40",
+                                  "rhs-fixed-value?": true,
+                                  "children": [
+                                    {
+                                      "id": "7924be22-5ca6-45df-a650-f83f55bb3cc6",
+                                      "step": "asset",
+                                      "ticker": "VIXM"
+                                    }
+                                  ],
+                                  "collapsed?": false
+                                },
+                                {
+                                  "id": "ddf2e529-07cf-497f-87ac-95704a2a6df9",
+                                  "step": "if-child",
+                                  "is-else-condition?": true,
+                                  "children": [
+                                    {
+                                      "id": "8399cdbf-e98f-40e9-addf-3c6dd20098f2",
+                                      "step": "if",
+                                      "children": [
+                                        {
+                                          "id": "6b255d9c-5fd8-49b4-a329-1a8d1c914d42",
+                                          "step": "if-child",
+                                          "is-else-condition?": false,
+                                          "lhs-fn": "current-price",
+                                          "lhs-window-days": "2",
+                                          "lhs-val": "SPY",
+                                          "lhs-fn-params": {
+                                            "window": 2
+                                          },
+                                          "comparator": "gt",
+                                          "rhs-fn": "exponential-moving-average-price",
+                                          "rhs-window-days": "210",
+                                          "rhs-val": "SPY",
+                                          "rhs-fixed-value?": false,
+                                          "children": [
+                                            {
+                                              "id": "3fb49196-d060-417c-992b-a304be77226b",
+                                              "step": "if",
+                                              "children": [
+                                                {
+                                                  "id": "580a14a8-81d1-4019-9363-9ad5c3f792ae",
+                                                  "step": "if-child",
+                                                  "is-else-condition?": false,
+                                                  "lhs-fn": "cumulative-return",
+                                                  "lhs-window-days": "1",
+                                                  "lhs-val": "TQQQ",
+                                                  "lhs-fn-params": {
+                                                    "window": 1
+                                                  },
+                                                  "comparator": "gt",
+                                                  "rhs-val": "5.5",
+                                                  "rhs-fixed-value?": true,
+                                                  "children": [
+                                                    {
+                                                      "id": "55eb5b67-0de2-4605-bc5a-005c95e6a2a4",
+                                                      "step": "if",
+                                                      "children": [
+                                                        {
+                                                          "id": "fd8816e5-0bad-4f66-b911-8e904b0cfe2b",
+                                                          "step": "if-child",
+                                                          "is-else-condition?": false,
+                                                          "lhs-fn": "standard-deviation-return",
+                                                          "lhs-window-days": "10",
+                                                          "lhs-val": "UVXY",
+                                                          "lhs-fn-params": {
+                                                            "window": 10
+                                                          },
+                                                          "comparator": "lt",
+                                                          "rhs-val": "8",
+                                                          "rhs-fixed-value?": true,
+                                                          "children": [
+                                                            {
+                                                              "id": "e0c4edcb-8cf7-4a69-8dc0-4844d18a3ca2",
+                                                              "step": "wt-inverse-vol",
+                                                              "window-days": "10",
+                                                              "children": [
+                                                                {
+                                                                  "id": "551a4ffd-811d-4d3f-85c4-ed1f4435c977",
+                                                                  "step": "asset",
+                                                                  "ticker": "TQQQ"
+                                                                },
+                                                                {
+                                                                  "id": "8cc7c530-ebd2-4d63-9378-95bb40a2106c",
+                                                                  "step": "asset",
+                                                                  "ticker": "SOXL"
+                                                                }
+                                                              ],
+                                                              "collapsed?": false
+                                                            }
+                                                          ],
+                                                          "collapsed?": false
+                                                        },
+                                                        {
+                                                          "id": "42239080-8021-4fa0-bc6b-50f85e1b6a73",
+                                                          "step": "if-child",
+                                                          "is-else-condition?": true,
+                                                          "children": [
+                                                            {
+                                                              "id": "70c027db-3537-427d-b1f9-1d61e0df45dc",
+                                                              "step": "asset",
+                                                              "ticker": "QQQ"
+                                                            }
+                                                          ],
+                                                          "collapsed?": false
+                                                        }
+                                                      ],
+                                                      "collapsed?": false
+                                                    }
+                                                  ],
+                                                  "collapsed?": false
+                                                },
+                                                {
+                                                  "id": "794ed48e-e424-497d-b9ca-9eec43e473c2",
+                                                  "step": "if-child",
+                                                  "is-else-condition?": true,
+                                                  "children": [
+                                                    {
+                                                      "id": "ae9d06f1-5b89-4e70-a96c-9b7fb0ca6875",
+                                                      "step": "if",
+                                                      "children": [
+                                                        {
+                                                          "id": "aa044bfa-015e-4650-b2fd-2ab7ef1c69a3",
+                                                          "step": "if-child",
+                                                          "is-else-condition?": false,
+                                                          "lhs-fn": "cumulative-return",
+                                                          "lhs-window-days": "5",
+                                                          "lhs-val": "SPY",
+                                                          "lhs-fn-params": {
+                                                            "window": 5
+                                                          },
+                                                          "comparator": "gt",
+                                                          "rhs-val": "2",
+                                                          "rhs-fixed-value?": true,
+                                                          "children": [
+                                                            {
+                                                              "id": "f304309d-19d1-4626-a90b-3a1cb7a09f24",
+                                                              "step": "asset",
+                                                              "ticker": "SPY"
+                                                            }
+                                                          ],
+                                                          "collapsed?": false
+                                                        },
+                                                        {
+                                                          "id": "1a0538e2-c2e0-4000-bf6b-1842a84d74cf",
+                                                          "step": "if-child",
+                                                          "is-else-condition?": true,
+                                                          "children": [
+                                                            {
+                                                              "id": "6090c8f6-ba8c-45f9-83e1-a776f65fb496",
+                                                              "step": "asset",
+                                                              "ticker": "BIL"
+                                                            }
+                                                          ],
+                                                          "collapsed?": false
+                                                        }
+                                                      ],
+                                                      "collapsed?": false
+                                                    }
+                                                  ],
+                                                  "collapsed?": false
+                                                }
+                                              ],
+                                              "collapsed?": false
+                                            }
+                                          ],
+                                          "collapsed?": false,
+                                          "rhs-fn-params": {
+                                            "window": 210
+                                          }
+                                        },
+                                        {
+                                          "id": "dd396556-5adc-4037-9f50-a20ad0c0b41c",
+                                          "step": "if-child",
+                                          "is-else-condition?": true,
+                                          "children": [
+                                            {
+                                              "id": "d8b329b8-7c94-47e1-9433-72e75dac8693",
+                                              "step": "asset",
+                                              "ticker": "BIL"
+                                            }
+                                          ],
+                                          "collapsed?": false
+                                        }
+                                      ],
+                                      "collapsed?": false
+                                    }
+                                  ],
+                                  "collapsed?": false
+                                }
+                              ],
+                              "collapsed?": false
+                            }
+                          ],
+                          "collapsed?": false
+                        }
+                      ],
+                      "collapsed?": false
+                    }
+                  ],
+                  "collapsed?": false
+                }
+              ],
+              "collapsed?": false
+            }
+          ],
+          "collapsed?": false
+        }
+      ],
+      "collapsed?": false
+    }
+  ]
+}

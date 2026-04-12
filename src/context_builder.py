@@ -247,6 +247,23 @@ RULE 12 — THREE MANDATORY REASONING LAYERS
 
   Strategies missing any layer will score near zero in bear markets.
   The canonical flow is: LAYER 1 → LAYER 2 → LAYER 3 → allocation.
+
+RULE 13 — USE PORTFOLIO-OF-GROUPS ARCHITECTURE
+  Top strategies are NOT a single deep if-tree. They are a weight-equal
+  portfolio of specialized groups, each handling one regime:
+
+  REQUIRED STRUCTURE:
+  (weight-equal [
+    (group "Crash Guard" [...])    ← handles crash/stress detection
+    (group "Vol Profit" [...])     ← profits from elevated volatility
+    (group "Bull Momentum" [...])  ← leveraged bull in calm markets
+  ])
+
+  Each group has its own internal logic. Groups run IN PARALLEL.
+  This is how Sisyphus achieves 386 asset paths — not depth, but breadth.
+
+  NEVER use a single top-level if-tree as the entire strategy.
+  ALWAYS wrap strategy logic in weight-equal + groups.
 </hard_rules>"""
 
 # ── Complete valid example strategy ───────────────────────────────────────────
@@ -292,6 +309,18 @@ CRITICAL REMINDERS:
 
 EXAMPLE OF VALID COMPLETE DSL OUTPUT:
 {example}
+
+TEMPLATE-FILLING MODE:
+Your task is to fill in the template below with specific parameter values.
+Replace each {{PLACEHOLDER}} with a concrete value based on:
+- KB patterns and lessons
+- Sisyphus reference architecture
+- Your own reasoning about what works
+
+DO NOT change the structure. ONLY replace the {{PLACEHOLDER}} values.
+The template guarantees the correct architecture — you provide the parameters.
+
+{template}
 </output_format>"""
 
 # ── Token estimation ───────────────────────────────────────────────────────────
@@ -931,9 +960,12 @@ def build_generator_prompt(archetype: str, generation: int,
     anti_pats    = build_anti_patterns(active_lessons, patterns)
     dsl_fragments = build_dsl_fragments(archetype)
     parents_sect = build_parents_section(parents, generation)
+    _template_path = _KB_ROOT / 'templates' / 'sharpe_hunter_v1.dsl'
+    _template_text = _template_path.read_text() if _template_path.exists() else ''
     output_fmt   = OUTPUT_FORMAT_TEMPLATE.format(
                        archetype=archetype,
-                       example=EXAMPLE_STRATEGY)
+                       example=EXAMPLE_STRATEGY,
+                       template=_template_text)
 
     # Assemble final prompt
     sections = [

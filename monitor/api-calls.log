@@ -716,3 +716,6 @@
 2026-04-12T01:01:57Z [INFO] [monitor] API call call-716 type=LEARNER gen=0 in=8973 out=2598 cost=$0.065889 dur=41244ms status=OK
 2026-04-12T01:26:02Z [INFO] [monitor] API call call-717 type=GENERATOR gen=1 in=13419 out=1811 cost=$0.067422 dur=18206ms status=OK
 2026-04-12T01:43:54Z [INFO] [monitor] API call call-718 type=GENERATOR gen=1 in=13580 out=577 cost=$0.049395 dur=7203ms status=OK
+2026-04-12T01:55:23Z [INFO] [monitor] API call call-719 type=LEARNER gen=1 in=9702 out=2874 cost=$0.072216 dur=52328ms status=OK
+2026-04-12T01:58:24Z [INFO] [monitor] API call call-720 type=GENERATOR gen=2 in=14076 out=545 cost=$0.050403 dur=6757ms status=OK
+2026-04-12T02:15:40Z [INFO] [monitor] API call call-721 type=GENERATOR gen=3 in=15041 out=573 cost=$0.053718 dur=5624ms status=OK
