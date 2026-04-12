@@ -4,7 +4,7 @@
     "name": "SHARPE_HUNTER Triple Gate Vol Profit",
     "archetype": "SHARPE_HUNTER",
     "generation": 0,
-    "final_composite_fitness": null,
+    "final_composite_fitness": -21.8,
     "final_sharpe_1Y": -2.18,
     "final_return_1Y": -38.2,
     "final_max_drawdown_1Y": 39.7,
@@ -301,11 +301,12 @@
   },
   "nominal_result": {
     "composite_fitness": {
-      "score": -2.18,
+      "score": -21.8,
       "period_scores": {
         "1Y": -2.18
       },
-      "std_dev": null
+      "std_dev": null,
+      "formula": "sharpe * max(0, 1 - maxdd/50) * 10"
     },
     "periods": {
       "1Y": {

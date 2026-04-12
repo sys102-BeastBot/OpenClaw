@@ -225,6 +225,18 @@ DSL GRAMMAR QUICK REFERENCE:
     (or <cond1> <cond2> ...)
     (> (rsi "EQUITIES::SPY//USD" 10) 50)
     (> (current-price "EQUITIES::SPY//USD" 2) (moving-average-price "EQUITIES::SPY//USD" 200))
+
+RULE 12 — DEPTH AND COMPLEXITY REQUIREMENT
+  Your strategy must have AT MINIMUM:
+  - 8 nested if levels (depth)
+  - 15 total IF branches
+  - At least 2 distinct vol profit paths (routing to UVXY or VIXM)
+  - At least 3 distinct crash guard conditions
+
+  Shallow strategies (< 6 IF levels) consistently score near zero.
+  Reference: top strategies have 40-60+ IF branches and 5+ vol profit paths.
+  Build DEEP, not wide. Each branch should have sub-conditions before assets.
+  NEVER route directly from a top-level condition to an asset leaf.
 </hard_rules>"""
 
 # ── Complete valid example strategy ───────────────────────────────────────────

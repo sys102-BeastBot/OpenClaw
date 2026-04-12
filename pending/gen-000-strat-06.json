@@ -4,7 +4,7 @@
     "name": "Sharpe Apex Vol Profit Momentum",
     "archetype": "SHARPE_HUNTER",
     "generation": 0,
-    "final_composite_fitness": null,
+    "final_composite_fitness": -27.7,
     "final_sharpe_1Y": -2.77,
     "final_return_1Y": -43.8,
     "final_max_drawdown_1Y": 43.8,
@@ -376,11 +376,12 @@
   },
   "nominal_result": {
     "composite_fitness": {
-      "score": -2.77,
+      "score": -27.7,
       "period_scores": {
         "1Y": -2.77
       },
-      "std_dev": null
+      "std_dev": null,
+      "formula": "sharpe * max(0, 1 - maxdd/50) * 10"
     },
     "periods": {
       "1Y": {

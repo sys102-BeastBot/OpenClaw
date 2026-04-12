@@ -3273,3 +3273,7 @@ KB is ready for generation 0.
 2026-04-12T01:01:16Z [INFO] [learner_agent] gen-0: starting lesson extraction, 0 strategies in brief
 2026-04-12T01:01:57Z [WARNING] [monitor] Slow API call call-716 took 41244ms (threshold 30000ms)
 2026-04-12T01:01:57Z [INFO] [learner_agent] gen-0: extracted 8 lessons on attempt 1
+2026-04-12T01:25:43Z [INFO] [generator_agent] gen-001-strat-01: starting generation for SHARPE_HUNTER
+2026-04-12T01:25:43Z [INFO] [context_builder] Generator prompt assembled for SHARPE_HUNTER gen-1 slot-1: ~10864 tokens estimated
+2026-04-12T01:26:02Z [INFO] [generator_agent] gen-001-strat-01: audit passed
+2026-04-12T01:26:02Z [INFO] [generator_agent] gen-001-strat-01: written to pending/

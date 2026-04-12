@@ -311,3 +311,49 @@ def compute_composite(period_scores: dict, meta: dict) -> dict:
         "consistency_adjustment": consistency_adjustment,
         "final_composite": round(final_composite, 4),
     }
+
+
+# ---------------------------------------------------------------------------
+# Simple composite fitness helpers (used by learner/scorer pipeline)
+# ---------------------------------------------------------------------------
+
+def score_from_metrics(sharpe: float, maxdd_pct: float, annret_pct: float) -> float:
+    """Simple fitness formula: sharpe * max(0, 1 - maxdd/50) * 10.
+
+    Args:
+        sharpe: Sharpe ratio (e.g. 5.21)
+        maxdd_pct: Max drawdown as percentage (e.g. 7.8)
+        annret_pct: Annualized return as percentage (e.g. 337.6)
+    Returns:
+        Composite fitness score
+    """
+    if sharpe <= 0:
+        return round(sharpe * 10, 2)  # scale negative scores
+    dd_penalty = max(0.0, 1.0 - maxdd_pct / 50.0)
+    return round(sharpe * dd_penalty * 10, 2)
+
+
+def score_strategy_file(strategy_file: dict) -> float:
+    """Extract 1Y metrics from strategy file and compute simple fitness."""
+    p1y = (strategy_file
+           .get('nominal_result', {})
+           .get('periods', {})
+           .get('1Y', {})
+           .get('core_metrics', {}))
+    sharpe  = p1y.get('sharpe', 0) or 0
+    maxdd   = abs(p1y.get('max_drawdown', 1) or 1) * 100
+    annret  = (p1y.get('annualized_return', 0) or 0) * 100
+    return score_from_metrics(sharpe, maxdd, annret)
+
+
+def attach_fitness_to_file(strategy_file: dict) -> dict:
+    """Compute and attach simple fitness score to strategy file in-place."""
+    fitness = score_strategy_file(strategy_file)
+    strategy_file['summary']['final_composite_fitness'] = fitness
+    if strategy_file.get('nominal_result'):
+        if 'composite_fitness' not in strategy_file['nominal_result']:
+            strategy_file['nominal_result']['composite_fitness'] = {}
+        strategy_file['nominal_result']['composite_fitness']['score'] = fitness
+        strategy_file['nominal_result']['composite_fitness']['formula'] = \
+            'sharpe * max(0, 1 - maxdd/50) * 10'
+    return strategy_file
