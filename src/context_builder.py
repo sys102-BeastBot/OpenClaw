@@ -708,9 +708,17 @@ def build_parents_section(parents: list[dict], generation: int) -> str:
         if struct:
             lines.append(f"Structure: {struct}")
 
-        # Full composer JSON
+        # Full DSL (preferred) or composer JSON
+        dsl = parent.get('dsl', '')
         composer_json = parent.get('composer_json', {})
-        if composer_json:
+        if dsl:
+            lines.append(
+                "FULL DSL — study the architecture, crash guards, vol profit "
+                "paths, and bull allocation. Build something inspired by this "
+                "structure with your own parameter variations. Do NOT copy exactly."
+            )
+            lines.append(dsl)
+        elif composer_json:
             lines.append("JSON:")
             lines.append(json.dumps(composer_json, indent=2))
 
@@ -815,7 +823,7 @@ def _fetch_gen0_parents(archetype: str, meta: dict) -> list[dict]:
 
             definition = data.get('definition') or data.get('score') or {}
 
-            parents.append({
+            parent_dict = {
                 'strategy_id':          f"existing-{key}",
                 'name':                 sym['name'],
                 'fitness':              None,
@@ -825,10 +833,16 @@ def _fetch_gen0_parents(archetype: str, meta: dict) -> list[dict]:
                 'is_existing_symphony': True,
                 'composer_json':        definition,
                 'top_level_structure':  tree_to_string(definition),
-            })
+            }
+            if key == 'sisyphus':
+                dsl_path = Path.home() / '.openclaw/workspace/learning/kb/pilot/sisyphus.dsl'
+                if dsl_path.exists():
+                    parent_dict['dsl'] = dsl_path.read_text()
+                    parent_dict['composer_json'] = {}
+            parents.append(parent_dict)
         except Exception as e:
             # Don't crash if one symphony fails to fetch — continue with others
-            parents.append({
+            parent_dict = {
                 'strategy_id':          f"existing-{key}",
                 'name':                 sym['name'],
                 'fitness':              None,
@@ -836,7 +850,12 @@ def _fetch_gen0_parents(archetype: str, meta: dict) -> list[dict]:
                 'composer_json':        {},
                 'top_level_structure':  f"(fetch failed: {e})",
                 '_fetch_error':         str(e),
-            })
+            }
+            if key == 'sisyphus':
+                dsl_path = Path.home() / '.openclaw/workspace/learning/kb/pilot/sisyphus.dsl'
+                if dsl_path.exists():
+                    parent_dict['dsl'] = dsl_path.read_text()
+            parents.append(parent_dict)
 
     return parents
 

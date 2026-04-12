@@ -39,8 +39,8 @@ _KB_ROOT  = Path.home() / '.openclaw' / 'workspace' / 'learning' / 'kb'
 _META_PATH = _KB_ROOT / 'meta.json'
 
 # ── Constants ──────────────────────────────────────────────────────────────────
-CLAUDE_MODEL = 'claude-sonnet-4-5'
-MAX_TOKENS   = 8000      # generous budget — never truncate strategy JSON
+CLAUDE_MODEL = 'claude-opus-4-5'
+MAX_TOKENS   = 16000     # generous budget — never truncate strategy JSON
 TEMPERATURE  = 1.0       # default — creative but controlled
 
 
