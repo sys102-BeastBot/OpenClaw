@@ -306,7 +306,7 @@
         "1Y": -2.18
       },
       "std_dev": null,
-      "formula": "sharpe * max(0, 1 - maxdd/50) * 10"
+      "formula": "sharpe * exp(-0.05 * maxdd) * 10 + capped_cagr_bonus"
     },
     "periods": {
       "1Y": {

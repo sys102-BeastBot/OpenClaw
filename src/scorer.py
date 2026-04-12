@@ -314,46 +314,68 @@ def compute_composite(period_scores: dict, meta: dict) -> dict:
 
 
 # ---------------------------------------------------------------------------
-# Simple composite fitness helpers (used by learner/scorer pipeline)
+# Composite fitness helpers (used by learner/scorer pipeline)
+# Formula: Sharpe * exp(-k * MaxDD) * 10 + capped CAGR bonus
+# Exponential decay on MaxDD — no hard cliffs. Negative Sharpe stays negative.
+# k=0.05: MaxDD 20% reduces score ~37%, MaxDD 40% reduces by ~86%.
 # ---------------------------------------------------------------------------
 
-def score_from_metrics(sharpe: float, maxdd_pct: float, annret_pct: float) -> float:
-    """Simple fitness formula: sharpe * max(0, 1 - maxdd/50) * 10.
-
+def score_from_metrics(sharpe: float, maxdd_pct: float, annret_pct: float,
+                       k: float = 0.05) -> float:
+    """
     Args:
         sharpe: Sharpe ratio (e.g. 5.21)
         maxdd_pct: Max drawdown as percentage (e.g. 7.8)
         annret_pct: Annualized return as percentage (e.g. 337.6)
+        k: Drawdown harshness constant (default 0.05)
     Returns:
-        Composite fitness score
+        Composite fitness score (positive = good, negative = bad)
     """
     if sharpe <= 0:
-        return round(sharpe * 10, 2)  # scale negative scores
-    dd_penalty = max(0.0, 1.0 - maxdd_pct / 50.0)
-    return round(sharpe * dd_penalty * 10, 2)
+        return round(sharpe * 10, 2)
+    dd_factor   = math.exp(-k * abs(maxdd_pct))
+    cagr_bonus  = min(0.2, abs(annret_pct) / 1000)  # capped at 0.2
+    return round((sharpe * dd_factor + cagr_bonus) * 10, 2)
 
 
 def score_strategy_file(strategy_file: dict) -> float:
-    """Extract 1Y metrics from strategy file and compute simple fitness."""
+    """Extract 1Y metrics from strategy file and compute fitness."""
     p1y = (strategy_file
            .get('nominal_result', {})
            .get('periods', {})
            .get('1Y', {})
            .get('core_metrics', {}))
-    sharpe  = p1y.get('sharpe', 0) or 0
-    maxdd   = abs(p1y.get('max_drawdown', 1) or 1) * 100
-    annret  = (p1y.get('annualized_return', 0) or 0) * 100
+    sharpe = p1y.get('sharpe', 0) or 0
+    maxdd  = abs(p1y.get('max_drawdown', 0) or 0) * 100
+    annret = (p1y.get('annualized_return', 0) or 0) * 100
     return score_from_metrics(sharpe, maxdd, annret)
 
 
 def attach_fitness_to_file(strategy_file: dict) -> dict:
-    """Compute and attach simple fitness score to strategy file in-place."""
+    """Compute and attach fitness score to strategy file in-place."""
     fitness = score_strategy_file(strategy_file)
     strategy_file['summary']['final_composite_fitness'] = fitness
     if strategy_file.get('nominal_result'):
         if 'composite_fitness' not in strategy_file['nominal_result']:
             strategy_file['nominal_result']['composite_fitness'] = {}
-        strategy_file['nominal_result']['composite_fitness']['score'] = fitness
+        strategy_file['nominal_result']['composite_fitness']['score']   = fitness
         strategy_file['nominal_result']['composite_fitness']['formula'] = \
-            'sharpe * max(0, 1 - maxdd/50) * 10'
+            'sharpe * exp(-0.05 * maxdd) * 10 + capped_cagr_bonus'
     return strategy_file
+
+
+def reference_scores() -> dict:
+    """Reference fitness scores for known strategies."""
+    return {
+        'Sisyphus':   score_from_metrics(5.21, 7.8,  337.6),
+        'NOVA Best':  score_from_metrics(6.40, 4.7,  1019.1),
+        'strat-07':   score_from_metrics(-0.02, 19.6, -3.4),
+        'strat-08':   score_from_metrics(-1.98, 78.7, -78.6),
+    }
+
+
+if __name__ == '__main__':
+    refs = reference_scores()
+    print("Reference fitness scores:")
+    for name, score in refs.items():
+        print(f"  {name:<20} {score:>8.2f}")

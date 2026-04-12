@@ -226,17 +226,27 @@ DSL GRAMMAR QUICK REFERENCE:
     (> (rsi "EQUITIES::SPY//USD" 10) 50)
     (> (current-price "EQUITIES::SPY//USD" 2) (moving-average-price "EQUITIES::SPY//USD" 200))
 
-RULE 12 — DEPTH AND COMPLEXITY REQUIREMENT
-  Your strategy must have AT MINIMUM:
-  - 8 nested if levels (depth)
-  - 15 total IF branches
-  - At least 2 distinct vol profit paths (routing to UVXY or VIXM)
-  - At least 3 distinct crash guard conditions
+RULE 12 — THREE MANDATORY REASONING LAYERS
+  Every strategy must independently evaluate all three layers before
+  routing capital to any asset. Never skip a layer.
 
-  Shallow strategies (< 6 IF levels) consistently score near zero.
-  Reference: top strategies have 40-60+ IF branches and 5+ vol profit paths.
-  Build DEEP, not wide. Each branch should have sub-conditions before assets.
-  NEVER route directly from a top-level condition to an asset leaf.
+  LAYER 1 — CRASH DETECTION (required):
+    At least 2 different crash/stress signals using different indicators.
+    Example signals: SVXY max-drawdown, SVXY RSI, UVXY stddev, UVXY cumret.
+    Any one signal firing routes to BIL immediately.
+
+  LAYER 2 — VOL REGIME PROFIT (required):
+    At least 2 distinct paths to UVXY, UVIX, or VIXM as profit positions.
+    Example: UVXY RSI band (74-84) AND UVXY RSI(60) long-term regime.
+    This is how strategies PROFIT in bear markets — not just survive them.
+
+  LAYER 3 — TREND + MOMENTUM (required):
+    SPY regime check (current-price vs EMA-210) AND
+    at least one leveraged ETF momentum gate (e.g. TQQQ cumret > 5.5)
+    before routing to any leveraged ETF allocation.
+
+  Strategies missing any layer will score near zero in bear markets.
+  The canonical flow is: LAYER 1 → LAYER 2 → LAYER 3 → allocation.
 </hard_rules>"""
 
 # ── Complete valid example strategy ───────────────────────────────────────────

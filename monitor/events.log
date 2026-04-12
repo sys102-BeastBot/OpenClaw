@@ -3277,3 +3277,7 @@ KB is ready for generation 0.
 2026-04-12T01:25:43Z [INFO] [context_builder] Generator prompt assembled for SHARPE_HUNTER gen-1 slot-1: ~10864 tokens estimated
 2026-04-12T01:26:02Z [INFO] [generator_agent] gen-001-strat-01: audit passed
 2026-04-12T01:26:02Z [INFO] [generator_agent] gen-001-strat-01: written to pending/
+2026-04-12T01:43:46Z [INFO] [generator_agent] gen-001-strat-01: starting generation for SHARPE_HUNTER
+2026-04-12T01:43:46Z [INFO] [context_builder] Generator prompt assembled for SHARPE_HUNTER gen-1 slot-1: ~10984 tokens estimated
+2026-04-12T01:43:54Z [INFO] [generator_agent] gen-001-strat-01: audit passed
+2026-04-12T01:43:54Z [INFO] [generator_agent] gen-001-strat-01: written to pending/

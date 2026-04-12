@@ -11,8 +11,8 @@
   "current_period": {
     "date": "2026-04-12",
     "month": "2026-04",
-    "daily_cost_usd": 0.468978,
-    "monthly_cost_usd": 3.088545
+    "daily_cost_usd": 0.518373,
+    "monthly_cost_usd": 3.13794
   },
   "pricing": {
     "model": "claude-sonnet-4-6",
@@ -20,19 +20,6 @@
     "output_cost_per_1M_tokens": 15.0
   },
   "call_log": [
-    {
-      "id": "call-218",
-      "timestamp": "2026-03-22T17:33:58Z",
-      "call_type": "LEARNER",
-      "strategy_id": null,
-      "generation": 3,
-      "input_tokens": 100,
-      "output_tokens": 50,
-      "cost_usd": 0.00105,
-      "duration_ms": 0,
-      "success": true,
-      "error": null
-    },
     {
       "id": "call-219",
       "timestamp": "2026-03-22T17:33:58Z",
@@ -6519,6 +6506,19 @@
       "duration_ms": 18206,
       "success": true,
       "error": null
+    },
+    {
+      "id": "call-718",
+      "timestamp": "2026-04-12T01:43:54Z",
+      "call_type": "GENERATOR",
+      "strategy_id": "gen-001-strat-01",
+      "generation": 1,
+      "input_tokens": 13580,
+      "output_tokens": 577,
+      "cost_usd": 0.049395,
+      "duration_ms": 7203,
+      "success": true,
+      "error": null
     }
   ],
   "generation_costs": {
@@ -6527,8 +6527,8 @@
       "call_count": 364
     },
     "gen-001": {
-      "total_cost_usd": 4.166472,
-      "call_count": 259
+      "total_cost_usd": 4.215867,
+      "call_count": 260
     },
     "gen-002": {
       "total_cost_usd": 0.378,
@@ -6540,11 +6540,11 @@
     }
   },
   "lifetime": {
-    "total_calls": 717,
-    "total_input_tokens": 1272309,
-    "total_output_tokens": 365087,
-    "total_cost_usd": 9.293232,
+    "total_calls": 718,
+    "total_input_tokens": 1285889,
+    "total_output_tokens": 365664,
+    "total_cost_usd": 9.342627,
     "first_call_at": "2026-03-22T05:21:07Z",
-    "last_call_at": "2026-04-12T01:26:02Z"
+    "last_call_at": "2026-04-12T01:43:54Z"
   }
 }
