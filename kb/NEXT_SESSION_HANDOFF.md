@@ -162,3 +162,4 @@ Upload before next session:
   src/backtest_runner.py
   src/scorer.py
   kb/pilot/sisyphus_groups/loo_multi_period.json
+# gdrive sync test
