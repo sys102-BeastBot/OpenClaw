@@ -1,0 +1,92 @@
+{
+  "id": "E4jQ7ZPowO0ew47oc5Yr",
+  "step": "root",
+  "name": "Copy of Exhibit 3 | ADAPTIVE ASSET ALLOCATION | 5C2",
+  "description": "",
+  "rebalance": "monthly",
+  "children": [
+    {
+      "id": "361e3abf-b145-4c83-88a3-3a5b71c24e3c",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "id": "668fbc43-7d33-4e2f-8479-978b42d1cf08",
+          "step": "group",
+          "name": "Exhibit 3 | ADAPTIVE ASSET ALLOCATION",
+          "children": [
+            {
+              "step": "wt-cash-equal",
+              "id": "8376fa4b-86e3-49c7-b30d-6df476177731",
+              "children": [
+                {
+                  "select?": true,
+                  "children": [
+                    {
+                      "name": "Invesco DB Commodity Index Tracking Fund",
+                      "ticker": "DBC",
+                      "has_marketcap": false,
+                      "id": "b5a752a2-463a-422f-ae0e-7179c7c03533",
+                      "exchange": "ARCX",
+                      "price": 25.6,
+                      "step": "asset",
+                      "dollar_volume": 43479424
+                    },
+                    {
+                      "name": "SPDR Gold Shares",
+                      "ticker": "GLD",
+                      "has_marketcap": false,
+                      "id": "6b61450c-5a76-4f13-86ab-ffa7c33a6869",
+                      "exchange": "ARCX",
+                      "price": 153.16,
+                      "step": "asset",
+                      "dollar_volume": 707078149.68
+                    },
+                    {
+                      "name": "iShares 20+ Year Treasury Bond ETF",
+                      "ticker": "TLT",
+                      "has_marketcap": false,
+                      "id": "93329414-729d-4b07-844a-f229b50977ac",
+                      "exchange": "XNAS",
+                      "price": 97.47,
+                      "step": "asset",
+                      "dollar_volume": 1926956655.27
+                    },
+                    {
+                      "name": "SPDR S&P 500 ETF Trust",
+                      "ticker": "SPY",
+                      "has_marketcap": false,
+                      "id": "a818b1a6-f7f6-4744-8f0e-12f32258eda1",
+                      "exchange": "ARCX",
+                      "price": 379.98,
+                      "step": "asset",
+                      "dollar_volume": 30038880783.06
+                    },
+                    {
+                      "name": "Invesco DB US Dollar Index Bullish Fund",
+                      "ticker": "UUP",
+                      "has_marketcap": false,
+                      "id": "28735ae6-4faa-412a-bfce-36122656ec36",
+                      "exchange": "ARCX",
+                      "price": 29.73,
+                      "step": "asset",
+                      "dollar_volume": 128131483.74
+                    }
+                  ],
+                  "select-fn": "top",
+                  "select-n": "2",
+                  "sort-by-fn": "cumulative-return",
+                  "sort-by-window-days": "126",
+                  "id": "41a9c41c-e497-4056-9571-6605ba6b09ce",
+                  "sort-by?": true,
+                  "step": "filter"
+                }
+              ],
+              "window-days": "21"
+            }
+          ],
+          "collapsed?": false
+        }
+      ]
+    }
+  ]
+}

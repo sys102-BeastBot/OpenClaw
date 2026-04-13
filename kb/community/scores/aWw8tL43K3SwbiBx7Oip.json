@@ -1,0 +1,1167 @@
+{
+  "step": "root",
+  "name": "Copy of VIX Mid-Term Futures: SPY RSI predicts VIX (3 tickers)",
+  "description": "I wanted to create a very simple strategy that earns from VIX. I use mid-term volatility ETFs to reduce variability the size of movements. SPY RSI predicts whether to short or go long VIX Mid-Term Futures ETPs. Additionally, since this uses a fairly unpopular set of ETPs, it doesn't conflict with many other symphonies for wash sales, etc. To back test further, use SVXY instead of ZVOL. Future improvements research could include SVIX and UVIX.",
+  "rebalance": "daily",
+  "asset_class": "EQUITIES",
+  "children": [
+    {
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "step": "group",
+          "name": "SPY RSI predicts VIX moves over different RSI time periods",
+          "children": [
+            {
+              "step": "wt-cash-specified",
+              "children": [
+                {
+                  "step": "if",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "step": "group",
+                          "name": "ZVOL w/ Black Swan Catcher",
+                          "children": [
+                            {
+                              "step": "wt-cash-equal",
+                              "children": [
+                                {
+                                  "step": "if",
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "step": "asset",
+                                          "ticker": "PULS",
+                                          "name": "PGIM Ultra Short Bond ETF",
+                                          "id": "02e140f2-8674-48be-8a3f-27866ca73cf5"
+                                        }
+                                      ],
+                                      "lhs-fn-params": {
+                                        "window": 14
+                                      },
+                                      "is-else-condition?": false,
+                                      "rhs-fixed-value?": true,
+                                      "lhs-fn": "relative-strength-index",
+                                      "lhs-val": "UVXY",
+                                      "id": "33800a6d-8775-4ab5-8384-2dd73ed70234",
+                                      "comparator": "gt",
+                                      "rhs-val": "70",
+                                      "step": "if-child"
+                                    },
+                                    {
+                                      "step": "if-child",
+                                      "id": "6d8c626f-4ae6-4262-8a89-260d5b388ede",
+                                      "is-else-condition?": true,
+                                      "children": [
+                                        {
+                                          "step": "asset",
+                                          "ticker": "ZVOL",
+                                          "name": "ProShares Ultra VIX Short-Term Futures ETF",
+                                          "id": "beceeb33-7587-4065-8567-434db5a3d408"
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "id": "15d295e8-0dd1-422f-8b24-195a89ddf0b9"
+                                }
+                              ],
+                              "id": "a324897d-2346-48ba-8eac-36534384f631"
+                            }
+                          ],
+                          "id": "09e6096d-30b6-48dd-8455-bf3c165a7f08",
+                          "collapsed?": true
+                        }
+                      ],
+                      "lhs-fn-params": {
+                        "window": 2
+                      },
+                      "is-else-condition?": false,
+                      "rhs-fixed-value?": true,
+                      "lhs-fn": "relative-strength-index",
+                      "lhs-val": "SPY",
+                      "id": "5c41ceae-e4e2-467e-950d-23879c7b7d4d",
+                      "comparator": "lt",
+                      "rhs-val": "25",
+                      "step": "if-child"
+                    },
+                    {
+                      "step": "if-child",
+                      "id": "070b1896-6c53-4309-9d2c-64d1634eb147",
+                      "is-else-condition?": true,
+                      "children": [
+                        {
+                          "step": "if",
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "step": "asset",
+                                  "ticker": "VXZ",
+                                  "name": "iPath Series B S&P 500 VIX Mid-Term Futures ETN",
+                                  "id": "ca7c2dd6-520f-4a03-82c9-20738b131959"
+                                }
+                              ],
+                              "lhs-fn-params": {
+                                "window": 2
+                              },
+                              "is-else-condition?": false,
+                              "rhs-fixed-value?": true,
+                              "lhs-fn": "relative-strength-index",
+                              "lhs-val": "SPY",
+                              "id": "4502dd0a-15a6-4a4a-b646-8fc7a68d02b5",
+                              "comparator": "gt",
+                              "rhs-val": "80",
+                              "step": "if-child"
+                            },
+                            {
+                              "step": "if-child",
+                              "id": "12aab61e-1f71-49b1-944f-2b35ce036bf0",
+                              "is-else-condition?": true,
+                              "children": [
+                                {
+                                  "step": "asset",
+                                  "ticker": "PULS",
+                                  "name": "PGIM Ultra Short Bond ETF",
+                                  "id": "7c831f91-ac9e-451c-9cb3-7766ec23c588"
+                                }
+                              ]
+                            }
+                          ],
+                          "id": "5dc9cbbb-5877-480d-aefb-f8bdfac630a7"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "b49eda0f-c59f-423d-8c01-08e65d82faa0",
+                  "weight": {
+                    "num": "36.00",
+                    "den": 100
+                  }
+                },
+                {
+                  "step": "if",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "step": "group",
+                          "name": "ZVOL w/ Black Swan Catcher",
+                          "children": [
+                            {
+                              "step": "wt-cash-equal",
+                              "children": [
+                                {
+                                  "step": "if",
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "step": "asset",
+                                          "ticker": "PULS",
+                                          "name": "PGIM Ultra Short Bond ETF",
+                                          "id": "8191c12a-7c32-497f-80d3-0fbcfe5ed979"
+                                        }
+                                      ],
+                                      "lhs-fn-params": {
+                                        "window": 14
+                                      },
+                                      "is-else-condition?": false,
+                                      "rhs-fixed-value?": true,
+                                      "lhs-fn": "relative-strength-index",
+                                      "lhs-val": "UVXY",
+                                      "id": "0c3487aa-6e1a-42d1-8452-e0089c7b612d",
+                                      "comparator": "gt",
+                                      "rhs-val": "70",
+                                      "step": "if-child"
+                                    },
+                                    {
+                                      "step": "if-child",
+                                      "id": "e14982f9-0ac2-4904-8a2c-ec8f997dd371",
+                                      "is-else-condition?": true,
+                                      "children": [
+                                        {
+                                          "step": "asset",
+                                          "ticker": "ZVOL",
+                                          "name": "ProShares Ultra VIX Short-Term Futures ETF",
+                                          "id": "ca0bd708-c9bf-4d18-898f-3773b669f766"
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "id": "66c4e169-2d2b-4ea0-90ac-909040634b40"
+                                }
+                              ],
+                              "id": "e19cbf86-7d77-4e1a-8e3c-7a68a102f9b4"
+                            }
+                          ],
+                          "id": "aede4d08-ede2-4b99-a95f-4cf60b027fe8",
+                          "collapsed?": true
+                        }
+                      ],
+                      "lhs-fn-params": {
+                        "window": 3
+                      },
+                      "is-else-condition?": false,
+                      "rhs-fixed-value?": true,
+                      "lhs-fn": "relative-strength-index",
+                      "lhs-val": "SPY",
+                      "id": "b774d27d-e62e-489a-b2c5-3cf4e06bb9ee",
+                      "comparator": "lt",
+                      "rhs-val": "25",
+                      "step": "if-child"
+                    },
+                    {
+                      "step": "if-child",
+                      "id": "e583561c-f21a-4cdb-8708-e61de1b6b2fc",
+                      "is-else-condition?": true,
+                      "children": [
+                        {
+                          "step": "if",
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "step": "asset",
+                                  "ticker": "VXZ",
+                                  "name": "iPath Series B S&P 500 VIX Mid-Term Futures ETN",
+                                  "id": "077316f7-f41e-418d-aafa-203e8b5c67f7"
+                                }
+                              ],
+                              "lhs-fn-params": {
+                                "window": 3
+                              },
+                              "is-else-condition?": false,
+                              "rhs-fixed-value?": true,
+                              "lhs-fn": "relative-strength-index",
+                              "lhs-val": "SPY",
+                              "id": "16c3cb28-68a4-471f-b2bb-7e80c4971bd9",
+                              "comparator": "gt",
+                              "rhs-val": "80",
+                              "step": "if-child"
+                            },
+                            {
+                              "step": "if-child",
+                              "id": "481ee3a0-3ed3-43a2-b02b-88dbb3ef652c",
+                              "is-else-condition?": true,
+                              "children": [
+                                {
+                                  "step": "asset",
+                                  "ticker": "PULS",
+                                  "name": "PGIM Ultra Short Bond ETF",
+                                  "id": "798db274-6d6e-497e-9983-79b07e57048c"
+                                }
+                              ]
+                            }
+                          ],
+                          "id": "4abbd810-c05e-4832-a15d-cf541e28df60"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "64dd95d5-a9a2-4a1c-b992-3ab7286b36ce",
+                  "weight": {
+                    "num": "16.00",
+                    "den": 100
+                  }
+                },
+                {
+                  "step": "if",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "step": "group",
+                          "name": "ZVOL w/ Black Swan Catcher",
+                          "children": [
+                            {
+                              "step": "wt-cash-equal",
+                              "children": [
+                                {
+                                  "step": "if",
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "step": "asset",
+                                          "ticker": "PULS",
+                                          "name": "PGIM Ultra Short Bond ETF",
+                                          "id": "0a14a04d-372b-4442-b405-457e8398ab5f"
+                                        }
+                                      ],
+                                      "lhs-fn-params": {
+                                        "window": 14
+                                      },
+                                      "is-else-condition?": false,
+                                      "rhs-fixed-value?": true,
+                                      "lhs-fn": "relative-strength-index",
+                                      "lhs-val": "UVXY",
+                                      "id": "b465ff80-f20e-4391-a0ac-d929c9c288df",
+                                      "comparator": "gt",
+                                      "rhs-val": "70",
+                                      "step": "if-child"
+                                    },
+                                    {
+                                      "step": "if-child",
+                                      "id": "d382d740-3a46-4387-819a-2130cd8b3f3a",
+                                      "is-else-condition?": true,
+                                      "children": [
+                                        {
+                                          "step": "asset",
+                                          "ticker": "ZVOL",
+                                          "name": "ProShares Ultra VIX Short-Term Futures ETF",
+                                          "id": "f58aadc0-a9f3-49b6-86fa-a7470d2d99ec"
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "id": "4352cc7e-e047-400f-84bf-10baff11f388"
+                                }
+                              ],
+                              "id": "380ad39d-0390-4d70-8816-6558be6e7789"
+                            }
+                          ],
+                          "id": "e6fa66fc-e317-4a33-bfd3-545d3d2c3558",
+                          "collapsed?": true
+                        }
+                      ],
+                      "lhs-fn-params": {
+                        "window": 4
+                      },
+                      "is-else-condition?": false,
+                      "rhs-fixed-value?": true,
+                      "lhs-fn": "relative-strength-index",
+                      "lhs-val": "SPY",
+                      "id": "4fed8c18-29c7-4711-a929-b43fa50ec645",
+                      "comparator": "lt",
+                      "rhs-val": "25",
+                      "step": "if-child"
+                    },
+                    {
+                      "step": "if-child",
+                      "id": "cae56de0-c49e-4d61-840e-ff43822fed83",
+                      "is-else-condition?": true,
+                      "children": [
+                        {
+                          "step": "if",
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "step": "asset",
+                                  "ticker": "VXZ",
+                                  "name": "iPath Series B S&P 500 VIX Mid-Term Futures ETN",
+                                  "id": "2608c4c5-0773-4d13-a456-03992cbceffc"
+                                }
+                              ],
+                              "lhs-fn-params": {
+                                "window": 4
+                              },
+                              "is-else-condition?": false,
+                              "rhs-fixed-value?": true,
+                              "lhs-fn": "relative-strength-index",
+                              "lhs-val": "SPY",
+                              "id": "af115119-dfcd-4a5a-8bed-352be28faed3",
+                              "comparator": "gt",
+                              "rhs-val": "80",
+                              "step": "if-child"
+                            },
+                            {
+                              "step": "if-child",
+                              "id": "0357b943-8534-49a3-9405-abe202a4a1fa",
+                              "is-else-condition?": true,
+                              "children": [
+                                {
+                                  "step": "asset",
+                                  "ticker": "PULS",
+                                  "name": "PGIM Ultra Short Bond ETF",
+                                  "id": "0a64ebc9-6eee-407b-9366-ebad9b2b3bd7"
+                                }
+                              ]
+                            }
+                          ],
+                          "id": "77bf56a7-f79b-4de1-8a2b-70520e995bab"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "aa473202-9497-4d7c-820b-755b8cb57401",
+                  "weight": {
+                    "num": "8.00",
+                    "den": 100
+                  }
+                },
+                {
+                  "step": "if",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "step": "group",
+                          "name": "ZVOL w/ Black Swan Catcher",
+                          "children": [
+                            {
+                              "step": "wt-cash-equal",
+                              "children": [
+                                {
+                                  "step": "if",
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "step": "asset",
+                                          "ticker": "PULS",
+                                          "name": "PGIM Ultra Short Bond ETF",
+                                          "id": "a34f220e-c2f5-4014-b2a6-0bfda7cfcd88"
+                                        }
+                                      ],
+                                      "lhs-fn-params": {
+                                        "window": 14
+                                      },
+                                      "is-else-condition?": false,
+                                      "rhs-fixed-value?": true,
+                                      "lhs-fn": "relative-strength-index",
+                                      "lhs-val": "UVXY",
+                                      "id": "1e9fd5fb-e7bf-48b5-a2f9-8eb9f8166281",
+                                      "comparator": "gt",
+                                      "rhs-val": "70",
+                                      "step": "if-child"
+                                    },
+                                    {
+                                      "step": "if-child",
+                                      "id": "12fcf2c2-3b4b-46c4-8cd2-fb2bdede7079",
+                                      "is-else-condition?": true,
+                                      "children": [
+                                        {
+                                          "step": "asset",
+                                          "ticker": "ZVOL",
+                                          "name": "ProShares Ultra VIX Short-Term Futures ETF",
+                                          "id": "e76a53e5-7cfe-4538-ac95-5c80933393f9"
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "id": "0b6b00d6-300d-49c7-9cda-2fccf962758a"
+                                }
+                              ],
+                              "id": "493f1b93-5e5a-43a2-9290-2ac44a21077a"
+                            }
+                          ],
+                          "id": "6fe88619-7735-4cbb-9a70-d71a9581db83",
+                          "collapsed?": true
+                        }
+                      ],
+                      "lhs-fn-params": {
+                        "window": 5
+                      },
+                      "is-else-condition?": false,
+                      "rhs-fixed-value?": true,
+                      "lhs-fn": "relative-strength-index",
+                      "lhs-val": "SPY",
+                      "id": "5f9c5535-bf77-40d4-8bc2-2b44d8d4ebcb",
+                      "comparator": "lt",
+                      "rhs-val": "25",
+                      "step": "if-child"
+                    },
+                    {
+                      "step": "if-child",
+                      "id": "8eca7d39-54f1-4586-be45-880855cad1fe",
+                      "is-else-condition?": true,
+                      "children": [
+                        {
+                          "step": "if",
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "step": "asset",
+                                  "ticker": "VXZ",
+                                  "name": "iPath Series B S&P 500 VIX Mid-Term Futures ETN",
+                                  "id": "51bf998e-f4cc-4764-8492-c66bc51943e3"
+                                }
+                              ],
+                              "lhs-fn-params": {
+                                "window": 5
+                              },
+                              "is-else-condition?": false,
+                              "rhs-fixed-value?": true,
+                              "lhs-fn": "relative-strength-index",
+                              "lhs-val": "SPY",
+                              "id": "8af6f06a-442e-468e-b635-379076ee65d1",
+                              "comparator": "gt",
+                              "rhs-val": "80",
+                              "step": "if-child"
+                            },
+                            {
+                              "step": "if-child",
+                              "id": "fd5b0560-eb82-456c-8d86-f3b141b645df",
+                              "is-else-condition?": true,
+                              "children": [
+                                {
+                                  "step": "asset",
+                                  "ticker": "PULS",
+                                  "name": "PGIM Ultra Short Bond ETF",
+                                  "id": "9f77fd39-4085-4449-8924-34aa411b4150"
+                                }
+                              ]
+                            }
+                          ],
+                          "id": "0fa83e67-3586-4f3c-994a-ff54ade7755c"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "0dee1a92-ad80-4c57-84b8-8428c312768a",
+                  "weight": {
+                    "num": "8.00",
+                    "den": 100
+                  }
+                },
+                {
+                  "step": "if",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "step": "group",
+                          "name": "ZVOL w/ Black Swan Catcher",
+                          "children": [
+                            {
+                              "step": "wt-cash-equal",
+                              "children": [
+                                {
+                                  "step": "if",
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "step": "asset",
+                                          "ticker": "PULS",
+                                          "name": "PGIM Ultra Short Bond ETF",
+                                          "id": "6b83d611-09b6-4789-a830-f5f945868ae7"
+                                        }
+                                      ],
+                                      "lhs-fn-params": {
+                                        "window": 14
+                                      },
+                                      "is-else-condition?": false,
+                                      "rhs-fixed-value?": true,
+                                      "lhs-fn": "relative-strength-index",
+                                      "lhs-val": "UVXY",
+                                      "id": "f59ce0f7-d155-4060-ac3a-efcbd287d489",
+                                      "comparator": "gt",
+                                      "rhs-val": "70",
+                                      "step": "if-child"
+                                    },
+                                    {
+                                      "step": "if-child",
+                                      "id": "7af83173-b54f-4284-93b8-62a2f80f86ae",
+                                      "is-else-condition?": true,
+                                      "children": [
+                                        {
+                                          "step": "asset",
+                                          "ticker": "ZVOL",
+                                          "name": "ProShares Ultra VIX Short-Term Futures ETF",
+                                          "id": "52ea220f-952a-4b3c-b354-1c0ea566fd92"
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "id": "57a82137-faf1-418c-951a-d8f589d2fec8"
+                                }
+                              ],
+                              "id": "0302203e-ed5e-4cc6-b12b-4a8c048ef5c2"
+                            }
+                          ],
+                          "id": "1466c4d9-8d36-4ca3-abf3-b2c70ffd645d",
+                          "collapsed?": true
+                        }
+                      ],
+                      "lhs-fn-params": {
+                        "window": 6
+                      },
+                      "is-else-condition?": false,
+                      "rhs-fixed-value?": true,
+                      "lhs-fn": "relative-strength-index",
+                      "lhs-val": "SPY",
+                      "id": "fdec88d9-0cb2-4a66-9075-b456f8022c1f",
+                      "comparator": "lt",
+                      "rhs-val": "25",
+                      "step": "if-child"
+                    },
+                    {
+                      "step": "if-child",
+                      "id": "54d21de9-3945-45c7-abea-8bb6ad924ac8",
+                      "is-else-condition?": true,
+                      "children": [
+                        {
+                          "step": "if",
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "step": "asset",
+                                  "ticker": "VXZ",
+                                  "name": "iPath Series B S&P 500 VIX Mid-Term Futures ETN",
+                                  "id": "5ac83529-0fb0-4322-991e-c81849e067ec"
+                                }
+                              ],
+                              "lhs-fn-params": {
+                                "window": 6
+                              },
+                              "is-else-condition?": false,
+                              "rhs-fixed-value?": true,
+                              "lhs-fn": "relative-strength-index",
+                              "lhs-val": "SPY",
+                              "id": "612a6f33-c32d-4efa-8036-8e89eee489ed",
+                              "comparator": "gt",
+                              "rhs-val": "80",
+                              "step": "if-child"
+                            },
+                            {
+                              "step": "if-child",
+                              "id": "919f271c-20b7-4892-b1d0-7481b10237f1",
+                              "is-else-condition?": true,
+                              "children": [
+                                {
+                                  "step": "asset",
+                                  "ticker": "PULS",
+                                  "name": "PGIM Ultra Short Bond ETF",
+                                  "id": "db25737f-56a0-4c15-b634-f38608b5e0a7"
+                                }
+                              ]
+                            }
+                          ],
+                          "id": "a1c43bd7-8532-4dac-81bb-91693b1e943f"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "878d185e-0ee5-4c2b-9809-507629826236",
+                  "weight": {
+                    "num": "8.00",
+                    "den": 100
+                  }
+                },
+                {
+                  "step": "if",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "step": "group",
+                          "name": "ZVOL w/ Black Swan Catcher",
+                          "children": [
+                            {
+                              "step": "wt-cash-equal",
+                              "children": [
+                                {
+                                  "step": "if",
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "step": "asset",
+                                          "ticker": "PULS",
+                                          "name": "PGIM Ultra Short Bond ETF",
+                                          "id": "74afb476-bda5-46c9-81ab-40b8a4b7003c"
+                                        }
+                                      ],
+                                      "lhs-fn-params": {
+                                        "window": 14
+                                      },
+                                      "is-else-condition?": false,
+                                      "rhs-fixed-value?": true,
+                                      "lhs-fn": "relative-strength-index",
+                                      "lhs-val": "UVXY",
+                                      "id": "cd9bd98a-4241-48b1-b01b-c6caf03933d5",
+                                      "comparator": "gt",
+                                      "rhs-val": "70",
+                                      "step": "if-child"
+                                    },
+                                    {
+                                      "step": "if-child",
+                                      "id": "71ad00b2-39ee-4838-a7c1-a11b8c7013b9",
+                                      "is-else-condition?": true,
+                                      "children": [
+                                        {
+                                          "step": "asset",
+                                          "ticker": "ZVOL",
+                                          "name": "ProShares Ultra VIX Short-Term Futures ETF",
+                                          "id": "478663bb-9dc9-40e4-8c3a-22a38c02fe15"
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "id": "5f2dc3db-067b-490a-8916-1db71de6c104"
+                                }
+                              ],
+                              "id": "cf0e1f6f-5c70-4f6e-8aa0-c5dd6929a270"
+                            }
+                          ],
+                          "id": "1fc2a304-3912-4702-9c43-7bc8ae5a0a8b",
+                          "collapsed?": true
+                        }
+                      ],
+                      "lhs-fn-params": {
+                        "window": 7
+                      },
+                      "is-else-condition?": false,
+                      "rhs-fixed-value?": true,
+                      "lhs-fn": "relative-strength-index",
+                      "lhs-val": "SPY",
+                      "id": "661a7f94-5b03-442a-b6f4-69170bea5faa",
+                      "comparator": "lt",
+                      "rhs-val": "25",
+                      "step": "if-child"
+                    },
+                    {
+                      "step": "if-child",
+                      "id": "51794f92-63e8-4f2a-a67b-1ae7f79ea838",
+                      "is-else-condition?": true,
+                      "children": [
+                        {
+                          "step": "if",
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "step": "asset",
+                                  "ticker": "VXZ",
+                                  "name": "iPath Series B S&P 500 VIX Mid-Term Futures ETN",
+                                  "id": "38fb4d45-0d2c-4e9f-bf0a-734d5d26d16e"
+                                }
+                              ],
+                              "lhs-fn-params": {
+                                "window": 7
+                              },
+                              "is-else-condition?": false,
+                              "rhs-fixed-value?": true,
+                              "lhs-fn": "relative-strength-index",
+                              "lhs-val": "SPY",
+                              "id": "c3a78c4f-b321-4664-bd4e-32fc77caa3b0",
+                              "comparator": "gt",
+                              "rhs-val": "80",
+                              "step": "if-child"
+                            },
+                            {
+                              "step": "if-child",
+                              "id": "1ed7251b-5699-422d-b78d-59b39ec9ec3f",
+                              "is-else-condition?": true,
+                              "children": [
+                                {
+                                  "step": "asset",
+                                  "ticker": "PULS",
+                                  "name": "PGIM Ultra Short Bond ETF",
+                                  "id": "e52954b7-c872-4118-bd15-ba8cd4605529"
+                                }
+                              ]
+                            }
+                          ],
+                          "id": "7031ed6e-6ed4-4f66-aca2-715fd3ba36c0"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "1ff2af8b-4f9c-49c7-8b0f-6f3ab9800c34",
+                  "weight": {
+                    "num": "8.00",
+                    "den": 100
+                  }
+                },
+                {
+                  "step": "if",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "step": "group",
+                          "name": "ZVOL w/ Black Swan Catcher",
+                          "children": [
+                            {
+                              "step": "wt-cash-equal",
+                              "children": [
+                                {
+                                  "step": "if",
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "step": "asset",
+                                          "ticker": "PULS",
+                                          "name": "PGIM Ultra Short Bond ETF",
+                                          "id": "841b1049-01ec-45e2-8078-07a9dc39ccc0"
+                                        }
+                                      ],
+                                      "lhs-fn-params": {
+                                        "window": 14
+                                      },
+                                      "is-else-condition?": false,
+                                      "rhs-fixed-value?": true,
+                                      "lhs-fn": "relative-strength-index",
+                                      "lhs-val": "UVXY",
+                                      "id": "351c4d41-de5c-4620-98ae-5dcaa0a0393e",
+                                      "comparator": "gt",
+                                      "rhs-val": "70",
+                                      "step": "if-child"
+                                    },
+                                    {
+                                      "step": "if-child",
+                                      "id": "afbfcfbb-4874-416a-8760-43bae2ccaad1",
+                                      "is-else-condition?": true,
+                                      "children": [
+                                        {
+                                          "step": "asset",
+                                          "ticker": "ZVOL",
+                                          "name": "ProShares Ultra VIX Short-Term Futures ETF",
+                                          "id": "50ce97c8-6dec-4a32-b272-1734e2dcbe5c"
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "id": "dec8e148-8819-4a20-a7b6-828282c2951f"
+                                }
+                              ],
+                              "id": "082a5e3f-9f9b-4b3f-aa15-72c0a346da28"
+                            }
+                          ],
+                          "id": "a6cb50b7-7bbd-487e-b342-97da1bb64299",
+                          "collapsed?": true
+                        }
+                      ],
+                      "lhs-fn-params": {
+                        "window": 8
+                      },
+                      "is-else-condition?": false,
+                      "rhs-fixed-value?": true,
+                      "lhs-fn": "relative-strength-index",
+                      "lhs-val": "SPY",
+                      "id": "a06cc9e2-b110-4db1-95a7-2ff075c87573",
+                      "comparator": "lt",
+                      "rhs-val": "25",
+                      "step": "if-child"
+                    },
+                    {
+                      "step": "if-child",
+                      "id": "4f2f4566-ca3c-445f-8b97-d72c65e50f7b",
+                      "is-else-condition?": true,
+                      "children": [
+                        {
+                          "step": "if",
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "step": "asset",
+                                  "ticker": "VXZ",
+                                  "name": "iPath Series B S&P 500 VIX Mid-Term Futures ETN",
+                                  "id": "6132a67c-1dc5-4505-a812-c570658ac07f"
+                                }
+                              ],
+                              "lhs-fn-params": {
+                                "window": 8
+                              },
+                              "is-else-condition?": false,
+                              "rhs-fixed-value?": true,
+                              "lhs-fn": "relative-strength-index",
+                              "lhs-val": "SPY",
+                              "id": "3fca6f92-cb93-4c6e-87a5-6c4659d47de4",
+                              "comparator": "gt",
+                              "rhs-val": "80",
+                              "step": "if-child"
+                            },
+                            {
+                              "step": "if-child",
+                              "id": "57290ed8-60b0-40bc-867b-fe507ca52594",
+                              "is-else-condition?": true,
+                              "children": [
+                                {
+                                  "step": "asset",
+                                  "ticker": "PULS",
+                                  "name": "PGIM Ultra Short Bond ETF",
+                                  "id": "ed24cd96-4bb7-4881-8a0b-b9e25aaeb6ec"
+                                }
+                              ]
+                            }
+                          ],
+                          "id": "ed1febde-6c80-4a92-bd9d-16dffb43fbfe"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "58cc08c2-7bf1-4629-adc9-a5353348d702",
+                  "weight": {
+                    "num": "8.00",
+                    "den": 100
+                  }
+                },
+                {
+                  "step": "if",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "step": "group",
+                          "name": "ZVOL w/ Black Swan Catcher",
+                          "children": [
+                            {
+                              "step": "wt-cash-equal",
+                              "children": [
+                                {
+                                  "step": "if",
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "step": "asset",
+                                          "ticker": "PULS",
+                                          "name": "PGIM Ultra Short Bond ETF",
+                                          "id": "94127da2-ae19-4bfb-8894-b683c0ca9f08"
+                                        }
+                                      ],
+                                      "lhs-fn-params": {
+                                        "window": 14
+                                      },
+                                      "is-else-condition?": false,
+                                      "rhs-fixed-value?": true,
+                                      "lhs-fn": "relative-strength-index",
+                                      "lhs-val": "UVXY",
+                                      "id": "1dcd7f0c-ed4e-4db7-ac2b-596937600b42",
+                                      "comparator": "gt",
+                                      "rhs-val": "70",
+                                      "step": "if-child"
+                                    },
+                                    {
+                                      "step": "if-child",
+                                      "id": "159f73c9-77a8-41d5-a391-2b35ee87ef8b",
+                                      "is-else-condition?": true,
+                                      "children": [
+                                        {
+                                          "step": "asset",
+                                          "ticker": "ZVOL",
+                                          "name": "ProShares Ultra VIX Short-Term Futures ETF",
+                                          "id": "2290b029-f7d0-4aa4-b391-a56d66d31f3b"
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "id": "e45edeba-68f6-40a9-8757-7d7d6ff1e56f"
+                                }
+                              ],
+                              "id": "a17a7881-9005-4174-a3d4-f95e47dc73f1"
+                            }
+                          ],
+                          "id": "73b9d458-1670-4b37-a481-bad282c3eb08",
+                          "collapsed?": true
+                        }
+                      ],
+                      "lhs-fn-params": {
+                        "window": 9
+                      },
+                      "is-else-condition?": false,
+                      "rhs-fixed-value?": true,
+                      "lhs-fn": "relative-strength-index",
+                      "lhs-val": "SPY",
+                      "id": "ea7f6358-be8c-4143-b084-f996f0825a75",
+                      "comparator": "lt",
+                      "rhs-val": "25",
+                      "step": "if-child"
+                    },
+                    {
+                      "step": "if-child",
+                      "id": "33b0a64d-235d-4cea-b293-06a03d7e0e2e",
+                      "is-else-condition?": true,
+                      "children": [
+                        {
+                          "step": "if",
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "step": "asset",
+                                  "ticker": "VXZ",
+                                  "name": "iPath Series B S&P 500 VIX Mid-Term Futures ETN",
+                                  "id": "e3d26857-e3d2-487d-9892-475babe1144f"
+                                }
+                              ],
+                              "lhs-fn-params": {
+                                "window": 9
+                              },
+                              "is-else-condition?": false,
+                              "rhs-fixed-value?": true,
+                              "lhs-fn": "relative-strength-index",
+                              "lhs-val": "SPY",
+                              "id": "2ea55394-4807-4cbd-9b54-13733aec95f5",
+                              "comparator": "gt",
+                              "rhs-val": "80",
+                              "step": "if-child"
+                            },
+                            {
+                              "step": "if-child",
+                              "id": "3f26e85a-35dc-4401-9895-6f4a7bf71e78",
+                              "is-else-condition?": true,
+                              "children": [
+                                {
+                                  "step": "asset",
+                                  "ticker": "PULS",
+                                  "name": "PGIM Ultra Short Bond ETF",
+                                  "id": "d0f3a3b9-e555-4e84-851c-64173ae2df7f"
+                                }
+                              ]
+                            }
+                          ],
+                          "id": "65820fc1-e179-4822-a001-fe795bbcc7b0"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "cc105d1d-ebac-4ac1-80c9-482d4f125b21",
+                  "weight": {
+                    "num": "4.00",
+                    "den": 100
+                  }
+                },
+                {
+                  "step": "if",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "step": "group",
+                          "name": "ZVOL w/ Black Swan Catcher",
+                          "children": [
+                            {
+                              "step": "wt-cash-equal",
+                              "children": [
+                                {
+                                  "step": "if",
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "step": "asset",
+                                          "ticker": "PULS",
+                                          "name": "PGIM Ultra Short Bond ETF",
+                                          "id": "2023a9b7-dad0-49e4-8ea4-33129e647902"
+                                        }
+                                      ],
+                                      "lhs-fn-params": {
+                                        "window": 14
+                                      },
+                                      "is-else-condition?": false,
+                                      "rhs-fixed-value?": true,
+                                      "lhs-fn": "relative-strength-index",
+                                      "lhs-val": "UVXY",
+                                      "id": "4df82292-0dda-493a-b204-b92dfd18b600",
+                                      "comparator": "gt",
+                                      "rhs-val": "70",
+                                      "step": "if-child"
+                                    },
+                                    {
+                                      "step": "if-child",
+                                      "id": "7176916a-a7c4-4fde-a18d-ef884d382f90",
+                                      "is-else-condition?": true,
+                                      "children": [
+                                        {
+                                          "step": "asset",
+                                          "ticker": "ZVOL",
+                                          "name": "ProShares Ultra VIX Short-Term Futures ETF",
+                                          "id": "a8ed3f56-1b53-4750-8fa4-639db1c9f11a"
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "id": "69c77dc1-902b-46ec-8319-36e45606d1a7"
+                                }
+                              ],
+                              "id": "af1c5dc4-a294-4801-9a89-ad3f5a64a94d"
+                            }
+                          ],
+                          "id": "7b7c1638-0899-44d4-a2cb-d681e4c01ed1",
+                          "collapsed?": true
+                        }
+                      ],
+                      "lhs-fn-params": {
+                        "window": 10
+                      },
+                      "is-else-condition?": false,
+                      "rhs-fixed-value?": true,
+                      "lhs-fn": "relative-strength-index",
+                      "lhs-val": "SPY",
+                      "id": "4ce1388c-e27e-49c8-a032-e4059c2f057d",
+                      "comparator": "lt",
+                      "rhs-val": "25",
+                      "step": "if-child"
+                    },
+                    {
+                      "step": "if-child",
+                      "id": "859ee8a2-00b8-43dc-98e8-d5780a5b6560",
+                      "is-else-condition?": true,
+                      "children": [
+                        {
+                          "step": "if",
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "step": "asset",
+                                  "ticker": "VXZ",
+                                  "name": "iPath Series B S&P 500 VIX Mid-Term Futures ETN",
+                                  "id": "adf69608-0eed-45d2-aed1-12e41a227236"
+                                }
+                              ],
+                              "lhs-fn-params": {
+                                "window": 10
+                              },
+                              "is-else-condition?": false,
+                              "rhs-fixed-value?": true,
+                              "lhs-fn": "relative-strength-index",
+                              "lhs-val": "SPY",
+                              "id": "feccc169-dc84-42f1-ae8a-93c30a6d2932",
+                              "comparator": "gt",
+                              "rhs-val": "80",
+                              "step": "if-child"
+                            },
+                            {
+                              "step": "if-child",
+                              "id": "a4a19f4b-c3c5-40a7-908d-4e5985347784",
+                              "is-else-condition?": true,
+                              "children": [
+                                {
+                                  "step": "asset",
+                                  "ticker": "PULS",
+                                  "name": "PGIM Ultra Short Bond ETF",
+                                  "id": "4d196d5f-905a-4127-bb35-b90cd3438ffc"
+                                }
+                              ]
+                            }
+                          ],
+                          "id": "dd904328-33ae-4811-a284-515533edcc5d"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "8a9ff118-c6c3-4760-b4ff-289780d90b92",
+                  "weight": {
+                    "num": "4.00",
+                    "den": 100
+                  }
+                }
+              ],
+              "id": "638be086-be87-45ae-904e-a591cbc3938e"
+            }
+          ],
+          "id": "7e39a3b5-e4fc-45cc-b99f-85c7c26f5641",
+          "collapsed?": false
+        }
+      ],
+      "id": "596bc424-cfef-4c2c-be4d-08a8f1ff2dda"
+    }
+  ],
+  "id": "aWw8tL43K3SwbiBx7Oip",
+  "asset_classes": [
+    "EQUITIES"
+  ]
+}

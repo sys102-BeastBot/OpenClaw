@@ -1,0 +1,1434 @@
+{
+  "id": "PIZS5Uvi7CHDt3lwrW55",
+  "step": "root",
+  "name": "Copy of *WIP* Beat Market rules + Actively Managed S&P 10",
+  "description": "",
+  "rebalance": "daily",
+  "children": [
+    {
+      "id": "df8fcb62-4c72-4b8d-83d0-ae99252ebd50",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "weight": {
+            "num": 100,
+            "den": 100
+          },
+          "id": "91515c7a-e70b-4d56-9799-f0cdaaa7fc69",
+          "step": "if",
+          "children": [
+            {
+              "children": [
+                {
+                  "name": "Apple Inc.",
+                  "ticker": "AAPL",
+                  "has_marketcap": true,
+                  "id": "8601df92-4423-48da-852c-e74854aa834f",
+                  "exchange": "XNAS",
+                  "price": 149.35,
+                  "step": "asset",
+                  "dollar_volume": 13104533393.65,
+                  "children-count": 0
+                }
+              ],
+              "rhs-fn": "moving-average-price",
+              "is-else-condition?": false,
+              "lhs-fn": "moving-average-price",
+              "rhs-window-days": "210",
+              "lhs-window-days": "21",
+              "lhs-val": "AAPL",
+              "id": "ffca8b53-04b1-44f9-b0e6-1f324bd1360f",
+              "comparator": "gt",
+              "rhs-val": "AAPL",
+              "step": "if-child",
+              "collapsed?": true
+            },
+            {
+              "id": "04920e7e-e713-457a-ad35-93ee2d5f369a",
+              "step": "if-child",
+              "is-else-condition?": true,
+              "children": [
+                {
+                  "id": "12471b11-fba2-4315-9314-342d420631dd",
+                  "step": "wt-cash-equal",
+                  "children": [
+                    {
+                      "id": "851ab937-781a-4633-b7ca-dbe01ee8f934",
+                      "step": "if",
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "name": "Apple Inc.",
+                              "ticker": "AAPL",
+                              "has_marketcap": true,
+                              "id": "0ec945d1-15d0-4d4d-96c6-698a8ac6e276",
+                              "exchange": "XNAS",
+                              "price": 149.35,
+                              "step": "asset",
+                              "dollar_volume": 13104533393.65,
+                              "children-count": 0
+                            }
+                          ],
+                          "rhs-fn": "moving-average-price",
+                          "is-else-condition?": false,
+                          "rhs-fixed-value?": true,
+                          "lhs-fn": "relative-strength-index",
+                          "rhs-window-days": "31",
+                          "lhs-window-days": "10",
+                          "lhs-val": "AAPL",
+                          "id": "31cb8e49-e97d-4641-b8bd-b84305aff95c",
+                          "comparator": "lt",
+                          "rhs-val": "30",
+                          "step": "if-child"
+                        },
+                        {
+                          "id": "638e6c60-c051-46f4-bfb7-540058eba1d6",
+                          "step": "if-child",
+                          "is-else-condition?": true,
+                          "children": [
+                            {
+                              "id": "c725f84a-ca28-4f33-a0ae-8087d1cf82ec",
+                              "step": "wt-cash-equal",
+                              "children": [
+                                {
+                                  "id": "86c7f36e-8bc3-4e3d-a806-cd2cf54568f1",
+                                  "step": "if",
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "name": "Apple Inc.",
+                                          "ticker": "AAPL",
+                                          "has_marketcap": true,
+                                          "id": "212eab14-3803-42b5-8644-61bce5ed944e",
+                                          "exchange": "XNAS",
+                                          "price": 149.35,
+                                          "step": "asset",
+                                          "dollar_volume": 13104533393.65,
+                                          "children-count": 0
+                                        }
+                                      ],
+                                      "rhs-fn": "moving-average-price",
+                                      "is-else-condition?": false,
+                                      "lhs-fn": "current-price",
+                                      "rhs-window-days": "31",
+                                      "lhs-val": "AAPL",
+                                      "id": "f23848b8-d164-41be-a161-ca41a865c22e",
+                                      "comparator": "gt",
+                                      "rhs-val": "AAPL",
+                                      "step": "if-child"
+                                    },
+                                    {
+                                      "id": "dbda31e6-da98-4058-b0e1-7214c281b0cc",
+                                      "step": "if-child",
+                                      "is-else-condition?": true,
+                                      "children": [
+                                        {
+                                          "name": "iShares 1-3 Year Treasury Bond ETF",
+                                          "ticker": "SHY",
+                                          "has_marketcap": false,
+                                          "id": "3485c816-3ec4-4dcf-bddd-c7dd915b2e6e",
+                                          "exchange": "XNAS",
+                                          "price": 81.04,
+                                          "step": "asset",
+                                          "dollar_volume": 310618783.28000003
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "collapsed?": false
+                }
+              ],
+              "collapsed?": true
+            }
+          ]
+        },
+        {
+          "weight": {
+            "num": 100,
+            "den": 100
+          },
+          "id": "fbbc5bb0-4c6c-44e9-9f26-ebe20b90e75a",
+          "step": "if",
+          "children": [
+            {
+              "children": [
+                {
+                  "name": "Tesla Inc",
+                  "ticker": "TSLA",
+                  "has_marketcap": true,
+                  "id": "4dbef9f7-8009-414c-81fd-f8f9cea3378f",
+                  "exchange": "XNAS",
+                  "price": 224.64,
+                  "step": "asset",
+                  "dollar_volume": 19037912025.6,
+                  "children-count": 0
+                }
+              ],
+              "rhs-fn": "moving-average-price",
+              "is-else-condition?": false,
+              "lhs-fn": "moving-average-price",
+              "rhs-window-days": "210",
+              "lhs-window-days": "21",
+              "lhs-val": "TSLA",
+              "id": "14f0b216-f6f1-455c-b1a2-a5a9b569bb58",
+              "comparator": "gt",
+              "rhs-val": "TSLA",
+              "step": "if-child",
+              "collapsed?": true
+            },
+            {
+              "id": "6dc534f2-509d-4a1e-8a9a-1e4d47706472",
+              "step": "if-child",
+              "is-else-condition?": true,
+              "children": [
+                {
+                  "id": "84c75574-91c5-4845-bbbb-28427723c4c0",
+                  "step": "wt-cash-equal",
+                  "children": [
+                    {
+                      "id": "4f777db3-a067-41f0-b4d8-7d726c7bdc48",
+                      "step": "if",
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "name": "Invesco QQQ Trust",
+                              "ticker": "QQQ",
+                              "has_marketcap": false,
+                              "id": "0b86c242-1b04-4c97-a2cf-2d15ecbdf0ac",
+                              "exchange": "XNAS",
+                              "price": 262.75,
+                              "step": "asset",
+                              "dollar_volume": 17028744996.5
+                            }
+                          ],
+                          "rhs-fn": "moving-average-price",
+                          "is-else-condition?": false,
+                          "rhs-fixed-value?": true,
+                          "lhs-fn": "relative-strength-index",
+                          "rhs-window-days": "31",
+                          "lhs-window-days": "10",
+                          "lhs-val": "TSLA",
+                          "id": "f0a18772-6fe0-4061-a665-9148220af424",
+                          "comparator": "lt",
+                          "rhs-val": "30",
+                          "step": "if-child"
+                        },
+                        {
+                          "id": "c58bc1cd-4c79-422c-8d23-f9d7b53164cc",
+                          "step": "if-child",
+                          "is-else-condition?": true,
+                          "children": [
+                            {
+                              "id": "169d76db-6cc4-4522-aeea-fe801bda955e",
+                              "step": "wt-cash-equal",
+                              "children": [
+                                {
+                                  "id": "eedee5cb-b04e-4507-a986-91920b796497",
+                                  "step": "if",
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "name": "Tesla Inc",
+                                          "ticker": "TSLA",
+                                          "has_marketcap": true,
+                                          "id": "ecf995b0-bd8e-44c7-a15c-2a0ae00994d0",
+                                          "exchange": "XNAS",
+                                          "price": 224.64,
+                                          "step": "asset",
+                                          "dollar_volume": 19037912025.6,
+                                          "children-count": 0
+                                        }
+                                      ],
+                                      "rhs-fn": "moving-average-price",
+                                      "is-else-condition?": false,
+                                      "lhs-fn": "current-price",
+                                      "rhs-window-days": "31",
+                                      "lhs-val": "TSLA",
+                                      "id": "3a6e740e-e5cd-4091-92a8-f8c6cf171abd",
+                                      "comparator": "gt",
+                                      "rhs-val": "TSLA",
+                                      "step": "if-child"
+                                    },
+                                    {
+                                      "id": "613e4ab9-1472-47d2-aeee-479fa0c80ac2",
+                                      "step": "if-child",
+                                      "is-else-condition?": true,
+                                      "children": [
+                                        {
+                                          "name": "iShares 1-3 Year Treasury Bond ETF",
+                                          "ticker": "SHY",
+                                          "has_marketcap": false,
+                                          "id": "81f9725c-a542-4ebe-9690-2d2a16f64bc7",
+                                          "exchange": "XNAS",
+                                          "price": 81.04,
+                                          "step": "asset",
+                                          "dollar_volume": 310618783.28000003
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "collapsed?": false
+                }
+              ],
+              "collapsed?": true
+            }
+          ]
+        },
+        {
+          "weight": {
+            "num": 100,
+            "den": 100
+          },
+          "id": "91f16bfc-cdde-423e-bee5-482f9e2c8fae",
+          "step": "if",
+          "children": [
+            {
+              "children": [
+                {
+                  "name": "Alphabet Inc. Class A",
+                  "ticker": "GOOGL",
+                  "has_marketcap": true,
+                  "id": "8af6cf86-2942-480c-93cc-5e19dc858491",
+                  "exchange": "XNAS",
+                  "price": 94.93,
+                  "step": "asset",
+                  "dollar_volume": 8300351406.710001,
+                  "children-count": 0
+                }
+              ],
+              "rhs-fn": "moving-average-price",
+              "is-else-condition?": false,
+              "lhs-fn": "moving-average-price",
+              "rhs-window-days": "210",
+              "lhs-window-days": "21",
+              "lhs-val": "GOOGL",
+              "id": "3163a063-51c4-4311-b080-fddb99e0b33a",
+              "comparator": "gt",
+              "rhs-val": "GOOGL",
+              "step": "if-child",
+              "collapsed?": true
+            },
+            {
+              "id": "490f8bcf-70a5-44bf-ba55-f63175fb1621",
+              "step": "if-child",
+              "is-else-condition?": true,
+              "children": [
+                {
+                  "id": "353f839f-d339-4a4b-a685-76b9e935fd1e",
+                  "step": "wt-cash-equal",
+                  "children": [
+                    {
+                      "id": "fd38ec60-27c8-4498-b27c-6b540cfa7309",
+                      "step": "if",
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "name": "Alphabet Inc. Class A",
+                              "ticker": "GOOGL",
+                              "has_marketcap": true,
+                              "id": "e0bcba13-deb4-42a7-ad89-ed5999e98488",
+                              "exchange": "XNAS",
+                              "price": 94.93,
+                              "step": "asset",
+                              "dollar_volume": 8300351406.710001,
+                              "children-count": 0
+                            }
+                          ],
+                          "rhs-fn": "moving-average-price",
+                          "is-else-condition?": false,
+                          "rhs-fixed-value?": true,
+                          "lhs-fn": "relative-strength-index",
+                          "rhs-window-days": "31",
+                          "lhs-window-days": "10",
+                          "lhs-val": "GOOGL",
+                          "id": "b7ebd568-b610-4b15-9b32-3514ac3af613",
+                          "comparator": "lt",
+                          "rhs-val": "30",
+                          "step": "if-child"
+                        },
+                        {
+                          "id": "01439ae6-2930-465c-9d34-25e228096236",
+                          "step": "if-child",
+                          "is-else-condition?": true,
+                          "children": [
+                            {
+                              "id": "3629bdd8-0246-428b-8c4c-8346a569a655",
+                              "step": "wt-cash-equal",
+                              "children": [
+                                {
+                                  "id": "f164cca4-c26e-4d8d-b7a3-74e5cd3cb5d7",
+                                  "step": "if",
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "name": "Alphabet Inc. Class A",
+                                          "ticker": "GOOGL",
+                                          "has_marketcap": true,
+                                          "id": "751ef0bb-4ab5-45a0-9caf-a3c90ee7e3b2",
+                                          "exchange": "XNAS",
+                                          "price": 94.93,
+                                          "step": "asset",
+                                          "dollar_volume": 8300351406.710001,
+                                          "children-count": 0
+                                        }
+                                      ],
+                                      "rhs-fn": "moving-average-price",
+                                      "is-else-condition?": false,
+                                      "lhs-fn": "current-price",
+                                      "rhs-window-days": "31",
+                                      "lhs-val": "GOOGL",
+                                      "id": "82ece15c-8ca5-488a-8924-1e2ad48abd08",
+                                      "comparator": "gt",
+                                      "rhs-val": "GOOGL",
+                                      "step": "if-child"
+                                    },
+                                    {
+                                      "id": "42f8b8af-3bf0-4de5-9f7a-b0c97380bb6a",
+                                      "step": "if-child",
+                                      "is-else-condition?": true,
+                                      "children": [
+                                        {
+                                          "name": "iShares 1-3 Year Treasury Bond ETF",
+                                          "ticker": "SHY",
+                                          "has_marketcap": false,
+                                          "id": "801f08a0-a685-47f0-9c79-00fa7caf8715",
+                                          "exchange": "XNAS",
+                                          "price": 81.04,
+                                          "step": "asset",
+                                          "dollar_volume": 310618783.28000003
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "collapsed?": true
+            }
+          ]
+        },
+        {
+          "weight": {
+            "num": 100,
+            "den": 100
+          },
+          "id": "7ba82a34-e9e8-4da4-81b5-0a9f145a03a5",
+          "step": "if",
+          "children": [
+            {
+              "children": [
+                {
+                  "name": "Alphabet Inc. Class C",
+                  "ticker": "GOOG",
+                  "has_marketcap": true,
+                  "id": "d07910a8-0bd6-4b95-ae96-9cb0b7ba30e2",
+                  "exchange": "XNAS",
+                  "price": 94.82,
+                  "step": "asset",
+                  "dollar_volume": 6744282621.12,
+                  "children-count": 0
+                }
+              ],
+              "rhs-fn": "moving-average-price",
+              "is-else-condition?": false,
+              "lhs-fn": "moving-average-price",
+              "rhs-window-days": "210",
+              "lhs-window-days": "21",
+              "lhs-val": "GOOG",
+              "id": "97fa544a-1801-4d38-85d6-3c4c722e3306",
+              "comparator": "gt",
+              "rhs-val": "GOOG",
+              "step": "if-child",
+              "collapsed?": true
+            },
+            {
+              "id": "34beb979-f9ec-4d1d-afe7-71852d8d068b",
+              "step": "if-child",
+              "is-else-condition?": true,
+              "children": [
+                {
+                  "id": "77c76bd6-041d-48ba-a835-916bec1b25f4",
+                  "step": "wt-cash-equal",
+                  "children": [
+                    {
+                      "id": "1e9d83fc-8746-4a37-afb9-d79363f70947",
+                      "step": "if",
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "name": "Alphabet Inc. Class A",
+                              "ticker": "GOOGL",
+                              "has_marketcap": true,
+                              "id": "e5328520-9cc7-47b7-9935-08b8cb0414ab",
+                              "exchange": "XNAS",
+                              "price": 94.93,
+                              "step": "asset",
+                              "dollar_volume": 8300351406.710001
+                            }
+                          ],
+                          "rhs-fn": "moving-average-price",
+                          "is-else-condition?": false,
+                          "rhs-fixed-value?": true,
+                          "lhs-fn": "relative-strength-index",
+                          "rhs-window-days": "31",
+                          "lhs-window-days": "10",
+                          "lhs-val": "GOOG",
+                          "id": "6abc3d69-9565-458d-b62b-823d67da30b7",
+                          "comparator": "lt",
+                          "rhs-val": "30",
+                          "step": "if-child"
+                        },
+                        {
+                          "id": "807e2e9d-fbc0-43c0-acd6-ae6472ddb71a",
+                          "step": "if-child",
+                          "is-else-condition?": true,
+                          "children": [
+                            {
+                              "id": "e8531497-a82e-4c5d-af09-53074a32370a",
+                              "step": "wt-cash-equal",
+                              "children": [
+                                {
+                                  "id": "6bd4b58b-eb5a-4d16-b5af-de792a5976cf",
+                                  "step": "if",
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "name": "Alphabet Inc. Class C",
+                                          "ticker": "GOOG",
+                                          "has_marketcap": true,
+                                          "id": "2ed67666-6a6d-4149-be53-494f0476f201",
+                                          "exchange": "XNAS",
+                                          "price": 94.82,
+                                          "step": "asset",
+                                          "dollar_volume": 6744282621.12,
+                                          "children-count": 0
+                                        }
+                                      ],
+                                      "rhs-fn": "moving-average-price",
+                                      "is-else-condition?": false,
+                                      "lhs-fn": "current-price",
+                                      "rhs-window-days": "31",
+                                      "lhs-val": "GOOG",
+                                      "id": "60be2998-4510-4da3-b578-b0917b3cf037",
+                                      "comparator": "gt",
+                                      "rhs-val": "GOOG",
+                                      "step": "if-child"
+                                    },
+                                    {
+                                      "id": "470b25c7-4ce8-4789-817a-8449c74f3793",
+                                      "step": "if-child",
+                                      "is-else-condition?": true,
+                                      "children": [
+                                        {
+                                          "name": "iShares 1-3 Year Treasury Bond ETF",
+                                          "ticker": "SHY",
+                                          "has_marketcap": false,
+                                          "id": "6a923d23-1383-4d4e-89d7-6a20ee3f7219",
+                                          "exchange": "XNAS",
+                                          "price": 81.04,
+                                          "step": "asset",
+                                          "dollar_volume": 310618783.28000003
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "collapsed?": true
+            }
+          ]
+        },
+        {
+          "weight": {
+            "num": 100,
+            "den": 100
+          },
+          "id": "169fa596-3df2-45bb-9269-cf32816d0fb8",
+          "step": "if",
+          "children": [
+            {
+              "children": [
+                {
+                  "name": "Berkshire Hathaway Inc. Class A",
+                  "ticker": "BRK/A",
+                  "has_marketcap": true,
+                  "id": "91a7fef9-965f-43a3-b2ef-55a79917a978",
+                  "exchange": "XNYS",
+                  "price": 435660,
+                  "step": "asset",
+                  "dollar_volume": 1091328300,
+                  "children-count": 0
+                }
+              ],
+              "rhs-fn": "moving-average-price",
+              "is-else-condition?": false,
+              "lhs-fn": "moving-average-price",
+              "rhs-window-days": "210",
+              "lhs-window-days": "21",
+              "lhs-val": "BRK/A",
+              "id": "32a5996a-118f-4716-929b-3692b4f479f8",
+              "comparator": "gt",
+              "rhs-val": "BRK/A",
+              "step": "if-child",
+              "collapsed?": true
+            },
+            {
+              "id": "c34f1e24-6c09-4c3d-b13f-965ad6a0ced2",
+              "step": "if-child",
+              "is-else-condition?": true,
+              "children": [
+                {
+                  "id": "8160d8f2-7f34-4382-90db-57a608d29760",
+                  "step": "wt-cash-equal",
+                  "children": [
+                    {
+                      "id": "4611cebc-70a9-405b-bf9a-077bc7c2164c",
+                      "step": "if",
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "name": "Berkshire Hathaway Inc. Class A",
+                              "ticker": "BRK/A",
+                              "has_marketcap": true,
+                              "id": "dae0e06e-335f-43af-81ab-adf470fa135e",
+                              "exchange": "XNYS",
+                              "price": 435660,
+                              "step": "asset",
+                              "dollar_volume": 1091328300,
+                              "children-count": 0
+                            }
+                          ],
+                          "rhs-fn": "moving-average-price",
+                          "is-else-condition?": false,
+                          "rhs-fixed-value?": true,
+                          "lhs-fn": "relative-strength-index",
+                          "rhs-window-days": "31",
+                          "lhs-window-days": "10",
+                          "lhs-val": "BRK/A",
+                          "id": "8479bff0-2136-4d69-844e-e643983d8473",
+                          "comparator": "lt",
+                          "rhs-val": "30",
+                          "step": "if-child"
+                        },
+                        {
+                          "id": "9a03f4fd-acb6-46f5-8469-f73fa79fa044",
+                          "step": "if-child",
+                          "is-else-condition?": true,
+                          "children": [
+                            {
+                              "id": "8610ca56-4e32-4df5-b130-1e8821932256",
+                              "step": "wt-cash-equal",
+                              "children": [
+                                {
+                                  "id": "4b3c5155-734c-41fc-a6cb-d18ade84fb98",
+                                  "step": "if",
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "name": "Berkshire Hathaway Inc. Class A",
+                                          "ticker": "BRK/A",
+                                          "has_marketcap": true,
+                                          "id": "fdbea110-22fe-4d3d-ad6e-efca27575315",
+                                          "exchange": "XNYS",
+                                          "price": 435660,
+                                          "step": "asset",
+                                          "dollar_volume": 1091328300,
+                                          "children-count": 0
+                                        }
+                                      ],
+                                      "rhs-fn": "moving-average-price",
+                                      "is-else-condition?": false,
+                                      "lhs-fn": "current-price",
+                                      "rhs-window-days": "31",
+                                      "lhs-val": "BRK/A",
+                                      "id": "90471570-97ff-4b3c-bed1-acb92e5bbc4d",
+                                      "comparator": "gt",
+                                      "rhs-val": "BRK/A",
+                                      "step": "if-child"
+                                    },
+                                    {
+                                      "id": "3d6516ff-05ee-450e-a326-b149e0478ea3",
+                                      "step": "if-child",
+                                      "is-else-condition?": true,
+                                      "children": [
+                                        {
+                                          "name": "iShares 1-3 Year Treasury Bond ETF",
+                                          "ticker": "SHY",
+                                          "has_marketcap": false,
+                                          "id": "c1f60eaa-5fc0-47d5-985b-5cdaeb0aaa5e",
+                                          "exchange": "XNAS",
+                                          "price": 81.04,
+                                          "step": "asset",
+                                          "dollar_volume": 310618783.28000003
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "collapsed?": true
+            }
+          ]
+        },
+        {
+          "weight": {
+            "num": 100,
+            "den": 100
+          },
+          "id": "dd2d7521-140c-4a06-9ec4-ed7838640c3f",
+          "step": "if",
+          "children": [
+            {
+              "children": [
+                {
+                  "name": "Amazon.com, Inc.",
+                  "ticker": "AMZN",
+                  "has_marketcap": true,
+                  "id": "0e72d05a-a39d-4358-a9bc-f1a300d6ce26",
+                  "exchange": "XNAS",
+                  "price": 115.66,
+                  "step": "asset",
+                  "dollar_volume": 7902443592.16,
+                  "children-count": 0
+                }
+              ],
+              "rhs-fn": "moving-average-price",
+              "is-else-condition?": false,
+              "lhs-fn": "moving-average-price",
+              "rhs-window-days": "210",
+              "lhs-window-days": "21",
+              "lhs-val": "AMZN",
+              "id": "19cfdfa0-da4d-4876-b987-465980bf3f31",
+              "comparator": "gt",
+              "rhs-val": "AMZN",
+              "step": "if-child",
+              "collapsed?": true
+            },
+            {
+              "id": "f84a2190-5000-4872-a281-254465544dbb",
+              "step": "if-child",
+              "is-else-condition?": true,
+              "children": [
+                {
+                  "id": "de23b823-f9ba-4326-943a-4b1056c66da3",
+                  "step": "wt-cash-equal",
+                  "children": [
+                    {
+                      "id": "78e9ebfc-7a1c-453f-8c8c-74c7abe16594",
+                      "step": "if",
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "name": "Amazon.com, Inc.",
+                              "ticker": "AMZN",
+                              "has_marketcap": true,
+                              "id": "7cbc7ab5-38e5-41af-aeb3-fc42669f7839",
+                              "exchange": "XNAS",
+                              "price": 115.66,
+                              "step": "asset",
+                              "dollar_volume": 7902443592.16,
+                              "children-count": 0
+                            }
+                          ],
+                          "rhs-fn": "moving-average-price",
+                          "is-else-condition?": false,
+                          "rhs-fixed-value?": true,
+                          "lhs-fn": "relative-strength-index",
+                          "rhs-window-days": "31",
+                          "lhs-window-days": "10",
+                          "lhs-val": "AMZN",
+                          "id": "549ed42e-37a4-4371-ae49-dd16475574df",
+                          "comparator": "lt",
+                          "rhs-val": "30",
+                          "step": "if-child"
+                        },
+                        {
+                          "id": "6024b8e6-27de-4ec2-88e9-e060bc33f847",
+                          "step": "if-child",
+                          "is-else-condition?": true,
+                          "children": [
+                            {
+                              "id": "6f2164e4-d161-48e1-b512-e852c3a38edd",
+                              "step": "wt-cash-equal",
+                              "children": [
+                                {
+                                  "id": "128c9e13-0df7-46af-bf8e-49a6b79a7dad",
+                                  "step": "if",
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "name": "Amazon.com, Inc.",
+                                          "ticker": "AMZN",
+                                          "has_marketcap": true,
+                                          "id": "823b39da-1eb4-47e4-80ee-ce53f4dc7e69",
+                                          "exchange": "XNAS",
+                                          "price": 115.66,
+                                          "step": "asset",
+                                          "dollar_volume": 7902443592.16,
+                                          "children-count": 0
+                                        }
+                                      ],
+                                      "rhs-fn": "moving-average-price",
+                                      "is-else-condition?": false,
+                                      "lhs-fn": "current-price",
+                                      "rhs-window-days": "31",
+                                      "lhs-val": "AMZN",
+                                      "id": "481649f5-ccf5-48fe-9f79-1d6bc185c218",
+                                      "comparator": "gt",
+                                      "rhs-val": "AMZN",
+                                      "step": "if-child"
+                                    },
+                                    {
+                                      "id": "ab5d8ce5-9f5b-48ab-8563-dc2167beb837",
+                                      "step": "if-child",
+                                      "is-else-condition?": true,
+                                      "children": [
+                                        {
+                                          "name": "iShares 1-3 Year Treasury Bond ETF",
+                                          "ticker": "SHY",
+                                          "has_marketcap": false,
+                                          "id": "d74658a8-e2c5-4810-ac84-a7bc52c51e62",
+                                          "exchange": "XNAS",
+                                          "price": 81.04,
+                                          "step": "asset",
+                                          "dollar_volume": 310618783.28000003
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "collapsed?": true
+            }
+          ]
+        },
+        {
+          "weight": {
+            "num": 100,
+            "den": 100
+          },
+          "id": "d06f3b61-6d88-4955-82b8-475e5ce2aad2",
+          "step": "if",
+          "children": [
+            {
+              "children": [
+                {
+                  "name": "NVIDIA Corporation",
+                  "ticker": "NVDA",
+                  "has_marketcap": true,
+                  "id": "9469445b-4900-4a4d-bd93-13def2ef563d",
+                  "exchange": "XNAS",
+                  "price": 128.96,
+                  "step": "asset",
+                  "dollar_volume": 6776234021.440001,
+                  "children-count": 0
+                }
+              ],
+              "rhs-fn": "moving-average-price",
+              "is-else-condition?": false,
+              "lhs-fn": "moving-average-price",
+              "rhs-window-days": "210",
+              "lhs-window-days": "21",
+              "lhs-val": "NVDA",
+              "id": "509ee32f-cc84-4eb4-a23d-cd5ff09740ef",
+              "comparator": "gt",
+              "rhs-val": "NVDA",
+              "step": "if-child",
+              "collapsed?": true
+            },
+            {
+              "id": "f5ff6871-bf6c-433c-bd73-eb28aa4fb382",
+              "step": "if-child",
+              "is-else-condition?": true,
+              "children": [
+                {
+                  "id": "f9a99d08-ccac-4e1b-9962-f01dad8cbd05",
+                  "step": "wt-cash-equal",
+                  "children": [
+                    {
+                      "id": "7ff3c488-789b-482c-910b-b7e3d47f85fe",
+                      "step": "if",
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "name": "NVIDIA Corporation",
+                              "ticker": "NVDA",
+                              "has_marketcap": true,
+                              "id": "e8aedf69-7757-4f6f-aa6d-451f375994c3",
+                              "exchange": "XNAS",
+                              "price": 128.96,
+                              "step": "asset",
+                              "dollar_volume": 6776234021.440001,
+                              "children-count": 0
+                            }
+                          ],
+                          "rhs-fn": "moving-average-price",
+                          "is-else-condition?": false,
+                          "rhs-fixed-value?": true,
+                          "lhs-fn": "relative-strength-index",
+                          "rhs-window-days": "31",
+                          "lhs-window-days": "10",
+                          "lhs-val": "NVDA",
+                          "id": "fc82b8ac-3f7b-4477-a1f2-a07908e5811b",
+                          "comparator": "lt",
+                          "rhs-val": "30",
+                          "step": "if-child"
+                        },
+                        {
+                          "id": "f4a08045-0ae1-4f0a-9ae3-59d27bfc4daa",
+                          "step": "if-child",
+                          "is-else-condition?": true,
+                          "children": [
+                            {
+                              "id": "6e74128b-cbf6-4be7-828a-3331648dc50e",
+                              "step": "wt-cash-equal",
+                              "children": [
+                                {
+                                  "id": "ebcd8af0-a392-4a45-8362-2d2ad5a5cbd9",
+                                  "step": "if",
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "name": "NVIDIA Corporation",
+                                          "ticker": "NVDA",
+                                          "has_marketcap": true,
+                                          "id": "92095906-59e0-4485-a003-aa4d78fc6b83",
+                                          "exchange": "XNAS",
+                                          "price": 128.96,
+                                          "step": "asset",
+                                          "dollar_volume": 6776234021.440001,
+                                          "children-count": 0
+                                        }
+                                      ],
+                                      "rhs-fn": "moving-average-price",
+                                      "is-else-condition?": false,
+                                      "lhs-fn": "current-price",
+                                      "rhs-window-days": "31",
+                                      "lhs-val": "NVDA",
+                                      "id": "2e48f7f6-2f5d-44a2-b9e4-a9ce9c5c09f4",
+                                      "comparator": "gt",
+                                      "rhs-val": "NVDA",
+                                      "step": "if-child"
+                                    },
+                                    {
+                                      "id": "b8183bcd-eb1b-4cc1-972a-cfec28aa4cfe",
+                                      "step": "if-child",
+                                      "is-else-condition?": true,
+                                      "children": [
+                                        {
+                                          "name": "iShares 1-3 Year Treasury Bond ETF",
+                                          "ticker": "SHY",
+                                          "has_marketcap": false,
+                                          "id": "cdfd2f4f-956b-4863-8aac-835dc62f099e",
+                                          "exchange": "XNAS",
+                                          "price": 81.04,
+                                          "step": "asset",
+                                          "dollar_volume": 310618783.28000003
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "collapsed?": true
+            }
+          ]
+        },
+        {
+          "weight": {
+            "num": 100,
+            "den": 100
+          },
+          "id": "53dbcaf3-7703-4496-af11-505f52b8fa4f",
+          "step": "if",
+          "children": [
+            {
+              "children": [
+                {
+                  "name": "Meta Platforms Inc. Class A",
+                  "ticker": "META",
+                  "has_marketcap": true,
+                  "id": "07d2b157-001f-42da-8c31-f9894d84b8f0",
+                  "exchange": "XNAS",
+                  "price": 129.82,
+                  "step": "asset",
+                  "dollar_volume": 8310487796.12,
+                  "children-count": 0
+                }
+              ],
+              "rhs-fn": "moving-average-price",
+              "is-else-condition?": false,
+              "lhs-fn": "moving-average-price",
+              "rhs-window-days": "210",
+              "lhs-window-days": "21",
+              "lhs-val": "META",
+              "id": "f18c1f2a-c9a6-4fb7-b1ed-52a2e4a0e923",
+              "comparator": "gt",
+              "rhs-val": "META",
+              "step": "if-child",
+              "collapsed?": true
+            },
+            {
+              "id": "dc0b1d05-6286-42ab-82b9-0c7d4d8f7591",
+              "step": "if-child",
+              "is-else-condition?": true,
+              "children": [
+                {
+                  "id": "8c11e248-2647-4423-8b9e-909c06ab0b29",
+                  "step": "wt-cash-equal",
+                  "children": [
+                    {
+                      "id": "1186f3e7-ece6-49de-bc3e-60c3a1e4c6aa",
+                      "step": "if",
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "name": "Meta Platforms Inc. Class A",
+                              "ticker": "META",
+                              "has_marketcap": true,
+                              "id": "56fd237c-ec6f-451d-ac3c-4023d4320bb4",
+                              "exchange": "XNAS",
+                              "price": 129.82,
+                              "step": "asset",
+                              "dollar_volume": 8310487796.12,
+                              "children-count": 0
+                            }
+                          ],
+                          "rhs-fn": "moving-average-price",
+                          "is-else-condition?": false,
+                          "rhs-fixed-value?": true,
+                          "lhs-fn": "relative-strength-index",
+                          "rhs-window-days": "31",
+                          "lhs-window-days": "10",
+                          "lhs-val": "META",
+                          "id": "e84e6257-cc80-4856-85ac-3238ca94deb7",
+                          "comparator": "lt",
+                          "rhs-val": "30",
+                          "step": "if-child"
+                        },
+                        {
+                          "id": "7ea756d3-57f9-4499-9a44-c997c8311cc8",
+                          "step": "if-child",
+                          "is-else-condition?": true,
+                          "children": [
+                            {
+                              "id": "1c3fa63c-0ba6-4465-8edd-dbb6a7e83a16",
+                              "step": "wt-cash-equal",
+                              "children": [
+                                {
+                                  "id": "7eafd2b7-8a20-4ae8-8cdb-a8301ce4e663",
+                                  "step": "if",
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "name": "Meta Platforms Inc. Class A",
+                                          "ticker": "META",
+                                          "has_marketcap": true,
+                                          "id": "ebe6d44c-01e1-4619-bc06-18fdd3e085c0",
+                                          "exchange": "XNAS",
+                                          "price": 129.82,
+                                          "step": "asset",
+                                          "dollar_volume": 8310487796.12,
+                                          "children-count": 0
+                                        }
+                                      ],
+                                      "rhs-fn": "moving-average-price",
+                                      "is-else-condition?": false,
+                                      "lhs-fn": "current-price",
+                                      "rhs-window-days": "31",
+                                      "lhs-val": "META",
+                                      "id": "d8454cd4-62f9-468b-aae6-92f04bdb8a07",
+                                      "comparator": "gt",
+                                      "rhs-val": "META",
+                                      "step": "if-child"
+                                    },
+                                    {
+                                      "id": "b7d52f5d-5e06-44fa-ada6-25c5d6a93337",
+                                      "step": "if-child",
+                                      "is-else-condition?": true,
+                                      "children": [
+                                        {
+                                          "name": "iShares 1-3 Year Treasury Bond ETF",
+                                          "ticker": "SHY",
+                                          "has_marketcap": false,
+                                          "id": "fde89406-1eb9-4702-8289-a97e10f922a3",
+                                          "exchange": "XNAS",
+                                          "price": 81.04,
+                                          "step": "asset",
+                                          "dollar_volume": 310618783.28000003
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "collapsed?": true
+            }
+          ]
+        },
+        {
+          "weight": {
+            "num": 100,
+            "den": 100
+          },
+          "id": "2702c73b-3717-434a-a844-e1ccb1204245",
+          "step": "if",
+          "children": [
+            {
+              "children": [
+                {
+                  "name": "UnitedHealth Group Incorporated",
+                  "ticker": "UNH",
+                  "has_marketcap": true,
+                  "id": "8af0af03-1c1e-49ba-bd70-5330223ce09d",
+                  "exchange": "XNYS",
+                  "price": 543.17,
+                  "step": "asset",
+                  "dollar_volume": 1469669191.4199998,
+                  "children-count": 0
+                }
+              ],
+              "rhs-fn": "moving-average-price",
+              "is-else-condition?": false,
+              "lhs-fn": "moving-average-price",
+              "rhs-window-days": "210",
+              "lhs-window-days": "21",
+              "lhs-val": "UNH",
+              "id": "0b08c3b5-b9d0-4b06-81e8-d33d2293dce1",
+              "comparator": "gt",
+              "rhs-val": "UNH",
+              "step": "if-child",
+              "collapsed?": true
+            },
+            {
+              "id": "06c4ea06-1ec3-4162-bb03-63da03e6f56b",
+              "step": "if-child",
+              "is-else-condition?": true,
+              "children": [
+                {
+                  "id": "539afc75-a8d4-43b9-91e3-ac08b2770e9a",
+                  "step": "wt-cash-equal",
+                  "children": [
+                    {
+                      "id": "dc3ef588-1213-4d41-a6f5-d4eefb1b215b",
+                      "step": "if",
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "name": "Alphabet Inc. Class A",
+                              "ticker": "GOOGL",
+                              "has_marketcap": true,
+                              "id": "3f60509e-20b9-4371-a7fe-18164c2d5304",
+                              "exchange": "XNAS",
+                              "price": 94.93,
+                              "step": "asset",
+                              "dollar_volume": 8300351406.710001
+                            }
+                          ],
+                          "rhs-fn": "moving-average-price",
+                          "is-else-condition?": false,
+                          "rhs-fixed-value?": true,
+                          "lhs-fn": "relative-strength-index",
+                          "rhs-window-days": "31",
+                          "lhs-window-days": "10",
+                          "lhs-val": "UNH",
+                          "id": "758c395d-ef90-480e-9287-0a868f1a0efa",
+                          "comparator": "lt",
+                          "rhs-val": "30",
+                          "step": "if-child"
+                        },
+                        {
+                          "id": "00a45a1d-3d21-432a-9552-6fe01629efe6",
+                          "step": "if-child",
+                          "is-else-condition?": true,
+                          "children": [
+                            {
+                              "id": "3194d87a-e5f3-483e-9c85-3bfa7635b1a4",
+                              "step": "wt-cash-equal",
+                              "children": [
+                                {
+                                  "id": "fe33883e-0828-456b-b39d-015ad6dad38f",
+                                  "step": "if",
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "name": "UnitedHealth Group Incorporated",
+                                          "ticker": "UNH",
+                                          "has_marketcap": true,
+                                          "id": "a6f4de36-70d4-40ee-a039-81c43b7b8e6c",
+                                          "exchange": "XNYS",
+                                          "price": 543.17,
+                                          "step": "asset",
+                                          "dollar_volume": 1469669191.4199998,
+                                          "children-count": 0
+                                        }
+                                      ],
+                                      "rhs-fn": "moving-average-price",
+                                      "is-else-condition?": false,
+                                      "lhs-fn": "current-price",
+                                      "rhs-window-days": "31",
+                                      "lhs-val": "UNH",
+                                      "id": "48849018-fcd4-4138-928b-af4fe83d9e7c",
+                                      "comparator": "gt",
+                                      "rhs-val": "UNH",
+                                      "step": "if-child"
+                                    },
+                                    {
+                                      "id": "569b6db8-e0ad-4766-ad17-5231c1f86cf4",
+                                      "step": "if-child",
+                                      "is-else-condition?": true,
+                                      "children": [
+                                        {
+                                          "name": "iShares 1-3 Year Treasury Bond ETF",
+                                          "ticker": "SHY",
+                                          "has_marketcap": false,
+                                          "id": "01a1cb03-37f9-4943-95b9-6ec09511f844",
+                                          "exchange": "XNAS",
+                                          "price": 81.04,
+                                          "step": "asset",
+                                          "dollar_volume": 310618783.28000003
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "collapsed?": true
+            }
+          ]
+        },
+        {
+          "weight": {
+            "num": 100,
+            "den": 100
+          },
+          "id": "3d8360df-cde8-4613-bace-868165c0e6ac",
+          "step": "if",
+          "children": [
+            {
+              "children": [
+                {
+                  "name": "Microsoft Corporation",
+                  "ticker": "MSFT",
+                  "has_marketcap": true,
+                  "id": "993bf903-6b74-40f0-a25d-790b1e6feacc",
+                  "exchange": "XNAS",
+                  "price": 231.32,
+                  "step": "asset",
+                  "dollar_volume": 19050636646.64,
+                  "children-count": 0
+                }
+              ],
+              "rhs-fn": "moving-average-price",
+              "is-else-condition?": false,
+              "lhs-fn": "moving-average-price",
+              "rhs-window-days": "210",
+              "lhs-window-days": "21",
+              "lhs-val": "MSFT",
+              "id": "703fe3b2-ce31-498f-abf7-d6d53d3e153e",
+              "comparator": "gt",
+              "rhs-val": "MSFT",
+              "step": "if-child",
+              "collapsed?": true
+            },
+            {
+              "id": "c52dc63c-5145-4e66-a393-4a1f59e5f141",
+              "step": "if-child",
+              "is-else-condition?": true,
+              "children": [
+                {
+                  "id": "ab19c445-99cc-4ffc-b298-a1f241ed6697",
+                  "step": "wt-cash-equal",
+                  "children": [
+                    {
+                      "id": "6142d9a7-7bda-4cb3-bd74-6f66c2f6d503",
+                      "step": "if",
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "name": "Microsoft Corporation",
+                              "ticker": "MSFT",
+                              "has_marketcap": true,
+                              "id": "d482aec3-d689-4384-8959-ec7d075ed2a8",
+                              "exchange": "XNAS",
+                              "price": 231.32,
+                              "step": "asset",
+                              "dollar_volume": 19050636646.64,
+                              "children-count": 0
+                            }
+                          ],
+                          "rhs-fn": "moving-average-price",
+                          "is-else-condition?": false,
+                          "rhs-fixed-value?": true,
+                          "lhs-fn": "relative-strength-index",
+                          "rhs-window-days": "31",
+                          "lhs-window-days": "10",
+                          "lhs-val": "MSFT",
+                          "id": "fa62f2a8-17ba-4b7f-b517-7c484c5718da",
+                          "comparator": "lt",
+                          "rhs-val": "30",
+                          "step": "if-child"
+                        },
+                        {
+                          "id": "d30ae20a-6315-4fd6-9adc-e6b4c7d68587",
+                          "step": "if-child",
+                          "is-else-condition?": true,
+                          "children": [
+                            {
+                              "id": "08a3f0b6-2e07-4565-a5ed-c829bfbc85d0",
+                              "step": "wt-cash-equal",
+                              "children": [
+                                {
+                                  "id": "a57485ee-c6b3-4bbe-a484-96acb5c4dfa4",
+                                  "step": "if",
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "name": "Microsoft Corporation",
+                                          "ticker": "MSFT",
+                                          "has_marketcap": true,
+                                          "id": "26ceb86e-08c3-4719-8915-1db888251456",
+                                          "exchange": "XNAS",
+                                          "price": 231.32,
+                                          "step": "asset",
+                                          "dollar_volume": 19050636646.64,
+                                          "children-count": 0
+                                        }
+                                      ],
+                                      "rhs-fn": "moving-average-price",
+                                      "is-else-condition?": false,
+                                      "lhs-fn": "current-price",
+                                      "rhs-window-days": "31",
+                                      "lhs-val": "MSFT",
+                                      "id": "5fcf8cbe-0a85-48cc-8edf-5b2442df6732",
+                                      "comparator": "gt",
+                                      "rhs-val": "MSFT",
+                                      "step": "if-child"
+                                    },
+                                    {
+                                      "id": "90303257-7ba0-4096-86e0-b366c863ed98",
+                                      "step": "if-child",
+                                      "is-else-condition?": true,
+                                      "children": [
+                                        {
+                                          "name": "iShares 1-3 Year Treasury Bond ETF",
+                                          "ticker": "SHY",
+                                          "has_marketcap": false,
+                                          "id": "b4681467-113f-4a8a-ac7d-733dbeb7c116",
+                                          "exchange": "XNAS",
+                                          "price": 81.04,
+                                          "step": "asset",
+                                          "dollar_volume": 310618783.28000003
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "collapsed?": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

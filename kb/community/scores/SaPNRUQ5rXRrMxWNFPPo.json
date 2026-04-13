@@ -1,0 +1,60 @@
+{
+  "id": "SaPNRUQ5rXRrMxWNFPPo",
+  "step": "root",
+  "name": "Copy of V2 | Safety Mix | Michael B | UUP, GLD, & XLP",
+  "description": "Backtest to 2/20/2007. Use as an alternative to UUP, GLD, XLP, or SHY. Long term slow ~6% growth (nearly linear) with only a 10% max drawdown. This is a super basic mix of the US dollar, gold, and consumer staples",
+  "rebalance": "daily",
+  "children": [
+    {
+      "id": "15125db3-db12-400b-8a44-20797fe8331a",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "id": "98a177f4-6e28-48cf-8db2-4f8fdd2492c3",
+          "step": "group",
+          "name": "V2 | Safety Mix | Michael B | UUP, GLD, & XLP",
+          "children": [
+            {
+              "step": "wt-cash-equal",
+              "id": "ee67ea8d-6ad3-4244-97f2-a5d437769c50",
+              "children": [
+                {
+                  "name": "Invesco DB US Dollar Index Bullish Fund",
+                  "ticker": "UUP",
+                  "has_marketcap": false,
+                  "id": "b723f629-d2b3-40ab-85bd-7f3ea2fee69b",
+                  "exchange": "ARCX",
+                  "price": 30.15,
+                  "step": "asset",
+                  "dollar_volume": 142925170.5
+                },
+                {
+                  "name": "SPDR Gold Shares",
+                  "ticker": "GLD",
+                  "has_marketcap": false,
+                  "id": "a33e85e7-e5fe-419e-9a5d-31068f65b9a3",
+                  "exchange": "ARCX",
+                  "price": 154.67,
+                  "step": "asset",
+                  "dollar_volume": 1055708746.5199999
+                },
+                {
+                  "name": "Consumer Staples Select Sector SPDR Fund",
+                  "ticker": "XLP",
+                  "has_marketcap": false,
+                  "id": "3ae5c221-37b1-4680-bbd6-0e1a3b11534c",
+                  "exchange": "ARCX",
+                  "price": 74.98,
+                  "step": "asset",
+                  "dollar_volume": 738000097.48,
+                  "children-count": 0
+                }
+              ]
+            }
+          ],
+          "collapsed?": false
+        }
+      ]
+    }
+  ]
+}

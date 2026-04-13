@@ -1,0 +1,335 @@
+{
+  "id": "yFjj6uwR3h7J4AuvSfbu",
+  "step": "root",
+  "name": "Copy of Beat The Market V2",
+  "description": "This simple strategy beats the market and has less drawdown. Backtested for 20 years.",
+  "rebalance": "daily",
+  "children": [
+    {
+      "id": "d073a332-6c2d-4ba3-8df9-dd8620952bfb",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "weight": {
+            "num": "60",
+            "den": 100
+          },
+          "id": "4d4a737b-ef8c-428c-9864-61ca4c8fd066",
+          "step": "if",
+          "children": [
+            {
+              "children": [
+                {
+                  "id": "2bd9a2f1-af3c-4017-a3a2-50fb207c862e",
+                  "step": "wt-cash-equal",
+                  "children": [
+                    {
+                      "id": "ea1a9c03-b910-42c8-8e21-9501225f4cd2",
+                      "step": "if",
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "id": "86a5abd9-524b-4730-b97e-6d21d8d15241",
+                              "step": "wt-cash-equal",
+                              "children": [
+                                {
+                                  "name": "iShares 1-3 Year Treasury Bond ETF",
+                                  "ticker": "SHY",
+                                  "has_marketcap": false,
+                                  "id": "758acb8d-22bb-4ca0-aa22-b1c8fda4534d",
+                                  "exchange": "XNAS",
+                                  "price": 81.43,
+                                  "step": "asset",
+                                  "dollar_volume": 324720935.33000004
+                                }
+                              ]
+                            }
+                          ],
+                          "is-else-condition?": false,
+                          "rhs-fixed-value?": true,
+                          "lhs-fn": "relative-strength-index",
+                          "lhs-window-days": "10",
+                          "lhs-val": "QQQ",
+                          "id": "8ba22d51-cb85-49eb-8b87-7a6b5ddc98d3",
+                          "comparator": "gt",
+                          "rhs-val": "80",
+                          "step": "if-child"
+                        },
+                        {
+                          "id": "9ea91043-7d0e-4ee0-bd78-0c8fa830df1e",
+                          "step": "if-child",
+                          "is-else-condition?": true,
+                          "children": [
+                            {
+                              "id": "12d2f9a7-2d74-49a7-9598-36be30223869",
+                              "step": "wt-cash-equal",
+                              "children": [
+                                {
+                                  "id": "90ee7d7e-0dd2-417f-8c94-af770f859e4d",
+                                  "step": "if",
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "name": "iShares 1-3 Year Treasury Bond ETF",
+                                          "ticker": "SHY",
+                                          "has_marketcap": false,
+                                          "id": "73c981fc-2991-46e6-a2b1-7ed05baf64d2",
+                                          "exchange": "XNAS",
+                                          "price": 81.43,
+                                          "step": "asset",
+                                          "dollar_volume": 324720935.33000004,
+                                          "children-count": 0
+                                        }
+                                      ],
+                                      "is-else-condition?": false,
+                                      "rhs-fixed-value?": true,
+                                      "lhs-fn": "relative-strength-index",
+                                      "lhs-window-days": "60",
+                                      "lhs-val": "QQQ",
+                                      "id": "42e3b4be-7a3b-4480-b445-7af324fbc771",
+                                      "comparator": "gt",
+                                      "rhs-val": "60",
+                                      "step": "if-child"
+                                    },
+                                    {
+                                      "id": "ebeabb0c-7c19-4478-9499-77295e423d09",
+                                      "step": "if-child",
+                                      "is-else-condition?": true,
+                                      "children": [
+                                        {
+                                          "id": "4c635084-8a81-4dec-b844-ff69e40c4d9e",
+                                          "step": "wt-cash-equal",
+                                          "children": [
+                                            {
+                                              "id": "5ade95bc-2cdc-4876-88c9-4527ecf2e69d",
+                                              "step": "if",
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "name": "iShares 1-3 Year Treasury Bond ETF",
+                                                      "ticker": "SHY",
+                                                      "has_marketcap": false,
+                                                      "id": "bdba290c-820c-428e-9ab2-9fade88598a3",
+                                                      "exchange": "XNAS",
+                                                      "price": 81.43,
+                                                      "step": "asset",
+                                                      "dollar_volume": 324720935.33000004,
+                                                      "children-count": 0
+                                                    }
+                                                  ],
+                                                  "is-else-condition?": false,
+                                                  "rhs-fixed-value?": true,
+                                                  "lhs-fn": "standard-deviation-return",
+                                                  "lhs-window-days": "7",
+                                                  "lhs-val": "QQQ",
+                                                  "id": "93085fa9-5f39-422e-bfa5-39ea2eed8e4e",
+                                                  "comparator": "gt",
+                                                  "rhs-val": "3",
+                                                  "step": "if-child"
+                                                },
+                                                {
+                                                  "id": "fbe0def5-a15c-44c8-bee2-8ae663aec09a",
+                                                  "step": "if-child",
+                                                  "is-else-condition?": true,
+                                                  "children": [
+                                                    {
+                                                      "name": "Invesco QQQ Trust",
+                                                      "ticker": "QQQ",
+                                                      "has_marketcap": false,
+                                                      "id": "913f7dfc-38f4-4151-8d15-3ff44a218e8d",
+                                                      "exchange": "XNAS",
+                                                      "price": 274.25,
+                                                      "step": "asset",
+                                                      "dollar_volume": 18731371261.75
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "weight": {
+                        "num": "80",
+                        "den": 100
+                      }
+                    }
+                  ]
+                }
+              ],
+              "rhs-fn": "moving-average-price",
+              "is-else-condition?": false,
+              "lhs-fn": "moving-average-price",
+              "rhs-window-days": "210",
+              "lhs-window-days": "21",
+              "lhs-val": "SPY",
+              "id": "fdcb4079-f6f1-4afc-9fdb-dbc0ee16f31d",
+              "comparator": "gt",
+              "rhs-val": "SPY",
+              "step": "if-child"
+            },
+            {
+              "id": "5fdbb6c2-6977-4d10-bdbb-c46344dbad4a",
+              "step": "if-child",
+              "is-else-condition?": true,
+              "children": [
+                {
+                  "id": "91664afd-a43d-4688-a2d5-a52e9232def5",
+                  "step": "wt-cash-equal",
+                  "children": [
+                    {
+                      "id": "cc353fa6-9d5e-467e-a610-77aa5ce75ed9",
+                      "step": "if",
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "id": "731c6126-83f5-4b08-9c8a-86c8ea8344a7",
+                              "step": "wt-cash-equal",
+                              "children": [
+                                {
+                                  "id": "d207e9c2-dc25-45af-ac11-784e52a0c334",
+                                  "step": "if",
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "name": "Invesco QQQ Trust",
+                                          "ticker": "QQQ",
+                                          "has_marketcap": false,
+                                          "id": "ad3e4065-dac7-4f1c-8eb9-6b28db4dfa74",
+                                          "exchange": "XNAS",
+                                          "price": 274.25,
+                                          "step": "asset",
+                                          "dollar_volume": 18731371261.75
+                                        }
+                                      ],
+                                      "is-else-condition?": false,
+                                      "rhs-fixed-value?": true,
+                                      "lhs-fn": "relative-strength-index",
+                                      "lhs-window-days": "2",
+                                      "lhs-val": "QQQ",
+                                      "id": "b3bc81c9-ae6c-4049-b152-b87887df02b5",
+                                      "comparator": "lt",
+                                      "rhs-val": "30",
+                                      "step": "if-child"
+                                    },
+                                    {
+                                      "id": "0fae44da-932e-4de6-a7d4-ef29cb47c91c",
+                                      "step": "if-child",
+                                      "is-else-condition?": true,
+                                      "children": [
+                                        {
+                                          "name": "iShares 1-3 Year Treasury Bond ETF",
+                                          "ticker": "SHY",
+                                          "has_marketcap": false,
+                                          "id": "5fff43e1-4d87-4da4-b05b-dc6931b7c656",
+                                          "exchange": "XNAS",
+                                          "price": 81.43,
+                                          "step": "asset",
+                                          "dollar_volume": 324720935.33000004,
+                                          "children-count": 0
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "rhs-fn": "moving-average-price",
+                          "is-else-condition?": false,
+                          "rhs-fixed-value?": true,
+                          "lhs-fn": "relative-strength-index",
+                          "rhs-window-days": "31",
+                          "lhs-window-days": "10",
+                          "lhs-val": "QQQ",
+                          "id": "86daab9c-47da-4dbc-af8a-ea9fb83ab38c",
+                          "comparator": "lt",
+                          "rhs-val": "30",
+                          "step": "if-child"
+                        },
+                        {
+                          "id": "2f1de315-7003-4119-bd1a-e3ba8ea0286a",
+                          "step": "if-child",
+                          "is-else-condition?": true,
+                          "children": [
+                            {
+                              "id": "1d60bc7d-ee66-4ade-aff2-609555968ff8",
+                              "step": "wt-cash-equal",
+                              "children": [
+                                {
+                                  "id": "356a47b8-0b67-452a-b5c3-334cce824de5",
+                                  "step": "if",
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "name": "Invesco QQQ Trust",
+                                          "ticker": "QQQ",
+                                          "has_marketcap": false,
+                                          "id": "730923ad-e9a6-4a31-b723-0422b9ff173c",
+                                          "exchange": "XNAS",
+                                          "price": 274.25,
+                                          "step": "asset",
+                                          "dollar_volume": 18731371261.75
+                                        }
+                                      ],
+                                      "rhs-fn": "moving-average-price",
+                                      "is-else-condition?": false,
+                                      "lhs-fn": "current-price",
+                                      "rhs-window-days": "31",
+                                      "lhs-window-days": "5",
+                                      "lhs-val": "SPY",
+                                      "id": "014af891-6f9e-47c3-bba1-b14c99534fb8",
+                                      "comparator": "gt",
+                                      "rhs-val": "SPY",
+                                      "step": "if-child"
+                                    },
+                                    {
+                                      "id": "dcad839f-a1da-411e-8fbf-f1f32680f182",
+                                      "step": "if-child",
+                                      "is-else-condition?": true,
+                                      "children": [
+                                        {
+                                          "name": "iShares 1-3 Year Treasury Bond ETF",
+                                          "ticker": "SHY",
+                                          "has_marketcap": false,
+                                          "id": "cb0a6de3-a9bd-427b-a591-061d5d4a34ef",
+                                          "exchange": "XNAS",
+                                          "price": 81.43,
+                                          "step": "asset",
+                                          "dollar_volume": 324720935.33000004
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "collapsed?": false
+    }
+  ]
+}

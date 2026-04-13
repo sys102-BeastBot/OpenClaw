@@ -1,0 +1,778 @@
+{
+  "id": "OCE4srIuCV1rPB4rMMbs",
+  "step": "root",
+  "name": "Copy of BLACK SWAN CATCHER + BIL CANARY + EQUITY (BACKTESTS TO 5/14/2013) 37246.1% CUMULATIVE/82.8% ANNUAL/21.8% DRAWDOWN",
+  "description": "This symphony is designed to capture the returns of my favorite ETFs while minimizing Drawdowns with multiple protective measures in the form of a Black Swan Catcher designed by Garen and using BIL as a canary asset a defensive design by Perfekt. When on the offensive it buys 4 of my favorite ETFs encompassing some growth but mostly value stocks at varying caps.",
+  "rebalance": "none",
+  "children": [
+    {
+      "id": "67802999-fa5a-4508-b32b-22f1d150a4ac",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "id": "edbda465-cda1-4c78-85d4-6e182e8d8f6b",
+          "step": "if",
+          "children": [
+            {
+              "children": [
+                {
+                  "id": "85625559-e147-4bc3-9993-78275c170488",
+                  "step": "wt-cash-equal",
+                  "children": [
+                    {
+                      "id": "82592e6f-0e08-450e-8257-d09a37111508",
+                      "step": "if",
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "name": "ProShares Ultra VIX Short-Term Futures ETF",
+                              "ticker": "UVXY",
+                              "has_marketcap": false,
+                              "id": "4f79df1a-7283-47d7-9aa6-3d04b130041c",
+                              "exchange": "BATS",
+                              "price": 13.17,
+                              "step": "asset",
+                              "dollar_volume": 782396985.72
+                            }
+                          ],
+                          "is-else-condition?": false,
+                          "rhs-fixed-value?": true,
+                          "lhs-fn": "relative-strength-index",
+                          "lhs-window-days": "14",
+                          "lhs-val": "TQQQ",
+                          "id": "fbe17175-d54f-4577-b1a7-c7cdab5ac38d",
+                          "comparator": "gt",
+                          "rhs-val": "75",
+                          "step": "if-child"
+                        },
+                        {
+                          "id": "6c0eb8d2-c302-4ab3-9ca3-1e9d3661bd31",
+                          "step": "if-child",
+                          "is-else-condition?": true,
+                          "children": [
+                            {
+                              "id": "cb9defa2-a4cd-4690-bd92-0cc62ae15f65",
+                              "step": "wt-cash-equal",
+                              "children": [
+                                {
+                                  "id": "cd11531e-fb2f-4f81-aa98-c6c1d11ba48a",
+                                  "step": "if",
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "name": "ProShares Ultra VIX Short-Term Futures ETF",
+                                          "ticker": "UVXY",
+                                          "has_marketcap": false,
+                                          "id": "1d608925-3610-4943-88dc-0ebe16252093",
+                                          "exchange": "BATS",
+                                          "price": 13.17,
+                                          "step": "asset",
+                                          "dollar_volume": 782396985.72
+                                        }
+                                      ],
+                                      "is-else-condition?": false,
+                                      "rhs-fixed-value?": true,
+                                      "lhs-fn": "relative-strength-index",
+                                      "lhs-window-days": "10",
+                                      "lhs-val": "SPXL",
+                                      "id": "e270e758-88b9-4dc6-ae99-122f17cf9855",
+                                      "comparator": "gt",
+                                      "rhs-val": "80",
+                                      "step": "if-child"
+                                    },
+                                    {
+                                      "id": "c8a33060-4cb8-4026-94e3-26d1d298a04f",
+                                      "step": "if-child",
+                                      "is-else-condition?": true,
+                                      "children": [
+                                        {
+                                          "id": "e2028dcc-5ff8-4021-87a5-7af0d0b86762",
+                                          "step": "wt-cash-equal",
+                                          "children": [
+                                            {
+                                              "weight": {
+                                                "num": 100,
+                                                "den": 100
+                                              },
+                                              "id": "ecc751a7-7a76-4e62-b857-c722b29833eb",
+                                              "step": "if",
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "id": "ab27a3f1-1caf-4e93-abec-33d22366fddd",
+                                                      "step": "group",
+                                                      "name": "Defensive",
+                                                      "children": [
+                                                        {
+                                                          "step": "wt-cash-equal",
+                                                          "id": "b7b216c8-b5fb-4bd9-bff1-198b1b08178b",
+                                                          "children": [
+                                                            {
+                                                              "name": "abrdn Physical Gold Shares ETF",
+                                                              "ticker": "SGOL",
+                                                              "has_marketcap": false,
+                                                              "weight": {
+                                                                "num": "70",
+                                                                "den": 100
+                                                              },
+                                                              "id": "71dd8e4b-d089-4620-828c-32cffbbf9164",
+                                                              "exchange": "ARCX",
+                                                              "price": 17.54,
+                                                              "step": "asset",
+                                                              "dollar_volume": 44705706.44
+                                                            },
+                                                            {
+                                                              "name": "iShares TIPS Bond ETF",
+                                                              "ticker": "TIP",
+                                                              "has_marketcap": false,
+                                                              "id": "0879bf25-7759-430e-8185-95e7054fd355",
+                                                              "exchange": "ARCX",
+                                                              "price": 106.52,
+                                                              "step": "asset",
+                                                              "dollar_volume": 459132303.84
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "is-else-condition?": false,
+                                                  "rhs-fixed-value?": true,
+                                                  "lhs-fn": "cumulative-return",
+                                                  "lhs-window-days": "365",
+                                                  "lhs-val": "BIL",
+                                                  "id": "0684b268-3024-400f-94b3-1bb601ef8356",
+                                                  "comparator": "gte",
+                                                  "rhs-val": "1.75",
+                                                  "step": "if-child"
+                                                },
+                                                {
+                                                  "id": "950f4cda-f84a-4c1c-a9ca-22e729e84ad1",
+                                                  "step": "if-child",
+                                                  "is-else-condition?": true,
+                                                  "children": [
+                                                    {
+                                                      "id": "1f87fd9c-5ddb-47ff-a0cd-b17b4a0920e4",
+                                                      "step": "wt-cash-equal",
+                                                      "children": [
+                                                        {
+                                                          "id": "c6e180c4-ebf2-4d8e-b826-5827532e0353",
+                                                          "step": "group",
+                                                          "name": "Offensive",
+                                                          "children": [
+                                                            {
+                                                              "step": "wt-cash-equal",
+                                                              "id": "aed62df0-edf5-415b-a400-b604ee4a8443",
+                                                              "children": [
+                                                                {
+                                                                  "name": "Invesco S&P 500 GARP ETF",
+                                                                  "ticker": "SPGP",
+                                                                  "has_marketcap": false,
+                                                                  "weight": {
+                                                                    "num": "90",
+                                                                    "den": 100
+                                                                  },
+                                                                  "id": "08f429ae-c0a1-4e4b-9839-949155e8fe54",
+                                                                  "exchange": "ARCX",
+                                                                  "price": 84.58,
+                                                                  "step": "asset",
+                                                                  "dollar_volume": 22054996.22,
+                                                                  "children-count": 0
+                                                                },
+                                                                {
+                                                                  "name": "Schwab US Dividend Equity ETF",
+                                                                  "ticker": "SCHD",
+                                                                  "has_marketcap": false,
+                                                                  "id": "75fb526b-6fdf-4fe4-93a3-a8c5688b594c",
+                                                                  "exchange": "ARCX",
+                                                                  "price": 72.84,
+                                                                  "step": "asset",
+                                                                  "dollar_volume": 272118367.08
+                                                                },
+                                                                {
+                                                                  "name": "Cambria Shareholder Yield ETF",
+                                                                  "ticker": "SYLD",
+                                                                  "has_marketcap": false,
+                                                                  "id": "c2ac0b09-14aa-4205-986f-ee947b55b809",
+                                                                  "exchange": "BATS",
+                                                                  "price": 61.25,
+                                                                  "step": "asset",
+                                                                  "dollar_volume": 3075485
+                                                                },
+                                                                {
+                                                                  "name": "Invesco S&P SmallCap 600 Revenue ETF",
+                                                                  "ticker": "RWJ",
+                                                                  "has_marketcap": false,
+                                                                  "id": "59c7747c-3fe1-4457-8296-8692b59918f9",
+                                                                  "exchange": "ARCX",
+                                                                  "price": 115.45,
+                                                                  "step": "asset",
+                                                                  "dollar_volume": 10178072
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "rhs-fn": "current-price",
+              "is-else-condition?": false,
+              "lhs-fn": "moving-average-price",
+              "lhs-window-days": "200",
+              "lhs-val": "SPY",
+              "id": "09296db2-313e-48f8-91d5-39be562fc803",
+              "comparator": "lt",
+              "rhs-val": "SPY",
+              "step": "if-child"
+            },
+            {
+              "id": "41da2d12-bac2-4e62-8106-6b3905eb71e5",
+              "step": "if-child",
+              "is-else-condition?": true,
+              "children": [
+                {
+                  "id": "b9ba06b0-ebb6-4ab7-a67d-352c12706e3d",
+                  "step": "wt-cash-equal",
+                  "children": [
+                    {
+                      "id": "7c8edc7e-7974-406d-b464-b64cfaa9ab47",
+                      "step": "if",
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "id": "3fb83bd7-1d5d-4c8c-8877-29a4741f70c9",
+                              "step": "wt-cash-equal",
+                              "children": [
+                                {
+                                  "weight": {
+                                    "num": 100,
+                                    "den": 100
+                                  },
+                                  "id": "981b6a34-3f89-4ed8-8ab1-9ebd31cb003d",
+                                  "step": "if",
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "id": "9874af35-5945-4ab9-a577-b5b7410c5238",
+                                          "step": "group",
+                                          "name": "Defensive",
+                                          "children": [
+                                            {
+                                              "step": "wt-cash-equal",
+                                              "id": "ee3a83ab-6b68-467f-b693-1d984c957650",
+                                              "children": [
+                                                {
+                                                  "name": "abrdn Physical Gold Shares ETF",
+                                                  "ticker": "SGOL",
+                                                  "has_marketcap": false,
+                                                  "weight": {
+                                                    "num": "70",
+                                                    "den": 100
+                                                  },
+                                                  "id": "3b49c329-45a2-4957-bf9c-a1c383bf7c38",
+                                                  "exchange": "ARCX",
+                                                  "price": 17.54,
+                                                  "step": "asset",
+                                                  "dollar_volume": 44705706.44
+                                                },
+                                                {
+                                                  "name": "VanEck IG Floating Rate ETF",
+                                                  "ticker": "FLTR",
+                                                  "has_marketcap": false,
+                                                  "id": "ec0f2706-91e0-4ad3-a08e-f15e8d9e576a",
+                                                  "exchange": "ARCX",
+                                                  "price": 25.25,
+                                                  "step": "asset",
+                                                  "dollar_volume": 26090496.75,
+                                                  "children-count": 0
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "is-else-condition?": false,
+                                      "rhs-fixed-value?": true,
+                                      "lhs-fn": "cumulative-return",
+                                      "lhs-window-days": "365",
+                                      "lhs-val": "BIL",
+                                      "id": "ff7ceb55-4b18-4038-829a-03ba6a6d4d1e",
+                                      "comparator": "gte",
+                                      "rhs-val": "1.75",
+                                      "step": "if-child"
+                                    },
+                                    {
+                                      "id": "79772adc-ebe9-4246-b43d-b67bfc98ba38",
+                                      "step": "if-child",
+                                      "is-else-condition?": true,
+                                      "children": [
+                                        {
+                                          "id": "3ab1f087-bb64-4223-bb34-3988236d2877",
+                                          "step": "wt-cash-equal",
+                                          "children": [
+                                            {
+                                              "id": "d42d9a94-9911-4227-804a-46df7cbf68b4",
+                                              "step": "group",
+                                              "name": "Offensive",
+                                              "children": [
+                                                {
+                                                  "step": "wt-cash-equal",
+                                                  "id": "d3f26fb5-f82c-4509-affe-6cb4c3a2bfb3",
+                                                  "children": [
+                                                    {
+                                                      "name": "Invesco S&P 500 GARP ETF",
+                                                      "ticker": "SPGP",
+                                                      "has_marketcap": false,
+                                                      "weight": {
+                                                        "num": "90",
+                                                        "den": 100
+                                                      },
+                                                      "id": "f576b26d-452e-4703-8dd8-f6977995fd9d",
+                                                      "exchange": "ARCX",
+                                                      "price": 84.58,
+                                                      "step": "asset",
+                                                      "dollar_volume": 22054996.22,
+                                                      "children-count": 0
+                                                    },
+                                                    {
+                                                      "name": "Schwab US Dividend Equity ETF",
+                                                      "ticker": "SCHD",
+                                                      "has_marketcap": false,
+                                                      "id": "b3fc5255-a0cf-4172-81fb-6e0e47c11350",
+                                                      "exchange": "ARCX",
+                                                      "price": 72.84,
+                                                      "step": "asset",
+                                                      "dollar_volume": 272118367.08
+                                                    },
+                                                    {
+                                                      "name": "Cambria Shareholder Yield ETF",
+                                                      "ticker": "SYLD",
+                                                      "has_marketcap": false,
+                                                      "id": "2033fbbd-3ad1-4cfd-8405-345baab1595c",
+                                                      "exchange": "BATS",
+                                                      "price": 61.25,
+                                                      "step": "asset",
+                                                      "dollar_volume": 3075485
+                                                    },
+                                                    {
+                                                      "name": "Invesco S&P SmallCap 600 Revenue ETF",
+                                                      "ticker": "RWJ",
+                                                      "has_marketcap": false,
+                                                      "id": "c6713e03-96af-492d-9dcc-fa20958c0814",
+                                                      "exchange": "ARCX",
+                                                      "price": 115.45,
+                                                      "step": "asset",
+                                                      "dollar_volume": 10178072
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "is-else-condition?": false,
+                          "rhs-fixed-value?": true,
+                          "lhs-fn": "relative-strength-index",
+                          "lhs-window-days": "10",
+                          "lhs-val": "SPY",
+                          "id": "64f96e9a-db30-40b3-ab0d-4f802cd2d4a1",
+                          "comparator": "lt",
+                          "rhs-val": "30",
+                          "step": "if-child"
+                        },
+                        {
+                          "id": "baef69dc-43d2-45ac-8ef9-747313056652",
+                          "step": "if-child",
+                          "is-else-condition?": true,
+                          "children": [
+                            {
+                              "id": "2db144cb-57a7-4212-824a-18ea436ffd19",
+                              "step": "wt-cash-equal",
+                              "children": [
+                                {
+                                  "id": "b4f24810-1077-44db-b721-8af74d663bbc",
+                                  "step": "if",
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "id": "6d2d41f8-5c91-4a10-b5a8-958f65e1f162",
+                                          "step": "wt-cash-equal",
+                                          "children": [
+                                            {
+                                              "id": "500211a2-ce93-4cdd-9d33-7add45fb4d8a",
+                                              "step": "if",
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "name": "ProShares Ultra VIX Short-Term Futures ETF",
+                                                      "ticker": "UVXY",
+                                                      "has_marketcap": false,
+                                                      "id": "88bab775-5e84-4ae9-a1e9-379810e88bae",
+                                                      "exchange": "BATS",
+                                                      "price": 13.49,
+                                                      "step": "asset",
+                                                      "dollar_volume": 728109961.48
+                                                    }
+                                                  ],
+                                                  "is-else-condition?": false,
+                                                  "rhs-fixed-value?": true,
+                                                  "lhs-fn": "relative-strength-index",
+                                                  "lhs-window-days": "10",
+                                                  "lhs-val": "UVXY",
+                                                  "id": "73dbe352-1a7d-4724-8377-1d101ba2f0aa",
+                                                  "comparator": "lt",
+                                                  "rhs-val": "84",
+                                                  "step": "if-child"
+                                                },
+                                                {
+                                                  "id": "b54d2952-bd98-48a9-8413-98583b562a7c",
+                                                  "step": "if-child",
+                                                  "is-else-condition?": true,
+                                                  "children": [
+                                                    {
+                                                      "id": "07e83e37-bc6b-4848-bec2-b74210535f18",
+                                                      "step": "wt-cash-equal",
+                                                      "children": [
+                                                        {
+                                                          "weight": {
+                                                            "num": 100,
+                                                            "den": 100
+                                                          },
+                                                          "id": "d9a0a972-4d7f-4ae5-b96e-2c88b4b3d77f",
+                                                          "step": "if",
+                                                          "children": [
+                                                            {
+                                                              "children": [
+                                                                {
+                                                                  "id": "f0bbbe2f-93c4-4e35-ae48-ae3ed3350cfc",
+                                                                  "step": "group",
+                                                                  "name": "Defensive",
+                                                                  "children": [
+                                                                    {
+                                                                      "step": "wt-cash-equal",
+                                                                      "id": "5709ad12-3436-4323-978e-e1b1877376aa",
+                                                                      "children": [
+                                                                        {
+                                                                          "name": "abrdn Physical Gold Shares ETF",
+                                                                          "ticker": "SGOL",
+                                                                          "has_marketcap": false,
+                                                                          "weight": {
+                                                                            "num": "70",
+                                                                            "den": 100
+                                                                          },
+                                                                          "id": "1a0b6b94-31bb-43c8-a140-3285e5d4fdd7",
+                                                                          "exchange": "ARCX",
+                                                                          "price": 17.54,
+                                                                          "step": "asset",
+                                                                          "dollar_volume": 44705706.44
+                                                                        },
+                                                                        {
+                                                                          "name": "VanEck IG Floating Rate ETF",
+                                                                          "ticker": "FLTR",
+                                                                          "has_marketcap": false,
+                                                                          "id": "6775b432-e2de-4abd-abab-4dac06dafe27",
+                                                                          "exchange": "ARCX",
+                                                                          "price": 25.25,
+                                                                          "step": "asset",
+                                                                          "dollar_volume": 26090496.75,
+                                                                          "children-count": 0
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ],
+                                                              "is-else-condition?": false,
+                                                              "rhs-fixed-value?": true,
+                                                              "lhs-fn": "cumulative-return",
+                                                              "lhs-window-days": "365",
+                                                              "lhs-val": "BIL",
+                                                              "id": "2de086d1-e376-460f-9a2c-21c878f4881b",
+                                                              "comparator": "gte",
+                                                              "rhs-val": "1.75",
+                                                              "step": "if-child"
+                                                            },
+                                                            {
+                                                              "id": "ccd778f9-6948-4c64-836d-95231422acb4",
+                                                              "step": "if-child",
+                                                              "is-else-condition?": true,
+                                                              "children": [
+                                                                {
+                                                                  "id": "905f7357-b55e-40ed-9b65-5f3e8f56abeb",
+                                                                  "step": "wt-cash-equal",
+                                                                  "children": [
+                                                                    {
+                                                                      "id": "d75df02d-3d1c-4b9f-95d8-5a5a245776b8",
+                                                                      "step": "group",
+                                                                      "name": "Offensive",
+                                                                      "children": [
+                                                                        {
+                                                                          "step": "wt-cash-equal",
+                                                                          "id": "774e1ed1-56fd-4135-9759-acedb8844cf9",
+                                                                          "children": [
+                                                                            {
+                                                                              "name": "Invesco S&P 500 GARP ETF",
+                                                                              "ticker": "SPGP",
+                                                                              "has_marketcap": false,
+                                                                              "weight": {
+                                                                                "num": "90",
+                                                                                "den": 100
+                                                                              },
+                                                                              "id": "c6dae7a7-55d0-4f70-81ea-03eb6c5acb80",
+                                                                              "exchange": "ARCX",
+                                                                              "price": 84.58,
+                                                                              "step": "asset",
+                                                                              "dollar_volume": 22054996.22,
+                                                                              "children-count": 0
+                                                                            },
+                                                                            {
+                                                                              "name": "Schwab US Dividend Equity ETF",
+                                                                              "ticker": "SCHD",
+                                                                              "has_marketcap": false,
+                                                                              "id": "bfb5a073-1ca8-4608-ad6b-3f0f3e6bb398",
+                                                                              "exchange": "ARCX",
+                                                                              "price": 72.84,
+                                                                              "step": "asset",
+                                                                              "dollar_volume": 272118367.08
+                                                                            },
+                                                                            {
+                                                                              "name": "Cambria Shareholder Yield ETF",
+                                                                              "ticker": "SYLD",
+                                                                              "has_marketcap": false,
+                                                                              "id": "6c1d2d1a-9385-4a87-8984-daecee53e324",
+                                                                              "exchange": "BATS",
+                                                                              "price": 61.25,
+                                                                              "step": "asset",
+                                                                              "dollar_volume": 3075485
+                                                                            },
+                                                                            {
+                                                                              "name": "Invesco S&P SmallCap 600 Revenue ETF",
+                                                                              "ticker": "RWJ",
+                                                                              "has_marketcap": false,
+                                                                              "id": "e41b0b5a-a6a4-4990-9cad-c8ab73bfcf6f",
+                                                                              "exchange": "ARCX",
+                                                                              "price": 115.45,
+                                                                              "step": "asset",
+                                                                              "dollar_volume": 10178072
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "is-else-condition?": false,
+                                      "rhs-fixed-value?": true,
+                                      "lhs-fn": "relative-strength-index",
+                                      "lhs-window-days": "10",
+                                      "lhs-val": "UVXY",
+                                      "id": "a58ba3f6-bb3a-4aac-af60-ec09d99e9bd7",
+                                      "comparator": "gt",
+                                      "rhs-val": "74",
+                                      "step": "if-child"
+                                    },
+                                    {
+                                      "id": "1b35ede9-2555-4087-bfb9-fc226a5401dd",
+                                      "step": "if-child",
+                                      "is-else-condition?": true,
+                                      "children": [
+                                        {
+                                          "id": "2a7ead9c-12b5-486d-ba65-475c341ebf1a",
+                                          "step": "wt-cash-equal",
+                                          "children": [
+                                            {
+                                              "weight": {
+                                                "num": 100,
+                                                "den": 100
+                                              },
+                                              "id": "bc6cf552-9980-431c-9e24-b25a15d67f7d",
+                                              "step": "if",
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "id": "71f68181-460a-4bd8-9f80-f27144a3b7ac",
+                                                      "step": "group",
+                                                      "name": "Defensive",
+                                                      "children": [
+                                                        {
+                                                          "step": "wt-cash-equal",
+                                                          "id": "2c387cbd-8b04-44a9-8d4e-71e87df85fca",
+                                                          "children": [
+                                                            {
+                                                              "name": "abrdn Physical Gold Shares ETF",
+                                                              "ticker": "SGOL",
+                                                              "has_marketcap": false,
+                                                              "weight": {
+                                                                "num": "70",
+                                                                "den": 100
+                                                              },
+                                                              "id": "a899a0db-4a95-4c99-9a49-e8e186e42842",
+                                                              "exchange": "ARCX",
+                                                              "price": 17.54,
+                                                              "step": "asset",
+                                                              "dollar_volume": 44705706.44
+                                                            },
+                                                            {
+                                                              "name": "VanEck IG Floating Rate ETF",
+                                                              "ticker": "FLTR",
+                                                              "has_marketcap": false,
+                                                              "id": "88e231b6-d925-4276-8944-d207865467fc",
+                                                              "exchange": "ARCX",
+                                                              "price": 25.25,
+                                                              "step": "asset",
+                                                              "dollar_volume": 26090496.75,
+                                                              "children-count": 0
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "is-else-condition?": false,
+                                                  "rhs-fixed-value?": true,
+                                                  "lhs-fn": "cumulative-return",
+                                                  "lhs-window-days": "365",
+                                                  "lhs-val": "BIL",
+                                                  "id": "4071cee9-7f07-46e8-81fa-5fd8ca66e1af",
+                                                  "comparator": "gte",
+                                                  "rhs-val": "1.75",
+                                                  "step": "if-child"
+                                                },
+                                                {
+                                                  "id": "508a0490-9233-404a-bb74-1f7356d69ceb",
+                                                  "step": "if-child",
+                                                  "is-else-condition?": true,
+                                                  "children": [
+                                                    {
+                                                      "id": "fe4e2444-0adc-4b72-8e1e-bf03346752f8",
+                                                      "step": "wt-cash-equal",
+                                                      "children": [
+                                                        {
+                                                          "id": "ec1d8853-200c-4f3a-8783-d638a908ec6b",
+                                                          "step": "group",
+                                                          "name": "Offensive",
+                                                          "children": [
+                                                            {
+                                                              "step": "wt-cash-equal",
+                                                              "id": "f6c8806e-a041-42b8-8f69-c617e6c7a263",
+                                                              "children": [
+                                                                {
+                                                                  "name": "Schwab US Dividend Equity ETF",
+                                                                  "ticker": "SCHD",
+                                                                  "has_marketcap": false,
+                                                                  "id": "1a8e0b99-004e-49e5-80dc-c7a8d0bff424",
+                                                                  "exchange": "ARCX",
+                                                                  "price": 72.84,
+                                                                  "step": "asset",
+                                                                  "dollar_volume": 272118367.08
+                                                                },
+                                                                {
+                                                                  "name": "Cambria Shareholder Yield ETF",
+                                                                  "ticker": "SYLD",
+                                                                  "has_marketcap": false,
+                                                                  "id": "5aed0d79-0e32-4308-b530-46a3aa72f88d",
+                                                                  "exchange": "BATS",
+                                                                  "price": 61.25,
+                                                                  "step": "asset",
+                                                                  "dollar_volume": 3075485
+                                                                },
+                                                                {
+                                                                  "name": "Invesco S&P SmallCap 600 Revenue ETF",
+                                                                  "ticker": "RWJ",
+                                                                  "has_marketcap": false,
+                                                                  "id": "9b91ca24-96b8-40b4-8716-e7a54faee62f",
+                                                                  "exchange": "ARCX",
+                                                                  "price": 115.45,
+                                                                  "step": "asset",
+                                                                  "dollar_volume": 10178072
+                                                                },
+                                                                {
+                                                                  "name": "Invesco S&P 500 GARP ETF",
+                                                                  "ticker": "SPGP",
+                                                                  "has_marketcap": false,
+                                                                  "id": "c19608e4-2e34-4dcc-990f-32b8471b7456",
+                                                                  "exchange": "ARCX",
+                                                                  "price": 84.58,
+                                                                  "step": "asset",
+                                                                  "dollar_volume": 22054996.22
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "rebalance-corridor-width": 0.05
+}

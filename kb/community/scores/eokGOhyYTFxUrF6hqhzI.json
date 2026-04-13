@@ -1,0 +1,186 @@
+{
+  "id": "eokGOhyYTFxUrF6hqhzI",
+  "step": "root",
+  "name": "Copy of Simple Regime Switching and Dip Buying with 2X SPY V0.3 | 20.7% AR | 22.3% DD | 02/2007-09/2022",
+  "description": "V0.1 Original to Dereck Nielsen. V0.2 by dandawson switched out dip buying SPY to dip buying SSO. V0.3 by HinnomTX changed rebalance from daily to 10% threshold. Added SSO, TLT, GLD, QLD for > SMA200, added GLD and UUP for < SMA200",
+  "rebalance": "none",
+  "children": [
+    {
+      "id": "533ca08d-850e-4a92-aa3e-f6d61ab035fd",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "weight": {
+            "num": 100,
+            "den": 100
+          },
+          "id": "059fc043-90c0-45d8-b572-59dd1727771c",
+          "step": "if",
+          "children": [
+            {
+              "children": [
+                {
+                  "id": "9897622b-e86a-4c15-995d-d6b559fb3c5d",
+                  "step": "group",
+                  "name": "Go Long 2X SPY and QQQ, Bonds, Gold",
+                  "children": [
+                    {
+                      "step": "wt-cash-equal",
+                      "id": "be054630-3a5f-46cc-9a0b-79bd5dd42283",
+                      "children": [
+                        {
+                          "name": "ProShares Ultra S&P 500",
+                          "ticker": "SSO",
+                          "has_marketcap": false,
+                          "weight": {
+                            "num": "50",
+                            "den": 100
+                          },
+                          "id": "e2807c4b-2379-48b7-ae9f-b9e5c4b7b64f",
+                          "exchange": "ARCX",
+                          "price": 46.49,
+                          "step": "asset",
+                          "dollar_volume": 467033751.53000003
+                        },
+                        {
+                          "name": "iShares 20+ Year Treasury Bond ETF",
+                          "ticker": "TLT",
+                          "has_marketcap": false,
+                          "weight": {
+                            "num": "25",
+                            "den": 100
+                          },
+                          "id": "c230659b-6bc8-4884-b3c6-2f4de8347de3",
+                          "exchange": "XNAS",
+                          "price": 107.07,
+                          "step": "asset",
+                          "dollar_volume": 1980968346.33,
+                          "children-count": 0
+                        },
+                        {
+                          "name": "SPDR Gold Shares",
+                          "ticker": "GLD",
+                          "has_marketcap": false,
+                          "weight": {
+                            "num": 25,
+                            "den": 100
+                          },
+                          "id": "bb48b6d0-2a5e-41c4-a209-0dfa260ff8fc",
+                          "exchange": "ARCX",
+                          "price": 155.84,
+                          "step": "asset",
+                          "dollar_volume": 1046944963.84
+                        },
+                        {
+                          "name": "ProShares Ultra QQQ",
+                          "ticker": "QLD",
+                          "has_marketcap": false,
+                          "id": "32e83b38-e865-4da2-ad24-320a87636ddf",
+                          "exchange": "ARCX",
+                          "price": 42.99,
+                          "step": "asset",
+                          "dollar_volume": 185940476.97
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "rhs-fn": "moving-average-price",
+              "is-else-condition?": false,
+              "lhs-fn": "current-price",
+              "rhs-window-days": "200",
+              "lhs-val": "SPY",
+              "id": "6e9866cf-a969-4140-bd0c-19b9b1d3d698",
+              "comparator": "gt",
+              "rhs-val": "SPY",
+              "step": "if-child"
+            },
+            {
+              "id": "39fe96cd-9c6c-4fe3-8f40-9d4ddd81430e",
+              "step": "if-child",
+              "is-else-condition?": true,
+              "children": [
+                {
+                  "id": "f18242db-a0b6-4659-a26f-02cc7d4623a9",
+                  "step": "wt-cash-equal",
+                  "children": [
+                    {
+                      "id": "4af89c93-32e2-4c7d-b8f8-5339de10818a",
+                      "step": "if",
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "name": "ProShares Ultra S&P 500",
+                              "ticker": "SSO",
+                              "has_marketcap": false,
+                              "id": "ae72c5c5-14df-4e7a-a4a6-ab03085042a5",
+                              "exchange": "ARCX",
+                              "price": 46.49,
+                              "step": "asset",
+                              "dollar_volume": 467033751.53000003,
+                              "children-count": 0
+                            }
+                          ],
+                          "is-else-condition?": false,
+                          "rhs-fixed-value?": true,
+                          "lhs-fn": "relative-strength-index",
+                          "lhs-window-days": "10",
+                          "lhs-val": "SPY",
+                          "id": "2c97ef98-0a8d-477f-8068-225fe4b4bbd2",
+                          "comparator": "lt",
+                          "rhs-val": "27",
+                          "step": "if-child"
+                        },
+                        {
+                          "id": "9a555925-17d8-4b5a-b735-7803ab3933b1",
+                          "step": "if-child",
+                          "is-else-condition?": true,
+                          "children": [
+                            {
+                              "name": "Consumer Staples Select Sector SPDR Fund",
+                              "ticker": "XLP",
+                              "has_marketcap": false,
+                              "id": "2534370a-1427-44cb-aa51-36defea588e8",
+                              "exchange": "ARCX",
+                              "price": 71.33,
+                              "step": "asset",
+                              "dollar_volume": 959259963.34,
+                              "children-count": 0
+                            },
+                            {
+                              "name": "SPDR Gold Shares",
+                              "ticker": "GLD",
+                              "has_marketcap": false,
+                              "id": "7e2f1dd7-eebe-4f15-b272-99893f12a11e",
+                              "exchange": "ARCX",
+                              "price": 155.84,
+                              "step": "asset",
+                              "dollar_volume": 1046944963.84
+                            },
+                            {
+                              "name": "Invesco DB US Dollar Index Bullish Fund",
+                              "ticker": "UUP",
+                              "has_marketcap": false,
+                              "id": "dfea1fbb-b8c9-4f28-ae82-220cacd2cf29",
+                              "exchange": "ARCX",
+                              "price": 29.4,
+                              "step": "asset",
+                              "dollar_volume": 106314663
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "rebalance-corridor-width": 0.15
+}

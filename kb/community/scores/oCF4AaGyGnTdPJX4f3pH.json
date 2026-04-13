@@ -1,0 +1,945 @@
+{
+  "id": "oCF4AaGyGnTdPJX4f3pH",
+  "step": "root",
+  "name": "Copy of SOXL Growth v2.4.5 RL",
+  "description": "OOS Mar 1 2023",
+  "rebalance": "daily",
+  "children": [
+    {
+      "id": "a568e9f9-53bf-4b7b-8399-d8e6ecb24310",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "id": "b6d6ad85-dee9-4de0-8a90-31bae62276b1",
+          "step": "if",
+          "children": [
+            {
+              "children": [
+                {
+                  "id": "854ba8bf-7737-432f-889e-923c0c42dead",
+                  "step": "wt-cash-equal",
+                  "children": [
+                    {
+                      "weight": {
+                        "num": 100,
+                        "den": 100
+                      },
+                      "id": "a60265f2-f2ef-4710-8409-3c507208adf6",
+                      "step": "if",
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "id": "41adc6bc-098b-4cd2-86d1-9cdd14ced9be",
+                              "step": "wt-cash-equal",
+                              "children": [
+                                {
+                                  "id": "25faa1ee-02a7-49b0-a4c0-54589834451a",
+                                  "step": "if",
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "id": "d51ac7bd-0948-4102-a0e6-a5c62ca3ee4c",
+                                          "step": "wt-cash-equal",
+                                          "children": [
+                                            {
+                                              "select?": true,
+                                              "children": [
+                                                {
+                                                  "name": "Direxion Daily Semiconductor Bull 3x Shares",
+                                                  "ticker": "SOXL",
+                                                  "has_marketcap": false,
+                                                  "id": "6770cb6a-c55e-4e12-a086-b3b8fc09680b",
+                                                  "exchange": "ARCX",
+                                                  "price": 14.05,
+                                                  "step": "asset",
+                                                  "dollar_volume": 1807620944.75
+                                                },
+                                                {
+                                                  "name": "ProShares UltraPro QQQ",
+                                                  "ticker": "TQQQ",
+                                                  "has_marketcap": false,
+                                                  "id": "1a03c661-15e0-4223-a0c3-3fcfd3e5a827",
+                                                  "exchange": "XNAS",
+                                                  "price": 20.88,
+                                                  "step": "asset",
+                                                  "dollar_volume": 6574227293.5199995
+                                                },
+                                                {
+                                                  "name": "Direxion Daily S&P 500 Bull 3x Shares",
+                                                  "ticker": "SPXL",
+                                                  "has_marketcap": false,
+                                                  "id": "4824c710-b153-4715-8605-df5f593cc080",
+                                                  "exchange": "ARCX",
+                                                  "price": 61.59,
+                                                  "step": "asset",
+                                                  "dollar_volume": 1762987759.02
+                                                }
+                                              ],
+                                              "select-fn": "top",
+                                              "select-n": "2",
+                                              "sort-by-fn": "cumulative-return",
+                                              "sort-by-window-days": 21,
+                                              "id": "37eeac2b-4d7d-4861-96b2-96ef81879dea",
+                                              "sort-by?": true,
+                                              "step": "filter"
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "is-else-condition?": false,
+                                      "rhs-fixed-value?": true,
+                                      "lhs-fn": "standard-deviation-return",
+                                      "lhs-window-days": "100",
+                                      "lhs-val": "TQQQ",
+                                      "id": "993ce064-6cab-4f95-bb1d-96f1992a2290",
+                                      "comparator": "lte",
+                                      "rhs-val": "3.8",
+                                      "step": "if-child"
+                                    },
+                                    {
+                                      "id": "e3e31ca5-002f-47f7-9e6a-cec0c08d8ff8",
+                                      "step": "if-child",
+                                      "is-else-condition?": true,
+                                      "children": [
+                                        {
+                                          "id": "dd94aed4-eac3-4a77-8f66-4e2d7b718b1a",
+                                          "step": "wt-cash-equal",
+                                          "children": [
+                                            {
+                                              "weight": {
+                                                "num": 100,
+                                                "den": 100
+                                              },
+                                              "id": "ce110c64-e0f9-469d-b2ce-ef85206de88f",
+                                              "step": "if",
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "id": "481bd166-6c49-4bda-a368-0ec868af9bcc",
+                                                      "step": "wt-cash-equal",
+                                                      "children": [
+                                                        {
+                                                          "id": "6077ca73-f43d-4ef8-9944-ed6aa9e85b5d",
+                                                          "step": "if",
+                                                          "children": [
+                                                            {
+                                                              "children": [
+                                                                {
+                                                                  "name": "Direxion Daily Semiconductor Bear 3x Shares",
+                                                                  "ticker": "SOXS",
+                                                                  "has_marketcap": false,
+                                                                  "id": "63884e34-8b17-46d0-9c59-1e77236633f9",
+                                                                  "exchange": "ARCX",
+                                                                  "price": 21.32,
+                                                                  "step": "asset",
+                                                                  "dollar_volume": 1184380792.4
+                                                                }
+                                                              ],
+                                                              "is-else-condition?": false,
+                                                              "rhs-fixed-value?": true,
+                                                              "lhs-fn": "standard-deviation-return",
+                                                              "lhs-window-days": "30",
+                                                              "lhs-val": "TQQQ",
+                                                              "id": "e1afd956-9a8a-4a68-b8d5-5c6bb1bc3f54",
+                                                              "comparator": "gte",
+                                                              "rhs-val": "5.8",
+                                                              "step": "if-child"
+                                                            },
+                                                            {
+                                                              "id": "57cdc05f-c533-441a-ad4c-ecf280c31405",
+                                                              "step": "if-child",
+                                                              "is-else-condition?": true,
+                                                              "children": [
+                                                                {
+                                                                  "name": "Direxion Daily S&P 500 Bull 3x Shares",
+                                                                  "ticker": "SPXL",
+                                                                  "has_marketcap": false,
+                                                                  "id": "3b467a70-325a-4fd6-ba81-c188a25c8ebc",
+                                                                  "exchange": "ARCX",
+                                                                  "price": 61.59,
+                                                                  "step": "asset",
+                                                                  "dollar_volume": 1762987759.02,
+                                                                  "children-count": 0
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "is-else-condition?": false,
+                                                  "rhs-fixed-value?": true,
+                                                  "lhs-fn": "relative-strength-index",
+                                                  "lhs-window-days": "30",
+                                                  "lhs-val": "TQQQ",
+                                                  "id": "7a0d6c96-774b-4cbd-8a43-a7dd3140ac9a",
+                                                  "comparator": "gte",
+                                                  "rhs-val": "50",
+                                                  "step": "if-child"
+                                                },
+                                                {
+                                                  "id": "cd084fb0-48ac-4139-bbda-eedcbd9e51ae",
+                                                  "step": "if-child",
+                                                  "is-else-condition?": true,
+                                                  "children": [
+                                                    {
+                                                      "id": "f1264c74-9775-497f-902c-0ffc1ea125c5",
+                                                      "step": "wt-cash-equal",
+                                                      "children": [
+                                                        {
+                                                          "id": "1b11b9b1-3d35-425c-b693-a97cd92ddb80",
+                                                          "step": "if",
+                                                          "children": [
+                                                            {
+                                                              "children": [
+                                                                {
+                                                                  "name": "Direxion Daily Semiconductor Bull 3x Shares",
+                                                                  "ticker": "SOXL",
+                                                                  "has_marketcap": false,
+                                                                  "id": "d82c915c-9b7b-472a-a2bd-8f6aa474a241",
+                                                                  "exchange": "ARCX",
+                                                                  "price": 14.05,
+                                                                  "step": "asset",
+                                                                  "dollar_volume": 1807620944.75
+                                                                }
+                                                              ],
+                                                              "is-else-condition?": false,
+                                                              "rhs-fixed-value?": true,
+                                                              "lhs-fn": "cumulative-return",
+                                                              "lhs-window-days": "8",
+                                                              "lhs-val": "TQQQ",
+                                                              "id": "601448f4-9528-4f36-abdd-c249495b8cab",
+                                                              "comparator": "lte",
+                                                              "rhs-val": "-20",
+                                                              "step": "if-child"
+                                                            },
+                                                            {
+                                                              "id": "f96460d5-a8b9-4beb-acf3-58a5d4a64e58",
+                                                              "step": "if-child",
+                                                              "is-else-condition?": true,
+                                                              "children": [
+                                                                {
+                                                                  "id": "ac0a9a92-94ca-49c2-ad58-e23cae0a7b7e",
+                                                                  "step": "wt-cash-equal",
+                                                                  "children": [
+                                                                    {
+                                                                      "id": "d53e51df-c1d3-405c-8c06-994b49e96347",
+                                                                      "step": "if",
+                                                                      "children": [
+                                                                        {
+                                                                          "children": [
+                                                                            {
+                                                                              "id": "0d6ab3b8-57e5-45ff-a5f5-afa139343be5",
+                                                                              "step": "wt-cash-equal",
+                                                                              "children": [
+                                                                                {
+                                                                                  "select?": true,
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "name": "Direxion Daily 20+ Year Treasury Bear 3x Shares",
+                                                                                      "ticker": "TMV",
+                                                                                      "has_marketcap": false,
+                                                                                      "id": "a7cfdab9-4071-4832-bb7b-1f0f209cfd53",
+                                                                                      "exchange": "ARCX",
+                                                                                      "price": 111.23,
+                                                                                      "step": "asset",
+                                                                                      "dollar_volume": 68229260.61
+                                                                                    },
+                                                                                    {
+                                                                                      "name": "ProShares UltraPro Short QQQ",
+                                                                                      "ticker": "SQQQ",
+                                                                                      "has_marketcap": false,
+                                                                                      "id": "f168aac8-8e32-4ee3-ab60-3e5ef2a81243",
+                                                                                      "exchange": "XNAS",
+                                                                                      "price": 41.08,
+                                                                                      "step": "asset",
+                                                                                      "dollar_volume": 11135127505.32
+                                                                                    },
+                                                                                    {
+                                                                                      "name": "Direxion Daily S&P 500 Bear 3x Shares",
+                                                                                      "ticker": "SPXS",
+                                                                                      "has_marketcap": false,
+                                                                                      "id": "a1400cb7-81f4-4a6d-b5d3-8ed83a7077de",
+                                                                                      "exchange": "ARCX",
+                                                                                      "price": 21.67,
+                                                                                      "step": "asset",
+                                                                                      "dollar_volume": 1234725395.2
+                                                                                    },
+                                                                                    {
+                                                                                      "name": "Direxion Daily S&P 500 Bear 3x Shares",
+                                                                                      "ticker": "SPXS",
+                                                                                      "has_marketcap": false,
+                                                                                      "id": "08f5d400-8bf6-41d5-aa1f-0ea58ee17f2a",
+                                                                                      "exchange": "ARCX",
+                                                                                      "price": 21.67,
+                                                                                      "step": "asset",
+                                                                                      "dollar_volume": 1234725395.2
+                                                                                    }
+                                                                                  ],
+                                                                                  "select-fn": "bottom",
+                                                                                  "select-n": "2",
+                                                                                  "sort-by-fn": "cumulative-return",
+                                                                                  "sort-by-window-days": "3",
+                                                                                  "id": "c4373ff6-fa2c-4527-8ae1-01e0c8468246",
+                                                                                  "sort-by?": true,
+                                                                                  "step": "filter"
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ],
+                                                                          "is-else-condition?": false,
+                                                                          "rhs-fixed-value?": true,
+                                                                          "lhs-fn": "max-drawdown",
+                                                                          "lhs-window-days": "200",
+                                                                          "lhs-val": "TQQQ",
+                                                                          "id": "feec5174-2a67-475f-924a-75b0630415df",
+                                                                          "comparator": "lte",
+                                                                          "rhs-val": "65",
+                                                                          "step": "if-child"
+                                                                        },
+                                                                        {
+                                                                          "id": "e246bd23-8adb-4ace-be45-a12c833c6f85",
+                                                                          "step": "if-child",
+                                                                          "is-else-condition?": true,
+                                                                          "children": [
+                                                                            {
+                                                                              "name": "Direxion Daily Semiconductor Bull 3x Shares",
+                                                                              "ticker": "SOXL",
+                                                                              "has_marketcap": false,
+                                                                              "id": "47c04e48-6e00-4cd0-87af-a75c67dca90f",
+                                                                              "exchange": "ARCX",
+                                                                              "price": 14.05,
+                                                                              "step": "asset",
+                                                                              "dollar_volume": 1807620944.75
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "collapsed?": false
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "is-else-condition?": false,
+                          "rhs-fixed-value?": true,
+                          "lhs-fn": "standard-deviation-return",
+                          "lhs-window-days": "14",
+                          "lhs-val": "TQQQ",
+                          "id": "9e0315b0-da67-465f-a741-d246901cdef1",
+                          "comparator": "lte",
+                          "rhs-val": "18",
+                          "step": "if-child"
+                        },
+                        {
+                          "id": "a5ebc2f9-ca70-480d-be22-abe900aec105",
+                          "step": "if-child",
+                          "is-else-condition?": true,
+                          "children": [
+                            {
+                              "id": "586501bb-4d28-4fca-add2-0f62331a0509",
+                              "step": "wt-cash-equal",
+                              "children": [
+                                {
+                                  "id": "527daad8-acbd-4c0a-bc67-69c1bdd9d873",
+                                  "step": "if",
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "id": "f55b797d-74b5-4803-96f5-e717be9ff084",
+                                          "step": "wt-cash-equal",
+                                          "children": [
+                                            {
+                                              "select?": true,
+                                              "children": [
+                                                {
+                                                  "name": "Direxion Daily 20+ Year Treasury Bear 3x Shares",
+                                                  "ticker": "TMV",
+                                                  "has_marketcap": false,
+                                                  "id": "8c4ea49a-486d-4faf-aee8-851399b723fa",
+                                                  "exchange": "ARCX",
+                                                  "price": 111.23,
+                                                  "step": "asset",
+                                                  "dollar_volume": 68229260.61
+                                                },
+                                                {
+                                                  "name": "ProShares UltraPro Short QQQ",
+                                                  "ticker": "SQQQ",
+                                                  "has_marketcap": false,
+                                                  "id": "e42132fd-760f-47d9-bf35-a227fc55fa02",
+                                                  "exchange": "XNAS",
+                                                  "price": 41.08,
+                                                  "step": "asset",
+                                                  "dollar_volume": 11135127505.32
+                                                },
+                                                {
+                                                  "name": "Direxion Daily S&P 500 Bear 3x Shares",
+                                                  "ticker": "SPXS",
+                                                  "has_marketcap": false,
+                                                  "id": "d728cad3-cf81-4715-834c-aa51b1dc9705",
+                                                  "exchange": "ARCX",
+                                                  "price": 21.67,
+                                                  "step": "asset",
+                                                  "dollar_volume": 1234725395.2
+                                                },
+                                                {
+                                                  "name": "Direxion Daily S&P 500 Bear 3x Shares",
+                                                  "ticker": "SPXS",
+                                                  "has_marketcap": false,
+                                                  "id": "f41caafb-7205-4645-8e00-53c7e9687d60",
+                                                  "exchange": "ARCX",
+                                                  "price": 21.67,
+                                                  "step": "asset",
+                                                  "dollar_volume": 1234725395.2
+                                                }
+                                              ],
+                                              "select-fn": "bottom",
+                                              "select-n": "2",
+                                              "sort-by-fn": "cumulative-return",
+                                              "sort-by-window-days": "3",
+                                              "id": "ce7bc2a8-2d2f-4dc1-a5cb-eeeed12a886e",
+                                              "sort-by?": true,
+                                              "step": "filter"
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "rhs-fn": "relative-strength-index",
+                                      "is-else-condition?": false,
+                                      "rhs-fixed-value?": true,
+                                      "lhs-fn": "cumulative-return",
+                                      "rhs-window-days": "30",
+                                      "lhs-window-days": "30",
+                                      "lhs-val": "TQQQ",
+                                      "id": "871d167d-afa8-4b59-b5e7-1a8312972653",
+                                      "comparator": "lte",
+                                      "rhs-val": "-10",
+                                      "step": "if-child"
+                                    },
+                                    {
+                                      "id": "0cdf0294-b4f4-428d-8be9-31f39134a9c7",
+                                      "step": "if-child",
+                                      "is-else-condition?": true,
+                                      "children": [
+                                        {
+                                          "id": "48ed6510-9c52-40c7-8d7e-d02f61e6a7c7",
+                                          "step": "wt-cash-equal",
+                                          "children": [
+                                            {
+                                              "select?": true,
+                                              "children": [
+                                                {
+                                                  "name": "Direxion Daily Semiconductor Bull 3x Shares",
+                                                  "ticker": "SOXL",
+                                                  "has_marketcap": false,
+                                                  "id": "f9c74f79-7cc7-4f4d-adec-13678ede2b0c",
+                                                  "exchange": "ARCX",
+                                                  "price": 14.05,
+                                                  "step": "asset",
+                                                  "dollar_volume": 1807620944.75
+                                                },
+                                                {
+                                                  "name": "ProShares UltraPro QQQ",
+                                                  "ticker": "TQQQ",
+                                                  "has_marketcap": false,
+                                                  "id": "bc9a741c-bfe6-498e-ba08-6d4323e46f21",
+                                                  "exchange": "XNAS",
+                                                  "price": 20.88,
+                                                  "step": "asset",
+                                                  "dollar_volume": 6574227293.5199995
+                                                },
+                                                {
+                                                  "name": "Direxion Daily 20+ Year Treasury Bull 3X Shares",
+                                                  "ticker": "TMF",
+                                                  "has_marketcap": false,
+                                                  "id": "8853233c-33b7-4ead-a4f7-c63c79439ec4",
+                                                  "exchange": "ARCX",
+                                                  "price": 8.84,
+                                                  "step": "asset",
+                                                  "dollar_volume": 397077383.04
+                                                },
+                                                {
+                                                  "name": "Direxion Daily S&P 500 Bull 3x Shares",
+                                                  "ticker": "SPXL",
+                                                  "has_marketcap": false,
+                                                  "id": "f810eb0c-4385-4488-8231-70034fd40a0c",
+                                                  "exchange": "ARCX",
+                                                  "price": 61.59,
+                                                  "step": "asset",
+                                                  "dollar_volume": 1762987759.02
+                                                }
+                                              ],
+                                              "select-fn": "top",
+                                              "select-n": "3",
+                                              "sort-by-fn": "cumulative-return",
+                                              "sort-by-window-days": 21,
+                                              "id": "2a0b9130-a19a-4034-8493-013fe457cf78",
+                                              "sort-by?": true,
+                                              "step": "filter"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "collapsed?": false
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "is-else-condition?": false,
+              "rhs-fixed-value?": true,
+              "lhs-fn": "max-drawdown",
+              "lhs-window-days": "60",
+              "lhs-val": "SOXL",
+              "id": "700ee956-20c8-4977-b558-4256553f66cd",
+              "comparator": "gte",
+              "rhs-val": "50",
+              "step": "if-child"
+            },
+            {
+              "id": "7ae5cfcc-84ac-49f2-b05e-8a236bab6b69",
+              "step": "if-child",
+              "is-else-condition?": true,
+              "children": [
+                {
+                  "id": "33b3371a-a4ff-4967-bb8e-0882c549870c",
+                  "step": "wt-cash-equal",
+                  "children": [
+                    {
+                      "weight": {
+                        "num": 100,
+                        "den": 100
+                      },
+                      "id": "abff4062-1314-4659-afed-d0e1bf814bbc",
+                      "step": "if",
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "id": "d79fb2d5-1f4a-4030-9bbc-7685a5685705",
+                              "step": "wt-cash-equal",
+                              "children": [
+                                {
+                                  "id": "9761f961-e848-46d3-ab79-2b512c265bd0",
+                                  "step": "if",
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "name": "Direxion Daily Semiconductor Bull 3x Shares",
+                                          "ticker": "SOXL",
+                                          "has_marketcap": false,
+                                          "id": "7cdfcd10-9a71-4da0-a597-309fd7bc82ae",
+                                          "exchange": "ARCX",
+                                          "price": 15.5,
+                                          "step": "asset",
+                                          "dollar_volume": 1284500298.5
+                                        }
+                                      ],
+                                      "is-else-condition?": false,
+                                      "rhs-fixed-value?": true,
+                                      "lhs-fn": "standard-deviation-return",
+                                      "lhs-window-days": "105",
+                                      "lhs-val": "SOXL",
+                                      "id": "3fc90451-9d56-498c-b1fe-27589e486b3e",
+                                      "comparator": "lte",
+                                      "rhs-val": "4.9226",
+                                      "step": "if-child"
+                                    },
+                                    {
+                                      "id": "07d5ef33-ef06-4227-8b6d-d2a325889ae2",
+                                      "step": "if-child",
+                                      "is-else-condition?": true,
+                                      "children": [
+                                        {
+                                          "id": "308ede5a-89de-4053-9479-cabe59098a69",
+                                          "step": "wt-cash-equal",
+                                          "children": [
+                                            {
+                                              "weight": {
+                                                "num": 100,
+                                                "den": 100
+                                              },
+                                              "id": "ac876dd0-7ba6-4541-9141-2492c78eacfb",
+                                              "step": "if",
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "id": "c9cab02c-6952-4b5f-87f2-9b34fc5f77ce",
+                                                      "step": "wt-cash-equal",
+                                                      "children": [
+                                                        {
+                                                          "id": "87729255-741c-4ce2-9f73-f3df2b2eacca",
+                                                          "step": "if",
+                                                          "children": [
+                                                            {
+                                                              "children": [
+                                                                {
+                                                                  "name": "Direxion Daily Semiconductor Bear 3x Shares",
+                                                                  "ticker": "SOXS",
+                                                                  "has_marketcap": false,
+                                                                  "id": "d949f32c-d7cd-4bd1-8ae5-87c97f4cfdfa",
+                                                                  "exchange": "ARCX",
+                                                                  "price": 23.65,
+                                                                  "step": "asset",
+                                                                  "dollar_volume": 970744309.15,
+                                                                  "children-count": 0
+                                                                }
+                                                              ],
+                                                              "is-else-condition?": false,
+                                                              "rhs-fixed-value?": true,
+                                                              "lhs-fn": "standard-deviation-return",
+                                                              "lhs-window-days": "30",
+                                                              "lhs-val": "SOXL",
+                                                              "id": "3f1a5d32-5d48-45cd-b811-92c008058fd4",
+                                                              "comparator": "gte",
+                                                              "rhs-val": "5.4135",
+                                                              "step": "if-child"
+                                                            },
+                                                            {
+                                                              "id": "13c6cd53-beb6-4406-b03d-b53eda4af404",
+                                                              "step": "if-child",
+                                                              "is-else-condition?": true,
+                                                              "children": [
+                                                                {
+                                                                  "id": "080ee163-1612-4feb-99df-dae1d7d1fdc6",
+                                                                  "step": "wt-cash-equal",
+                                                                  "children": [
+                                                                    {
+                                                                      "select?": true,
+                                                                      "children": [
+                                                                        {
+                                                                          "name": "Direxion Daily Semiconductor Bull 3x Shares",
+                                                                          "ticker": "SOXL",
+                                                                          "has_marketcap": false,
+                                                                          "id": "33534fc9-ed63-4111-96e5-e2deb35a5d9b",
+                                                                          "exchange": "ARCX",
+                                                                          "price": 14.05,
+                                                                          "step": "asset",
+                                                                          "dollar_volume": 1807620944.75
+                                                                        },
+                                                                        {
+                                                                          "name": "Direxion Daily S&P 500 Bull 3x Shares",
+                                                                          "ticker": "SPXL",
+                                                                          "has_marketcap": false,
+                                                                          "id": "94d87abb-ac38-47b3-9f27-f0e28e97a38d",
+                                                                          "exchange": "ARCX",
+                                                                          "price": 61.59,
+                                                                          "step": "asset",
+                                                                          "dollar_volume": 1762987759.02
+                                                                        },
+                                                                        {
+                                                                          "name": "ProShares UltraPro QQQ",
+                                                                          "ticker": "TQQQ",
+                                                                          "has_marketcap": false,
+                                                                          "id": "939a0c5c-5250-480e-965c-ac9fe7170508",
+                                                                          "exchange": "XNAS",
+                                                                          "price": 20.88,
+                                                                          "step": "asset",
+                                                                          "dollar_volume": 6574227293.5199995
+                                                                        }
+                                                                      ],
+                                                                      "select-fn": "top",
+                                                                      "select-n": "2",
+                                                                      "sort-by-fn": "cumulative-return",
+                                                                      "sort-by-window-days": 21,
+                                                                      "id": "f69d6e21-c55d-490e-9f61-644f727b875b",
+                                                                      "sort-by?": true,
+                                                                      "step": "filter"
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "is-else-condition?": false,
+                                                  "rhs-fixed-value?": true,
+                                                  "lhs-fn": "relative-strength-index",
+                                                  "lhs-window-days": "30",
+                                                  "lhs-val": "SOXL",
+                                                  "id": "00add251-b856-4e91-9729-8dd783bd18da",
+                                                  "comparator": "gte",
+                                                  "rhs-val": "57.49",
+                                                  "step": "if-child"
+                                                },
+                                                {
+                                                  "id": "fa574ece-2280-4da7-bda4-3f696daa79c4",
+                                                  "step": "if-child",
+                                                  "is-else-condition?": true,
+                                                  "children": [
+                                                    {
+                                                      "id": "a850a741-c2d3-47ab-8e8c-e1e65bb3b3d9",
+                                                      "step": "wt-cash-equal",
+                                                      "children": [
+                                                        {
+                                                          "id": "d7d6a410-6a69-48ec-8926-74fb764630f9",
+                                                          "step": "if",
+                                                          "children": [
+                                                            {
+                                                              "children": [
+                                                                {
+                                                                  "name": "Direxion Daily Semiconductor Bull 3x Shares",
+                                                                  "ticker": "SOXL",
+                                                                  "has_marketcap": false,
+                                                                  "id": "a0dcd6c2-70db-4886-a043-74712f8bb288",
+                                                                  "exchange": "ARCX",
+                                                                  "price": 15.5,
+                                                                  "step": "asset",
+                                                                  "dollar_volume": 1284500298.5
+                                                                }
+                                                              ],
+                                                              "is-else-condition?": false,
+                                                              "rhs-fixed-value?": true,
+                                                              "lhs-fn": "cumulative-return",
+                                                              "lhs-window-days": "32",
+                                                              "lhs-val": "SOXL",
+                                                              "id": "4ba433d8-1459-45ba-a0b4-6ffd0acc1028",
+                                                              "comparator": "lte",
+                                                              "rhs-val": "-12",
+                                                              "step": "if-child"
+                                                            },
+                                                            {
+                                                              "id": "fab86362-83dd-412e-8e46-fdf248a5bb01",
+                                                              "step": "if-child",
+                                                              "is-else-condition?": true,
+                                                              "children": [
+                                                                {
+                                                                  "id": "598eb35c-7cc0-49f7-9ffb-5cc99bf73daa",
+                                                                  "step": "wt-cash-equal",
+                                                                  "children": [
+                                                                    {
+                                                                      "id": "767c7f7c-3d1d-46e5-9ce4-d13f973d0b2f",
+                                                                      "step": "if",
+                                                                      "children": [
+                                                                        {
+                                                                          "children": [
+                                                                            {
+                                                                              "name": "Direxion Daily Semiconductor Bear 3x Shares",
+                                                                              "ticker": "SOXS",
+                                                                              "has_marketcap": false,
+                                                                              "id": "0d6949b9-95db-4356-95b4-da3c7327a859",
+                                                                              "exchange": "ARCX",
+                                                                              "price": 23.65,
+                                                                              "step": "asset",
+                                                                              "dollar_volume": 970744309.15,
+                                                                              "children-count": 0
+                                                                            }
+                                                                          ],
+                                                                          "is-else-condition?": false,
+                                                                          "rhs-fixed-value?": true,
+                                                                          "lhs-fn": "max-drawdown",
+                                                                          "lhs-window-days": "250",
+                                                                          "lhs-val": "SOXL",
+                                                                          "id": "bd6593ab-3a8a-456a-9b3a-ae8ef0eca2dd",
+                                                                          "comparator": "lte",
+                                                                          "rhs-val": "71",
+                                                                          "step": "if-child"
+                                                                        },
+                                                                        {
+                                                                          "id": "1a1094d2-11bb-473b-bb03-e31b4073a2b8",
+                                                                          "step": "if-child",
+                                                                          "is-else-condition?": true,
+                                                                          "children": [
+                                                                            {
+                                                                              "name": "Direxion Daily Semiconductor Bull 3x Shares",
+                                                                              "ticker": "SOXL",
+                                                                              "has_marketcap": false,
+                                                                              "id": "3d03580f-503b-4d8c-8153-34267ba1aa3c",
+                                                                              "exchange": "ARCX",
+                                                                              "price": 15.5,
+                                                                              "step": "asset",
+                                                                              "dollar_volume": 1284500298.5
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "collapsed?": false
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "is-else-condition?": false,
+                          "rhs-fixed-value?": true,
+                          "lhs-fn": "relative-strength-index",
+                          "lhs-window-days": "32",
+                          "lhs-val": "SOXL",
+                          "id": "f5596550-6b58-4fbc-a306-4446d284f521",
+                          "comparator": "lte",
+                          "rhs-val": "62.1995",
+                          "step": "if-child"
+                        },
+                        {
+                          "id": "8bc8392d-c8fd-4f27-a85c-0ed863315fc9",
+                          "step": "if-child",
+                          "is-else-condition?": true,
+                          "children": [
+                            {
+                              "id": "deac4d06-9b5a-4c0f-8da8-da25954c69ff",
+                              "step": "wt-cash-equal",
+                              "children": [
+                                {
+                                  "id": "a25b58a3-15b7-49dd-b532-ebeef1ff1e4e",
+                                  "step": "if",
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "name": "Direxion Daily Semiconductor Bear 3x Shares",
+                                          "ticker": "SOXS",
+                                          "has_marketcap": false,
+                                          "id": "bd23f6a9-3102-4c70-a8b6-68d33cfac220",
+                                          "exchange": "ARCX",
+                                          "price": 23.65,
+                                          "step": "asset",
+                                          "dollar_volume": 970744309.15,
+                                          "children-count": 0
+                                        }
+                                      ],
+                                      "rhs-fn": "relative-strength-index",
+                                      "is-else-condition?": false,
+                                      "rhs-fixed-value?": true,
+                                      "lhs-fn": "relative-strength-index",
+                                      "rhs-window-days": "30",
+                                      "lhs-window-days": "32",
+                                      "lhs-val": "SOXL",
+                                      "id": "bfc752c9-5f2e-4cd3-a434-0b73df89a61a",
+                                      "comparator": "gte",
+                                      "rhs-val": "50",
+                                      "step": "if-child"
+                                    },
+                                    {
+                                      "id": "2a536b0b-e048-4806-98f5-282f75b41384",
+                                      "step": "if-child",
+                                      "is-else-condition?": true,
+                                      "children": [
+                                        {
+                                          "id": "4eb624e5-861b-4216-9d83-5cff3c395b07",
+                                          "step": "wt-cash-equal",
+                                          "children": [
+                                            {
+                                              "select?": true,
+                                              "children": [
+                                                {
+                                                  "name": "Direxion Daily Semiconductor Bull 3x Shares",
+                                                  "ticker": "SOXL",
+                                                  "has_marketcap": false,
+                                                  "id": "368a5aaa-bdd5-4e61-b66a-61c1d04481f0",
+                                                  "exchange": "ARCX",
+                                                  "price": 14.05,
+                                                  "step": "asset",
+                                                  "dollar_volume": 1807620944.75
+                                                },
+                                                {
+                                                  "name": "ProShares UltraPro QQQ",
+                                                  "ticker": "TQQQ",
+                                                  "has_marketcap": false,
+                                                  "id": "0b523b22-063d-42ed-9a36-f75f1ba6a094",
+                                                  "exchange": "XNAS",
+                                                  "price": 20.88,
+                                                  "step": "asset",
+                                                  "dollar_volume": 6574227293.5199995
+                                                },
+                                                {
+                                                  "name": "Direxion Daily 20+ Year Treasury Bull 3X Shares",
+                                                  "ticker": "TMF",
+                                                  "has_marketcap": false,
+                                                  "id": "437af13a-1d15-468f-9391-0ce43aefe228",
+                                                  "exchange": "ARCX",
+                                                  "price": 8.84,
+                                                  "step": "asset",
+                                                  "dollar_volume": 397077383.04
+                                                },
+                                                {
+                                                  "name": "Direxion Daily S&P 500 Bull 3x Shares",
+                                                  "ticker": "SPXL",
+                                                  "has_marketcap": false,
+                                                  "id": "8f0b50f4-2e8a-4921-9124-728199936505",
+                                                  "exchange": "ARCX",
+                                                  "price": 61.59,
+                                                  "step": "asset",
+                                                  "dollar_volume": 1762987759.02
+                                                }
+                                              ],
+                                              "select-fn": "top",
+                                              "select-n": "3",
+                                              "sort-by-fn": "cumulative-return",
+                                              "sort-by-window-days": 21,
+                                              "id": "42dfbd2e-a533-473e-a99c-226a0ff78a01",
+                                              "sort-by?": true,
+                                              "step": "filter"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "collapsed?": false
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

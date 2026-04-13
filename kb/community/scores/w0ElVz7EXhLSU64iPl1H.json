@@ -1,0 +1,107 @@
+{
+  "id": "w0ElVz7EXhLSU64iPl1H",
+  "step": "root",
+  "name": "Copy of Dip Buying Tech Below 10d RSI of 30 using XLP as the \"cash\" position and XLK as the \"tech\" etf to backtest through the dot com crash",
+  "description": "Backtest to April 26th 1999",
+  "rebalance": "daily",
+  "children": [
+    {
+      "id": "747061a6-e397-4002-b352-336b819172ca",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "id": "3d6329e2-30f9-4c7c-831b-660cf10c5d16",
+          "step": "if",
+          "children": [
+            {
+              "children": [
+                {
+                  "name": "SPDR S&P 500 ETF Trust",
+                  "ticker": "SPY",
+                  "has_marketcap": false,
+                  "id": "46be8668-0dc3-484a-b7ad-89fdb17fcb9f",
+                  "exchange": "ARCX",
+                  "price": 377.09,
+                  "step": "asset",
+                  "dollar_volume": 32875318217.07
+                }
+              ],
+              "rhs-fn": "moving-average-price",
+              "is-else-condition?": false,
+              "lhs-fn": "current-price",
+              "rhs-window-days": "200",
+              "lhs-val": "SPY",
+              "id": "a4817647-9242-4473-b65d-efab8bf3c57b",
+              "comparator": "gt",
+              "rhs-val": "SPY",
+              "step": "if-child"
+            },
+            {
+              "id": "48644855-21aa-4bdd-b360-cef317337c39",
+              "step": "if-child",
+              "is-else-condition?": true,
+              "children": [
+                {
+                  "id": "a6ea1e42-6b44-448d-a8bc-2b3f5088873c",
+                  "step": "wt-cash-equal",
+                  "children": [
+                    {
+                      "weight": {
+                        "num": 100,
+                        "den": 100
+                      },
+                      "id": "32a1d3c9-1380-465d-a6c1-3b165b0c1a40",
+                      "step": "if",
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "name": "Technology Select Sector SPDR Fund",
+                              "ticker": "XLK",
+                              "has_marketcap": false,
+                              "id": "2e3af66c-4f08-4d61-93ba-7cfe36b891c9",
+                              "exchange": "ARCX",
+                              "price": 126.99,
+                              "step": "asset",
+                              "dollar_volume": 923892124.86
+                            }
+                          ],
+                          "is-else-condition?": false,
+                          "rhs-fixed-value?": true,
+                          "lhs-fn": "relative-strength-index",
+                          "lhs-window-days": "10",
+                          "lhs-val": "QQQ",
+                          "id": "8a80beaf-69c1-4389-af53-3e68eb3d17e2",
+                          "comparator": "lt",
+                          "rhs-val": "30",
+                          "step": "if-child"
+                        },
+                        {
+                          "id": "64587e8a-5738-406f-88a6-fc686b435364",
+                          "step": "if-child",
+                          "is-else-condition?": true,
+                          "children": [
+                            {
+                              "name": "Consumer Staples Select Sector SPDR Fund",
+                              "ticker": "XLP",
+                              "has_marketcap": false,
+                              "id": "7505bceb-05ef-473f-abb8-f7032b86901d",
+                              "exchange": "ARCX",
+                              "price": 68.51,
+                              "step": "asset",
+                              "dollar_volume": 725865779.34
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

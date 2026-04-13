@@ -1,0 +1,269 @@
+{
+  "id": "er9pVe7F4r5XeO7ULgwn",
+  "step": "root",
+  "name": "Copy of The Holy Grail",
+  "description": "",
+  "rebalance": "none",
+  "children": [
+    {
+      "id": "ab210c6b-702a-490a-9e44-d9bc986b9b3e",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "weight": {
+            "num": 100,
+            "den": 100
+          },
+          "id": "5b16ca48-31f1-4daf-9bb5-08ae7b3d4810",
+          "step": "if",
+          "children": [
+            {
+              "children": [
+                {
+                  "id": "1d984286-9b52-4f2d-aa14-0fa7afb29900",
+                  "step": "wt-cash-equal",
+                  "children": [
+                    {
+                      "id": "c946818a-426a-4fb2-b7da-0f0b6b33c891",
+                      "step": "if",
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "name": "ProShares Ultra VIX Short-Term Futures ETF",
+                              "ticker": "UVXY",
+                              "has_marketcap": false,
+                              "id": "ffe4f0d3-546f-4824-abb4-fde675d77559",
+                              "exchange": "BATS",
+                              "price": 13.69,
+                              "step": "asset",
+                              "dollar_volume": 843913560.9399999,
+                              "children-count": 0
+                            }
+                          ],
+                          "is-else-condition?": false,
+                          "rhs-fixed-value?": true,
+                          "lhs-fn": "relative-strength-index",
+                          "lhs-window-days": "10",
+                          "lhs-val": "TQQQ",
+                          "id": "a051272c-aae9-4fe4-af11-d477b1c538c6",
+                          "comparator": "gt",
+                          "rhs-val": "79",
+                          "step": "if-child"
+                        },
+                        {
+                          "id": "d1080862-fafb-4b23-b15b-c11d78fd6ecc",
+                          "step": "if-child",
+                          "is-else-condition?": true,
+                          "children": [
+                            {
+                              "name": "ProShares UltraPro QQQ",
+                              "ticker": "TQQQ",
+                              "has_marketcap": false,
+                              "id": "cc7bced3-b4e1-4f17-96ee-f0d990b6c999",
+                              "exchange": "XNAS",
+                              "price": 32.28,
+                              "step": "asset",
+                              "dollar_volume": 6438152097.4800005
+                            }
+                          ]
+                        }
+                      ],
+                      "weight": {
+                        "num": "80",
+                        "den": 100
+                      }
+                    }
+                  ]
+                }
+              ],
+              "rhs-fn": "moving-average-price",
+              "is-else-condition?": false,
+              "rhs-fixed-value?": false,
+              "lhs-fn": "current-price",
+              "rhs-window-days": "200",
+              "lhs-window-days": "10",
+              "lhs-val": "TQQQ",
+              "id": "b7c5ac6a-4b38-4b8b-863a-85cedafa784c",
+              "comparator": "gt",
+              "rhs-val": "TQQQ",
+              "step": "if-child"
+            },
+            {
+              "id": "e25f95d7-baa6-463c-a627-37d29e9543cb",
+              "step": "if-child",
+              "is-else-condition?": true,
+              "children": [
+                {
+                  "id": "18f90f95-be27-4697-a8c6-7691a7b259ab",
+                  "step": "wt-cash-equal",
+                  "children": [
+                    {
+                      "id": "a574fb1f-11ee-4aa6-99f8-0890f4927f8d",
+                      "step": "if",
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "name": "Direxion Daily Technology Bull 3x Shares",
+                              "ticker": "TECL",
+                              "has_marketcap": false,
+                              "id": "266419d7-3e2d-4c52-a57e-1675f1c3b4e3",
+                              "exchange": "ARCX",
+                              "price": 31.38,
+                              "step": "asset",
+                              "dollar_volume": 155608713
+                            }
+                          ],
+                          "is-else-condition?": false,
+                          "rhs-fixed-value?": true,
+                          "lhs-fn": "relative-strength-index",
+                          "lhs-window-days": "10",
+                          "lhs-val": "TQQQ",
+                          "id": "7ea4a242-a385-4bb2-8213-e49e3f54c8cd",
+                          "comparator": "lt",
+                          "rhs-val": "31",
+                          "step": "if-child"
+                        },
+                        {
+                          "id": "88d5c107-097e-461c-97a6-1855534fa947",
+                          "step": "if-child",
+                          "is-else-condition?": true,
+                          "children": [
+                            {
+                              "id": "12ccc86f-2f61-4d58-aa58-22a21c05c3e1",
+                              "step": "wt-cash-equal",
+                              "children": [
+                                {
+                                  "id": "27dfff00-4a98-4050-ac1a-f697ad4c2588",
+                                  "step": "if",
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "name": "Direxion Daily Semiconductor Bull 3x Shares",
+                                          "ticker": "SOXL",
+                                          "has_marketcap": false,
+                                          "id": "00e232dd-ee1c-40bc-a802-f9e338bcafb8",
+                                          "exchange": "ARCX",
+                                          "price": 16.95,
+                                          "step": "asset",
+                                          "dollar_volume": 1305626803.5
+                                        }
+                                      ],
+                                      "is-else-condition?": false,
+                                      "rhs-fixed-value?": true,
+                                      "lhs-fn": "relative-strength-index",
+                                      "lhs-window-days": "10",
+                                      "lhs-val": "SOXL",
+                                      "id": "04262180-fddc-41e6-92ad-1156aa893d4a",
+                                      "comparator": "lt",
+                                      "rhs-val": "30",
+                                      "step": "if-child"
+                                    },
+                                    {
+                                      "id": "95c48603-a475-4315-8d07-cf6aa7396c54",
+                                      "step": "if-child",
+                                      "is-else-condition?": true,
+                                      "children": [
+                                        {
+                                          "id": "313544d2-c389-4aac-9e2a-81e51e668462",
+                                          "step": "wt-cash-equal",
+                                          "children": [
+                                            {
+                                              "id": "97b2e996-b698-4395-ae44-856c080c9f7e",
+                                              "step": "if",
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "id": "1ad586d6-c368-40b7-bac8-55a90bdc24eb",
+                                                      "step": "wt-cash-equal",
+                                                      "children": [
+                                                        {
+                                                          "select?": true,
+                                                          "children": [
+                                                            {
+                                                              "name": "ProShares UltraPro Short QQQ",
+                                                              "ticker": "SQQQ",
+                                                              "has_marketcap": false,
+                                                              "id": "94624c3d-1131-42cd-acdd-f5e7b222a682",
+                                                              "exchange": "XNAS",
+                                                              "price": 48.15,
+                                                              "step": "asset",
+                                                              "dollar_volume": 4778684066.25
+                                                            },
+                                                            {
+                                                              "name": "Vanguard Short-Term Bond ETF",
+                                                              "ticker": "BSV",
+                                                              "has_marketcap": false,
+                                                              "id": "fa835c5b-f1cc-41fe-9f5c-508410a45c66",
+                                                              "exchange": "ARCX",
+                                                              "price": 76.51,
+                                                              "step": "asset",
+                                                              "dollar_volume": 164303924.33
+                                                            }
+                                                          ],
+                                                          "select-fn": "top",
+                                                          "select-n": "1",
+                                                          "sort-by-fn": "relative-strength-index",
+                                                          "sort-by-window-days": "10",
+                                                          "id": "0ddaa3b9-cb1c-48c1-89d5-a15e5da50cc2",
+                                                          "sort-by?": true,
+                                                          "step": "filter"
+                                                        }
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "rhs-fn": "moving-average-price",
+                                                  "is-else-condition?": false,
+                                                  "lhs-fn": "current-price",
+                                                  "rhs-window-days": "20",
+                                                  "lhs-val": "TQQQ",
+                                                  "id": "362607b9-d5ed-4a5e-bfbf-a6d1f3bc3482",
+                                                  "comparator": "lt",
+                                                  "rhs-val": "TQQQ",
+                                                  "step": "if-child"
+                                                },
+                                                {
+                                                  "id": "9b6da8ff-1b22-4cb2-9295-f9dae11d85d0",
+                                                  "step": "if-child",
+                                                  "is-else-condition?": true,
+                                                  "children": [
+                                                    {
+                                                      "name": "ProShares UltraPro QQQ",
+                                                      "ticker": "TQQQ",
+                                                      "has_marketcap": false,
+                                                      "id": "10cd0864-48a3-4aa9-993e-de1dc26a4d3f",
+                                                      "exchange": "XNAS",
+                                                      "price": 28.46,
+                                                      "step": "asset",
+                                                      "dollar_volume": 4185339154.76
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "rebalance-corridor-width": 0.05
+}

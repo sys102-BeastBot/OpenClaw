@@ -1,0 +1,155 @@
+{
+  "black_swan_catcher": {
+    "2022": {
+      "sharpe": 1.976,
+      "annret": 33.4,
+      "maxdd": 7.82
+    },
+    "2023": {
+      "sharpe": 1.532,
+      "annret": 12.9,
+      "maxdd": 4.06
+    },
+    "2024": {
+      "sharpe": 1.303,
+      "annret": 19.9,
+      "maxdd": 6.57
+    }
+  },
+  "basic_portfolio_2011": {
+    "2022": {
+      "sharpe": 1.892,
+      "annret": 28.1,
+      "maxdd": 5.71
+    },
+    "2023": {
+      "sharpe": 3.133,
+      "annret": 38.0,
+      "maxdd": 3.95
+    },
+    "2024": {
+      "sharpe": 2.906,
+      "annret": 47.4,
+      "maxdd": 3.08
+    }
+  },
+  "safety_town_pop_bots": {
+    "2022": {
+      "sharpe": 2.008,
+      "annret": 53.2,
+      "maxdd": 11.35
+    },
+    "2023": {
+      "sharpe": 0.99,
+      "annret": 12.6,
+      "maxdd": 7.8
+    },
+    "2024": {
+      "sharpe": 1.672,
+      "annret": 36.2,
+      "maxdd": 7.66
+    }
+  },
+  "spy_ftlt_hedged": {
+    "2022": {
+      "sharpe": 3.66,
+      "annret": 115.1,
+      "maxdd": 12.85
+    },
+    "2023": {
+      "sharpe": 5.114,
+      "annret": 82.8,
+      "maxdd": 3.38
+    },
+    "2024": {
+      "sharpe": 4.053,
+      "annret": 64.6,
+      "maxdd": 3.35
+    }
+  },
+  "almost_pure_cash": {
+    "2022": {
+      "sharpe": 5.763,
+      "annret": 23.5,
+      "maxdd": 0.94
+    },
+    "2023": {
+      "sharpe": 6.939,
+      "annret": 18.9,
+      "maxdd": 0.54
+    },
+    "2024": {
+      "sharpe": 6.878,
+      "annret": 18.2,
+      "maxdd": 1.03
+    }
+  },
+  "dereckn_hedge_mod": {
+    "2022": {
+      "sharpe": 3.55,
+      "annret": 249.6,
+      "maxdd": 11.45
+    },
+    "2023": {
+      "sharpe": 1.512,
+      "annret": 27.6,
+      "maxdd": 9.8
+    },
+    "2024": {
+      "sharpe": 0.907,
+      "annret": 12.8,
+      "maxdd": 10.11
+    }
+  },
+  "simple_uvxy_pops": {
+    "2022": {
+      "sharpe": 3.543,
+      "annret": 173.9,
+      "maxdd": 11.29
+    },
+    "2023": {
+      "sharpe": 2.925,
+      "annret": 89.6,
+      "maxdd": 9.08
+    },
+    "2024": {
+      "sharpe": 2.311,
+      "annret": 103.3,
+      "maxdd": 11.19
+    }
+  },
+  "four_corners_v12": {
+    "2022": {
+      "sharpe": 2.681,
+      "annret": 43.3,
+      "maxdd": 6.85
+    },
+    "2023": {
+      "sharpe": 1.718,
+      "annret": 21.5,
+      "maxdd": 6.57
+    },
+    "2024": {
+      "sharpe": 1.468,
+      "annret": 14.1,
+      "maxdd": 4.95
+    }
+  },
+  "enigma_financial": {
+    "2022": {
+      "sharpe": 2.531,
+      "annret": 71.5,
+      "maxdd": 9.16
+    },
+    "2023": {
+      "sharpe": 3.055,
+      "annret": 67.2,
+      "maxdd": 12.36
+    },
+    "2024": {
+      "sharpe": 1.175,
+      "annret": 19.3,
+      "maxdd": 10.05
+    }
+  }
+}

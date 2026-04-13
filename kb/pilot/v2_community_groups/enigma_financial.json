@@ -1,0 +1,646 @@
+{
+  "id": "18a868a1-810c-45c1-9a37-829a46c3cad0",
+  "step": "root",
+  "name": "Four Corners v1.2 | nicomavis",
+  "description": "",
+  "rebalance": "daily",
+  "children": [
+    {
+      "id": "bbafcb23-7450-4236-891e-2a4c74dca651",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "id": "ecf16fc0-6036-40fa-872f-c422a14ce4e1",
+          "step": "group",
+          "name": "Four Corners v1.2 | nicomavis",
+          "children": [
+            {
+              "step": "wt-cash-equal",
+              "id": "cc8f997c-21fd-43f5-ab3e-9ddfdaf3d50b",
+              "children": [
+                {
+                  "id": "65b10835-6a1a-414e-9602-aee207d6c482",
+                  "step": "if",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "id": "02af90e6-5f70-4002-a743-aad4a6a8a1e4",
+                          "step": "group",
+                          "name": "[Quick] Oversold Bounce",
+                          "children": [
+                            {
+                              "step": "wt-cash-equal",
+                              "id": "bbd9998f-ae77-441a-a8b9-b4ee34dbce89",
+                              "children": [
+                                {
+                                  "ticker": "TECL",
+                                  "exchange": "ARCX",
+                                  "name": "Direxion Daily Technology Bull 3x Shares",
+                                  "id": "0e71dd42-ca7d-4505-a72b-61053c610b3d",
+                                  "step": "asset"
+                                },
+                                {
+                                  "ticker": "TQQQ",
+                                  "exchange": "XNAS",
+                                  "name": "ProShares UltraPro QQQ",
+                                  "id": "4cc32d26-a573-4b2e-9f0c-d6bd2c4a15cf",
+                                  "step": "asset"
+                                },
+                                {
+                                  "ticker": "IEF",
+                                  "exchange": "XNAS",
+                                  "name": "iShares 7-10 Year Treasury Bond ETF",
+                                  "id": "955046c9-dd41-4c6f-9fa2-6c24339a317f",
+                                  "step": "asset"
+                                },
+                                {
+                                  "ticker": "UUP",
+                                  "exchange": "ARCX",
+                                  "name": "Invesco DB US Dollar Index Bullish Fund",
+                                  "id": "0317b3dc-244a-45ec-8cf4-7c3a31614f2a",
+                                  "step": "asset"
+                                }
+                              ]
+                            }
+                          ],
+                          "collapsed?": false
+                        }
+                      ],
+                      "is-else-condition?": false,
+                      "rhs-fixed-value?": true,
+                      "lhs-fn": "relative-strength-index",
+                      "lhs-window-days": "10",
+                      "lhs-val": "QQQ",
+                      "id": "36e75255-8151-42dc-ac9f-054316c22b68",
+                      "comparator": "lt",
+                      "rhs-val": "30",
+                      "step": "if-child"
+                    },
+                    {
+                      "id": "107657a5-a62d-4289-b337-fc9c01496960",
+                      "step": "if-child",
+                      "is-else-condition?": true,
+                      "children": [
+                        {
+                          "id": "07bcc516-f3ea-462f-a291-c2c4fd3b7afd",
+                          "step": "wt-cash-equal",
+                          "children": [
+                            {
+                              "id": "4125b76b-c8d8-45a1-a944-3a083a3b2a2c",
+                              "step": "if",
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "id": "2c682e6b-773b-4db9-a56f-3a4489166c63",
+                                      "step": "group",
+                                      "name": "[Quick] Overbought Pop",
+                                      "children": [
+                                        {
+                                          "step": "wt-cash-equal",
+                                          "id": "80f01870-78be-4e62-8586-e904f861f17c",
+                                          "children": [
+                                            {
+                                              "ticker": "TMF",
+                                              "exchange": "ARCX",
+                                              "name": "Direxion Daily 20+ Year Treasury Bull 3X Shares",
+                                              "id": "ca2cd2d0-6a90-42cb-9daf-b473d4a39021",
+                                              "step": "asset"
+                                            },
+                                            {
+                                              "ticker": "BTAL",
+                                              "exchange": "ARCX",
+                                              "name": "AGF U.S. Market Neutral Anti-Beta Fund",
+                                              "id": "576dd6e6-cf65-4534-a908-f493d6b03127",
+                                              "step": "asset"
+                                            },
+                                            {
+                                              "ticker": "VIXY",
+                                              "exchange": "BATS",
+                                              "name": "ProShares VIX Short-Term Futures ETF",
+                                              "id": "37278c70-5bf0-47f9-a710-59b4c6dc9160",
+                                              "step": "asset"
+                                            }
+                                          ],
+                                          "window-days": "30"
+                                        }
+                                      ],
+                                      "collapsed?": false
+                                    }
+                                  ],
+                                  "is-else-condition?": false,
+                                  "rhs-fixed-value?": true,
+                                  "lhs-fn": "relative-strength-index",
+                                  "lhs-window-days": "10",
+                                  "lhs-val": "QQQ",
+                                  "id": "392d75ec-504a-4ca1-a03d-1152343b8f65",
+                                  "comparator": "gt",
+                                  "rhs-val": "79",
+                                  "step": "if-child"
+                                },
+                                {
+                                  "id": "b1b0090b-c85a-4899-8b78-4cda93bf90cf",
+                                  "step": "if-child",
+                                  "is-else-condition?": true,
+                                  "children": [
+                                    {
+                                      "id": "4e094549-7f05-444a-b71a-1944d7fa3d50",
+                                      "step": "wt-cash-equal",
+                                      "children": [
+                                        {
+                                          "id": "0e926017-0a3c-4d7b-a656-32ea1f0a6fb5",
+                                          "step": "if",
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "id": "f941539c-65bd-4024-a229-0aea63682e61",
+                                                  "step": "group",
+                                                  "name": "[Quick] Overbought Pop",
+                                                  "children": [
+                                                    {
+                                                      "step": "wt-cash-equal",
+                                                      "id": "f4fc6605-cb51-4236-8620-ebe4b6eee5a4",
+                                                      "children": [
+                                                        {
+                                                          "ticker": "TMF",
+                                                          "exchange": "ARCX",
+                                                          "name": "Direxion Daily 20+ Year Treasury Bull 3X Shares",
+                                                          "id": "8ee8d18c-853f-44cc-9abb-aaeac5eb4969",
+                                                          "step": "asset"
+                                                        },
+                                                        {
+                                                          "ticker": "BTAL",
+                                                          "exchange": "ARCX",
+                                                          "name": "AGF U.S. Market Neutral Anti-Beta Fund",
+                                                          "id": "43b76c70-342b-4723-8415-4fb4c4b17b43",
+                                                          "step": "asset"
+                                                        },
+                                                        {
+                                                          "ticker": "VIXY",
+                                                          "exchange": "BATS",
+                                                          "name": "ProShares VIX Short-Term Futures ETF",
+                                                          "id": "71f6a218-9d90-487f-be1b-1e5b2ac3dabd",
+                                                          "step": "asset"
+                                                        }
+                                                      ],
+                                                      "window-days": "30"
+                                                    }
+                                                  ],
+                                                  "collapsed?": false
+                                                }
+                                              ],
+                                              "is-else-condition?": false,
+                                              "rhs-fixed-value?": true,
+                                              "lhs-fn": "relative-strength-index",
+                                              "lhs-window-days": "10",
+                                              "lhs-val": "VTV",
+                                              "id": "41863c4d-d853-4fa0-9897-2c49a23c5a83",
+                                              "comparator": "gt",
+                                              "rhs-val": "79",
+                                              "step": "if-child"
+                                            },
+                                            {
+                                              "id": "da5b216d-cfbe-4e55-bc4b-c6c79a3e8f9a",
+                                              "step": "if-child",
+                                              "is-else-condition?": true,
+                                              "children": [
+                                                {
+                                                  "id": "6dcb3780-3966-4d03-912e-0ba31ca62067",
+                                                  "step": "group",
+                                                  "name": "Core Logic (2x2)",
+                                                  "children": [
+                                                    {
+                                                      "step": "wt-cash-equal",
+                                                      "id": "1fd508a0-343d-4210-95e5-358bfb1067f9",
+                                                      "children": [
+                                                        {
+                                                          "id": "88656f93-f8da-4cbb-a5ea-e723fef2911a",
+                                                          "step": "if",
+                                                          "children": [
+                                                            {
+                                                              "children": [
+                                                                {
+                                                                  "id": "af244587-31c6-4bf9-b33a-5afe273859cd",
+                                                                  "step": "wt-cash-equal",
+                                                                  "children": [
+                                                                    {
+                                                                      "id": "c467d1e3-1cd0-401f-b5ee-2532b89f285e",
+                                                                      "step": "if",
+                                                                      "children": [
+                                                                        {
+                                                                          "children": [
+                                                                            {
+                                                                              "id": "999b829a-e7ee-46e2-a1ae-5e021e1dc5d1",
+                                                                              "step": "group",
+                                                                              "name": "Bull Market",
+                                                                              "children": [
+                                                                                {
+                                                                                  "step": "wt-cash-equal",
+                                                                                  "id": "1aa3a94f-e895-4ce8-8295-9ba357293705",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "ticker": "TQQQ",
+                                                                                      "exchange": "XNAS",
+                                                                                      "name": "ProShares UltraPro QQQ",
+                                                                                      "id": "4a02e65a-8ffb-4871-b1e0-37d93d0b3774",
+                                                                                      "step": "asset"
+                                                                                    },
+                                                                                    {
+                                                                                      "ticker": "UPRO",
+                                                                                      "exchange": "ARCX",
+                                                                                      "name": "ProShares UltraPro S&P500",
+                                                                                      "id": "72bf3f32-a3a8-443c-8ebe-b6736f2cd91b",
+                                                                                      "step": "asset"
+                                                                                    },
+                                                                                    {
+                                                                                      "ticker": "EEMS",
+                                                                                      "exchange": "ARCX",
+                                                                                      "name": "iShares MSCI Emerging Markets Small Cap ETF",
+                                                                                      "id": "79552698-2858-4f91-877e-bd7f435c94c0",
+                                                                                      "step": "asset"
+                                                                                    },
+                                                                                    {
+                                                                                      "ticker": "BLV",
+                                                                                      "exchange": "ARCX",
+                                                                                      "name": "Vanguard Long-Term Bond ETF",
+                                                                                      "id": "4e5a2fd0-4624-4f52-b554-eac0a636dc83",
+                                                                                      "step": "asset"
+                                                                                    }
+                                                                                  ],
+                                                                                  "window-days": "60"
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ],
+                                                                          "lhs-fn-params": {
+                                                                            "window": 60
+                                                                          },
+                                                                          "rhs-fn": "cumulative-return",
+                                                                          "is-else-condition?": false,
+                                                                          "lhs-fn": "cumulative-return",
+                                                                          "lhs-val": "CORP",
+                                                                          "id": "49fac481-f608-4770-8683-4ccab6525c7e",
+                                                                          "rhs-fn-params": {
+                                                                            "window": 60
+                                                                          },
+                                                                          "comparator": "gt",
+                                                                          "rhs-val": "BIL",
+                                                                          "step": "if-child"
+                                                                        },
+                                                                        {
+                                                                          "id": "8c5d0f58-ed24-41e5-9dc6-04cd24e3b945",
+                                                                          "step": "if-child",
+                                                                          "is-else-condition?": true,
+                                                                          "children": [
+                                                                            {
+                                                                              "id": "cb0a2804-e1ff-4c95-8947-193bddff76da",
+                                                                              "step": "group",
+                                                                              "name": "Hedge",
+                                                                              "children": [
+                                                                                {
+                                                                                  "step": "wt-cash-equal",
+                                                                                  "id": "d5f84010-bd3a-4c26-96b5-407bad9c7021",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "ticker": "VT",
+                                                                                      "exchange": "ARCX",
+                                                                                      "name": "Vanguard Total World Stock ETF",
+                                                                                      "id": "496e5cdc-6059-4f3d-9406-4a91ed9f09aa",
+                                                                                      "step": "asset"
+                                                                                    },
+                                                                                    {
+                                                                                      "ticker": "LQD",
+                                                                                      "exchange": "ARCX",
+                                                                                      "name": "iShares iBoxx $ Investment Grade Corporate Bond ETF",
+                                                                                      "id": "a531a524-63cb-43c6-8316-00889b779b84",
+                                                                                      "step": "asset"
+                                                                                    },
+                                                                                    {
+                                                                                      "id": "1b623642-7ef6-4ced-9c56-27d78ba796f0",
+                                                                                      "step": "group",
+                                                                                      "name": "IEF vs PSQ => TQQQ/PICK or BTAL",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "step": "wt-cash-equal",
+                                                                                          "id": "033472bb-16ad-4fd6-9eef-2e998617a2af",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "id": "25076505-6c16-4576-afca-2c23d8f8f8a9",
+                                                                                              "step": "if",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "ticker": "TQQQ",
+                                                                                                      "exchange": "XNAS",
+                                                                                                      "name": "ProShares UltraPro QQQ",
+                                                                                                      "id": "89f9f9d2-b275-4e8a-b6bc-6f1285908d44",
+                                                                                                      "step": "asset"
+                                                                                                    },
+                                                                                                    {
+                                                                                                      "ticker": "PICK",
+                                                                                                      "exchange": "BATS",
+                                                                                                      "name": "iShares MSCI Global Metals & Mining Producers ETF",
+                                                                                                      "id": "1646ed7e-6e4b-4079-8247-148ab5f45a85",
+                                                                                                      "step": "asset"
+                                                                                                    }
+                                                                                                  ],
+                                                                                                  "lhs-fn-params": {
+                                                                                                    "window": 7
+                                                                                                  },
+                                                                                                  "rhs-fn": "relative-strength-index",
+                                                                                                  "is-else-condition?": false,
+                                                                                                  "lhs-fn": "relative-strength-index",
+                                                                                                  "lhs-val": "IEF",
+                                                                                                  "id": "fde6f279-53d2-4a68-b94d-f96c47081c3a",
+                                                                                                  "rhs-fn-params": {
+                                                                                                    "window": 20
+                                                                                                  },
+                                                                                                  "comparator": "gt",
+                                                                                                  "rhs-val": "PSQ",
+                                                                                                  "step": "if-child"
+                                                                                                },
+                                                                                                {
+                                                                                                  "id": "d3d4c0e4-df03-4d77-9534-c8bc3c991090",
+                                                                                                  "step": "if-child",
+                                                                                                  "is-else-condition?": true,
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "ticker": "BTAL",
+                                                                                                      "exchange": "ARCX",
+                                                                                                      "name": "AGF U.S. Market Neutral Anti-Beta Fund",
+                                                                                                      "id": "4409a907-c895-4c56-acfb-b2b729648622",
+                                                                                                      "step": "asset"
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ],
+                                                                                      "collapsed?": true
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ],
+                                                                              "collapsed?": false
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ],
+                                                              "rhs-fn": "relative-strength-index",
+                                                              "is-else-condition?": false,
+                                                              "rhs-fixed-value?": false,
+                                                              "lhs-fn": "relative-strength-index",
+                                                              "rhs-window-days": "100",
+                                                              "lhs-window-days": "100",
+                                                              "lhs-val": "QQQ",
+                                                              "id": "0b0a6228-b18a-4506-9356-315576ad25dc",
+                                                              "comparator": "gt",
+                                                              "rhs-val": "VPU",
+                                                              "step": "if-child"
+                                                            },
+                                                            {
+                                                              "id": "1880e386-75d3-4ced-b581-4a1796f22190",
+                                                              "step": "if-child",
+                                                              "is-else-condition?": true,
+                                                              "children": [
+                                                                {
+                                                                  "step": "wt-cash-equal",
+                                                                  "id": "bc0b32a6-3045-46f7-acf6-8a8e27dae4cf",
+                                                                  "children": [
+                                                                    {
+                                                                      "id": "619d5d34-fde8-4a0c-bba5-42cc3da14b70",
+                                                                      "step": "if",
+                                                                      "children": [
+                                                                        {
+                                                                          "children": [
+                                                                            {
+                                                                              "id": "90a4c648-2a73-48b1-9d8c-f3ae19e9c0b3",
+                                                                              "step": "group",
+                                                                              "name": "Hedge",
+                                                                              "children": [
+                                                                                {
+                                                                                  "step": "wt-cash-equal",
+                                                                                  "id": "a0ab0c7b-ce5b-448a-a600-f70b0736682a",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "ticker": "VT",
+                                                                                      "exchange": "ARCX",
+                                                                                      "name": "Vanguard Total World Stock ETF",
+                                                                                      "id": "b55a0a71-25a4-4b47-b3a7-8548c9f07fb3",
+                                                                                      "step": "asset"
+                                                                                    },
+                                                                                    {
+                                                                                      "ticker": "VWO",
+                                                                                      "exchange": "ARCX",
+                                                                                      "name": "Vanguard FTSE Emerging Markets ETF",
+                                                                                      "id": "7545aaac-193f-4864-9bb5-327f0f48a4b3",
+                                                                                      "step": "asset"
+                                                                                    },
+                                                                                    {
+                                                                                      "ticker": "BLV",
+                                                                                      "exchange": "ARCX",
+                                                                                      "name": "Vanguard Long-Term Bond ETF",
+                                                                                      "id": "4e0a5730-2ebe-47ed-9e25-6b86c9ab08d3",
+                                                                                      "step": "asset"
+                                                                                    },
+                                                                                    {
+                                                                                      "id": "0fc3cad5-63b9-4e30-bce0-cc882248420d",
+                                                                                      "step": "group",
+                                                                                      "name": "Materials + Mining",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "step": "wt-cash-equal",
+                                                                                          "id": "768ed09d-2700-450f-a0e6-2605f678b710",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "ticker": "VAW",
+                                                                                              "exchange": "ARCX",
+                                                                                              "name": "Vanguard Materials ETF",
+                                                                                              "id": "41e62c51-518d-427d-9c49-9763add1c815",
+                                                                                              "step": "asset"
+                                                                                            },
+                                                                                            {
+                                                                                              "ticker": "PICK",
+                                                                                              "exchange": "BATS",
+                                                                                              "name": "iShares MSCI Global Metals & Mining Producers ETF",
+                                                                                              "id": "e1bd6dc1-a2ad-49e0-b06b-bae9f5c2f6eb",
+                                                                                              "step": "asset"
+                                                                                            },
+                                                                                            {
+                                                                                              "ticker": "GDX",
+                                                                                              "exchange": "ARCX",
+                                                                                              "name": "VanEck Gold Miners ETF",
+                                                                                              "id": "09d65594-5c5a-47ec-a66c-477d0c4fe443",
+                                                                                              "step": "asset"
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ],
+                                                                                      "collapsed?": true
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ],
+                                                                          "lhs-fn-params": {
+                                                                            "window": 60
+                                                                          },
+                                                                          "rhs-fn": "cumulative-return",
+                                                                          "is-else-condition?": false,
+                                                                          "lhs-fn": "cumulative-return",
+                                                                          "lhs-val": "CORP",
+                                                                          "id": "8ea55cbe-13c1-46be-a49e-06742b8d0f10",
+                                                                          "rhs-fn-params": {
+                                                                            "window": 60
+                                                                          },
+                                                                          "comparator": "gt",
+                                                                          "rhs-val": "BIL",
+                                                                          "step": "if-child"
+                                                                        },
+                                                                        {
+                                                                          "id": "15355176-d1d4-4a4f-99bd-ecbb8f81ae3d",
+                                                                          "step": "if-child",
+                                                                          "is-else-condition?": true,
+                                                                          "children": [
+                                                                            {
+                                                                              "id": "a925c059-d14c-48af-9660-34a97a4157f1",
+                                                                              "step": "group",
+                                                                              "name": "Bear Market",
+                                                                              "children": [
+                                                                                {
+                                                                                  "step": "wt-cash-equal",
+                                                                                  "id": "c280ec63-1e52-40a7-89c7-dc94b4d7f425",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "ticker": "BTAL",
+                                                                                      "exchange": "ARCX",
+                                                                                      "name": "AGF U.S. Market Neutral Anti-Beta Fund",
+                                                                                      "id": "851f15d4-8e3f-4ee0-ba11-69c3ed6aace0",
+                                                                                      "step": "asset"
+                                                                                    },
+                                                                                    {
+                                                                                      "id": "62193320-5b13-4d85-bf0a-32d9df635b9a",
+                                                                                      "step": "group",
+                                                                                      "name": "IEF vs PSQ => VPU/GDX or PSQ",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "step": "wt-cash-equal",
+                                                                                          "id": "24ee22f3-cfa4-412d-bd43-8ae3ab3a29fa",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "id": "734b33cd-36a5-4e4c-8950-94a547cb1b03",
+                                                                                              "step": "if",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "ticker": "VT",
+                                                                                                      "exchange": "ARCX",
+                                                                                                      "name": "Vanguard Total World Stock ETF",
+                                                                                                      "id": "8d4d43be-9986-4ca8-b4d7-3f3ebcd5aea7",
+                                                                                                      "step": "asset"
+                                                                                                    },
+                                                                                                    {
+                                                                                                      "ticker": "GDX",
+                                                                                                      "exchange": "ARCX",
+                                                                                                      "name": "VanEck Gold Miners ETF",
+                                                                                                      "id": "824a4223-27c7-4d9e-9936-340f0dfaa1f4",
+                                                                                                      "step": "asset"
+                                                                                                    }
+                                                                                                  ],
+                                                                                                  "lhs-fn-params": {
+                                                                                                    "window": 7
+                                                                                                  },
+                                                                                                  "rhs-fn": "relative-strength-index",
+                                                                                                  "is-else-condition?": false,
+                                                                                                  "lhs-fn": "relative-strength-index",
+                                                                                                  "lhs-val": "IEF",
+                                                                                                  "id": "309dc80a-a48d-4430-82d3-4ec8aa423dc5",
+                                                                                                  "rhs-fn-params": {
+                                                                                                    "window": 20
+                                                                                                  },
+                                                                                                  "comparator": "gt",
+                                                                                                  "rhs-val": "PSQ",
+                                                                                                  "step": "if-child"
+                                                                                                },
+                                                                                                {
+                                                                                                  "id": "891b6274-3ee4-4d3d-9bd1-435c75542d40",
+                                                                                                  "step": "if-child",
+                                                                                                  "is-else-condition?": true,
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "ticker": "PSQ",
+                                                                                                      "exchange": "ARCX",
+                                                                                                      "name": "ProShares Short QQQ",
+                                                                                                      "id": "227ed72d-791d-40cd-b22c-095b4106dae6",
+                                                                                                      "step": "asset"
+                                                                                                    },
+                                                                                                    {
+                                                                                                      "ticker": "FMF",
+                                                                                                      "exchange": "ARCX",
+                                                                                                      "name": "First Trust Managed Futures Strategy Fund",
+                                                                                                      "id": "353678be-7132-42e6-8db2-ae8824f4b048",
+                                                                                                      "step": "asset"
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ],
+                                                                                      "collapsed?": true
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "collapsed?": true
+        }
+      ]
+    }
+  ]
+}

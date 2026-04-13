@@ -1,0 +1,82 @@
+{
+  "almost_pure_cash": {
+    "avg_corr": 0.28396894295379643,
+    "avg_sharpe": 6.526666666666666,
+    "avg_return": 20.2,
+    "verdict": "\u2717 too correlated",
+    "corr_detail": {
+      "bonds_zoop": 0.09445793554888178,
+      "hwrt_3": 0.26694020441268734,
+      "em_ftlt": 0.6491526466771289,
+      "gold": -0.05960508612626599,
+      "qqq_ftlt_bonds": 0.29011260546511874,
+      "em_emerging": 0.5899174079933768,
+      "qqq_ftlt_sma": 0.41904465798908064,
+      "natural_gas": 0.02173117167036326
+    }
+  },
+  "spy_ftlt_hedged": {
+    "avg_corr": 0.2461529463912043,
+    "avg_sharpe": 4.275666666666667,
+    "avg_return": 87.5,
+    "verdict": "\u2191 possible add",
+    "corr_detail": {
+      "bonds_zoop": 0.04513277315064678,
+      "hwrt_3": 0.2780101653723207,
+      "em_ftlt": 0.5774753899947093,
+      "gold": 0.022635960386585528,
+      "qqq_ftlt_bonds": 0.4472129325503483,
+      "em_emerging": 0.638832183257178,
+      "qqq_ftlt_sma": 0.1022217956095825,
+      "natural_gas": -0.14229762919173672
+    }
+  },
+  "simple_uvxy_pops": {
+    "avg_corr": 0.19555493637421711,
+    "avg_sharpe": 2.9263333333333335,
+    "avg_return": 122.26666666666667,
+    "verdict": "\u2191 possible add",
+    "corr_detail": {
+      "bonds_zoop": -0.09890766551804471,
+      "hwrt_3": 0.6472879117272083,
+      "em_ftlt": 0.03136978264263664,
+      "gold": -0.0029807821794991924,
+      "qqq_ftlt_bonds": 0.45765549767710656,
+      "em_emerging": 0.013774946134999378,
+      "qqq_ftlt_sma": 0.7049183041760615,
+      "natural_gas": -0.18867850366673167
+    }
+  },
+  "basic_portfolio_2011": {
+    "avg_corr": 0.16569206872209452,
+    "avg_sharpe": 2.643666666666667,
+    "avg_return": 37.833333333333336,
+    "verdict": "\u2191 possible add",
+    "corr_detail": {
+      "bonds_zoop": 0.20079461887894454,
+      "hwrt_3": 0.3587130972878055,
+      "em_ftlt": 0.07549036524879406,
+      "gold": -0.001293096321680379,
+      "qqq_ftlt_bonds": 0.2836682759310322,
+      "em_emerging": 0.10201526402091274,
+      "qqq_ftlt_sma": 0.36632095373932894,
+      "natural_gas": -0.06017292900838132
+    }
+  },
+  "dereckn_hedge_mod": {
+    "avg_corr": 0.08159756042330489,
+    "avg_sharpe": 1.9896666666666665,
+    "avg_return": 96.66666666666667,
+    "verdict": "~ uncorrelated, weak",
+    "corr_detail": {
+      "bonds_zoop": 0.48746472064944013,
+      "hwrt_3": -0.00013748583524346046,
+      "em_ftlt": 0.06983530726702891,
+      "gold": -0.13598090254004444,
+      "qqq_ftlt_bonds": 0.2084707212992434,
+      "em_emerging": -0.013556134386740953,
+      "qqq_ftlt_sma": 0.16950379833662144,
+      "natural_gas": -0.13281954140386595
+    }
+  }
+}

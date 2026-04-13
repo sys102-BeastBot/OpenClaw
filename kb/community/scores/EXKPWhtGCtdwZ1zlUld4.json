@@ -1,0 +1,2204 @@
+{
+  "description": "(Created with Composer AI)",
+  "children": [
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "iShares 20+ Year Treasury Bond ETF",
+                          "ticker": "TLT",
+                          "id": "748576e2-5367-4a68-90d0-547713f19139",
+                          "step": "asset"
+                        }
+                      ],
+                      "lhs-fn-params": {
+                        "window": 10
+                      },
+                      "is-else-condition?": false,
+                      "rhs-fixed-value?": true,
+                      "lhs-fn": "relative-strength-index",
+                      "lhs-val": "QQQ",
+                      "id": "3287fdc8-85bd-48ba-a4ed-84c7a9dffb77",
+                      "comparator": "gt",
+                      "rhs-val": "80",
+                      "step": "if-child"
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "name": "iShares 20+ Year Treasury Bond ETF",
+                                  "ticker": "TLT",
+                                  "id": "0c2deb4d-bd92-449b-a957-e5350e1a964f",
+                                  "step": "asset"
+                                }
+                              ],
+                              "lhs-fn-params": {
+                                "window": 10
+                              },
+                              "is-else-condition?": false,
+                              "rhs-fixed-value?": true,
+                              "lhs-fn": "relative-strength-index",
+                              "lhs-val": "SPY",
+                              "id": "7a2079ee-c166-4447-9f9e-1185c3dcd0f9",
+                              "comparator": "gt",
+                              "rhs-val": "80",
+                              "step": "if-child"
+                            },
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "name": "QLD",
+                                          "ticker": "QLD",
+                                          "id": "ae1bf59c-624d-4c0c-b788-57645122d269",
+                                          "step": "asset"
+                                        }
+                                      ],
+                                      "lhs-fn-params": {
+                                        "window": 10
+                                      },
+                                      "is-else-condition?": false,
+                                      "rhs-fixed-value?": true,
+                                      "lhs-fn": "relative-strength-index",
+                                      "lhs-val": "QQQ",
+                                      "id": "3547a6b9-4165-4374-9a38-16baeeb55ad1",
+                                      "comparator": "lt",
+                                      "rhs-val": "30",
+                                      "step": "if-child"
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "name": "QLD",
+                                                  "ticker": "QLD",
+                                                  "id": "3a093f30-b255-485f-8186-216b0a9b81b1",
+                                                  "step": "asset"
+                                                }
+                                              ],
+                                              "lhs-fn-params": {
+                                                "window": 10
+                                              },
+                                              "rhs-fn": "relative-strength-index",
+                                              "is-else-condition?": false,
+                                              "lhs-fn": "relative-strength-index",
+                                              "lhs-val": "IEF",
+                                              "id": "9b3eef25-e617-4f95-8f04-b4882fa7594c",
+                                              "rhs-fn-params": {
+                                                "window": 20
+                                              },
+                                              "comparator": "gt",
+                                              "rhs-val": "PSQ",
+                                              "step": "if-child"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "Consumer Staples Select Sector SPDR Fund",
+                                                              "ticker": "XLP",
+                                                              "id": "c29aa253-5f38-4545-92fe-7bc74a5c8643",
+                                                              "step": "asset"
+                                                            },
+                                                            {
+                                                              "select?": true,
+                                                              "children": [
+                                                                {
+                                                                  "name": "Invesco DB Oil Fund",
+                                                                  "ticker": "DBO",
+                                                                  "id": "861e53c0-3a31-4a85-bd60-b71695ee919d",
+                                                                  "step": "asset"
+                                                                },
+                                                                {
+                                                                  "name": "Invesco DB US Dollar Index Bullish Fund",
+                                                                  "ticker": "UUP",
+                                                                  "id": "f709f06b-76fb-4e69-bcbf-149d32635a50",
+                                                                  "step": "asset"
+                                                                },
+                                                                {
+                                                                  "name": "SPDR S&P 500 ETF Trust",
+                                                                  "ticker": "SPY",
+                                                                  "id": "011ac8a6-f3a2-469e-9c11-2fbaf5be191e",
+                                                                  "step": "asset"
+                                                                }
+                                                              ],
+                                                              "select-fn": "top",
+                                                              "select-n": "1",
+                                                              "sort-by-fn": "relative-strength-index",
+                                                              "id": "464030a3-5adb-4a7e-931f-a575fe0257c6",
+                                                              "sort-by?": true,
+                                                              "step": "filter",
+                                                              "sort-by-fn-params": {
+                                                                "window": 20
+                                                              }
+                                                            }
+                                                          ],
+                                                          "id": "6513e0eb-e235-4dea-b37b-ae94111726f2",
+                                                          "step": "wt-cash-equal"
+                                                        }
+                                                      ],
+                                                      "rhs-fn": "moving-average-price",
+                                                      "is-else-condition?": false,
+                                                      "lhs-fn": "current-price",
+                                                      "lhs-val": "SPY",
+                                                      "id": "1102dcb6-430f-431a-a56d-90d9354c13ea",
+                                                      "rhs-fn-params": {
+                                                        "window": 200
+                                                      },
+                                                      "comparator": "gt",
+                                                      "rhs-val": "SPY",
+                                                      "step": "if-child"
+                                                    },
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [
+                                                                {
+                                                                  "name": "QID",
+                                                                  "ticker": "QID",
+                                                                  "id": "1af51bb0-9145-42b6-ac2e-bae60319bcc6",
+                                                                  "step": "asset"
+                                                                }
+                                                              ],
+                                                              "rhs-fn": "moving-average-price",
+                                                              "is-else-condition?": false,
+                                                              "lhs-fn": "current-price",
+                                                              "lhs-val": "QQQ",
+                                                              "id": "0d474ff6-a617-45a0-b574-2757a78707d3",
+                                                              "rhs-fn-params": {
+                                                                "window": 20
+                                                              },
+                                                              "comparator": "lt",
+                                                              "rhs-val": "QQQ",
+                                                              "step": "if-child"
+                                                            },
+                                                            {
+                                                              "children": [
+                                                                {
+                                                                  "name": "SHV",
+                                                                  "ticker": "SHV",
+                                                                  "id": "989ccba3-c7a6-44cd-893a-3e4c24b00c06",
+                                                                  "step": "asset"
+                                                                }
+                                                              ],
+                                                              "is-else-condition?": true,
+                                                              "id": "4ca3fd2b-266e-4727-a1b8-ad84897a81f1",
+                                                              "step": "if-child"
+                                                            }
+                                                          ],
+                                                          "id": "b7c4ac29-5ecd-4be9-af57-b5744e69b3c2",
+                                                          "step": "if"
+                                                        }
+                                                      ],
+                                                      "is-else-condition?": true,
+                                                      "id": "6de3172c-1db3-49ba-b688-cdeffe3c761f",
+                                                      "step": "if-child"
+                                                    }
+                                                  ],
+                                                  "id": "d50949db-a0e3-492e-aa7a-bd5b77adc4f7",
+                                                  "step": "if"
+                                                }
+                                              ],
+                                              "is-else-condition?": true,
+                                              "id": "9f3e9c4e-8528-44ba-850e-3cafef640d16",
+                                              "step": "if-child"
+                                            }
+                                          ],
+                                          "id": "e3fdd913-9d91-4364-9185-6884ad72a7e3",
+                                          "step": "if"
+                                        }
+                                      ],
+                                      "is-else-condition?": true,
+                                      "id": "36fbbf6b-62b7-4c32-9e99-c1c43a8cf380",
+                                      "step": "if-child"
+                                    }
+                                  ],
+                                  "id": "6f449e43-3c5b-4fef-885e-363d8edcd50d",
+                                  "step": "if"
+                                }
+                              ],
+                              "is-else-condition?": true,
+                              "id": "ed458b46-7aab-4729-97d3-fe8dd93aa881",
+                              "step": "if-child"
+                            }
+                          ],
+                          "id": "ca3d8870-61a2-4cc1-a1b7-aa9732da8ca1",
+                          "step": "if"
+                        }
+                      ],
+                      "is-else-condition?": true,
+                      "id": "547379a4-377c-4f82-87e0-42b5c8b6ebe9",
+                      "step": "if-child"
+                    }
+                  ],
+                  "id": "1276a05d-4d58-415e-a037-1a85c53e2794",
+                  "step": "if"
+                }
+              ],
+              "id": "4da2725c-b6c1-49dc-93fb-940cbbabe260",
+              "step": "wt-cash-equal"
+            }
+          ],
+          "name": "QQQ Core",
+          "id": "69a84dbb-ee79-4922-9790-bbebdcc46508",
+          "step": "group"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "BIL",
+                          "ticker": "BIL",
+                          "id": "6cfcfac1-523a-4f6d-ade0-453aa0538a64",
+                          "step": "asset"
+                        }
+                      ],
+                      "lhs-fn-params": {
+                        "window": 10
+                      },
+                      "is-else-condition?": false,
+                      "rhs-fixed-value?": true,
+                      "lhs-fn": "relative-strength-index",
+                      "lhs-val": "QQQ",
+                      "id": "31a09694-b855-4c0a-a09d-559bc36170c7",
+                      "comparator": "gt",
+                      "rhs-val": "79",
+                      "step": "if-child"
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "name": "BIL",
+                                  "ticker": "BIL",
+                                  "id": "6cded4a4-7857-418c-85f5-979fcf87c40f",
+                                  "step": "asset"
+                                }
+                              ],
+                              "lhs-fn-params": {
+                                "window": 10
+                              },
+                              "is-else-condition?": false,
+                              "rhs-fixed-value?": true,
+                              "lhs-fn": "relative-strength-index",
+                              "lhs-val": "XLK",
+                              "id": "7c64cd9d-49d5-45a3-b725-b345a293e7ef",
+                              "comparator": "gt",
+                              "rhs-val": "79",
+                              "step": "if-child"
+                            },
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "name": "QLD",
+                                                      "ticker": "QLD",
+                                                      "id": "9c1876b0-bde6-4230-8ca7-974a993249f3",
+                                                      "step": "asset"
+                                                    }
+                                                  ],
+                                                  "rhs-fn": "moving-average-price",
+                                                  "is-else-condition?": false,
+                                                  "lhs-fn": "current-price",
+                                                  "lhs-val": "SPY",
+                                                  "id": "055baa17-44a6-48ee-b79a-fa847707b82b",
+                                                  "rhs-fn-params": {
+                                                    "window": 200
+                                                  },
+                                                  "comparator": "gt",
+                                                  "rhs-val": "SPY",
+                                                  "step": "if-child"
+                                                },
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "BIL",
+                                                              "ticker": "BIL",
+                                                              "id": "4abafa32-dd09-463c-8759-889724329350",
+                                                              "step": "asset"
+                                                            }
+                                                          ],
+                                                          "rhs-fn": "moving-average-price",
+                                                          "is-else-condition?": false,
+                                                          "lhs-fn": "current-price",
+                                                          "lhs-val": "SPY",
+                                                          "id": "8c33feb0-aa41-4dde-bc9a-40d2e39dafdc",
+                                                          "rhs-fn-params": {
+                                                            "window": 20
+                                                          },
+                                                          "comparator": "lt",
+                                                          "rhs-val": "SPY",
+                                                          "step": "if-child"
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "QLD",
+                                                              "ticker": "QLD",
+                                                              "id": "2fb4d77e-cfb4-4e57-b29d-8b0886096d41",
+                                                              "step": "asset"
+                                                            }
+                                                          ],
+                                                          "is-else-condition?": true,
+                                                          "id": "29a6fa55-65f4-4be4-98f8-64835e38928e",
+                                                          "step": "if-child"
+                                                        }
+                                                      ],
+                                                      "id": "a66e68d1-0864-4087-963e-8d1d0d3651e1",
+                                                      "step": "if"
+                                                    }
+                                                  ],
+                                                  "is-else-condition?": true,
+                                                  "id": "0c15eaa6-f607-47d2-abf6-6fff4005d322",
+                                                  "step": "if-child"
+                                                }
+                                              ],
+                                              "id": "baeed5ef-cf5f-4f8f-9a94-e0c62e1284eb",
+                                              "step": "if"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "name": "QLD",
+                                                      "ticker": "QLD",
+                                                      "id": "99788249-806f-4f7d-a627-f12c9bebdb64",
+                                                      "step": "asset"
+                                                    }
+                                                  ],
+                                                  "lhs-fn-params": {
+                                                    "window": 200
+                                                  },
+                                                  "rhs-fn": "relative-strength-index",
+                                                  "is-else-condition?": false,
+                                                  "lhs-fn": "relative-strength-index",
+                                                  "lhs-val": "FDN",
+                                                  "id": "bf398c44-edf3-486a-824c-e65d18e70bd5",
+                                                  "rhs-fn-params": {
+                                                    "window": 200
+                                                  },
+                                                  "comparator": "gt",
+                                                  "rhs-val": "XLU",
+                                                  "step": "if-child"
+                                                },
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "name": "BIL",
+                                                      "ticker": "BIL",
+                                                      "id": "9847318d-c5b0-4a00-a9b5-a37c8f951576",
+                                                      "step": "asset"
+                                                    }
+                                                  ],
+                                                  "is-else-condition?": true,
+                                                  "id": "8415dbbd-f73a-4a7a-a5da-028d31788a9f",
+                                                  "step": "if-child"
+                                                }
+                                              ],
+                                              "id": "5877f552-33cd-4484-b86d-12a0e8a20218",
+                                              "step": "if"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "name": "QLD",
+                                                      "ticker": "QLD",
+                                                      "id": "875a8fcc-c4a6-4f69-86bc-136a649e067a",
+                                                      "step": "asset"
+                                                    }
+                                                  ],
+                                                  "lhs-fn-params": {
+                                                    "window": 10
+                                                  },
+                                                  "rhs-fn": "relative-strength-index",
+                                                  "is-else-condition?": false,
+                                                  "lhs-fn": "relative-strength-index",
+                                                  "lhs-val": "IGIB",
+                                                  "id": "28377e8e-996f-4d52-b9b6-660f04b8a3ba",
+                                                  "rhs-fn-params": {
+                                                    "window": 10
+                                                  },
+                                                  "comparator": "gt",
+                                                  "rhs-val": "XLK",
+                                                  "step": "if-child"
+                                                },
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "name": "BIL",
+                                                      "ticker": "BIL",
+                                                      "id": "655b87cb-44e2-4df8-99d3-b5caf39804a4",
+                                                      "step": "asset"
+                                                    }
+                                                  ],
+                                                  "is-else-condition?": true,
+                                                  "id": "4e96b599-43d9-412d-ba82-774dadb8277d",
+                                                  "step": "if-child"
+                                                }
+                                              ],
+                                              "id": "9f784bf9-eea4-453f-91ab-5571043ef219",
+                                              "step": "if"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "name": "QLD",
+                                                      "ticker": "QLD",
+                                                      "id": "fbd0222b-3ca1-4054-8f03-e94121c57896",
+                                                      "step": "asset"
+                                                    }
+                                                  ],
+                                                  "lhs-fn-params": {
+                                                    "window": 20
+                                                  },
+                                                  "rhs-fn": "relative-strength-index",
+                                                  "is-else-condition?": false,
+                                                  "lhs-fn": "relative-strength-index",
+                                                  "lhs-val": "IEF",
+                                                  "id": "a8847b80-65d8-464a-86fb-b97fe03b6cb3",
+                                                  "rhs-fn-params": {
+                                                    "window": 60
+                                                  },
+                                                  "comparator": "gt",
+                                                  "rhs-val": "PSQ",
+                                                  "step": "if-child"
+                                                },
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "name": "BIL",
+                                                      "ticker": "BIL",
+                                                      "id": "2128d9b0-1faf-4742-b8d0-d8cf6e58438f",
+                                                      "step": "asset"
+                                                    }
+                                                  ],
+                                                  "is-else-condition?": true,
+                                                  "id": "6216c1bd-4f28-4828-8073-632ca14fefdc",
+                                                  "step": "if-child"
+                                                }
+                                              ],
+                                              "id": "a0bbcf36-09ca-45b5-8757-c6f3b7764354",
+                                              "step": "if"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "name": "QLD",
+                                                      "ticker": "QLD",
+                                                      "id": "863fb1f0-84a4-4521-8c2e-803325260d47",
+                                                      "step": "asset"
+                                                    }
+                                                  ],
+                                                  "lhs-fn-params": {
+                                                    "window": 15
+                                                  },
+                                                  "rhs-fn": "relative-strength-index",
+                                                  "is-else-condition?": false,
+                                                  "lhs-fn": "relative-strength-index",
+                                                  "lhs-val": "AGG",
+                                                  "id": "5cf0700f-ab25-4700-9354-24ad61516506",
+                                                  "rhs-fn-params": {
+                                                    "window": 15
+                                                  },
+                                                  "comparator": "gt",
+                                                  "rhs-val": "QQQ",
+                                                  "step": "if-child"
+                                                },
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "name": "BIL",
+                                                      "ticker": "BIL",
+                                                      "id": "85da8f5f-6955-4371-9c7e-09b46b2ceaba",
+                                                      "step": "asset"
+                                                    }
+                                                  ],
+                                                  "is-else-condition?": true,
+                                                  "id": "5c11e066-7d9f-40cd-87ad-cf515323eb6d",
+                                                  "step": "if-child"
+                                                }
+                                              ],
+                                              "id": "4ef6b5e7-5b5f-4e2e-b133-2e40db9491b1",
+                                              "step": "if"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "name": "QLD",
+                                                      "ticker": "QLD",
+                                                      "id": "e4731e5b-bb35-4b65-ab22-ab38594580af",
+                                                      "step": "asset"
+                                                    }
+                                                  ],
+                                                  "lhs-fn-params": {
+                                                    "window": 15
+                                                  },
+                                                  "rhs-fn": "relative-strength-index",
+                                                  "is-else-condition?": false,
+                                                  "lhs-fn": "relative-strength-index",
+                                                  "lhs-val": "TLT",
+                                                  "id": "c39260d1-5d3f-41ab-8d2c-452f08523199",
+                                                  "rhs-fn-params": {
+                                                    "window": 15
+                                                  },
+                                                  "comparator": "gt",
+                                                  "rhs-val": "PSQ",
+                                                  "step": "if-child"
+                                                },
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "name": "BIL",
+                                                      "ticker": "BIL",
+                                                      "id": "61a23db1-1f5a-438c-b4ba-900eeb7e8f88",
+                                                      "step": "asset"
+                                                    }
+                                                  ],
+                                                  "is-else-condition?": true,
+                                                  "id": "60c6abb1-9874-49e4-b685-a7d342a569c7",
+                                                  "step": "if-child"
+                                                }
+                                              ],
+                                              "id": "aa99c68a-b907-4d16-9421-4111dc61f855",
+                                              "step": "if"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "name": "QLD",
+                                                      "ticker": "QLD",
+                                                      "id": "bb0be1e6-f675-49a4-9cf1-5a29b2158df8",
+                                                      "step": "asset"
+                                                    }
+                                                  ],
+                                                  "lhs-fn-params": {
+                                                    "window": 20
+                                                  },
+                                                  "rhs-fn": "relative-strength-index",
+                                                  "is-else-condition?": false,
+                                                  "lhs-fn": "relative-strength-index",
+                                                  "lhs-val": "AGG",
+                                                  "id": "4f583bce-e663-4558-b098-e04315f22dac",
+                                                  "rhs-fn-params": {
+                                                    "window": 60
+                                                  },
+                                                  "comparator": "gt",
+                                                  "rhs-val": "SH",
+                                                  "step": "if-child"
+                                                },
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "name": "BIL",
+                                                      "ticker": "BIL",
+                                                      "id": "e8cbd47f-88cc-4d84-aabd-82655dd304c9",
+                                                      "step": "asset"
+                                                    }
+                                                  ],
+                                                  "is-else-condition?": true,
+                                                  "id": "10c7b6fe-0c55-4617-a179-737b46444d18",
+                                                  "step": "if-child"
+                                                }
+                                              ],
+                                              "id": "ce579207-e517-4efe-b336-177918be8f7a",
+                                              "step": "if"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "name": "QLD",
+                                                      "ticker": "QLD",
+                                                      "id": "8d7e26e8-bd85-4496-a51f-7232a9258510",
+                                                      "step": "asset"
+                                                    }
+                                                  ],
+                                                  "lhs-fn-params": {
+                                                    "window": 20
+                                                  },
+                                                  "rhs-fn": "relative-strength-index",
+                                                  "is-else-condition?": false,
+                                                  "lhs-fn": "relative-strength-index",
+                                                  "lhs-val": "SOXX",
+                                                  "id": "12d119e3-9442-404a-a92d-c26248ec48e7",
+                                                  "rhs-fn-params": {
+                                                    "window": 20
+                                                  },
+                                                  "comparator": "gt",
+                                                  "rhs-val": "XLU",
+                                                  "step": "if-child"
+                                                },
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "name": "BIL",
+                                                      "ticker": "BIL",
+                                                      "id": "8757d733-89d3-4c7b-8350-c077290b8eeb",
+                                                      "step": "asset"
+                                                    }
+                                                  ],
+                                                  "is-else-condition?": true,
+                                                  "id": "754b6e8f-6b25-4fc2-b725-2d21bbcd185d",
+                                                  "step": "if-child"
+                                                }
+                                              ],
+                                              "id": "8963f676-65e3-4c0c-b5df-ddc03b72df39",
+                                              "step": "if"
+                                            }
+                                          ],
+                                          "id": "48068ed7-45f9-4766-9a2d-4e1faa447135",
+                                          "step": "wt-cash-equal"
+                                        }
+                                      ],
+                                      "lhs-fn-params": {
+                                        "window": 10
+                                      },
+                                      "is-else-condition?": false,
+                                      "rhs-fixed-value?": true,
+                                      "lhs-fn": "relative-strength-index",
+                                      "lhs-val": "QQQ",
+                                      "id": "6b64f4e0-fc3b-4ef0-95ff-dd0baa0987a7",
+                                      "comparator": "lt",
+                                      "rhs-val": "32.5",
+                                      "step": "if-child"
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "QLD",
+                                                              "ticker": "QLD",
+                                                              "id": "4fc90120-4413-4bfb-ad0e-e228c0dba3c2",
+                                                              "step": "asset"
+                                                            }
+                                                          ],
+                                                          "rhs-fn": "moving-average-price",
+                                                          "is-else-condition?": false,
+                                                          "lhs-fn": "current-price",
+                                                          "lhs-val": "SPY",
+                                                          "id": "08acf48f-e61e-498e-a8c1-ddc1dda57392",
+                                                          "rhs-fn-params": {
+                                                            "window": 200
+                                                          },
+                                                          "comparator": "gt",
+                                                          "rhs-val": "SPY",
+                                                          "step": "if-child"
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [
+                                                                {
+                                                                  "children": [
+                                                                    {
+                                                                      "name": "BIL",
+                                                                      "ticker": "BIL",
+                                                                      "id": "bde6f73c-e57b-4e74-9096-e47545bc6e00",
+                                                                      "step": "asset"
+                                                                    }
+                                                                  ],
+                                                                  "rhs-fn": "moving-average-price",
+                                                                  "is-else-condition?": false,
+                                                                  "lhs-fn": "current-price",
+                                                                  "lhs-val": "SPY",
+                                                                  "id": "86c6eb0e-4f86-40cc-90a7-d0acadebf2db",
+                                                                  "rhs-fn-params": {
+                                                                    "window": 20
+                                                                  },
+                                                                  "comparator": "lt",
+                                                                  "rhs-val": "SPY",
+                                                                  "step": "if-child"
+                                                                },
+                                                                {
+                                                                  "children": [
+                                                                    {
+                                                                      "name": "QLD",
+                                                                      "ticker": "QLD",
+                                                                      "id": "b45c30ae-a12a-44fa-ba7e-1f0f4ae6a7fd",
+                                                                      "step": "asset"
+                                                                    }
+                                                                  ],
+                                                                  "is-else-condition?": true,
+                                                                  "id": "b93ce51a-15bb-44e5-bc2b-770889f307f0",
+                                                                  "step": "if-child"
+                                                                }
+                                                              ],
+                                                              "id": "24451f95-f9a2-46dd-b159-66e783dff54a",
+                                                              "step": "if"
+                                                            }
+                                                          ],
+                                                          "is-else-condition?": true,
+                                                          "id": "ecc3dd98-4743-48b2-8e8e-0c0a37f7bdeb",
+                                                          "step": "if-child"
+                                                        }
+                                                      ],
+                                                      "id": "dd9422d7-ca7d-4303-8ef3-47403680aa58",
+                                                      "step": "if"
+                                                    },
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "QLD",
+                                                              "ticker": "QLD",
+                                                              "id": "3e2af896-2d0f-4f73-886e-2b8c90cd4740",
+                                                              "step": "asset"
+                                                            }
+                                                          ],
+                                                          "lhs-fn-params": {
+                                                            "window": 200
+                                                          },
+                                                          "rhs-fn": "relative-strength-index",
+                                                          "is-else-condition?": false,
+                                                          "lhs-fn": "relative-strength-index",
+                                                          "lhs-val": "FDN",
+                                                          "id": "884e91d4-882b-4ab9-bdfa-985b7a15d8f3",
+                                                          "rhs-fn-params": {
+                                                            "window": 200
+                                                          },
+                                                          "comparator": "gt",
+                                                          "rhs-val": "XLU",
+                                                          "step": "if-child"
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "BIL",
+                                                              "ticker": "BIL",
+                                                              "id": "58b909de-6f75-44e8-a982-2ec76974cd39",
+                                                              "step": "asset"
+                                                            }
+                                                          ],
+                                                          "is-else-condition?": true,
+                                                          "id": "612d2b42-8c48-4e50-9ecd-21e71c2b8a9d",
+                                                          "step": "if-child"
+                                                        }
+                                                      ],
+                                                      "id": "c8af6db8-aafc-4056-886c-20aa4e507a99",
+                                                      "step": "if"
+                                                    },
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "QLD",
+                                                              "ticker": "QLD",
+                                                              "id": "70d415a8-e8c3-46fd-afe3-fafadfe72f6e",
+                                                              "step": "asset"
+                                                            }
+                                                          ],
+                                                          "lhs-fn-params": {
+                                                            "window": 10
+                                                          },
+                                                          "rhs-fn": "relative-strength-index",
+                                                          "is-else-condition?": false,
+                                                          "lhs-fn": "relative-strength-index",
+                                                          "lhs-val": "IGIB",
+                                                          "id": "c54ead6e-bb10-49b4-9cf7-7764e17766cf",
+                                                          "rhs-fn-params": {
+                                                            "window": 10
+                                                          },
+                                                          "comparator": "gt",
+                                                          "rhs-val": "XLK",
+                                                          "step": "if-child"
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "BIL",
+                                                              "ticker": "BIL",
+                                                              "id": "a677765d-fd15-4dd2-8fa3-a3155cf165f4",
+                                                              "step": "asset"
+                                                            }
+                                                          ],
+                                                          "is-else-condition?": true,
+                                                          "id": "c272d3cf-6a6e-400a-a319-166c605fe45f",
+                                                          "step": "if-child"
+                                                        }
+                                                      ],
+                                                      "id": "380c431e-fc1e-4024-8a56-55d21cee8fe1",
+                                                      "step": "if"
+                                                    },
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "QLD",
+                                                              "ticker": "QLD",
+                                                              "id": "2681a849-0a83-4bba-bbaa-35e1ded57012",
+                                                              "step": "asset"
+                                                            }
+                                                          ],
+                                                          "lhs-fn-params": {
+                                                            "window": 20
+                                                          },
+                                                          "rhs-fn": "relative-strength-index",
+                                                          "is-else-condition?": false,
+                                                          "lhs-fn": "relative-strength-index",
+                                                          "lhs-val": "IEF",
+                                                          "id": "36d0b33a-bec0-4024-b8a3-6b242b0a90d6",
+                                                          "rhs-fn-params": {
+                                                            "window": 60
+                                                          },
+                                                          "comparator": "gt",
+                                                          "rhs-val": "PSQ",
+                                                          "step": "if-child"
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "BIL",
+                                                              "ticker": "BIL",
+                                                              "id": "77d50c6f-6239-41f9-8a8c-dfae646a0e0d",
+                                                              "step": "asset"
+                                                            }
+                                                          ],
+                                                          "is-else-condition?": true,
+                                                          "id": "6869f04e-3b66-45f1-b432-e93c6e9148f2",
+                                                          "step": "if-child"
+                                                        }
+                                                      ],
+                                                      "id": "1886211c-6409-4d5d-b9ac-a6ee280b7596",
+                                                      "step": "if"
+                                                    },
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "QLD",
+                                                              "ticker": "QLD",
+                                                              "id": "4916d186-73d7-4fca-b9ca-f6e388321e7c",
+                                                              "step": "asset"
+                                                            }
+                                                          ],
+                                                          "lhs-fn-params": {
+                                                            "window": 15
+                                                          },
+                                                          "rhs-fn": "relative-strength-index",
+                                                          "is-else-condition?": false,
+                                                          "lhs-fn": "relative-strength-index",
+                                                          "lhs-val": "AGG",
+                                                          "id": "627e6e6a-20ed-4dc3-8452-b976dbe14ff4",
+                                                          "rhs-fn-params": {
+                                                            "window": 15
+                                                          },
+                                                          "comparator": "gt",
+                                                          "rhs-val": "QQQ",
+                                                          "step": "if-child"
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "BIL",
+                                                              "ticker": "BIL",
+                                                              "id": "d9caca50-1a43-4b30-9c3a-f30f157d4114",
+                                                              "step": "asset"
+                                                            }
+                                                          ],
+                                                          "is-else-condition?": true,
+                                                          "id": "e523cc2b-ad3b-4dec-a087-e231c55b515a",
+                                                          "step": "if-child"
+                                                        }
+                                                      ],
+                                                      "id": "9f4df4e1-afd5-45b3-a8e6-333e016ca989",
+                                                      "step": "if"
+                                                    },
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "QLD",
+                                                              "ticker": "QLD",
+                                                              "id": "0c55f43a-44d6-4692-b992-93d0138748ad",
+                                                              "step": "asset"
+                                                            }
+                                                          ],
+                                                          "lhs-fn-params": {
+                                                            "window": 15
+                                                          },
+                                                          "rhs-fn": "relative-strength-index",
+                                                          "is-else-condition?": false,
+                                                          "lhs-fn": "relative-strength-index",
+                                                          "lhs-val": "TLT",
+                                                          "id": "992aab03-f5e6-40a1-aedc-fc9da9d03c10",
+                                                          "rhs-fn-params": {
+                                                            "window": 15
+                                                          },
+                                                          "comparator": "gt",
+                                                          "rhs-val": "PSQ",
+                                                          "step": "if-child"
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "BIL",
+                                                              "ticker": "BIL",
+                                                              "id": "de2af6d9-4af1-408f-a2a1-33d7e5473fce",
+                                                              "step": "asset"
+                                                            }
+                                                          ],
+                                                          "is-else-condition?": true,
+                                                          "id": "7fec4d6b-48d6-4801-a17e-fa083f821f8f",
+                                                          "step": "if-child"
+                                                        }
+                                                      ],
+                                                      "id": "d329d4a2-0f75-4f66-af34-2234eb61788e",
+                                                      "step": "if"
+                                                    },
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "QLD",
+                                                              "ticker": "QLD",
+                                                              "id": "8c8bd5a8-0762-4242-a0fd-9043473cc63d",
+                                                              "step": "asset"
+                                                            }
+                                                          ],
+                                                          "lhs-fn-params": {
+                                                            "window": 20
+                                                          },
+                                                          "rhs-fn": "relative-strength-index",
+                                                          "is-else-condition?": false,
+                                                          "lhs-fn": "relative-strength-index",
+                                                          "lhs-val": "AGG",
+                                                          "id": "96e13a5f-a511-463b-a71e-3b8773037293",
+                                                          "rhs-fn-params": {
+                                                            "window": 60
+                                                          },
+                                                          "comparator": "gt",
+                                                          "rhs-val": "SH",
+                                                          "step": "if-child"
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "BIL",
+                                                              "ticker": "BIL",
+                                                              "id": "b5b7620c-fcef-4b42-a625-e338bc9c8671",
+                                                              "step": "asset"
+                                                            }
+                                                          ],
+                                                          "is-else-condition?": true,
+                                                          "id": "ac74b191-1cc2-4ea7-92a9-4fe726f97e95",
+                                                          "step": "if-child"
+                                                        }
+                                                      ],
+                                                      "id": "c05cb5e5-4a74-4a7f-90af-47e4fd05a448",
+                                                      "step": "if"
+                                                    },
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "QLD",
+                                                              "ticker": "QLD",
+                                                              "id": "1e2a50ee-9716-4804-98d0-bc34f11a59cf",
+                                                              "step": "asset"
+                                                            }
+                                                          ],
+                                                          "lhs-fn-params": {
+                                                            "window": 20
+                                                          },
+                                                          "rhs-fn": "relative-strength-index",
+                                                          "is-else-condition?": false,
+                                                          "lhs-fn": "relative-strength-index",
+                                                          "lhs-val": "SOXX",
+                                                          "id": "ac773cf4-a4f7-4d37-b5eb-bcfda9207c2d",
+                                                          "rhs-fn-params": {
+                                                            "window": 20
+                                                          },
+                                                          "comparator": "gt",
+                                                          "rhs-val": "XLU",
+                                                          "step": "if-child"
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "BIL",
+                                                              "ticker": "BIL",
+                                                              "id": "de28cb31-e668-4b2f-bd3e-e38f970756d6",
+                                                              "step": "asset"
+                                                            }
+                                                          ],
+                                                          "is-else-condition?": true,
+                                                          "id": "8fb23081-3ee1-4542-8fbd-8879f9443a1a",
+                                                          "step": "if-child"
+                                                        }
+                                                      ],
+                                                      "id": "a3b261fa-7e27-4b37-bacc-2e0323e7c7c3",
+                                                      "step": "if"
+                                                    }
+                                                  ],
+                                                  "id": "79f41785-f681-4e9e-a123-2ed51ad0621d",
+                                                  "step": "wt-cash-equal"
+                                                }
+                                              ],
+                                              "lhs-fn-params": {
+                                                "window": 10
+                                              },
+                                              "rhs-fn": "relative-strength-index",
+                                              "is-else-condition?": false,
+                                              "lhs-fn": "relative-strength-index",
+                                              "lhs-val": "XLK",
+                                              "id": "895e81dd-bd8d-4ef1-aa7a-9902eb4cf27f",
+                                              "rhs-fn-params": {
+                                                "window": 10
+                                              },
+                                              "comparator": "gt",
+                                              "rhs-val": "IEF",
+                                              "step": "if-child"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "BIL",
+                                                              "ticker": "BIL",
+                                                              "id": "c69fb1a1-846d-4c3a-aa62-96064a04d23b",
+                                                              "step": "asset"
+                                                            }
+                                                          ],
+                                                          "rhs-fn": "moving-average-price",
+                                                          "is-else-condition?": false,
+                                                          "lhs-fn": "current-price",
+                                                          "lhs-val": "SPY",
+                                                          "id": "bedf5205-cd26-43a7-8285-95183a2c3faa",
+                                                          "rhs-fn-params": {
+                                                            "window": 200
+                                                          },
+                                                          "comparator": "gt",
+                                                          "rhs-val": "SPY",
+                                                          "step": "if-child"
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [
+                                                                {
+                                                                  "children": [
+                                                                    {
+                                                                      "name": "SQQQ",
+                                                                      "ticker": "SQQQ",
+                                                                      "id": "3e3d8e30-e1e5-430b-a996-ae375c32868e",
+                                                                      "step": "asset"
+                                                                    }
+                                                                  ],
+                                                                  "rhs-fn": "moving-average-price",
+                                                                  "is-else-condition?": false,
+                                                                  "lhs-fn": "current-price",
+                                                                  "lhs-val": "SPY",
+                                                                  "id": "5fed355f-079c-406b-bb0e-7389e6dd446b",
+                                                                  "rhs-fn-params": {
+                                                                    "window": 20
+                                                                  },
+                                                                  "comparator": "lt",
+                                                                  "rhs-val": "SPY",
+                                                                  "step": "if-child"
+                                                                },
+                                                                {
+                                                                  "children": [
+                                                                    {
+                                                                      "name": "BIL",
+                                                                      "ticker": "BIL",
+                                                                      "id": "408accf1-ddcb-4013-879e-3400a5a5efb9",
+                                                                      "step": "asset"
+                                                                    }
+                                                                  ],
+                                                                  "is-else-condition?": true,
+                                                                  "id": "07162891-9970-4793-b4ff-036b80f4fa96",
+                                                                  "step": "if-child"
+                                                                }
+                                                              ],
+                                                              "id": "7c107d2a-7f1b-4692-9c56-dadb38b76916",
+                                                              "step": "if"
+                                                            }
+                                                          ],
+                                                          "is-else-condition?": true,
+                                                          "id": "3686ab49-726b-431f-aabc-236618f6d0e8",
+                                                          "step": "if-child"
+                                                        }
+                                                      ],
+                                                      "id": "84c3fa33-0258-4845-b145-6327dcb3b881",
+                                                      "step": "if"
+                                                    },
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "BIL",
+                                                              "ticker": "BIL",
+                                                              "id": "fdccd206-dc34-4921-834c-f1982b084164",
+                                                              "step": "asset"
+                                                            }
+                                                          ],
+                                                          "lhs-fn-params": {
+                                                            "window": 200
+                                                          },
+                                                          "rhs-fn": "relative-strength-index",
+                                                          "is-else-condition?": false,
+                                                          "lhs-fn": "relative-strength-index",
+                                                          "lhs-val": "FDN",
+                                                          "id": "cf095837-1d0f-4ae4-900d-6620a002d04c",
+                                                          "rhs-fn-params": {
+                                                            "window": 200
+                                                          },
+                                                          "comparator": "gt",
+                                                          "rhs-val": "XLU",
+                                                          "step": "if-child"
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "SQQQ",
+                                                              "ticker": "SQQQ",
+                                                              "id": "c0ffb798-2e1d-44e8-b9d9-7953d7a16461",
+                                                              "step": "asset"
+                                                            }
+                                                          ],
+                                                          "is-else-condition?": true,
+                                                          "id": "b484785d-04ee-41f5-a0d3-bc2973b3e65a",
+                                                          "step": "if-child"
+                                                        }
+                                                      ],
+                                                      "id": "1f524888-38b1-49b8-9fb3-045fb80627bc",
+                                                      "step": "if"
+                                                    },
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "BIL",
+                                                              "ticker": "BIL",
+                                                              "id": "46638279-5383-4581-bf3f-d011871f4701",
+                                                              "step": "asset"
+                                                            }
+                                                          ],
+                                                          "lhs-fn-params": {
+                                                            "window": 10
+                                                          },
+                                                          "rhs-fn": "relative-strength-index",
+                                                          "is-else-condition?": false,
+                                                          "lhs-fn": "relative-strength-index",
+                                                          "lhs-val": "IGIB",
+                                                          "id": "49c69955-742b-46ae-9dc2-a7bd59ac0426",
+                                                          "rhs-fn-params": {
+                                                            "window": 10
+                                                          },
+                                                          "comparator": "gt",
+                                                          "rhs-val": "XLK",
+                                                          "step": "if-child"
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "SQQQ",
+                                                              "ticker": "SQQQ",
+                                                              "id": "9bda784d-bc3b-4a96-99e9-4fa8cb53c5b4",
+                                                              "step": "asset"
+                                                            }
+                                                          ],
+                                                          "is-else-condition?": true,
+                                                          "id": "4d0ad1f2-f786-4d24-bb81-d81c71d83b77",
+                                                          "step": "if-child"
+                                                        }
+                                                      ],
+                                                      "id": "b13d292e-05bb-4ac9-bf1c-1da7c5e0d7e1",
+                                                      "step": "if"
+                                                    },
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "BIL",
+                                                              "ticker": "BIL",
+                                                              "id": "67de85ea-ab8c-4720-8778-8a9c86339dfe",
+                                                              "step": "asset"
+                                                            }
+                                                          ],
+                                                          "lhs-fn-params": {
+                                                            "window": 20
+                                                          },
+                                                          "rhs-fn": "relative-strength-index",
+                                                          "is-else-condition?": false,
+                                                          "lhs-fn": "relative-strength-index",
+                                                          "lhs-val": "IEF",
+                                                          "id": "75d43ff4-b328-4e56-b6cc-a216ef3fc52a",
+                                                          "rhs-fn-params": {
+                                                            "window": 60
+                                                          },
+                                                          "comparator": "gt",
+                                                          "rhs-val": "PSQ",
+                                                          "step": "if-child"
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "SQQQ",
+                                                              "ticker": "SQQQ",
+                                                              "id": "b411631d-1057-4010-86e4-3dfa3a127813",
+                                                              "step": "asset"
+                                                            }
+                                                          ],
+                                                          "is-else-condition?": true,
+                                                          "id": "379df627-369d-47b7-8afb-01e4c402f4a4",
+                                                          "step": "if-child"
+                                                        }
+                                                      ],
+                                                      "id": "648def01-40b0-44e6-888b-09d6a551ff72",
+                                                      "step": "if"
+                                                    },
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "BIL",
+                                                              "ticker": "BIL",
+                                                              "id": "e6058aab-ac6d-4c70-adac-07d5faaaa541",
+                                                              "step": "asset"
+                                                            }
+                                                          ],
+                                                          "lhs-fn-params": {
+                                                            "window": 15
+                                                          },
+                                                          "rhs-fn": "relative-strength-index",
+                                                          "is-else-condition?": false,
+                                                          "lhs-fn": "relative-strength-index",
+                                                          "lhs-val": "AGG",
+                                                          "id": "54cade08-c772-4716-85bd-d478b6b4dab5",
+                                                          "rhs-fn-params": {
+                                                            "window": 15
+                                                          },
+                                                          "comparator": "gt",
+                                                          "rhs-val": "QQQ",
+                                                          "step": "if-child"
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "SQQQ",
+                                                              "ticker": "SQQQ",
+                                                              "id": "6ea44a9c-1568-44f5-be61-1eb40f1831f0",
+                                                              "step": "asset"
+                                                            }
+                                                          ],
+                                                          "is-else-condition?": true,
+                                                          "id": "b2504c06-69ac-47c6-850b-a9e41f7a1953",
+                                                          "step": "if-child"
+                                                        }
+                                                      ],
+                                                      "id": "2309fdcc-56fb-48dc-bba0-25c871f01e77",
+                                                      "step": "if"
+                                                    },
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "BIL",
+                                                              "ticker": "BIL",
+                                                              "id": "71c39a06-bdfc-4aaf-b4e3-1782ad34c21a",
+                                                              "step": "asset"
+                                                            }
+                                                          ],
+                                                          "lhs-fn-params": {
+                                                            "window": 15
+                                                          },
+                                                          "rhs-fn": "relative-strength-index",
+                                                          "is-else-condition?": false,
+                                                          "lhs-fn": "relative-strength-index",
+                                                          "lhs-val": "TLT",
+                                                          "id": "e937bad9-8a54-4abd-ae2c-04719c8798df",
+                                                          "rhs-fn-params": {
+                                                            "window": 15
+                                                          },
+                                                          "comparator": "gt",
+                                                          "rhs-val": "PSQ",
+                                                          "step": "if-child"
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "SQQQ",
+                                                              "ticker": "SQQQ",
+                                                              "id": "12c7bdec-5f4d-4594-b1a8-717387c562cb",
+                                                              "step": "asset"
+                                                            }
+                                                          ],
+                                                          "is-else-condition?": true,
+                                                          "id": "b7b88e27-44ae-4041-9744-252b2e01a31b",
+                                                          "step": "if-child"
+                                                        }
+                                                      ],
+                                                      "id": "b378223d-b1ad-4294-89df-c3c86c93faa7",
+                                                      "step": "if"
+                                                    },
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "BIL",
+                                                              "ticker": "BIL",
+                                                              "id": "41b5ce30-7298-4e5c-8481-ba656eff5d19",
+                                                              "step": "asset"
+                                                            }
+                                                          ],
+                                                          "lhs-fn-params": {
+                                                            "window": 20
+                                                          },
+                                                          "rhs-fn": "relative-strength-index",
+                                                          "is-else-condition?": false,
+                                                          "lhs-fn": "relative-strength-index",
+                                                          "lhs-val": "AGG",
+                                                          "id": "2bf30246-f673-44c0-944c-dd4a9f7629b6",
+                                                          "rhs-fn-params": {
+                                                            "window": 60
+                                                          },
+                                                          "comparator": "gt",
+                                                          "rhs-val": "SH",
+                                                          "step": "if-child"
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "SQQQ",
+                                                              "ticker": "SQQQ",
+                                                              "id": "883a1519-abd6-4503-a711-cabfefba7d8c",
+                                                              "step": "asset"
+                                                            }
+                                                          ],
+                                                          "is-else-condition?": true,
+                                                          "id": "2bd9c21a-e7cb-4b2e-90cf-57ff6c7c55ae",
+                                                          "step": "if-child"
+                                                        }
+                                                      ],
+                                                      "id": "0d1f81ee-c7a8-46f7-b02f-0bd8ed0c8a06",
+                                                      "step": "if"
+                                                    },
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "BIL",
+                                                              "ticker": "BIL",
+                                                              "id": "ce0495bf-e0a0-4207-81d6-9a2a323469e1",
+                                                              "step": "asset"
+                                                            }
+                                                          ],
+                                                          "lhs-fn-params": {
+                                                            "window": 20
+                                                          },
+                                                          "rhs-fn": "relative-strength-index",
+                                                          "is-else-condition?": false,
+                                                          "lhs-fn": "relative-strength-index",
+                                                          "lhs-val": "SOXX",
+                                                          "id": "5c7d8f79-a58e-4379-acf9-89e1e8de7c7b",
+                                                          "rhs-fn-params": {
+                                                            "window": 20
+                                                          },
+                                                          "comparator": "gt",
+                                                          "rhs-val": "XLU",
+                                                          "step": "if-child"
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "SQQQ",
+                                                              "ticker": "SQQQ",
+                                                              "id": "77bca451-2593-4401-b0cf-ee9627dde63e",
+                                                              "step": "asset"
+                                                            }
+                                                          ],
+                                                          "is-else-condition?": true,
+                                                          "id": "46f5f2ac-9a70-4734-a0eb-90d979b76886",
+                                                          "step": "if-child"
+                                                        }
+                                                      ],
+                                                      "id": "a6fdccad-ba5d-40c5-a58e-f6442a35d573",
+                                                      "step": "if"
+                                                    }
+                                                  ],
+                                                  "id": "b684b718-84c3-4d31-8db0-3ed6683bd092",
+                                                  "step": "wt-cash-equal"
+                                                }
+                                              ],
+                                              "is-else-condition?": true,
+                                              "id": "0618aee5-5be2-43d4-9c35-01370dad53f8",
+                                              "step": "if-child"
+                                            }
+                                          ],
+                                          "id": "7c98636e-2362-48d2-9aeb-c995b3228ca5",
+                                          "step": "if"
+                                        }
+                                      ],
+                                      "is-else-condition?": true,
+                                      "id": "53602fe3-6ea2-40ab-a104-8c19570a15e8",
+                                      "step": "if-child"
+                                    }
+                                  ],
+                                  "id": "3678b9e0-3922-4139-806a-b6daa32344b9",
+                                  "step": "if"
+                                }
+                              ],
+                              "is-else-condition?": true,
+                              "id": "81e4c4d9-4f7d-44bf-a697-befd52d8f07a",
+                              "step": "if-child"
+                            }
+                          ],
+                          "id": "23cab3c7-fb52-4dce-88de-fd27bf0b182e",
+                          "step": "if"
+                        }
+                      ],
+                      "is-else-condition?": true,
+                      "id": "a6f50859-fa7c-49f4-94e0-2fdc2cd674ce",
+                      "step": "if-child"
+                    }
+                  ],
+                  "id": "0d1376c6-401a-433b-a611-a720860ab705",
+                  "step": "if"
+                }
+              ],
+              "id": "90a02eb5-5219-4247-86f9-f26fae47a2ed",
+              "step": "wt-cash-equal"
+            }
+          ],
+          "name": "Votes Core",
+          "id": "0c630667-b2b7-46c5-936b-64b5d6f51f09",
+          "step": "group"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "AGF U.S. Market Neutral Anti-Beta Fund",
+                          "ticker": "BTAL",
+                          "id": "ae909e39-9d81-4a70-b0e4-ba423beabd15",
+                          "step": "asset"
+                        }
+                      ],
+                      "lhs-fn-params": {
+                        "window": 10
+                      },
+                      "is-else-condition?": false,
+                      "rhs-fixed-value?": true,
+                      "lhs-fn": "relative-strength-index",
+                      "lhs-val": "SOXX",
+                      "id": "9c5de360-c104-4d09-913b-acc06ffba443",
+                      "comparator": "gt",
+                      "rhs-val": "79",
+                      "step": "if-child"
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "name": "Direxion Daily Semiconductor Bull 3X Shares",
+                                  "ticker": "SOXL",
+                                  "id": "7f0d2b72-3558-452b-a697-a0d693458c14",
+                                  "step": "asset"
+                                }
+                              ],
+                              "lhs-fn-params": {
+                                "window": 10
+                              },
+                              "is-else-condition?": false,
+                              "rhs-fixed-value?": true,
+                              "lhs-fn": "relative-strength-index",
+                              "lhs-val": "SOXX",
+                              "id": "183aa521-245a-4708-b4f1-e55174825904",
+                              "comparator": "lt",
+                              "rhs-val": "29",
+                              "step": "if-child"
+                            },
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "name": "Direxion Daily Semiconductor Bull 3X Shares",
+                                              "ticker": "SOXL",
+                                              "id": "ff485eca-4a39-45fd-b7d2-0804719d4222",
+                                              "step": "asset"
+                                            },
+                                            {
+                                              "name": "AGF U.S. Market Neutral Anti-Beta Fund",
+                                              "ticker": "BTAL",
+                                              "id": "26f17a39-5e07-47df-9e46-2648ae13a3cf",
+                                              "step": "asset"
+                                            }
+                                          ],
+                                          "id": "56c64272-8a4f-475b-9132-fc582b346985",
+                                          "step": "wt-cash-equal"
+                                        }
+                                      ],
+                                      "rhs-fn": "moving-average-price",
+                                      "is-else-condition?": false,
+                                      "lhs-fn": "current-price",
+                                      "lhs-val": "SOXX",
+                                      "id": "9d538d44-93d9-48c4-81f5-282428a7fbaf",
+                                      "rhs-fn-params": {
+                                        "window": 200
+                                      },
+                                      "comparator": "gt",
+                                      "rhs-val": "SOXX",
+                                      "step": "if-child"
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "name": "iShares Short Treasury Bond ETF",
+                                          "ticker": "SHV",
+                                          "id": "4da2bb5e-145d-47bd-acf7-4fe2910f304b",
+                                          "step": "asset"
+                                        }
+                                      ],
+                                      "is-else-condition?": true,
+                                      "id": "19168452-347c-4e5a-a7ca-411a4bb1f1e6",
+                                      "step": "if-child"
+                                    }
+                                  ],
+                                  "id": "9c631acb-35a6-4081-a3f9-7a871835f10a",
+                                  "step": "if"
+                                }
+                              ],
+                              "is-else-condition?": true,
+                              "id": "3a3ea654-9d3a-4a0d-9176-d4db6166c758",
+                              "step": "if-child"
+                            }
+                          ],
+                          "id": "1cb4b065-04d5-4086-b373-355d7f3ead73",
+                          "step": "if"
+                        }
+                      ],
+                      "is-else-condition?": true,
+                      "id": "fa9c7319-984b-4ee0-9384-eed826a73424",
+                      "step": "if-child"
+                    }
+                  ],
+                  "id": "66d780ee-fadf-4849-957c-ae4784f38723",
+                  "step": "if"
+                }
+              ],
+              "id": "52fd34e8-b6d3-4167-b85a-55e6ca9e81b5",
+              "step": "wt-cash-equal"
+            }
+          ],
+          "name": "Semis Shield",
+          "id": "6e847f13-895a-45df-83e8-052c059782c7",
+          "step": "group"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "name": "iShares 1-3 Year Treasury Bond ETF",
+                                  "ticker": "SHY",
+                                  "id": "d0052358-f0e9-47a1-8932-89004b38f80e",
+                                  "step": "asset"
+                                }
+                              ],
+                              "lhs-fn-params": {
+                                "window": 60
+                              },
+                              "is-else-condition?": false,
+                              "rhs-fixed-value?": true,
+                              "lhs-fn": "relative-strength-index",
+                              "lhs-val": "TLT",
+                              "id": "bbe88212-be38-4f29-80c3-17dbb0d0faca",
+                              "comparator": "gt",
+                              "rhs-val": "62",
+                              "step": "if-child"
+                            },
+                            {
+                              "children": [
+                                {
+                                  "name": "iShares 20+ Year Treasury Bond ETF",
+                                  "ticker": "TLT",
+                                  "id": "bd22dd45-6174-4497-a949-98776addfdef",
+                                  "step": "asset"
+                                }
+                              ],
+                              "is-else-condition?": true,
+                              "id": "63e271d2-403f-470d-9678-79ce241556f5",
+                              "step": "if-child"
+                            }
+                          ],
+                          "id": "4326c9b9-0902-4fcb-ba02-3ecd728f7b62",
+                          "step": "if"
+                        }
+                      ],
+                      "lhs-fn-params": {
+                        "window": 350
+                      },
+                      "rhs-fn": "moving-average-price",
+                      "is-else-condition?": false,
+                      "lhs-fn": "moving-average-price",
+                      "lhs-val": "TLT",
+                      "id": "d19aaddb-1772-463b-aa1c-4842137980f9",
+                      "rhs-fn-params": {
+                        "window": 550
+                      },
+                      "comparator": "gt",
+                      "rhs-val": "TLT",
+                      "step": "if-child"
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "name": "iShares 20+ Year Treasury Bond ETF",
+                                  "ticker": "TLT",
+                                  "id": "e7edac5e-e66d-4c31-8301-333c6b943b01",
+                                  "step": "asset"
+                                }
+                              ],
+                              "lhs-fn-params": {
+                                "window": 60
+                              },
+                              "is-else-condition?": false,
+                              "rhs-fixed-value?": true,
+                              "lhs-fn": "relative-strength-index",
+                              "lhs-val": "TLT",
+                              "id": "f24a5413-3135-4fb4-8fe3-5ade54bf66b0",
+                              "comparator": "gt",
+                              "rhs-val": "53",
+                              "step": "if-child"
+                            },
+                            {
+                              "children": [
+                                {
+                                  "name": "iShares Short Treasury Bond ETF",
+                                  "ticker": "SHV",
+                                  "id": "44eb613c-ea15-4205-a722-062bf9c5fc17",
+                                  "step": "asset"
+                                }
+                              ],
+                              "is-else-condition?": true,
+                              "id": "04259d3a-366c-4b06-85f5-b1c6b8fdff10",
+                              "step": "if-child"
+                            }
+                          ],
+                          "id": "cff326bf-8b0b-4e13-8860-b25b42f8ff7f",
+                          "step": "if"
+                        }
+                      ],
+                      "is-else-condition?": true,
+                      "id": "d4d492f4-1532-473a-aa48-0b2f19c2834e",
+                      "step": "if-child"
+                    }
+                  ],
+                  "id": "adac35be-74e0-440d-9a50-605694947635",
+                  "step": "if"
+                }
+              ],
+              "id": "9a4be5a7-98b5-44f5-8495-8ee0c981900a",
+              "step": "wt-cash-equal"
+            }
+          ],
+          "name": "TLT Macro Momentum",
+          "id": "9f4a66ea-96b0-4fd5-8a37-43a0dc067a00",
+          "step": "group"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "iShares 7-10 Year Treasury Bond ETF",
+                          "ticker": "IEF",
+                          "id": "aec9a6ca-4823-4b05-b00f-0e8d2c9eadf4",
+                          "step": "asset"
+                        }
+                      ],
+                      "lhs-fn-params": {
+                        "window": 200
+                      },
+                      "rhs-fn": "moving-average-price",
+                      "is-else-condition?": false,
+                      "lhs-fn": "moving-average-price",
+                      "lhs-val": "IEF",
+                      "id": "137691bb-1238-40c8-ac23-5ae951d1f1ed",
+                      "rhs-fn-params": {
+                        "window": 450
+                      },
+                      "comparator": "gt",
+                      "rhs-val": "IEF",
+                      "step": "if-child"
+                    },
+                    {
+                      "children": [
+                        {
+                          "name": "iShares Short Treasury Bond ETF",
+                          "ticker": "SHV",
+                          "id": "3167b0ac-0ea6-4c06-b9fb-15f49941eee6",
+                          "step": "asset"
+                        }
+                      ],
+                      "is-else-condition?": true,
+                      "id": "899b590f-b4da-4f63-b3db-00e4a89a1317",
+                      "step": "if-child"
+                    }
+                  ],
+                  "id": "21abfc89-b675-482a-9037-131da203c13d",
+                  "step": "if"
+                }
+              ],
+              "id": "7b46bc5b-428d-4b14-a96c-9dd7a9e17293",
+              "step": "wt-cash-equal"
+            }
+          ],
+          "name": "IEF Macro Momentum",
+          "id": "f987fa77-82fd-4b8d-b940-2377a2252a75",
+          "step": "group"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "Invesco DB Commodity Index Tracking Fund",
+                          "ticker": "DBC",
+                          "id": "09d70d5b-3949-4931-82c9-b7dbae80e06e",
+                          "step": "asset"
+                        }
+                      ],
+                      "lhs-fn-params": {
+                        "window": 10
+                      },
+                      "is-else-condition?": false,
+                      "rhs-fixed-value?": true,
+                      "lhs-fn": "relative-strength-index",
+                      "lhs-val": "DBC",
+                      "id": "0d9b647c-c23c-43f5-b217-241569c4639b",
+                      "comparator": "lt",
+                      "rhs-val": "17",
+                      "step": "if-child"
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "name": "iShares Short Treasury Bond ETF",
+                                                  "ticker": "SHV",
+                                                  "id": "accaf91f-4c60-4363-ba28-1125cb802ca1",
+                                                  "step": "asset"
+                                                }
+                                              ],
+                                              "lhs-fn-params": {
+                                                "window": 60
+                                              },
+                                              "is-else-condition?": false,
+                                              "rhs-fixed-value?": true,
+                                              "lhs-fn": "relative-strength-index",
+                                              "lhs-val": "DBC",
+                                              "id": "b322d7f6-cf63-459d-bb95-2f4a0a19f4d6",
+                                              "comparator": "gt",
+                                              "rhs-val": "60",
+                                              "step": "if-child"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "name": "Invesco DB Commodity Index Tracking Fund",
+                                                  "ticker": "DBC",
+                                                  "id": "0fe3c9b5-05b6-4e83-bdd8-07cac640ef6a",
+                                                  "step": "asset"
+                                                }
+                                              ],
+                                              "is-else-condition?": true,
+                                              "id": "32f03cc3-095d-45ef-9d50-504777cbca99",
+                                              "step": "if-child"
+                                            }
+                                          ],
+                                          "id": "b992251d-c84a-4cef-b248-3a0ddd4a06c6",
+                                          "step": "if"
+                                        }
+                                      ],
+                                      "lhs-fn-params": {
+                                        "window": 50
+                                      },
+                                      "rhs-fn": "moving-average-price",
+                                      "is-else-condition?": false,
+                                      "lhs-fn": "moving-average-price",
+                                      "lhs-val": "DBC",
+                                      "id": "de1ea208-18b6-487a-9c50-cd43bf912b8f",
+                                      "rhs-fn-params": {
+                                        "window": 100
+                                      },
+                                      "comparator": "gt",
+                                      "rhs-val": "DBC",
+                                      "step": "if-child"
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "name": "iShares Short Treasury Bond ETF",
+                                          "ticker": "SHV",
+                                          "id": "2aeb5f26-8e04-40ae-8573-b9327ab376f5",
+                                          "step": "asset"
+                                        }
+                                      ],
+                                      "is-else-condition?": true,
+                                      "id": "5ebc5506-987d-4c0a-a06d-52625c6aa18b",
+                                      "step": "if-child"
+                                    }
+                                  ],
+                                  "id": "f0acd8d5-720d-4a06-bd4b-debbcdafc734",
+                                  "step": "if"
+                                }
+                              ],
+                              "lhs-fn-params": {
+                                "window": 100
+                              },
+                              "rhs-fn": "moving-average-price",
+                              "is-else-condition?": false,
+                              "lhs-fn": "moving-average-price",
+                              "lhs-val": "DBC",
+                              "id": "093f48af-b599-43d6-9fc1-d9eb2a9e1923",
+                              "rhs-fn-params": {
+                                "window": 252
+                              },
+                              "comparator": "gt",
+                              "rhs-val": "DBC",
+                              "step": "if-child"
+                            },
+                            {
+                              "children": [
+                                {
+                                  "name": "iShares Short Treasury Bond ETF",
+                                  "ticker": "SHV",
+                                  "id": "b615e1bd-7802-4beb-a8c8-50a0119386de",
+                                  "step": "asset"
+                                }
+                              ],
+                              "is-else-condition?": true,
+                              "id": "355b32f6-5df7-469c-a3e4-3f9c463b54a2",
+                              "step": "if-child"
+                            }
+                          ],
+                          "id": "ed2fca50-022f-477a-a80d-ea90577119a5",
+                          "step": "if"
+                        }
+                      ],
+                      "is-else-condition?": true,
+                      "id": "f5e1044f-ad40-4a33-8275-74f073cd67e2",
+                      "step": "if-child"
+                    }
+                  ],
+                  "id": "117311dd-19f8-484a-9463-be690097b03e",
+                  "step": "if"
+                }
+              ],
+              "id": "4298c5f6-348b-4795-b5b3-870f6be5fde9",
+              "step": "wt-cash-equal"
+            }
+          ],
+          "name": "Commodities Macro Momentum",
+          "id": "94409a3d-f8e7-4ccd-98a2-e27bed465ea6",
+          "step": "group"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "Invesco DB US Dollar Index Bullish Fund",
+                          "ticker": "UUP",
+                          "id": "9d88f91d-6491-4bd6-a41a-c229c57dfeda",
+                          "step": "asset"
+                        }
+                      ],
+                      "lhs-fn-params": {
+                        "window": 50
+                      },
+                      "rhs-fn": "exponential-moving-average-price",
+                      "is-else-condition?": false,
+                      "lhs-fn": "exponential-moving-average-price",
+                      "lhs-val": "UUP",
+                      "id": "c0a531e6-9443-4534-abfd-7441e0b5bdb3",
+                      "rhs-fn-params": {
+                        "window": 100
+                      },
+                      "comparator": "gt",
+                      "rhs-val": "UUP",
+                      "step": "if-child"
+                    },
+                    {
+                      "children": [
+                        {
+                          "name": "iShares Short Treasury Bond ETF",
+                          "ticker": "SHV",
+                          "id": "10347cd8-3804-4f63-b7e6-d046760765db",
+                          "step": "asset"
+                        }
+                      ],
+                      "is-else-condition?": true,
+                      "id": "4ad04e8f-d525-426c-9a04-acc056673d50",
+                      "step": "if-child"
+                    }
+                  ],
+                  "id": "e637d098-55f2-4dc0-a2ac-661d989f3d4a",
+                  "step": "if"
+                }
+              ],
+              "id": "65ac24f2-464d-4f4f-960e-c45795c9187d",
+              "step": "wt-cash-equal"
+            }
+          ],
+          "name": "U.S. Dollar",
+          "id": "92ad85ee-cfd6-41c7-9742-57cf528908c2",
+          "step": "group"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "Consumer Staples Select Sector SPDR Fund",
+                          "ticker": "XLP",
+                          "id": "3c553e1e-4aa8-46c7-ba75-57a587b95011",
+                          "step": "asset"
+                        }
+                      ],
+                      "lhs-fn-params": {
+                        "window": 8
+                      },
+                      "rhs-fn": "moving-average-price",
+                      "is-else-condition?": false,
+                      "lhs-fn": "exponential-moving-average-price",
+                      "lhs-val": "XLP",
+                      "id": "30b8f71f-9454-4a20-9f6f-ad611f24c836",
+                      "rhs-fn-params": {
+                        "window": 50
+                      },
+                      "comparator": "gt",
+                      "rhs-val": "XLP",
+                      "step": "if-child"
+                    },
+                    {
+                      "children": [
+                        {
+                          "name": "iShares Short Treasury Bond ETF",
+                          "ticker": "SHV",
+                          "id": "df388dee-ab59-41c5-bf05-31c80fa881c7",
+                          "step": "asset"
+                        }
+                      ],
+                      "is-else-condition?": true,
+                      "id": "290db795-1893-4799-8f7d-413e2edd3f0b",
+                      "step": "if-child"
+                    }
+                  ],
+                  "id": "6c4d74a2-34d0-4f5e-b710-5c80ac1676fc",
+                  "step": "if"
+                }
+              ],
+              "id": "15d1f937-e6be-44e1-a0b8-c69f2a52fbf9",
+              "step": "wt-cash-equal"
+            }
+          ],
+          "name": "XLP Easy Money",
+          "id": "ee48f9c0-a026-4ffd-85df-69483fddd61d",
+          "step": "group"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "SPDR Gold Shares",
+                          "ticker": "GLD",
+                          "id": "6670f635-d2f7-43a6-86b5-63bf9bbf0317",
+                          "step": "asset"
+                        }
+                      ],
+                      "lhs-fn-params": {
+                        "window": 10
+                      },
+                      "rhs-fn": "moving-average-price",
+                      "is-else-condition?": false,
+                      "lhs-fn": "exponential-moving-average-price",
+                      "lhs-val": "GLD",
+                      "id": "1579df86-275f-4368-b94b-556ebd21c095",
+                      "rhs-fn-params": {
+                        "window": 50
+                      },
+                      "comparator": "gt",
+                      "rhs-val": "GLD",
+                      "step": "if-child"
+                    },
+                    {
+                      "children": [
+                        {
+                          "name": "iShares Short Treasury Bond ETF",
+                          "ticker": "SHV",
+                          "id": "c5268d4e-a7bd-409a-a2f8-e20691c2416b",
+                          "step": "asset"
+                        }
+                      ],
+                      "is-else-condition?": true,
+                      "id": "ee89151d-8922-4115-a1ec-7adbcdd99940",
+                      "step": "if-child"
+                    }
+                  ],
+                  "id": "67b86b18-7e7a-4695-83dc-6672bb5e02ac",
+                  "step": "if"
+                }
+              ],
+              "id": "197fb587-6197-4da4-aba6-0f244b3df23d",
+              "step": "wt-cash-equal"
+            }
+          ],
+          "name": "GLD Trend",
+          "id": "7c0c512b-88ec-43dc-995d-a094dd41c985",
+          "step": "group"
+        }
+      ],
+      "id": "135699ac-2aa3-43a3-824a-93cbda48af2b",
+      "step": "wt-cash-equal"
+    }
+  ],
+  "name": "Copy of Macro Oscillator Engine",
+  "rebalance": "daily",
+  "id": "EXKPWhtGCtdwZ1zlUld4",
+  "step": "root"
+}

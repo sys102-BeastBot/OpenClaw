@@ -1,0 +1,680 @@
+{
+  "id": "df6aed4e-cd2a-47ce-a70b-6641b9d9f522",
+  "step": "root",
+  "name": "Max Drawdown Black Swan Catcher",
+  "description": "",
+  "rebalance": "daily",
+  "children": [
+    {
+      "id": "054fbcad-7b68-4252-8d27-b8587c6515b4",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "id": "e8e5a6c2-2a54-4324-8bc8-97e2ae1af8ef",
+          "step": "group",
+          "name": "Max Drawdown Black Swan Catcher",
+          "children": [
+            {
+              "step": "wt-cash-equal",
+              "id": "7008a1d2-8791-48dd-a5d0-a1f19c2be05e",
+              "children": [
+                {
+                  "id": "6fdddcda-8f87-4a00-8e44-b6947d19f270",
+                  "step": "if",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "id": "85961738-1824-4f21-89e7-e2714606c375",
+                          "step": "wt-cash-equal",
+                          "children": [
+                            {
+                              "id": "5fa69f6b-ff8c-4c0a-9acb-1a8d7da989c7",
+                              "step": "group",
+                              "name": "v2.1.0 Pop Bots l (DONT REPLACE $BIL)",
+                              "children": [
+                                {
+                                  "step": "wt-cash-equal",
+                                  "id": "5d43b1bc-19b2-4736-92eb-9aa6079fa3f2",
+                                  "children": [
+                                    {
+                                      "id": "3a295321-8902-43e7-b24a-3fe1599ebf29",
+                                      "step": "group",
+                                      "name": "SPY Pop Bot",
+                                      "children": [
+                                        {
+                                          "step": "wt-cash-equal",
+                                          "id": "c35ad775-6eb1-4bbb-823b-fbd5133b85ef",
+                                          "children": [
+                                            {
+                                              "weight": {
+                                                "num": 100,
+                                                "den": 100
+                                              },
+                                              "id": "0534dbd9-d659-4fbe-bea5-a51f32a883c2",
+                                              "step": "if",
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "name": "ProShares Ultra VIX Short-Term Futures ETF",
+                                                      "ticker": "UVXY",
+                                                      "has_marketcap": false,
+                                                      "id": "4b8858ce-0276-4f0b-9ef7-2938eea43254",
+                                                      "exchange": "BATS",
+                                                      "price": 10.03,
+                                                      "step": "asset",
+                                                      "dollar_volume": 316257474.62
+                                                    }
+                                                  ],
+                                                  "is-else-condition?": false,
+                                                  "rhs-fixed-value?": true,
+                                                  "lhs-fn": "relative-strength-index",
+                                                  "lhs-window-days": "10",
+                                                  "lhs-val": "SPXL",
+                                                  "id": "905ba4cd-b372-4596-a0d2-5ba6425d9def",
+                                                  "comparator": "gt",
+                                                  "rhs-val": "80",
+                                                  "step": "if-child"
+                                                },
+                                                {
+                                                  "id": "e3d2d642-934d-4494-87d1-59269f1f17b4",
+                                                  "step": "if-child",
+                                                  "is-else-condition?": true,
+                                                  "children": [
+                                                    {
+                                                      "id": "80887d78-9a0c-4568-8c28-690fc68ec1f0",
+                                                      "step": "wt-cash-equal",
+                                                      "children": [
+                                                        {
+                                                          "weight": {
+                                                            "num": 100,
+                                                            "den": 100
+                                                          },
+                                                          "id": "75d6fb52-d4db-423a-9a60-86d3dcdb4da2",
+                                                          "step": "if",
+                                                          "children": [
+                                                            {
+                                                              "children": [
+                                                                {
+                                                                  "name": "ProShares Ultra S&P 500",
+                                                                  "ticker": "SSO",
+                                                                  "has_marketcap": false,
+                                                                  "id": "992188c5-a57d-48ba-8a8f-08a676be9dd1",
+                                                                  "exchange": "ARCX",
+                                                                  "price": 47.96,
+                                                                  "step": "asset",
+                                                                  "dollar_volume": 204613090.88
+                                                                }
+                                                              ],
+                                                              "is-else-condition?": false,
+                                                              "rhs-fixed-value?": true,
+                                                              "lhs-fn": "relative-strength-index",
+                                                              "lhs-window-days": "10",
+                                                              "lhs-val": "SPXL",
+                                                              "id": "f2c7b0ce-b798-412d-b042-b667ffe275eb",
+                                                              "comparator": "lt",
+                                                              "rhs-val": "30",
+                                                              "step": "if-child"
+                                                            },
+                                                            {
+                                                              "id": "fbfe9bc9-2e11-40f0-9ed6-913c0270aca3",
+                                                              "step": "if-child",
+                                                              "is-else-condition?": true,
+                                                              "children": [
+                                                                {
+                                                                  "name": "SPDR Bloomberg 1-3 Month T-Bill ETF",
+                                                                  "ticker": "BIL",
+                                                                  "has_marketcap": false,
+                                                                  "id": "1a79ad0d-8754-4d4a-9aee-df60a6a2a8fe",
+                                                                  "exchange": "ARCX",
+                                                                  "price": 91.58,
+                                                                  "step": "asset",
+                                                                  "dollar_volume": 646698946.92
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "collapsed?": false
+                                    },
+                                    {
+                                      "id": "ef939270-51c2-472c-9e02-ccd0ca39ee30",
+                                      "step": "group",
+                                      "name": "QQQ Pop Bot",
+                                      "children": [
+                                        {
+                                          "step": "wt-cash-equal",
+                                          "id": "2d6dbab6-7549-40bb-8540-162308ea36e0",
+                                          "children": [
+                                            {
+                                              "weight": {
+                                                "num": 100,
+                                                "den": 100
+                                              },
+                                              "id": "4e818c72-63ea-4149-b2cc-e0fe5c8d2e6d",
+                                              "step": "if",
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "name": "ProShares Ultra VIX Short-Term Futures ETF",
+                                                      "ticker": "UVXY",
+                                                      "has_marketcap": false,
+                                                      "id": "94eaca9d-cbf3-4963-97ac-213982d61594",
+                                                      "exchange": "BATS",
+                                                      "price": 10.03,
+                                                      "step": "asset",
+                                                      "dollar_volume": 316257474.62
+                                                    }
+                                                  ],
+                                                  "is-else-condition?": false,
+                                                  "rhs-fixed-value?": true,
+                                                  "lhs-fn": "relative-strength-index",
+                                                  "lhs-window-days": "10",
+                                                  "lhs-val": "TQQQ",
+                                                  "id": "eda2d2d3-5b9a-456a-b63b-4b41decdc234",
+                                                  "comparator": "gt",
+                                                  "rhs-val": "80",
+                                                  "step": "if-child"
+                                                },
+                                                {
+                                                  "id": "69b6ddcb-747b-4af7-bc99-7645b5ac6f90",
+                                                  "step": "if-child",
+                                                  "is-else-condition?": true,
+                                                  "children": [
+                                                    {
+                                                      "id": "00d4913f-69d5-4445-b803-3d3761ab7e57",
+                                                      "step": "wt-cash-equal",
+                                                      "children": [
+                                                        {
+                                                          "weight": {
+                                                            "num": 100,
+                                                            "den": 100
+                                                          },
+                                                          "id": "1cec9588-9089-4666-827c-e5385fa6e9e6",
+                                                          "step": "if",
+                                                          "children": [
+                                                            {
+                                                              "children": [
+                                                                {
+                                                                  "name": "ProShares Ultra QQQ",
+                                                                  "ticker": "QLD",
+                                                                  "has_marketcap": false,
+                                                                  "id": "3a463ea5-e855-4b7f-96db-ffdfe6ac9f40",
+                                                                  "exchange": "ARCX",
+                                                                  "price": 40.59,
+                                                                  "step": "asset",
+                                                                  "dollar_volume": 176863943.52
+                                                                }
+                                                              ],
+                                                              "is-else-condition?": false,
+                                                              "rhs-fixed-value?": true,
+                                                              "lhs-fn": "relative-strength-index",
+                                                              "lhs-window-days": "10",
+                                                              "lhs-val": "TQQQ",
+                                                              "id": "21215c26-b1b9-4ac0-9ce8-ae10a4b19aec",
+                                                              "comparator": "lt",
+                                                              "rhs-val": "30",
+                                                              "step": "if-child"
+                                                            },
+                                                            {
+                                                              "id": "846c635c-947f-4cf1-87e8-d07ffa7493ca",
+                                                              "step": "if-child",
+                                                              "is-else-condition?": true,
+                                                              "children": [
+                                                                {
+                                                                  "name": "SPDR Bloomberg 1-3 Month T-Bill ETF",
+                                                                  "ticker": "BIL",
+                                                                  "has_marketcap": false,
+                                                                  "id": "2ad3043d-1714-43a3-919f-9603ef895974",
+                                                                  "exchange": "ARCX",
+                                                                  "price": 91.58,
+                                                                  "step": "asset",
+                                                                  "dollar_volume": 646698946.92
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "collapsed?": false
+                                    },
+                                    {
+                                      "id": "d45691f0-d9de-4504-8cab-ea88442a4366",
+                                      "step": "group",
+                                      "name": "SMH Pop Bot",
+                                      "children": [
+                                        {
+                                          "step": "wt-cash-equal",
+                                          "id": "28226a42-ebb5-4bd6-bcca-e202d073cd26",
+                                          "children": [
+                                            {
+                                              "weight": {
+                                                "num": 100,
+                                                "den": 100
+                                              },
+                                              "id": "c9a1b8ce-93ba-4493-b4da-55d8022d9b5a",
+                                              "step": "if",
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "name": "ProShares Ultra Semiconductors",
+                                                      "ticker": "USD",
+                                                      "has_marketcap": false,
+                                                      "id": "210d3962-c6e4-4a31-a298-03563e74ecea",
+                                                      "exchange": "ARCX",
+                                                      "price": 19.16,
+                                                      "step": "asset",
+                                                      "dollar_volume": 3750799.92
+                                                    }
+                                                  ],
+                                                  "is-else-condition?": false,
+                                                  "rhs-fixed-value?": true,
+                                                  "lhs-fn": "relative-strength-index",
+                                                  "lhs-window-days": "10",
+                                                  "lhs-val": "SOXL",
+                                                  "id": "b9d6ba4a-767f-4d32-8ff0-8a04b1712a63",
+                                                  "comparator": "lt",
+                                                  "rhs-val": "30",
+                                                  "step": "if-child"
+                                                },
+                                                {
+                                                  "id": "15779cc2-9aac-46ee-93a5-5f37f66d0778",
+                                                  "step": "if-child",
+                                                  "is-else-condition?": true,
+                                                  "children": [
+                                                    {
+                                                      "name": "SPDR Bloomberg 1-3 Month T-Bill ETF",
+                                                      "ticker": "BIL",
+                                                      "has_marketcap": false,
+                                                      "id": "30014191-dd33-499c-bbcc-eb1898e94e2e",
+                                                      "exchange": "ARCX",
+                                                      "price": 91.58,
+                                                      "step": "asset",
+                                                      "dollar_volume": 646698946.92
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "collapsed?": false
+                                    }
+                                  ]
+                                }
+                              ],
+                              "collapsed?": true,
+                              "weight": {
+                                "num": "40",
+                                "den": 100
+                              }
+                            }
+                          ]
+                        }
+                      ],
+                      "is-else-condition?": false,
+                      "rhs-fixed-value?": true,
+                      "lhs-fn": "max-drawdown",
+                      "lhs-window-days": "10",
+                      "lhs-val": "SPY",
+                      "id": "91e1ffad-0688-4f24-936b-f8db1cd431b0",
+                      "comparator": "gt",
+                      "rhs-val": "6",
+                      "step": "if-child",
+                      "collapsed?": false
+                    },
+                    {
+                      "id": "4a09a307-77a5-43b6-a663-77f499923274",
+                      "step": "if-child",
+                      "is-else-condition?": true,
+                      "children": [
+                        {
+                          "id": "819db1fa-fe05-490a-bc37-de263830a01d",
+                          "step": "group",
+                          "name": "Not a black Swan Event",
+                          "children": [
+                            {
+                              "step": "wt-cash-equal",
+                              "id": "f47d6fb1-b0d0-4cc8-ad4a-cd3b862f721c",
+                              "children": [
+                                {
+                                  "id": "f118fce6-f084-403f-9fe6-ba100e442ed8",
+                                  "step": "group",
+                                  "name": "v2.1.0 Pop Bots l (can replace $BIL with another symphony)",
+                                  "children": [
+                                    {
+                                      "step": "wt-cash-equal",
+                                      "id": "235fd1d1-d0b2-4416-8ee6-83179b4f6ecd",
+                                      "children": [
+                                        {
+                                          "id": "6ee2daad-a23d-456c-a178-486503ccf07b",
+                                          "step": "group",
+                                          "name": "SPY Pop Bot",
+                                          "children": [
+                                            {
+                                              "step": "wt-cash-equal",
+                                              "id": "7e0d662d-d34c-4c88-a540-3115a81de696",
+                                              "children": [
+                                                {
+                                                  "weight": {
+                                                    "num": 100,
+                                                    "den": 100
+                                                  },
+                                                  "id": "467b540d-e5e9-470f-b3bd-b2389f60d6fd",
+                                                  "step": "if",
+                                                  "children": [
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "name": "ProShares Ultra VIX Short-Term Futures ETF",
+                                                          "ticker": "UVXY",
+                                                          "has_marketcap": false,
+                                                          "id": "14e518d4-b4b7-45ba-9c85-b1f4aa8850cf",
+                                                          "exchange": "BATS",
+                                                          "price": 10.03,
+                                                          "step": "asset",
+                                                          "dollar_volume": 316257474.62
+                                                        }
+                                                      ],
+                                                      "is-else-condition?": false,
+                                                      "rhs-fixed-value?": true,
+                                                      "lhs-fn": "relative-strength-index",
+                                                      "lhs-window-days": "10",
+                                                      "lhs-val": "SPXL",
+                                                      "id": "fa195582-77d0-4478-9000-90856402a512",
+                                                      "comparator": "gt",
+                                                      "rhs-val": "80",
+                                                      "step": "if-child"
+                                                    },
+                                                    {
+                                                      "id": "e36018ca-606f-4d06-b22f-e2e15219f779",
+                                                      "step": "if-child",
+                                                      "is-else-condition?": true,
+                                                      "children": [
+                                                        {
+                                                          "id": "3f72f097-2df6-4b6f-a35d-96006a3841f6",
+                                                          "step": "wt-cash-equal",
+                                                          "children": [
+                                                            {
+                                                              "weight": {
+                                                                "num": 100,
+                                                                "den": 100
+                                                              },
+                                                              "id": "b61339da-d97f-4ef1-bafc-9b3bd38819d0",
+                                                              "step": "if",
+                                                              "children": [
+                                                                {
+                                                                  "children": [
+                                                                    {
+                                                                      "name": "ProShares Ultra S&P 500",
+                                                                      "ticker": "SSO",
+                                                                      "has_marketcap": false,
+                                                                      "id": "5e33e766-0bb6-4b49-87a9-b3adfcef65d7",
+                                                                      "exchange": "ARCX",
+                                                                      "price": 47.96,
+                                                                      "step": "asset",
+                                                                      "dollar_volume": 204613090.88
+                                                                    }
+                                                                  ],
+                                                                  "is-else-condition?": false,
+                                                                  "rhs-fixed-value?": true,
+                                                                  "lhs-fn": "relative-strength-index",
+                                                                  "lhs-window-days": "10",
+                                                                  "lhs-val": "SPXL",
+                                                                  "id": "1c0a1c4e-7e06-47b0-9ca2-94e5c75e4329",
+                                                                  "comparator": "lt",
+                                                                  "rhs-val": "30",
+                                                                  "step": "if-child"
+                                                                },
+                                                                {
+                                                                  "id": "7500384e-0568-481a-9151-2afbade61fe0",
+                                                                  "step": "if-child",
+                                                                  "is-else-condition?": true,
+                                                                  "children": [
+                                                                    {
+                                                                      "name": "SPDR Bloomberg 1-3 Month T-Bill ETF",
+                                                                      "ticker": "BIL",
+                                                                      "has_marketcap": false,
+                                                                      "id": "73d4d1ac-7ef6-4e0d-9ff6-fc3fd00f0770",
+                                                                      "exchange": "ARCX",
+                                                                      "price": 91.58,
+                                                                      "step": "asset",
+                                                                      "dollar_volume": 646698946.92
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ],
+                                          "collapsed?": false
+                                        },
+                                        {
+                                          "id": "4d76270b-81e7-47b8-b52d-2625d65e35a0",
+                                          "step": "group",
+                                          "name": "QQQ Pop Bot",
+                                          "children": [
+                                            {
+                                              "step": "wt-cash-equal",
+                                              "id": "a5305628-902c-42a7-9f0b-86a188ca73eb",
+                                              "children": [
+                                                {
+                                                  "weight": {
+                                                    "num": 100,
+                                                    "den": 100
+                                                  },
+                                                  "id": "26ca18fd-b4d9-4868-b9ed-f0783fa45c49",
+                                                  "step": "if",
+                                                  "children": [
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "name": "ProShares Ultra VIX Short-Term Futures ETF",
+                                                          "ticker": "UVXY",
+                                                          "has_marketcap": false,
+                                                          "id": "8d88fc7b-259b-40fd-a827-7dfa40441f9a",
+                                                          "exchange": "BATS",
+                                                          "price": 10.03,
+                                                          "step": "asset",
+                                                          "dollar_volume": 316257474.62
+                                                        }
+                                                      ],
+                                                      "is-else-condition?": false,
+                                                      "rhs-fixed-value?": true,
+                                                      "lhs-fn": "relative-strength-index",
+                                                      "lhs-window-days": "10",
+                                                      "lhs-val": "TQQQ",
+                                                      "id": "cc3c0973-f45f-4933-9aef-87c658e5d8be",
+                                                      "comparator": "gt",
+                                                      "rhs-val": "80",
+                                                      "step": "if-child"
+                                                    },
+                                                    {
+                                                      "id": "986800a8-ad44-4c5e-a6e4-32a111f9e057",
+                                                      "step": "if-child",
+                                                      "is-else-condition?": true,
+                                                      "children": [
+                                                        {
+                                                          "id": "4a605a1e-8d78-437b-af76-2f5f39a464a4",
+                                                          "step": "wt-cash-equal",
+                                                          "children": [
+                                                            {
+                                                              "weight": {
+                                                                "num": 100,
+                                                                "den": 100
+                                                              },
+                                                              "id": "2299a498-88b2-4b38-a3f5-1d4eca16b0ab",
+                                                              "step": "if",
+                                                              "children": [
+                                                                {
+                                                                  "children": [
+                                                                    {
+                                                                      "name": "ProShares Ultra QQQ",
+                                                                      "ticker": "QLD",
+                                                                      "has_marketcap": false,
+                                                                      "id": "7a2340f1-11ba-4bb2-8385-1e281f70d6f1",
+                                                                      "exchange": "ARCX",
+                                                                      "price": 40.59,
+                                                                      "step": "asset",
+                                                                      "dollar_volume": 176863943.52
+                                                                    }
+                                                                  ],
+                                                                  "is-else-condition?": false,
+                                                                  "rhs-fixed-value?": true,
+                                                                  "lhs-fn": "relative-strength-index",
+                                                                  "lhs-window-days": "10",
+                                                                  "lhs-val": "TQQQ",
+                                                                  "id": "d3eb110d-e0b1-4ccb-90a7-697174db351e",
+                                                                  "comparator": "lt",
+                                                                  "rhs-val": "30",
+                                                                  "step": "if-child"
+                                                                },
+                                                                {
+                                                                  "id": "82940d55-a85d-4583-ade4-1808d50b5352",
+                                                                  "step": "if-child",
+                                                                  "is-else-condition?": true,
+                                                                  "children": [
+                                                                    {
+                                                                      "name": "SPDR Bloomberg 1-3 Month T-Bill ETF",
+                                                                      "ticker": "BIL",
+                                                                      "has_marketcap": false,
+                                                                      "id": "daeb77ec-9b5c-4de8-b48c-08e69a187d22",
+                                                                      "exchange": "ARCX",
+                                                                      "price": 91.58,
+                                                                      "step": "asset",
+                                                                      "dollar_volume": 646698946.92
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ],
+                                          "collapsed?": false
+                                        },
+                                        {
+                                          "id": "010c1d5a-cc9c-4ef8-8b91-83f079abfde0",
+                                          "step": "group",
+                                          "name": "SMH Pop Bot",
+                                          "children": [
+                                            {
+                                              "step": "wt-cash-equal",
+                                              "id": "0a250b40-f350-47cf-9faf-33796286af4f",
+                                              "children": [
+                                                {
+                                                  "weight": {
+                                                    "num": 100,
+                                                    "den": 100
+                                                  },
+                                                  "id": "e92387ee-6617-432a-a831-0ed12896ea51",
+                                                  "step": "if",
+                                                  "children": [
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "name": "ProShares Ultra Semiconductors",
+                                                          "ticker": "USD",
+                                                          "has_marketcap": false,
+                                                          "id": "4f3964a1-6b8f-42d4-a529-339e5275cf74",
+                                                          "exchange": "ARCX",
+                                                          "price": 19.16,
+                                                          "step": "asset",
+                                                          "dollar_volume": 3750799.92
+                                                        }
+                                                      ],
+                                                      "is-else-condition?": false,
+                                                      "rhs-fixed-value?": true,
+                                                      "lhs-fn": "relative-strength-index",
+                                                      "lhs-window-days": "10",
+                                                      "lhs-val": "SOXL",
+                                                      "id": "1aa026de-4bfa-4354-ad23-11338396d8de",
+                                                      "comparator": "lt",
+                                                      "rhs-val": "30",
+                                                      "step": "if-child"
+                                                    },
+                                                    {
+                                                      "id": "161836cc-beb7-4633-beec-3a86ea4eaf80",
+                                                      "step": "if-child",
+                                                      "is-else-condition?": true,
+                                                      "children": [
+                                                        {
+                                                          "name": "SPDR Bloomberg 1-3 Month T-Bill ETF",
+                                                          "ticker": "BIL",
+                                                          "has_marketcap": false,
+                                                          "id": "e3cab7f1-1d99-4567-8b98-6b6a0be7075c",
+                                                          "exchange": "ARCX",
+                                                          "price": 91.58,
+                                                          "step": "asset",
+                                                          "dollar_volume": 646698946.92
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ],
+                                          "collapsed?": false
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "collapsed?": true,
+                                  "weight": {
+                                    "num": "40",
+                                    "den": 100
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "collapsed?": false
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "collapsed?": true
+        }
+      ]
+    }
+  ]
+}

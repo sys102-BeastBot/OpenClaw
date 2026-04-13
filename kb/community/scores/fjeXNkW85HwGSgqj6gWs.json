@@ -1,0 +1,881 @@
+{
+  "id": "fjeXNkW85HwGSgqj6gWs",
+  "step": "root",
+  "name": "Copy of OG V1.1 QQQ 1DMR - 2X LETF edition",
+  "description": "Orignal by Garen | Modified by okhi2u to use 2x instead of 3x LETFs for even further backtesting of the general strategy. Also removed VOL hedges and put BIL.",
+  "rebalance": "none",
+  "rebalance-corridor-width": 0.07,
+  "children": [
+    {
+      "id": "c5a3f05c-636d-44f9-9245-1637ac1eaca5",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "weight": {
+            "num": 84,
+            "den": 100
+          },
+          "id": "7a52929f-0c36-4fe0-ae3f-0ea042d89103",
+          "step": "group",
+          "name": "V1 QQQ 1DMR",
+          "children": [
+            {
+              "step": "wt-cash-equal",
+              "id": "0d54d953-102f-4e9a-987a-1aa1e65873a2",
+              "children": [
+                {
+                  "id": "97e52032-a7c0-4ade-8a6b-443a791cd00a",
+                  "step": "if",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "id": "d777b91f-6dbf-4aa0-97eb-a2d154afc722",
+                          "step": "wt-cash-equal",
+                          "children": [
+                            {
+                              "id": "0d582405-e7b2-4e6c-9cdd-c50722b2fd39",
+                              "step": "if",
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "id": "9526f365-bd7b-4290-afd7-c42150e24e52",
+                                      "step": "wt-cash-equal",
+                                      "children": [
+                                        {
+                                          "id": "5f09ec14-e0b8-46b5-be89-4cf06e116b89",
+                                          "step": "if",
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "id": "d8896b44-d02a-471a-9c3a-16db243ea986",
+                                                  "step": "wt-cash-equal",
+                                                  "children": [
+                                                    {
+                                                      "select?": true,
+                                                      "children": [
+                                                        {
+                                                          "name": "ProShares Ultra QQQ",
+                                                          "ticker": "QLD",
+                                                          "has_marketcap": false,
+                                                          "id": "5e3cbd8b-bc74-4067-982a-9e14c5f33292",
+                                                          "exchange": "ARCX",
+                                                          "price": 39.41,
+                                                          "step": "asset",
+                                                          "dollar_volume": 226866344.88,
+                                                          "children-count": 0
+                                                        },
+                                                        {
+                                                          "name": "ProShares Ultra Semiconductors",
+                                                          "ticker": "USD",
+                                                          "has_marketcap": false,
+                                                          "id": "120d2bf2-a11b-42cd-b8b0-68333902fa2c",
+                                                          "exchange": "ARCX",
+                                                          "price": 14.59,
+                                                          "step": "asset",
+                                                          "dollar_volume": 5004778.52,
+                                                          "children-count": 0
+                                                        },
+                                                        {
+                                                          "name": "ProShares Ultra Russell2000",
+                                                          "ticker": "UWM",
+                                                          "has_marketcap": false,
+                                                          "id": "5ac052b7-1e49-42e5-a79b-5f898be13e22",
+                                                          "exchange": "ARCX",
+                                                          "price": 31.48,
+                                                          "step": "asset",
+                                                          "dollar_volume": 17285227.28
+                                                        }
+                                                      ],
+                                                      "select-fn": "bottom",
+                                                      "select-n": "1",
+                                                      "sort-by-fn": "relative-strength-index",
+                                                      "sort-by-window-days": "5",
+                                                      "id": "451cefbf-f7a9-4679-bd74-8491873f8cf1",
+                                                      "sort-by?": true,
+                                                      "step": "filter"
+                                                    }
+                                                  ]
+                                                }
+                                              ],
+                                              "is-else-condition?": false,
+                                              "rhs-fixed-value?": true,
+                                              "lhs-fn": "cumulative-return",
+                                              "lhs-window-days": "1",
+                                              "lhs-val": "QQQ",
+                                              "id": "8a1da3db-e1dc-4ff9-a7cc-87ede1e079d5",
+                                              "comparator": "lt",
+                                              "rhs-val": "-4.5",
+                                              "step": "if-child",
+                                              "collapsed?": false
+                                            },
+                                            {
+                                              "id": "6a09be8a-31ec-4eee-9a1e-5f62adcb36a6",
+                                              "step": "if-child",
+                                              "is-else-condition?": true,
+                                              "children": [
+                                                {
+                                                  "id": "29e2df69-4d2a-4d2c-b9e5-bc3455171ba2",
+                                                  "step": "wt-cash-specified",
+                                                  "children": [
+                                                    {
+                                                      "id": "d01275ef-5765-40cb-82d0-927eb3c9ae94",
+                                                      "step": "group",
+                                                      "name": "Garen's  Advanced Volatility Hedge V1",
+                                                      "children": [
+                                                        {
+                                                          "step": "wt-cash-equal",
+                                                          "id": "8b98c582-ca9d-47f8-94eb-823e8e75a7ca",
+                                                          "children": [
+                                                            {
+                                                              "name": "SPDR Bloomberg 1-3 Month T-Bill ETF",
+                                                              "ticker": "BIL",
+                                                              "has_marketcap": false,
+                                                              "id": "b06e374c-f2d4-43f0-b042-33f4f7c33fd0",
+                                                              "exchange": "ARCX",
+                                                              "price": 91.52,
+                                                              "step": "asset",
+                                                              "dollar_volume": 329222424.96
+                                                            }
+                                                          ]
+                                                        }
+                                                      ],
+                                                      "collapsed?": false,
+                                                      "weight": {
+                                                        "num": "30",
+                                                        "den": 100
+                                                      }
+                                                    },
+                                                    {
+                                                      "select?": true,
+                                                      "children": [
+                                                        {
+                                                          "name": "ProShares Ultra QQQ",
+                                                          "ticker": "QLD",
+                                                          "has_marketcap": false,
+                                                          "id": "f3dd3cc8-6fc7-46e6-8deb-d53507a6d2c8",
+                                                          "exchange": "ARCX",
+                                                          "price": 39.41,
+                                                          "step": "asset",
+                                                          "dollar_volume": 226866344.88,
+                                                          "children-count": 0
+                                                        },
+                                                        {
+                                                          "name": "ProShares Ultra Semiconductors",
+                                                          "ticker": "USD",
+                                                          "has_marketcap": false,
+                                                          "id": "dd369758-27f0-4a5b-8300-d9c482157458",
+                                                          "exchange": "ARCX",
+                                                          "price": 14.59,
+                                                          "step": "asset",
+                                                          "dollar_volume": 5004778.52,
+                                                          "children-count": 0
+                                                        },
+                                                        {
+                                                          "name": "ProShares Ultra Russell2000",
+                                                          "ticker": "UWM",
+                                                          "has_marketcap": false,
+                                                          "id": "858faadc-edf1-4fb6-adef-ddcc07fe812b",
+                                                          "exchange": "ARCX",
+                                                          "price": 31.48,
+                                                          "step": "asset",
+                                                          "dollar_volume": 17285227.28
+                                                        }
+                                                      ],
+                                                      "select-fn": "bottom",
+                                                      "select-n": "1",
+                                                      "sort-by-fn": "relative-strength-index",
+                                                      "sort-by-window-days": "5",
+                                                      "weight": {
+                                                        "num": 70,
+                                                        "den": 100
+                                                      },
+                                                      "id": "63361dc4-7a91-42ab-950d-67d042850467",
+                                                      "sort-by?": true,
+                                                      "step": "filter"
+                                                    }
+                                                  ]
+                                                }
+                                              ],
+                                              "collapsed?": false
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "is-else-condition?": false,
+                                  "rhs-fixed-value?": true,
+                                  "lhs-fn": "cumulative-return",
+                                  "lhs-window-days": "1",
+                                  "lhs-val": "QQQ",
+                                  "id": "6149d967-ce55-4f3d-9be0-b8e7ee36336c",
+                                  "comparator": "lt",
+                                  "rhs-val": "-3.5",
+                                  "step": "if-child"
+                                },
+                                {
+                                  "id": "865bacd9-65ae-4175-9d45-664c2978e706",
+                                  "step": "if-child",
+                                  "is-else-condition?": true,
+                                  "children": [
+                                    {
+                                      "id": "41bf2f5b-fae8-486c-8b1f-ec239e995fb2",
+                                      "step": "wt-cash-equal",
+                                      "children": [
+                                        {
+                                          "id": "0adc0b07-364a-4055-9531-c1849af042cb",
+                                          "step": "group",
+                                          "name": "Garen's  Advanced Volatility Hedge V1",
+                                          "children": [
+                                            {
+                                              "step": "wt-cash-equal",
+                                              "id": "3abd0d18-f88e-4359-a3ab-b674ce5e57ec",
+                                              "children": [
+                                                {
+                                                  "name": "SPDR Bloomberg 1-3 Month T-Bill ETF",
+                                                  "ticker": "BIL",
+                                                  "has_marketcap": false,
+                                                  "id": "804b1c18-6830-494e-b345-46a100dcc657",
+                                                  "exchange": "ARCX",
+                                                  "price": 91.52,
+                                                  "step": "asset",
+                                                  "dollar_volume": 329222424.96
+                                                }
+                                              ]
+                                            }
+                                          ],
+                                          "collapsed?": false
+                                        },
+                                        {
+                                          "select?": true,
+                                          "children": [
+                                            {
+                                              "name": "ProShares Ultra QQQ",
+                                              "ticker": "QLD",
+                                              "has_marketcap": false,
+                                              "id": "22cc373b-80ae-4634-b293-750a9e604050",
+                                              "exchange": "ARCX",
+                                              "price": 39.41,
+                                              "step": "asset",
+                                              "dollar_volume": 226866344.88,
+                                              "children-count": 0
+                                            },
+                                            {
+                                              "name": "ProShares Ultra Semiconductors",
+                                              "ticker": "USD",
+                                              "has_marketcap": false,
+                                              "id": "0d5135f5-c46d-4826-9024-aea6bbc487b5",
+                                              "exchange": "ARCX",
+                                              "price": 14.59,
+                                              "step": "asset",
+                                              "dollar_volume": 5004778.52,
+                                              "children-count": 0
+                                            },
+                                            {
+                                              "name": "ProShares Ultra Russell2000",
+                                              "ticker": "UWM",
+                                              "has_marketcap": false,
+                                              "id": "cc74f6f5-f285-455e-8373-82b4a8bf7373",
+                                              "exchange": "ARCX",
+                                              "price": 31.48,
+                                              "step": "asset",
+                                              "dollar_volume": 17285227.28
+                                            }
+                                          ],
+                                          "select-fn": "bottom",
+                                          "select-n": "1",
+                                          "sort-by-fn": "relative-strength-index",
+                                          "sort-by-window-days": "5",
+                                          "id": "6cc53b4c-5c1e-4aa1-9486-b81056256060",
+                                          "sort-by?": true,
+                                          "step": "filter"
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "collapsed?": false
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "is-else-condition?": false,
+                      "rhs-fixed-value?": true,
+                      "lhs-fn": "cumulative-return",
+                      "lhs-window-days": "1",
+                      "lhs-val": "QQQ",
+                      "id": "b0502652-d796-4f8e-96ff-17745ea41672",
+                      "comparator": "lt",
+                      "rhs-val": "-2.5",
+                      "step": "if-child",
+                      "collapsed?": false
+                    },
+                    {
+                      "id": "712543e7-dddf-499e-ba64-df4ad18cb9e2",
+                      "step": "if-child",
+                      "is-else-condition?": true,
+                      "children": [
+                        {
+                          "id": "de8994e3-0c03-4c08-b6fb-9a2cc2bb75d5",
+                          "step": "wt-cash-equal",
+                          "children": [
+                            {
+                              "id": "399d53a7-5212-4f2f-96a9-23fd59d0f4be",
+                              "step": "if",
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "id": "825734a9-1d5c-4d49-b6a1-d5cdc68e96cf",
+                                      "step": "wt-cash-equal",
+                                      "children": [
+                                        {
+                                          "id": "0cc5b248-6df5-4ef4-97f8-1a104774f6d7",
+                                          "step": "if",
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "id": "bfcff02d-0d3d-40f1-8958-fa2567e81003",
+                                                  "step": "wt-cash-equal",
+                                                  "children": [
+                                                    {
+                                                      "id": "99926099-d46c-4168-99f9-a24260eeee54",
+                                                      "step": "if",
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "id": "8fdee027-8a08-4370-91d8-86a3b394fabe",
+                                                              "step": "wt-cash-equal",
+                                                              "children": [
+                                                                {
+                                                                  "select?": true,
+                                                                  "children": [
+                                                                    {
+                                                                      "name": "ProShares UltraShort QQQ",
+                                                                      "ticker": "QID",
+                                                                      "has_marketcap": false,
+                                                                      "id": "2f1d719a-de4a-4f96-abf9-545cdadab89a",
+                                                                      "exchange": "ARCX",
+                                                                      "price": 24.84,
+                                                                      "step": "asset",
+                                                                      "dollar_volume": 235462682.16,
+                                                                      "children-count": 0
+                                                                    },
+                                                                    {
+                                                                      "name": "Proshares Ultrashort Semiconductors",
+                                                                      "ticker": "SSG",
+                                                                      "has_marketcap": false,
+                                                                      "id": "e2102c79-54d2-4ab9-980e-876e380e6a73",
+                                                                      "exchange": "ARCX",
+                                                                      "price": 32.85,
+                                                                      "step": "asset",
+                                                                      "dollar_volume": 1966203.9000000001,
+                                                                      "children-count": 0
+                                                                    },
+                                                                    {
+                                                                      "name": "ProShares UltraShort Russell2000",
+                                                                      "ticker": "TWM",
+                                                                      "has_marketcap": false,
+                                                                      "id": "5db68dd0-5a4a-48ad-ace1-a2a9608ae1d2",
+                                                                      "exchange": "ARCX",
+                                                                      "price": 17.36,
+                                                                      "step": "asset",
+                                                                      "dollar_volume": 27555007.2
+                                                                    }
+                                                                  ],
+                                                                  "select-fn": "top",
+                                                                  "select-n": "1",
+                                                                  "sort-by-fn": "relative-strength-index",
+                                                                  "sort-by-window-days": "5",
+                                                                  "id": "99ceed97-f340-4610-8e3c-fefda638ce15",
+                                                                  "sort-by?": true,
+                                                                  "step": "filter"
+                                                                }
+                                                              ]
+                                                            }
+                                                          ],
+                                                          "is-else-condition?": false,
+                                                          "rhs-fixed-value?": true,
+                                                          "lhs-fn": "cumulative-return",
+                                                          "lhs-window-days": "1",
+                                                          "lhs-val": "QQQ",
+                                                          "id": "b3f3b05a-ddef-4d92-8bcb-c59337358c29",
+                                                          "comparator": "gt",
+                                                          "rhs-val": "4.5",
+                                                          "step": "if-child",
+                                                          "collapsed?": false
+                                                        },
+                                                        {
+                                                          "id": "933182cb-9879-4612-929f-00df1fad04bf",
+                                                          "step": "if-child",
+                                                          "is-else-condition?": true,
+                                                          "children": [
+                                                            {
+                                                              "id": "7a88f8d5-1904-4e85-989f-bac34ca3bd87",
+                                                              "step": "wt-cash-specified",
+                                                              "children": [
+                                                                {
+                                                                  "name": "iShares 1-3 Year Treasury Bond ETF",
+                                                                  "ticker": "SHY",
+                                                                  "has_marketcap": false,
+                                                                  "weight": {
+                                                                    "num": "30",
+                                                                    "den": 100
+                                                                  },
+                                                                  "id": "e3bf46ca-b083-425f-8d24-c63ee4cead46",
+                                                                  "exchange": "XNAS",
+                                                                  "price": 82.07,
+                                                                  "step": "asset",
+                                                                  "dollar_volume": 257349279.02999997
+                                                                },
+                                                                {
+                                                                  "select?": true,
+                                                                  "children": [
+                                                                    {
+                                                                      "name": "ProShares UltraShort QQQ",
+                                                                      "ticker": "QID",
+                                                                      "has_marketcap": false,
+                                                                      "id": "a07154a4-4f1a-4824-9cf1-bda95cfca273",
+                                                                      "exchange": "ARCX",
+                                                                      "price": 24.84,
+                                                                      "step": "asset",
+                                                                      "dollar_volume": 235462682.16,
+                                                                      "children-count": 0
+                                                                    },
+                                                                    {
+                                                                      "name": "Proshares Ultrashort Semiconductors",
+                                                                      "ticker": "SSG",
+                                                                      "has_marketcap": false,
+                                                                      "id": "ac82577a-fa8d-4667-b16f-3b71e62e61ee",
+                                                                      "exchange": "ARCX",
+                                                                      "price": 32.85,
+                                                                      "step": "asset",
+                                                                      "dollar_volume": 1966203.9000000001,
+                                                                      "children-count": 0
+                                                                    },
+                                                                    {
+                                                                      "name": "ProShares UltraShort Russell2000",
+                                                                      "ticker": "TWM",
+                                                                      "has_marketcap": false,
+                                                                      "id": "63c24eb2-f057-4716-a585-9b87f225a62f",
+                                                                      "exchange": "ARCX",
+                                                                      "price": 17.36,
+                                                                      "step": "asset",
+                                                                      "dollar_volume": 27555007.2
+                                                                    }
+                                                                  ],
+                                                                  "select-fn": "top",
+                                                                  "select-n": "1",
+                                                                  "sort-by-fn": "relative-strength-index",
+                                                                  "sort-by-window-days": "5",
+                                                                  "weight": {
+                                                                    "num": 70,
+                                                                    "den": 100
+                                                                  },
+                                                                  "id": "4fb8b8c7-5e2e-4fdc-929e-ca806907bb40",
+                                                                  "sort-by?": true,
+                                                                  "step": "filter"
+                                                                }
+                                                              ]
+                                                            }
+                                                          ],
+                                                          "collapsed?": false
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ],
+                                              "is-else-condition?": false,
+                                              "rhs-fixed-value?": true,
+                                              "lhs-fn": "cumulative-return",
+                                              "lhs-window-days": "1",
+                                              "lhs-val": "QQQ",
+                                              "id": "2badcf73-ee6c-46d0-b0ce-9dae3a362a79",
+                                              "comparator": "gt",
+                                              "rhs-val": "3.6",
+                                              "step": "if-child",
+                                              "collapsed?": false
+                                            },
+                                            {
+                                              "id": "462e273c-eac3-46b2-8dd8-c87629694d60",
+                                              "step": "if-child",
+                                              "is-else-condition?": true,
+                                              "children": [
+                                                {
+                                                  "id": "9e96292b-3f61-4a9d-99c7-79a49eaf9bc5",
+                                                  "step": "wt-cash-equal",
+                                                  "children": [
+                                                    {
+                                                      "name": "iShares 1-3 Year Treasury Bond ETF",
+                                                      "ticker": "SHY",
+                                                      "has_marketcap": false,
+                                                      "id": "19edb71f-269f-47a6-8ce7-7b3fffbaa23d",
+                                                      "exchange": "XNAS",
+                                                      "price": 82.07,
+                                                      "step": "asset",
+                                                      "dollar_volume": 257349279.02999997
+                                                    },
+                                                    {
+                                                      "select?": true,
+                                                      "children": [
+                                                        {
+                                                          "name": "ProShares UltraShort QQQ",
+                                                          "ticker": "QID",
+                                                          "has_marketcap": false,
+                                                          "id": "c38bb7f8-4540-4175-962d-12e4789b4c68",
+                                                          "exchange": "ARCX",
+                                                          "price": 24.84,
+                                                          "step": "asset",
+                                                          "dollar_volume": 235462682.16,
+                                                          "children-count": 0
+                                                        },
+                                                        {
+                                                          "name": "Proshares Ultrashort Semiconductors",
+                                                          "ticker": "SSG",
+                                                          "has_marketcap": false,
+                                                          "id": "32be07c5-ccae-40a3-bd4d-8082cfd10c75",
+                                                          "exchange": "ARCX",
+                                                          "price": 32.85,
+                                                          "step": "asset",
+                                                          "dollar_volume": 1966203.9000000001,
+                                                          "children-count": 0
+                                                        },
+                                                        {
+                                                          "name": "ProShares UltraShort Russell2000",
+                                                          "ticker": "TWM",
+                                                          "has_marketcap": false,
+                                                          "id": "75e8688d-e5d6-4ad6-ac00-b614580970e7",
+                                                          "exchange": "ARCX",
+                                                          "price": 17.36,
+                                                          "step": "asset",
+                                                          "dollar_volume": 27555007.2
+                                                        }
+                                                      ],
+                                                      "select-fn": "top",
+                                                      "select-n": "1",
+                                                      "sort-by-fn": "relative-strength-index",
+                                                      "sort-by-window-days": "5",
+                                                      "id": "ca183aab-b0cf-4c51-96a1-6343c6f205bc",
+                                                      "sort-by?": true,
+                                                      "step": "filter"
+                                                    }
+                                                  ]
+                                                }
+                                              ],
+                                              "collapsed?": false
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "is-else-condition?": false,
+                                  "rhs-fixed-value?": true,
+                                  "lhs-fn": "cumulative-return",
+                                  "lhs-window-days": "1",
+                                  "lhs-val": "QQQ",
+                                  "id": "e7df5836-cab1-4533-9ae2-fa9011375464",
+                                  "comparator": "gt",
+                                  "rhs-val": "3.1",
+                                  "step": "if-child",
+                                  "collapsed?": false
+                                },
+                                {
+                                  "id": "57749f94-e76c-4193-94c9-755441ab26b6",
+                                  "step": "if-child",
+                                  "is-else-condition?": true,
+                                  "children": [
+                                    {
+                                      "id": "84760432-649d-4740-bcbe-38fb8e02e1f3",
+                                      "step": "group",
+                                      "name": "QQQ for the Long Term V1",
+                                      "children": [
+                                        {
+                                          "step": "wt-cash-equal",
+                                          "id": "ceeccf13-3b00-4b58-a1f2-71600e83348c",
+                                          "children": [
+                                            {
+                                              "weight": {
+                                                "num": 100,
+                                                "den": 100
+                                              },
+                                              "id": "2ce337c8-daf3-4306-a89d-037beb9cc909",
+                                              "step": "if",
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "id": "cbaf8c79-127c-404f-8e80-1e365f027373",
+                                                      "step": "wt-cash-equal",
+                                                      "children": [
+                                                        {
+                                                          "id": "062922fc-4762-4a18-a6c4-b52d12dbd211",
+                                                          "step": "if",
+                                                          "children": [
+                                                            {
+                                                              "children": [
+                                                                {
+                                                                  "name": "ProShares Short QQQ",
+                                                                  "ticker": "PSQ",
+                                                                  "has_marketcap": false,
+                                                                  "id": "70ee05c4-5d39-4127-b15d-566c4a432a92",
+                                                                  "exchange": "ARCX",
+                                                                  "price": 13.05,
+                                                                  "step": "asset",
+                                                                  "dollar_volume": 361131318.90000004
+                                                                }
+                                                              ],
+                                                              "is-else-condition?": false,
+                                                              "rhs-fixed-value?": true,
+                                                              "lhs-fn": "relative-strength-index",
+                                                              "lhs-window-days": "10",
+                                                              "lhs-val": "QQQ",
+                                                              "id": "15bad9d7-d1d2-446a-885a-b0640b0c0410",
+                                                              "comparator": "gt",
+                                                              "rhs-val": "81",
+                                                              "step": "if-child"
+                                                            },
+                                                            {
+                                                              "id": "58087b8f-3f66-4ec7-a6c0-f3a057fc8f95",
+                                                              "step": "if-child",
+                                                              "is-else-condition?": true,
+                                                              "children": [
+                                                                {
+                                                                  "name": "Invesco QQQ Trust",
+                                                                  "ticker": "QQQ",
+                                                                  "has_marketcap": false,
+                                                                  "id": "28fd3e75-e992-4196-b50f-f522a30c5a78",
+                                                                  "exchange": "XNAS",
+                                                                  "price": 307.09,
+                                                                  "step": "asset",
+                                                                  "dollar_volume": 16756353566.399998
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "rhs-fn": "moving-average-price",
+                                                  "is-else-condition?": false,
+                                                  "lhs-fn": "current-price",
+                                                  "rhs-window-days": "200",
+                                                  "lhs-val": "SPY",
+                                                  "id": "acb38d9e-2db6-4819-b02d-b2d1824d4a57",
+                                                  "comparator": "gt",
+                                                  "rhs-val": "SPY",
+                                                  "step": "if-child"
+                                                },
+                                                {
+                                                  "id": "d159d7e8-9868-4a1c-9d22-0f51ed8b4c53",
+                                                  "step": "if-child",
+                                                  "is-else-condition?": true,
+                                                  "children": [
+                                                    {
+                                                      "id": "e92cd80c-a396-4450-adf7-e9d654b40336",
+                                                      "step": "wt-cash-equal",
+                                                      "children": [
+                                                        {
+                                                          "id": "262328e8-a3b5-47e9-b4f0-0aaee4f19381",
+                                                          "step": "if",
+                                                          "children": [
+                                                            {
+                                                              "children": [
+                                                                {
+                                                                  "name": "ProShares Ultra QQQ",
+                                                                  "ticker": "QLD",
+                                                                  "has_marketcap": false,
+                                                                  "id": "d6f830ce-1b9d-4229-8c3f-1b68c4ec1965",
+                                                                  "exchange": "ARCX",
+                                                                  "price": 39.41,
+                                                                  "step": "asset",
+                                                                  "dollar_volume": 226866344.88,
+                                                                  "children-count": 0
+                                                                }
+                                                              ],
+                                                              "is-else-condition?": false,
+                                                              "rhs-fixed-value?": true,
+                                                              "lhs-fn": "relative-strength-index",
+                                                              "lhs-window-days": "10",
+                                                              "lhs-val": "QQQ",
+                                                              "id": "83eb877b-5838-422b-8ce1-b2babf990ad4",
+                                                              "comparator": "lt",
+                                                              "rhs-val": "30",
+                                                              "step": "if-child"
+                                                            },
+                                                            {
+                                                              "id": "87dfb9e5-2d72-4df2-824a-ead5057b4833",
+                                                              "step": "if-child",
+                                                              "is-else-condition?": true,
+                                                              "children": [
+                                                                {
+                                                                  "id": "b4e4994e-960a-45f7-8b7f-181870d65cf9",
+                                                                  "step": "wt-cash-equal",
+                                                                  "children": [
+                                                                    {
+                                                                      "id": "4a085425-a9db-4704-9d8a-7f9516d1b979",
+                                                                      "step": "if",
+                                                                      "children": [
+                                                                        {
+                                                                          "children": [
+                                                                            {
+                                                                              "name": "SPDR S&P 500 ETF Trust",
+                                                                              "ticker": "SPY",
+                                                                              "has_marketcap": false,
+                                                                              "id": "d490c7df-af39-4f56-8502-5e5574a48f4b",
+                                                                              "exchange": "ARCX",
+                                                                              "price": 406.6,
+                                                                              "step": "asset",
+                                                                              "dollar_volume": 30844424721.2
+                                                                            }
+                                                                          ],
+                                                                          "is-else-condition?": false,
+                                                                          "rhs-fixed-value?": true,
+                                                                          "lhs-fn": "relative-strength-index",
+                                                                          "lhs-window-days": "10",
+                                                                          "lhs-val": "SPY",
+                                                                          "id": "1cd34b01-18e3-49cb-8190-445a24bf89b5",
+                                                                          "comparator": "lt",
+                                                                          "rhs-val": "30",
+                                                                          "step": "if-child"
+                                                                        },
+                                                                        {
+                                                                          "id": "81838810-86dc-42bf-ab24-3773b1525ad9",
+                                                                          "step": "if-child",
+                                                                          "is-else-condition?": true,
+                                                                          "children": [
+                                                                            {
+                                                                              "id": "91df2575-e755-42ae-aa74-7c3733f02f23",
+                                                                              "step": "wt-cash-equal",
+                                                                              "children": [
+                                                                                {
+                                                                                  "id": "55940e21-f421-4b12-b698-dca04b188d11",
+                                                                                  "step": "if",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "id": "9177e2a1-7fdd-484f-b45e-f03892e5d06b",
+                                                                                          "step": "wt-cash-equal",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "select?": true,
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "name": "ProShares Short QQQ",
+                                                                                                  "ticker": "PSQ",
+                                                                                                  "has_marketcap": false,
+                                                                                                  "id": "72b02636-4f18-4816-b258-f20cc22c5905",
+                                                                                                  "exchange": "ARCX",
+                                                                                                  "price": 13.05,
+                                                                                                  "step": "asset",
+                                                                                                  "dollar_volume": 361131318.90000004
+                                                                                                },
+                                                                                                {
+                                                                                                  "name": "iShares 1-3 Year Treasury Bond ETF",
+                                                                                                  "ticker": "SHY",
+                                                                                                  "has_marketcap": false,
+                                                                                                  "id": "ba9b22c4-949d-4ce0-b9e8-531945b7ab9a",
+                                                                                                  "exchange": "XNAS",
+                                                                                                  "price": 82.08,
+                                                                                                  "step": "asset",
+                                                                                                  "dollar_volume": 332924031.36
+                                                                                                }
+                                                                                              ],
+                                                                                              "select-fn": "top",
+                                                                                              "select-n": "1",
+                                                                                              "sort-by-fn": "relative-strength-index",
+                                                                                              "sort-by-window-days": "10",
+                                                                                              "id": "054ea37f-55c6-41cd-b89e-64b105186654",
+                                                                                              "sort-by?": true,
+                                                                                              "step": "filter"
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ],
+                                                                                      "rhs-fn": "moving-average-price",
+                                                                                      "is-else-condition?": false,
+                                                                                      "lhs-fn": "current-price",
+                                                                                      "rhs-window-days": "20",
+                                                                                      "lhs-val": "QQQ",
+                                                                                      "id": "34dc52a3-8e45-487c-8371-eb2cee6e05ec",
+                                                                                      "comparator": "lt",
+                                                                                      "rhs-val": "QQQ",
+                                                                                      "step": "if-child"
+                                                                                    },
+                                                                                    {
+                                                                                      "id": "e6928009-e1ae-4557-a8d3-c901c9aa0bf9",
+                                                                                      "step": "if-child",
+                                                                                      "is-else-condition?": true,
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "name": "Invesco QQQ Trust",
+                                                                                          "ticker": "QQQ",
+                                                                                          "has_marketcap": false,
+                                                                                          "id": "5fdf86a8-107f-4699-9c9f-948f210c365f",
+                                                                                          "exchange": "XNAS",
+                                                                                          "price": 307.09,
+                                                                                          "step": "asset",
+                                                                                          "dollar_volume": 16756353566.399998
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "collapsed?": false
+                                    }
+                                  ],
+                                  "collapsed?": false
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "collapsed?": false
+                    }
+                  ],
+                  "weight": {
+                    "num": 70,
+                    "den": 100
+                  }
+                }
+              ],
+              "collapsed?": false
+            }
+          ],
+          "collapsed?": false
+        }
+      ]
+    }
+  ]
+}

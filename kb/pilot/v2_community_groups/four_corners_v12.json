@@ -1,0 +1,450 @@
+{
+  "id": "d651816e-4845-4440-88e5-40369bf2c6b9",
+  "step": "root",
+  "name": "The Enigma of the Financial Universe 1.1",
+  "description": "",
+  "rebalance": "daily",
+  "children": [
+    {
+      "id": "be81906d-1c67-433b-ad9d-06409a9dff5f",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "id": "b8bdb6b6-f7f7-4101-a154-fe9a1ef18b42",
+          "step": "group",
+          "name": "The Enigma of the Financial Universe 1.1",
+          "children": [
+            {
+              "step": "wt-cash-equal",
+              "id": "8b6053cf-3194-4b68-93ed-3208835129dd",
+              "children": [
+                {
+                  "id": "14fab525-5605-4342-a945-dd183b66f0ca",
+                  "step": "wt-cash-specified",
+                  "children": [
+                    {
+                      "id": "23d48b18-d227-4fc1-bcfd-7de919cd6824",
+                      "step": "if",
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "id": "635fa817-9d17-4019-8b84-ad00d9679dc7",
+                              "step": "group",
+                              "name": "Bond yield risk off",
+                              "children": [
+                                {
+                                  "step": "wt-cash-equal",
+                                  "id": "1214bca3-0262-4eed-9605-c059414b28da",
+                                  "children": [
+                                    {
+                                      "step": "filter",
+                                      "id": "16d907e4-ff54-4585-9083-eb9d3876a4ca",
+                                      "sort-by-window-days": "10",
+                                      "sort-by-fn": "exponential-moving-average-price",
+                                      "select-fn": "bottom",
+                                      "select-n": "3",
+                                      "children": [
+                                        {
+                                          "id": "868bc283-c21c-4841-bfdb-9996a3cb4857",
+                                          "ticker": "USDU",
+                                          "exchange": "ARCX",
+                                          "has_marketcap": false,
+                                          "name": "WisdomTree Bloomberg US Dollar Bullish Fund",
+                                          "step": "asset"
+                                        },
+                                        {
+                                          "id": "93187e14-0842-4555-a93d-3ee44cc97b7a",
+                                          "ticker": "BTAL",
+                                          "exchange": "ARCX",
+                                          "has_marketcap": false,
+                                          "name": "AGF U.S. Market Neutral Anti-Beta Fund",
+                                          "step": "asset"
+                                        },
+                                        {
+                                          "id": "84031ab4-46ea-418c-8d07-0c79a52193f4",
+                                          "ticker": "HDGE",
+                                          "exchange": "ARCX",
+                                          "has_marketcap": false,
+                                          "name": "AdvisorShares Ranger Equity Bear ETF",
+                                          "step": "asset"
+                                        },
+                                        {
+                                          "id": "dfd979bd-7d03-4c3c-a146-ec70fc1c83dc",
+                                          "ticker": "SJB",
+                                          "exchange": "ARCX",
+                                          "has_marketcap": false,
+                                          "name": "ProShares Short High Yield",
+                                          "step": "asset"
+                                        },
+                                        {
+                                          "id": "32d2c14c-6cf5-4772-af07-3f5ef184087e",
+                                          "ticker": "URTY",
+                                          "exchange": "ARCX",
+                                          "has_marketcap": false,
+                                          "name": "ProShares UltraPro Russell2000",
+                                          "step": "asset"
+                                        },
+                                        {
+                                          "id": "e8eeed08-ca83-4a43-bd75-4a6e230a3882",
+                                          "ticker": "TZA",
+                                          "exchange": "ARCX",
+                                          "has_marketcap": false,
+                                          "name": "Direxion Daily Small Cap Bear 3x Shares",
+                                          "step": "asset"
+                                        },
+                                        {
+                                          "id": "ac200910-09fc-4507-9c04-c832dbaef166",
+                                          "ticker": "ERX",
+                                          "exchange": "ARCX",
+                                          "has_marketcap": false,
+                                          "name": "Direxion Daily Energy Bull 2x Shares",
+                                          "step": "asset"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "step": "wt-cash-equal",
+                                      "id": "dacdd25a-c757-4994-ba02-a7be0ac3d372",
+                                      "children": [
+                                        {
+                                          "select?": true,
+                                          "children": [
+                                            {
+                                              "id": "f403b9fb-7ac4-4b82-815e-dca1d33fdae5",
+                                              "ticker": "SQQQ",
+                                              "exchange": "XNAS",
+                                              "has_marketcap": false,
+                                              "name": "ProShares UltraPro Short QQQ",
+                                              "step": "asset"
+                                            },
+                                            {
+                                              "name": "Proshares Short 20+ Year Treasury",
+                                              "ticker": "TBF",
+                                              "has_marketcap": false,
+                                              "id": "d1a9966b-68d7-4a37-887e-6303ab7b1d35",
+                                              "exchange": "ARCX",
+                                              "price": 21.98,
+                                              "step": "asset",
+                                              "dollar_volume": 36406133.4
+                                            },
+                                            {
+                                              "id": "04a01c29-902f-4b64-af9e-fb25039d9c57",
+                                              "ticker": "TBT",
+                                              "exchange": "ARCX",
+                                              "has_marketcap": false,
+                                              "name": "ProShares UltraShort 20+ Year Treasury",
+                                              "step": "asset"
+                                            },
+                                            {
+                                              "id": "85c9ab5b-1198-49ef-9163-9254ea877368",
+                                              "ticker": "SDY",
+                                              "exchange": "ARCX",
+                                              "has_marketcap": false,
+                                              "name": "SPDR S&P Dividend ETF",
+                                              "step": "asset"
+                                            }
+                                          ],
+                                          "select-fn": "bottom",
+                                          "select-n": "2",
+                                          "sort-by-fn": "relative-strength-index",
+                                          "sort-by-window-days": "20",
+                                          "id": "af594950-05ca-4c9d-ac14-8aa193273d84",
+                                          "sort-by?": true,
+                                          "step": "filter"
+                                        },
+                                        {
+                                          "step": "filter",
+                                          "id": "1b4c8bbd-1260-4f31-ba73-ccd47442901d",
+                                          "sort-by-window-days": "30",
+                                          "children": [
+                                            {
+                                              "id": "0a827da6-6aeb-4f74-a4c2-abf79f7ad60b",
+                                              "ticker": "SHV",
+                                              "exchange": "XNAS",
+                                              "has_marketcap": false,
+                                              "name": "iShares Short Treasury Bond ETF",
+                                              "step": "asset"
+                                            },
+                                            {
+                                              "id": "adc10c35-fd2d-4b15-9d4f-31470d94440a",
+                                              "ticker": "SPLV",
+                                              "exchange": "ARCX",
+                                              "has_marketcap": false,
+                                              "name": "Invesco S&P 500 Low Volatility ETF",
+                                              "step": "asset"
+                                            },
+                                            {
+                                              "id": "23392f53-cc54-4f0e-902e-6a9129574417",
+                                              "ticker": "FAS",
+                                              "exchange": "ARCX",
+                                              "has_marketcap": false,
+                                              "name": "Direxion Daily Financial Bull 3x Shares",
+                                              "step": "asset"
+                                            },
+                                            {
+                                              "id": "6b3fcc37-d431-43e6-b8db-d7d73af866f9",
+                                              "ticker": "PDBC",
+                                              "exchange": "XNAS",
+                                              "has_marketcap": false,
+                                              "name": "Invesco Optimum Yield Diversified Commodity Strategy No K-1 ETF",
+                                              "step": "asset"
+                                            },
+                                            {
+                                              "id": "42e12aed-5728-4694-9477-2157867f2da9",
+                                              "ticker": "XLY",
+                                              "exchange": "ARCX",
+                                              "has_marketcap": false,
+                                              "name": "Consumer Discretionary Select Sector SPDR Fund",
+                                              "step": "asset"
+                                            }
+                                          ],
+                                          "sort-by-fn": "relative-strength-index",
+                                          "select-fn": "top",
+                                          "select-n": "2"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "rhs-fn": "relative-strength-index",
+                          "is-else-condition?": false,
+                          "rhs-fixed-value?": false,
+                          "lhs-fn": "relative-strength-index",
+                          "rhs-window-days": "30",
+                          "lhs-window-days": "30",
+                          "lhs-val": "TTT",
+                          "id": "45ae2118-518d-470e-b626-d873f7ed569f",
+                          "comparator": "gt",
+                          "rhs-val": "SHYG",
+                          "step": "if-child"
+                        },
+                        {
+                          "id": "3afafec0-7ba2-4ace-976d-f5361ea310d0",
+                          "step": "if-child",
+                          "is-else-condition?": true,
+                          "children": [
+                            {
+                              "id": "c33082cd-87fe-44f6-a680-26a4467d2d65",
+                              "step": "wt-cash-equal",
+                              "children": [
+                                {
+                                  "id": "217e7368-0c40-438b-8c74-3aad8c2a8bb9",
+                                  "step": "if",
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "id": "a54fefc8-83be-4a4c-a875-20e808799d4e",
+                                          "step": "group",
+                                          "name": "Vol risk OFF",
+                                          "children": [
+                                            {
+                                              "step": "wt-cash-equal",
+                                              "id": "e57779f6-d7b8-46db-9762-afd51e2ade93",
+                                              "children": [
+                                                {
+                                                  "id": "6d293f06-7014-40e1-9b82-ed695a698125",
+                                                  "step": "if",
+                                                  "children": [
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "id": "522e384c-93e0-4755-8773-f8240fce8674",
+                                                          "step": "group",
+                                                          "name": "Black Swan Catcher",
+                                                          "children": [
+                                                            {
+                                                              "step": "wt-cash-equal",
+                                                              "id": "5652df3c-a7ec-4cf8-91a9-be0e3d51e5bd",
+                                                              "children": [
+                                                                {
+                                                                  "step": "filter",
+                                                                  "id": "45dfe1eb-3ab1-4bf5-927b-043c7e65af2f",
+                                                                  "sort-by-window-days": "5",
+                                                                  "children": [
+                                                                    {
+                                                                      "id": "9010bcd3-0410-45ae-adc5-b577a9759ef8",
+                                                                      "ticker": "SQQQ",
+                                                                      "exchange": "XNAS",
+                                                                      "has_marketcap": false,
+                                                                      "name": "ProShares UltraPro Short QQQ",
+                                                                      "step": "asset"
+                                                                    },
+                                                                    {
+                                                                      "id": "28672989-33de-4f48-bb1b-704f7eee0b74",
+                                                                      "ticker": "TTT",
+                                                                      "exchange": "ARCX",
+                                                                      "has_marketcap": false,
+                                                                      "name": "ProShares UltraPro Short 20+ Year Treasury",
+                                                                      "step": "asset"
+                                                                    },
+                                                                    {
+                                                                      "id": "ecd7a9fd-68d2-4b96-a833-5129d3992f94",
+                                                                      "ticker": "SDS",
+                                                                      "exchange": "ARCX",
+                                                                      "has_marketcap": false,
+                                                                      "name": "ProShares UltraShort S&P500",
+                                                                      "step": "asset"
+                                                                    },
+                                                                    {
+                                                                      "id": "3ad47f5b-1ba0-4a55-ba60-d112a00219a1",
+                                                                      "ticker": "BTAL",
+                                                                      "exchange": "ARCX",
+                                                                      "has_marketcap": false,
+                                                                      "name": "AGF U.S. Market Neutral Anti-Beta Fund",
+                                                                      "step": "asset"
+                                                                    },
+                                                                    {
+                                                                      "id": "5314bc63-d3fb-430a-ae14-4736addf4eba",
+                                                                      "ticker": "TMV",
+                                                                      "exchange": "ARCX",
+                                                                      "has_marketcap": false,
+                                                                      "name": "Direxion Daily 20+ Year Treasury Bear 3x Shares",
+                                                                      "step": "asset"
+                                                                    },
+                                                                    {
+                                                                      "id": "0eb8d491-90a9-47ac-b517-21f78fc37ebc",
+                                                                      "ticker": "XLU",
+                                                                      "exchange": "ARCX",
+                                                                      "has_marketcap": false,
+                                                                      "name": "Utilities Select Sector SPDR Fund",
+                                                                      "step": "asset"
+                                                                    }
+                                                                  ],
+                                                                  "sort-by-fn": "standard-deviation-return",
+                                                                  "select-fn": "bottom",
+                                                                  "select-n": "3"
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ],
+                                                      "is-else-condition?": false,
+                                                      "rhs-fixed-value?": true,
+                                                      "lhs-fn": "relative-strength-index",
+                                                      "lhs-window-days": "40",
+                                                      "lhs-val": "VIXM",
+                                                      "id": "38797200-990c-4261-8135-9e7735bbe89e",
+                                                      "comparator": "gt",
+                                                      "rhs-val": "69",
+                                                      "step": "if-child"
+                                                    },
+                                                    {
+                                                      "id": "ca38f0ec-997d-4dd7-b321-149b210319b2",
+                                                      "step": "if-child",
+                                                      "is-else-condition?": true,
+                                                      "children": [
+                                                        {
+                                                          "id": "0565f4cb-bd60-4b97-bccb-913d03a2961d",
+                                                          "ticker": "SHY",
+                                                          "exchange": "XNAS",
+                                                          "has_marketcap": false,
+                                                          "name": "iShares 1-3 Year Treasury Bond ETF",
+                                                          "step": "asset"
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "rhs-fn": "standard-deviation-return",
+                                      "is-else-condition?": false,
+                                      "lhs-fn": "standard-deviation-return",
+                                      "rhs-window-days": "252",
+                                      "lhs-window-days": "30",
+                                      "lhs-val": "SPY",
+                                      "id": "e87e0848-e3bd-4c15-9e9d-a4ad573aa853",
+                                      "comparator": "gt",
+                                      "rhs-val": "SPY",
+                                      "step": "if-child"
+                                    },
+                                    {
+                                      "id": "02d40c11-e5a2-430b-9d03-3c922a55f23b",
+                                      "step": "if-child",
+                                      "is-else-condition?": true,
+                                      "children": [
+                                        {
+                                          "id": "26eda2b5-2d4e-4941-af39-710d3fe02bae",
+                                          "step": "wt-cash-equal",
+                                          "children": [
+                                            {
+                                              "id": "ee140e3a-b1b2-4023-bf80-2d202f5ab074",
+                                              "step": "if",
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "id": "7f449e4e-7dbe-490c-bd0b-7c59a615350b",
+                                                      "ticker": "SHY",
+                                                      "exchange": "XNAS",
+                                                      "has_marketcap": false,
+                                                      "name": "iShares 1-3 Year Treasury Bond ETF",
+                                                      "step": "asset"
+                                                    }
+                                                  ],
+                                                  "rhs-fn": "cumulative-return",
+                                                  "is-else-condition?": false,
+                                                  "rhs-fixed-value?": true,
+                                                  "lhs-fn": "cumulative-return",
+                                                  "rhs-window-days": "60",
+                                                  "lhs-window-days": "60",
+                                                  "lhs-val": "BND",
+                                                  "id": "53141c28-ecde-45c2-8cf5-8bbd63d35a7a",
+                                                  "comparator": "lt",
+                                                  "rhs-val": "-1",
+                                                  "step": "if-child"
+                                                },
+                                                {
+                                                  "id": "a75ff78a-2fc7-438a-ad8a-4c7805e4a1f5",
+                                                  "step": "if-child",
+                                                  "is-else-condition?": true,
+                                                  "children": [
+                                                    {
+                                                      "id": "ed55ee75-190e-48e8-b5ac-95b284eaaa0e",
+                                                      "ticker": "SPY",
+                                                      "exchange": "ARCX",
+                                                      "has_marketcap": false,
+                                                      "name": "SPDR S&P 500 ETF Trust",
+                                                      "step": "asset"
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "weight": {
+                        "num": 100,
+                        "den": 100
+                      },
+                      "collapsed-specified-weight?": true
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "collapsed?": true
+        }
+      ]
+    }
+  ]
+}

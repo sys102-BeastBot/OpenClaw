@@ -1,0 +1,340 @@
+{
+  "description": "",
+  "children": [
+    {
+      "id": "cd90fa09-51b3-4228-b37d-6a071f0bda29",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "id": "d99a9177-43b8-4a85-a478-cae3bf86d339",
+          "step": "group",
+          "name": "Oversold Block",
+          "children": [
+            {
+              "step": "wt-inverse-vol",
+              "id": "d464d5d3-9c7e-49ce-8766-dd15a73e747d",
+              "children": [
+                {
+                  "id": "4b4b6ad2-3e8c-4372-a25e-2dab75992fd5",
+                  "step": "if",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "id": "d0285cf4-3e6c-4292-9ae2-ff985b74eab1",
+                          "step": "group",
+                          "name": "VIX Blend",
+                          "children": [
+                            {
+                              "step": "wt-inverse-vol",
+                              "id": "3c440d3d-9e32-4d4d-a333-cc6699a8f2d4",
+                              "children": [
+                                {
+                                  "ticker": "UVXY",
+                                  "id": "0a1d2460-2915-47bb-a5c3-a35fd38438ce",
+                                  "step": "asset"
+                                },
+                                {
+                                  "ticker": "VXX",
+                                  "exchange": "BATS",
+                                  "name": "iPath Series B S&P 500 VIX Short-Term Futures ETN",
+                                  "id": "ee7e7127-3be0-4e20-85d7-f05ec5c64ba1",
+                                  "step": "asset"
+                                },
+                                {
+                                  "ticker": "VIXM",
+                                  "id": "dc8ffe3d-3fae-453b-b1b4-df170ea43b5e",
+                                  "step": "asset",
+                                  "weight": {
+                                    "num": 20,
+                                    "den": 100
+                                  }
+                                }
+                              ],
+                              "window-days": "5"
+                            }
+                          ],
+                          "collapsed?": true
+                        }
+                      ],
+                      "lhs-fn-params": {
+                        "window": 2
+                      },
+                      "is-else-condition?": false,
+                      "rhs-fixed-value?": true,
+                      "lhs-fn": "relative-strength-index",
+                      "lhs-val": "TQQQ",
+                      "id": "6a6fcebd-e2d1-4b10-908f-23c4233c1d2d",
+                      "comparator": "gt",
+                      "rhs-val": "97.5",
+                      "step": "if-child",
+                      "collapsed?": true
+                    },
+                    {
+                      "id": "945a9605-69a5-4ad8-b070-2644cd908fa6",
+                      "step": "if-child",
+                      "is-else-condition?": true,
+                      "children": [
+                        {
+                          "ticker": "BIL",
+                          "exchange": "ARCX",
+                          "name": "SPDR Bloomberg 1-3 Month T-Bill ETF",
+                          "id": "0864b694-7999-4cb5-9eae-2b18c07811cd",
+                          "step": "asset"
+                        }
+                      ],
+                      "collapsed?": false
+                    }
+                  ],
+                  "weight": {
+                    "num": "80",
+                    "den": 100
+                  }
+                },
+                {
+                  "id": "a7e1e079-7099-4bc5-938c-74823bcb61fd",
+                  "step": "if",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "id": "a3622b8b-092e-4884-9901-a4aab2501521",
+                          "step": "group",
+                          "name": "VIX Blend",
+                          "children": [
+                            {
+                              "step": "wt-inverse-vol",
+                              "id": "5aebeaea-753c-4916-8dd4-d5fb58c4a1fa",
+                              "children": [
+                                {
+                                  "ticker": "UVXY",
+                                  "id": "2d76c221-56bc-47ca-b9cc-d31916db5c9d",
+                                  "step": "asset"
+                                },
+                                {
+                                  "ticker": "VXX",
+                                  "exchange": "BATS",
+                                  "name": "iPath Series B S&P 500 VIX Short-Term Futures ETN",
+                                  "id": "c30ec2a8-2568-4b8b-9b45-e83bb155ac3f",
+                                  "step": "asset"
+                                },
+                                {
+                                  "ticker": "VIXM",
+                                  "id": "6d58145c-91e3-4212-b7a3-175a38520b09",
+                                  "step": "asset",
+                                  "weight": {
+                                    "num": 20,
+                                    "den": 100
+                                  }
+                                }
+                              ],
+                              "window-days": "5"
+                            }
+                          ],
+                          "collapsed?": true
+                        }
+                      ],
+                      "lhs-fn-params": {
+                        "window": 5
+                      },
+                      "is-else-condition?": false,
+                      "rhs-fixed-value?": true,
+                      "lhs-fn": "relative-strength-index",
+                      "lhs-val": "TQQQ",
+                      "id": "1df5842c-3a63-4ee4-85fc-93c2b5adc817",
+                      "comparator": "gt",
+                      "rhs-val": "85",
+                      "step": "if-child",
+                      "collapsed?": true
+                    },
+                    {
+                      "id": "a7cd4264-a2ca-4431-a65c-7689b70c24fd",
+                      "step": "if-child",
+                      "is-else-condition?": true,
+                      "children": [
+                        {
+                          "ticker": "BIL",
+                          "exchange": "ARCX",
+                          "name": "SPDR Bloomberg 1-3 Month T-Bill ETF",
+                          "id": "bf1649bd-74ac-49bc-abd6-4a0f16f63031",
+                          "step": "asset"
+                        }
+                      ],
+                      "collapsed?": false
+                    }
+                  ],
+                  "weight": {
+                    "num": "80",
+                    "den": 100
+                  }
+                },
+                {
+                  "id": "ecc0eeec-f4e1-4ce4-866c-6845d9f7a506",
+                  "step": "if",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "id": "9797dd93-5828-4bd2-be9a-8a67cfa7946c",
+                          "step": "group",
+                          "name": "VIX Blend",
+                          "children": [
+                            {
+                              "step": "wt-inverse-vol",
+                              "id": "d815e2db-1791-4336-a5f9-7f361e1cda6c",
+                              "children": [
+                                {
+                                  "ticker": "UVXY",
+                                  "id": "2d05f135-de5b-4b0f-86af-a9f1b87e9385",
+                                  "step": "asset"
+                                },
+                                {
+                                  "ticker": "VXX",
+                                  "exchange": "BATS",
+                                  "name": "iPath Series B S&P 500 VIX Short-Term Futures ETN",
+                                  "id": "4e0d0823-f189-4055-bb68-150fd99271bd",
+                                  "step": "asset"
+                                },
+                                {
+                                  "ticker": "VIXM",
+                                  "id": "f30ad9db-3ac8-479c-9bce-4400601a6bb3",
+                                  "step": "asset",
+                                  "weight": {
+                                    "num": 20,
+                                    "den": 100
+                                  }
+                                }
+                              ],
+                              "window-days": "5"
+                            }
+                          ],
+                          "collapsed?": true
+                        }
+                      ],
+                      "lhs-fn-params": {
+                        "window": 10
+                      },
+                      "is-else-condition?": false,
+                      "rhs-fixed-value?": true,
+                      "lhs-fn": "relative-strength-index",
+                      "lhs-val": "TQQQ",
+                      "id": "b4cf90dc-7c3c-410e-a1eb-5fa9b524a6b7",
+                      "comparator": "gt",
+                      "rhs-val": "80",
+                      "step": "if-child",
+                      "collapsed?": true
+                    },
+                    {
+                      "id": "ac1082b0-8124-47b0-99ee-800b16a75798",
+                      "step": "if-child",
+                      "is-else-condition?": true,
+                      "children": [
+                        {
+                          "ticker": "BIL",
+                          "exchange": "ARCX",
+                          "name": "SPDR Bloomberg 1-3 Month T-Bill ETF",
+                          "id": "60e96c12-a183-454b-ae3a-f3818bea3173",
+                          "step": "asset"
+                        }
+                      ],
+                      "collapsed?": false
+                    }
+                  ],
+                  "weight": {
+                    "num": "80",
+                    "den": 100
+                  }
+                },
+                {
+                  "id": "e12e7ba5-f21f-4876-b237-2042163553ed",
+                  "step": "if",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "id": "b8f03ffe-4a21-440c-9221-b07051fae3e1",
+                          "step": "group",
+                          "name": "VIX Blend",
+                          "children": [
+                            {
+                              "step": "wt-inverse-vol",
+                              "id": "7d9521f9-cb6f-4fca-9334-16db243396f6",
+                              "children": [
+                                {
+                                  "ticker": "UVXY",
+                                  "id": "054343e9-0781-4c66-9c13-fccae54de8b6",
+                                  "step": "asset"
+                                },
+                                {
+                                  "ticker": "VXX",
+                                  "exchange": "BATS",
+                                  "name": "iPath Series B S&P 500 VIX Short-Term Futures ETN",
+                                  "id": "2bb20c8f-db3a-42c1-a0f6-8cd3e62caf99",
+                                  "step": "asset"
+                                },
+                                {
+                                  "ticker": "VIXM",
+                                  "id": "d517675a-5a51-41dd-8260-9f19a28a36ad",
+                                  "step": "asset",
+                                  "weight": {
+                                    "num": 20,
+                                    "den": 100
+                                  }
+                                }
+                              ],
+                              "window-days": "5"
+                            }
+                          ],
+                          "collapsed?": true
+                        }
+                      ],
+                      "lhs-fn-params": {
+                        "window": 15
+                      },
+                      "is-else-condition?": false,
+                      "rhs-fixed-value?": true,
+                      "lhs-fn": "relative-strength-index",
+                      "lhs-val": "TQQQ",
+                      "id": "f956f802-fbe3-4918-b03d-1d310fff9a7d",
+                      "comparator": "gt",
+                      "rhs-val": "75",
+                      "step": "if-child",
+                      "collapsed?": true
+                    },
+                    {
+                      "id": "a1dcd712-e8e6-4c5c-a296-bf39644ac07f",
+                      "step": "if-child",
+                      "is-else-condition?": true,
+                      "children": [
+                        {
+                          "ticker": "BIL",
+                          "exchange": "ARCX",
+                          "name": "SPDR Bloomberg 1-3 Month T-Bill ETF",
+                          "id": "10b5ae64-7a36-4d25-961c-e91e3368217b",
+                          "step": "asset"
+                        }
+                      ],
+                      "collapsed?": false
+                    }
+                  ],
+                  "weight": {
+                    "num": "80",
+                    "den": 100
+                  }
+                }
+              ],
+              "window-days": "200"
+            }
+          ],
+          "collapsed?": false
+        }
+      ],
+      "window-days": "5"
+    }
+  ],
+  "name": "Copy of 10 day Oversold Block",
+  "asset_class": "EQUITIES",
+  "rebalance": "daily",
+  "id": "aIBl5xshv8S2CyuaeBkD",
+  "step": "root"
+}

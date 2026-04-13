@@ -1,0 +1,111 @@
+{
+  "id": "DOmqDINpNS25BPPyKAon",
+  "step": "root",
+  "name": "Copy of reversed UVXY RSI Band Test 32/4D",
+  "description": "so if the volatility of SPY calms down, you go 3x leveraged, and buy UPRO.  go into bonds if spy drops 2%?  dont know if i have that step right.",
+  "rebalance": "none",
+  "rebalance-corridor-width": 0.1,
+  "children": [
+    {
+      "id": "43be5b32-c34c-4223-b7da-58c85f12dff3",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "weight": {
+            "num": 100,
+            "den": 100
+          },
+          "id": "45885a94-eebe-4bed-b7b4-0ac59b15b9a8",
+          "step": "if",
+          "children": [
+            {
+              "children": [
+                {
+                  "name": "ProShares UltraPro S&P500",
+                  "ticker": "UPRO",
+                  "has_marketcap": false,
+                  "id": "c7f82fc2-55fb-45f0-9bec-f746310e7af7",
+                  "exchange": "ARCX",
+                  "price": 31.2,
+                  "step": "asset",
+                  "dollar_volume": 525424442.4,
+                  "children-count": 0
+                }
+              ],
+              "rhs-fn": "relative-strength-index",
+              "is-else-condition?": false,
+              "lhs-fn": "relative-strength-index",
+              "rhs-window-days": "4",
+              "lhs-window-days": "32",
+              "lhs-val": "UVXY",
+              "id": "608848a0-5a90-4612-b461-93e6a3c87636",
+              "comparator": "gt",
+              "rhs-val": "UVXY",
+              "step": "if-child"
+            },
+            {
+              "id": "c34904f7-73ce-48ef-b46b-86fa2fc5ae8c",
+              "step": "if-child",
+              "is-else-condition?": true,
+              "children": [
+                {
+                  "id": "ffa54d9f-1ecb-4157-aea1-9b25bfe6a231",
+                  "step": "wt-cash-equal",
+                  "children": [
+                    {
+                      "id": "4ee53fd7-a5a7-4d36-b70b-43e0298d6017",
+                      "step": "if",
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "name": "iShares 1-3 Year Treasury Bond ETF",
+                              "ticker": "SHY",
+                              "has_marketcap": false,
+                              "id": "97b9d0d1-8838-4241-8783-e3443f49035d",
+                              "exchange": "XNAS",
+                              "price": 81.22,
+                              "step": "asset",
+                              "dollar_volume": 827692633.78,
+                              "children-count": 0
+                            }
+                          ],
+                          "is-else-condition?": false,
+                          "rhs-fixed-value?": true,
+                          "lhs-fn": "cumulative-return",
+                          "lhs-window-days": "5",
+                          "lhs-val": "SPY",
+                          "id": "e109e8f6-422d-4580-a197-b46178dd6f9e",
+                          "comparator": "gt",
+                          "rhs-val": "-2",
+                          "step": "if-child"
+                        },
+                        {
+                          "id": "1fb7ebf9-a546-4df7-9424-075d694eb53e",
+                          "step": "if-child",
+                          "is-else-condition?": true,
+                          "children": [
+                            {
+                              "name": "SPDR S&P 500 ETF Trust",
+                              "ticker": "SPY",
+                              "has_marketcap": false,
+                              "id": "56f5d379-c141-4c3c-aa0a-d2fbfa49fb31",
+                              "exchange": "ARCX",
+                              "price": 367.95,
+                              "step": "asset",
+                              "dollar_volume": 44486466741.75
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

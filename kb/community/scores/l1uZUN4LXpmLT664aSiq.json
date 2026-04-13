@@ -1,0 +1,393 @@
+{
+  "id": "l1uZUN4LXpmLT664aSiq",
+  "step": "root",
+  "name": "Copy of Slow and Steady Growth 9.6%/19.1% DD (Backtest to Feb 2007)",
+  "description": "",
+  "rebalance": "none",
+  "rebalance-corridor-width": 0.1,
+  "children": [
+    {
+      "id": "465f564a-7c82-4caa-af6f-6cbef2e93582",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "weight": {
+            "num": 100,
+            "den": 100
+          },
+          "id": "56a0142c-fca1-422a-ac19-7544feac35f6",
+          "step": "if",
+          "children": [
+            {
+              "children": [
+                {
+                  "id": "cc6dc1db-d31c-48fb-8dc1-2bc4ba20d336",
+                  "step": "wt-cash-specified",
+                  "children": [
+                    {
+                      "weight": {
+                        "num": "60",
+                        "den": 100
+                      },
+                      "id": "a8fce191-3596-40e6-a2c8-8a88f4d2d3bc",
+                      "step": "group",
+                      "name": "Stock Market",
+                      "children": [
+                        {
+                          "step": "wt-cash-specified",
+                          "id": "f7eeaf95-9f42-4dd3-9371-4bdbd3e9052a",
+                          "children": [
+                            {
+                              "name": "SPDR S&P 500 ETF Trust",
+                              "ticker": "SPY",
+                              "has_marketcap": false,
+                              "weight": {
+                                "num": "25",
+                                "den": 100
+                              },
+                              "id": "7cac1412-99e8-4e74-8950-ef1e473b5456",
+                              "exchange": "ARCX",
+                              "price": 367.95,
+                              "step": "asset",
+                              "dollar_volume": 44486466741.75
+                            },
+                            {
+                              "name": "Invesco QQQ Trust",
+                              "ticker": "QQQ",
+                              "has_marketcap": false,
+                              "weight": {
+                                "num": "50",
+                                "den": 100
+                              },
+                              "id": "ac0e2df1-c026-4a4c-95f9-39e691868d5e",
+                              "exchange": "XNAS",
+                              "price": 275.51,
+                              "step": "asset",
+                              "dollar_volume": 20226170466.62
+                            },
+                            {
+                              "name": "SPDR Dow Jones Industrial Average ETF Trust",
+                              "ticker": "DIA",
+                              "has_marketcap": false,
+                              "weight": {
+                                "num": "25",
+                                "den": 100
+                              },
+                              "id": "84094dbe-42f4-4981-9375-a943aaef0645",
+                              "exchange": "ARCX",
+                              "price": 295.86,
+                              "step": "asset",
+                              "dollar_volume": 1443271056.78
+                            }
+                          ],
+                          "window-days": "21"
+                        }
+                      ],
+                      "collapsed?": false
+                    },
+                    {
+                      "name": "SPDR Gold Shares",
+                      "ticker": "GLD",
+                      "has_marketcap": false,
+                      "weight": {
+                        "num": "15",
+                        "den": 100
+                      },
+                      "id": "c475501d-7461-46b0-a788-3c497371694c",
+                      "exchange": "ARCX",
+                      "price": 153.01,
+                      "step": "asset",
+                      "dollar_volume": 1467410272.8999999
+                    },
+                    {
+                      "name": "iShares 20+ Year Treasury Bond ETF",
+                      "ticker": "TLT",
+                      "has_marketcap": false,
+                      "weight": {
+                        "num": "5",
+                        "den": 100
+                      },
+                      "id": "7fb76fe5-c367-46bf-b7ed-24e90d338174",
+                      "exchange": "XNAS",
+                      "price": 104.33,
+                      "step": "asset",
+                      "dollar_volume": 4093298556.5099998,
+                      "children-count": 0
+                    },
+                    {
+                      "name": "Invesco DB Commodity Index Tracking Fund",
+                      "ticker": "DBC",
+                      "has_marketcap": false,
+                      "weight": {
+                        "num": "5",
+                        "den": 100
+                      },
+                      "id": "bb243da1-8cff-4932-99e3-e89a261604a9",
+                      "exchange": "ARCX",
+                      "price": 24.01,
+                      "step": "asset",
+                      "dollar_volume": 93255752.38000001
+                    },
+                    {
+                      "name": "Invesco DB US Dollar Index Bullish Fund",
+                      "ticker": "UUP",
+                      "has_marketcap": false,
+                      "weight": {
+                        "num": "15",
+                        "den": 100
+                      },
+                      "id": "439aff11-080f-4e1b-976d-bf508640798f",
+                      "exchange": "ARCX",
+                      "price": 30.32,
+                      "step": "asset",
+                      "dollar_volume": 150421764.8
+                    }
+                  ]
+                }
+              ],
+              "rhs-fn": "moving-average-price",
+              "is-else-condition?": false,
+              "lhs-fn": "current-price",
+              "rhs-window-days": "210",
+              "lhs-window-days": "21",
+              "lhs-val": "SPY",
+              "id": "147bc646-d876-443d-a969-53804342306f",
+              "comparator": "gt",
+              "rhs-val": "SPY",
+              "step": "if-child"
+            },
+            {
+              "id": "137b8faa-d528-433c-bf3a-12a542a6c782",
+              "step": "if-child",
+              "is-else-condition?": true,
+              "children": [
+                {
+                  "id": "a428216c-42d4-49aa-8f82-83b1b8797e2a",
+                  "step": "wt-cash-specified",
+                  "children": [
+                    {
+                      "name": "iShares 20+ Year Treasury Bond ETF",
+                      "ticker": "TLT",
+                      "has_marketcap": false,
+                      "weight": {
+                        "num": "30",
+                        "den": 100
+                      },
+                      "id": "7c1b1843-6b56-4476-a546-065e9a0cf3b5",
+                      "exchange": "XNAS",
+                      "price": 105.7,
+                      "step": "asset",
+                      "dollar_volume": 2432597980.4
+                    },
+                    {
+                      "name": "SPDR Gold Shares",
+                      "ticker": "GLD",
+                      "has_marketcap": false,
+                      "weight": {
+                        "num": "30",
+                        "den": 100
+                      },
+                      "id": "f9264e3d-130f-4e32-8d60-223f16f7818b",
+                      "exchange": "ARCX",
+                      "price": 153.01,
+                      "step": "asset",
+                      "dollar_volume": 1467410272.8999999
+                    },
+                    {
+                      "name": "Invesco DB US Dollar Index Bullish Fund",
+                      "ticker": "UUP",
+                      "has_marketcap": false,
+                      "weight": {
+                        "num": "10",
+                        "den": 100
+                      },
+                      "id": "527c0ce0-165e-4ecc-ad8e-2e89611c702a",
+                      "exchange": "ARCX",
+                      "price": 30.32,
+                      "step": "asset",
+                      "dollar_volume": 150421764.8
+                    },
+                    {
+                      "weight": {
+                        "num": "10",
+                        "den": 100
+                      },
+                      "id": "76081ccd-f6d6-4c86-84b1-1165d6ac31af",
+                      "step": "if",
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "name": "Invesco QQQ Trust",
+                              "ticker": "QQQ",
+                              "has_marketcap": false,
+                              "id": "072bdc12-bf1c-4397-afb4-f2eb763c4555",
+                              "exchange": "XNAS",
+                              "price": 279.94,
+                              "step": "asset",
+                              "dollar_volume": 21617288731
+                            }
+                          ],
+                          "is-else-condition?": false,
+                          "rhs-fixed-value?": true,
+                          "lhs-fn": "relative-strength-index",
+                          "lhs-window-days": "10",
+                          "lhs-val": "QQQ",
+                          "id": "c385218c-78f0-45d8-85d4-8ecfd42fcc9b",
+                          "comparator": "lt",
+                          "rhs-val": "30",
+                          "step": "if-child"
+                        },
+                        {
+                          "id": "709e6da8-211a-4cbe-a516-5134628472b5",
+                          "step": "if-child",
+                          "is-else-condition?": true,
+                          "children": [
+                            {
+                              "id": "13da3491-5c32-4d0f-8f25-9858ad474905",
+                              "step": "wt-cash-equal",
+                              "children": [
+                                {
+                                  "weight": {
+                                    "num": "10",
+                                    "den": 100
+                                  },
+                                  "id": "26a8ade8-b69c-4e5e-8b7c-5dff04508bb4",
+                                  "step": "if",
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "id": "0adbffc0-ce57-4fc2-9647-d004bbea6407",
+                                          "step": "wt-cash-equal",
+                                          "children": [
+                                            {
+                                              "select?": true,
+                                              "children": [
+                                                {
+                                                  "name": "ProShares Short QQQ",
+                                                  "ticker": "PSQ",
+                                                  "has_marketcap": false,
+                                                  "id": "3c0969d3-0012-4078-ae7c-ca3141f24f2f",
+                                                  "exchange": "ARCX",
+                                                  "price": 14.25,
+                                                  "step": "asset",
+                                                  "dollar_volume": 338048346.75
+                                                },
+                                                {
+                                                  "name": "iShares 1-3 Year Treasury Bond ETF",
+                                                  "ticker": "SHY",
+                                                  "has_marketcap": false,
+                                                  "id": "25f18d28-2ebf-4ce7-a740-f8e524701a88",
+                                                  "exchange": "XNAS",
+                                                  "price": 81.39,
+                                                  "step": "asset",
+                                                  "dollar_volume": 633980079.9
+                                                }
+                                              ],
+                                              "select-fn": "top",
+                                              "select-n": "1",
+                                              "sort-by-fn": "relative-strength-index",
+                                              "sort-by-window-days": "10",
+                                              "id": "544402f2-ac93-4056-b577-311b8aee2782",
+                                              "sort-by?": true,
+                                              "step": "filter"
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "rhs-fn": "moving-average-price",
+                                      "is-else-condition?": false,
+                                      "lhs-fn": "current-price",
+                                      "rhs-window-days": "20",
+                                      "lhs-val": "QQQ",
+                                      "id": "fd3f5491-0fef-4141-90d8-c0a4ae984722",
+                                      "comparator": "lt",
+                                      "rhs-val": "QQQ",
+                                      "step": "if-child"
+                                    },
+                                    {
+                                      "id": "b3b95eac-a24b-46cc-9f86-2ed3343cd217",
+                                      "step": "if-child",
+                                      "is-else-condition?": true,
+                                      "children": [
+                                        {
+                                          "name": "Invesco QQQ Trust",
+                                          "ticker": "QQQ",
+                                          "has_marketcap": false,
+                                          "id": "3fa995ed-151f-454f-b547-a96a6247cf65",
+                                          "exchange": "XNAS",
+                                          "price": 279.94,
+                                          "step": "asset",
+                                          "dollar_volume": 21617288731
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "weight": {
+                        "num": "20",
+                        "den": 100
+                      },
+                      "id": "349fb945-0de5-487e-aa94-9a41ea354580",
+                      "step": "if",
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "name": "Invesco DB Commodity Index Tracking Fund",
+                              "ticker": "DBC",
+                              "has_marketcap": false,
+                              "id": "0bbc5da2-6898-4551-ba78-c6b927aeb916",
+                              "exchange": "ARCX",
+                              "price": 24.01,
+                              "step": "asset",
+                              "dollar_volume": 93255752.38000001
+                            }
+                          ],
+                          "rhs-fn": "moving-average-price",
+                          "is-else-condition?": false,
+                          "lhs-fn": "current-price",
+                          "rhs-window-days": "200",
+                          "lhs-val": "DBC",
+                          "id": "f125cd88-bc1c-43d0-a88f-03d88705fd40",
+                          "comparator": "gt",
+                          "rhs-val": "DBC",
+                          "step": "if-child"
+                        },
+                        {
+                          "id": "e47c9759-5812-49c3-b50e-b898a1a93a5d",
+                          "step": "if-child",
+                          "is-else-condition?": true,
+                          "children": [
+                            {
+                              "name": "SPDR Gold Shares",
+                              "ticker": "GLD",
+                              "has_marketcap": false,
+                              "id": "d8976381-d7b3-4d5d-b95e-3f9919b09ffb",
+                              "exchange": "ARCX",
+                              "price": 153.01,
+                              "step": "asset",
+                              "dollar_volume": 1467410272.8999999
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

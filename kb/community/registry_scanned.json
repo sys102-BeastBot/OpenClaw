@@ -1,0 +1,345 @@
+[
+  {
+    "id": "iRZti2wCCDC5fUNcOF6x",
+    "name": "Drawdown/Skim Bots (USDU, no UUP)",
+    "theme": "commodity",
+    "total_groups": 180,
+    "top_level_count": 1,
+    "min_depth": 2,
+    "top_group_names": [
+      "Drawdown/Skim Bots"
+    ],
+    "has_subs": false
+  },
+  {
+    "id": "gw6zjTvdtRxYt5akhhQR",
+    "name": "BE's 2nd Opus | HnL + Commodities | Jun 2nd 2017",
+    "theme": "commodity",
+    "total_groups": 51,
+    "top_level_count": 1,
+    "min_depth": 2,
+    "top_group_names": [
+      "BE's 2nd Opus l HnL + Commodities l"
+    ],
+    "has_subs": false
+  },
+  {
+    "id": "SaPNRUQ5rXRrMxWNFPPo",
+    "name": "V2 | Safety Mix | Michael B | UUP, GLD, XLP",
+    "theme": "commodity",
+    "total_groups": 1,
+    "top_level_count": 1,
+    "min_depth": 2,
+    "top_group_names": [
+      "V2 | Safety Mix | Michael B | UUP, "
+    ],
+    "has_subs": false
+  },
+  {
+    "id": "EXKPWhtGCtdwZ1zlUld4",
+    "name": "Macro Oscillator Engine",
+    "theme": "commodity",
+    "total_groups": 9,
+    "top_level_count": 9,
+    "min_depth": 2,
+    "top_group_names": [
+      "QQQ Core",
+      "Votes Core",
+      "Semis Shield",
+      "TLT Macro Momentum",
+      "IEF Macro Momentum"
+    ],
+    "has_subs": false
+  },
+  {
+    "id": "l1uZUN4LXpmLT664aSiq",
+    "name": "Slow and Steady Growth 9.6%/19.1% DD",
+    "theme": "low_vol",
+    "total_groups": 1,
+    "top_level_count": 1,
+    "min_depth": 5,
+    "top_group_names": [
+      "Stock Market"
+    ],
+    "has_subs": false
+  },
+  {
+    "id": "OCE4srIuCV1rPB4rMMbs",
+    "name": "BLACK SWAN CATCHER + BIL CANARY + EQUITY",
+    "theme": "low_vol",
+    "total_groups": 8,
+    "top_level_count": 1,
+    "min_depth": 10,
+    "top_group_names": [
+      "Defensive"
+    ],
+    "has_subs": true
+  },
+  {
+    "id": "RQ4QIX7G1WVtwmEv6v3G",
+    "name": "CounterBalancer - Low R/R (Dec) (Low Risk)",
+    "theme": "low_vol",
+    "total_groups": 425,
+    "top_level_count": 1,
+    "min_depth": 4,
+    "top_group_names": [
+      "V1 BWC: 200D Front Running BSC"
+    ],
+    "has_subs": false
+  },
+  {
+    "id": "NXLPas0UP2pMtoHLos7n",
+    "name": "SPY minimum drawdown V3 | Garen Mod",
+    "theme": "low_vol",
+    "total_groups": 18,
+    "top_level_count": 1,
+    "min_depth": 2,
+    "top_group_names": [
+      "SPY minimum drawdown V3 | Garen Mod"
+    ],
+    "has_subs": false
+  },
+  {
+    "id": "eokGOhyYTFxUrF6hqhzI",
+    "name": "Simple Regime Switching and Dip Buying 2X SPY V0.3",
+    "theme": "regime",
+    "total_groups": 1,
+    "top_level_count": 1,
+    "min_depth": 4,
+    "top_group_names": [
+      "Go Long 2X SPY and QQQ, Bonds, Gold"
+    ],
+    "has_subs": false
+  },
+  {
+    "id": "w0ElVz7EXhLSU64iPl1H",
+    "name": "Dip Buying Tech Below 10d RSI of 30 XLP/XLK",
+    "theme": "regime",
+    "total_groups": 0,
+    "top_level_count": 0,
+    "min_depth": 0,
+    "top_group_names": [],
+    "has_subs": false
+  },
+  {
+    "id": "E4jQ7ZPowO0ew47oc5Yr",
+    "name": "Exhibit 3 | ADAPTIVE ASSET ALLOCATION | 5C2",
+    "theme": "regime",
+    "total_groups": 1,
+    "top_level_count": 1,
+    "min_depth": 2,
+    "top_group_names": [
+      "Exhibit 3 | ADAPTIVE ASSET ALLOCATI"
+    ],
+    "has_subs": false
+  },
+  {
+    "id": "hdp1NlF6Tz4kWKYBhmRz",
+    "name": "Exhibit 4 | Adaptive Asset Allocation | 4 choose 2",
+    "theme": "regime",
+    "total_groups": 0,
+    "top_level_count": 0,
+    "min_depth": 0,
+    "top_group_names": [],
+    "has_subs": false
+  },
+  {
+    "id": "DOmqDINpNS25BPPyKAon",
+    "name": "reversed UVXY RSI Band Test 32/4D",
+    "theme": "vol_profit",
+    "total_groups": 0,
+    "top_level_count": 0,
+    "min_depth": 0,
+    "top_group_names": [],
+    "has_subs": false
+  },
+  {
+    "id": "CsTVZFTEdLy30CvyxekJ",
+    "name": "VIXn 1.0.0 | Deez/BrianE | Nov 2nd 2011",
+    "theme": "vol_profit",
+    "total_groups": 15,
+    "top_level_count": 1,
+    "min_depth": 2,
+    "top_group_names": [
+      "VIXn' 1.0.0 l Deez/BrianE l Nov 2nd"
+    ],
+    "has_subs": false
+  },
+  {
+    "id": "qoFgi3oPRtU1U0Vjgft8",
+    "name": "QQQ For The Long Term V2 WITH UVXY (104.5% RR/22.1% DD)",
+    "theme": "vol_profit",
+    "total_groups": 0,
+    "top_level_count": 0,
+    "min_depth": 0,
+    "top_group_names": [],
+    "has_subs": false
+  },
+  {
+    "id": "WJIQKU87myVfIPWCwhhg",
+    "name": "v2.1.0 Double Pop Bots | Oct 28th 2011",
+    "theme": "vol_profit",
+    "total_groups": 9,
+    "top_level_count": 1,
+    "min_depth": 2,
+    "top_group_names": [
+      "v2.1.0 Double Pop Bots l Oct 28th 2"
+    ],
+    "has_subs": false
+  },
+  {
+    "id": "wMlZXeI0agUSVWsVYjvK",
+    "name": "Portfolio Experiment: Volatility Minimization",
+    "theme": "vol_profit",
+    "total_groups": 380,
+    "top_level_count": 8,
+    "min_depth": 2,
+    "top_group_names": [
+      "IFF Sortgasm",
+      "V1 BWC: Ultimate Frontrunner  -> So",
+      "V7 BWC: Ultimate Vixation POP Bot",
+      "Sector Rotator",
+      "Pareto's Portfolio"
+    ],
+    "has_subs": false
+  },
+  {
+    "id": "aWw8tL43K3SwbiBx7Oip",
+    "name": "VIX Mid-Term Futures: SPY RSI predicts VIX",
+    "theme": "vol_profit",
+    "total_groups": 10,
+    "top_level_count": 1,
+    "min_depth": 2,
+    "top_group_names": [
+      "SPY RSI predicts VIX moves over dif"
+    ],
+    "has_subs": false
+  },
+  {
+    "id": "tUuo2r1n66ByxLeoYkr9",
+    "name": "RSI FrankenFest v1.4",
+    "theme": "mean_rev",
+    "total_groups": 0,
+    "top_level_count": 0,
+    "min_depth": 0,
+    "top_group_names": [],
+    "has_subs": false
+  },
+  {
+    "id": "aIBl5xshv8S2CyuaeBkD",
+    "name": "10 day Oversold Block",
+    "theme": "mean_rev",
+    "total_groups": 5,
+    "top_level_count": 1,
+    "min_depth": 2,
+    "top_group_names": [
+      "Oversold Block"
+    ],
+    "has_subs": false
+  },
+  {
+    "id": "yaP88hHuOyULF8Uevx9Y",
+    "name": "TQQQ For The Long Term V2 (226.7% RR/46.1% Max DD)",
+    "theme": "qqq_tqqq",
+    "total_groups": 0,
+    "top_level_count": 0,
+    "min_depth": 0,
+    "top_group_names": [],
+    "has_subs": false
+  },
+  {
+    "id": "PIZS5Uvi7CHDt3lwrW55",
+    "name": "WIP Beat Market rules + Actively Managed S&P 10",
+    "theme": "qqq_tqqq",
+    "total_groups": 0,
+    "top_level_count": 0,
+    "min_depth": 0,
+    "top_group_names": [],
+    "has_subs": false
+  },
+  {
+    "id": "fjeXNkW85HwGSgqj6gWs",
+    "name": "OG V1.1 QQQ 1DMR - 2X LETF edition",
+    "theme": "qqq_tqqq",
+    "total_groups": 4,
+    "top_level_count": 1,
+    "min_depth": 2,
+    "top_group_names": [
+      "V1 QQQ 1DMR"
+    ],
+    "has_subs": false
+  },
+  {
+    "id": "oCF4AaGyGnTdPJX4f3pH",
+    "name": "SOXL Growth v2.4.5 RL",
+    "theme": "qqq_tqqq",
+    "total_groups": 0,
+    "top_level_count": 0,
+    "min_depth": 0,
+    "top_group_names": [],
+    "has_subs": false
+  },
+  {
+    "id": "D9NRTRWjbxn0fUGnhUkD",
+    "name": "Growth Blend v2.2 RL",
+    "theme": "qqq_tqqq",
+    "total_groups": 74,
+    "top_level_count": 2,
+    "min_depth": 4,
+    "top_group_names": [
+      "Blend Growth Amoeba",
+      "WAM + Colonel Sanders ETF Only"
+    ],
+    "has_subs": false
+  },
+  {
+    "id": "er9pVe7F4r5XeO7ULgwn",
+    "name": "The Holy Grail",
+    "theme": "other",
+    "total_groups": 0,
+    "top_level_count": 0,
+    "min_depth": 0,
+    "top_group_names": [],
+    "has_subs": false
+  },
+  {
+    "id": "yFjj6uwR3h7J4AuvSfbu",
+    "name": "Beat The Market V2",
+    "theme": "other",
+    "total_groups": 0,
+    "top_level_count": 0,
+    "min_depth": 0,
+    "top_group_names": [],
+    "has_subs": false
+  },
+  {
+    "id": "Y6kUz1f1hptJjfB1r1mc",
+    "name": "The Sandy Dragon",
+    "theme": "other",
+    "total_groups": 55,
+    "top_level_count": 5,
+    "min_depth": 2,
+    "top_group_names": [
+      "Long Volatility",
+      "Trend and Momentum",
+      "Fiat Alternatives",
+      "Secular Growth Assets",
+      "Interest Rate Linked"
+    ],
+    "has_subs": false
+  },
+  {
+    "id": "v9ueglUdSu8Ei2HizAfG",
+    "name": "Tame the Beta Baller WM 74",
+    "theme": "other",
+    "total_groups": 273,
+    "top_level_count": 3,
+    "min_depth": 3,
+    "top_group_names": [
+      "Copy of Inflation Protected Simple ",
+      "Copy of Sisyphus V0.0 - Optimized S",
+      "Combo 10 General FrankRound's Chick"
+    ],
+    "has_subs": true
+  }
+]
