@@ -1,0 +1,2196 @@
+{
+  "id": "4f073ae9-9aeb-46d0-a288-5b96b21591fb",
+  "step": "root",
+  "name": "Trend and Momentum",
+  "description": "",
+  "rebalance": "daily",
+  "children": [
+    {
+      "id": "ef7ce211-eeb2-4a32-96c0-4cc75951cb78",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "id": "2c3f4a60-aa6f-43c6-aa52-638bb2a70e76",
+          "step": "group",
+          "name": "Trend and Momentum",
+          "children": [
+            {
+              "step": "wt-cash-equal",
+              "id": "2d9f2791-c4b4-43f8-bd29-d6849c5b3f79",
+              "children": [
+                {
+                  "id": "80810303-104a-4898-a7ac-5dd957ca48ab",
+                  "step": "group",
+                  "name": "Equity Momentum (#DEMAMO)",
+                  "children": [
+                    {
+                      "step": "wt-cash-equal",
+                      "id": "02dba246-d7e8-4674-80ca-fa59caff7a6d",
+                      "children": [
+                        {
+                          "id": "85956fb4-3362-4020-857d-83ab6f2aa669",
+                          "step": "group",
+                          "name": "Australia",
+                          "children": [
+                            {
+                              "step": "wt-cash-equal",
+                              "id": "1f199a5c-cb52-48db-aab6-6bb16f971a46",
+                              "children": [
+                                {
+                                  "id": "cd22e043-0e76-41ba-b425-febac14c733f",
+                                  "step": "if",
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "name": "iShares MSCI Australia ETF",
+                                          "ticker": "EWA",
+                                          "has_marketcap": false,
+                                          "id": "c5d7ba82-8e25-4593-a7f3-18ab36d1fa70",
+                                          "exchange": "ARCX",
+                                          "price": 25.48,
+                                          "step": "asset",
+                                          "dollar_volume": 27392477.84
+                                        }
+                                      ],
+                                      "rhs-fn": "cumulative-return",
+                                      "is-else-condition?": false,
+                                      "rhs-fixed-value?": false,
+                                      "lhs-fn": "cumulative-return",
+                                      "rhs-window-days": "252",
+                                      "lhs-window-days": "252",
+                                      "lhs-val": "EWA",
+                                      "id": "ef3a891e-5e19-42d1-831e-ba653066a52b",
+                                      "comparator": "gt",
+                                      "rhs-val": "IEF",
+                                      "step": "if-child"
+                                    },
+                                    {
+                                      "id": "7765fa87-42a0-40bb-87bd-8835d516a8b2",
+                                      "step": "if-child",
+                                      "is-else-condition?": true,
+                                      "children": [
+                                        {
+                                          "name": "iShares 7-10 Year Treasury Bond ETF",
+                                          "ticker": "IEF",
+                                          "has_marketcap": false,
+                                          "id": "28f72cf7-25c0-44fd-a475-6f0a09581542",
+                                          "exchange": "XNAS",
+                                          "price": 115.4,
+                                          "step": "asset",
+                                          "dollar_volume": 763473936.8000001
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "collapsed?": false
+                        },
+                        {
+                          "id": "73c66c29-8aa0-4f10-a9fa-2548222f2062",
+                          "step": "group",
+                          "name": "Germany",
+                          "children": [
+                            {
+                              "step": "wt-cash-equal",
+                              "id": "7d0a367d-e5fb-4504-a959-a4994d71b703",
+                              "children": [
+                                {
+                                  "id": "1512ef39-0421-4fd5-9c0e-8d0f75fb3839",
+                                  "step": "if",
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "name": "iShares MSCI Germany ETF",
+                                          "ticker": "EWG",
+                                          "has_marketcap": false,
+                                          "id": "1a4925b3-59f6-492e-8530-1dea31ae4fc3",
+                                          "exchange": "ARCX",
+                                          "price": 28.03,
+                                          "step": "asset",
+                                          "dollar_volume": 344957081.3,
+                                          "children-count": 0
+                                        }
+                                      ],
+                                      "rhs-fn": "cumulative-return",
+                                      "is-else-condition?": false,
+                                      "rhs-fixed-value?": false,
+                                      "lhs-fn": "cumulative-return",
+                                      "rhs-window-days": "252",
+                                      "lhs-window-days": "252",
+                                      "lhs-val": "EWG",
+                                      "id": "a7b9c2ef-f893-4d2e-bda6-c5fc05f36059",
+                                      "comparator": "gt",
+                                      "rhs-val": "IEF",
+                                      "step": "if-child"
+                                    },
+                                    {
+                                      "id": "e188d837-274d-4799-9257-e081cbc1cfe6",
+                                      "step": "if-child",
+                                      "is-else-condition?": true,
+                                      "children": [
+                                        {
+                                          "name": "iShares 7-10 Year Treasury Bond ETF",
+                                          "ticker": "IEF",
+                                          "has_marketcap": false,
+                                          "id": "0e736be5-4b69-4178-bed6-b652b079e996",
+                                          "exchange": "XNAS",
+                                          "price": 115.4,
+                                          "step": "asset",
+                                          "dollar_volume": 763473936.8000001
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "collapsed?": false
+                        },
+                        {
+                          "id": "5b304af1-85db-4c1f-b595-1d75f368c669",
+                          "step": "group",
+                          "name": "Spain",
+                          "children": [
+                            {
+                              "step": "wt-cash-equal",
+                              "id": "46c43970-0072-4652-9338-728d91f08e63",
+                              "children": [
+                                {
+                                  "id": "4636861c-18d2-4e6c-b991-5bdfffc40b59",
+                                  "step": "if",
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "name": "iShares MSCI Spain ETF",
+                                          "ticker": "EWP",
+                                          "has_marketcap": false,
+                                          "id": "016a14f3-2d85-4870-8df2-785924ee876a",
+                                          "exchange": "ARCX",
+                                          "price": 27.98,
+                                          "step": "asset",
+                                          "dollar_volume": 13554547.26
+                                        }
+                                      ],
+                                      "rhs-fn": "cumulative-return",
+                                      "is-else-condition?": false,
+                                      "rhs-fixed-value?": false,
+                                      "lhs-fn": "cumulative-return",
+                                      "rhs-window-days": "252",
+                                      "lhs-window-days": "252",
+                                      "lhs-val": "EWP",
+                                      "id": "3861fe9c-c084-4596-8815-6b27438796e7",
+                                      "comparator": "gt",
+                                      "rhs-val": "IEF",
+                                      "step": "if-child"
+                                    },
+                                    {
+                                      "id": "0f3369a7-19c8-4e9c-8103-367f8c66b313",
+                                      "step": "if-child",
+                                      "is-else-condition?": true,
+                                      "children": [
+                                        {
+                                          "name": "iShares 7-10 Year Treasury Bond ETF",
+                                          "ticker": "IEF",
+                                          "has_marketcap": false,
+                                          "id": "df2bdbe2-9941-442f-94f0-08c18ab658d0",
+                                          "exchange": "XNAS",
+                                          "price": 115.4,
+                                          "step": "asset",
+                                          "dollar_volume": 763473936.8000001
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "collapsed?": false
+                        },
+                        {
+                          "id": "3c60d81f-51fe-4847-8d44-b2452e31c76a",
+                          "step": "group",
+                          "name": "France",
+                          "children": [
+                            {
+                              "step": "wt-cash-equal",
+                              "id": "2ac0788d-837e-4c02-aeca-25676c4f524f",
+                              "children": [
+                                {
+                                  "id": "d75d874f-d3a9-40bc-a16b-ba26dd92660a",
+                                  "step": "if",
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "name": "iShares MSCI France ETF",
+                                          "ticker": "EWQ",
+                                          "has_marketcap": false,
+                                          "id": "21eebf09-c939-46dc-971b-a3d1cf323a8c",
+                                          "exchange": "ARCX",
+                                          "price": 38.5,
+                                          "step": "asset",
+                                          "dollar_volume": 23991621.5
+                                        }
+                                      ],
+                                      "rhs-fn": "cumulative-return",
+                                      "is-else-condition?": false,
+                                      "rhs-fixed-value?": false,
+                                      "lhs-fn": "cumulative-return",
+                                      "rhs-window-days": "252",
+                                      "lhs-window-days": "252",
+                                      "lhs-val": "EWQ",
+                                      "id": "20629a5f-ca37-4514-a51b-e2560eca4a76",
+                                      "comparator": "gt",
+                                      "rhs-val": "IEF",
+                                      "step": "if-child"
+                                    },
+                                    {
+                                      "id": "45c54a34-4631-4b25-a7bc-e1946b9963f3",
+                                      "step": "if-child",
+                                      "is-else-condition?": true,
+                                      "children": [
+                                        {
+                                          "name": "iShares 7-10 Year Treasury Bond ETF",
+                                          "ticker": "IEF",
+                                          "has_marketcap": false,
+                                          "id": "b2eef2e3-fe01-4dfc-ada8-cd5acb8bb011",
+                                          "exchange": "XNAS",
+                                          "price": 115.4,
+                                          "step": "asset",
+                                          "dollar_volume": 763473936.8000001
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "collapsed?": false
+                        },
+                        {
+                          "id": "39b9cf6d-bd46-4b87-a06c-41c1d27f2182",
+                          "step": "group",
+                          "name": "UK",
+                          "children": [
+                            {
+                              "step": "wt-cash-equal",
+                              "id": "9f7cc7d9-81d4-4661-96e4-986e09f47a60",
+                              "children": [
+                                {
+                                  "id": "b361a6e6-c101-4985-8ac4-2d458886c466",
+                                  "step": "if",
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "name": "iShares MSCI United Kingdom ETF",
+                                          "ticker": "EWU",
+                                          "has_marketcap": false,
+                                          "id": "1ce854ac-197b-4496-94e2-e07ab52524d1",
+                                          "exchange": "ARCX",
+                                          "price": 32.74,
+                                          "step": "asset",
+                                          "dollar_volume": 67674136.58
+                                        }
+                                      ],
+                                      "rhs-fn": "cumulative-return",
+                                      "is-else-condition?": false,
+                                      "rhs-fixed-value?": false,
+                                      "lhs-fn": "cumulative-return",
+                                      "rhs-window-days": "252",
+                                      "lhs-window-days": "252",
+                                      "lhs-val": "EWU",
+                                      "id": "acd7f2af-04af-4899-8218-6d4cc4f9bc3e",
+                                      "comparator": "gt",
+                                      "rhs-val": "IEF",
+                                      "step": "if-child"
+                                    },
+                                    {
+                                      "id": "e00a0ecf-6c9f-42fc-bf6f-263beb55abee",
+                                      "step": "if-child",
+                                      "is-else-condition?": true,
+                                      "children": [
+                                        {
+                                          "name": "iShares 7-10 Year Treasury Bond ETF",
+                                          "ticker": "IEF",
+                                          "has_marketcap": false,
+                                          "id": "693e304a-2939-498f-9c37-27afa9f33b57",
+                                          "exchange": "XNAS",
+                                          "price": 115.4,
+                                          "step": "asset",
+                                          "dollar_volume": 763473936.8000001
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "collapsed?": false
+                        },
+                        {
+                          "id": "d182a02c-2098-4c82-8ea4-53acae4f5953",
+                          "step": "group",
+                          "name": "Japan",
+                          "children": [
+                            {
+                              "step": "wt-cash-equal",
+                              "id": "2d1ca31b-14e1-4e92-8d73-bf35c53be9bf",
+                              "children": [
+                                {
+                                  "id": "8adb34c0-2e7a-4a88-983d-875fa2184577",
+                                  "step": "if",
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "name": "iShares MSCI Japan ETF",
+                                          "ticker": "EWJ",
+                                          "has_marketcap": false,
+                                          "id": "7305b04f-aa37-4601-9a68-9376eefdd33b",
+                                          "exchange": "ARCX",
+                                          "price": 72.6,
+                                          "step": "asset",
+                                          "dollar_volume": 447587639.4
+                                        }
+                                      ],
+                                      "rhs-fn": "cumulative-return",
+                                      "is-else-condition?": false,
+                                      "rhs-fixed-value?": false,
+                                      "lhs-fn": "cumulative-return",
+                                      "rhs-window-days": "252",
+                                      "lhs-window-days": "252",
+                                      "lhs-val": "EWJ",
+                                      "id": "1286dc3f-45db-4253-b7e1-cbe54986c958",
+                                      "comparator": "gt",
+                                      "rhs-val": "IEF",
+                                      "step": "if-child"
+                                    },
+                                    {
+                                      "id": "9f0bebed-d534-4542-869f-7c31aa630855",
+                                      "step": "if-child",
+                                      "is-else-condition?": true,
+                                      "children": [
+                                        {
+                                          "name": "iShares 7-10 Year Treasury Bond ETF",
+                                          "ticker": "IEF",
+                                          "has_marketcap": false,
+                                          "id": "f81e6d1c-256b-4d35-9d03-df1ebd6b1e25",
+                                          "exchange": "XNAS",
+                                          "price": 115.4,
+                                          "step": "asset",
+                                          "dollar_volume": 763473936.8000001
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "collapsed?": false
+                        },
+                        {
+                          "id": "7a333337-9c36-4585-b391-38ee4690c13d",
+                          "step": "group",
+                          "name": "Italy",
+                          "children": [
+                            {
+                              "step": "wt-cash-equal",
+                              "id": "a7fdb1ce-5066-4b15-84b7-af44776da4e3",
+                              "children": [
+                                {
+                                  "id": "c5543d2e-11bc-4f0d-8d55-573f6dc9bbb3",
+                                  "step": "if",
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "name": "iShares MSCI Italy ETF",
+                                          "ticker": "EWI",
+                                          "has_marketcap": false,
+                                          "id": "2c7d682e-3567-40a0-bfe9-be74d3ded3ca",
+                                          "exchange": "ARCX",
+                                          "price": 32.61,
+                                          "step": "asset",
+                                          "dollar_volume": 14682293.79
+                                        }
+                                      ],
+                                      "rhs-fn": "cumulative-return",
+                                      "is-else-condition?": false,
+                                      "rhs-fixed-value?": false,
+                                      "lhs-fn": "cumulative-return",
+                                      "rhs-window-days": "252",
+                                      "lhs-window-days": "252",
+                                      "lhs-val": "EWI",
+                                      "id": "79f7d687-a02f-45dc-a024-4dc55eaae9be",
+                                      "comparator": "gt",
+                                      "rhs-val": "IEF",
+                                      "step": "if-child"
+                                    },
+                                    {
+                                      "id": "47a00885-2b03-4253-af64-b194ce170d42",
+                                      "step": "if-child",
+                                      "is-else-condition?": true,
+                                      "children": [
+                                        {
+                                          "name": "iShares 7-10 Year Treasury Bond ETF",
+                                          "ticker": "IEF",
+                                          "has_marketcap": false,
+                                          "id": "7fac32fc-27a0-47db-87e4-c4b031812787",
+                                          "exchange": "XNAS",
+                                          "price": 115.4,
+                                          "step": "asset",
+                                          "dollar_volume": 763473936.8000001
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "collapsed?": false
+                        },
+                        {
+                          "id": "7d0b7aa4-08c0-4630-8740-b96d9f41ece8",
+                          "step": "group",
+                          "name": "USA",
+                          "children": [
+                            {
+                              "step": "wt-cash-equal",
+                              "id": "d08046ce-67d8-4181-bdd9-968122682c9f",
+                              "children": [
+                                {
+                                  "id": "56808994-2046-4bcf-a261-49f43f179c16",
+                                  "step": "if",
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "name": "SPDR S&P 500 ETF Trust",
+                                          "ticker": "SPY",
+                                          "has_marketcap": false,
+                                          "id": "685a965e-3a3f-41d9-bb60-df60f5fd72d5",
+                                          "exchange": "ARCX",
+                                          "price": 442.64,
+                                          "step": "asset",
+                                          "dollar_volume": 26856957138.88
+                                        }
+                                      ],
+                                      "rhs-fn": "cumulative-return",
+                                      "is-else-condition?": false,
+                                      "rhs-fixed-value?": false,
+                                      "lhs-fn": "cumulative-return",
+                                      "rhs-window-days": "252",
+                                      "lhs-window-days": "252",
+                                      "lhs-val": "SPY",
+                                      "id": "17efed79-0afc-4729-9d65-00d7e6816208",
+                                      "comparator": "gt",
+                                      "rhs-val": "IEF",
+                                      "step": "if-child"
+                                    },
+                                    {
+                                      "id": "9582b4ae-4c62-4548-aee4-8f8e38d6cd29",
+                                      "step": "if-child",
+                                      "is-else-condition?": true,
+                                      "children": [
+                                        {
+                                          "name": "iShares 7-10 Year Treasury Bond ETF",
+                                          "ticker": "IEF",
+                                          "has_marketcap": false,
+                                          "id": "0b381268-2ffd-4892-944b-bde1fcf658ed",
+                                          "exchange": "XNAS",
+                                          "price": 115.4,
+                                          "step": "asset",
+                                          "dollar_volume": 763473936.8000001
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "collapsed?": false
+                        },
+                        {
+                          "id": "f132a937-25f6-4cba-89a7-55fa4fc80507",
+                          "step": "group",
+                          "name": "Netherlands",
+                          "children": [
+                            {
+                              "step": "wt-cash-equal",
+                              "id": "8e4ba39d-d0e1-4c01-8de2-ada5a695f56b",
+                              "children": [
+                                {
+                                  "id": "ffc3c38f-1c5e-4c4b-94b4-63a8354e359d",
+                                  "step": "if",
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "name": "iShares MSCI Netherlands ETF",
+                                          "ticker": "EWN",
+                                          "has_marketcap": false,
+                                          "id": "9d38b204-452d-4986-b2c5-4c672966b342",
+                                          "exchange": "ARCX",
+                                          "price": 51.715,
+                                          "step": "asset",
+                                          "dollar_volume": 10358721.360000001
+                                        }
+                                      ],
+                                      "rhs-fn": "cumulative-return",
+                                      "is-else-condition?": false,
+                                      "rhs-fixed-value?": false,
+                                      "lhs-fn": "cumulative-return",
+                                      "rhs-window-days": "252",
+                                      "lhs-window-days": "252",
+                                      "lhs-val": "EWN",
+                                      "id": "73544a0d-cc28-42ce-95e2-ee19fc4f359d",
+                                      "comparator": "gt",
+                                      "rhs-val": "IEF",
+                                      "step": "if-child"
+                                    },
+                                    {
+                                      "id": "185fed96-0dd3-4f0d-a14d-4e40164cbe5b",
+                                      "step": "if-child",
+                                      "is-else-condition?": true,
+                                      "children": [
+                                        {
+                                          "name": "iShares 7-10 Year Treasury Bond ETF",
+                                          "ticker": "IEF",
+                                          "has_marketcap": false,
+                                          "id": "1be11f85-3617-4803-82f8-bd3bf43cb961",
+                                          "exchange": "XNAS",
+                                          "price": 115.4,
+                                          "step": "asset",
+                                          "dollar_volume": 763473936.8000001
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "collapsed?": false
+                        }
+                      ],
+                      "collapsed?": false
+                    }
+                  ],
+                  "collapsed?": true
+                },
+                {
+                  "id": "21cb1340-d751-48ff-b89e-4ce8bd064587",
+                  "step": "group",
+                  "name": "Commodity Momentum (#COMMO)",
+                  "children": [
+                    {
+                      "step": "wt-cash-equal",
+                      "id": "6c9597d2-800a-48ee-a84f-24678588e0e4",
+                      "children": [
+                        {
+                          "id": "f8d6af4c-9aa9-4657-a047-288423d4957f",
+                          "step": "group",
+                          "name": "[?T] DBMF Replication (Private Copy)",
+                          "children": [
+                            {
+                              "step": "wt-cash-equal",
+                              "id": "e655902d-c799-4e36-9a97-0d50c90800e1",
+                              "children": [
+                                {
+                                  "weight": {
+                                    "num": "17.5",
+                                    "den": 100
+                                  },
+                                  "id": "4541aa68-2b8f-4a26-ad48-fff1c42e96b0",
+                                  "step": "group",
+                                  "name": "Oil",
+                                  "children": [
+                                    {
+                                      "step": "wt-cash-equal",
+                                      "id": "a14b4ab6-bb64-4bd4-ab25-bfa9793bc368",
+                                      "children": [
+                                        {
+                                          "id": "43c3306b-9e3f-43a3-bf89-0aa58b18006b",
+                                          "step": "if",
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "id": "81a12d09-e2f7-4f3e-abde-3924d8dfd11e",
+                                                  "step": "wt-cash-equal",
+                                                  "children": [
+                                                    {
+                                                      "id": "6ce5afe5-e1c3-4a11-8006-f14b5d2471a3",
+                                                      "step": "if",
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "ProShares Ultra Bloomberg Crude Oil",
+                                                              "ticker": "UCO",
+                                                              "has_marketcap": false,
+                                                              "id": "3f9acc73-7c2c-408f-b414-22e4fd9120a4",
+                                                              "exchange": "ARCX",
+                                                              "price": 31.44,
+                                                              "step": "asset",
+                                                              "dollar_volume": 28972934.64
+                                                            }
+                                                          ],
+                                                          "rhs-fn": "cumulative-return",
+                                                          "is-else-condition?": false,
+                                                          "rhs-fixed-value?": false,
+                                                          "lhs-fn": "cumulative-return",
+                                                          "rhs-window-days": "90",
+                                                          "lhs-window-days": "90",
+                                                          "lhs-val": "USO",
+                                                          "id": "e33f2951-49dd-4896-8572-39c40781c066",
+                                                          "comparator": "gt",
+                                                          "rhs-val": "SHV",
+                                                          "step": "if-child"
+                                                        },
+                                                        {
+                                                          "id": "1db77cd6-0f2a-4e68-be66-04b403177984",
+                                                          "step": "if-child",
+                                                          "is-else-condition?": true,
+                                                          "children": [
+                                                            {
+                                                              "name": "ProShares UltraShort Bloomberg Crude Oil",
+                                                              "ticker": "SCO",
+                                                              "has_marketcap": false,
+                                                              "id": "a47b2076-266e-4cec-85de-781a9ab502ee",
+                                                              "exchange": "ARCX",
+                                                              "price": 22.61,
+                                                              "step": "asset",
+                                                              "dollar_volume": 25584639.43
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ],
+                                              "is-else-condition?": false,
+                                              "rhs-fixed-value?": true,
+                                              "lhs-fn": "standard-deviation-return",
+                                              "lhs-window-days": "30",
+                                              "lhs-val": "USO",
+                                              "id": "855fd94c-8aad-4f56-a53c-05b16324677f",
+                                              "comparator": "gt",
+                                              "rhs-val": "1.75",
+                                              "step": "if-child"
+                                            },
+                                            {
+                                              "id": "483c356f-779a-4357-a924-62621cd651f0",
+                                              "step": "if-child",
+                                              "is-else-condition?": true,
+                                              "children": [
+                                                {
+                                                  "id": "9632254b-0a8a-464e-8b1c-9758d810b3d4",
+                                                  "step": "wt-cash-equal",
+                                                  "children": [
+                                                    {
+                                                      "id": "b364edc2-55c4-42d8-8a50-8e88bab379c6",
+                                                      "step": "if",
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "ProShares Ultra Bloomberg Crude Oil",
+                                                              "ticker": "UCO",
+                                                              "has_marketcap": false,
+                                                              "id": "7fb77e60-7b97-42e1-806d-701be78ce9a8",
+                                                              "exchange": "ARCX",
+                                                              "price": 31.44,
+                                                              "step": "asset",
+                                                              "dollar_volume": 28972934.64
+                                                            }
+                                                          ],
+                                                          "rhs-fn": "cumulative-return",
+                                                          "is-else-condition?": false,
+                                                          "lhs-fn": "cumulative-return",
+                                                          "rhs-window-days": "45",
+                                                          "lhs-window-days": "45",
+                                                          "lhs-val": "USO",
+                                                          "id": "dc88de5d-16dd-4b2c-866d-3074d1bbaf16",
+                                                          "comparator": "gt",
+                                                          "rhs-val": "SHV",
+                                                          "step": "if-child",
+                                                          "collapsed?": false
+                                                        },
+                                                        {
+                                                          "id": "48b2e2c5-ed93-4427-ab39-0fcdd91b87e8",
+                                                          "step": "if-child",
+                                                          "is-else-condition?": true,
+                                                          "children": [
+                                                            {
+                                                              "name": "ProShares UltraShort Bloomberg Crude Oil",
+                                                              "ticker": "SCO",
+                                                              "has_marketcap": false,
+                                                              "id": "410d507d-1d4e-4ac2-a1c5-bdd0f78b921c",
+                                                              "exchange": "ARCX",
+                                                              "price": 22.61,
+                                                              "step": "asset",
+                                                              "dollar_volume": 25584639.43
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "collapsed?": true
+                                },
+                                {
+                                  "id": "d118e9f1-94b6-45dc-bb74-bf0a42c7482d",
+                                  "step": "group",
+                                  "name": "Natty Gas",
+                                  "children": [
+                                    {
+                                      "step": "wt-cash-equal",
+                                      "id": "7878bec9-6cd6-450c-9810-a317804b8acf",
+                                      "children": [
+                                        {
+                                          "id": "5dbb5c95-fbba-4da5-ada4-41c6cd4a13e4",
+                                          "step": "if",
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "id": "db90d4ff-aa1e-4eb0-a94f-e35f8aee4a9e",
+                                                  "step": "wt-cash-equal",
+                                                  "children": [
+                                                    {
+                                                      "id": "69f4cccb-047d-40cb-bfc4-60e5c1afa86c",
+                                                      "step": "if",
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "ProShares Ultra Bloomberg Natural Gas",
+                                                              "ticker": "BOIL",
+                                                              "has_marketcap": false,
+                                                              "id": "1f309907-f4e8-488a-84b7-7fa052b39ca2",
+                                                              "exchange": "ARCX",
+                                                              "price": 9.96,
+                                                              "step": "asset",
+                                                              "dollar_volume": 323565450.36
+                                                            }
+                                                          ],
+                                                          "rhs-fn": "cumulative-return",
+                                                          "is-else-condition?": false,
+                                                          "rhs-fixed-value?": false,
+                                                          "lhs-fn": "cumulative-return",
+                                                          "rhs-window-days": "90",
+                                                          "lhs-window-days": "90",
+                                                          "lhs-val": "UNG",
+                                                          "id": "572af6ee-5ddb-482c-8562-e2c29d9d5b2d",
+                                                          "comparator": "gt",
+                                                          "rhs-val": "SHV",
+                                                          "step": "if-child"
+                                                        },
+                                                        {
+                                                          "id": "3cef1168-63be-4c3c-8573-7572bf5cbeb9",
+                                                          "step": "if-child",
+                                                          "is-else-condition?": true,
+                                                          "children": [
+                                                            {
+                                                              "name": "ProShares UltraShort Bloomberg Natural Gas",
+                                                              "ticker": "KOLD",
+                                                              "has_marketcap": false,
+                                                              "id": "727dbaf9-3923-4cff-a6b0-2536f7ade9ec",
+                                                              "exchange": "ARCX",
+                                                              "price": 45.4,
+                                                              "step": "asset",
+                                                              "dollar_volume": 210612189
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ],
+                                              "is-else-condition?": false,
+                                              "rhs-fixed-value?": true,
+                                              "lhs-fn": "standard-deviation-return",
+                                              "lhs-window-days": "30",
+                                              "lhs-val": "UNG",
+                                              "id": "8cfe72e7-2766-4238-a43f-c28b10b76512",
+                                              "comparator": "gt",
+                                              "rhs-val": "5",
+                                              "step": "if-child"
+                                            },
+                                            {
+                                              "id": "9b0a3e46-d552-4b93-9fcb-c7ab96635885",
+                                              "step": "if-child",
+                                              "is-else-condition?": true,
+                                              "children": [
+                                                {
+                                                  "id": "b9bd381f-38af-4e7c-ba20-29585deef2cd",
+                                                  "step": "wt-cash-equal",
+                                                  "children": [
+                                                    {
+                                                      "id": "7123201d-fd2f-4311-b499-3f7b5b20ce9c",
+                                                      "step": "if",
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "ProShares Ultra Bloomberg Natural Gas",
+                                                              "ticker": "BOIL",
+                                                              "has_marketcap": false,
+                                                              "id": "93d0de0c-b193-411e-8979-a926a97fbafe",
+                                                              "exchange": "ARCX",
+                                                              "price": 9.35,
+                                                              "step": "asset",
+                                                              "dollar_volume": 355491310.34999996
+                                                            }
+                                                          ],
+                                                          "rhs-fn": "cumulative-return",
+                                                          "is-else-condition?": false,
+                                                          "lhs-fn": "cumulative-return",
+                                                          "rhs-window-days": "45",
+                                                          "lhs-window-days": "45",
+                                                          "lhs-val": "UNG",
+                                                          "id": "27411011-75b2-4869-bb88-35af7bb99b35",
+                                                          "comparator": "gt",
+                                                          "rhs-val": "SHV",
+                                                          "step": "if-child",
+                                                          "collapsed?": false
+                                                        },
+                                                        {
+                                                          "id": "0abc382c-64e4-4f90-90ba-a577d66f5ac3",
+                                                          "step": "if-child",
+                                                          "is-else-condition?": true,
+                                                          "children": [
+                                                            {
+                                                              "name": "ProShares UltraShort Bloomberg Natural Gas",
+                                                              "ticker": "KOLD",
+                                                              "has_marketcap": false,
+                                                              "id": "fc7391db-bb2e-4f3a-b834-a807e860ec93",
+                                                              "exchange": "ARCX",
+                                                              "price": 45.4,
+                                                              "step": "asset",
+                                                              "dollar_volume": 210612189
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "collapsed?": true,
+                                  "weight": {
+                                    "num": "10",
+                                    "den": 100
+                                  }
+                                },
+                                {
+                                  "id": "755ee07f-43a8-4bb5-9892-1115b7ca4c15",
+                                  "step": "group",
+                                  "name": "Dollar",
+                                  "children": [
+                                    {
+                                      "step": "wt-cash-equal",
+                                      "id": "886c75ef-c480-4085-b07e-24ada69fe18b",
+                                      "children": [
+                                        {
+                                          "id": "927ca53f-a0eb-4117-933f-c4bdc015e16b",
+                                          "step": "if",
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "id": "9190b34b-7435-44f2-bdaf-1f6e7be5ed40",
+                                                  "step": "wt-cash-equal",
+                                                  "children": [
+                                                    {
+                                                      "id": "d3e26e54-1046-4a46-9aa9-f9cc2be6af9e",
+                                                      "step": "if",
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "ProShares UltraShort Euro",
+                                                              "ticker": "EUO",
+                                                              "has_marketcap": false,
+                                                              "id": "4e6572d0-d7b4-4cb5-bf8a-6ecbe03ca3b3",
+                                                              "exchange": "ARCX",
+                                                              "price": 29.08,
+                                                              "step": "asset",
+                                                              "dollar_volume": 5345805.4799999995
+                                                            },
+                                                            {
+                                                              "name": "ProShares UltraShort Yen",
+                                                              "ticker": "YCS",
+                                                              "has_marketcap": false,
+                                                              "id": "49190a78-4a17-434a-b77e-7d080f16a4ee",
+                                                              "exchange": "ARCX",
+                                                              "price": 51.8156,
+                                                              "step": "asset",
+                                                              "dollar_volume": 935996.9984
+                                                            }
+                                                          ],
+                                                          "rhs-fn": "cumulative-return",
+                                                          "is-else-condition?": false,
+                                                          "rhs-fixed-value?": false,
+                                                          "lhs-fn": "cumulative-return",
+                                                          "rhs-window-days": "90",
+                                                          "lhs-window-days": "90",
+                                                          "lhs-val": "UUP",
+                                                          "id": "e2bc1e31-3e45-4468-9a0f-ba49140e96dd",
+                                                          "comparator": "gt",
+                                                          "rhs-val": "SHV",
+                                                          "step": "if-child"
+                                                        },
+                                                        {
+                                                          "id": "c7f633a5-aa23-4fe9-9428-68d65c15d603",
+                                                          "step": "if-child",
+                                                          "is-else-condition?": true,
+                                                          "children": [
+                                                            {
+                                                              "name": "ProShares Ultra Yen",
+                                                              "ticker": "YCL",
+                                                              "has_marketcap": false,
+                                                              "id": "5092146d-f5ca-433c-8f07-dfb35271738e",
+                                                              "exchange": "ARCX",
+                                                              "price": 35.2754,
+                                                              "step": "asset",
+                                                              "dollar_volume": 1299510.4605999999
+                                                            },
+                                                            {
+                                                              "name": "ProShares Ultra Euro",
+                                                              "ticker": "ULE",
+                                                              "has_marketcap": false,
+                                                              "id": "fee1eaac-750e-4a4f-8abe-3b8ad3a1b89a",
+                                                              "exchange": "ARCX",
+                                                              "price": 11.58,
+                                                              "step": "asset",
+                                                              "dollar_volume": 323545.2
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "window-days": "90"
+                                                }
+                                              ],
+                                              "is-else-condition?": false,
+                                              "rhs-fixed-value?": true,
+                                              "lhs-fn": "standard-deviation-return",
+                                              "lhs-window-days": "30",
+                                              "lhs-val": "UUP",
+                                              "id": "af2e9441-17ce-41e7-867e-ab5118406800",
+                                              "comparator": "gt",
+                                              "rhs-val": "0.75",
+                                              "step": "if-child"
+                                            },
+                                            {
+                                              "id": "f62b6b28-6b68-4f2f-9af6-59054bf95fc4",
+                                              "step": "if-child",
+                                              "is-else-condition?": true,
+                                              "children": [
+                                                {
+                                                  "id": "4f2115f9-03f7-47e5-ac17-44b652868d23",
+                                                  "step": "wt-cash-equal",
+                                                  "children": [
+                                                    {
+                                                      "id": "9bfdadde-4f9b-4d45-b2ea-58228e5eaea7",
+                                                      "step": "if",
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "ProShares UltraShort Euro",
+                                                              "ticker": "EUO",
+                                                              "has_marketcap": false,
+                                                              "id": "0cf901e8-badc-48cb-89f6-e608c316c41e",
+                                                              "exchange": "ARCX",
+                                                              "price": 29.08,
+                                                              "step": "asset",
+                                                              "dollar_volume": 5345805.4799999995
+                                                            },
+                                                            {
+                                                              "name": "ProShares UltraShort Yen",
+                                                              "ticker": "YCS",
+                                                              "has_marketcap": false,
+                                                              "id": "334471b0-8091-488c-9bfd-16428abdb0ab",
+                                                              "exchange": "ARCX",
+                                                              "price": 51.8156,
+                                                              "step": "asset",
+                                                              "dollar_volume": 935996.9984
+                                                            }
+                                                          ],
+                                                          "rhs-fn": "cumulative-return",
+                                                          "is-else-condition?": false,
+                                                          "lhs-fn": "cumulative-return",
+                                                          "rhs-window-days": "45",
+                                                          "lhs-window-days": "45",
+                                                          "lhs-val": "UUP",
+                                                          "id": "e73e0c9c-3145-485f-8d32-9898bd2c35c6",
+                                                          "comparator": "gt",
+                                                          "rhs-val": "SHV",
+                                                          "step": "if-child",
+                                                          "collapsed?": false
+                                                        },
+                                                        {
+                                                          "id": "fdec9d8e-8b81-433f-b5ab-1963d631361b",
+                                                          "step": "if-child",
+                                                          "is-else-condition?": true,
+                                                          "children": [
+                                                            {
+                                                              "name": "ProShares Ultra Yen",
+                                                              "ticker": "YCL",
+                                                              "has_marketcap": false,
+                                                              "id": "5ca97a6a-d99c-40a3-b027-d0002025d032",
+                                                              "exchange": "ARCX",
+                                                              "price": 35.2754,
+                                                              "step": "asset",
+                                                              "dollar_volume": 1299510.4605999999
+                                                            },
+                                                            {
+                                                              "name": "ProShares Ultra Euro",
+                                                              "ticker": "ULE",
+                                                              "has_marketcap": false,
+                                                              "id": "29eebde2-0d39-4161-a803-94b26f730056",
+                                                              "exchange": "ARCX",
+                                                              "price": 11.58,
+                                                              "step": "asset",
+                                                              "dollar_volume": 323545.2
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "window-days": "45"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "collapsed?": true,
+                                  "weight": {
+                                    "num": "32.5",
+                                    "den": 100
+                                  }
+                                },
+                                {
+                                  "id": "b6a67202-eb41-4701-894a-f2f568f931e4",
+                                  "step": "group",
+                                  "name": "Aggs",
+                                  "children": [
+                                    {
+                                      "step": "wt-cash-equal",
+                                      "id": "1ce38d4c-0bd1-41a2-8acb-98fc4f828498",
+                                      "children": [
+                                        {
+                                          "id": "7dfc0381-b92a-4a88-93d7-185c76fc075b",
+                                          "step": "if",
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "id": "513d9201-0bfd-43b4-ac47-3aa5febbcd38",
+                                                  "step": "wt-cash-equal",
+                                                  "children": [
+                                                    {
+                                                      "id": "c8208509-f94d-490f-9e5d-ec5a55f6c859",
+                                                      "step": "if",
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "Invesco DB Agriculture Fund",
+                                                              "ticker": "DBA",
+                                                              "has_marketcap": false,
+                                                              "id": "486c54dd-9f28-4aff-b034-983f36feefc0",
+                                                              "exchange": "ARCX",
+                                                              "price": 19.47,
+                                                              "step": "asset",
+                                                              "dollar_volume": 21187779.689999998
+                                                            }
+                                                          ],
+                                                          "rhs-fn": "cumulative-return",
+                                                          "is-else-condition?": false,
+                                                          "rhs-fixed-value?": false,
+                                                          "lhs-fn": "cumulative-return",
+                                                          "rhs-window-days": "90",
+                                                          "lhs-window-days": "90",
+                                                          "lhs-val": "DBA",
+                                                          "id": "c43724e0-bfd4-4cd9-804c-ec86a3e0b0e2",
+                                                          "comparator": "gt",
+                                                          "rhs-val": "SHV",
+                                                          "step": "if-child"
+                                                        },
+                                                        {
+                                                          "id": "7ef3d35d-b949-4731-a8cd-f432fe572de8",
+                                                          "step": "if-child",
+                                                          "is-else-condition?": true,
+                                                          "children": [
+                                                            {
+                                                              "name": "iShares Short Treasury Bond ETF",
+                                                              "ticker": "SHV",
+                                                              "has_marketcap": false,
+                                                              "id": "b9a7a207-b70e-4600-bf44-83daf39336b4",
+                                                              "exchange": "XNAS",
+                                                              "price": 110.12,
+                                                              "step": "asset",
+                                                              "dollar_volume": 174035960.52
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "window-days": "90"
+                                                }
+                                              ],
+                                              "is-else-condition?": false,
+                                              "rhs-fixed-value?": true,
+                                              "lhs-fn": "standard-deviation-return",
+                                              "lhs-window-days": "30",
+                                              "lhs-val": "DBA",
+                                              "id": "4786b959-0891-4dfc-98fc-676227ef7f2b",
+                                              "comparator": "gt",
+                                              "rhs-val": "3.5",
+                                              "step": "if-child"
+                                            },
+                                            {
+                                              "id": "12d6373b-6cc4-4949-bf89-c20594efd378",
+                                              "step": "if-child",
+                                              "is-else-condition?": true,
+                                              "children": [
+                                                {
+                                                  "id": "987b4fa6-87be-411b-b6ec-9bf1e6d22d7c",
+                                                  "step": "wt-cash-equal",
+                                                  "children": [
+                                                    {
+                                                      "id": "7e12993c-a360-4412-9e99-31f78ed9a968",
+                                                      "step": "if",
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "Invesco DB Agriculture Fund",
+                                                              "ticker": "DBA",
+                                                              "has_marketcap": false,
+                                                              "id": "545d29a2-5658-46dd-8572-9c023fecc0b4",
+                                                              "exchange": "ARCX",
+                                                              "price": 19.47,
+                                                              "step": "asset",
+                                                              "dollar_volume": 21187779.689999998
+                                                            }
+                                                          ],
+                                                          "rhs-fn": "cumulative-return",
+                                                          "is-else-condition?": false,
+                                                          "lhs-fn": "cumulative-return",
+                                                          "rhs-window-days": "45",
+                                                          "lhs-window-days": "45",
+                                                          "lhs-val": "DBA",
+                                                          "id": "3291ec53-0b5e-41f8-8d4c-2b66b79d21b4",
+                                                          "comparator": "gt",
+                                                          "rhs-val": "SHV",
+                                                          "step": "if-child",
+                                                          "collapsed?": false
+                                                        },
+                                                        {
+                                                          "id": "c0bf788b-8ac1-4ea7-b4ce-9fa1ff6428e5",
+                                                          "step": "if-child",
+                                                          "is-else-condition?": true,
+                                                          "children": [
+                                                            {
+                                                              "name": "iShares Short Treasury Bond ETF",
+                                                              "ticker": "SHV",
+                                                              "has_marketcap": false,
+                                                              "id": "41ffebbe-dbbd-46c3-89dd-4734f5582f56",
+                                                              "exchange": "XNAS",
+                                                              "price": 110.12,
+                                                              "step": "asset",
+                                                              "dollar_volume": 174035960.52
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "window-days": "45"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "collapsed?": true,
+                                  "weight": {
+                                    "num": "17.5",
+                                    "den": 100
+                                  }
+                                },
+                                {
+                                  "id": "fec2a105-3b31-4060-9633-216a2a97fc23",
+                                  "step": "group",
+                                  "name": "Base Metals",
+                                  "children": [
+                                    {
+                                      "step": "wt-cash-equal",
+                                      "id": "21ebd7f2-214d-4b0d-8d24-791c0b80320f",
+                                      "children": [
+                                        {
+                                          "id": "e16d8393-2158-44c4-b1a4-572159836abf",
+                                          "step": "if",
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "id": "6418ae8a-bd70-4452-9c25-ff8513108310",
+                                                  "step": "wt-cash-equal",
+                                                  "children": [
+                                                    {
+                                                      "id": "99b58962-4ba8-4a06-a66a-e7b88a93abe5",
+                                                      "step": "if",
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "Invesco DB Base Metals Fund",
+                                                              "ticker": "DBB",
+                                                              "has_marketcap": false,
+                                                              "id": "a8a3de51-a57e-4021-950b-03f2c423f3cb",
+                                                              "exchange": "ARCX",
+                                                              "price": 21.98,
+                                                              "step": "asset",
+                                                              "dollar_volume": 2283765.96
+                                                            }
+                                                          ],
+                                                          "rhs-fn": "cumulative-return",
+                                                          "is-else-condition?": false,
+                                                          "rhs-fixed-value?": false,
+                                                          "lhs-fn": "cumulative-return",
+                                                          "rhs-window-days": "90",
+                                                          "lhs-window-days": "90",
+                                                          "lhs-val": "DBB",
+                                                          "id": "e99bc3a1-2747-4ff7-bded-356c455d252a",
+                                                          "comparator": "gt",
+                                                          "rhs-val": "SHV",
+                                                          "step": "if-child"
+                                                        },
+                                                        {
+                                                          "id": "73faad1b-528c-45d3-9b30-aefd3557192f",
+                                                          "step": "if-child",
+                                                          "is-else-condition?": true,
+                                                          "children": [
+                                                            {
+                                                              "name": "iShares Short Treasury Bond ETF",
+                                                              "ticker": "SHV",
+                                                              "has_marketcap": false,
+                                                              "id": "18dbecc3-5423-43ad-98c8-ec4b8decfb9a",
+                                                              "exchange": "XNAS",
+                                                              "price": 110.12,
+                                                              "step": "asset",
+                                                              "dollar_volume": 174035960.52
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "window-days": "90"
+                                                }
+                                              ],
+                                              "is-else-condition?": false,
+                                              "rhs-fixed-value?": true,
+                                              "lhs-fn": "standard-deviation-return",
+                                              "lhs-window-days": "30",
+                                              "lhs-val": "DBB",
+                                              "id": "91c9fcb4-2fbc-451b-9bf5-8d766062e100",
+                                              "comparator": "gt",
+                                              "rhs-val": "1.25",
+                                              "step": "if-child"
+                                            },
+                                            {
+                                              "id": "deba76fc-7ad3-42a2-9c3d-eb03c7e357da",
+                                              "step": "if-child",
+                                              "is-else-condition?": true,
+                                              "children": [
+                                                {
+                                                  "id": "4cde481c-92e6-4f81-9b7a-03a2cfc02d5f",
+                                                  "step": "wt-cash-equal",
+                                                  "children": [
+                                                    {
+                                                      "id": "ed7d19da-7811-4e53-8ce5-ba941ab241f5",
+                                                      "step": "if",
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "Invesco DB Base Metals Fund",
+                                                              "ticker": "DBB",
+                                                              "has_marketcap": false,
+                                                              "id": "24b9bef9-5d21-4429-9b5a-33ef3c12bc8d",
+                                                              "exchange": "ARCX",
+                                                              "price": 21.98,
+                                                              "step": "asset",
+                                                              "dollar_volume": 2283765.96
+                                                            }
+                                                          ],
+                                                          "rhs-fn": "cumulative-return",
+                                                          "is-else-condition?": false,
+                                                          "lhs-fn": "cumulative-return",
+                                                          "rhs-window-days": "45",
+                                                          "lhs-window-days": "45",
+                                                          "lhs-val": "DBB",
+                                                          "id": "077e6295-a48f-4a66-867a-eb5fe051c92b",
+                                                          "comparator": "gt",
+                                                          "rhs-val": "SHV",
+                                                          "step": "if-child",
+                                                          "collapsed?": false
+                                                        },
+                                                        {
+                                                          "id": "d1faf8a8-8611-4a16-a6f3-322d09dbed89",
+                                                          "step": "if-child",
+                                                          "is-else-condition?": true,
+                                                          "children": [
+                                                            {
+                                                              "name": "iShares Short Treasury Bond ETF",
+                                                              "ticker": "SHV",
+                                                              "has_marketcap": false,
+                                                              "id": "12ea0e86-d112-4a80-91c0-7ee4752ac035",
+                                                              "exchange": "XNAS",
+                                                              "price": 110.12,
+                                                              "step": "asset",
+                                                              "dollar_volume": 174035960.52
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "window-days": "45"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "weight": {
+                                    "num": "12.5",
+                                    "den": 100
+                                  },
+                                  "collapsed-specified-weight?": false,
+                                  "collapsed?": true
+                                },
+                                {
+                                  "id": "a76b2c6d-9ef3-463c-ba70-73f9ab7a8acb",
+                                  "step": "group",
+                                  "name": "Uranium",
+                                  "children": [
+                                    {
+                                      "step": "wt-cash-equal",
+                                      "id": "501b77c4-c9af-49b1-8bac-7961e47c31ce",
+                                      "children": [
+                                        {
+                                          "id": "7134e582-713a-4705-a3ed-d0ff1c7f8dab",
+                                          "step": "if",
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "id": "665acab6-d992-4433-a689-6458607a80dd",
+                                                  "step": "wt-cash-equal",
+                                                  "children": [
+                                                    {
+                                                      "id": "6f8636f5-011b-46f9-84aa-e2ec979e231d",
+                                                      "step": "if",
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "Global X Uranium ETF",
+                                                              "ticker": "URA",
+                                                              "has_marketcap": false,
+                                                              "id": "0afbb7a2-d616-4aba-9383-d7c74d93519b",
+                                                              "exchange": "ARCX",
+                                                              "price": 22.3,
+                                                              "step": "asset",
+                                                              "dollar_volume": 66471795.4
+                                                            }
+                                                          ],
+                                                          "rhs-fn": "cumulative-return",
+                                                          "is-else-condition?": false,
+                                                          "rhs-fixed-value?": false,
+                                                          "lhs-fn": "cumulative-return",
+                                                          "rhs-window-days": "90",
+                                                          "lhs-window-days": "90",
+                                                          "lhs-val": "URA",
+                                                          "id": "e9f00fec-6150-4500-98f1-72e38be9d462",
+                                                          "comparator": "gt",
+                                                          "rhs-val": "SHV",
+                                                          "step": "if-child"
+                                                        },
+                                                        {
+                                                          "id": "7741ce58-8271-4c1b-a34f-5ce750277a7e",
+                                                          "step": "if-child",
+                                                          "is-else-condition?": true,
+                                                          "children": [
+                                                            {
+                                                              "name": "iShares Short Treasury Bond ETF",
+                                                              "ticker": "SHV",
+                                                              "has_marketcap": false,
+                                                              "id": "93634889-2109-4e3c-90b5-b4bfd4481c28",
+                                                              "exchange": "XNAS",
+                                                              "price": 110.12,
+                                                              "step": "asset",
+                                                              "dollar_volume": 174035960.52
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "window-days": "90"
+                                                }
+                                              ],
+                                              "is-else-condition?": false,
+                                              "rhs-fixed-value?": true,
+                                              "lhs-fn": "standard-deviation-return",
+                                              "lhs-window-days": "30",
+                                              "lhs-val": "URA",
+                                              "id": "5e087cec-79b8-4b9f-ae7e-613b1eae7771",
+                                              "comparator": "gt",
+                                              "rhs-val": "3.5",
+                                              "step": "if-child"
+                                            },
+                                            {
+                                              "id": "bc53eb08-3c0d-49db-9060-dbd2cad1958f",
+                                              "step": "if-child",
+                                              "is-else-condition?": true,
+                                              "children": [
+                                                {
+                                                  "id": "363196fc-d670-46db-b2d2-7722c56c81be",
+                                                  "step": "wt-cash-equal",
+                                                  "children": [
+                                                    {
+                                                      "id": "9989a776-b168-416e-982a-2d132bd92c9f",
+                                                      "step": "if",
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "Global X Uranium ETF",
+                                                              "ticker": "URA",
+                                                              "has_marketcap": false,
+                                                              "id": "e6f3f8be-751c-4d90-bb76-5546f8c22596",
+                                                              "exchange": "ARCX",
+                                                              "price": 22.3,
+                                                              "step": "asset",
+                                                              "dollar_volume": 66471795.4
+                                                            }
+                                                          ],
+                                                          "rhs-fn": "cumulative-return",
+                                                          "is-else-condition?": false,
+                                                          "lhs-fn": "cumulative-return",
+                                                          "rhs-window-days": "45",
+                                                          "lhs-window-days": "45",
+                                                          "lhs-val": "URA",
+                                                          "id": "66d4b201-c4cf-48f4-812a-7435cc431244",
+                                                          "comparator": "gt",
+                                                          "rhs-val": "SHV",
+                                                          "step": "if-child",
+                                                          "collapsed?": false
+                                                        },
+                                                        {
+                                                          "id": "c07659bd-8c9e-4813-86ab-2bba165a48e2",
+                                                          "step": "if-child",
+                                                          "is-else-condition?": true,
+                                                          "children": [
+                                                            {
+                                                              "name": "iShares Short Treasury Bond ETF",
+                                                              "ticker": "SHV",
+                                                              "has_marketcap": false,
+                                                              "id": "e6512959-393d-4540-a878-b3f5851168d2",
+                                                              "exchange": "XNAS",
+                                                              "price": 110.12,
+                                                              "step": "asset",
+                                                              "dollar_volume": 174035960.52
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "window-days": "45"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "collapsed?": true,
+                                  "weight": {
+                                    "num": "10",
+                                    "den": 100
+                                  }
+                                },
+                                {
+                                  "id": "c419a41b-7234-4fcb-9950-f45c811091dc",
+                                  "step": "group",
+                                  "name": "Timber",
+                                  "children": [
+                                    {
+                                      "step": "wt-cash-equal",
+                                      "id": "cfea1090-a8c6-4900-bd80-0b727ed82b4f",
+                                      "children": [
+                                        {
+                                          "id": "815238c8-2c71-4cb4-ba5c-9b9acc55a2a9",
+                                          "step": "if",
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "id": "6c6e6c91-f833-45d6-869a-6c430e1a6b98",
+                                                  "step": "wt-cash-equal",
+                                                  "children": [
+                                                    {
+                                                      "id": "141e7e96-b934-4e90-95c8-e7060a598a35",
+                                                      "step": "if",
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "iShares Global Timber & Forestry ETF",
+                                                              "ticker": "WOOD",
+                                                              "has_marketcap": false,
+                                                              "id": "66f53abc-4243-4fe3-b4e9-884096929b59",
+                                                              "exchange": "XNAS",
+                                                              "price": 75.82,
+                                                              "step": "asset",
+                                                              "dollar_volume": 830987.2
+                                                            }
+                                                          ],
+                                                          "rhs-fn": "cumulative-return",
+                                                          "is-else-condition?": false,
+                                                          "rhs-fixed-value?": false,
+                                                          "lhs-fn": "cumulative-return",
+                                                          "rhs-window-days": "90",
+                                                          "lhs-window-days": "90",
+                                                          "lhs-val": "WOOD",
+                                                          "id": "32deea62-19f1-459e-a412-b8224f337523",
+                                                          "comparator": "gt",
+                                                          "rhs-val": "SHV",
+                                                          "step": "if-child"
+                                                        },
+                                                        {
+                                                          "id": "073a152b-d6eb-410b-8076-e9dac6a2f6d5",
+                                                          "step": "if-child",
+                                                          "is-else-condition?": true,
+                                                          "children": [
+                                                            {
+                                                              "name": "iShares Short Treasury Bond ETF",
+                                                              "ticker": "SHV",
+                                                              "has_marketcap": false,
+                                                              "id": "90462a65-59c1-41af-987f-76bf90518a1b",
+                                                              "exchange": "XNAS",
+                                                              "price": 110.12,
+                                                              "step": "asset",
+                                                              "dollar_volume": 174035960.52
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "window-days": "90"
+                                                }
+                                              ],
+                                              "is-else-condition?": false,
+                                              "rhs-fixed-value?": true,
+                                              "lhs-fn": "standard-deviation-return",
+                                              "lhs-window-days": "30",
+                                              "lhs-val": "WOOD",
+                                              "id": "b8c2677b-2376-4480-9c7c-f6c0bba080fe",
+                                              "comparator": "gt",
+                                              "rhs-val": "3.5",
+                                              "step": "if-child"
+                                            },
+                                            {
+                                              "id": "8b5461cb-7efa-4685-955e-b9f23156867f",
+                                              "step": "if-child",
+                                              "is-else-condition?": true,
+                                              "children": [
+                                                {
+                                                  "id": "82d564fd-a9f7-4c14-b3e3-a83e478299c5",
+                                                  "step": "wt-cash-equal",
+                                                  "children": [
+                                                    {
+                                                      "id": "8df8e643-0c9a-439a-916e-4597f5a5d67b",
+                                                      "step": "if",
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "iShares Global Timber & Forestry ETF",
+                                                              "ticker": "WOOD",
+                                                              "has_marketcap": false,
+                                                              "id": "16e1b37f-8838-41db-9fd7-fe48df39c395",
+                                                              "exchange": "XNAS",
+                                                              "price": 75.82,
+                                                              "step": "asset",
+                                                              "dollar_volume": 830987.2
+                                                            }
+                                                          ],
+                                                          "rhs-fn": "cumulative-return",
+                                                          "is-else-condition?": false,
+                                                          "lhs-fn": "cumulative-return",
+                                                          "rhs-window-days": "45",
+                                                          "lhs-window-days": "45",
+                                                          "lhs-val": "WOOD",
+                                                          "id": "36b82f0d-f26d-4086-9ca0-4cbe23d4587e",
+                                                          "comparator": "gt",
+                                                          "rhs-val": "SHV",
+                                                          "step": "if-child",
+                                                          "collapsed?": false
+                                                        },
+                                                        {
+                                                          "id": "a51d5083-ca77-49c5-9273-2660792ffc33",
+                                                          "step": "if-child",
+                                                          "is-else-condition?": true,
+                                                          "children": [
+                                                            {
+                                                              "name": "iShares Short Treasury Bond ETF",
+                                                              "ticker": "SHV",
+                                                              "has_marketcap": false,
+                                                              "id": "b1cb15ee-fc10-4f75-8f9e-91b1c397aa0b",
+                                                              "exchange": "XNAS",
+                                                              "price": 110.12,
+                                                              "step": "asset",
+                                                              "dollar_volume": 174035960.52
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "window-days": "45"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "collapsed?": true
+                                },
+                                {
+                                  "id": "deaed976-403f-4402-8579-ce7d80065610",
+                                  "step": "group",
+                                  "name": "Gold",
+                                  "children": [
+                                    {
+                                      "step": "wt-cash-equal",
+                                      "id": "d42b1aa2-88d9-47a2-ae9a-e2414726c36b",
+                                      "children": [
+                                        {
+                                          "id": "6d44dc9c-c73f-4f9f-b21f-8da97445d503",
+                                          "step": "if",
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "id": "62f44b92-aa16-4efb-86f6-b91abcf76989",
+                                                  "step": "wt-cash-equal",
+                                                  "children": [
+                                                    {
+                                                      "id": "719c1e71-4cfa-44db-8d41-08cfdb8ad293",
+                                                      "step": "if",
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "ProShares Ultra Gold",
+                                                              "ticker": "UGL",
+                                                              "has_marketcap": false,
+                                                              "id": "65aeeab2-3134-4264-ad6a-86e84fee522b",
+                                                              "exchange": "ARCX",
+                                                              "price": 61.425,
+                                                              "step": "asset",
+                                                              "dollar_volume": 6198028.199999999
+                                                            }
+                                                          ],
+                                                          "rhs-fn": "cumulative-return",
+                                                          "is-else-condition?": false,
+                                                          "rhs-fixed-value?": false,
+                                                          "lhs-fn": "cumulative-return",
+                                                          "rhs-window-days": "90",
+                                                          "lhs-window-days": "90",
+                                                          "lhs-val": "GLD",
+                                                          "id": "0a55b2a0-76f3-48e2-b8dc-8367c24faf42",
+                                                          "comparator": "gt",
+                                                          "rhs-val": "SHV",
+                                                          "step": "if-child"
+                                                        },
+                                                        {
+                                                          "id": "4c14f423-f63c-4239-99a1-68766132e054",
+                                                          "step": "if-child",
+                                                          "is-else-condition?": true,
+                                                          "children": [
+                                                            {
+                                                              "name": "ProShares UltraShort Gold",
+                                                              "ticker": "GLL",
+                                                              "has_marketcap": false,
+                                                              "id": "9eba7da1-a712-4542-8647-2a7c1ac9ea73",
+                                                              "exchange": "ARCX",
+                                                              "price": 27.83,
+                                                              "step": "asset",
+                                                              "dollar_volume": 3428349.8699999996
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "window-days": "90"
+                                                }
+                                              ],
+                                              "is-else-condition?": false,
+                                              "rhs-fixed-value?": true,
+                                              "lhs-fn": "standard-deviation-return",
+                                              "lhs-window-days": "30",
+                                              "lhs-val": "GLD",
+                                              "id": "c9b8e61d-8249-4e96-b21f-a4bf6a9d9c3f",
+                                              "comparator": "gt",
+                                              "rhs-val": "0.75",
+                                              "step": "if-child"
+                                            },
+                                            {
+                                              "id": "25b68e34-8254-47ca-8b42-5c4e178fc96f",
+                                              "step": "if-child",
+                                              "is-else-condition?": true,
+                                              "children": [
+                                                {
+                                                  "id": "e3f28965-90ed-4237-b73e-4b39de3cf7fa",
+                                                  "step": "wt-cash-equal",
+                                                  "children": [
+                                                    {
+                                                      "id": "cddac317-ecf9-4ed1-9221-67b283b8673a",
+                                                      "step": "if",
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "ProShares Ultra Gold",
+                                                              "ticker": "UGL",
+                                                              "has_marketcap": false,
+                                                              "id": "8e5f7a68-9a35-46a3-b3cb-87c053b0bec3",
+                                                              "exchange": "ARCX",
+                                                              "price": 61.425,
+                                                              "step": "asset",
+                                                              "dollar_volume": 6198028.199999999
+                                                            }
+                                                          ],
+                                                          "rhs-fn": "cumulative-return",
+                                                          "is-else-condition?": false,
+                                                          "lhs-fn": "cumulative-return",
+                                                          "rhs-window-days": "45",
+                                                          "lhs-window-days": "45",
+                                                          "lhs-val": "GLD",
+                                                          "id": "22185fbb-2c6e-4736-a1d1-dae92e95fcda",
+                                                          "comparator": "gt",
+                                                          "rhs-val": "SHV",
+                                                          "step": "if-child",
+                                                          "collapsed?": false
+                                                        },
+                                                        {
+                                                          "id": "184ce8c9-3f82-4e97-8296-a1b70608193d",
+                                                          "step": "if-child",
+                                                          "is-else-condition?": true,
+                                                          "children": [
+                                                            {
+                                                              "name": "ProShares UltraShort Gold",
+                                                              "ticker": "GLL",
+                                                              "has_marketcap": false,
+                                                              "id": "b6526d76-c04c-4d4c-97af-c2e3cfa448a2",
+                                                              "exchange": "ARCX",
+                                                              "price": 27.83,
+                                                              "step": "asset",
+                                                              "dollar_volume": 3428349.8699999996
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "window-days": "45"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "collapsed?": true
+                                },
+                                {
+                                  "id": "1a52e896-9bc3-43f2-8e7b-8ab5ae5a3447",
+                                  "step": "group",
+                                  "name": "Treasuries",
+                                  "children": [
+                                    {
+                                      "step": "wt-cash-equal",
+                                      "id": "2008cfdd-b3e5-4e48-949f-0d9e1127558f",
+                                      "children": [
+                                        {
+                                          "id": "2074e7c5-94d2-42e9-8335-de400c346eb5",
+                                          "step": "if",
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "id": "3c15f641-900a-4795-94ac-7a80db7d2a2f",
+                                                  "step": "wt-cash-equal",
+                                                  "children": [
+                                                    {
+                                                      "id": "0236e3d6-ac4f-4f59-9816-d11dc6daef10",
+                                                      "step": "if",
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "Direxion Daily 20+ Year Treasury Bull 3X Shares",
+                                                              "ticker": "TMF",
+                                                              "has_marketcap": false,
+                                                              "id": "c11ec6f7-534f-40c2-9491-f1f356e459a5",
+                                                              "exchange": "ARCX",
+                                                              "price": 9.11,
+                                                              "step": "asset",
+                                                              "dollar_volume": 111789702.77999999
+                                                            }
+                                                          ],
+                                                          "rhs-fn": "cumulative-return",
+                                                          "is-else-condition?": false,
+                                                          "rhs-fixed-value?": false,
+                                                          "lhs-fn": "cumulative-return",
+                                                          "rhs-window-days": "90",
+                                                          "lhs-window-days": "90",
+                                                          "lhs-val": "TLT",
+                                                          "id": "831a45b3-20f9-409a-8cab-de3fa72541da",
+                                                          "comparator": "gt",
+                                                          "rhs-val": "SHV",
+                                                          "step": "if-child"
+                                                        },
+                                                        {
+                                                          "id": "6b68de57-968b-4e24-b859-6ea2e6f47fe8",
+                                                          "step": "if-child",
+                                                          "is-else-condition?": true,
+                                                          "children": [
+                                                            {
+                                                              "name": "Direxion Daily 20+ Year Treasury Bear 3x Shares",
+                                                              "ticker": "TMV",
+                                                              "has_marketcap": false,
+                                                              "id": "a2d0d3cf-090e-44fe-856b-778545f56585",
+                                                              "exchange": "ARCX",
+                                                              "price": 111.21,
+                                                              "step": "asset",
+                                                              "dollar_volume": 45118008.21
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "window-days": "90"
+                                                }
+                                              ],
+                                              "is-else-condition?": false,
+                                              "rhs-fixed-value?": true,
+                                              "lhs-fn": "standard-deviation-return",
+                                              "lhs-window-days": "30",
+                                              "lhs-val": "TLT",
+                                              "id": "22e0ca31-d9c3-4ce6-ba7c-b271fd4b120a",
+                                              "comparator": "gt",
+                                              "rhs-val": "0.75",
+                                              "step": "if-child"
+                                            },
+                                            {
+                                              "id": "be044f98-4849-4468-bf58-63aa7f085361",
+                                              "step": "if-child",
+                                              "is-else-condition?": true,
+                                              "children": [
+                                                {
+                                                  "id": "add00b38-cd90-4f42-ba01-9e8ee3703a8c",
+                                                  "step": "wt-cash-equal",
+                                                  "children": [
+                                                    {
+                                                      "id": "420af26d-0be3-4b08-992f-5fa0cbe76091",
+                                                      "step": "if",
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "Direxion Daily 20+ Year Treasury Bull 3X Shares",
+                                                              "ticker": "TMF",
+                                                              "has_marketcap": false,
+                                                              "id": "4b7b3705-9557-4bd0-9ece-5f8221472ce6",
+                                                              "exchange": "ARCX",
+                                                              "price": 9.11,
+                                                              "step": "asset",
+                                                              "dollar_volume": 111789702.77999999
+                                                            }
+                                                          ],
+                                                          "rhs-fn": "cumulative-return",
+                                                          "is-else-condition?": false,
+                                                          "lhs-fn": "cumulative-return",
+                                                          "rhs-window-days": "45",
+                                                          "lhs-window-days": "45",
+                                                          "lhs-val": "TLT",
+                                                          "id": "a7891389-0731-4680-9a8f-435e08d431f7",
+                                                          "comparator": "gt",
+                                                          "rhs-val": "SHV",
+                                                          "step": "if-child",
+                                                          "collapsed?": false
+                                                        },
+                                                        {
+                                                          "id": "c8032ca0-e1c5-41fc-b47b-a266bf663386",
+                                                          "step": "if-child",
+                                                          "is-else-condition?": true,
+                                                          "children": [
+                                                            {
+                                                              "name": "Direxion Daily 20+ Year Treasury Bear 3x Shares",
+                                                              "ticker": "TMV",
+                                                              "has_marketcap": false,
+                                                              "id": "04b5c1d3-fbb5-41a4-bfa7-c037af073e18",
+                                                              "exchange": "ARCX",
+                                                              "price": 111.21,
+                                                              "step": "asset",
+                                                              "dollar_volume": 45118008.21
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "window-days": "45"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "collapsed?": true
+                                },
+                                {
+                                  "id": "6838a47d-8cff-4fbb-b1d1-6f821ed0bedd",
+                                  "step": "group",
+                                  "name": "SP500",
+                                  "children": [
+                                    {
+                                      "step": "wt-cash-equal",
+                                      "id": "d94d3548-ca16-4194-ad6d-efa071244251",
+                                      "children": [
+                                        {
+                                          "id": "3764e9d3-d876-4b07-835d-9187be8a7ca4",
+                                          "step": "if",
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "id": "7caf5efc-e173-4e0c-8e5b-d4081ec11c49",
+                                                  "step": "wt-cash-equal",
+                                                  "children": [
+                                                    {
+                                                      "id": "0b9cbb9c-ac67-42b8-abbd-48fb8fe85a49",
+                                                      "step": "if",
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "SPDR S&P 500 ETF Trust",
+                                                              "ticker": "SPY",
+                                                              "has_marketcap": false,
+                                                              "id": "5de2bdcd-a818-4995-8651-6c4d1156ec32",
+                                                              "exchange": "ARCX",
+                                                              "price": 395.88,
+                                                              "step": "asset",
+                                                              "dollar_volume": 36344300213.28
+                                                            }
+                                                          ],
+                                                          "rhs-fn": "cumulative-return",
+                                                          "is-else-condition?": false,
+                                                          "rhs-fixed-value?": false,
+                                                          "lhs-fn": "cumulative-return",
+                                                          "rhs-window-days": "90",
+                                                          "lhs-window-days": "90",
+                                                          "lhs-val": "SPY",
+                                                          "id": "6ea6bd73-9d5f-4f1d-8214-183efdad131b",
+                                                          "comparator": "gt",
+                                                          "rhs-val": "SHV",
+                                                          "step": "if-child"
+                                                        },
+                                                        {
+                                                          "id": "3eabe78c-49bd-4bf4-97f8-da331db794fb",
+                                                          "step": "if-child",
+                                                          "is-else-condition?": true,
+                                                          "children": [
+                                                            {
+                                                              "name": "ProShares Short S&P500",
+                                                              "ticker": "SH",
+                                                              "has_marketcap": false,
+                                                              "id": "fbc5ea04-2a7b-4274-ad1f-773083629a1d",
+                                                              "exchange": "ARCX",
+                                                              "price": 15.52,
+                                                              "step": "asset",
+                                                              "dollar_volume": 456468156.15999997
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "window-days": "90"
+                                                }
+                                              ],
+                                              "is-else-condition?": false,
+                                              "rhs-fixed-value?": true,
+                                              "lhs-fn": "standard-deviation-return",
+                                              "lhs-window-days": "30",
+                                              "lhs-val": "SPY",
+                                              "id": "17252710-1355-4a64-a8ca-373c4c67681b",
+                                              "comparator": "gt",
+                                              "rhs-val": "2",
+                                              "step": "if-child"
+                                            },
+                                            {
+                                              "id": "e18d97bb-86fb-43ab-82e9-4bc530fc99e8",
+                                              "step": "if-child",
+                                              "is-else-condition?": true,
+                                              "children": [
+                                                {
+                                                  "id": "8c2b7a5b-670d-4291-99e0-b9b32471c4d2",
+                                                  "step": "wt-cash-equal",
+                                                  "children": [
+                                                    {
+                                                      "id": "2c6159df-3ae1-4be6-8a51-7fb14d29a9e0",
+                                                      "step": "if",
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "SPDR S&P 500 ETF Trust",
+                                                              "ticker": "SPY",
+                                                              "has_marketcap": false,
+                                                              "id": "29080323-9dcc-4875-92e0-5277183a061c",
+                                                              "exchange": "ARCX",
+                                                              "price": 395.88,
+                                                              "step": "asset",
+                                                              "dollar_volume": 36344300213.28
+                                                            }
+                                                          ],
+                                                          "rhs-fn": "cumulative-return",
+                                                          "is-else-condition?": false,
+                                                          "lhs-fn": "cumulative-return",
+                                                          "rhs-window-days": "45",
+                                                          "lhs-window-days": "45",
+                                                          "lhs-val": "SPY",
+                                                          "id": "e742530c-850e-4633-bece-e97d406726d7",
+                                                          "comparator": "gt",
+                                                          "rhs-val": "SHV",
+                                                          "step": "if-child",
+                                                          "collapsed?": false
+                                                        },
+                                                        {
+                                                          "id": "657f445f-1c71-4a8c-a6e5-2811ea2c874a",
+                                                          "step": "if-child",
+                                                          "is-else-condition?": true,
+                                                          "children": [
+                                                            {
+                                                              "name": "ProShares Short S&P500",
+                                                              "ticker": "SH",
+                                                              "has_marketcap": false,
+                                                              "id": "152b5905-3c8a-4825-ac39-9e3e4b026118",
+                                                              "exchange": "ARCX",
+                                                              "price": 15.52,
+                                                              "step": "asset",
+                                                              "dollar_volume": 456468156.15999997
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "window-days": "45"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "collapsed?": true
+                                }
+                              ]
+                            }
+                          ],
+                          "collapsed?": false,
+                          "weight": {
+                            "num": "35",
+                            "den": 100
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "collapsed?": true
+                }
+              ]
+            }
+          ],
+          "collapsed?": true
+        }
+      ]
+    }
+  ]
+}

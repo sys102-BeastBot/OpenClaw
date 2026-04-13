@@ -1,0 +1,279 @@
+{
+  "id": "e64ff3dc-c893-4493-b96c-9eed7b3660c7",
+  "step": "root",
+  "name": "QQQ Core",
+  "description": "",
+  "rebalance": "daily",
+  "children": [
+    {
+      "id": "7e4d5bba-6b26-4546-8805-5d8b4323675b",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "iShares 20+ Year Treasury Bond ETF",
+                          "ticker": "TLT",
+                          "id": "0ad205d6-cb0a-47e6-9799-8c3c7178ac41",
+                          "step": "asset"
+                        }
+                      ],
+                      "lhs-fn-params": {
+                        "window": 10
+                      },
+                      "is-else-condition?": false,
+                      "rhs-fixed-value?": true,
+                      "lhs-fn": "relative-strength-index",
+                      "lhs-val": "QQQ",
+                      "id": "3c280c91-6027-4570-ba88-812e521c35d2",
+                      "comparator": "gt",
+                      "rhs-val": "80",
+                      "step": "if-child"
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "name": "iShares 20+ Year Treasury Bond ETF",
+                                  "ticker": "TLT",
+                                  "id": "26be3a46-443a-42a1-9d07-a0df9d9730be",
+                                  "step": "asset"
+                                }
+                              ],
+                              "lhs-fn-params": {
+                                "window": 10
+                              },
+                              "is-else-condition?": false,
+                              "rhs-fixed-value?": true,
+                              "lhs-fn": "relative-strength-index",
+                              "lhs-val": "SPY",
+                              "id": "04677254-8bc1-4ae5-8deb-433342ccd086",
+                              "comparator": "gt",
+                              "rhs-val": "80",
+                              "step": "if-child"
+                            },
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "name": "QLD",
+                                          "ticker": "QLD",
+                                          "id": "2f8a045a-90c8-4f23-b749-1212e0e3a7bf",
+                                          "step": "asset"
+                                        }
+                                      ],
+                                      "lhs-fn-params": {
+                                        "window": 10
+                                      },
+                                      "is-else-condition?": false,
+                                      "rhs-fixed-value?": true,
+                                      "lhs-fn": "relative-strength-index",
+                                      "lhs-val": "QQQ",
+                                      "id": "361b5079-2603-4ae2-99b3-90a50a0af0c7",
+                                      "comparator": "lt",
+                                      "rhs-val": "30",
+                                      "step": "if-child"
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "name": "QLD",
+                                                  "ticker": "QLD",
+                                                  "id": "139c2423-c22b-483b-b6c7-cd71a62ef18b",
+                                                  "step": "asset"
+                                                }
+                                              ],
+                                              "lhs-fn-params": {
+                                                "window": 10
+                                              },
+                                              "rhs-fn": "relative-strength-index",
+                                              "is-else-condition?": false,
+                                              "lhs-fn": "relative-strength-index",
+                                              "lhs-val": "IEF",
+                                              "id": "4768f72a-65e1-4afe-9cb3-9c97a2b9522a",
+                                              "rhs-fn-params": {
+                                                "window": 20
+                                              },
+                                              "comparator": "gt",
+                                              "rhs-val": "PSQ",
+                                              "step": "if-child"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "Consumer Staples Select Sector SPDR Fund",
+                                                              "ticker": "XLP",
+                                                              "id": "2ab388a8-970c-4dc0-a1e1-a7ab8546473a",
+                                                              "step": "asset"
+                                                            },
+                                                            {
+                                                              "select?": true,
+                                                              "children": [
+                                                                {
+                                                                  "name": "Invesco DB Oil Fund",
+                                                                  "ticker": "DBO",
+                                                                  "id": "327d2419-3a26-435c-854b-75c80ffba837",
+                                                                  "step": "asset"
+                                                                },
+                                                                {
+                                                                  "name": "Invesco DB US Dollar Index Bullish Fund",
+                                                                  "ticker": "UUP",
+                                                                  "id": "14d02f4a-5fd1-4e11-9563-de6d0fd3564d",
+                                                                  "step": "asset"
+                                                                },
+                                                                {
+                                                                  "name": "SPDR S&P 500 ETF Trust",
+                                                                  "ticker": "SPY",
+                                                                  "id": "1b595c54-4036-4120-9d47-cea8324754f2",
+                                                                  "step": "asset"
+                                                                }
+                                                              ],
+                                                              "select-fn": "top",
+                                                              "select-n": "1",
+                                                              "sort-by-fn": "relative-strength-index",
+                                                              "id": "a6e59ab6-938c-4202-8823-510485139b07",
+                                                              "sort-by?": true,
+                                                              "step": "filter",
+                                                              "sort-by-fn-params": {
+                                                                "window": 20
+                                                              }
+                                                            }
+                                                          ],
+                                                          "id": "85a3b0ff-dfd8-486d-b977-72021c5b268e",
+                                                          "step": "wt-cash-equal"
+                                                        }
+                                                      ],
+                                                      "rhs-fn": "moving-average-price",
+                                                      "is-else-condition?": false,
+                                                      "lhs-fn": "current-price",
+                                                      "lhs-val": "SPY",
+                                                      "id": "ca95d5d6-76c0-466b-8022-b646ad525e2d",
+                                                      "rhs-fn-params": {
+                                                        "window": 200
+                                                      },
+                                                      "comparator": "gt",
+                                                      "rhs-val": "SPY",
+                                                      "step": "if-child"
+                                                    },
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [
+                                                                {
+                                                                  "name": "QID",
+                                                                  "ticker": "QID",
+                                                                  "id": "4ee4ce28-66a4-48cc-b6b3-d916a04824d2",
+                                                                  "step": "asset"
+                                                                }
+                                                              ],
+                                                              "rhs-fn": "moving-average-price",
+                                                              "is-else-condition?": false,
+                                                              "lhs-fn": "current-price",
+                                                              "lhs-val": "QQQ",
+                                                              "id": "0ed92b61-4ef8-4adf-aeaa-b49117958982",
+                                                              "rhs-fn-params": {
+                                                                "window": 20
+                                                              },
+                                                              "comparator": "lt",
+                                                              "rhs-val": "QQQ",
+                                                              "step": "if-child"
+                                                            },
+                                                            {
+                                                              "children": [
+                                                                {
+                                                                  "name": "SHV",
+                                                                  "ticker": "SHV",
+                                                                  "id": "443adfe6-0a12-4bf5-aa64-d4eb5dc0bcd3",
+                                                                  "step": "asset"
+                                                                }
+                                                              ],
+                                                              "is-else-condition?": true,
+                                                              "id": "d50d4967-9440-4eab-8577-06e8d0441a0e",
+                                                              "step": "if-child"
+                                                            }
+                                                          ],
+                                                          "id": "975bb8e9-05c6-417b-a22e-a150bd351bee",
+                                                          "step": "if"
+                                                        }
+                                                      ],
+                                                      "is-else-condition?": true,
+                                                      "id": "45c4e46b-160c-4d47-b43c-7d9022398d6e",
+                                                      "step": "if-child"
+                                                    }
+                                                  ],
+                                                  "id": "3cac6a19-3da5-4765-9cb1-e3533888f465",
+                                                  "step": "if"
+                                                }
+                                              ],
+                                              "is-else-condition?": true,
+                                              "id": "be6e65d0-581f-4cb3-acf2-d3b68cc23064",
+                                              "step": "if-child"
+                                            }
+                                          ],
+                                          "id": "a409c61b-8c63-4b75-9c86-17e6bebc11f5",
+                                          "step": "if"
+                                        }
+                                      ],
+                                      "is-else-condition?": true,
+                                      "id": "0f9a8955-a9b6-45f9-aa74-0303c4e1f893",
+                                      "step": "if-child"
+                                    }
+                                  ],
+                                  "id": "4135d356-c945-4358-bb56-8e5d651a88ba",
+                                  "step": "if"
+                                }
+                              ],
+                              "is-else-condition?": true,
+                              "id": "cf82b796-24f2-4cdf-85c6-13513d462fdf",
+                              "step": "if-child"
+                            }
+                          ],
+                          "id": "75f9358a-12a3-43db-b0df-2aaf5a393f69",
+                          "step": "if"
+                        }
+                      ],
+                      "is-else-condition?": true,
+                      "id": "e053b440-e2b3-4bc0-866a-4458afede664",
+                      "step": "if-child"
+                    }
+                  ],
+                  "id": "597f432c-610d-4d6c-9f6e-d5be431d7878",
+                  "step": "if"
+                }
+              ],
+              "id": "80b86e1b-d9c1-4385-bdda-c4828d657794",
+              "step": "wt-cash-equal"
+            }
+          ],
+          "name": "QQQ Core",
+          "id": "d2d1539a-d353-48f1-9afd-974db9a44432",
+          "step": "group"
+        }
+      ]
+    }
+  ]
+}

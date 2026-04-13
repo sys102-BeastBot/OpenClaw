@@ -1,0 +1,53 @@
+{
+  "v2 baseline (8)": {
+    "2022": {
+      "sharpe": 6.505,
+      "annret": 384.5,
+      "maxdd": 4.84
+    },
+    "2023": {
+      "sharpe": 6.592,
+      "annret": 222.9,
+      "maxdd": 4.29
+    },
+    "2024": {
+      "sharpe": 4.719,
+      "annret": 216.7,
+      "maxdd": 6.85
+    }
+  },
+  "v3 swap hwrt\u2192sis_opt (8)": {
+    "2022": {
+      "sharpe": 5.564,
+      "annret": 330.1,
+      "maxdd": 10.0
+    },
+    "2023": {
+      "sharpe": 6.577,
+      "annret": 208.2,
+      "maxdd": 4.12
+    },
+    "2024": {
+      "sharpe": 4.607,
+      "annret": 188.9,
+      "maxdd": 5.69
+    }
+  },
+  "v3b add sis_opt (9)": {
+    "2022": {
+      "sharpe": 6.465,
+      "annret": 392.0,
+      "maxdd": 4.82
+    },
+    "2023": {
+      "sharpe": 6.708,
+      "annret": 227.9,
+      "maxdd": 4.05
+    },
+    "2024": {
+      "sharpe": 4.647,
+      "annret": 218.2,
+      "maxdd": 6.65
+    }
+  }
+}

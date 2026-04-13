@@ -1,0 +1,962 @@
+{
+  "id": "2c0721a2-d524-4ef5-aa6a-a1dd3643b4df",
+  "step": "root",
+  "name": "Long Volatility",
+  "description": "",
+  "rebalance": "daily",
+  "children": [
+    {
+      "id": "5b8183ef-355b-4f17-a068-893e30c84eb3",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "id": "ffc6f1a2-7bbc-4ebe-a15e-3f4598ec80ed",
+          "step": "group",
+          "name": "Long Volatility",
+          "children": [
+            {
+              "step": "wt-cash-equal",
+              "id": "03120ed8-7f6b-40b2-8913-d3fe9da44a95",
+              "children": [
+                {
+                  "id": "232f6aec-b403-44d6-bfbc-9c515e649651",
+                  "step": "wt-cash-specified",
+                  "children": [
+                    {
+                      "weight": {
+                        "num": "37.5",
+                        "den": 100
+                      },
+                      "id": "4c442e96-fe9c-4de9-ada2-604b9eef0a25",
+                      "step": "if",
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "id": "53794b7b-12f1-4848-bc9f-405bb21a5bbd",
+                              "step": "wt-cash-equal",
+                              "children": [
+                                {
+                                  "id": "602b2a2f-9010-4ec4-a809-64838b47dfe3",
+                                  "step": "if",
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "name": "ProShares Ultra VIX Short-Term Futures ETF",
+                                          "ticker": "UVXY",
+                                          "has_marketcap": false,
+                                          "id": "c0cebc3c-2f92-4729-9f33-d94db76ce8d0",
+                                          "exchange": "BATS",
+                                          "price": 6.4,
+                                          "step": "asset",
+                                          "dollar_volume": 165056313.60000002
+                                        }
+                                      ],
+                                      "is-else-condition?": false,
+                                      "rhs-fixed-value?": true,
+                                      "lhs-fn": "cumulative-return",
+                                      "lhs-window-days": "45",
+                                      "lhs-val": "UVXY",
+                                      "id": "c0a0a111-63b0-47f7-97f3-b106d108e5ed",
+                                      "comparator": "lt",
+                                      "rhs-val": "500",
+                                      "step": "if-child"
+                                    },
+                                    {
+                                      "id": "c61def98-8020-46da-b1cd-f4ce5ae246a2",
+                                      "step": "if-child",
+                                      "is-else-condition?": true,
+                                      "children": [
+                                        {
+                                          "name": "iShares 1-3 Year Treasury Bond ETF",
+                                          "ticker": "SHY",
+                                          "has_marketcap": false,
+                                          "id": "7767b8bc-88bc-416d-9c25-a02605ab1694",
+                                          "exchange": "XNAS",
+                                          "price": 81.6,
+                                          "step": "asset",
+                                          "dollar_volume": 506308415.99999994
+                                        },
+                                        {
+                                          "name": "SPDR Gold Shares",
+                                          "ticker": "GLD",
+                                          "has_marketcap": false,
+                                          "id": "b55ddb8d-db6a-4a5a-9c17-ae0d384027b7",
+                                          "exchange": "ARCX",
+                                          "price": 174.1,
+                                          "step": "asset",
+                                          "dollar_volume": 893916972.3
+                                        },
+                                        {
+                                          "name": "Invesco DB US Dollar Index Bullish Fund",
+                                          "ticker": "UUP",
+                                          "has_marketcap": false,
+                                          "id": "5a777bfb-edd6-4617-827f-54b309dce424",
+                                          "exchange": "ARCX",
+                                          "price": 27.44,
+                                          "step": "asset",
+                                          "dollar_volume": 72304180.48,
+                                          "children-count": 0
+                                        },
+                                        {
+                                          "id": "c5cbf405-fda0-4d37-a1b8-645360834fb9",
+                                          "step": "group",
+                                          "name": "Commodity",
+                                          "children": [
+                                            {
+                                              "step": "wt-cash-equal",
+                                              "id": "f6551274-af6a-446d-851e-31f3bdaed814",
+                                              "children": [
+                                                {
+                                                  "name": "Direxion Auspice Broad Commodity Strategy ETF",
+                                                  "ticker": "COM",
+                                                  "has_marketcap": false,
+                                                  "id": "7b24349f-5a00-4b14-a01b-58992756d3bd",
+                                                  "exchange": "ARCX",
+                                                  "price": 29.58,
+                                                  "step": "asset",
+                                                  "dollar_volume": 1444864.68
+                                                },
+                                                {
+                                                  "name": "First Trust Alternative Absolute Return Strategy ETF",
+                                                  "ticker": "FAAR",
+                                                  "has_marketcap": false,
+                                                  "id": "a86053f2-19c7-4ccf-8811-3334f77c7df6",
+                                                  "exchange": "XNAS",
+                                                  "price": 29.66,
+                                                  "step": "asset",
+                                                  "dollar_volume": 649049.78
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "id": "d5e5e483-74c6-4c49-bf12-2902f45925a9",
+                                          "step": "group",
+                                          "name": "Equity Linked",
+                                          "children": [
+                                            {
+                                              "step": "wt-cash-specified",
+                                              "id": "8ed50c28-4759-4f85-8e7b-d7eed32acadd",
+                                              "window-days": "45",
+                                              "children": [
+                                                {
+                                                  "name": "First Trust Long/Short Equity ETF",
+                                                  "ticker": "FTLS",
+                                                  "has_marketcap": false,
+                                                  "weight": {
+                                                    "num": "35",
+                                                    "den": 100
+                                                  },
+                                                  "id": "74b183a5-f488-4c5f-903f-6d151c8da4b3",
+                                                  "exchange": "ARCX",
+                                                  "price": 49.01,
+                                                  "step": "asset",
+                                                  "dollar_volume": 3570133.4499999997
+                                                },
+                                                {
+                                                  "name": "Core Alternative ETF",
+                                                  "ticker": "CCOR",
+                                                  "has_marketcap": false,
+                                                  "weight": {
+                                                    "num": "65",
+                                                    "den": 100
+                                                  },
+                                                  "id": "dcb8f7b8-ac93-4d5e-8b55-155f80c2a0eb",
+                                                  "exchange": "ARCX",
+                                                  "price": 31.455,
+                                                  "step": "asset",
+                                                  "dollar_volume": 18462826.8
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "is-else-condition?": false,
+                          "rhs-fixed-value?": true,
+                          "lhs-fn": "max-drawdown",
+                          "lhs-window-days": "4",
+                          "lhs-val": "SPY",
+                          "id": "75f5e3d0-c323-4570-a349-81b73ce2ac44",
+                          "comparator": "gt",
+                          "rhs-val": "6",
+                          "step": "if-child",
+                          "collapsed?": true
+                        },
+                        {
+                          "id": "7070973a-7f33-45d3-9fb1-2c434151bf7f",
+                          "step": "if-child",
+                          "is-else-condition?": true,
+                          "children": [
+                            {
+                              "name": "iShares 1-3 Year Treasury Bond ETF",
+                              "ticker": "SHY",
+                              "has_marketcap": false,
+                              "id": "f02dc1a5-4a88-48a1-9872-922c381e7c79",
+                              "exchange": "XNAS",
+                              "price": 81.6,
+                              "step": "asset",
+                              "dollar_volume": 506308415.99999994
+                            },
+                            {
+                              "name": "SPDR Gold Shares",
+                              "ticker": "GLD",
+                              "has_marketcap": false,
+                              "id": "bbfbe0ff-649c-4f76-b454-099ecce3b5d0",
+                              "exchange": "ARCX",
+                              "price": 174.1,
+                              "step": "asset",
+                              "dollar_volume": 893916972.3
+                            },
+                            {
+                              "name": "Invesco DB US Dollar Index Bullish Fund",
+                              "ticker": "UUP",
+                              "has_marketcap": false,
+                              "id": "31f6eaa3-cf26-480f-93bc-e77dd59f824f",
+                              "exchange": "ARCX",
+                              "price": 27.44,
+                              "step": "asset",
+                              "dollar_volume": 72304180.48,
+                              "children-count": 0
+                            },
+                            {
+                              "id": "e5451ed5-2abf-43ba-b183-e8dd766abc2b",
+                              "step": "group",
+                              "name": "Commodity",
+                              "children": [
+                                {
+                                  "step": "wt-cash-equal",
+                                  "id": "7aaafee1-e11b-4a32-8369-216306a0f2f9",
+                                  "children": [
+                                    {
+                                      "name": "Direxion Auspice Broad Commodity Strategy ETF",
+                                      "ticker": "COM",
+                                      "has_marketcap": false,
+                                      "id": "9581ed23-d85f-4d10-930c-49ce85206d3a",
+                                      "exchange": "ARCX",
+                                      "price": 29.58,
+                                      "step": "asset",
+                                      "dollar_volume": 1444864.68
+                                    },
+                                    {
+                                      "name": "First Trust Alternative Absolute Return Strategy ETF",
+                                      "ticker": "FAAR",
+                                      "has_marketcap": false,
+                                      "id": "fc5de93f-4b1b-4177-a9a9-06f0b7cd3c0a",
+                                      "exchange": "XNAS",
+                                      "price": 29.66,
+                                      "step": "asset",
+                                      "dollar_volume": 649049.78
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "id": "648d1cd5-8011-40c6-a373-8b37f103fffb",
+                              "step": "group",
+                              "name": "Equity Linked",
+                              "children": [
+                                {
+                                  "step": "wt-cash-specified",
+                                  "id": "284a7f12-ac8f-41c1-9b4d-417cea5e7b25",
+                                  "window-days": "45",
+                                  "children": [
+                                    {
+                                      "name": "First Trust Long/Short Equity ETF",
+                                      "ticker": "FTLS",
+                                      "has_marketcap": false,
+                                      "weight": {
+                                        "num": "35",
+                                        "den": 100
+                                      },
+                                      "id": "16b24df1-cfd8-4739-be1a-61402bdcbdd2",
+                                      "exchange": "ARCX",
+                                      "price": 49.01,
+                                      "step": "asset",
+                                      "dollar_volume": 3570133.4499999997
+                                    },
+                                    {
+                                      "name": "Core Alternative ETF",
+                                      "ticker": "CCOR",
+                                      "has_marketcap": false,
+                                      "weight": {
+                                        "num": "65",
+                                        "den": 100
+                                      },
+                                      "id": "5b9d7e91-78ab-4240-80de-cb782634c746",
+                                      "exchange": "ARCX",
+                                      "price": 31.455,
+                                      "step": "asset",
+                                      "dollar_volume": 18462826.8
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "collapsed?": true
+                        }
+                      ]
+                    },
+                    {
+                      "id": "733c5a72-fe37-4d0f-b183-b58588221e57",
+                      "step": "if",
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "id": "65521d0a-d465-4f7a-a547-909f086aa306",
+                              "step": "wt-cash-equal",
+                              "children": [
+                                {
+                                  "id": "4e3c2990-3951-4c04-9b29-89ca260a4e55",
+                                  "step": "if",
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "name": "ProShares Ultra VIX Short-Term Futures ETF",
+                                          "ticker": "UVXY",
+                                          "has_marketcap": false,
+                                          "id": "1e12b7b9-b70d-4af7-93fd-6dc9f56e10b1",
+                                          "exchange": "BATS",
+                                          "price": 6.4,
+                                          "step": "asset",
+                                          "dollar_volume": 165056313.60000002
+                                        }
+                                      ],
+                                      "is-else-condition?": false,
+                                      "rhs-fixed-value?": true,
+                                      "lhs-fn": "cumulative-return",
+                                      "lhs-window-days": "45",
+                                      "lhs-val": "UVXY",
+                                      "id": "fa7efca6-79af-462e-84ff-69282a82324a",
+                                      "comparator": "lt",
+                                      "rhs-val": "500",
+                                      "step": "if-child",
+                                      "collapsed?": false
+                                    },
+                                    {
+                                      "id": "168d1389-7837-4c18-a775-b83e1f5c0af7",
+                                      "step": "if-child",
+                                      "is-else-condition?": true,
+                                      "children": [
+                                        {
+                                          "name": "iShares 1-3 Year Treasury Bond ETF",
+                                          "ticker": "SHY",
+                                          "has_marketcap": false,
+                                          "id": "3542a5a9-eb43-4e0b-a959-0c0f001a83ad",
+                                          "exchange": "XNAS",
+                                          "price": 81.6,
+                                          "step": "asset",
+                                          "dollar_volume": 506308415.99999994
+                                        },
+                                        {
+                                          "name": "SPDR Gold Shares",
+                                          "ticker": "GLD",
+                                          "has_marketcap": false,
+                                          "id": "517c0be5-c95c-452c-b84c-addab6dcefd3",
+                                          "exchange": "ARCX",
+                                          "price": 174.1,
+                                          "step": "asset",
+                                          "dollar_volume": 893916972.3
+                                        },
+                                        {
+                                          "name": "Invesco DB US Dollar Index Bullish Fund",
+                                          "ticker": "UUP",
+                                          "has_marketcap": false,
+                                          "id": "90606b19-72c9-42ae-b321-f5c5dc43567e",
+                                          "exchange": "ARCX",
+                                          "price": 27.44,
+                                          "step": "asset",
+                                          "dollar_volume": 72304180.48,
+                                          "children-count": 0
+                                        },
+                                        {
+                                          "id": "62297926-1674-4614-89bd-f72540ad6332",
+                                          "step": "group",
+                                          "name": "Commodity",
+                                          "children": [
+                                            {
+                                              "step": "wt-cash-equal",
+                                              "id": "5bef85f4-f3f8-422a-a671-57f9fc7229e5",
+                                              "children": [
+                                                {
+                                                  "name": "Direxion Auspice Broad Commodity Strategy ETF",
+                                                  "ticker": "COM",
+                                                  "has_marketcap": false,
+                                                  "id": "444495e1-60bf-49a6-8938-03d9c03d7426",
+                                                  "exchange": "ARCX",
+                                                  "price": 29.58,
+                                                  "step": "asset",
+                                                  "dollar_volume": 1444864.68
+                                                },
+                                                {
+                                                  "name": "First Trust Alternative Absolute Return Strategy ETF",
+                                                  "ticker": "FAAR",
+                                                  "has_marketcap": false,
+                                                  "id": "5e4a059a-e7d4-4fb8-9084-733a1ce6aed0",
+                                                  "exchange": "XNAS",
+                                                  "price": 29.66,
+                                                  "step": "asset",
+                                                  "dollar_volume": 649049.78
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "id": "f20f5a1f-c921-4702-9e8f-ece69aeed87d",
+                                          "step": "group",
+                                          "name": "Equity Linked",
+                                          "children": [
+                                            {
+                                              "step": "wt-cash-specified",
+                                              "id": "57d6b026-1b76-4bda-94c1-707f693ec617",
+                                              "window-days": "45",
+                                              "children": [
+                                                {
+                                                  "name": "First Trust Long/Short Equity ETF",
+                                                  "ticker": "FTLS",
+                                                  "has_marketcap": false,
+                                                  "weight": {
+                                                    "num": "35",
+                                                    "den": 100
+                                                  },
+                                                  "id": "095f7609-d544-4dfc-ae2c-f037f4a2cfd2",
+                                                  "exchange": "ARCX",
+                                                  "price": 49.01,
+                                                  "step": "asset",
+                                                  "dollar_volume": 3570133.4499999997
+                                                },
+                                                {
+                                                  "name": "Core Alternative ETF",
+                                                  "ticker": "CCOR",
+                                                  "has_marketcap": false,
+                                                  "weight": {
+                                                    "num": "65",
+                                                    "den": 100
+                                                  },
+                                                  "id": "0ad5e983-2aa5-4e38-bfd2-3423c855bd85",
+                                                  "exchange": "ARCX",
+                                                  "price": 31.455,
+                                                  "step": "asset",
+                                                  "dollar_volume": 18462826.8
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "collapsed?": false
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "is-else-condition?": false,
+                          "rhs-fixed-value?": true,
+                          "lhs-fn": "max-drawdown",
+                          "lhs-window-days": "15",
+                          "lhs-val": "SPY",
+                          "id": "da7da42c-c35d-444a-805d-270dae58dcfd",
+                          "comparator": "gt",
+                          "rhs-val": "11",
+                          "step": "if-child",
+                          "collapsed?": true
+                        },
+                        {
+                          "id": "a5366049-273e-441d-a224-1a7f71cf5ff9",
+                          "step": "if-child",
+                          "is-else-condition?": true,
+                          "children": [
+                            {
+                              "name": "iShares 1-3 Year Treasury Bond ETF",
+                              "ticker": "SHY",
+                              "has_marketcap": false,
+                              "id": "77663cd5-76e1-42a2-95cc-2596004737f3",
+                              "exchange": "XNAS",
+                              "price": 81.6,
+                              "step": "asset",
+                              "dollar_volume": 506308415.99999994
+                            },
+                            {
+                              "name": "SPDR Gold Shares",
+                              "ticker": "GLD",
+                              "has_marketcap": false,
+                              "id": "8a9f0832-9a97-4997-b4db-62da2c2599f3",
+                              "exchange": "ARCX",
+                              "price": 174.1,
+                              "step": "asset",
+                              "dollar_volume": 893916972.3
+                            },
+                            {
+                              "name": "Invesco DB US Dollar Index Bullish Fund",
+                              "ticker": "UUP",
+                              "has_marketcap": false,
+                              "id": "2f9c120a-2ecf-4140-846a-9c11d7c52708",
+                              "exchange": "ARCX",
+                              "price": 27.44,
+                              "step": "asset",
+                              "dollar_volume": 72304180.48,
+                              "children-count": 0
+                            },
+                            {
+                              "id": "67d78080-6b61-4292-b38a-1f59642ce0a0",
+                              "step": "group",
+                              "name": "Commodity",
+                              "children": [
+                                {
+                                  "step": "wt-cash-equal",
+                                  "id": "24bdcf48-ed41-4534-8c5e-57f6289ea389",
+                                  "children": [
+                                    {
+                                      "name": "Direxion Auspice Broad Commodity Strategy ETF",
+                                      "ticker": "COM",
+                                      "has_marketcap": false,
+                                      "id": "117ec328-8b5a-4a5f-bcdf-f9837c442db1",
+                                      "exchange": "ARCX",
+                                      "price": 29.58,
+                                      "step": "asset",
+                                      "dollar_volume": 1444864.68
+                                    },
+                                    {
+                                      "name": "First Trust Alternative Absolute Return Strategy ETF",
+                                      "ticker": "FAAR",
+                                      "has_marketcap": false,
+                                      "id": "7f46cca1-e22b-4fd3-92ab-6c7f830040aa",
+                                      "exchange": "XNAS",
+                                      "price": 29.66,
+                                      "step": "asset",
+                                      "dollar_volume": 649049.78
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "id": "d8a1a424-bb8a-41a2-80f9-f0325ee5ed70",
+                              "step": "group",
+                              "name": "Equity Linked",
+                              "children": [
+                                {
+                                  "step": "wt-cash-specified",
+                                  "id": "3ad7e3f6-7b3e-4c5b-b519-7cc8f9b2c139",
+                                  "window-days": "45",
+                                  "children": [
+                                    {
+                                      "name": "First Trust Long/Short Equity ETF",
+                                      "ticker": "FTLS",
+                                      "has_marketcap": false,
+                                      "weight": {
+                                        "num": "35",
+                                        "den": 100
+                                      },
+                                      "id": "472ff1d5-5555-4a17-8b0a-cd87e682d752",
+                                      "exchange": "ARCX",
+                                      "price": 49.01,
+                                      "step": "asset",
+                                      "dollar_volume": 3570133.4499999997
+                                    },
+                                    {
+                                      "name": "Core Alternative ETF",
+                                      "ticker": "CCOR",
+                                      "has_marketcap": false,
+                                      "weight": {
+                                        "num": "65",
+                                        "den": 100
+                                      },
+                                      "id": "849764d4-2c1b-4446-813b-276033040849",
+                                      "exchange": "ARCX",
+                                      "price": 31.455,
+                                      "step": "asset",
+                                      "dollar_volume": 18462826.8
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "collapsed?": true
+                        }
+                      ],
+                      "weight": {
+                        "num": "37.5",
+                        "den": 100
+                      }
+                    },
+                    {
+                      "id": "8a64f23d-5648-4d51-bab1-77f9003113da",
+                      "step": "group",
+                      "name": "Garen's  Advanced Volatility Hedge V2",
+                      "children": [
+                        {
+                          "step": "wt-cash-equal",
+                          "id": "ef21b04e-7a70-4ea6-ac04-2d9193fa7a0c",
+                          "children": [
+                            {
+                              "id": "a59b1d12-297a-48c5-95e5-426654381334",
+                              "step": "if",
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "id": "c63e788a-600c-4a57-9258-e0708dbef0aa",
+                                      "step": "wt-inverse-vol",
+                                      "children": [
+                                        {
+                                          "name": "ProShares VIX Mid-Term Futures ETF",
+                                          "ticker": "VIXM",
+                                          "has_marketcap": false,
+                                          "id": "d23248c7-aa74-4cee-b5fc-d8a9490b1828",
+                                          "exchange": "BATS",
+                                          "price": 32.81,
+                                          "step": "asset",
+                                          "dollar_volume": 2204503.9000000004
+                                        },
+                                        {
+                                          "name": "Invesco DB US Dollar Index Bullish Fund",
+                                          "ticker": "UUP",
+                                          "has_marketcap": false,
+                                          "id": "43970f8c-04c7-431f-82a8-ece7277e48a4",
+                                          "exchange": "ARCX",
+                                          "price": 29.34,
+                                          "step": "asset",
+                                          "dollar_volume": 99219547.44
+                                        },
+                                        {
+                                          "name": "ProShares Ultra VIX Short-Term Futures ETF",
+                                          "ticker": "UVXY",
+                                          "has_marketcap": false,
+                                          "id": "27636309-d6a6-4339-a403-a08443aa6382",
+                                          "exchange": "BATS",
+                                          "price": 9.73,
+                                          "step": "asset",
+                                          "dollar_volume": 628328479.03
+                                        },
+                                        {
+                                          "name": "ProShares VIX Mid-Term Futures ETF",
+                                          "ticker": "VIXM",
+                                          "has_marketcap": false,
+                                          "id": "130f8b25-b1b5-4836-9f69-f1c956616e2a",
+                                          "exchange": "BATS",
+                                          "price": 32.64,
+                                          "step": "asset",
+                                          "dollar_volume": 2049563.52
+                                        }
+                                      ],
+                                      "window-days": "5"
+                                    }
+                                  ],
+                                  "is-else-condition?": false,
+                                  "rhs-fixed-value?": true,
+                                  "lhs-fn": "cumulative-return",
+                                  "lhs-window-days": "5",
+                                  "lhs-val": "UVXY",
+                                  "id": "7d87f2ec-0508-4a52-a931-eafb3028df5f",
+                                  "comparator": "gt",
+                                  "rhs-val": "-1",
+                                  "step": "if-child"
+                                },
+                                {
+                                  "id": "a3799955-3951-41ec-b596-9b040b5d7177",
+                                  "step": "if-child",
+                                  "is-else-condition?": true,
+                                  "children": [
+                                    {
+                                      "id": "b1910a6a-5326-49ee-8fed-9bc5fc482f03",
+                                      "step": "wt-cash-equal",
+                                      "children": [
+                                        {
+                                          "id": "d2b0af08-9e10-4083-88d6-3b61c9d1e88a",
+                                          "step": "if",
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "id": "87184bf5-39f6-48d9-8f0a-7ac898cd950c",
+                                                  "step": "wt-inverse-vol",
+                                                  "children": [
+                                                    {
+                                                      "name": "Direxion Daily 20+ Year Treasury Bull 3X Shares",
+                                                      "ticker": "TMF",
+                                                      "has_marketcap": false,
+                                                      "id": "63d8131a-6abe-4850-aefa-5f19f32ee426",
+                                                      "exchange": "ARCX",
+                                                      "price": 10.26,
+                                                      "step": "asset",
+                                                      "dollar_volume": 31071794.4
+                                                    },
+                                                    {
+                                                      "name": "iShares 7-10 Year Treasury Bond ETF",
+                                                      "ticker": "IEF",
+                                                      "has_marketcap": false,
+                                                      "id": "d7a39939-631e-4410-b6d0-3d1cbb4b94c9",
+                                                      "exchange": "XNAS",
+                                                      "price": 99.68,
+                                                      "step": "asset",
+                                                      "dollar_volume": 572456159.52
+                                                    },
+                                                    {
+                                                      "name": "iShares 20+ Year Treasury Bond ETF",
+                                                      "ticker": "TLT",
+                                                      "has_marketcap": false,
+                                                      "id": "5d6d757f-2084-44cc-a8cc-4f1d1ca2a51d",
+                                                      "exchange": "XNAS",
+                                                      "price": 108.07,
+                                                      "step": "asset",
+                                                      "dollar_volume": 1580947816.6799998
+                                                    },
+                                                    {
+                                                      "name": "SPDR S&P 500 ETF Trust",
+                                                      "ticker": "SPY",
+                                                      "has_marketcap": false,
+                                                      "id": "08c7a08f-6812-4358-874f-c31b9a4ee6d5",
+                                                      "exchange": "ARCX",
+                                                      "price": 400.38,
+                                                      "step": "asset",
+                                                      "dollar_volume": 31731599208.66
+                                                    }
+                                                  ],
+                                                  "window-days": "5"
+                                                }
+                                              ],
+                                              "is-else-condition?": false,
+                                              "rhs-fixed-value?": true,
+                                              "lhs-fn": "max-drawdown",
+                                              "lhs-window-days": "45",
+                                              "lhs-val": "TLT",
+                                              "id": "75a72129-23f7-41ea-9dc0-bec480cb0c65",
+                                              "comparator": "lt",
+                                              "rhs-val": "5",
+                                              "step": "if-child",
+                                              "collapsed?": true
+                                            },
+                                            {
+                                              "id": "a8a9c884-8594-477f-91c6-e686d0c3c605",
+                                              "step": "if-child",
+                                              "is-else-condition?": true,
+                                              "children": [
+                                                {
+                                                  "id": "7322d252-8d27-4003-b760-71e83cf9aa22",
+                                                  "step": "wt-cash-equal",
+                                                  "children": [
+                                                    {
+                                                      "id": "822e208d-255b-4750-ace6-3c81437a0e0a",
+                                                      "step": "if",
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "id": "c9104045-91ca-418d-b65f-cecf55da9dee",
+                                                              "step": "wt-inverse-vol",
+                                                              "children": [
+                                                                {
+                                                                  "name": "iShares 7-10 Year Treasury Bond ETF",
+                                                                  "ticker": "IEF",
+                                                                  "has_marketcap": false,
+                                                                  "id": "e504c2da-c046-44d0-912b-b8f16b7ee52d",
+                                                                  "exchange": "XNAS",
+                                                                  "price": 99.68,
+                                                                  "step": "asset",
+                                                                  "dollar_volume": 572456159.52
+                                                                },
+                                                                {
+                                                                  "name": "iShares 20+ Year Treasury Bond ETF",
+                                                                  "ticker": "TLT",
+                                                                  "has_marketcap": false,
+                                                                  "id": "cd6e0f9e-82ce-4b4c-ac5f-d13a288471b8",
+                                                                  "exchange": "XNAS",
+                                                                  "price": 108.07,
+                                                                  "step": "asset",
+                                                                  "dollar_volume": 1580947816.6799998
+                                                                },
+                                                                {
+                                                                  "name": "Direxion Daily 20+ Year Treasury Bull 3X Shares",
+                                                                  "ticker": "TMF",
+                                                                  "has_marketcap": false,
+                                                                  "id": "9741d6be-6da0-412c-8741-151e267db39f",
+                                                                  "exchange": "ARCX",
+                                                                  "price": 10.26,
+                                                                  "step": "asset",
+                                                                  "dollar_volume": 31071794.4
+                                                                },
+                                                                {
+                                                                  "name": "Direxion Daily 20+ Year Treasury Bull 3X Shares",
+                                                                  "ticker": "TMF",
+                                                                  "has_marketcap": false,
+                                                                  "id": "4c8653ff-962e-46cf-9e5d-80defb4d4084",
+                                                                  "exchange": "ARCX",
+                                                                  "price": 10.26,
+                                                                  "step": "asset",
+                                                                  "dollar_volume": 31071794.4
+                                                                }
+                                                              ],
+                                                              "window-days": "5"
+                                                            }
+                                                          ],
+                                                          "rhs-fn": "exponential-moving-average-price",
+                                                          "is-else-condition?": false,
+                                                          "lhs-fn": "exponential-moving-average-price",
+                                                          "rhs-window-days": "200",
+                                                          "lhs-window-days": "10",
+                                                          "lhs-val": "TLT",
+                                                          "id": "a7afcc91-8718-4b10-b681-9a5dad41aee4",
+                                                          "comparator": "gt",
+                                                          "rhs-val": "TLT",
+                                                          "step": "if-child"
+                                                        },
+                                                        {
+                                                          "id": "5bc09a60-8ca2-4ce1-bd42-f467f32a516c",
+                                                          "step": "if-child",
+                                                          "is-else-condition?": true,
+                                                          "children": [
+                                                            {
+                                                              "id": "d15b08c8-2a72-4ad9-aa9b-f797ff1c0e48",
+                                                              "step": "wt-cash-equal",
+                                                              "children": [
+                                                                {
+                                                                  "id": "41fe134e-4c0c-43ec-899b-7e35343f3092",
+                                                                  "step": "if",
+                                                                  "children": [
+                                                                    {
+                                                                      "children": [
+                                                                        {
+                                                                          "id": "6c3b8a7d-bfdb-4772-9558-5a33ec766b23",
+                                                                          "step": "wt-inverse-vol",
+                                                                          "children": [
+                                                                            {
+                                                                              "name": "ProShares VIX Mid-Term Futures ETF",
+                                                                              "ticker": "VIXM",
+                                                                              "has_marketcap": false,
+                                                                              "id": "f3fe09f8-1d3f-44b4-b443-1495af9717eb",
+                                                                              "exchange": "BATS",
+                                                                              "price": 32.81,
+                                                                              "step": "asset",
+                                                                              "dollar_volume": 2204503.9000000004
+                                                                            },
+                                                                            {
+                                                                              "name": "Invesco DB US Dollar Index Bullish Fund",
+                                                                              "ticker": "UUP",
+                                                                              "has_marketcap": false,
+                                                                              "id": "12b42430-173d-4f21-af78-08b498e1ac93",
+                                                                              "exchange": "ARCX",
+                                                                              "price": 29.34,
+                                                                              "step": "asset",
+                                                                              "dollar_volume": 99219547.44
+                                                                            },
+                                                                            {
+                                                                              "name": "ProShares Ultra VIX Short-Term Futures ETF",
+                                                                              "ticker": "UVXY",
+                                                                              "has_marketcap": false,
+                                                                              "id": "dc79bbd8-4128-4168-adfa-bf0b6062baea",
+                                                                              "exchange": "BATS",
+                                                                              "price": 9.73,
+                                                                              "step": "asset",
+                                                                              "dollar_volume": 628328479.03
+                                                                            }
+                                                                          ],
+                                                                          "window-days": "5"
+                                                                        }
+                                                                      ],
+                                                                      "is-else-condition?": false,
+                                                                      "rhs-fixed-value?": true,
+                                                                      "lhs-fn": "cumulative-return",
+                                                                      "lhs-window-days": "5",
+                                                                      "lhs-val": "UVXY",
+                                                                      "id": "b367bb6c-2fae-46bc-bf1e-acc1fe68cd1f",
+                                                                      "comparator": "gt",
+                                                                      "rhs-val": "-0.5",
+                                                                      "step": "if-child"
+                                                                    },
+                                                                    {
+                                                                      "id": "9a3f3dda-6d6c-45b9-9863-ba43285f863d",
+                                                                      "step": "if-child",
+                                                                      "is-else-condition?": true,
+                                                                      "children": [
+                                                                        {
+                                                                          "id": "823bbd81-06b2-4d62-9aaa-1dbe8ecb511f",
+                                                                          "step": "wt-inverse-vol",
+                                                                          "children": [
+                                                                            {
+                                                                              "name": "Invesco DB US Dollar Index Bullish Fund",
+                                                                              "ticker": "UUP",
+                                                                              "has_marketcap": false,
+                                                                              "id": "70000da2-5b1f-413d-b22e-ae15a7f80e5b",
+                                                                              "exchange": "ARCX",
+                                                                              "price": 29.34,
+                                                                              "step": "asset",
+                                                                              "dollar_volume": 99219547.44
+                                                                            },
+                                                                            {
+                                                                              "name": "iShares 1-3 Year Treasury Bond ETF",
+                                                                              "ticker": "SHY",
+                                                                              "has_marketcap": false,
+                                                                              "id": "41e75600-8a3c-4dd0-a0c0-4915bd5cbc44",
+                                                                              "exchange": "XNAS",
+                                                                              "price": 82.25,
+                                                                              "step": "asset",
+                                                                              "dollar_volume": 362744296.25
+                                                                            }
+                                                                          ],
+                                                                          "window-days": "5"
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ],
+                                              "collapsed?": false
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "collapsed?": false
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "window-days": "10"
+                        }
+                      ],
+                      "weight": {
+                        "num": "25",
+                        "den": 100
+                      },
+                      "collapsed?": true
+                    }
+                  ],
+                  "collapsed?": false
+                }
+              ],
+              "window-days": "26",
+              "collapsed?": false
+            }
+          ],
+          "collapsed?": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,176 @@
+{
+  "id": "f97cc59e-ebfc-492c-8933-89b32ba626be",
+  "step": "root",
+  "name": "Commodities Macro Momentum",
+  "description": "",
+  "rebalance": "daily",
+  "children": [
+    {
+      "id": "77a7f975-87e5-4e86-a3a2-1096f61b7edb",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "Invesco DB Commodity Index Tracking Fund",
+                          "ticker": "DBC",
+                          "id": "cf85ea60-1daf-4d7c-9d8c-499d7db00980",
+                          "step": "asset"
+                        }
+                      ],
+                      "lhs-fn-params": {
+                        "window": 10
+                      },
+                      "is-else-condition?": false,
+                      "rhs-fixed-value?": true,
+                      "lhs-fn": "relative-strength-index",
+                      "lhs-val": "DBC",
+                      "id": "9ecb8989-7c9e-4de6-98eb-878e409bea47",
+                      "comparator": "lt",
+                      "rhs-val": "17",
+                      "step": "if-child"
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "name": "iShares Short Treasury Bond ETF",
+                                                  "ticker": "SHV",
+                                                  "id": "d59d46a9-4308-417a-971b-8c75f025e524",
+                                                  "step": "asset"
+                                                }
+                                              ],
+                                              "lhs-fn-params": {
+                                                "window": 60
+                                              },
+                                              "is-else-condition?": false,
+                                              "rhs-fixed-value?": true,
+                                              "lhs-fn": "relative-strength-index",
+                                              "lhs-val": "DBC",
+                                              "id": "066bb168-8079-4d9e-bf42-8309fd139255",
+                                              "comparator": "gt",
+                                              "rhs-val": "60",
+                                              "step": "if-child"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "name": "Invesco DB Commodity Index Tracking Fund",
+                                                  "ticker": "DBC",
+                                                  "id": "6a818299-0ae3-4914-94fc-1f6198769594",
+                                                  "step": "asset"
+                                                }
+                                              ],
+                                              "is-else-condition?": true,
+                                              "id": "af798f74-aa3b-49b8-9f45-ad0ba182bf3f",
+                                              "step": "if-child"
+                                            }
+                                          ],
+                                          "id": "ad00632a-00e3-4465-bc73-4e3522cd062b",
+                                          "step": "if"
+                                        }
+                                      ],
+                                      "lhs-fn-params": {
+                                        "window": 50
+                                      },
+                                      "rhs-fn": "moving-average-price",
+                                      "is-else-condition?": false,
+                                      "lhs-fn": "moving-average-price",
+                                      "lhs-val": "DBC",
+                                      "id": "e2d951b3-6292-458e-929a-d8f3e885ac13",
+                                      "rhs-fn-params": {
+                                        "window": 100
+                                      },
+                                      "comparator": "gt",
+                                      "rhs-val": "DBC",
+                                      "step": "if-child"
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "name": "iShares Short Treasury Bond ETF",
+                                          "ticker": "SHV",
+                                          "id": "edd7c06a-e7f0-4733-af01-4573da53ccf3",
+                                          "step": "asset"
+                                        }
+                                      ],
+                                      "is-else-condition?": true,
+                                      "id": "4091bfe2-643a-492d-9a59-0e500e1cbe3f",
+                                      "step": "if-child"
+                                    }
+                                  ],
+                                  "id": "78a1c10d-d5da-4574-b6a8-373d29384a41",
+                                  "step": "if"
+                                }
+                              ],
+                              "lhs-fn-params": {
+                                "window": 100
+                              },
+                              "rhs-fn": "moving-average-price",
+                              "is-else-condition?": false,
+                              "lhs-fn": "moving-average-price",
+                              "lhs-val": "DBC",
+                              "id": "06949c6e-810f-4d37-9f0f-58f730c879f7",
+                              "rhs-fn-params": {
+                                "window": 252
+                              },
+                              "comparator": "gt",
+                              "rhs-val": "DBC",
+                              "step": "if-child"
+                            },
+                            {
+                              "children": [
+                                {
+                                  "name": "iShares Short Treasury Bond ETF",
+                                  "ticker": "SHV",
+                                  "id": "59d3c3eb-be5b-4a60-af90-5ea7a5598b2b",
+                                  "step": "asset"
+                                }
+                              ],
+                              "is-else-condition?": true,
+                              "id": "d45779f2-b9c6-4b80-9c53-b77fe0b04795",
+                              "step": "if-child"
+                            }
+                          ],
+                          "id": "69ee144c-161e-4343-88aa-7ec4540aeab2",
+                          "step": "if"
+                        }
+                      ],
+                      "is-else-condition?": true,
+                      "id": "c4415896-dc54-41d9-ad08-5673fd0946d3",
+                      "step": "if-child"
+                    }
+                  ],
+                  "id": "85c75df3-78e5-41a5-86e1-8ecd0bad4f2e",
+                  "step": "if"
+                }
+              ],
+              "id": "b3059dc3-3dc7-4d51-9895-fe732292a967",
+              "step": "wt-cash-equal"
+            }
+          ],
+          "name": "Commodities Macro Momentum",
+          "id": "47f68e2f-9cf5-479f-85a5-67bbddfe58b6",
+          "step": "group"
+        }
+      ]
+    }
+  ]
+}

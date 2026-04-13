@@ -1,0 +1,71 @@
+{
+  "id": "bb4222f5-1f0d-41fc-b7fa-2d08d2377a65",
+  "step": "root",
+  "name": "GLD Trend",
+  "description": "",
+  "rebalance": "daily",
+  "children": [
+    {
+      "id": "13277685-4f05-44d1-8817-dfe941c8f4eb",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "SPDR Gold Shares",
+                          "ticker": "GLD",
+                          "id": "6094fa90-690d-40db-95ff-e1853babc905",
+                          "step": "asset"
+                        }
+                      ],
+                      "lhs-fn-params": {
+                        "window": 10
+                      },
+                      "rhs-fn": "moving-average-price",
+                      "is-else-condition?": false,
+                      "lhs-fn": "exponential-moving-average-price",
+                      "lhs-val": "GLD",
+                      "id": "c195c23a-a066-43cd-ab48-acee7417451a",
+                      "rhs-fn-params": {
+                        "window": 50
+                      },
+                      "comparator": "gt",
+                      "rhs-val": "GLD",
+                      "step": "if-child"
+                    },
+                    {
+                      "children": [
+                        {
+                          "name": "iShares Short Treasury Bond ETF",
+                          "ticker": "SHV",
+                          "id": "8188f960-0132-4d35-913f-945a9c3276e6",
+                          "step": "asset"
+                        }
+                      ],
+                      "is-else-condition?": true,
+                      "id": "2c0da006-f342-42b6-8947-3aa1601855b4",
+                      "step": "if-child"
+                    }
+                  ],
+                  "id": "571d54a8-6ff9-4778-ae9a-571eccb11d33",
+                  "step": "if"
+                }
+              ],
+              "id": "d909442e-b1a2-41f2-8b09-89c70b35c8aa",
+              "step": "wt-cash-equal"
+            }
+          ],
+          "name": "GLD Trend",
+          "id": "82393c0f-339f-4f15-be28-65a7dac11c0f",
+          "step": "group"
+        }
+      ]
+    }
+  ]
+}

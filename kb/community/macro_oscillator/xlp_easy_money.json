@@ -1,0 +1,71 @@
+{
+  "id": "898546fa-8c1d-45a5-b4f5-f4cf8e4cae67",
+  "step": "root",
+  "name": "XLP Easy Money",
+  "description": "",
+  "rebalance": "daily",
+  "children": [
+    {
+      "id": "c10c626b-754d-4382-aef5-ebc26fda944b",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "Consumer Staples Select Sector SPDR Fund",
+                          "ticker": "XLP",
+                          "id": "6fd3c97d-6f74-4be4-bafe-771f553d1677",
+                          "step": "asset"
+                        }
+                      ],
+                      "lhs-fn-params": {
+                        "window": 8
+                      },
+                      "rhs-fn": "moving-average-price",
+                      "is-else-condition?": false,
+                      "lhs-fn": "exponential-moving-average-price",
+                      "lhs-val": "XLP",
+                      "id": "ccd63e0a-f958-4065-979a-e734c8e45eb4",
+                      "rhs-fn-params": {
+                        "window": 50
+                      },
+                      "comparator": "gt",
+                      "rhs-val": "XLP",
+                      "step": "if-child"
+                    },
+                    {
+                      "children": [
+                        {
+                          "name": "iShares Short Treasury Bond ETF",
+                          "ticker": "SHV",
+                          "id": "ebc1a1a0-e18d-497b-87ca-918fa716a68c",
+                          "step": "asset"
+                        }
+                      ],
+                      "is-else-condition?": true,
+                      "id": "0f67e490-03fe-4e8b-b00a-0cb43665749d",
+                      "step": "if-child"
+                    }
+                  ],
+                  "id": "498611d0-6282-473b-b6ee-d02d81ad22eb",
+                  "step": "if"
+                }
+              ],
+              "id": "2baf3565-281a-4f89-b733-38389d68d074",
+              "step": "wt-cash-equal"
+            }
+          ],
+          "name": "XLP Easy Money",
+          "id": "5bcf6a56-ec56-4d10-81c2-c215bc3ad316",
+          "step": "group"
+        }
+      ]
+    }
+  ]
+}

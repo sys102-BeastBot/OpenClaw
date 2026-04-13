@@ -1,0 +1,39 @@
+{
+  "id": "a0a77950-5a4b-48c0-aa7a-f14f7da665f7",
+  "step": "root",
+  "name": "Fiat Alternatives",
+  "description": "",
+  "rebalance": "daily",
+  "children": [
+    {
+      "id": "54e7b929-7d25-465e-ab4b-b36e14b3fa38",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "id": "0a05c7f1-63c2-4aaf-b0c9-45d0c544cf12",
+          "step": "group",
+          "name": "Fiat Alternatives",
+          "children": [
+            {
+              "step": "wt-cash-equal",
+              "id": "54984d95-c996-44dd-9daa-b6d4e3a0ccc9",
+              "children": [
+                {
+                  "name": "SPDR Gold Shares",
+                  "ticker": "GLD",
+                  "has_marketcap": false,
+                  "id": "58461701-0d4e-405e-8f7a-c21f57944956",
+                  "exchange": "ARCX",
+                  "price": 168.73,
+                  "step": "asset",
+                  "dollar_volume": 1241476532.1
+                }
+              ]
+            }
+          ],
+          "collapsed?": true
+        }
+      ]
+    }
+  ]
+}

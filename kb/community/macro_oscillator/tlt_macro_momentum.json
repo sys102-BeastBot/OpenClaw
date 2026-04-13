@@ -1,0 +1,139 @@
+{
+  "id": "68ea00c7-9f31-4577-a483-ba67acae618d",
+  "step": "root",
+  "name": "TLT Macro Momentum",
+  "description": "",
+  "rebalance": "daily",
+  "children": [
+    {
+      "id": "83a26adc-b7a5-4934-b930-840b03abf003",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "name": "iShares 1-3 Year Treasury Bond ETF",
+                                  "ticker": "SHY",
+                                  "id": "916ae842-b403-4de0-b855-12fc7ad54a5e",
+                                  "step": "asset"
+                                }
+                              ],
+                              "lhs-fn-params": {
+                                "window": 60
+                              },
+                              "is-else-condition?": false,
+                              "rhs-fixed-value?": true,
+                              "lhs-fn": "relative-strength-index",
+                              "lhs-val": "TLT",
+                              "id": "db03e527-220e-42bf-9081-31e63a6522da",
+                              "comparator": "gt",
+                              "rhs-val": "62",
+                              "step": "if-child"
+                            },
+                            {
+                              "children": [
+                                {
+                                  "name": "iShares 20+ Year Treasury Bond ETF",
+                                  "ticker": "TLT",
+                                  "id": "4a0ddb05-a436-4a77-ad19-9cd21a76c388",
+                                  "step": "asset"
+                                }
+                              ],
+                              "is-else-condition?": true,
+                              "id": "f7fcb40a-9274-4f4d-b763-e61c6dce456f",
+                              "step": "if-child"
+                            }
+                          ],
+                          "id": "d14c2d10-5fb3-46ac-a670-fd69ecbd78aa",
+                          "step": "if"
+                        }
+                      ],
+                      "lhs-fn-params": {
+                        "window": 350
+                      },
+                      "rhs-fn": "moving-average-price",
+                      "is-else-condition?": false,
+                      "lhs-fn": "moving-average-price",
+                      "lhs-val": "TLT",
+                      "id": "0bfd82cc-0465-4e9f-bf62-4636239a9277",
+                      "rhs-fn-params": {
+                        "window": 550
+                      },
+                      "comparator": "gt",
+                      "rhs-val": "TLT",
+                      "step": "if-child"
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "name": "iShares 20+ Year Treasury Bond ETF",
+                                  "ticker": "TLT",
+                                  "id": "b9fa0d48-fd86-4b17-b5d8-22034ccc58cc",
+                                  "step": "asset"
+                                }
+                              ],
+                              "lhs-fn-params": {
+                                "window": 60
+                              },
+                              "is-else-condition?": false,
+                              "rhs-fixed-value?": true,
+                              "lhs-fn": "relative-strength-index",
+                              "lhs-val": "TLT",
+                              "id": "bf64008c-b404-48ca-91a0-093c7db6db28",
+                              "comparator": "gt",
+                              "rhs-val": "53",
+                              "step": "if-child"
+                            },
+                            {
+                              "children": [
+                                {
+                                  "name": "iShares Short Treasury Bond ETF",
+                                  "ticker": "SHV",
+                                  "id": "4283f1cf-1a46-4ac3-ace6-cb5ebfe3ec4b",
+                                  "step": "asset"
+                                }
+                              ],
+                              "is-else-condition?": true,
+                              "id": "452b5610-74df-4a2a-bc91-e92061836df5",
+                              "step": "if-child"
+                            }
+                          ],
+                          "id": "6a41f3f2-1a54-48c1-ac42-27e49265ba04",
+                          "step": "if"
+                        }
+                      ],
+                      "is-else-condition?": true,
+                      "id": "dd4b58a0-a1c4-4813-843e-7a52723ade54",
+                      "step": "if-child"
+                    }
+                  ],
+                  "id": "3eacd27e-b991-4162-824e-6edc35ae796a",
+                  "step": "if"
+                }
+              ],
+              "id": "049df911-3a50-4292-8857-5517231f4465",
+              "step": "wt-cash-equal"
+            }
+          ],
+          "name": "TLT Macro Momentum",
+          "id": "d0ca220f-94d1-47b2-8d8e-f2604777dbdd",
+          "step": "group"
+        }
+      ]
+    }
+  ]
+}

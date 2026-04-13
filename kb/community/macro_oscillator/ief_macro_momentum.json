@@ -1,0 +1,71 @@
+{
+  "id": "ae614b25-4daf-4767-866e-58cecf0b8b80",
+  "step": "root",
+  "name": "IEF Macro Momentum",
+  "description": "",
+  "rebalance": "daily",
+  "children": [
+    {
+      "id": "ce2b674b-e0f0-4de2-b3bb-540a0256e6e7",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "iShares 7-10 Year Treasury Bond ETF",
+                          "ticker": "IEF",
+                          "id": "6744026f-063b-4450-a4cf-6c4e1bb3b5e4",
+                          "step": "asset"
+                        }
+                      ],
+                      "lhs-fn-params": {
+                        "window": 200
+                      },
+                      "rhs-fn": "moving-average-price",
+                      "is-else-condition?": false,
+                      "lhs-fn": "moving-average-price",
+                      "lhs-val": "IEF",
+                      "id": "5defd723-7c5a-49dc-bce9-cbd487503e09",
+                      "rhs-fn-params": {
+                        "window": 450
+                      },
+                      "comparator": "gt",
+                      "rhs-val": "IEF",
+                      "step": "if-child"
+                    },
+                    {
+                      "children": [
+                        {
+                          "name": "iShares Short Treasury Bond ETF",
+                          "ticker": "SHV",
+                          "id": "d89d4e48-3e00-416c-b0b9-8ff2e29f0dc1",
+                          "step": "asset"
+                        }
+                      ],
+                      "is-else-condition?": true,
+                      "id": "0f136708-b1e3-49de-a983-39550c264f33",
+                      "step": "if-child"
+                    }
+                  ],
+                  "id": "cc203899-d5bd-4eac-afd3-eb97768e80f2",
+                  "step": "if"
+                }
+              ],
+              "id": "2501a8c3-2c31-4a7c-8400-a05efedcd1b9",
+              "step": "wt-cash-equal"
+            }
+          ],
+          "name": "IEF Macro Momentum",
+          "id": "58206feb-883c-4522-8372-944f5792fc48",
+          "step": "group"
+        }
+      ]
+    }
+  ]
+}

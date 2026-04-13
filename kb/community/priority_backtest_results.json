@@ -1,0 +1,361 @@
+{
+  "macro_oscillator/qqq_core": {
+    "name": "QQQ Core",
+    "source": "macro_oscillator",
+    "results": {
+      "2022": {
+        "sharpe": 2.214,
+        "annret": 203.0,
+        "maxdd": 30.23
+      },
+      "2023": {
+        "sharpe": 3.012,
+        "annret": 129.0,
+        "maxdd": 10.5
+      },
+      "2024": {
+        "sharpe": 1.195,
+        "annret": 36.0,
+        "maxdd": 22.74
+      }
+    }
+  },
+  "macro_oscillator/votes_core": {
+    "name": "Votes Core",
+    "source": "macro_oscillator",
+    "results": {
+      "2022": {
+        "sharpe": -0.59,
+        "annret": -24.7,
+        "maxdd": 55.65
+      },
+      "2023": {
+        "sharpe": 0.989,
+        "annret": 19.7,
+        "maxdd": 14.96
+      },
+      "2024": {
+        "sharpe": -0.374,
+        "annret": -8.1,
+        "maxdd": 15.93
+      }
+    }
+  },
+  "macro_oscillator/semis_shield": {
+    "name": "Semis Shield",
+    "source": "macro_oscillator",
+    "results": {
+      "2022": {
+        "sharpe": -1.157,
+        "annret": -31.6,
+        "maxdd": 41.87
+      },
+      "2023": {
+        "sharpe": 1.566,
+        "annret": 64.9,
+        "maxdd": 20.28
+      },
+      "2024": {
+        "sharpe": 0.898,
+        "annret": 36.4,
+        "maxdd": 30.48
+      }
+    }
+  },
+  "macro_oscillator/tlt_macro_momentum": {
+    "name": "TLT Macro Momentum",
+    "source": "macro_oscillator",
+    "results": {
+      "2022": {
+        "sharpe": 2.608,
+        "annret": 0.9,
+        "maxdd": 0.4
+      },
+      "2023": {
+        "sharpe": 0.752,
+        "annret": 3.2,
+        "maxdd": 1.9
+      },
+      "2024": {
+        "sharpe": -0.521,
+        "annret": -4.0,
+        "maxdd": 7.92
+      }
+    }
+  },
+  "macro_oscillator/ief_macro_momentum": {
+    "name": "IEF Macro Momentum",
+    "source": "macro_oscillator",
+    "results": {
+      "2022": {
+        "sharpe": 2.608,
+        "annret": 0.9,
+        "maxdd": 0.4
+      },
+      "2023": {
+        "sharpe": 13.998,
+        "annret": 5.0,
+        "maxdd": 0.09
+      },
+      "2024": {
+        "sharpe": -0.098,
+        "annret": -0.4,
+        "maxdd": 5.97
+      }
+    }
+  },
+  "macro_oscillator/commodities_macro_momentum": {
+    "name": "Commodities Macro Momentum",
+    "source": "macro_oscillator",
+    "results": {
+      "2022": {
+        "sharpe": 1.089,
+        "annret": 17.5,
+        "maxdd": 17.2
+      },
+      "2023": {
+        "sharpe": -0.149,
+        "annret": -1.0,
+        "maxdd": 5.62
+      },
+      "2024": {
+        "sharpe": -0.227,
+        "annret": -0.9,
+        "maxdd": 7.38
+      }
+    }
+  },
+  "macro_oscillator/u_s__dollar": {
+    "name": "U.S. Dollar",
+    "source": "macro_oscillator",
+    "results": {
+      "2022": {
+        "sharpe": 1.052,
+        "annret": 9.7,
+        "maxdd": 8.71
+      },
+      "2023": {
+        "sharpe": -0.061,
+        "annret": -0.4,
+        "maxdd": 4.56
+      },
+      "2024": {
+        "sharpe": 1.674,
+        "annret": 9.5,
+        "maxdd": 4.25
+      }
+    }
+  },
+  "macro_oscillator/xlp_easy_money": {
+    "name": "XLP Easy Money",
+    "source": "macro_oscillator",
+    "results": {
+      "2022": {
+        "sharpe": -0.54,
+        "annret": -7.2,
+        "maxdd": 14.56
+      },
+      "2023": {
+        "sharpe": 0.171,
+        "annret": 1.0,
+        "maxdd": 7.21
+      },
+      "2024": {
+        "sharpe": 0.765,
+        "annret": 6.6,
+        "maxdd": 5.83
+      }
+    }
+  },
+  "macro_oscillator/gld_trend": {
+    "name": "GLD Trend",
+    "source": "macro_oscillator",
+    "results": {
+      "2022": {
+        "sharpe": 0.722,
+        "annret": 6.9,
+        "maxdd": 8.15
+      },
+      "2023": {
+        "sharpe": 0,
+        "annret": 0,
+        "maxdd": 0,
+        "error": "too-many-requests"
+      },
+      "2024": {
+        "sharpe": 0,
+        "annret": 0,
+        "maxdd": 0,
+        "error": "too-many-requests"
+      }
+    }
+  },
+  "sandy_dragon/long_volatility": {
+    "name": "Long Volatility",
+    "source": "sandy_dragon",
+    "results": {
+      "2022": {
+        "sharpe": -0.465,
+        "annret": -6.1,
+        "maxdd": 15.58
+      },
+      "2023": {
+        "sharpe": -0.853,
+        "annret": -3.4,
+        "maxdd": 5.52
+      },
+      "2024": {
+        "sharpe": -0.462,
+        "annret": -6.1,
+        "maxdd": 11.36
+      }
+    }
+  },
+  "sandy_dragon/trend_and_momentum": {
+    "name": "Trend and Momentum",
+    "source": "sandy_dragon",
+    "results": {
+      "2022": {
+        "sharpe": -0.36,
+        "annret": -4.6,
+        "maxdd": 10.35
+      },
+      "2023": {
+        "sharpe": 0.984,
+        "annret": 9.6,
+        "maxdd": 6.47
+      },
+      "2024": {
+        "sharpe": -0.338,
+        "annret": -3.8,
+        "maxdd": 11.18
+      }
+    }
+  },
+  "sandy_dragon/fiat_alternatives": {
+    "name": "Fiat Alternatives",
+    "source": "sandy_dragon",
+    "results": {
+      "2022": {
+        "sharpe": 0.12,
+        "annret": 0.7,
+        "maxdd": 21.03
+      },
+      "2023": {
+        "sharpe": 0.899,
+        "annret": 11.7,
+        "maxdd": 11.35
+      },
+      "2024": {
+        "sharpe": 1.662,
+        "annret": 26.8,
+        "maxdd": 8.12
+      }
+    }
+  },
+  "sandy_dragon/secular_growth_assets": {
+    "name": "Secular Growth Assets",
+    "source": "sandy_dragon",
+    "results": {
+      "2022": {
+        "sharpe": 1.587,
+        "annret": 182.7,
+        "maxdd": 52.2
+      },
+      "2023": {
+        "sharpe": 2.368,
+        "annret": 206.2,
+        "maxdd": 27.57
+      },
+      "2024": {
+        "sharpe": 1.352,
+        "annret": 77.5,
+        "maxdd": 34.58
+      }
+    }
+  },
+  "sandy_dragon/interest_rate_linked": {
+    "name": "Interest Rate Linked",
+    "source": "sandy_dragon",
+    "results": {
+      "2022": {
+        "sharpe": 2.471,
+        "annret": 61.1,
+        "maxdd": 7.81
+      },
+      "2023": {
+        "sharpe": -1.099,
+        "annret": -14.3,
+        "maxdd": 24.58
+      },
+      "2024": {
+        "sharpe": -0.991,
+        "annret": -14.8,
+        "maxdd": 21.55
+      }
+    }
+  },
+  "beta_baller_tame/copy_of_inflation_protected_simple": {
+    "name": "Copy of Inflation Protected Simple Beta Baller Signal | IEF>IBTK (Other IBT*, SPTI ,SCHQ are related) & SHY>SBND (IBTF, ITBG, ITBE are related)",
+    "source": "beta_baller_tame",
+    "results": {
+      "2022": {
+        "sharpe": 5.237,
+        "annret": 14031.6,
+        "maxdd": 33.47
+      },
+      "2023": {
+        "sharpe": 1.438,
+        "annret": 116.5,
+        "maxdd": 40.65
+      },
+      "2024": {
+        "sharpe": 1.407,
+        "annret": 97.8,
+        "maxdd": 35.25
+      }
+    }
+  },
+  "beta_baller_tame/copy_of_sisyphus_v0_0___optimized_s": {
+    "name": "Copy of Sisyphus V0.0 - Optimized Serenity",
+    "source": "beta_baller_tame",
+    "results": {
+      "2022": {
+        "sharpe": 4.442,
+        "annret": 337.4,
+        "maxdd": 9.49
+      },
+      "2023": {
+        "sharpe": 6.126,
+        "annret": 264.0,
+        "maxdd": 5.21
+      },
+      "2024": {
+        "sharpe": 3.674,
+        "annret": 227.4,
+        "maxdd": 9.31
+      }
+    }
+  },
+  "beta_baller_tame/combo_10_general_frankround_s_chick": {
+    "name": "Combo 10 General FrankRound's Chicken & Fried Rice V0.8 (99,10,2012)",
+    "source": "beta_baller_tame",
+    "results": {
+      "2022": {
+        "sharpe": 5.1,
+        "annret": 175.1,
+        "maxdd": 5.58
+      },
+      "2023": {
+        "sharpe": 5.427,
+        "annret": 109.4,
+        "maxdd": 7.25
+      },
+      "2024": {
+        "sharpe": 3.704,
+        "annret": 66.9,
+        "maxdd": 3.65
+      }
+    }
+  }
+}

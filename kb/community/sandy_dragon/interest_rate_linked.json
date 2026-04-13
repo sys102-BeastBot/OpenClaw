@@ -1,0 +1,946 @@
+{
+  "id": "aef7c57c-af7c-4517-8f65-2fbc0774fc32",
+  "step": "root",
+  "name": "Interest Rate Linked",
+  "description": "",
+  "rebalance": "daily",
+  "children": [
+    {
+      "id": "5e01a3ca-22dd-4544-8608-107a5efec427",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "id": "a8777279-014e-4583-9958-1da464023a73",
+          "step": "group",
+          "name": "Interest Rate Linked",
+          "children": [
+            {
+              "step": "wt-cash-equal",
+              "id": "512f39ab-9611-4742-9434-2a649ee0742b",
+              "children": [
+                {
+                  "id": "a558182d-7444-485b-aa86-393a46e2575b",
+                  "step": "group",
+                  "name": "Treasury Bonds",
+                  "children": [
+                    {
+                      "step": "wt-cash-equal",
+                      "id": "b036d972-593f-4aa7-a430-954e2d33b50d",
+                      "children": [
+                        {
+                          "id": "90946629-4a1f-441a-bf79-3d706db2fb76",
+                          "step": "group",
+                          "name": "Safer 20 Year Treasury Bonds with Leverage",
+                          "children": [
+                            {
+                              "step": "wt-cash-equal",
+                              "id": "d3b3c796-26fa-4bb5-9ae4-864c7924f4fd",
+                              "children": [
+                                {
+                                  "id": "8ff31681-44c9-423c-8b95-3a6a3a3928ca",
+                                  "step": "if",
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "id": "e5e9b3bb-9dea-4375-bc21-8591c07c44f1",
+                                          "step": "wt-cash-equal",
+                                          "children": [
+                                            {
+                                              "id": "14835214-2ed7-489d-883c-dda0dc8af144",
+                                              "step": "group",
+                                              "name": "If long term TLT is trending up",
+                                              "children": [
+                                                {
+                                                  "step": "wt-cash-equal",
+                                                  "id": "b252c282-be4a-4359-b71b-5fa309359d21",
+                                                  "children": [
+                                                    {
+                                                      "id": "17bf60e5-ab43-41a6-8824-fbe30e3a69ce",
+                                                      "step": "if",
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "id": "49dc6ff3-2f03-4ccc-8304-d1d1f1c76251",
+                                                              "step": "wt-cash-equal",
+                                                              "children": [
+                                                                {
+                                                                  "id": "41fcbca5-0e66-4c9c-8df2-fa1f157f72db",
+                                                                  "step": "group",
+                                                                  "name": "If medium term TLT is not overbought",
+                                                                  "children": [
+                                                                    {
+                                                                      "step": "wt-cash-equal",
+                                                                      "id": "0f60975b-5397-4f06-a9d3-8250dd7e0bb8",
+                                                                      "children": [
+                                                                        {
+                                                                          "id": "c415276f-824a-4d74-bf8d-9ea43c8a70cc",
+                                                                          "step": "if",
+                                                                          "children": [
+                                                                            {
+                                                                              "children": [
+                                                                                {
+                                                                                  "id": "6036a635-3b1c-4be2-8886-80e7ec1cc27d",
+                                                                                  "step": "wt-cash-equal",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "id": "3a89538c-264c-491b-a2f1-0e872b26c927",
+                                                                                      "step": "group",
+                                                                                      "name": "Short term TLT is trending up, buy 3x leveraged bull treasury bonds (TMF)",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "step": "wt-cash-equal",
+                                                                                          "id": "71c56b53-10e9-4b17-87e4-b97102ae85ec",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "name": "Direxion Daily 20+ Year Treasury Bull 3X Shares",
+                                                                                              "ticker": "TMF",
+                                                                                              "has_marketcap": false,
+                                                                                              "id": "e9187d22-fe15-4366-9867-d833b7989a21",
+                                                                                              "exchange": "ARCX",
+                                                                                              "price": 8.57,
+                                                                                              "step": "asset",
+                                                                                              "dollar_volume": 64579055.03
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ],
+                                                                                      "collapsed?": false
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ],
+                                                                              "rhs-fn": "moving-average-price",
+                                                                              "is-else-condition?": false,
+                                                                              "lhs-fn": "current-price",
+                                                                              "rhs-window-days": "5",
+                                                                              "lhs-val": "TLT",
+                                                                              "id": "8f1faa54-ee18-4411-90bd-e872176f76ea",
+                                                                              "comparator": "gt",
+                                                                              "rhs-val": "TLT",
+                                                                              "step": "if-child",
+                                                                              "collapsed?": false
+                                                                            },
+                                                                            {
+                                                                              "id": "f3bdf43e-989f-411d-b4ae-98ebb96139f2",
+                                                                              "step": "if-child",
+                                                                              "is-else-condition?": true,
+                                                                              "children": [
+                                                                                {
+                                                                                  "id": "634c66f5-c118-45e0-b6b2-f7a3c62b32bd",
+                                                                                  "step": "wt-cash-equal",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "id": "74b09599-f746-4b1d-a55c-86f50333587a",
+                                                                                      "step": "group",
+                                                                                      "name": "If short term TLT is trending down",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "step": "wt-cash-equal",
+                                                                                          "id": "b4dee962-a497-4662-a7d9-cc0e5a4301b1",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "id": "b397e88a-44f0-48a8-9f20-43ad9d453132",
+                                                                                              "step": "if",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "id": "db4d1663-5f3c-4847-ba46-8659256cfcc8",
+                                                                                                      "step": "wt-cash-equal",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "id": "1e3a3000-d516-498c-b781-bd8060fe5d7b",
+                                                                                                          "step": "group",
+                                                                                                          "name": "Medium term TLT is underbought, buy 3x leveraged bull treasury bonds (TMF)",
+                                                                                                          "children": [
+                                                                                                            {
+                                                                                                              "step": "wt-cash-equal",
+                                                                                                              "id": "3e2a659d-156e-497a-9d39-1d649b7297ff",
+                                                                                                              "children": [
+                                                                                                                {
+                                                                                                                  "name": "Direxion Daily 20+ Year Treasury Bull 3X Shares",
+                                                                                                                  "ticker": "TMF",
+                                                                                                                  "has_marketcap": false,
+                                                                                                                  "id": "324015d4-7924-4f58-9ade-f6899aee5883",
+                                                                                                                  "exchange": "ARCX",
+                                                                                                                  "price": 8.57,
+                                                                                                                  "step": "asset",
+                                                                                                                  "dollar_volume": 64579055.03
+                                                                                                                }
+                                                                                                              ]
+                                                                                                            }
+                                                                                                          ]
+                                                                                                        }
+                                                                                                      ]
+                                                                                                    }
+                                                                                                  ],
+                                                                                                  "is-else-condition?": false,
+                                                                                                  "rhs-fixed-value?": true,
+                                                                                                  "lhs-fn": "relative-strength-index",
+                                                                                                  "lhs-window-days": "14",
+                                                                                                  "lhs-val": "TLT",
+                                                                                                  "id": "e44e7eb7-0bf2-4001-ab9c-264162f94232",
+                                                                                                  "comparator": "lt",
+                                                                                                  "rhs-val": "20",
+                                                                                                  "step": "if-child",
+                                                                                                  "collapsed?": false
+                                                                                                },
+                                                                                                {
+                                                                                                  "id": "3850a693-33f8-454a-9554-a17bbfa5d5c7",
+                                                                                                  "step": "if-child",
+                                                                                                  "is-else-condition?": true,
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "id": "fe704eb4-8db2-42b4-899f-b281a9778e11",
+                                                                                                      "step": "wt-cash-specified",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "id": "a8bde6d3-8f34-4fe4-81ba-7333fc19b88e",
+                                                                                                          "step": "group",
+                                                                                                          "name": "Leveraged Safety",
+                                                                                                          "children": [
+                                                                                                            {
+                                                                                                              "step": "wt-cash-equal",
+                                                                                                              "id": "dba2eb1a-cb0f-4497-83cc-1ccdf0101575",
+                                                                                                              "children": [
+                                                                                                                {
+                                                                                                                  "id": "d1e7f7ee-dbcd-4ab4-af1c-48c65240ca59",
+                                                                                                                  "step": "if",
+                                                                                                                  "children": [
+                                                                                                                    {
+                                                                                                                      "children": [
+                                                                                                                        {
+                                                                                                                          "id": "216d5abe-540e-4ce7-b4ca-b5c2c2accfa0",
+                                                                                                                          "step": "group",
+                                                                                                                          "name": "Risk Off, Rising Rates",
+                                                                                                                          "children": [
+                                                                                                                            {
+                                                                                                                              "step": "wt-cash-equal",
+                                                                                                                              "id": "d00d69d2-a9e4-4c22-9614-2e22e7a8d3ed",
+                                                                                                                              "children": [
+                                                                                                                                {
+                                                                                                                                  "name": "Invesco DB US Dollar Index Bullish Fund",
+                                                                                                                                  "ticker": "UUP",
+                                                                                                                                  "has_marketcap": false,
+                                                                                                                                  "id": "81e388a8-bf26-4f9c-932a-6ee8513aab56",
+                                                                                                                                  "exchange": "ARCX",
+                                                                                                                                  "price": 30.15,
+                                                                                                                                  "step": "asset",
+                                                                                                                                  "dollar_volume": 142925170.5
+                                                                                                                                },
+                                                                                                                                {
+                                                                                                                                  "select?": true,
+                                                                                                                                  "children": [
+                                                                                                                                    {
+                                                                                                                                      "name": "ProShares Short QQQ",
+                                                                                                                                      "ticker": "PSQ",
+                                                                                                                                      "has_marketcap": false,
+                                                                                                                                      "id": "0c66ba7a-1a0e-40fd-abfa-43b862c91208",
+                                                                                                                                      "exchange": "ARCX",
+                                                                                                                                      "price": 14.92,
+                                                                                                                                      "step": "asset",
+                                                                                                                                      "dollar_volume": 256959386.68
+                                                                                                                                    },
+                                                                                                                                    {
+                                                                                                                                      "name": "ProShares Short S&P500",
+                                                                                                                                      "ticker": "SH",
+                                                                                                                                      "has_marketcap": false,
+                                                                                                                                      "id": "9c070631-e956-4e2a-8db5-2afe83735c96",
+                                                                                                                                      "exchange": "ARCX",
+                                                                                                                                      "price": 17.28,
+                                                                                                                                      "step": "asset",
+                                                                                                                                      "dollar_volume": 495953712.00000006
+                                                                                                                                    },
+                                                                                                                                    {
+                                                                                                                                      "name": "Invesco DB US Dollar Index Bullish Fund",
+                                                                                                                                      "ticker": "UUP",
+                                                                                                                                      "has_marketcap": false,
+                                                                                                                                      "id": "2207edd0-7d2a-426e-af83-b4bb2a14a5ae",
+                                                                                                                                      "exchange": "ARCX",
+                                                                                                                                      "price": 30.15,
+                                                                                                                                      "step": "asset",
+                                                                                                                                      "dollar_volume": 142925170.5
+                                                                                                                                    },
+                                                                                                                                    {
+                                                                                                                                      "name": "Direxion Daily 20+ Year Treasury Bear 3x Shares",
+                                                                                                                                      "ticker": "TMV",
+                                                                                                                                      "has_marketcap": false,
+                                                                                                                                      "id": "810efbb2-c14c-462a-98a0-8a98c61f8a9f",
+                                                                                                                                      "exchange": "ARCX",
+                                                                                                                                      "price": 133.65,
+                                                                                                                                      "step": "asset",
+                                                                                                                                      "dollar_volume": 87510010.5
+                                                                                                                                    }
+                                                                                                                                  ],
+                                                                                                                                  "select-fn": "bottom",
+                                                                                                                                  "select-n": "1",
+                                                                                                                                  "sort-by-fn": "relative-strength-index",
+                                                                                                                                  "sort-by-window-days": "20",
+                                                                                                                                  "weight": {
+                                                                                                                                    "num": 88,
+                                                                                                                                    "den": 100
+                                                                                                                                  },
+                                                                                                                                  "id": "e8c792f9-01e4-4cd6-b77a-bb47d59781be",
+                                                                                                                                  "sort-by?": true,
+                                                                                                                                  "collapsed-specified-weight?": false,
+                                                                                                                                  "step": "filter",
+                                                                                                                                  "collapsed?": false
+                                                                                                                                }
+                                                                                                                              ]
+                                                                                                                            }
+                                                                                                                          ],
+                                                                                                                          "collapsed?": false
+                                                                                                                        }
+                                                                                                                      ],
+                                                                                                                      "rhs-fn": "cumulative-return",
+                                                                                                                      "is-else-condition?": false,
+                                                                                                                      "rhs-fixed-value?": true,
+                                                                                                                      "lhs-fn": "moving-average-return",
+                                                                                                                      "rhs-window-days": "20",
+                                                                                                                      "lhs-window-days": "20",
+                                                                                                                      "lhs-val": "TLT",
+                                                                                                                      "id": "330dd5a9-eb8c-4725-a5e3-c5fc41428587",
+                                                                                                                      "comparator": "lt",
+                                                                                                                      "rhs-val": "0",
+                                                                                                                      "step": "if-child",
+                                                                                                                      "collapsed?": false
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                      "id": "ba273271-db06-4630-a3a2-2f5114e75595",
+                                                                                                                      "step": "if-child",
+                                                                                                                      "is-else-condition?": true,
+                                                                                                                      "children": [
+                                                                                                                        {
+                                                                                                                          "id": "deb7aa93-5eb0-49d9-8787-cab5f5f56aad",
+                                                                                                                          "step": "group",
+                                                                                                                          "name": "Risk Off, Falling Rates",
+                                                                                                                          "children": [
+                                                                                                                            {
+                                                                                                                              "step": "wt-cash-equal",
+                                                                                                                              "id": "d302c44d-affc-4284-a0d2-d8f8800bd6bb",
+                                                                                                                              "children": [
+                                                                                                                                {
+                                                                                                                                  "name": "SPDR Gold Shares",
+                                                                                                                                  "ticker": "GLD",
+                                                                                                                                  "has_marketcap": false,
+                                                                                                                                  "id": "fc5a84e6-4d19-4ec7-843a-40e0260f88e3",
+                                                                                                                                  "exchange": "ARCX",
+                                                                                                                                  "price": 173.71,
+                                                                                                                                  "step": "asset",
+                                                                                                                                  "dollar_volume": 1370390199.3400002
+                                                                                                                                },
+                                                                                                                                {
+                                                                                                                                  "name": "Direxion Daily 20+ Year Treasury Bull 3X Shares",
+                                                                                                                                  "ticker": "TMF",
+                                                                                                                                  "has_marketcap": false,
+                                                                                                                                  "id": "25681dcb-e308-4a64-bb18-5eac404ff5d0",
+                                                                                                                                  "exchange": "ARCX",
+                                                                                                                                  "price": 8.57,
+                                                                                                                                  "step": "asset",
+                                                                                                                                  "dollar_volume": 64579055.03
+                                                                                                                                },
+                                                                                                                                {
+                                                                                                                                  "name": "AGFiQ US Market Neutral Anti-Beta Fund",
+                                                                                                                                  "ticker": "BTAL",
+                                                                                                                                  "has_marketcap": false,
+                                                                                                                                  "id": "dddbaee9-462b-4ea3-aec3-b4f13e8cea61",
+                                                                                                                                  "exchange": "ARCX",
+                                                                                                                                  "price": 20.33,
+                                                                                                                                  "step": "asset",
+                                                                                                                                  "dollar_volume": 7713161.339999999
+                                                                                                                                },
+                                                                                                                                {
+                                                                                                                                  "name": "Consumer Staples Select Sector SPDR Fund",
+                                                                                                                                  "ticker": "XLP",
+                                                                                                                                  "has_marketcap": false,
+                                                                                                                                  "id": "ab99bfc4-e237-4f35-b305-e04bcfb1e5ae",
+                                                                                                                                  "exchange": "ARCX",
+                                                                                                                                  "price": 66.73,
+                                                                                                                                  "step": "asset",
+                                                                                                                                  "dollar_volume": 895695036.0200001
+                                                                                                                                }
+                                                                                                                              ]
+                                                                                                                            }
+                                                                                                                          ],
+                                                                                                                          "collapsed?": false
+                                                                                                                        }
+                                                                                                                      ]
+                                                                                                                    }
+                                                                                                                  ]
+                                                                                                                }
+                                                                                                              ]
+                                                                                                            }
+                                                                                                          ],
+                                                                                                          "weight": {
+                                                                                                            "num": 100,
+                                                                                                            "den": 100
+                                                                                                          },
+                                                                                                          "collapsed?": false
+                                                                                                        }
+                                                                                                      ]
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ],
+                                                                              "collapsed?": false
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ],
+                                                                  "collapsed?": false
+                                                                }
+                                                              ]
+                                                            }
+                                                          ],
+                                                          "is-else-condition?": false,
+                                                          "rhs-fixed-value?": true,
+                                                          "lhs-fn": "relative-strength-index",
+                                                          "lhs-window-days": "14",
+                                                          "lhs-val": "TLT",
+                                                          "id": "745837be-46e3-4912-ad30-b873884d3953",
+                                                          "comparator": "lt",
+                                                          "rhs-val": "50",
+                                                          "step": "if-child",
+                                                          "collapsed?": false
+                                                        },
+                                                        {
+                                                          "id": "1ab7e026-5f3f-44af-91f3-a289c3f27d1e",
+                                                          "step": "if-child",
+                                                          "is-else-condition?": true,
+                                                          "children": [
+                                                            {
+                                                              "id": "b73afe1a-0f7a-422e-b51d-c207c1862306",
+                                                              "step": "wt-cash-equal",
+                                                              "children": [
+                                                                {
+                                                                  "id": "c7658185-390f-47c3-8e6f-24efbb7f260c",
+                                                                  "step": "group",
+                                                                  "name": "Medium term TLT may be overbought",
+                                                                  "children": [
+                                                                    {
+                                                                      "step": "wt-cash-equal",
+                                                                      "id": "c2ced612-22d1-4a18-9207-a7a65546e22e",
+                                                                      "children": [
+                                                                        {
+                                                                          "id": "497a327c-0825-44c1-8448-62b149bb13a1",
+                                                                          "step": "if",
+                                                                          "children": [
+                                                                            {
+                                                                              "children": [
+                                                                                {
+                                                                                  "id": "8f33a04a-57b7-4f3e-962a-d925071a3b83",
+                                                                                  "step": "wt-cash-equal",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "id": "1ab08178-1425-463b-88c5-58d56f4a90ad",
+                                                                                      "step": "group",
+                                                                                      "name": "Medium term TLT is overbought, buy 3x leveraged bear treasury bonds (TMV)",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "step": "wt-cash-equal",
+                                                                                          "id": "5a537c07-64ba-4793-bfa7-9156f2bdb815",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "name": "Direxion Daily 20+ Year Treasury Bear 3x Shares",
+                                                                                              "ticker": "TMV",
+                                                                                              "has_marketcap": false,
+                                                                                              "id": "82da5254-5e54-4da5-bd54-1c1618752676",
+                                                                                              "exchange": "ARCX",
+                                                                                              "price": 133.65,
+                                                                                              "step": "asset",
+                                                                                              "dollar_volume": 87510010.5
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ],
+                                                                                      "collapsed?": true
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ],
+                                                                              "is-else-condition?": false,
+                                                                              "rhs-fixed-value?": true,
+                                                                              "lhs-fn": "relative-strength-index",
+                                                                              "lhs-window-days": "14",
+                                                                              "lhs-val": "TLT",
+                                                                              "id": "07545396-dbd2-4a92-97bc-6cd8ed96cf4c",
+                                                                              "comparator": "gt",
+                                                                              "rhs-val": "80",
+                                                                              "step": "if-child",
+                                                                              "collapsed?": false
+                                                                            },
+                                                                            {
+                                                                              "id": "bb558314-8ff4-4205-827e-ef7ebfce4cc3",
+                                                                              "step": "if-child",
+                                                                              "is-else-condition?": true,
+                                                                              "children": [
+                                                                                {
+                                                                                  "id": "9557e88b-599f-4566-bb54-5b0ecfeb47a5",
+                                                                                  "step": "wt-cash-specified",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "id": "8f3aa475-e7a7-461b-a4db-8954cb4987b4",
+                                                                                      "step": "group",
+                                                                                      "name": "Leveraged Safety",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "step": "wt-cash-specified",
+                                                                                          "id": "1eedcdda-fc41-4edb-9d97-362082450a17",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "id": "feb120fa-bc6a-4cf0-ba6e-72cfd1532f1c",
+                                                                                              "step": "if",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "id": "32f36be8-98d3-4be0-83a7-5e39ad97220b",
+                                                                                                      "step": "group",
+                                                                                                      "name": "Risk Off, Rising Rates",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "step": "wt-cash-equal",
+                                                                                                          "id": "e1573a2d-5beb-4755-894d-1014f7c04422",
+                                                                                                          "children": [
+                                                                                                            {
+                                                                                                              "name": "Invesco DB US Dollar Index Bullish Fund",
+                                                                                                              "ticker": "UUP",
+                                                                                                              "has_marketcap": false,
+                                                                                                              "id": "96fcbff2-794d-446e-80b9-e6dae7f6e160",
+                                                                                                              "exchange": "ARCX",
+                                                                                                              "price": 30.15,
+                                                                                                              "step": "asset",
+                                                                                                              "dollar_volume": 142925170.5
+                                                                                                            },
+                                                                                                            {
+                                                                                                              "select?": true,
+                                                                                                              "children": [
+                                                                                                                {
+                                                                                                                  "name": "ProShares Short QQQ",
+                                                                                                                  "ticker": "PSQ",
+                                                                                                                  "has_marketcap": false,
+                                                                                                                  "id": "911b671e-9d4c-471f-952c-e3c6b68e55f9",
+                                                                                                                  "exchange": "ARCX",
+                                                                                                                  "price": 14.92,
+                                                                                                                  "step": "asset",
+                                                                                                                  "dollar_volume": 256959386.68
+                                                                                                                },
+                                                                                                                {
+                                                                                                                  "name": "ProShares Short S&P500",
+                                                                                                                  "ticker": "SH",
+                                                                                                                  "has_marketcap": false,
+                                                                                                                  "id": "5d2548ea-e0df-41df-a3f5-3e5ef8c1018d",
+                                                                                                                  "exchange": "ARCX",
+                                                                                                                  "price": 17.28,
+                                                                                                                  "step": "asset",
+                                                                                                                  "dollar_volume": 495953712.00000006
+                                                                                                                },
+                                                                                                                {
+                                                                                                                  "name": "Invesco DB US Dollar Index Bullish Fund",
+                                                                                                                  "ticker": "UUP",
+                                                                                                                  "has_marketcap": false,
+                                                                                                                  "id": "788b517d-ea6b-44b4-8b66-e8eb13fa5179",
+                                                                                                                  "exchange": "ARCX",
+                                                                                                                  "price": 30.15,
+                                                                                                                  "step": "asset",
+                                                                                                                  "dollar_volume": 142925170.5
+                                                                                                                },
+                                                                                                                {
+                                                                                                                  "name": "Direxion Daily 20+ Year Treasury Bear 3x Shares",
+                                                                                                                  "ticker": "TMV",
+                                                                                                                  "has_marketcap": false,
+                                                                                                                  "id": "68c264b1-ea13-4e97-a70c-8a8b410b9c20",
+                                                                                                                  "exchange": "ARCX",
+                                                                                                                  "price": 133.65,
+                                                                                                                  "step": "asset",
+                                                                                                                  "dollar_volume": 87510010.5
+                                                                                                                }
+                                                                                                              ],
+                                                                                                              "select-fn": "bottom",
+                                                                                                              "select-n": "1",
+                                                                                                              "sort-by-fn": "relative-strength-index",
+                                                                                                              "sort-by-window-days": "20",
+                                                                                                              "weight": {
+                                                                                                                "num": 88,
+                                                                                                                "den": 100
+                                                                                                              },
+                                                                                                              "id": "f8de7b15-939a-48d0-b95f-d39c9d7e377c",
+                                                                                                              "sort-by?": true,
+                                                                                                              "collapsed-specified-weight?": false,
+                                                                                                              "step": "filter"
+                                                                                                            }
+                                                                                                          ]
+                                                                                                        }
+                                                                                                      ],
+                                                                                                      "collapsed?": true
+                                                                                                    }
+                                                                                                  ],
+                                                                                                  "rhs-fn": "cumulative-return",
+                                                                                                  "is-else-condition?": false,
+                                                                                                  "rhs-fixed-value?": true,
+                                                                                                  "lhs-fn": "moving-average-return",
+                                                                                                  "rhs-window-days": "20",
+                                                                                                  "lhs-window-days": "20",
+                                                                                                  "lhs-val": "TLT",
+                                                                                                  "id": "9e652280-60ff-40bd-bf76-067602e762ae",
+                                                                                                  "comparator": "lt",
+                                                                                                  "rhs-val": "0",
+                                                                                                  "step": "if-child",
+                                                                                                  "collapsed?": false
+                                                                                                },
+                                                                                                {
+                                                                                                  "id": "2f04bfae-5793-4b01-b428-f5d3746abd7c",
+                                                                                                  "step": "if-child",
+                                                                                                  "is-else-condition?": true,
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "id": "e659f19e-4bb5-4219-a4c4-93b877826c06",
+                                                                                                      "step": "group",
+                                                                                                      "name": "Risk Off, Falling Rates",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "step": "wt-cash-equal",
+                                                                                                          "id": "5ab90083-e9b4-424e-ae33-42df3ec66c24",
+                                                                                                          "children": [
+                                                                                                            {
+                                                                                                              "name": "SPDR Gold Shares",
+                                                                                                              "ticker": "GLD",
+                                                                                                              "has_marketcap": false,
+                                                                                                              "id": "a2871d21-4a43-4a6b-a69b-f8afb80d1e82",
+                                                                                                              "exchange": "ARCX",
+                                                                                                              "price": 173.71,
+                                                                                                              "step": "asset",
+                                                                                                              "dollar_volume": 1370390199.3400002
+                                                                                                            },
+                                                                                                            {
+                                                                                                              "name": "Direxion Daily 20+ Year Treasury Bull 3X Shares",
+                                                                                                              "ticker": "TMF",
+                                                                                                              "has_marketcap": false,
+                                                                                                              "id": "3989e8d9-757f-4b41-8d80-880d56f1e0cc",
+                                                                                                              "exchange": "ARCX",
+                                                                                                              "price": 8.57,
+                                                                                                              "step": "asset",
+                                                                                                              "dollar_volume": 64579055.03
+                                                                                                            },
+                                                                                                            {
+                                                                                                              "name": "AGFiQ US Market Neutral Anti-Beta Fund",
+                                                                                                              "ticker": "BTAL",
+                                                                                                              "has_marketcap": false,
+                                                                                                              "id": "8dc66358-b655-4d71-ac7d-c600a3cd1c72",
+                                                                                                              "exchange": "ARCX",
+                                                                                                              "price": 20.33,
+                                                                                                              "step": "asset",
+                                                                                                              "dollar_volume": 7713161.339999999
+                                                                                                            },
+                                                                                                            {
+                                                                                                              "name": "Consumer Staples Select Sector SPDR Fund",
+                                                                                                              "ticker": "XLP",
+                                                                                                              "has_marketcap": false,
+                                                                                                              "id": "eea8cb33-aa74-4ddb-b8d6-e41de7779fa2",
+                                                                                                              "exchange": "ARCX",
+                                                                                                              "price": 66.73,
+                                                                                                              "step": "asset",
+                                                                                                              "dollar_volume": 895695036.0200001
+                                                                                                            }
+                                                                                                          ]
+                                                                                                        }
+                                                                                                      ],
+                                                                                                      "collapsed?": true
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ],
+                                                                                              "weight": {
+                                                                                                "num": 100,
+                                                                                                "den": 100
+                                                                                              }
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ],
+                                                                                      "weight": {
+                                                                                        "num": 100,
+                                                                                        "den": 100
+                                                                                      },
+                                                                                      "collapsed?": true
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ],
+                                                                  "collapsed?": true
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ],
+                                              "collapsed?": true
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "rhs-fn": "moving-average-price",
+                                      "is-else-condition?": false,
+                                      "lhs-fn": "current-price",
+                                      "rhs-window-days": "200",
+                                      "lhs-val": "TLT",
+                                      "id": "6ec4b48d-489d-44b2-92d0-b27739d5dfee",
+                                      "comparator": "gt",
+                                      "rhs-val": "TLT",
+                                      "step": "if-child"
+                                    },
+                                    {
+                                      "id": "28bdec21-ac0a-4473-9f37-ad434dc6bbf5",
+                                      "step": "if-child",
+                                      "is-else-condition?": true,
+                                      "children": [
+                                        {
+                                          "id": "560e96ac-9c36-40bf-809d-50c5dda33813",
+                                          "step": "group",
+                                          "name": "Safety: Long Term, 2 Least Volatile",
+                                          "children": [
+                                            {
+                                              "step": "wt-cash-equal",
+                                              "id": "ad8e93e0-7464-4ea0-9c8d-a009c9348222",
+                                              "children": [
+                                                {
+                                                  "id": "16d8e6b2-72b8-4c31-8561-fca7fd47ceb4",
+                                                  "step": "group",
+                                                  "name": "Leveraged Safety",
+                                                  "children": [
+                                                    {
+                                                      "step": "wt-cash-specified",
+                                                      "id": "6b82cd5a-db71-43dc-b813-6f95e974c3e5",
+                                                      "children": [
+                                                        {
+                                                          "id": "c71a1e22-4821-4d83-a662-e3d8c38cb539",
+                                                          "step": "if",
+                                                          "children": [
+                                                            {
+                                                              "children": [
+                                                                {
+                                                                  "id": "9ae1cee8-b507-41f1-911d-66d05641844e",
+                                                                  "step": "group",
+                                                                  "name": "Risk Off, Rising Rates",
+                                                                  "children": [
+                                                                    {
+                                                                      "step": "wt-cash-equal",
+                                                                      "id": "94872954-7876-4aa9-885b-a97860ee27f4",
+                                                                      "children": [
+                                                                        {
+                                                                          "name": "Invesco DB US Dollar Index Bullish Fund",
+                                                                          "ticker": "UUP",
+                                                                          "has_marketcap": false,
+                                                                          "id": "58d1254d-45be-446a-953d-fb4d8e0643da",
+                                                                          "exchange": "ARCX",
+                                                                          "price": 30.15,
+                                                                          "step": "asset",
+                                                                          "dollar_volume": 142925170.5
+                                                                        },
+                                                                        {
+                                                                          "select?": true,
+                                                                          "children": [
+                                                                            {
+                                                                              "name": "ProShares Short QQQ",
+                                                                              "ticker": "PSQ",
+                                                                              "has_marketcap": false,
+                                                                              "id": "9b505568-8147-4452-a357-4be940f65472",
+                                                                              "exchange": "ARCX",
+                                                                              "price": 14.92,
+                                                                              "step": "asset",
+                                                                              "dollar_volume": 256959386.68
+                                                                            },
+                                                                            {
+                                                                              "name": "ProShares Short S&P500",
+                                                                              "ticker": "SH",
+                                                                              "has_marketcap": false,
+                                                                              "id": "b87e9b6d-4c51-4b81-8f4a-3f1370d71dd0",
+                                                                              "exchange": "ARCX",
+                                                                              "price": 17.28,
+                                                                              "step": "asset",
+                                                                              "dollar_volume": 495953712.00000006
+                                                                            },
+                                                                            {
+                                                                              "name": "Invesco DB US Dollar Index Bullish Fund",
+                                                                              "ticker": "UUP",
+                                                                              "has_marketcap": false,
+                                                                              "id": "0cf790a2-d32f-49b5-9e21-ee0d07a490df",
+                                                                              "exchange": "ARCX",
+                                                                              "price": 30.15,
+                                                                              "step": "asset",
+                                                                              "dollar_volume": 142925170.5
+                                                                            },
+                                                                            {
+                                                                              "name": "Direxion Daily 20+ Year Treasury Bear 3x Shares",
+                                                                              "ticker": "TMV",
+                                                                              "has_marketcap": false,
+                                                                              "id": "7374977d-af5b-41e5-a65f-6377f52ccd0e",
+                                                                              "exchange": "ARCX",
+                                                                              "price": 133.65,
+                                                                              "step": "asset",
+                                                                              "dollar_volume": 87510010.5
+                                                                            }
+                                                                          ],
+                                                                          "select-fn": "bottom",
+                                                                          "select-n": "1",
+                                                                          "sort-by-fn": "relative-strength-index",
+                                                                          "sort-by-window-days": "20",
+                                                                          "weight": {
+                                                                            "num": 88,
+                                                                            "den": 100
+                                                                          },
+                                                                          "id": "f574c41e-e925-429e-86be-b8a382c07534",
+                                                                          "sort-by?": true,
+                                                                          "collapsed-specified-weight?": false,
+                                                                          "step": "filter"
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ],
+                                                                  "collapsed?": true
+                                                                }
+                                                              ],
+                                                              "rhs-fn": "cumulative-return",
+                                                              "is-else-condition?": false,
+                                                              "rhs-fixed-value?": true,
+                                                              "lhs-fn": "moving-average-return",
+                                                              "rhs-window-days": "20",
+                                                              "lhs-window-days": "20",
+                                                              "lhs-val": "TLT",
+                                                              "id": "e079781f-04da-45d1-b203-7be2369b059c",
+                                                              "comparator": "lt",
+                                                              "rhs-val": "0",
+                                                              "step": "if-child",
+                                                              "collapsed?": false
+                                                            },
+                                                            {
+                                                              "id": "63667ea2-2fda-4c48-8783-f4b90378553c",
+                                                              "step": "if-child",
+                                                              "is-else-condition?": true,
+                                                              "children": [
+                                                                {
+                                                                  "id": "7bb77f4a-6faa-4a06-a083-4457e7627df8",
+                                                                  "step": "group",
+                                                                  "name": "Risk Off, Falling Rates",
+                                                                  "children": [
+                                                                    {
+                                                                      "step": "wt-cash-equal",
+                                                                      "id": "cdde843c-2643-47ef-99fc-f6b618f37483",
+                                                                      "children": [
+                                                                        {
+                                                                          "name": "SPDR Gold Shares",
+                                                                          "ticker": "GLD",
+                                                                          "has_marketcap": false,
+                                                                          "id": "b343eb4d-518d-4d10-a307-4d3f568a4f1e",
+                                                                          "exchange": "ARCX",
+                                                                          "price": 173.71,
+                                                                          "step": "asset",
+                                                                          "dollar_volume": 1370390199.3400002
+                                                                        },
+                                                                        {
+                                                                          "name": "Direxion Daily 20+ Year Treasury Bull 3X Shares",
+                                                                          "ticker": "TMF",
+                                                                          "has_marketcap": false,
+                                                                          "id": "8ddd79ac-e79a-4d41-b154-707b1f0e5107",
+                                                                          "exchange": "ARCX",
+                                                                          "price": 8.57,
+                                                                          "step": "asset",
+                                                                          "dollar_volume": 64579055.03
+                                                                        },
+                                                                        {
+                                                                          "name": "AGFiQ US Market Neutral Anti-Beta Fund",
+                                                                          "ticker": "BTAL",
+                                                                          "has_marketcap": false,
+                                                                          "id": "14e90bfe-5a00-46c3-9fec-5187f3fdc4de",
+                                                                          "exchange": "ARCX",
+                                                                          "price": 20.33,
+                                                                          "step": "asset",
+                                                                          "dollar_volume": 7713161.339999999
+                                                                        },
+                                                                        {
+                                                                          "name": "Consumer Staples Select Sector SPDR Fund",
+                                                                          "ticker": "XLP",
+                                                                          "has_marketcap": false,
+                                                                          "id": "3be13c93-4d26-4ada-8ccf-b953a23c5703",
+                                                                          "exchange": "ARCX",
+                                                                          "price": 66.73,
+                                                                          "step": "asset",
+                                                                          "dollar_volume": 895695036.0200001
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ],
+                                                                  "collapsed?": true
+                                                                }
+                                                              ]
+                                                            }
+                                                          ],
+                                                          "weight": {
+                                                            "num": 100,
+                                                            "den": 100
+                                                          }
+                                                        }
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "collapsed?": true,
+                                                  "weight": {
+                                                    "num": 50,
+                                                    "den": 100
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          ],
+                                          "collapsed?": true
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "collapsed?": true
+                        }
+                      ]
+                    }
+                  ],
+                  "collapsed?": true,
+                  "weight": {
+                    "num": "45",
+                    "den": 100
+                  }
+                }
+              ],
+              "window-days": "26"
+            }
+          ],
+          "collapsed?": true
+        }
+      ]
+    }
+  ]
+}

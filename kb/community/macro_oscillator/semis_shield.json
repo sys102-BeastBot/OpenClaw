@@ -1,0 +1,148 @@
+{
+  "id": "561e1f98-34f7-436d-8b66-56a8d44962be",
+  "step": "root",
+  "name": "Semis Shield",
+  "description": "",
+  "rebalance": "daily",
+  "children": [
+    {
+      "id": "d7cb526e-8526-4fdd-869b-e147316bb99b",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "AGF U.S. Market Neutral Anti-Beta Fund",
+                          "ticker": "BTAL",
+                          "id": "2af93380-794a-4327-8a1d-d57fce18ccca",
+                          "step": "asset"
+                        }
+                      ],
+                      "lhs-fn-params": {
+                        "window": 10
+                      },
+                      "is-else-condition?": false,
+                      "rhs-fixed-value?": true,
+                      "lhs-fn": "relative-strength-index",
+                      "lhs-val": "SOXX",
+                      "id": "4dd116d6-7414-4f7e-9c1b-bc26725d2989",
+                      "comparator": "gt",
+                      "rhs-val": "79",
+                      "step": "if-child"
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "name": "Direxion Daily Semiconductor Bull 3X Shares",
+                                  "ticker": "SOXL",
+                                  "id": "504f209b-3954-43b4-b9fe-c52c8c6f25b7",
+                                  "step": "asset"
+                                }
+                              ],
+                              "lhs-fn-params": {
+                                "window": 10
+                              },
+                              "is-else-condition?": false,
+                              "rhs-fixed-value?": true,
+                              "lhs-fn": "relative-strength-index",
+                              "lhs-val": "SOXX",
+                              "id": "fdde67ca-e0a2-4c33-bb04-f65a762b97b4",
+                              "comparator": "lt",
+                              "rhs-val": "29",
+                              "step": "if-child"
+                            },
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "name": "Direxion Daily Semiconductor Bull 3X Shares",
+                                              "ticker": "SOXL",
+                                              "id": "dfcce051-0cf8-46af-8b18-33a85bef7875",
+                                              "step": "asset"
+                                            },
+                                            {
+                                              "name": "AGF U.S. Market Neutral Anti-Beta Fund",
+                                              "ticker": "BTAL",
+                                              "id": "b49f561b-c257-4694-955d-d8c061df3fde",
+                                              "step": "asset"
+                                            }
+                                          ],
+                                          "id": "6874ad48-4bc7-4e82-a983-c1ea4aa4c826",
+                                          "step": "wt-cash-equal"
+                                        }
+                                      ],
+                                      "rhs-fn": "moving-average-price",
+                                      "is-else-condition?": false,
+                                      "lhs-fn": "current-price",
+                                      "lhs-val": "SOXX",
+                                      "id": "e17df430-1371-42de-92db-12edbaf344e2",
+                                      "rhs-fn-params": {
+                                        "window": 200
+                                      },
+                                      "comparator": "gt",
+                                      "rhs-val": "SOXX",
+                                      "step": "if-child"
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "name": "iShares Short Treasury Bond ETF",
+                                          "ticker": "SHV",
+                                          "id": "0a876377-84f1-4f24-a9e1-540d80e98b49",
+                                          "step": "asset"
+                                        }
+                                      ],
+                                      "is-else-condition?": true,
+                                      "id": "e7146151-4ab1-490b-aa61-6465abe26acd",
+                                      "step": "if-child"
+                                    }
+                                  ],
+                                  "id": "7b228099-5fdc-4f80-b55e-f014bc29c009",
+                                  "step": "if"
+                                }
+                              ],
+                              "is-else-condition?": true,
+                              "id": "c4ac24a8-2d95-4ac7-bc7c-9d82e682fe2b",
+                              "step": "if-child"
+                            }
+                          ],
+                          "id": "b5484198-1593-4004-8ce4-e66753cd0891",
+                          "step": "if"
+                        }
+                      ],
+                      "is-else-condition?": true,
+                      "id": "c52ac51c-f924-4fb3-9dc5-081671a4163b",
+                      "step": "if-child"
+                    }
+                  ],
+                  "id": "792dd43f-b8e9-44d4-b14e-66b5c4901adc",
+                  "step": "if"
+                }
+              ],
+              "id": "ad282c36-a615-4f42-bb50-2b8e222daea5",
+              "step": "wt-cash-equal"
+            }
+          ],
+          "name": "Semis Shield",
+          "id": "7affd935-0b82-4b32-9b26-cf7246a1e5d6",
+          "step": "group"
+        }
+      ]
+    }
+  ]
+}

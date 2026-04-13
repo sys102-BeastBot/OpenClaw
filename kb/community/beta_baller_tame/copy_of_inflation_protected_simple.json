@@ -1,0 +1,661 @@
+{
+  "id": "bf74cd8e-82a8-4a45-953c-6d877ee046ce",
+  "step": "root",
+  "name": "Copy of Inflation Protected Simple Beta Baller Signal | IEF>IBTK (Other IBT*, SPTI ,SCHQ are related) & SHY>SBND (IBTF, ITBG, ITBE are related)",
+  "description": "",
+  "rebalance": "daily",
+  "children": [
+    {
+      "id": "6caf6a70-2350-4a87-a994-c95ca6a9aa95",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "id": "0d1afd3e-1587-4794-8b0f-52a52606f323",
+          "step": "group",
+          "name": "Copy of Inflation Protected Simple Beta Baller Signal | IEF>IBTK (Other IBT*, SPTI ,SCHQ are related) & SHY>SBND (IBTF, ITBG, ITBE are related)",
+          "children": [
+            {
+              "step": "wt-cash-equal",
+              "id": "8f4a82cc-a39c-4f96-8359-67925c1539b2",
+              "children": [
+                {
+                  "id": "733bb9ae-bc79-4966-89e4-9d887afa8074",
+                  "step": "wt-cash-equal",
+                  "children": [
+                    {
+                      "id": "abcc5351-2603-43a4-b956-93f64d6691d0",
+                      "step": "if",
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "id": "693c8d16-a7aa-4ffd-8a72-6d8427af6dc1",
+                              "step": "wt-cash-equal",
+                              "children": [
+                                {
+                                  "id": "4ccf0b9d-8931-4d23-b3a7-a0aa72aa06e4",
+                                  "step": "if",
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "id": "d80614fe-7444-406b-807a-afb4844687d2",
+                                          "step": "wt-cash-equal",
+                                          "children": [
+                                            {
+                                              "id": "5544fba6-8fba-4811-af67-e310ccd7a35d",
+                                              "step": "group",
+                                              "name": "3x Health Stalpes Treasures",
+                                              "children": [
+                                                {
+                                                  "step": "wt-cash-equal",
+                                                  "id": "e320212c-d9c1-45e9-a90a-b7f328234e92",
+                                                  "children": [
+                                                    {
+                                                      "sort-by-fn": "relative-strength-index",
+                                                      "sort-by-fn-params": {
+                                                        "window": 10
+                                                      },
+                                                      "select-fn": "bottom",
+                                                      "select-n": "1",
+                                                      "step": "filter",
+                                                      "children": [
+                                                        {
+                                                          "ticker": "UGE",
+                                                          "exchange": "ARCX",
+                                                          "name": "ProShares Trust - ProShares Ultra Consumer Staples",
+                                                          "step": "asset",
+                                                          "id": "7693b156-e8bd-46ad-ae1f-891418488d73",
+                                                          "children": [],
+                                                          "collapsed?": true
+                                                        },
+                                                        {
+                                                          "ticker": "CURE",
+                                                          "exchange": "ARCX",
+                                                          "name": "Direxion Shares ETF Trust - Direxion Daily Healthcare Bull 3X Shares",
+                                                          "step": "asset",
+                                                          "id": "7c5065c7-0cdf-446e-a82a-025cc6416d27",
+                                                          "children": [],
+                                                          "collapsed?": true
+                                                        },
+                                                        {
+                                                          "ticker": "TMF",
+                                                          "exchange": "ARCX",
+                                                          "name": "Direxion Shares ETF Trust - Direxion Daily 20+ Year Treasury Bull 3X Shares",
+                                                          "id": "066db20c-5ca8-4a10-a51a-fec2f2a310da",
+                                                          "step": "asset",
+                                                          "children": [],
+                                                          "collapsed?": true
+                                                        }
+                                                      ],
+                                                      "id": "a3c37a41-8396-421b-9b06-9faf1931311b",
+                                                      "collapsed?": true
+                                                    }
+                                                  ],
+                                                  "collapsed?": true
+                                                }
+                                              ],
+                                              "collapsed?": true
+                                            }
+                                          ],
+                                          "collapsed?": true
+                                        }
+                                      ],
+                                      "lhs-fn-params": {
+                                        "window": 20
+                                      },
+                                      "rhs-fn": "moving-average-return",
+                                      "is-else-condition?": false,
+                                      "lhs-fn": "moving-average-return",
+                                      "lhs-val": "VTIP",
+                                      "id": "eb221b73-267e-4749-a0cd-e51fb7d26e7e",
+                                      "rhs-fn-params": {
+                                        "window": 200
+                                      },
+                                      "comparator": "gt",
+                                      "rhs-val": "VTIP",
+                                      "step": "if-child",
+                                      "collapsed?": true
+                                    },
+                                    {
+                                      "id": "7000c497-05ca-4bf4-9786-ff998918349d",
+                                      "step": "if-child",
+                                      "is-else-condition?": true,
+                                      "children": [
+                                        {
+                                          "id": "7344d160-8fbe-4273-a81b-c24b1554d187",
+                                          "step": "group",
+                                          "name": "Simple Beta Baller Signal | IEF>IBTK (Other IBT*, SPTI ,SCHQ are related) & SHY>SBND (IBTF, ITBG, ITBE are related)",
+                                          "children": [
+                                            {
+                                              "step": "wt-cash-equal",
+                                              "id": "588bb653-e5fd-4d24-9352-e5374e55b497",
+                                              "children": [
+                                                {
+                                                  "id": "c012a19f-c4d2-4f26-80c0-13f74b9467b3",
+                                                  "step": "if",
+                                                  "children": [
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "id": "75bbf27c-8f6c-4fa0-b029-df5e31c081f2",
+                                                          "step": "wt-cash-equal",
+                                                          "children": [
+                                                            {
+                                                              "id": "c803cdcb-b90a-4251-afef-f635b47d9c11",
+                                                              "step": "if",
+                                                              "children": [
+                                                                {
+                                                                  "children": [
+                                                                    {
+                                                                      "children": [],
+                                                                      "name": "iShares 1-3 Year Treasury Bond ETF",
+                                                                      "ticker": "SHY",
+                                                                      "has_marketcap": false,
+                                                                      "id": "50820a52-ee39-4cd9-99ef-d787ee60ee48",
+                                                                      "exchange": "XNAS",
+                                                                      "price": 80.59,
+                                                                      "step": "asset",
+                                                                      "dollar_volume": 388830067.87,
+                                                                      "collapsed?": true
+                                                                    }
+                                                                  ],
+                                                                  "is-else-condition?": false,
+                                                                  "rhs-fixed-value?": true,
+                                                                  "lhs-fn": "relative-strength-index",
+                                                                  "lhs-window-days": "6",
+                                                                  "lhs-val": "SPY",
+                                                                  "id": "929d0bb2-a238-4a29-bef4-7a9bacbee77f",
+                                                                  "comparator": "gt",
+                                                                  "rhs-val": "75",
+                                                                  "step": "if-child",
+                                                                  "collapsed?": true
+                                                                },
+                                                                {
+                                                                  "id": "0859948a-ace3-4eef-b27a-8f81882d1172",
+                                                                  "step": "if-child",
+                                                                  "is-else-condition?": true,
+                                                                  "children": [
+                                                                    {
+                                                                      "id": "c14e7a14-5ee9-4de9-8542-07ee3dd48cab",
+                                                                      "step": "wt-cash-equal",
+                                                                      "children": [
+                                                                        {
+                                                                          "children": [],
+                                                                          "name": "Direxion Daily Semiconductor Bull 3x Shares",
+                                                                          "ticker": "SOXL",
+                                                                          "has_marketcap": false,
+                                                                          "id": "73c064a0-695c-4a6e-8063-4dfd723d05c3",
+                                                                          "exchange": "ARCX",
+                                                                          "price": 11.19,
+                                                                          "step": "asset",
+                                                                          "dollar_volume": 1275587444.04,
+                                                                          "collapsed?": true
+                                                                        }
+                                                                      ],
+                                                                      "collapsed?": true
+                                                                    }
+                                                                  ],
+                                                                  "collapsed?": true
+                                                                }
+                                                              ],
+                                                              "collapsed?": true
+                                                            }
+                                                          ],
+                                                          "collapsed?": true
+                                                        }
+                                                      ],
+                                                      "rhs-fn": "relative-strength-index",
+                                                      "is-else-condition?": false,
+                                                      "lhs-fn": "relative-strength-index",
+                                                      "rhs-window-days": "7",
+                                                      "lhs-window-days": "5",
+                                                      "lhs-val": "BIL",
+                                                      "id": "81fb0c31-c143-428e-a6a3-5da36475bd4f",
+                                                      "comparator": "lt",
+                                                      "rhs-val": "IBTK",
+                                                      "step": "if-child",
+                                                      "collapsed?": true
+                                                    },
+                                                    {
+                                                      "id": "ae5ee113-6a30-4d78-8fea-8157c86ca280",
+                                                      "step": "if-child",
+                                                      "is-else-condition?": true,
+                                                      "children": [
+                                                        {
+                                                          "id": "87ab9369-2505-484e-9ca8-f78631b7f06f",
+                                                          "step": "group",
+                                                          "name": "Extremely oversold S&P (low RSI). Double check with bond mkt before going long",
+                                                          "children": [
+                                                            {
+                                                              "step": "wt-cash-equal",
+                                                              "id": "8b1e3cf9-15ee-4fb2-8d24-9ebcf098e108",
+                                                              "children": [
+                                                                {
+                                                                  "id": "6b7ca2f8-f07c-482e-8b29-c531abd826e6",
+                                                                  "step": "if",
+                                                                  "children": [
+                                                                    {
+                                                                      "children": [
+                                                                        {
+                                                                          "id": "c2dfa935-5fbf-491d-ba69-48b43c34106d",
+                                                                          "step": "wt-cash-equal",
+                                                                          "children": [
+                                                                            {
+                                                                              "select?": true,
+                                                                              "children": [
+                                                                                {
+                                                                                  "children": [],
+                                                                                  "name": "Direxion Daily Semiconductor Bear 3x Shares",
+                                                                                  "ticker": "SOXS",
+                                                                                  "has_marketcap": false,
+                                                                                  "id": "f39a994c-f131-46f7-8e91-426abe064c0d",
+                                                                                  "exchange": "ARCX",
+                                                                                  "price": 75.59,
+                                                                                  "step": "asset",
+                                                                                  "dollar_volume": 1573440696.99,
+                                                                                  "collapsed?": true
+                                                                                },
+                                                                                {
+                                                                                  "children": [],
+                                                                                  "name": "ProShares UltraPro Short QQQ",
+                                                                                  "ticker": "SQQQ",
+                                                                                  "has_marketcap": false,
+                                                                                  "id": "259ba97b-aca4-4172-8bfd-a8a5e663447d",
+                                                                                  "exchange": "XNAS",
+                                                                                  "price": 63.2,
+                                                                                  "step": "asset",
+                                                                                  "dollar_volume": 9876036606.4,
+                                                                                  "collapsed?": true
+                                                                                }
+                                                                              ],
+                                                                              "select-fn": "bottom",
+                                                                              "select-n": "1",
+                                                                              "sort-by-fn": "relative-strength-index",
+                                                                              "sort-by-window-days": "7",
+                                                                              "id": "a068db92-e740-4db1-892c-b17c4d5a45fe",
+                                                                              "sort-by?": true,
+                                                                              "step": "filter",
+                                                                              "collapsed?": true
+                                                                            }
+                                                                          ],
+                                                                          "collapsed?": true
+                                                                        }
+                                                                      ],
+                                                                      "rhs-fn": "relative-strength-index",
+                                                                      "is-else-condition?": false,
+                                                                      "lhs-fn": "relative-strength-index",
+                                                                      "rhs-window-days": "10",
+                                                                      "lhs-window-days": "10",
+                                                                      "lhs-val": "SBND",
+                                                                      "id": "6e7f6d66-376c-4319-958d-dee48aae261e",
+                                                                      "comparator": "lt",
+                                                                      "rhs-val": "HIBL",
+                                                                      "step": "if-child",
+                                                                      "collapsed?": true
+                                                                    },
+                                                                    {
+                                                                      "id": "93387ad8-53bd-4bc3-8689-7e4f15f0e3d5",
+                                                                      "step": "if-child",
+                                                                      "is-else-condition?": true,
+                                                                      "children": [
+                                                                        {
+                                                                          "id": "60916990-85c5-438e-9cee-5f0b8c4036b7",
+                                                                          "step": "wt-cash-equal",
+                                                                          "children": [
+                                                                            {
+                                                                              "select?": true,
+                                                                              "children": [
+                                                                                {
+                                                                                  "children": [],
+                                                                                  "name": "Direxion Daily Semiconductor Bull 3x Shares",
+                                                                                  "ticker": "SOXL",
+                                                                                  "has_marketcap": false,
+                                                                                  "id": "ec2c546b-705a-4e75-aad1-14ea572b83fd",
+                                                                                  "exchange": "ARCX",
+                                                                                  "price": 8.28,
+                                                                                  "step": "asset",
+                                                                                  "dollar_volume": 1339027904.8799999,
+                                                                                  "collapsed?": true
+                                                                                },
+                                                                                {
+                                                                                  "children": [],
+                                                                                  "name": "Direxion Daily Technology Bull 3x Shares",
+                                                                                  "ticker": "TECL",
+                                                                                  "has_marketcap": false,
+                                                                                  "id": "02de0d26-8270-4394-9ee6-f37eb8351e0f",
+                                                                                  "exchange": "ARCX",
+                                                                                  "price": 21.12,
+                                                                                  "step": "asset",
+                                                                                  "dollar_volume": 91771173.12,
+                                                                                  "collapsed?": true
+                                                                                }
+                                                                              ],
+                                                                              "select-fn": "bottom",
+                                                                              "select-n": "1",
+                                                                              "sort-by-fn": "relative-strength-index",
+                                                                              "sort-by-window-days": "7",
+                                                                              "id": "900a7fc6-fd10-4f0d-8faa-872b4c1d90b1",
+                                                                              "sort-by?": true,
+                                                                              "step": "filter",
+                                                                              "collapsed?": true
+                                                                            }
+                                                                          ],
+                                                                          "collapsed?": true
+                                                                        }
+                                                                      ],
+                                                                      "collapsed?": true
+                                                                    }
+                                                                  ],
+                                                                  "collapsed?": true
+                                                                }
+                                                              ],
+                                                              "collapsed?": true
+                                                            }
+                                                          ],
+                                                          "collapsed?": true
+                                                        }
+                                                      ],
+                                                      "collapsed?": true
+                                                    }
+                                                  ],
+                                                  "collapsed?": true
+                                                }
+                                              ],
+                                              "collapsed?": true
+                                            }
+                                          ],
+                                          "collapsed?": true
+                                        }
+                                      ],
+                                      "collapsed?": true
+                                    }
+                                  ],
+                                  "collapsed?": true
+                                }
+                              ],
+                              "collapsed?": true
+                            }
+                          ],
+                          "lhs-fn-params": {
+                            "window": 252
+                          },
+                          "is-else-condition?": false,
+                          "rhs-fixed-value?": true,
+                          "lhs-fn": "cumulative-return",
+                          "lhs-val": "VTIP",
+                          "id": "68b3def1-72ed-4b4d-ac7c-f49bcbff49d9",
+                          "comparator": "gt",
+                          "rhs-val": "4",
+                          "step": "if-child",
+                          "collapsed?": true
+                        },
+                        {
+                          "id": "5c581989-b6ae-43db-ae33-817923e3766e",
+                          "step": "if-child",
+                          "is-else-condition?": true,
+                          "children": [
+                            {
+                              "id": "7bb4e537-7df8-4748-880c-4ed0ad06416a",
+                              "step": "group",
+                              "name": "Simple Beta Baller Signal | IEF>IBTK (Other IBT*, SPTI ,SCHQ are related) & SHY>SBND (IBTF, ITBG, ITBE are related)",
+                              "children": [
+                                {
+                                  "step": "wt-cash-equal",
+                                  "id": "95d15243-fd3a-4047-a7b2-226b3bcdcaf9",
+                                  "children": [
+                                    {
+                                      "id": "31f0f368-eccc-4c00-a096-2bc30b94ed68",
+                                      "step": "if",
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "id": "50b99329-6f0b-45c9-9ce6-f00b3c49d3d3",
+                                              "step": "wt-cash-equal",
+                                              "children": [
+                                                {
+                                                  "id": "5815273e-d182-4179-8901-fd191a129f5b",
+                                                  "step": "if",
+                                                  "children": [
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "children": [],
+                                                          "name": "iShares 1-3 Year Treasury Bond ETF",
+                                                          "ticker": "SHY",
+                                                          "has_marketcap": false,
+                                                          "id": "f617f82e-5eba-4ea1-872d-c95db77cef1a",
+                                                          "exchange": "XNAS",
+                                                          "price": 80.59,
+                                                          "step": "asset",
+                                                          "dollar_volume": 388830067.87,
+                                                          "collapsed?": true
+                                                        }
+                                                      ],
+                                                      "is-else-condition?": false,
+                                                      "rhs-fixed-value?": true,
+                                                      "lhs-fn": "relative-strength-index",
+                                                      "lhs-window-days": "6",
+                                                      "lhs-val": "SPY",
+                                                      "id": "c3896e14-0886-4c47-a754-1bfbca27cb3d",
+                                                      "comparator": "gt",
+                                                      "rhs-val": "75",
+                                                      "step": "if-child",
+                                                      "collapsed?": true
+                                                    },
+                                                    {
+                                                      "id": "d75c4368-6f48-4024-8a66-bab2abd4a75b",
+                                                      "step": "if-child",
+                                                      "is-else-condition?": true,
+                                                      "children": [
+                                                        {
+                                                          "id": "9f1b969c-b4a7-4642-ad4e-d0f3d4568bc3",
+                                                          "step": "wt-cash-equal",
+                                                          "children": [
+                                                            {
+                                                              "children": [],
+                                                              "name": "Direxion Daily Semiconductor Bull 3x Shares",
+                                                              "ticker": "SOXL",
+                                                              "has_marketcap": false,
+                                                              "id": "1d7bef14-669e-4e52-8132-63eea72db365",
+                                                              "exchange": "ARCX",
+                                                              "price": 11.19,
+                                                              "step": "asset",
+                                                              "dollar_volume": 1275587444.04,
+                                                              "collapsed?": true
+                                                            }
+                                                          ],
+                                                          "collapsed?": true
+                                                        }
+                                                      ],
+                                                      "collapsed?": true
+                                                    }
+                                                  ],
+                                                  "collapsed?": true
+                                                }
+                                              ],
+                                              "collapsed?": true
+                                            }
+                                          ],
+                                          "rhs-fn": "relative-strength-index",
+                                          "is-else-condition?": false,
+                                          "lhs-fn": "relative-strength-index",
+                                          "rhs-window-days": "7",
+                                          "lhs-window-days": "5",
+                                          "lhs-val": "BIL",
+                                          "id": "bd2e73de-c14d-4d05-ae9c-8eea0b42142d",
+                                          "comparator": "lt",
+                                          "rhs-val": "IBTK",
+                                          "step": "if-child",
+                                          "collapsed?": true
+                                        },
+                                        {
+                                          "id": "3694b8cd-fac1-4dc8-bc66-8c66a5c24f71",
+                                          "step": "if-child",
+                                          "is-else-condition?": true,
+                                          "children": [
+                                            {
+                                              "id": "b08e885a-6597-426d-b6e8-2b39510e00c2",
+                                              "step": "group",
+                                              "name": "Extremely oversold S&P (low RSI). Double check with bond mkt before going long",
+                                              "children": [
+                                                {
+                                                  "step": "wt-cash-equal",
+                                                  "id": "11d8fc8b-270b-4fa8-b673-9bb227e571f8",
+                                                  "children": [
+                                                    {
+                                                      "id": "3e191476-5044-4b52-af12-02eddff8417e",
+                                                      "step": "if",
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "id": "7f527dbd-2ef8-4651-9104-0d26bf6c0760",
+                                                              "step": "wt-cash-equal",
+                                                              "children": [
+                                                                {
+                                                                  "select?": true,
+                                                                  "children": [
+                                                                    {
+                                                                      "children": [],
+                                                                      "name": "Direxion Daily Semiconductor Bear 3x Shares",
+                                                                      "ticker": "SOXS",
+                                                                      "has_marketcap": false,
+                                                                      "id": "f8a4bddb-eb5f-4043-8e8f-987dd34d9d5f",
+                                                                      "exchange": "ARCX",
+                                                                      "price": 75.59,
+                                                                      "step": "asset",
+                                                                      "dollar_volume": 1573440696.99,
+                                                                      "collapsed?": true
+                                                                    },
+                                                                    {
+                                                                      "children": [],
+                                                                      "name": "ProShares UltraPro Short QQQ",
+                                                                      "ticker": "SQQQ",
+                                                                      "has_marketcap": false,
+                                                                      "id": "6a2e9abb-2cda-4b7b-91be-1b00efb97f17",
+                                                                      "exchange": "XNAS",
+                                                                      "price": 63.2,
+                                                                      "step": "asset",
+                                                                      "dollar_volume": 9876036606.4,
+                                                                      "collapsed?": true
+                                                                    }
+                                                                  ],
+                                                                  "select-fn": "bottom",
+                                                                  "select-n": "1",
+                                                                  "sort-by-fn": "relative-strength-index",
+                                                                  "sort-by-window-days": "7",
+                                                                  "id": "57513eae-1868-44df-9e60-16e5c1c67b66",
+                                                                  "sort-by?": true,
+                                                                  "step": "filter",
+                                                                  "collapsed?": true
+                                                                }
+                                                              ],
+                                                              "collapsed?": true
+                                                            }
+                                                          ],
+                                                          "rhs-fn": "relative-strength-index",
+                                                          "is-else-condition?": false,
+                                                          "lhs-fn": "relative-strength-index",
+                                                          "rhs-window-days": "10",
+                                                          "lhs-window-days": "10",
+                                                          "lhs-val": "SBND",
+                                                          "id": "80dd28c8-c882-4721-ac02-336d84b9088e",
+                                                          "comparator": "lt",
+                                                          "rhs-val": "HIBL",
+                                                          "step": "if-child",
+                                                          "collapsed?": true
+                                                        },
+                                                        {
+                                                          "id": "50ef7c8b-00d8-45b0-aa06-b91876795d7b",
+                                                          "step": "if-child",
+                                                          "is-else-condition?": true,
+                                                          "children": [
+                                                            {
+                                                              "id": "6536f9e3-572d-4166-8234-38d92078175d",
+                                                              "step": "wt-cash-equal",
+                                                              "children": [
+                                                                {
+                                                                  "select?": true,
+                                                                  "children": [
+                                                                    {
+                                                                      "children": [],
+                                                                      "name": "Direxion Daily Semiconductor Bull 3x Shares",
+                                                                      "ticker": "SOXL",
+                                                                      "has_marketcap": false,
+                                                                      "id": "85469355-2211-4af2-b228-777089c2603b",
+                                                                      "exchange": "ARCX",
+                                                                      "price": 8.28,
+                                                                      "step": "asset",
+                                                                      "dollar_volume": 1339027904.8799999,
+                                                                      "collapsed?": true
+                                                                    },
+                                                                    {
+                                                                      "children": [],
+                                                                      "name": "Direxion Daily Technology Bull 3x Shares",
+                                                                      "ticker": "TECL",
+                                                                      "has_marketcap": false,
+                                                                      "id": "ca4de13d-25d7-4b90-9789-fb801645f3cc",
+                                                                      "exchange": "ARCX",
+                                                                      "price": 21.12,
+                                                                      "step": "asset",
+                                                                      "dollar_volume": 91771173.12,
+                                                                      "collapsed?": true
+                                                                    }
+                                                                  ],
+                                                                  "select-fn": "bottom",
+                                                                  "select-n": "1",
+                                                                  "sort-by-fn": "relative-strength-index",
+                                                                  "sort-by-window-days": "7",
+                                                                  "id": "696e3f35-a2da-4c34-9ef6-9e38926e824d",
+                                                                  "sort-by?": true,
+                                                                  "step": "filter",
+                                                                  "collapsed?": true
+                                                                }
+                                                              ],
+                                                              "collapsed?": true
+                                                            }
+                                                          ],
+                                                          "collapsed?": true
+                                                        }
+                                                      ],
+                                                      "collapsed?": true
+                                                    }
+                                                  ],
+                                                  "collapsed?": true
+                                                }
+                                              ],
+                                              "collapsed?": true
+                                            }
+                                          ],
+                                          "collapsed?": true
+                                        }
+                                      ],
+                                      "collapsed?": true
+                                    }
+                                  ],
+                                  "collapsed?": true
+                                }
+                              ],
+                              "collapsed?": true
+                            }
+                          ],
+                          "collapsed?": true
+                        }
+                      ],
+                      "collapsed?": true
+                    }
+                  ],
+                  "collapsed?": true
+                }
+              ],
+              "collapsed?": true
+            }
+          ],
+          "collapsed?": true
+        }
+      ]
+    }
+  ]
+}

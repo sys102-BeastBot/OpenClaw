@@ -1,0 +1,71 @@
+{
+  "id": "9bef355c-11b4-46c4-81c6-a2c480feecf5",
+  "step": "root",
+  "name": "U.S. Dollar",
+  "description": "",
+  "rebalance": "daily",
+  "children": [
+    {
+      "id": "c9094e1e-55d0-4b48-87b3-663cd66a07f6",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "Invesco DB US Dollar Index Bullish Fund",
+                          "ticker": "UUP",
+                          "id": "0474c79f-1a27-40a7-8a99-c9f5d24a4d36",
+                          "step": "asset"
+                        }
+                      ],
+                      "lhs-fn-params": {
+                        "window": 50
+                      },
+                      "rhs-fn": "exponential-moving-average-price",
+                      "is-else-condition?": false,
+                      "lhs-fn": "exponential-moving-average-price",
+                      "lhs-val": "UUP",
+                      "id": "c9797fbd-a916-4468-b5f3-b9c14ff81c33",
+                      "rhs-fn-params": {
+                        "window": 100
+                      },
+                      "comparator": "gt",
+                      "rhs-val": "UUP",
+                      "step": "if-child"
+                    },
+                    {
+                      "children": [
+                        {
+                          "name": "iShares Short Treasury Bond ETF",
+                          "ticker": "SHV",
+                          "id": "d8c19eea-1865-49f3-8c7f-40c80ea64062",
+                          "step": "asset"
+                        }
+                      ],
+                      "is-else-condition?": true,
+                      "id": "e103ebbb-430f-4270-8b44-3936b2ef72a2",
+                      "step": "if-child"
+                    }
+                  ],
+                  "id": "2c2323bc-b4c2-4174-b048-0201485e5388",
+                  "step": "if"
+                }
+              ],
+              "id": "934989ed-9291-4f07-9322-da0d2dcc5b58",
+              "step": "wt-cash-equal"
+            }
+          ],
+          "name": "U.S. Dollar",
+          "id": "929d3052-9180-47c8-aaaa-5e3c37feee5d",
+          "step": "group"
+        }
+      ]
+    }
+  ]
+}

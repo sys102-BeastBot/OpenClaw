@@ -1,0 +1,157 @@
+{
+  "decisions": [
+    {
+      "name": "QQQ Core",
+      "avg_sharpe": 2.1403333333333334,
+      "avg_return": 122.66666666666667,
+      "vs": "qqq_ftlt_sma",
+      "existing_sharpe": 1.4,
+      "existing_return": 170.0,
+      "decision": "~ review"
+    },
+    {
+      "name": "Votes Core",
+      "avg_sharpe": 0.00833333333333334,
+      "avg_return": -4.366666666666666,
+      "vs": "hwrt_3",
+      "existing_sharpe": 3.76,
+      "existing_return": 280.0,
+      "decision": "\u2717 skip \u2014 weak"
+    },
+    {
+      "name": "Semis Shield",
+      "avg_sharpe": 0.43566666666666665,
+      "avg_return": 23.233333333333334,
+      "vs": "hwrt_3",
+      "existing_sharpe": 3.76,
+      "existing_return": 280.0,
+      "decision": "\u2717 skip \u2014 weak"
+    },
+    {
+      "name": "TLT Macro Momentum",
+      "avg_sharpe": 0.9463333333333334,
+      "avg_return": 0.0333333333333334,
+      "vs": "bonds_zoop",
+      "existing_sharpe": 2.37,
+      "existing_return": 120.0,
+      "decision": "\u2717 skip \u2014 weak"
+    },
+    {
+      "name": "IEF Macro Momentum",
+      "avg_sharpe": 5.502666666666666,
+      "avg_return": 1.8333333333333333,
+      "vs": "bonds_zoop",
+      "existing_sharpe": 2.37,
+      "existing_return": 120.0,
+      "decision": "~ review"
+    },
+    {
+      "name": "Commodities Macro Momentum",
+      "avg_sharpe": 0.23766666666666666,
+      "avg_return": 5.2,
+      "vs": "hwrt_3",
+      "existing_sharpe": 3.76,
+      "existing_return": 280.0,
+      "decision": "\u2717 skip \u2014 weak"
+    },
+    {
+      "name": "U.S. Dollar",
+      "avg_sharpe": 0.8883333333333333,
+      "avg_return": 6.266666666666667,
+      "vs": "gold",
+      "existing_sharpe": 0.52,
+      "existing_return": 80.0,
+      "decision": "\u2717 skip \u2014 weak"
+    },
+    {
+      "name": "XLP Easy Money",
+      "avg_sharpe": 0.132,
+      "avg_return": 0.13333333333333316,
+      "vs": "hwrt_3",
+      "existing_sharpe": 3.76,
+      "existing_return": 280.0,
+      "decision": "\u2717 skip \u2014 weak"
+    },
+    {
+      "name": "GLD Trend",
+      "avg_sharpe": 0.24066666666666667,
+      "avg_return": 2.3000000000000003,
+      "vs": "gold",
+      "existing_sharpe": 0.52,
+      "existing_return": 80.0,
+      "decision": "\u2717 skip \u2014 weak"
+    },
+    {
+      "name": "Long Volatility",
+      "avg_sharpe": -0.5933333333333334,
+      "avg_return": -5.2,
+      "vs": "bonds_zoop",
+      "existing_sharpe": 2.37,
+      "existing_return": 120.0,
+      "decision": "\u2717 skip \u2014 weak"
+    },
+    {
+      "name": "Trend and Momentum",
+      "avg_sharpe": 0.09533333333333333,
+      "avg_return": 0.4000000000000001,
+      "vs": "hwrt_3",
+      "existing_sharpe": 3.76,
+      "existing_return": 280.0,
+      "decision": "\u2717 skip \u2014 weak"
+    },
+    {
+      "name": "Fiat Alternatives",
+      "avg_sharpe": 0.8936666666666667,
+      "avg_return": 13.066666666666668,
+      "vs": "gold",
+      "existing_sharpe": 0.52,
+      "existing_return": 80.0,
+      "decision": "\u2717 skip \u2014 weak"
+    },
+    {
+      "name": "Secular Growth Assets",
+      "avg_sharpe": 1.7690000000000001,
+      "avg_return": 155.46666666666667,
+      "vs": "qqq_ftlt_sma",
+      "existing_sharpe": 1.4,
+      "existing_return": 170.0,
+      "decision": "\u2191 REPLACE?"
+    },
+    {
+      "name": "Interest Rate Linked",
+      "avg_sharpe": 0.12700000000000003,
+      "avg_return": 10.666666666666666,
+      "vs": "bonds_zoop",
+      "existing_sharpe": 2.37,
+      "existing_return": 120.0,
+      "decision": "\u2717 skip \u2014 weak"
+    },
+    {
+      "name": "Copy of Inflation Protected Simple Beta Baller Signal | IEF>IBTK (Other IBT*, SPTI ,SCHQ are related) & SHY>SBND (IBTF, ITBG, ITBE are related)",
+      "avg_sharpe": 2.6940000000000004,
+      "avg_return": 4748.633333333333,
+      "vs": "hwrt_3",
+      "existing_sharpe": 3.76,
+      "existing_return": 280.0,
+      "decision": "+ ADD candidate"
+    },
+    {
+      "name": "Copy of Sisyphus V0.0 - Optimized Serenity",
+      "avg_sharpe": 4.747333333333334,
+      "avg_return": 276.26666666666665,
+      "vs": "hwrt_3",
+      "existing_sharpe": 3.76,
+      "existing_return": 280.0,
+      "decision": "\u2191 REPLACE?"
+    },
+    {
+      "name": "Combo 10 General FrankRound's Chicken & Fried Rice V0.8 (99,10,2012)",
+      "avg_sharpe": 4.743666666666667,
+      "avg_return": 117.13333333333333,
+      "vs": "hwrt_3",
+      "existing_sharpe": 3.76,
+      "existing_return": 280.0,
+      "decision": "~ review"
+    }
+  ]
+}
