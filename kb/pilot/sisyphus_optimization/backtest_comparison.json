@@ -1,0 +1,82 @@
+{
+  "portfolios": {
+    "Original (10, equal)": {
+      "2022": {
+        "sharpe": 5.208,
+        "maxdd": 7.83,
+        "annret": 337.63
+      },
+      "2023": {
+        "sharpe": 5.964,
+        "maxdd": 4.91,
+        "annret": 240.51
+      },
+      "2024": {
+        "sharpe": 4.524,
+        "maxdd": 6.3,
+        "annret": 276.24
+      }
+    },
+    "Optimized (7, equal)": {
+      "2022": {
+        "sharpe": 5.897,
+        "maxdd": 9.05,
+        "annret": 394.51
+      },
+      "2023": {
+        "sharpe": 6.031,
+        "maxdd": 4.64,
+        "annret": 230.54
+      },
+      "2024": {
+        "sharpe": 4.303,
+        "maxdd": 7.01,
+        "annret": 219.86
+      }
+    },
+    "Optimized (7, regime-switch)": {
+      "2022": {
+        "sharpe": 5.533,
+        "maxdd": 11.47,
+        "annret": 656.28
+      },
+      "2023": {
+        "sharpe": 5.493,
+        "maxdd": 6.21,
+        "annret": 322.92
+      },
+      "2024": {
+        "sharpe": 4.063,
+        "maxdd": 10.97,
+        "annret": 386.35
+      }
+    }
+  },
+  "optimal_components": [
+    "bonds_zoop",
+    "hwrt_3",
+    "em_ftlt",
+    "gold",
+    "qqq_ftlt_bonds",
+    "em_emerging",
+    "qqq_ftlt_sma"
+  ],
+  "bull_weights": {
+    "bonds_zoop": 0.037222363108434936,
+    "hwrt_3": 0.544573721994939,
+    "em_ftlt": 0.09302695321265264,
+    "gold": 0.037222363108434936,
+    "qqq_ftlt_bonds": 0.08314089711219493,
+    "em_emerging": 0.10565863720822834,
+    "qqq_ftlt_sma": 0.09915506425511525
+  },
+  "bear_weights": {
+    "bonds_zoop": 0.05378419767858434,
+    "hwrt_3": 0.14949524520244833,
+    "em_ftlt": 0.40495420890959544,
+    "gold": 0.05378419767858434,
+    "qqq_ftlt_bonds": 0.13202868278217286,
+    "em_emerging": 0.15216927007003034,
+    "qqq_ftlt_sma": 0.05378419767858434
+  }
+}

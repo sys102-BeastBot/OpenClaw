@@ -1,0 +1,44 @@
+{
+  "regime_indicator": "SPY 60-day cumulative return < 0 = bear",
+  "bull_days": 509,
+  "bear_days": 184,
+  "bull_sharpes": {
+    "bonds_zoop": 0.855163798711392,
+    "hwrt_3": 3.722337013093305,
+    "em_ftlt": 2.838779984851508,
+    "gold": 1.1606155958678837,
+    "qqq_ftlt_bonds": 2.782603711597362,
+    "em_emerging": 2.902442096402329,
+    "qqq_ftlt_sma": 2.8706778147064957
+  },
+  "bear_sharpes": {
+    "bonds_zoop": 3.3460554172939365,
+    "hwrt_3": 4.421227312543268,
+    "em_ftlt": 5.417736721177727,
+    "gold": 0.24110705346835054,
+    "qqq_ftlt_bonds": 4.296981917670035,
+    "em_emerging": 4.438956244998717,
+    "qqq_ftlt_sma": 0.9080990275579973
+  },
+  "bull_weights": {
+    "bonds_zoop": 0.037222363108434936,
+    "hwrt_3": 0.544573721994939,
+    "em_ftlt": 0.09302695321265264,
+    "gold": 0.037222363108434936,
+    "qqq_ftlt_bonds": 0.08314089711219493,
+    "em_emerging": 0.10565863720822834,
+    "qqq_ftlt_sma": 0.09915506425511525
+  },
+  "bear_weights": {
+    "bonds_zoop": 0.05378419767858434,
+    "hwrt_3": 0.14949524520244833,
+    "em_ftlt": 0.40495420890959544,
+    "gold": 0.05378419767858434,
+    "qqq_ftlt_bonds": 0.13202868278217286,
+    "em_emerging": 0.15216927007003034,
+    "qqq_ftlt_sma": 0.05378419767858434
+  },
+  "bear_dates_2022": 185,
+  "bear_dates_2023": 46,
+  "bear_dates_2024": 1
+}
