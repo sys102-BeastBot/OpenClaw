@@ -1,0 +1,116 @@
+{
+  "criterion": "sharpe",
+  "selected": [
+    "copy_of_sisyphus_v0_0___optimized_s",
+    "combo_10_general_frankround_s_chick",
+    "spy_ftlt_hedged",
+    "natural_gas_st_trading",
+    "hwrt_3",
+    "em_ftlt",
+    "60d_bnd_bil",
+    "dereckn_hedge_mod",
+    "200d_cross_volmag",
+    "four_corners_v12"
+  ],
+  "history": [
+    {
+      "step": 0,
+      "added": "copy_of_sisyphus_v0_0___optimized_s",
+      "avg_sharpe": 4.747,
+      "avg_return": 276.3,
+      "maxdd_2022": 9.49,
+      "marginal": 0
+    },
+    {
+      "step": 1,
+      "added": "combo_10_general_frankround_s_chick",
+      "avg_sharpe": 5.115,
+      "avg_return": 188.0,
+      "maxdd_2022": 7.23,
+      "marginal": 0.368
+    },
+    {
+      "step": 2,
+      "added": "spy_ftlt_hedged",
+      "avg_sharpe": 5.343,
+      "avg_return": 150.8,
+      "maxdd_2022": 6.48,
+      "marginal": 0.228
+    },
+    {
+      "step": 3,
+      "added": "natural_gas_st_trading",
+      "avg_sharpe": 5.649,
+      "avg_return": 163.2,
+      "maxdd_2022": 8.64,
+      "marginal": 0.306
+    },
+    {
+      "step": 4,
+      "added": "hwrt_3",
+      "avg_sharpe": 6.016,
+      "avg_return": 215.4,
+      "maxdd_2022": 4.91,
+      "marginal": 0.367
+    },
+    {
+      "step": 5,
+      "added": "em_ftlt",
+      "avg_sharpe": 6.316,
+      "avg_return": 255.4,
+      "maxdd_2022": 4.15,
+      "marginal": 0.3
+    },
+    {
+      "step": 6,
+      "added": "60d_bnd_bil",
+      "avg_sharpe": 6.488,
+      "avg_return": 242.0,
+      "maxdd_2022": 3.86,
+      "marginal": 0.172
+    },
+    {
+      "step": 7,
+      "added": "dereckn_hedge_mod",
+      "avg_sharpe": 6.595,
+      "avg_return": 217.0,
+      "maxdd_2022": 3.82,
+      "marginal": 0.107
+    },
+    {
+      "step": 8,
+      "added": "200d_cross_volmag",
+      "avg_sharpe": 6.63,
+      "avg_return": 235.8,
+      "maxdd_2022": 3.85,
+      "marginal": 0.035
+    },
+    {
+      "step": 9,
+      "added": "four_corners_v12",
+      "avg_sharpe": 6.646,
+      "avg_return": 205.8,
+      "maxdd_2022": 3.57,
+      "marginal": 0.016
+    }
+  ],
+  "final_results": {
+    "2022": {
+      "sharpe": 7.423,
+      "annret": 299.3,
+      "maxdd": 3.57
+    },
+    "2023": {
+      "sharpe": 7.766,
+      "annret": 167.3,
+      "maxdd": 2.98
+    },
+    "2024": {
+      "sharpe": 4.749,
+      "annret": 150.9,
+      "maxdd": 5.07
+    }
+  },
+  "k": 10,
+  "done": true
+}

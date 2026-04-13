@@ -1,0 +1,759 @@
+{
+  "better_kmlm": {
+    "per_year": {
+      "2022": {
+        "sharpe": 1.777,
+        "annret": 233.8,
+        "maxdd": 36.06
+      },
+      "2023": {
+        "sharpe": 3.763,
+        "annret": 579.2,
+        "maxdd": 17.8
+      },
+      "2024": {
+        "sharpe": 3.825,
+        "annret": 1288.8,
+        "maxdd": 16.27
+      }
+    },
+    "avg_sharpe": 3.122,
+    "avg_return": 700.6,
+    "maxdd_2022": 36.06
+  },
+  "bonds_zoop": {
+    "per_year": {
+      "2022": {
+        "sharpe": 2.367,
+        "annret": 238.4,
+        "maxdd": 25.17
+      },
+      "2023": {
+        "sharpe": 2.337,
+        "annret": 174.7,
+        "maxdd": 24.0
+      },
+      "2024": {
+        "sharpe": 0.574,
+        "annret": 13.3,
+        "maxdd": 19.74
+      }
+    },
+    "avg_sharpe": 1.759,
+    "avg_return": 142.1,
+    "maxdd_2022": 25.17
+  },
+  "em_emerging_markets": {
+    "per_year": {
+      "2022": {
+        "sharpe": 3.105,
+        "annret": 525.0,
+        "maxdd": 29.59
+      },
+      "2023": {
+        "sharpe": 3.77,
+        "annret": 387.4,
+        "maxdd": 21.76
+      },
+      "2024": {
+        "sharpe": 2.999,
+        "annret": 255.7,
+        "maxdd": 16.98
+      }
+    },
+    "avg_sharpe": 3.291,
+    "avg_return": 389.4,
+    "maxdd_2022": 29.59
+  },
+  "em_ftlt": {
+    "per_year": {
+      "2022": {
+        "sharpe": 3.552,
+        "annret": 671.6,
+        "maxdd": 28.27
+      },
+      "2023": {
+        "sharpe": 3.318,
+        "annret": 263.5,
+        "maxdd": 21.95
+      },
+      "2024": {
+        "sharpe": 2.942,
+        "annret": 241.4,
+        "maxdd": 16.98
+      }
+    },
+    "avg_sharpe": 3.271,
+    "avg_return": 392.2,
+    "maxdd_2022": 28.27
+  },
+  "four_corners": {
+    "per_year": {
+      "2022": {
+        "sharpe": 1.433,
+        "annret": 65.6,
+        "maxdd": 27.81
+      },
+      "2023": {
+        "sharpe": 3.937,
+        "annret": 406.2,
+        "maxdd": 17.76
+      },
+      "2024": {
+        "sharpe": 3.342,
+        "annret": 576.8,
+        "maxdd": 15.85
+      }
+    },
+    "avg_sharpe": 2.904,
+    "avg_return": 349.5,
+    "maxdd_2022": 27.81
+  },
+  "gold": {
+    "per_year": {
+      "2022": {
+        "sharpe": 0.516,
+        "annret": 11.7,
+        "maxdd": 24.34
+      },
+      "2023": {
+        "sharpe": 0.516,
+        "annret": 10.7,
+        "maxdd": 17.72
+      },
+      "2024": {
+        "sharpe": 1.548,
+        "annret": 52.1,
+        "maxdd": 15.95
+      }
+    },
+    "avg_sharpe": 0.86,
+    "avg_return": 24.8,
+    "maxdd_2022": 24.34
+  },
+  "hg_short_only_v02": {
+    "per_year": {
+      "2022": {
+        "sharpe": 1.729,
+        "annret": 119.7,
+        "maxdd": 28.26
+      },
+      "2023": {
+        "sharpe": 0.982,
+        "annret": 16.5,
+        "maxdd": 8.58
+      },
+      "2024": {
+        "sharpe": 1.482,
+        "annret": 29.7,
+        "maxdd": 9.73
+      }
+    },
+    "avg_sharpe": 1.398,
+    "avg_return": 55.3,
+    "maxdd_2022": 28.26
+  },
+  "hwrt_3": {
+    "per_year": {
+      "2022": {
+        "sharpe": 3.756,
+        "annret": 318.2,
+        "maxdd": 14.11
+      },
+      "2023": {
+        "sharpe": 4.886,
+        "annret": 418.2,
+        "maxdd": 9.17
+      },
+      "2024": {
+        "sharpe": 3.575,
+        "annret": 537.7,
+        "maxdd": 14.13
+      }
+    },
+    "avg_sharpe": 4.072,
+    "avg_return": 424.7,
+    "maxdd_2022": 14.11
+  },
+  "loo_results": {
+    "per_year": {
+      "2022": {
+        "sharpe": 0,
+        "annret": 0,
+        "maxdd": 0,
+        "error": "400"
+      },
+      "2023": {
+        "sharpe": 0,
+        "annret": 0,
+        "maxdd": 0,
+        "error": "400"
+      },
+      "2024": {
+        "sharpe": 0,
+        "annret": 0,
+        "maxdd": 0,
+        "error": "400"
+      }
+    },
+    "avg_sharpe": 0,
+    "avg_return": 0,
+    "maxdd_2022": 0
+  },
+  "qqq_ftlt_bonds": {
+    "per_year": {
+      "2022": {
+        "sharpe": 3.943,
+        "annret": 956.3,
+        "maxdd": 12.73
+      },
+      "2023": {
+        "sharpe": 3.047,
+        "annret": 209.6,
+        "maxdd": 13.68
+      },
+      "2024": {
+        "sharpe": 2.44,
+        "annret": 237.3,
+        "maxdd": 17.04
+      }
+    },
+    "avg_sharpe": 3.143,
+    "avg_return": 467.7,
+    "maxdd_2022": 12.73
+  },
+  "qqq_ftlt_sma": {
+    "per_year": {
+      "2022": {
+        "sharpe": 1.399,
+        "annret": 79.9,
+        "maxdd": 21.96
+      },
+      "2023": {
+        "sharpe": 2.768,
+        "annret": 224.4,
+        "maxdd": 32.38
+      },
+      "2024": {
+        "sharpe": 2.91,
+        "annret": 379.4,
+        "maxdd": 21.55
+      }
+    },
+    "avg_sharpe": 2.359,
+    "avg_return": 227.9,
+    "maxdd_2022": 21.96
+  },
+  "200d_cross_volmag": {
+    "per_year": {
+      "2022": {
+        "sharpe": 3.264,
+        "annret": 485.0,
+        "maxdd": 19.66
+      },
+      "2023": {
+        "sharpe": 3.291,
+        "annret": 189.1,
+        "maxdd": 11.94
+      },
+      "2024": {
+        "sharpe": 1.638,
+        "annret": 185.5,
+        "maxdd": 20.17
+      }
+    },
+    "avg_sharpe": 2.731,
+    "avg_return": 286.5,
+    "maxdd_2022": 19.66
+  },
+  "60d_bnd_bil": {
+    "per_year": {
+      "2022": {
+        "sharpe": 1.182,
+        "annret": 50.1,
+        "maxdd": 23.46
+      },
+      "2023": {
+        "sharpe": 4.272,
+        "annret": 349.1,
+        "maxdd": 20.31
+      },
+      "2024": {
+        "sharpe": 2.765,
+        "annret": 184.5,
+        "maxdd": 17.1
+      }
+    },
+    "avg_sharpe": 2.74,
+    "avg_return": 194.6,
+    "maxdd_2022": 23.46
+  },
+  "bwc_beta_balls": {
+    "per_year": {
+      "2022": {
+        "sharpe": 0,
+        "annret": 0,
+        "maxdd": 0,
+        "error": "insufficient-ticker-data"
+      },
+      "2023": {
+        "sharpe": 0,
+        "annret": 0,
+        "maxdd": 0,
+        "error": "insufficient-ticker-data"
+      },
+      "2024": {
+        "sharpe": 0,
+        "annret": 0,
+        "maxdd": 0,
+        "error": "insufficient-ticker-data"
+      }
+    },
+    "avg_sharpe": 0,
+    "avg_return": 0,
+    "maxdd_2022": 0
+  },
+  "just_run_ftlt": {
+    "per_year": {
+      "2022": {
+        "sharpe": 2.75,
+        "annret": 170.0,
+        "maxdd": 15.39
+      },
+      "2023": {
+        "sharpe": 2.631,
+        "annret": 69.4,
+        "maxdd": 6.34
+      },
+      "2024": {
+        "sharpe": 2.809,
+        "annret": 130.9,
+        "maxdd": 11.63
+      }
+    },
+    "avg_sharpe": 2.73,
+    "avg_return": 123.4,
+    "maxdd_2022": 15.39
+  },
+  "kmlm_switcher": {
+    "per_year": {
+      "2022": {
+        "sharpe": 3.202,
+        "annret": 655.4,
+        "maxdd": 22.34
+      },
+      "2023": {
+        "sharpe": 3.283,
+        "annret": 322.4,
+        "maxdd": 14.17
+      },
+      "2024": {
+        "sharpe": 3.852,
+        "annret": 936.4,
+        "maxdd": 19.5
+      }
+    },
+    "avg_sharpe": 3.446,
+    "avg_return": 638.1,
+    "maxdd_2022": 22.34
+  },
+  "modified_foreign_rat": {
+    "per_year": {
+      "2022": {
+        "sharpe": 1.749,
+        "annret": 166.6,
+        "maxdd": 37.57
+      },
+      "2023": {
+        "sharpe": 3.29,
+        "annret": 298.2,
+        "maxdd": 21.73
+      },
+      "2024": {
+        "sharpe": 3.088,
+        "annret": 262.3,
+        "maxdd": 13.57
+      }
+    },
+    "avg_sharpe": 2.709,
+    "avg_return": 242.4,
+    "maxdd_2022": 37.57
+  },
+  "pareto_rsi_obos": {
+    "per_year": {
+      "2022": {
+        "sharpe": 0,
+        "annret": 0,
+        "maxdd": 0,
+        "error": "insufficient-ticker-data"
+      },
+      "2023": {
+        "sharpe": 0,
+        "annret": 0,
+        "maxdd": 0,
+        "error": "insufficient-ticker-data"
+      },
+      "2024": {
+        "sharpe": 0,
+        "annret": 0,
+        "maxdd": 0,
+        "error": "insufficient-ticker-data"
+      }
+    },
+    "avg_sharpe": 0,
+    "avg_return": 0,
+    "maxdd_2022": 0
+  },
+  "natural_gas_st_trading": {
+    "per_year": {
+      "2022": {
+        "sharpe": 1.896,
+        "annret": 197.8,
+        "maxdd": 30.88
+      },
+      "2023": {
+        "sharpe": 2.64,
+        "annret": 152.5,
+        "maxdd": 14.74
+      },
+      "2024": {
+        "sharpe": 2.64,
+        "annret": 165.8,
+        "maxdd": 16.35
+      }
+    },
+    "avg_sharpe": 2.392,
+    "avg_return": 172.0,
+    "maxdd_2022": 30.88
+  },
+  "rsi_frankenfest": {
+    "per_year": {
+      "2022": {
+        "sharpe": -0.405,
+        "annret": -13.9,
+        "maxdd": 31.75
+      },
+      "2023": {
+        "sharpe": 2.057,
+        "annret": 81.4,
+        "maxdd": 16.46
+      },
+      "2024": {
+        "sharpe": 2.753,
+        "annret": 182.3,
+        "maxdd": 14.41
+      }
+    },
+    "avg_sharpe": 1.468,
+    "avg_return": 83.3,
+    "maxdd_2022": 31.75
+  },
+  "st_leveraged_semiconductors_tr": {
+    "per_year": {
+      "2022": {
+        "sharpe": 0.633,
+        "annret": 22.8,
+        "maxdd": 37.23
+      },
+      "2023": {
+        "sharpe": 1.898,
+        "annret": 100.2,
+        "maxdd": 13.81
+      },
+      "2024": {
+        "sharpe": 1.591,
+        "annret": 88.5,
+        "maxdd": 18.78
+      }
+    },
+    "avg_sharpe": 1.374,
+    "avg_return": 70.5,
+    "maxdd_2022": 37.23
+  },
+  "wild_west_combined": {
+    "per_year": {
+      "2022": {
+        "sharpe": 1.915,
+        "annret": 78.1,
+        "maxdd": 12.52
+      },
+      "2023": {
+        "sharpe": 2.576,
+        "annret": 74.9,
+        "maxdd": 7.26
+      },
+      "2024": {
+        "sharpe": 1.965,
+        "annret": 50.6,
+        "maxdd": 11.68
+      }
+    },
+    "avg_sharpe": 2.152,
+    "avg_return": 67.9,
+    "maxdd_2022": 12.52
+  },
+  "basic_portfolio_2011": {
+    "per_year": {
+      "2022": {
+        "sharpe": 1.892,
+        "annret": 28.1,
+        "maxdd": 5.71
+      },
+      "2023": {
+        "sharpe": 3.133,
+        "annret": 38.0,
+        "maxdd": 3.95
+      },
+      "2024": {
+        "sharpe": 2.906,
+        "annret": 47.4,
+        "maxdd": 3.08
+      }
+    },
+    "avg_sharpe": 2.644,
+    "avg_return": 37.8,
+    "maxdd_2022": 5.71
+  },
+  "black_swan_catcher": {
+    "per_year": {
+      "2022": {
+        "sharpe": 1.976,
+        "annret": 33.4,
+        "maxdd": 7.82
+      },
+      "2023": {
+        "sharpe": 1.532,
+        "annret": 12.9,
+        "maxdd": 4.06
+      },
+      "2024": {
+        "sharpe": 1.303,
+        "annret": 19.9,
+        "maxdd": 6.57
+      }
+    },
+    "avg_sharpe": 1.604,
+    "avg_return": 22.1,
+    "maxdd_2022": 7.82
+  },
+  "dereckn_hedge_mod": {
+    "per_year": {
+      "2022": {
+        "sharpe": 3.55,
+        "annret": 249.6,
+        "maxdd": 11.45
+      },
+      "2023": {
+        "sharpe": 1.512,
+        "annret": 27.6,
+        "maxdd": 9.8
+      },
+      "2024": {
+        "sharpe": 0.907,
+        "annret": 12.8,
+        "maxdd": 10.11
+      }
+    },
+    "avg_sharpe": 1.99,
+    "avg_return": 96.7,
+    "maxdd_2022": 11.45
+  },
+  "enigma_financial": {
+    "per_year": {
+      "2022": {
+        "sharpe": 2.531,
+        "annret": 71.5,
+        "maxdd": 9.16
+      },
+      "2023": {
+        "sharpe": 3.055,
+        "annret": 67.2,
+        "maxdd": 12.36
+      },
+      "2024": {
+        "sharpe": 1.175,
+        "annret": 19.3,
+        "maxdd": 10.05
+      }
+    },
+    "avg_sharpe": 2.254,
+    "avg_return": 52.7,
+    "maxdd_2022": 9.16
+  },
+  "four_corners_v12": {
+    "per_year": {
+      "2022": {
+        "sharpe": 2.681,
+        "annret": 43.3,
+        "maxdd": 6.85
+      },
+      "2023": {
+        "sharpe": 1.718,
+        "annret": 21.5,
+        "maxdd": 6.57
+      },
+      "2024": {
+        "sharpe": 1.468,
+        "annret": 14.1,
+        "maxdd": 4.95
+      }
+    },
+    "avg_sharpe": 1.956,
+    "avg_return": 26.3,
+    "maxdd_2022": 6.85
+  },
+  "safety_town_pop_bots": {
+    "per_year": {
+      "2022": {
+        "sharpe": 2.008,
+        "annret": 53.2,
+        "maxdd": 11.35
+      },
+      "2023": {
+        "sharpe": 0.99,
+        "annret": 12.6,
+        "maxdd": 7.8
+      },
+      "2024": {
+        "sharpe": 1.672,
+        "annret": 36.2,
+        "maxdd": 7.66
+      }
+    },
+    "avg_sharpe": 1.557,
+    "avg_return": 34.0,
+    "maxdd_2022": 11.35
+  },
+  "simple_uvxy_pops": {
+    "per_year": {
+      "2022": {
+        "sharpe": 3.543,
+        "annret": 173.9,
+        "maxdd": 11.29
+      },
+      "2023": {
+        "sharpe": 2.925,
+        "annret": 89.6,
+        "maxdd": 9.08
+      },
+      "2024": {
+        "sharpe": 2.311,
+        "annret": 103.3,
+        "maxdd": 11.19
+      }
+    },
+    "avg_sharpe": 2.926,
+    "avg_return": 122.3,
+    "maxdd_2022": 11.29
+  },
+  "spy_ftlt_hedged": {
+    "per_year": {
+      "2022": {
+        "sharpe": 3.66,
+        "annret": 115.1,
+        "maxdd": 12.85
+      },
+      "2023": {
+        "sharpe": 5.114,
+        "annret": 82.8,
+        "maxdd": 3.38
+      },
+      "2024": {
+        "sharpe": 4.053,
+        "annret": 64.6,
+        "maxdd": 3.35
+      }
+    },
+    "avg_sharpe": 4.276,
+    "avg_return": 87.5,
+    "maxdd_2022": 12.85
+  },
+  "combo_10_general_frankround_s_chick": {
+    "per_year": {
+      "2022": {
+        "sharpe": 5.1,
+        "annret": 175.1,
+        "maxdd": 5.58
+      },
+      "2023": {
+        "sharpe": 5.427,
+        "annret": 109.4,
+        "maxdd": 7.25
+      },
+      "2024": {
+        "sharpe": 3.704,
+        "annret": 66.9,
+        "maxdd": 3.65
+      }
+    },
+    "avg_sharpe": 4.744,
+    "avg_return": 117.1,
+    "maxdd_2022": 5.58
+  },
+  "copy_of_sisyphus_v0_0___optimized_s": {
+    "per_year": {
+      "2022": {
+        "sharpe": 4.442,
+        "annret": 337.4,
+        "maxdd": 9.49
+      },
+      "2023": {
+        "sharpe": 6.126,
+        "annret": 264.0,
+        "maxdd": 5.21
+      },
+      "2024": {
+        "sharpe": 3.674,
+        "annret": 227.4,
+        "maxdd": 9.31
+      }
+    },
+    "avg_sharpe": 4.747,
+    "avg_return": 276.3,
+    "maxdd_2022": 9.49
+  },
+  "qqq_core": {
+    "per_year": {
+      "2022": {
+        "sharpe": 2.214,
+        "annret": 203.0,
+        "maxdd": 30.23
+      },
+      "2023": {
+        "sharpe": 3.012,
+        "annret": 129.0,
+        "maxdd": 10.5
+      },
+      "2024": {
+        "sharpe": 1.195,
+        "annret": 36.0,
+        "maxdd": 22.74
+      }
+    },
+    "avg_sharpe": 2.14,
+    "avg_return": 122.7,
+    "maxdd_2022": 30.23
+  },
+  "secular_growth_assets": {
+    "per_year": {
+      "2022": {
+        "sharpe": 1.587,
+        "annret": 182.7,
+        "maxdd": 52.2
+      },
+      "2023": {
+        "sharpe": 2.368,
+        "annret": 206.2,
+        "maxdd": 27.57
+      },
+      "2024": {
+        "sharpe": 1.352,
+        "annret": 77.5,
+        "maxdd": 34.58
+      }
+    },
+    "avg_sharpe": 1.769,
+    "avg_return": 155.5,
+    "maxdd_2022": 52.2
+  }
+}

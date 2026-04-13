@@ -1,0 +1,444 @@
+[13:04:33] ============================================================
+[13:04:33] OpenClaw Greedy Optimizer — Dual Track
+[13:04:33] ============================================================
+[13:04:33] Pool: 34 strategies
+[13:04:33]   sisyphus             11
+[13:04:33]   fngg                 7
+[13:04:33]   wild_west            4
+[13:04:33]   v2_comm              8
+[13:04:33]   beta_tame            2
+[13:04:33]   macro                1
+[13:04:33]   sandy                1
+[13:04:39]   [ 1/34] ↑ better_kmlm                          Sh=3.12 R=700.6%
+[13:04:44]   [ 2/34]   bonds_zoop                           Sh=1.76 R=142.1%
+[13:04:50]   [ 3/34] ↑ em_emerging_markets                  Sh=3.29 R=389.4%
+[13:04:55]   [ 4/34] ↑ em_ftlt                              Sh=3.27 R=392.2%
+[13:05:01]   [ 5/34] ↑ four_corners                         Sh=2.90 R=349.5%
+[13:05:08]   [ 6/34]   gold                                 Sh=0.86 R=24.8%
+[13:05:13]   [ 7/34]   hg_short_only_v02                    Sh=1.40 R=55.3%
+[13:05:21]   [ 8/34] ★ hwrt_3                               Sh=4.07 R=424.7%
+[13:05:27] ============================================================
+[13:05:27] OpenClaw Greedy Optimizer — Dual Track
+[13:05:27] ============================================================
+[13:05:27] Pool: 34 strategies
+[13:05:27]   sisyphus             11
+[13:05:27]   fngg                 7
+[13:05:27]   wild_west            4
+[13:05:27]   v2_comm              8
+[13:05:27]   beta_tame            2
+[13:05:27]   macro                1
+[13:05:27]   sandy                1
+[13:05:27] Resuming single scan (8/34 done)...
+[13:05:27]   [ 9/34]   loo_results                          Sh=0.00 R=0.0%
+[13:05:29]     rate limit — waiting 10s...
+[13:05:32]   [ 9/34]   loo_results                          Sh=0.00 R=0.0%
+[13:05:32]     rate limit — waiting 10s...
+[13:05:43]   [10/34] ↑ qqq_ftlt_bonds                       Sh=3.14 R=467.7%
+[13:05:48]   [10/34] ↑ qqq_ftlt_bonds                       Sh=3.14 R=467.7%
+[13:05:54]   [11/34]   qqq_ftlt_sma                         Sh=2.36 R=227.9%
+[13:06:04]   [12/34] ↑ 200d_cross_volmag                    Sh=2.73 R=286.5%
+[13:06:10]   [13/34] ↑ 60d_bnd_bil                          Sh=2.74 R=194.6%
+[13:06:27]   [14/34]   bwc_beta_balls                       Sh=0.00 R=0.0%
+[13:06:32]   [15/34] ↑ just_run_ftlt                        Sh=2.73 R=123.4%
+[13:06:37]     rate limit — waiting 10s...
+[13:06:49]   [16/34] ↑ kmlm_switcher                        Sh=3.45 R=638.1%
+[13:06:54]   [17/34] ↑ modified_foreign_rat                 Sh=2.71 R=242.4%
+[13:07:01]   [18/34]   pareto_rsi_obos                      Sh=0.00 R=0.0%
+[13:07:07]   [19/34]   natural_gas_st_trading               Sh=2.39 R=172.0%
+[13:07:12]   [20/34]   rsi_frankenfest                      Sh=1.47 R=83.3%
+[13:07:18]   [21/34]   st_leveraged_semiconductors_tr       Sh=1.37 R=70.5%
+[13:07:33]   [22/34]   wild_west_combined                   Sh=2.15 R=67.9%
+[13:07:39]   [23/34] ↑ basic_portfolio_2011                 Sh=2.64 R=37.8%
+[13:07:44]   [24/34]   black_swan_catcher                   Sh=1.60 R=22.1%
+[13:07:45]     rate limit — waiting 10s...
+[13:08:00]   [25/34]   dereckn_hedge_mod                    Sh=1.99 R=96.7%
+[13:08:06]   [26/34]   enigma_financial                     Sh=2.25 R=52.7%
+[13:08:11]   [27/34]   four_corners_v12                     Sh=1.96 R=26.3%
+[13:08:21]   [28/34]   safety_town_pop_bots                 Sh=1.56 R=34.0%
+[13:08:33]   [29/34] ↑ simple_uvxy_pops                     Sh=2.93 R=122.3%
+[13:08:40]   [30/34] ★ spy_ftlt_hedged                      Sh=4.28 R=87.5%
+[13:08:46]   [31/34] ★ combo_10_general_frankround_s_chick  Sh=4.74 R=117.1%
+[13:08:55]   [32/34] ★ copy_of_sisyphus_v0_0___optimized_s  Sh=4.75 R=276.3%
+[13:09:01]   [33/34]   qqq_core                             Sh=2.14 R=122.7%
+[13:09:06]   [34/34]   secular_growth_assets                Sh=1.77 R=155.5%
+[13:09:06] 
+Top 10 by Sharpe:
+[13:09:06]   copy_of_sisyphus_v0_0___optimized_s  Sh=4.75 R=276.3%
+[13:09:06]   combo_10_general_frankround_s_chick  Sh=4.74 R=117.1%
+[13:09:06]   spy_ftlt_hedged                      Sh=4.28 R=87.5%
+[13:09:06]   hwrt_3                               Sh=4.07 R=424.7%
+[13:09:06]   kmlm_switcher                        Sh=3.45 R=638.1%
+[13:09:06]   em_emerging_markets                  Sh=3.29 R=389.4%
+[13:09:06]   em_ftlt                              Sh=3.27 R=392.2%
+[13:09:06]   qqq_ftlt_bonds                       Sh=3.14 R=467.7%
+[13:09:06]   better_kmlm                          Sh=3.12 R=700.6%
+[13:09:06]   simple_uvxy_pops                     Sh=2.93 R=122.3%
+[13:09:06] 
+Top 10 by Return:
+[13:09:06]   better_kmlm                          Sh=3.12 R=700.6%
+[13:09:06]   kmlm_switcher                        Sh=3.45 R=638.1%
+[13:09:06]   qqq_ftlt_bonds                       Sh=3.14 R=467.7%
+[13:09:06]   hwrt_3                               Sh=4.07 R=424.7%
+[13:09:06]   em_ftlt                              Sh=3.27 R=392.2%
+[13:09:06]   em_emerging_markets                  Sh=3.29 R=389.4%
+[13:09:06]   four_corners                         Sh=2.90 R=349.5%
+[13:09:06]   200d_cross_volmag                    Sh=2.73 R=286.5%
+[13:09:06]   copy_of_sisyphus_v0_0___optimized_s  Sh=4.75 R=276.3%
+[13:09:06]   modified_foreign_rat                 Sh=2.71 R=242.4%
+[13:09:06] 
+============================================================
+[13:09:06] TRACK A: Optimize for Sharpe
+[13:09:06] ============================================================
+[13:09:06] Greedy [SHARPE] seed: copy_of_sisyphus_v0_0___optimized_s (sh=4.75 r=276.3%)
+[13:09:06] 
+  Step 1: testing 30 candidates...
+[13:09:16]     [ 1/30] combo_10_general_frankround_s_chick Sh=5.12 R=188.0% → sharpe=5.12
+[13:09:26]     [ 2/30] spy_ftlt_hedged                    Sh=5.09 R=167.9% → sharpe=5.09
+[13:09:37]     [ 3/30] hwrt_3                             Sh=4.93 R=362.4% → sharpe=4.93
+[13:09:46]     [ 4/30] kmlm_switcher                      Sh=4.33 R=458.5% → sharpe=4.33
+[13:09:55]     [ 5/30] em_emerging_markets                Sh=4.53 R=342.5% → sharpe=4.53
+[13:10:03]     [ 6/30] em_ftlt                            Sh=4.56 R=339.3% → sharpe=4.56
+[13:10:12]     [ 7/30] qqq_ftlt_bonds                     Sh=3.91 R=356.6% → sharpe=3.91
+[13:10:21]     [ 8/30] better_kmlm                        Sh=3.81 R=450.3% → sharpe=3.81
+[13:10:35]     [ 9/30] simple_uvxy_pops                   Sh=4.47 R=192.9% → sharpe=4.47
+[13:10:45]     [10/30] four_corners                       Sh=4.14 R=307.0% → sharpe=4.14
+[13:10:53]     [11/30] 60d_bnd_bil                        Sh=4.43 R=229.5% → sharpe=4.43
+[13:11:03]     [12/30] 200d_cross_volmag                  Sh=4.09 R=291.8% → sharpe=4.09
+[13:11:12]     [13/30] just_run_ftlt                      Sh=4.57 R=193.6% → sharpe=4.57
+[13:11:21]     [14/30] modified_foreign_rat               Sh=4.13 R=268.2% → sharpe=4.13
+[13:11:31]     [15/30] basic_portfolio_2011               Sh=4.76 R=128.8% → sharpe=4.76
+[13:11:40]     [16/30] natural_gas_st_trading             Sh=4.52 R=234.6% → sharpe=4.52
+[13:11:49]     [17/30] qqq_ftlt_sma                       Sh=3.64 R=248.2% → sharpe=3.64
+[13:11:59]     [18/30] enigma_financial                   Sh=4.54 R=141.8% → sharpe=4.54
+[13:12:18]     [19/30] wild_west_combined                 Sh=4.67 R=155.5% → sharpe=4.67
+[13:12:26]     [20/30] qqq_core                           Sh=3.94 R=193.0% → sharpe=3.94
+[13:12:35]     [21/30] dereckn_hedge_mod                  Sh=4.51 R=170.3% → sharpe=4.51
+[13:12:44]     [22/30] four_corners_v12                   Sh=4.66 R=120.1% → sharpe=4.66
+[13:12:53]     [23/30] secular_growth_assets              Sh=3.22 R=226.1% → sharpe=3.22
+[13:13:01]     [24/30] bonds_zoop                         Sh=3.60 R=206.8% → sharpe=3.60
+[13:13:10]     [25/30] black_swan_catcher                 Sh=4.64 R=116.5% → sharpe=4.64
+[13:13:22]     [26/30] safety_town_pop_bots               Sh=4.44 R=127.0% → sharpe=4.44
+[13:13:31]     [27/30] rsi_frankenfest                    Sh=4.03 R=157.5% → sharpe=4.03
+[13:13:40]     [28/30] hg_short_only_v02                  Sh=3.83 R=144.7% → sharpe=3.83
+[13:13:48]     [29/30] st_leveraged_semiconductors_tr     Sh=3.23 R=159.4% → sharpe=3.23
+[13:13:56]     [30/30] gold                               Sh=3.86 R=119.2% → sharpe=3.86
+[13:13:56] 
+  → Best: combo_10_general_frankround_s_chick | sharpe=5.12 (+0.37) ★
+[13:13:56] 
+  Step 2: testing 29 candidates...
+[13:14:12]     [ 1/29] spy_ftlt_hedged                    Sh=5.34 R=150.8% → sharpe=5.34
+[13:14:24]     [ 2/29] hwrt_3                             Sh=5.24 R=264.8% → sharpe=5.24
+[13:14:35]     [ 3/29] kmlm_switcher                      Sh=4.81 R=317.9% → sharpe=4.81
+[13:14:45]     [ 4/29] em_emerging_markets                Sh=4.99 R=252.9% → sharpe=4.99
+[13:14:55]     [ 5/29] em_ftlt                            Sh=5.01 R=250.8% → sharpe=5.01
+[13:15:05]     [ 6/29] qqq_ftlt_bonds                     Sh=4.31 R=259.9% → sharpe=4.31
+[13:15:16]     [ 7/29] better_kmlm                        Sh=4.29 R=309.5% → sharpe=4.29
+[13:15:34]     [ 8/29] simple_uvxy_pops                   Sh=4.90 R=166.8% → sharpe=4.90
+[13:15:44]     [ 9/29] four_corners                       Sh=4.65 R=231.3% → sharpe=4.65
+[13:15:55]     [10/29] 60d_bnd_bil                        Sh=4.92 R=185.5% → sharpe=4.92
+[13:16:05]     [11/29] 200d_cross_volmag                  Sh=4.61 R=226.0% → sharpe=4.61
+[13:16:15]     [12/29] just_run_ftlt                      Sh=4.98 R=166.1% → sharpe=4.98
+[13:16:26]     [13/29] modified_foreign_rat               Sh=4.69 R=211.2% → sharpe=4.69
+[13:16:36]     [14/29] basic_portfolio_2011               Sh=5.06 R=124.9% → sharpe=5.06
+[13:16:47]     [15/29] natural_gas_st_trading             Sh=5.21 R=193.0% → sharpe=5.21
+[13:16:58]     [16/29] qqq_ftlt_sma                       Sh=4.13 R=196.8% → sharpe=4.13
+[13:17:08]     [17/29] enigma_financial                   Sh=4.92 R=134.1% → sharpe=4.92
+[13:17:26]     [18/29] wild_west_combined                 Sh=5.17 R=143.1% → sharpe=5.17
+[13:17:36]     [19/29] qqq_core                           Sh=4.43 R=167.2% → sharpe=4.43
+[13:17:46]     [20/29] dereckn_hedge_mod                  Sh=4.83 R=151.8% → sharpe=4.83
+[13:17:56]     [21/29] four_corners_v12                   Sh=5.09 R=119.6% → sharpe=5.09
+[13:18:07]     [22/29] secular_growth_assets              Sh=3.72 R=189.1% → sharpe=3.72
+[13:18:17]     [23/29] bonds_zoop                         Sh=3.97 R=174.8% → sharpe=3.97
+[13:18:28]     [24/29] black_swan_catcher                 Sh=5.00 R=116.8% → sharpe=5.00
+[13:18:42]     [25/29] safety_town_pop_bots               Sh=4.87 R=124.1% → sharpe=4.87
+[13:18:52]     [26/29] rsi_frankenfest                    Sh=4.61 R=140.3% → sharpe=4.61
+[13:19:02]     [27/29] hg_short_only_v02                  Sh=4.34 R=136.3% → sharpe=4.34
+[13:19:14]     [28/29] st_leveraged_semiconductors_tr     Sh=3.90 R=145.5% → sharpe=3.90
+[13:19:24]     [29/29] gold                               Sh=4.41 R=118.4% → sharpe=4.41
+[13:19:24] 
+  → Best: spy_ftlt_hedged | sharpe=5.34 (+0.23) ↑
+[13:19:24] 
+  Step 3: testing 28 candidates...
+[13:19:38]     [ 1/28] hwrt_3                             Sh=5.45 R=214.5% → sharpe=5.45
+[13:19:50]     [ 2/28] kmlm_switcher                      Sh=5.12 R=251.1% → sharpe=5.12
+[13:20:00]     [ 3/28] em_emerging_markets                Sh=5.03 R=202.7% → sharpe=5.03
+[13:20:12]     [ 4/28] em_ftlt                            Sh=5.06 R=200.7% → sharpe=5.06
+[13:20:23]     [ 5/28] qqq_ftlt_bonds                     Sh=4.61 R=206.8% → sharpe=4.61
+[13:20:35]     [ 6/28] better_kmlm                        Sh=4.62 R=243.6% → sharpe=4.62
+[13:20:52]     [ 7/28] simple_uvxy_pops                   Sh=5.12 R=144.9% → sharpe=5.12
+[13:21:04]     [ 8/28] four_corners                       Sh=4.96 R=191.5% → sharpe=4.96
+[13:21:17]     [ 9/28] 60d_bnd_bil                        Sh=5.16 R=157.7% → sharpe=5.16
+[13:21:29]     [10/28] 200d_cross_volmag                  Sh=4.98 R=185.9% → sharpe=4.98
+[13:21:41]     [11/28] just_run_ftlt                      Sh=5.26 R=144.7% → sharpe=5.26
+[13:21:53]     [12/28] modified_foreign_rat               Sh=4.75 R=175.0% → sharpe=4.75
+[13:22:05]     [13/28] basic_portfolio_2011               Sh=5.28 R=115.4% → sharpe=5.28
+[13:22:16]     [14/28] natural_gas_st_trading             Sh=5.65 R=163.2% → sharpe=5.65
+[13:22:27]     [15/28] qqq_ftlt_sma                       Sh=4.46 R=165.7% → sharpe=4.46
+[13:22:39]     [16/28] enigma_financial                   Sh=5.12 R=121.8% → sharpe=5.12
+[13:23:00]     [17/28] wild_west_combined                 Sh=5.44 R=128.6% → sharpe=5.44
+[13:23:12]     [18/28] qqq_core                           Sh=4.67 R=145.3% → sharpe=4.67
+[13:23:24]     [19/28] dereckn_hedge_mod                  Sh=5.14 R=134.4% → sharpe=5.14
+[13:23:35]     [20/28] four_corners_v12                   Sh=5.32 R=111.5% → sharpe=5.32
+[13:23:46]     [21/28] secular_growth_assets              Sh=4.00 R=160.8% → sharpe=4.00
+[13:23:59]     [22/28] bonds_zoop                         Sh=4.39 R=150.7% → sharpe=4.39
+[13:24:10]     [23/28] black_swan_catcher                 Sh=5.23 R=109.7% → sharpe=5.23
+[13:24:26]     [24/28] safety_town_pop_bots               Sh=5.10 R=114.8% → sharpe=5.10
+[13:24:38]     [25/28] rsi_frankenfest                    Sh=4.91 R=126.0% → sharpe=4.91
+[13:24:49]     [26/28] hg_short_only_v02                  Sh=4.73 R=123.9% → sharpe=4.73
+[13:25:01]     [27/28] st_leveraged_semiconductors_tr     Sh=4.30 R=131.0% → sharpe=4.30
+[13:25:12]     [28/28] gold                               Sh=4.82 R=110.5% → sharpe=4.82
+[13:25:12] 
+  → Best: natural_gas_st_trading | sharpe=5.65 (+0.31) ★
+[13:25:12] 
+  Step 4: testing 27 candidates...
+[13:25:27]     [ 1/27] hwrt_3                             Sh=6.02 R=215.4% → sharpe=6.02
+[13:25:38]     [ 2/27] kmlm_switcher                      Sh=5.87 R=246.6% → sharpe=5.87
+[13:25:50]     [ 3/27] em_emerging_markets                Sh=5.67 R=203.9% → sharpe=5.67
+[13:26:01]     [ 4/27] em_ftlt                            Sh=5.72 R=202.1% → sharpe=5.72
+[13:26:14]     [ 5/27] qqq_ftlt_bonds                     Sh=5.27 R=207.2% → sharpe=5.27
+[13:26:26]     [ 6/27] better_kmlm                        Sh=5.26 R=239.0% → sharpe=5.26
+[13:26:43]     [ 7/27] simple_uvxy_pops                   Sh=5.70 R=156.2% → sharpe=5.70
+[13:26:55]     [ 8/27] four_corners                       Sh=5.57 R=196.7% → sharpe=5.57
+[13:27:08]     [ 9/27] 60d_bnd_bil                        Sh=5.66 R=166.5% → sharpe=5.66
+[13:27:20]     [10/27] 200d_cross_volmag                  Sh=5.53 R=190.2% → sharpe=5.53
+[13:27:31]     [11/27] just_run_ftlt                      Sh=5.75 R=156.0% → sharpe=5.75
+[13:27:43]     [12/27] modified_foreign_rat               Sh=5.41 R=181.5% → sharpe=5.41
+[13:27:54]     [13/27] basic_portfolio_2011               Sh=5.72 R=131.2% → sharpe=5.72
+[13:28:06]     [14/27] qqq_ftlt_sma                       Sh=5.09 R=173.8% → sharpe=5.09
+[13:28:18]     [15/27] enigma_financial                   Sh=5.57 R=136.4% → sharpe=5.57
+[13:28:39]     [16/27] wild_west_combined                 Sh=5.20 R=141.5% → sharpe=5.20
+[13:28:51]     [17/27] qqq_core                           Sh=5.27 R=156.5% → sharpe=5.27
+[13:29:03]     [18/27] dereckn_hedge_mod                  Sh=5.69 R=146.9% → sharpe=5.69
+[13:29:14]     [19/27] four_corners_v12                   Sh=5.72 R=127.5% → sharpe=5.72
+[13:29:25]     [20/27] secular_growth_assets              Sh=4.67 R=170.5% → sharpe=4.67
+[13:29:36]     [21/27] bonds_zoop                         Sh=5.09 R=161.0% → sharpe=5.09
+[13:29:48]     [22/27] black_swan_catcher                 Sh=5.64 R=126.3% → sharpe=5.64
+[13:30:04]     [23/27] safety_town_pop_bots               Sh=5.58 R=130.6% → sharpe=5.58
+[13:30:20]     [24/27] rsi_frankenfest                    Sh=5.44 R=140.3% → sharpe=5.44
+[13:30:32]     [25/27] hg_short_only_v02                  Sh=5.28 R=138.6% → sharpe=5.28
+[13:30:43]     [26/27] st_leveraged_semiconductors_tr     Sh=4.93 R=144.9% → sharpe=4.93
+[13:30:56]     [27/27] gold                               Sh=5.20 R=126.9% → sharpe=5.20
+[13:30:56] 
+  → Best: hwrt_3 | sharpe=6.02 (+0.37) ★
+[13:30:56] 
+  Step 5: testing 26 candidates...
+[13:31:10]     [ 1/26] kmlm_switcher                      Sh=5.93 R=270.9% → sharpe=5.93
+[13:31:24]     [ 2/26] em_emerging_markets                Sh=6.15 R=249.4% → sharpe=6.15
+[13:31:39]     [ 3/26] em_ftlt                            Sh=6.32 R=255.4% → sharpe=6.32
+[13:31:53]     [ 4/26] qqq_ftlt_bonds                     Sh=5.60 R=261.9% → sharpe=5.60
+[13:32:07]     [ 5/26] better_kmlm                        Sh=5.43 R=267.3% → sharpe=5.43
+[13:32:28]     [ 6/26] simple_uvxy_pops                   Sh=6.01 R=202.8% → sharpe=6.01
+[13:32:43]     [ 7/26] four_corners                       Sh=5.64 R=228.0% → sharpe=5.64
+[13:32:57]     [ 8/26] 60d_bnd_bil                        Sh=6.09 R=209.9% → sharpe=6.09
+[13:33:12]     [ 9/26] 200d_cross_volmag                  Sh=5.90 R=242.6% → sharpe=5.90
+[13:33:28]     [10/26] just_run_ftlt                      Sh=5.96 R=197.7% → sharpe=5.96
+[13:33:43]     [11/26] modified_foreign_rat               Sh=5.93 R=226.6% → sharpe=5.93
+[13:33:58]     [12/26] basic_portfolio_2011               Sh=5.99 R=173.8% → sharpe=5.99
+[13:34:13]     [13/26] qqq_ftlt_sma                       Sh=5.42 R=215.9% → sharpe=5.42
+[13:34:29]     [14/26] enigma_financial                   Sh=6.01 R=183.1% → sharpe=6.01
+[13:34:54]     [15/26] wild_west_combined                 Sh=5.77 R=184.8% → sharpe=5.77
+[13:35:08]     [16/26] qqq_core                           Sh=5.80 R=211.5% → sharpe=5.80
+[13:35:23]     [17/26] dereckn_hedge_mod                  Sh=6.15 R=189.0% → sharpe=6.15
+[13:35:39]     [18/26] four_corners_v12                   Sh=6.09 R=173.0% → sharpe=6.09
+[13:35:54]     [19/26] secular_growth_assets              Sh=5.24 R=218.9% → sharpe=5.24
+[13:36:09]     [20/26] bonds_zoop                         Sh=5.66 R=199.0% → sharpe=5.66
+[13:36:22]     [21/26] black_swan_catcher                 Sh=6.07 R=171.3% → sharpe=6.07
+[13:36:42]     [22/26] safety_town_pop_bots               Sh=6.03 R=175.5% → sharpe=6.03
+[13:36:56]     [23/26] rsi_frankenfest                    Sh=6.04 R=188.4% → sharpe=6.04
+[13:37:11]     [24/26] hg_short_only_v02                  Sh=5.77 R=194.1% → sharpe=5.77
+[13:37:36]     [25/26] st_leveraged_semiconductors_tr     Sh=5.54 R=188.9% → sharpe=5.54
+[13:37:50]     [26/26] gold                               Sh=5.79 R=170.1% → sharpe=5.79
+[13:37:50] 
+  → Best: em_ftlt | sharpe=6.32 (+0.30) ↑
+[13:37:50] 
+  Step 6: testing 25 candidates...
+[13:38:04]     [ 1/25] kmlm_switcher                      Sh=6.38 R=303.3% → sharpe=6.38
+[13:38:19]     [ 2/25] em_emerging_markets                Sh=5.95 R=280.4% → sharpe=5.95
+[13:38:33]     [ 3/25] qqq_ftlt_bonds                     Sh=6.02 R=295.9% → sharpe=6.02
+[13:38:49]     [ 4/25] better_kmlm                        Sh=5.92 R=295.5% → sharpe=5.92
+[13:39:08]     [ 5/25] simple_uvxy_pops                   Sh=6.36 R=237.7% → sharpe=6.36
+[13:39:23]     [ 6/25] four_corners                       Sh=6.10 R=258.5% → sharpe=6.10
+[13:39:38]     [ 7/25] 60d_bnd_bil                        Sh=6.49 R=242.0% → sharpe=6.49
+[13:39:52]     [ 8/25] 200d_cross_volmag                  Sh=6.28 R=276.7% → sharpe=6.28
+[13:40:13]     [ 9/25] just_run_ftlt                      Sh=6.31 R=232.5% → sharpe=6.31
+[13:40:27]     [10/25] modified_foreign_rat               Sh=5.83 R=257.5% → sharpe=5.83
+[13:40:42]     [11/25] basic_portfolio_2011               Sh=6.33 R=208.4% → sharpe=6.33
+[13:40:56]     [12/25] qqq_ftlt_sma                       Sh=5.95 R=248.0% → sharpe=5.95
+[13:41:10]     [13/25] enigma_financial                   Sh=6.34 R=218.5% → sharpe=6.34
+[13:41:33]     [14/25] wild_west_combined                 Sh=6.22 R=220.2% → sharpe=6.22
+[13:41:48]     [15/25] qqq_core                           Sh=6.17 R=247.1% → sharpe=6.17
+[13:42:02]     [16/25] dereckn_hedge_mod                  Sh=6.45 R=224.8% → sharpe=6.45
+[13:42:16]     [17/25] four_corners_v12                   Sh=6.35 R=208.3% → sharpe=6.35
+[13:42:30]     [18/25] secular_growth_assets              Sh=5.76 R=253.6% → sharpe=5.76
+[13:42:44]     [19/25] bonds_zoop                         Sh=6.17 R=234.1% → sharpe=6.17
+[13:42:59]     [20/25] black_swan_catcher                 Sh=6.35 R=206.3% → sharpe=6.35
+[13:43:18]     [21/25] safety_town_pop_bots               Sh=6.33 R=210.7% → sharpe=6.33
+[13:43:33]     [22/25] rsi_frankenfest                    Sh=6.39 R=221.9% → sharpe=6.39
+[13:43:46]     [23/25] hg_short_only_v02                  Sh=6.13 R=230.8% → sharpe=6.13
+[13:44:00]     [24/25] st_leveraged_semiconductors_tr     Sh=6.01 R=222.9% → sharpe=6.01
+[13:44:14]     [25/25] gold                               Sh=6.23 R=205.1% → sharpe=6.23
+[13:44:14] 
+  → Best: 60d_bnd_bil | sharpe=6.49 (+0.17) ↑
+[13:44:14] 
+  Step 7: testing 24 candidates...
+[13:44:33]     [ 1/24] kmlm_switcher                      Sh=6.41 R=282.8% → sharpe=6.41
+[13:44:47]     [ 2/24] em_emerging_markets                Sh=6.23 R=265.2% → sharpe=6.23
+[13:45:02]     [ 3/24] qqq_ftlt_bonds                     Sh=6.20 R=275.4% → sharpe=6.20
+[13:45:17]     [ 4/24] better_kmlm                        Sh=6.08 R=279.9% → sharpe=6.08
+[13:45:43]     [ 5/24] simple_uvxy_pops                   Sh=6.44 R=228.3% → sharpe=6.44
+[13:45:59]     [ 6/24] four_corners                       Sh=6.16 R=248.3% → sharpe=6.16
+[13:46:13]     [ 7/24] 200d_cross_volmag                  Sh=6.52 R=260.7% → sharpe=6.52
+[13:46:28]     [ 8/24] just_run_ftlt                      Sh=6.41 R=224.0% → sharpe=6.41
+[13:46:42]     [ 9/24] modified_foreign_rat               Sh=6.10 R=246.9% → sharpe=6.10
+[13:46:58]     [10/24] basic_portfolio_2011               Sh=6.47 R=204.8% → sharpe=6.47
+[13:47:13]     [11/24] qqq_ftlt_sma                       Sh=5.98 R=238.7% → sharpe=5.98
+[13:47:27]     [12/24] enigma_financial                   Sh=6.42 R=212.6% → sharpe=6.42
+[13:47:51]     [13/24] wild_west_combined                 Sh=6.34 R=214.2% → sharpe=6.34
+[13:48:05]     [14/24] qqq_core                           Sh=6.24 R=235.6% → sharpe=6.24
+[13:48:19]     [15/24] dereckn_hedge_mod                  Sh=6.59 R=217.0% → sharpe=6.59
+[13:48:33]     [16/24] four_corners_v12                   Sh=6.51 R=203.8% → sharpe=6.51
+[13:48:47]     [17/24] secular_growth_assets              Sh=5.77 R=241.7% → sharpe=5.77
+[13:49:01]     [18/24] bonds_zoop                         Sh=6.38 R=226.1% → sharpe=6.38
+[13:49:16]     [19/24] black_swan_catcher                 Sh=6.47 R=202.0% → sharpe=6.47
+[13:49:33]     [20/24] safety_town_pop_bots               Sh=6.44 R=205.7% → sharpe=6.44
+[13:49:48]     [21/24] rsi_frankenfest                    Sh=6.39 R=216.0% → sharpe=6.39
+[13:50:02]     [22/24] hg_short_only_v02                  Sh=6.33 R=221.4% → sharpe=6.33
+[13:50:16]     [23/24] st_leveraged_semiconductors_tr     Sh=6.00 R=216.9% → sharpe=6.00
+[13:50:30]     [24/24] gold                               Sh=6.40 R=201.1% → sharpe=6.40
+[13:50:30] 
+  → Best: dereckn_hedge_mod | sharpe=6.59 (+0.11) ↑
+[13:50:30] 
+  Step 8: testing 23 candidates...
+[13:50:45]     [ 1/23] kmlm_switcher                      Sh=6.47 R=254.1% → sharpe=6.47
+[13:51:00]     [ 2/23] em_emerging_markets                Sh=6.37 R=238.9% → sharpe=6.37
+[13:51:15]     [ 3/23] qqq_ftlt_bonds                     Sh=6.29 R=248.4% → sharpe=6.29
+[13:51:31]     [ 4/23] better_kmlm                        Sh=6.23 R=250.2% → sharpe=6.23
+[13:51:51]     [ 5/23] simple_uvxy_pops                   Sh=6.53 R=208.5% → sharpe=6.53
+[13:52:05]     [ 6/23] four_corners                       Sh=6.32 R=223.9% → sharpe=6.32
+[13:52:21]     [ 7/23] 200d_cross_volmag                  Sh=6.63 R=235.8% → sharpe=6.63
+[13:52:35]     [ 8/23] just_run_ftlt                      Sh=6.50 R=204.7% → sharpe=6.50
+[13:52:50]     [ 9/23] modified_foreign_rat               Sh=6.23 R=223.2% → sharpe=6.23
+[13:53:05]     [10/23] basic_portfolio_2011               Sh=6.55 R=187.5% → sharpe=6.55
+[13:53:20]     [11/23] qqq_ftlt_sma                       Sh=6.07 R=216.2% → sharpe=6.07
+[13:53:35]     [12/23] enigma_financial                   Sh=6.52 R=194.9% → sharpe=6.52
+[13:53:59]     [13/23] wild_west_combined                 Sh=6.45 R=196.3% → sharpe=6.45
+[13:54:12]     [14/23] qqq_core                           Sh=6.38 R=214.7% → sharpe=6.38
+[13:54:27]     [15/23] four_corners_v12                   Sh=6.63 R=187.6% → sharpe=6.63
+[13:54:41]     [16/23] secular_growth_assets              Sh=5.91 R=220.0% → sharpe=5.91
+[13:54:56]     [17/23] bonds_zoop                         Sh=6.32 R=206.3% → sharpe=6.32
+[13:55:11]     [18/23] black_swan_catcher                 Sh=6.55 R=185.9% → sharpe=6.55
+[13:55:30]     [19/23] safety_town_pop_bots               Sh=6.50 R=189.0% → sharpe=6.50
+[13:55:45]     [20/23] rsi_frankenfest                    Sh=6.48 R=197.2% → sharpe=6.48
+[13:56:00]     [21/23] hg_short_only_v02                  Sh=6.46 R=203.0% → sharpe=6.46
+[13:56:14]     [22/23] st_leveraged_semiconductors_tr     Sh=6.08 R=198.0% → sharpe=6.08
+[13:56:29]     [23/23] gold                               Sh=6.54 R=185.4% → sharpe=6.54
+[13:56:29] 
+  → Best: 200d_cross_volmag | sharpe=6.63 (+0.04) ~
+[13:56:29] 
+  Step 9: testing 22 candidates...
+[13:56:46]     [ 1/22] kmlm_switcher                      Sh=6.45 R=266.3% → sharpe=6.45
+[13:57:01]     [ 2/22] em_emerging_markets                Sh=6.53 R=255.3% → sharpe=6.53
+[13:57:16]     [ 3/22] qqq_ftlt_bonds                     Sh=6.27 R=264.4% → sharpe=6.27
+[13:57:33]     [ 4/22] better_kmlm                        Sh=6.22 R=264.0% → sharpe=6.22
+[13:58:03]     [ 5/22] simple_uvxy_pops                   Sh=6.51 R=225.8% → sharpe=6.51
+[13:58:23]     [ 6/22] four_corners                       Sh=6.30 R=238.8% → sharpe=6.30
+[13:58:40]     [ 7/22] just_run_ftlt                      Sh=6.52 R=222.1% → sharpe=6.52
+[13:58:57]     [ 8/22] modified_foreign_rat               Sh=6.38 R=240.2% → sharpe=6.38
+[13:59:14]     [ 9/22] basic_portfolio_2011               Sh=6.61 R=205.8% → sharpe=6.61
+[13:59:31]     [10/22] qqq_ftlt_sma                       Sh=6.17 R=232.2% → sharpe=6.17
+[13:59:46]     [11/22] enigma_financial                   Sh=6.59 R=212.8% → sharpe=6.59
+[13:59:52]     exception: Expecting value: line 1 column 1 (char 0)
+[14:00:08]     exception: Expecting value: line 1 column 1 (char 0)
+[14:00:23]     exception: Expecting value: line 1 column 1 (char 0)
+[14:00:42]     exception: Expecting value: line 1 column 1 (char 0)
+[14:00:58]     exception: Expecting value: line 1 column 1 (char 0)
+[14:01:14]     exception: Expecting value: line 1 column 1 (char 0)
+[14:01:32]     exception: Expecting value: line 1 column 1 (char 0)
+[14:01:48]     exception: Expecting value: line 1 column 1 (char 0)
+[14:02:04]     exception: Expecting value: line 1 column 1 (char 0)
+[14:02:16]     [12/22] wild_west_combined                 Sh=0.00 R=0.0% → sharpe=0.00
+[14:02:32]     [13/22] qqq_core                           Sh=6.49 R=232.6% → sharpe=6.49
+[14:02:50]     [14/22] four_corners_v12                   Sh=6.65 R=205.8% → sharpe=6.65
+[14:03:07]     [15/22] secular_growth_assets              Sh=6.16 R=237.5% → sharpe=6.16
+[14:03:25]     [16/22] bonds_zoop                         Sh=6.44 R=223.6% → sharpe=6.44
+[14:03:42]     [17/22] black_swan_catcher                 Sh=6.58 R=204.0% → sharpe=6.58
+[14:04:07]     [18/22] safety_town_pop_bots               Sh=6.55 R=207.5% → sharpe=6.55
+[14:04:23]     [19/22] rsi_frankenfest                    Sh=6.64 R=214.4% → sharpe=6.64
+[14:04:42]     [20/22] hg_short_only_v02                  Sh=6.44 R=221.1% → sharpe=6.44
+[14:04:59]     [21/22] st_leveraged_semiconductors_tr     Sh=6.26 R=215.6% → sharpe=6.26
+[14:05:15]     [22/22] gold                               Sh=6.63 R=203.7% → sharpe=6.63
+[14:05:15] 
+  → Best: four_corners_v12 | sharpe=6.65 (+0.02) ~
+[14:05:15]   Max K=10 reached
+[14:05:15] 
+  Final validation (10 components):
+[14:05:20]     2022: Sharpe=7.42 Return=299.3% DD=3.6%
+[14:05:26]     2023: Sharpe=7.77 Return=167.3% DD=3.0%
+[14:05:31]     2024: Sharpe=4.75 Return=150.9% DD=5.1%
+[14:05:31] 
+============================================================
+[14:05:31] TRACK B: Optimize for Return
+[14:05:31] ============================================================
+[14:05:31] Greedy [RETURN] seed: better_kmlm (sh=3.12 r=700.6%)
+[14:05:31] 
+  Step 1: testing 30 candidates...
+[14:05:38]     [ 1/30] kmlm_switcher                      Sh=3.56 R=675.7% → return=675.70
+[14:05:44]     [ 2/30] qqq_ftlt_bonds                     Sh=3.62 R=576.6% → return=576.60
+[14:05:53]     [ 3/30] hwrt_3                             Sh=3.91 R=565.7% → return=565.70
+[14:06:00]     [ 4/30] em_ftlt                            Sh=4.49 R=564.1% → return=564.10
+[14:06:06]     [ 5/30] em_emerging_markets                Sh=4.41 R=544.8% → return=544.80
+[14:06:14]     [ 6/30] four_corners                       Sh=3.30 R=517.6% → return=517.60
+[14:06:21]     [ 7/30] 200d_cross_volmag                  Sh=3.54 R=482.0% → return=482.00
+[14:06:31]     [ 8/30] copy_of_sisyphus_v0_0___optimized_s Sh=3.81 R=450.3% → return=450.30
+[14:06:37]     [ 9/30] modified_foreign_rat               Sh=4.04 R=459.5% → return=459.50
+[14:06:44]     [10/30] qqq_ftlt_sma                       Sh=3.29 R=439.6% → return=439.60
+[14:06:51]     [11/30] 60d_bnd_bil                        Sh=3.78 R=403.0% → return=403.00
+[14:06:57]     [12/30] natural_gas_st_trading             Sh=3.97 R=393.2% → return=393.20
+[14:07:04]     [13/30] secular_growth_assets              Sh=3.34 R=375.9% → return=375.90
+[14:07:10]     [14/30] bonds_zoop                         Sh=3.59 R=309.7% → return=309.70
+[14:07:17]     [15/30] just_run_ftlt                      Sh=3.56 R=323.4% → return=323.40
+[14:07:24]     [16/30] qqq_core                           Sh=3.63 R=342.4% → return=342.40
+[14:07:36]     [17/30] simple_uvxy_pops                   Sh=3.46 R=328.3% → return=328.30
+[14:07:45]     [18/30] combo_10_general_frankround_s_chick Sh=3.90 R=315.4% → return=315.40
+[14:07:52]     [19/30] dereckn_hedge_mod                  Sh=3.64 R=266.6% → return=266.60
+[14:08:01]     [20/30] spy_ftlt_hedged                    Sh=3.79 R=294.6% → return=294.60
+[14:08:08]     [21/30] rsi_frankenfest                    Sh=3.53 R=321.6% → return=321.60
+[14:08:15]     [22/30] st_leveraged_semiconductors_tr     Sh=3.13 R=293.7% → return=293.70
+[14:08:32]     [23/30] wild_west_combined                 Sh=3.56 R=271.8% → return=271.80
+[14:08:38]     [24/30] hg_short_only_v02                  Sh=3.35 R=279.8% → return=279.80
+[14:08:45]     [25/30] enigma_financial                   Sh=3.54 R=256.6% → return=256.60
+[14:08:52]     [26/30] basic_portfolio_2011               Sh=3.33 R=238.4% → return=238.40
+[14:09:04]     [27/30] safety_town_pop_bots               Sh=3.37 R=236.3% → return=236.30
+[14:09:10]     [28/30] four_corners_v12                   Sh=3.34 R=223.2% → return=223.20
+[14:09:17]     [29/30] gold                               Sh=3.29 R=231.1% → return=231.10
+[14:09:24]     [30/30] black_swan_catcher                 Sh=3.31 R=220.3% → return=220.30
+[14:09:24] 
+  → Best: kmlm_switcher | return=675.70 (+-24.90) ✗
+[14:09:24]   → Marginal non-positive. Stopping at K=1.
+[14:09:24] 
+  Final validation (1 components):
+[14:09:26]     2022: Sharpe=1.78 Return=233.8% DD=36.1%
+[14:09:28]     2023: Sharpe=3.76 Return=579.2% DD=17.8%
+[14:09:31]     2024: Sharpe=3.83 Return=1288.8% DD=16.3%
+[14:09:31] 
+============================================================
+[14:09:31] FINAL SUMMARY
+[14:09:31] ============================================================
+[14:09:31] 
+SHARPE TRACK — K=10:
+[14:09:31]   [1] copy_of_sisyphus_v0_0___optimized_s
+[14:09:31]   [2] combo_10_general_frankround_s_chick
+[14:09:31]   [3] spy_ftlt_hedged
+[14:09:31]   [4] natural_gas_st_trading
+[14:09:31]   [5] hwrt_3
+[14:09:31]   [6] em_ftlt
+[14:09:31]   [7] 60d_bnd_bil
+[14:09:31]   [8] dereckn_hedge_mod
+[14:09:31]   [9] 200d_cross_volmag
+[14:09:31]   [10] four_corners_v12
+[14:09:31]   Avg Sharpe=6.65 Avg Return=205.8% DD=3.6%
+[14:09:31] 
+RETURN TRACK — K=1:
+[14:09:31]   [1] better_kmlm
+[14:09:31]   Avg Sharpe=3.12 Avg Return=700.6% DD=36.1%
+[14:09:31] Done.

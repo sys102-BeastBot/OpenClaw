@@ -1,0 +1,43 @@
+{
+  "criterion": "return",
+  "selected": [
+    "better_kmlm"
+  ],
+  "history": [
+    {
+      "step": 0,
+      "added": "better_kmlm",
+      "avg_sharpe": 3.122,
+      "avg_return": 700.6,
+      "maxdd_2022": 36.06,
+      "marginal": 0
+    },
+    {
+      "step": 1,
+      "added": "kmlm_switcher",
+      "avg_sharpe": 3.557,
+      "avg_return": 675.7,
+      "maxdd_2022": 24.25,
+      "marginal": -24.9
+    }
+  ],
+  "final_results": {
+    "2022": {
+      "sharpe": 1.777,
+      "annret": 233.8,
+      "maxdd": 36.06
+    },
+    "2023": {
+      "sharpe": 3.763,
+      "annret": 579.2,
+      "maxdd": 17.8
+    },
+    "2024": {
+      "sharpe": 3.825,
+      "annret": 1288.8,
+      "maxdd": 16.27
+    }
+  },
+  "k": 1,
+  "done": true
+}
