@@ -1,0 +1,954 @@
+{
+  "id": "3ac736ca-fb06-4d44-991f-35719b970cf2",
+  "step": "root",
+  "name": "60d BND vs 60d BIL",
+  "description": "",
+  "rebalance": "daily",
+  "children": [
+    {
+      "id": "35fb1bcc-0ade-4d38-b7ca-969353bcdcff",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "step": "group",
+          "name": "60d BND vs 60d BIL",
+          "children": [
+            {
+              "step": "wt-cash-equal",
+              "children": [
+                {
+                  "id": "c01e9ea7-019b-43dc-8643-09626833def2",
+                  "step": "if",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "ticker": "VIXY",
+                          "id": "b3d45033-42b6-4370-baf0-dacec45e6b50",
+                          "step": "asset",
+                          "children": []
+                        }
+                      ],
+                      "is-else-condition?": false,
+                      "rhs-fixed-value?": true,
+                      "lhs-fn": "relative-strength-index",
+                      "lhs-window-days": "10",
+                      "lhs-val": "SPY",
+                      "id": "53101ade-6572-4751-949f-b34df57883b8",
+                      "comparator": "gt",
+                      "rhs-val": "80",
+                      "step": "if-child"
+                    },
+                    {
+                      "id": "dbb55412-b2df-4993-93d4-0bdaeb5ac7ec",
+                      "step": "if-child",
+                      "is-else-condition?": true,
+                      "children": [
+                        {
+                          "id": "8666f9dc-9e9b-4e1b-ad54-44ab88f9bfe9",
+                          "step": "wt-cash-equal",
+                          "children": [
+                            {
+                              "weight": {
+                                "num": "100",
+                                "den": 100
+                              },
+                              "id": "b94096c8-1724-4a84-80fc-8a7cdd5273d9",
+                              "step": "if",
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "ticker": "VIXY",
+                                      "id": "b8db3838-519f-48b7-ae9e-5d058ae713f6",
+                                      "step": "asset",
+                                      "children": []
+                                    }
+                                  ],
+                                  "rhs-fn": "relative-strength-index",
+                                  "is-else-condition?": false,
+                                  "rhs-fixed-value?": true,
+                                  "lhs-fn": "relative-strength-index",
+                                  "rhs-window-days": "10",
+                                  "lhs-window-days": "10",
+                                  "lhs-val": "QQQ",
+                                  "id": "09d398c0-5ec4-43c1-abec-350214908c17",
+                                  "comparator": "gt",
+                                  "rhs-val": "79",
+                                  "step": "if-child"
+                                },
+                                {
+                                  "id": "3e8d05b8-ece9-4664-8a98-f9f5f2dbf141",
+                                  "step": "if-child",
+                                  "is-else-condition?": true,
+                                  "children": [
+                                    {
+                                      "id": "9f821a0b-4390-4f6f-ace0-0689e6eeb4ef",
+                                      "step": "wt-cash-equal",
+                                      "children": [
+                                        {
+                                          "weight": {
+                                            "num": "100",
+                                            "den": 100
+                                          },
+                                          "id": "c1a2b7bd-152b-4bc9-b3ac-2a003ff386d6",
+                                          "step": "if",
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "id": "c3c6b00e-8ec8-4ef8-a974-b05d97d8ff61",
+                                                  "step": "group",
+                                                  "name": "Volatility",
+                                                  "children": [
+                                                    {
+                                                      "step": "wt-cash-equal",
+                                                      "id": "266b0be1-2fac-440e-9dc8-d2883a2710a9",
+                                                      "children": [
+                                                        {
+                                                          "ticker": "VIXY",
+                                                          "id": "5f47cb4c-0788-4878-bb0c-39dd45017a2e",
+                                                          "step": "asset",
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "ticker": "PSQ",
+                                                          "id": "1b47477a-7d39-4139-94fb-7ac8200b76f3",
+                                                          "step": "asset",
+                                                          "children": []
+                                                        }
+                                                      ],
+                                                      "window-days": "10"
+                                                    }
+                                                  ],
+                                                  "weight": {
+                                                    "num": "100",
+                                                    "den": 100
+                                                  }
+                                                }
+                                              ],
+                                              "rhs-fn": "relative-strength-index",
+                                              "is-else-condition?": false,
+                                              "rhs-fixed-value?": true,
+                                              "lhs-fn": "relative-strength-index",
+                                              "rhs-window-days": "10",
+                                              "lhs-window-days": "10",
+                                              "lhs-val": "VTV",
+                                              "id": "ed2155fd-08aa-45c6-872d-fcde2563ee60",
+                                              "comparator": "gt",
+                                              "rhs-val": "80",
+                                              "step": "if-child"
+                                            },
+                                            {
+                                              "id": "72fc7db5-ec0f-4e14-89f8-a3b17ad4841e",
+                                              "step": "if-child",
+                                              "is-else-condition?": true,
+                                              "children": [
+                                                {
+                                                  "id": "1805f403-631a-4faa-98c8-7e812526a476",
+                                                  "step": "wt-cash-equal",
+                                                  "children": [
+                                                    {
+                                                      "id": "d1a57e57-6947-4657-bff7-8bcc7c54f8d1",
+                                                      "step": "if",
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "id": "d439dd4a-f5f5-4191-89d4-62ca85aa3247",
+                                                              "step": "group",
+                                                              "name": "Volatility",
+                                                              "children": [
+                                                                {
+                                                                  "step": "wt-cash-equal",
+                                                                  "id": "fd4a2962-2ddd-4abb-ade0-7ada983f296e",
+                                                                  "children": [
+                                                                    {
+                                                                      "ticker": "VIXY",
+                                                                      "id": "6ad92f8d-d75c-4f16-a57e-403fc5309076",
+                                                                      "step": "asset",
+                                                                      "children": []
+                                                                    },
+                                                                    {
+                                                                      "ticker": "PSQ",
+                                                                      "id": "7cae5bd3-ec5f-4f4d-9102-4af275a26979",
+                                                                      "step": "asset",
+                                                                      "children": []
+                                                                    }
+                                                                  ],
+                                                                  "window-days": "10"
+                                                                }
+                                                              ],
+                                                              "weight": {
+                                                                "num": "100",
+                                                                "den": 100
+                                                              }
+                                                            }
+                                                          ],
+                                                          "is-else-condition?": false,
+                                                          "rhs-fixed-value?": true,
+                                                          "lhs-fn": "relative-strength-index",
+                                                          "lhs-window-days": "10",
+                                                          "lhs-val": "VOX",
+                                                          "id": "b4777050-53fb-4863-8e1c-325a96e8f6b4",
+                                                          "comparator": "gt",
+                                                          "rhs-val": "79",
+                                                          "step": "if-child"
+                                                        },
+                                                        {
+                                                          "id": "937968b3-d8fa-4154-8359-72a7428b57e0",
+                                                          "step": "if-child",
+                                                          "is-else-condition?": true,
+                                                          "children": [
+                                                            {
+                                                              "id": "769affe4-bfa8-460b-b835-06b4525f9303",
+                                                              "step": "wt-cash-equal",
+                                                              "children": [
+                                                                {
+                                                                  "weight": {
+                                                                    "num": 100,
+                                                                    "den": 100
+                                                                  },
+                                                                  "id": "758e64d3-68bb-4fd7-8e0d-ec93e2348559",
+                                                                  "step": "if",
+                                                                  "children": [
+                                                                    {
+                                                                      "children": [
+                                                                        {
+                                                                          "id": "7ed0972f-1ff5-4efa-b348-f663825e8ab0",
+                                                                          "step": "group",
+                                                                          "name": "Volatility",
+                                                                          "children": [
+                                                                            {
+                                                                              "step": "wt-cash-equal",
+                                                                              "id": "4c035bdd-cd07-4989-a1a5-b35528dfb7eb",
+                                                                              "children": [
+                                                                                {
+                                                                                  "ticker": "VIXY",
+                                                                                  "id": "124cc143-4f55-46d9-ad8d-1080fa17e7a3",
+                                                                                  "step": "asset",
+                                                                                  "children": []
+                                                                                },
+                                                                                {
+                                                                                  "ticker": "PSQ",
+                                                                                  "id": "3c605896-1d10-4751-8183-e56e86e6ad03",
+                                                                                  "step": "asset",
+                                                                                  "children": []
+                                                                                }
+                                                                              ],
+                                                                              "window-days": "10"
+                                                                            }
+                                                                          ],
+                                                                          "weight": {
+                                                                            "num": "100",
+                                                                            "den": 100
+                                                                          }
+                                                                        }
+                                                                      ],
+                                                                      "is-else-condition?": false,
+                                                                      "rhs-fixed-value?": true,
+                                                                      "lhs-fn": "relative-strength-index",
+                                                                      "lhs-window-days": "10",
+                                                                      "lhs-val": "XLK",
+                                                                      "id": "c987115b-f06f-43df-927e-268be4d91498",
+                                                                      "comparator": "gt",
+                                                                      "rhs-val": "80",
+                                                                      "step": "if-child"
+                                                                    },
+                                                                    {
+                                                                      "id": "5738cf02-1b7f-497e-a5e8-eeae88542d36",
+                                                                      "step": "if-child",
+                                                                      "is-else-condition?": true,
+                                                                      "children": [
+                                                                        {
+                                                                          "id": "d6aecc9c-3a5c-4b8d-9ff3-656d1b19cd13",
+                                                                          "step": "wt-cash-equal",
+                                                                          "children": [
+                                                                            {
+                                                                              "weight": {
+                                                                                "num": 100,
+                                                                                "den": 100
+                                                                              },
+                                                                              "id": "12e47555-0fc0-4cb6-9e01-cea11cb62417",
+                                                                              "step": "if",
+                                                                              "children": [
+                                                                                {
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "id": "1c4615c3-675c-4b29-bbf4-253c9eb91cd0",
+                                                                                      "step": "group",
+                                                                                      "name": "Volatility",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "step": "wt-cash-equal",
+                                                                                          "id": "6fd4fb39-d3a3-4a04-a0c4-df1b7a399323",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "ticker": "VIXY",
+                                                                                              "id": "95ffc226-def4-48b3-888e-765739cdec46",
+                                                                                              "step": "asset",
+                                                                                              "children": []
+                                                                                            },
+                                                                                            {
+                                                                                              "ticker": "PSQ",
+                                                                                              "id": "e9501470-c8e7-4826-9563-60152cca9ab4",
+                                                                                              "step": "asset",
+                                                                                              "children": []
+                                                                                            }
+                                                                                          ],
+                                                                                          "window-days": "10"
+                                                                                        }
+                                                                                      ],
+                                                                                      "weight": {
+                                                                                        "num": "100",
+                                                                                        "den": 100
+                                                                                      }
+                                                                                    }
+                                                                                  ],
+                                                                                  "is-else-condition?": false,
+                                                                                  "rhs-fixed-value?": true,
+                                                                                  "lhs-fn": "relative-strength-index",
+                                                                                  "lhs-window-days": "10",
+                                                                                  "lhs-val": "XLP",
+                                                                                  "id": "ad67a182-2a98-495a-a030-c08e78df0eb0",
+                                                                                  "comparator": "gt",
+                                                                                  "rhs-val": "78",
+                                                                                  "step": "if-child"
+                                                                                },
+                                                                                {
+                                                                                  "id": "00a83754-2127-4c08-8f34-412abe695c78",
+                                                                                  "step": "if-child",
+                                                                                  "is-else-condition?": true,
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "id": "4a20111a-3ad8-4ab0-b8b0-57e38bf2cba1",
+                                                                                      "step": "wt-cash-equal",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "id": "e62dcca8-ea32-44a0-9bb8-9d9710dba49b",
+                                                                                          "step": "if",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "id": "063ba69f-a887-4667-8400-38587fabaf91",
+                                                                                                  "step": "group",
+                                                                                                  "name": "Volatility",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "step": "wt-cash-equal",
+                                                                                                      "id": "d275a8eb-74c3-4aa0-b473-10f37c9e3ac1",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "ticker": "VIXY",
+                                                                                                          "id": "319c5091-a5c9-43b3-93db-a408cd4b0bd3",
+                                                                                                          "step": "asset",
+                                                                                                          "children": []
+                                                                                                        },
+                                                                                                        {
+                                                                                                          "ticker": "PSQ",
+                                                                                                          "id": "f770b616-c345-4649-9e6a-bba74300c6ae",
+                                                                                                          "step": "asset",
+                                                                                                          "children": []
+                                                                                                        }
+                                                                                                      ],
+                                                                                                      "window-days": "10"
+                                                                                                    }
+                                                                                                  ],
+                                                                                                  "weight": {
+                                                                                                    "num": "100",
+                                                                                                    "den": 100
+                                                                                                  }
+                                                                                                }
+                                                                                              ],
+                                                                                              "is-else-condition?": false,
+                                                                                              "rhs-fixed-value?": true,
+                                                                                              "lhs-fn": "relative-strength-index",
+                                                                                              "lhs-window-days": "10",
+                                                                                              "lhs-val": "XLF",
+                                                                                              "id": "04b0d82e-bf16-4661-b4b1-2b6058d60fef",
+                                                                                              "comparator": "gt",
+                                                                                              "rhs-val": "81",
+                                                                                              "step": "if-child"
+                                                                                            },
+                                                                                            {
+                                                                                              "id": "0b31bdb1-c45f-4095-92a4-5806e721f3c7",
+                                                                                              "step": "if-child",
+                                                                                              "is-else-condition?": true,
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "id": "34aab5be-1d9c-4503-94e9-1dbcacb94660",
+                                                                                                  "step": "wt-cash-equal",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "step": "if",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "children": [
+                                                                                                            {
+                                                                                                              "id": "a36f9e9c-a3f3-42fc-a83a-6dfb50238770",
+                                                                                                              "step": "wt-cash-equal",
+                                                                                                              "children": [
+                                                                                                                {
+                                                                                                                  "step": "if",
+                                                                                                                  "children": [
+                                                                                                                    {
+                                                                                                                      "children": [
+                                                                                                                        {
+                                                                                                                          "id": "cf4dd587-3057-4a32-9df4-4a81ac891545",
+                                                                                                                          "step": "group",
+                                                                                                                          "name": "Volatility",
+                                                                                                                          "children": [
+                                                                                                                            {
+                                                                                                                              "step": "wt-cash-equal",
+                                                                                                                              "id": "f439827a-e550-4c00-a799-c86c5b6a17db",
+                                                                                                                              "children": [
+                                                                                                                                {
+                                                                                                                                  "ticker": "VIXY",
+                                                                                                                                  "id": "c0d8d37f-76b1-4d53-83ac-6156f79cebd5",
+                                                                                                                                  "step": "asset",
+                                                                                                                                  "children": []
+                                                                                                                                },
+                                                                                                                                {
+                                                                                                                                  "ticker": "PSQ",
+                                                                                                                                  "id": "5794e168-172d-464a-bff8-c752d74183ef",
+                                                                                                                                  "step": "asset",
+                                                                                                                                  "children": []
+                                                                                                                                }
+                                                                                                                              ],
+                                                                                                                              "window-days": "10"
+                                                                                                                            }
+                                                                                                                          ],
+                                                                                                                          "weight": {
+                                                                                                                            "num": "100",
+                                                                                                                            "den": 100
+                                                                                                                          }
+                                                                                                                        }
+                                                                                                                      ],
+                                                                                                                      "lhs-fn-params": {
+                                                                                                                        "window": 1
+                                                                                                                      },
+                                                                                                                      "is-else-condition?": false,
+                                                                                                                      "rhs-fixed-value?": true,
+                                                                                                                      "lhs-fn": "cumulative-return",
+                                                                                                                      "lhs-val": "QQQ",
+                                                                                                                      "id": "8c5c9810-4a95-4529-a834-caee4013dca7",
+                                                                                                                      "comparator": "gt",
+                                                                                                                      "rhs-val": "2",
+                                                                                                                      "step": "if-child"
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                      "step": "if-child",
+                                                                                                                      "id": "1063c9b3-7f8a-407d-ab53-d6cb56e3e106",
+                                                                                                                      "is-else-condition?": true,
+                                                                                                                      "children": [
+                                                                                                                        {
+                                                                                                                          "id": "03612e92-cbe0-4187-b7b3-df6fc8c577b2",
+                                                                                                                          "step": "group",
+                                                                                                                          "name": "MR",
+                                                                                                                          "children": [
+                                                                                                                            {
+                                                                                                                              "step": "wt-cash-equal",
+                                                                                                                              "id": "b3eb899c-b1af-4a96-9bec-286e09d719ab",
+                                                                                                                              "children": [
+                                                                                                                                {
+                                                                                                                                  "id": "38d0fe8b-149b-41e5-91cc-12373d4782a4",
+                                                                                                                                  "step": "if",
+                                                                                                                                  "children": [
+                                                                                                                                    {
+                                                                                                                                      "children": [
+                                                                                                                                        {
+                                                                                                                                          "ticker": "SOXL",
+                                                                                                                                          "id": "14c0714e-34ad-4952-a979-ed2916690ed9",
+                                                                                                                                          "step": "asset",
+                                                                                                                                          "children": []
+                                                                                                                                        }
+                                                                                                                                      ],
+                                                                                                                                      "lhs-fn-params": {
+                                                                                                                                        "window": 10
+                                                                                                                                      },
+                                                                                                                                      "is-else-condition?": false,
+                                                                                                                                      "rhs-fixed-value?": true,
+                                                                                                                                      "lhs-fn": "relative-strength-index",
+                                                                                                                                      "lhs-val": "SOXX",
+                                                                                                                                      "id": "24915f4e-c260-46e1-89a8-cd6d0a398d58",
+                                                                                                                                      "comparator": "lt",
+                                                                                                                                      "rhs-val": "30",
+                                                                                                                                      "step": "if-child"
+                                                                                                                                    },
+                                                                                                                                    {
+                                                                                                                                      "id": "907d92ed-0fc0-43a1-a570-ad75c25fb9f2",
+                                                                                                                                      "step": "if-child",
+                                                                                                                                      "is-else-condition?": true,
+                                                                                                                                      "children": [
+                                                                                                                                        {
+                                                                                                                                          "id": "b9517ce6-b47f-4557-8c58-12c6c7ea01ec",
+                                                                                                                                          "step": "wt-cash-equal",
+                                                                                                                                          "children": [
+                                                                                                                                            {
+                                                                                                                                              "weight": {
+                                                                                                                                                "num": 100,
+                                                                                                                                                "den": 100
+                                                                                                                                              },
+                                                                                                                                              "id": "dd1e8dd0-e99c-4a9b-affa-436db54d358e",
+                                                                                                                                              "step": "if",
+                                                                                                                                              "children": [
+                                                                                                                                                {
+                                                                                                                                                  "children": [
+                                                                                                                                                    {
+                                                                                                                                                      "ticker": "BIL",
+                                                                                                                                                      "id": "ce83e76d-1539-4295-a042-2f29dc1a4d6f",
+                                                                                                                                                      "step": "asset",
+                                                                                                                                                      "children": []
+                                                                                                                                                    }
+                                                                                                                                                  ],
+                                                                                                                                                  "lhs-fn-params": {
+                                                                                                                                                    "window": 3
+                                                                                                                                                  },
+                                                                                                                                                  "is-else-condition?": false,
+                                                                                                                                                  "rhs-fixed-value?": true,
+                                                                                                                                                  "lhs-fn": "max-drawdown",
+                                                                                                                                                  "lhs-val": "SVXY",
+                                                                                                                                                  "id": "23a73910-ae97-47f6-8993-b181d2e838f4",
+                                                                                                                                                  "comparator": "gt",
+                                                                                                                                                  "rhs-val": "20",
+                                                                                                                                                  "step": "if-child"
+                                                                                                                                                },
+                                                                                                                                                {
+                                                                                                                                                  "id": "3cc0fd26-10d1-4933-a91c-e9a652c23517",
+                                                                                                                                                  "step": "if-child",
+                                                                                                                                                  "is-else-condition?": true,
+                                                                                                                                                  "children": [
+                                                                                                                                                    {
+                                                                                                                                                      "ticker": "SVXY",
+                                                                                                                                                      "id": "232a9e53-b8ac-4653-99b8-2ffd01018ccd",
+                                                                                                                                                      "step": "asset",
+                                                                                                                                                      "children": []
+                                                                                                                                                    }
+                                                                                                                                                  ]
+                                                                                                                                                }
+                                                                                                                                              ]
+                                                                                                                                            }
+                                                                                                                                          ]
+                                                                                                                                        }
+                                                                                                                                      ]
+                                                                                                                                    }
+                                                                                                                                  ]
+                                                                                                                                }
+                                                                                                                              ]
+                                                                                                                            }
+                                                                                                                          ],
+                                                                                                                          "weight": {
+                                                                                                                            "num": "80",
+                                                                                                                            "den": 100
+                                                                                                                          }
+                                                                                                                        }
+                                                                                                                      ]
+                                                                                                                    }
+                                                                                                                  ],
+                                                                                                                  "id": "1beb0aca-9095-4988-9130-60a98153f9fa"
+                                                                                                                }
+                                                                                                              ]
+                                                                                                            }
+                                                                                                          ],
+                                                                                                          "lhs-fn-params": {
+                                                                                                            "window": 6
+                                                                                                          },
+                                                                                                          "is-else-condition?": false,
+                                                                                                          "rhs-fixed-value?": true,
+                                                                                                          "lhs-fn": "cumulative-return",
+                                                                                                          "lhs-val": "QQQ",
+                                                                                                          "id": "9cc6a59e-3745-44d9-9f77-2859331aef4e",
+                                                                                                          "comparator": "lt",
+                                                                                                          "rhs-val": "-4",
+                                                                                                          "step": "if-child"
+                                                                                                        },
+                                                                                                        {
+                                                                                                          "step": "if-child",
+                                                                                                          "id": "6634fcc4-3019-4434-9976-29aa1f8c3244",
+                                                                                                          "is-else-condition?": true,
+                                                                                                          "children": [
+                                                                                                            {
+                                                                                                              "id": "6621fc14-35f4-428a-b131-785598c10b42",
+                                                                                                              "step": "group",
+                                                                                                              "name": "60d BND vs 60d BIL",
+                                                                                                              "children": [
+                                                                                                                {
+                                                                                                                  "step": "wt-cash-equal",
+                                                                                                                  "id": "9fec7034-ab97-43ed-bf6e-50b2583a4152",
+                                                                                                                  "children": [
+                                                                                                                    {
+                                                                                                                      "weight": {
+                                                                                                                        "num": 100,
+                                                                                                                        "den": 100
+                                                                                                                      },
+                                                                                                                      "id": "5e00007a-3c88-48ad-a4d8-f0defa13e368",
+                                                                                                                      "step": "if",
+                                                                                                                      "children": [
+                                                                                                                        {
+                                                                                                                          "children": [
+                                                                                                                            {
+                                                                                                                              "id": "3fe416d1-43b5-4108-b3f8-6cfbcc4cfcd2",
+                                                                                                                              "step": "wt-cash-equal",
+                                                                                                                              "children": [
+                                                                                                                                {
+                                                                                                                                  "id": "907f8895-4b28-4c06-b5f4-b7e6bbb602ab",
+                                                                                                                                  "step": "if",
+                                                                                                                                  "children": [
+                                                                                                                                    {
+                                                                                                                                      "children": [
+                                                                                                                                        {
+                                                                                                                                          "id": "4ca35c56-8853-41d6-80a8-bd834795ebe0",
+                                                                                                                                          "step": "wt-cash-equal",
+                                                                                                                                          "children": [
+                                                                                                                                            {
+                                                                                                                                              "id": "05203c7b-1c57-4fc6-973c-a74c60963b6d",
+                                                                                                                                              "step": "if",
+                                                                                                                                              "children": [
+                                                                                                                                                {
+                                                                                                                                                  "children": [
+                                                                                                                                                    {
+                                                                                                                                                      "id": "090055a9-bc13-4fb0-97ee-397e59ec6515",
+                                                                                                                                                      "step": "group",
+                                                                                                                                                      "name": "Safety",
+                                                                                                                                                      "children": [
+                                                                                                                                                        {
+                                                                                                                                                          "step": "wt-cash-equal",
+                                                                                                                                                          "id": "5f2f5413-4a34-4d23-ab40-03cea4dead28",
+                                                                                                                                                          "children": [
+                                                                                                                                                            {
+                                                                                                                                                              "children": [
+                                                                                                                                                                {
+                                                                                                                                                                  "ticker": "GLD",
+                                                                                                                                                                  "id": "2d0bc84c-0166-4bbf-8768-dd541034368e",
+                                                                                                                                                                  "step": "asset",
+                                                                                                                                                                  "children": []
+                                                                                                                                                                },
+                                                                                                                                                                {
+                                                                                                                                                                  "ticker": "IEF",
+                                                                                                                                                                  "id": "752195c6-abd2-4fae-a076-98e4f0d7ae1c",
+                                                                                                                                                                  "step": "asset",
+                                                                                                                                                                  "children": []
+                                                                                                                                                                },
+                                                                                                                                                                {
+                                                                                                                                                                  "ticker": "UUP",
+                                                                                                                                                                  "id": "e1e8e4bb-1fd6-444c-b3a2-2aec79d7bea2",
+                                                                                                                                                                  "step": "asset",
+                                                                                                                                                                  "children": []
+                                                                                                                                                                },
+                                                                                                                                                                {
+                                                                                                                                                                  "ticker": "TMF",
+                                                                                                                                                                  "id": "7de93bed-592d-40d2-9e5a-258043bcac7f",
+                                                                                                                                                                  "step": "asset",
+                                                                                                                                                                  "children": []
+                                                                                                                                                                }
+                                                                                                                                                              ],
+                                                                                                                                                              "select-fn": "top",
+                                                                                                                                                              "select-n": "2",
+                                                                                                                                                              "sort-by-fn": "moving-average-return",
+                                                                                                                                                              "weight": {
+                                                                                                                                                                "num": "45",
+                                                                                                                                                                "den": 100
+                                                                                                                                                              },
+                                                                                                                                                              "id": "fe80fca0-d252-4bec-964d-b19f866be6d6",
+                                                                                                                                                              "step": "filter",
+                                                                                                                                                              "sort-by-fn-params": {
+                                                                                                                                                                "window": 60
+                                                                                                                                                              }
+                                                                                                                                                            }
+                                                                                                                                                          ]
+                                                                                                                                                        }
+                                                                                                                                                      ]
+                                                                                                                                                    }
+                                                                                                                                                  ],
+                                                                                                                                                  "lhs-fn-params": {
+                                                                                                                                                    "window": 5
+                                                                                                                                                  },
+                                                                                                                                                  "is-else-condition?": false,
+                                                                                                                                                  "rhs-fixed-value?": true,
+                                                                                                                                                  "lhs-fn": "cumulative-return",
+                                                                                                                                                  "lhs-val": "VIXY",
+                                                                                                                                                  "id": "14261a03-bba6-4944-a7bc-0a77655a10bd",
+                                                                                                                                                  "comparator": "gt",
+                                                                                                                                                  "rhs-val": "-3",
+                                                                                                                                                  "step": "if-child"
+                                                                                                                                                },
+                                                                                                                                                {
+                                                                                                                                                  "id": "936956a0-bd8c-40cf-9d6f-71d446c68e47",
+                                                                                                                                                  "step": "if-child",
+                                                                                                                                                  "is-else-condition?": true,
+                                                                                                                                                  "children": [
+                                                                                                                                                    {
+                                                                                                                                                      "ticker": "TQQQ",
+                                                                                                                                                      "id": "55b3fff2-9af6-4a65-b30e-9308ced9b2ff",
+                                                                                                                                                      "step": "asset",
+                                                                                                                                                      "children": []
+                                                                                                                                                    }
+                                                                                                                                                  ]
+                                                                                                                                                }
+                                                                                                                                              ]
+                                                                                                                                            }
+                                                                                                                                          ]
+                                                                                                                                        }
+                                                                                                                                      ],
+                                                                                                                                      "lhs-fn-params": {
+                                                                                                                                        "window": 15
+                                                                                                                                      },
+                                                                                                                                      "is-else-condition?": false,
+                                                                                                                                      "rhs-fixed-value?": true,
+                                                                                                                                      "lhs-fn": "max-drawdown",
+                                                                                                                                      "lhs-val": "QQQ",
+                                                                                                                                      "id": "59c2858f-04a6-43f9-a127-8e166c78ab57",
+                                                                                                                                      "comparator": "gt",
+                                                                                                                                      "rhs-val": "5",
+                                                                                                                                      "step": "if-child"
+                                                                                                                                    },
+                                                                                                                                    {
+                                                                                                                                      "id": "55afa8c3-1d99-41d5-a7b1-c76892e07920",
+                                                                                                                                      "step": "if-child",
+                                                                                                                                      "is-else-condition?": true,
+                                                                                                                                      "children": [
+                                                                                                                                        {
+                                                                                                                                          "ticker": "TQQQ",
+                                                                                                                                          "id": "4bff8f19-1b27-4a98-8246-6287c92e205c",
+                                                                                                                                          "step": "asset",
+                                                                                                                                          "children": []
+                                                                                                                                        }
+                                                                                                                                      ]
+                                                                                                                                    }
+                                                                                                                                  ]
+                                                                                                                                }
+                                                                                                                              ]
+                                                                                                                            }
+                                                                                                                          ],
+                                                                                                                          "lhs-fn-params": {
+                                                                                                                            "window": 60
+                                                                                                                          },
+                                                                                                                          "rhs-fn": "cumulative-return",
+                                                                                                                          "is-else-condition?": false,
+                                                                                                                          "lhs-fn": "cumulative-return",
+                                                                                                                          "lhs-val": "BND",
+                                                                                                                          "id": "d0f8ed71-e85c-4f44-988d-35d6718d6a75",
+                                                                                                                          "rhs-fn-params": {
+                                                                                                                            "window": 60
+                                                                                                                          },
+                                                                                                                          "comparator": "gt",
+                                                                                                                          "rhs-val": "BIL",
+                                                                                                                          "step": "if-child"
+                                                                                                                        },
+                                                                                                                        {
+                                                                                                                          "id": "cea11990-e31c-4bc8-8a87-73a68f51ad89",
+                                                                                                                          "step": "if-child",
+                                                                                                                          "is-else-condition?": true,
+                                                                                                                          "children": [
+                                                                                                                            {
+                                                                                                                              "id": "396a2d6c-bc8f-450c-968c-2cad606f6ca9",
+                                                                                                                              "step": "wt-cash-equal",
+                                                                                                                              "children": [
+                                                                                                                                {
+                                                                                                                                  "id": "ef556d45-ecf9-4f23-9995-fc79b86ba297",
+                                                                                                                                  "step": "if",
+                                                                                                                                  "children": [
+                                                                                                                                    {
+                                                                                                                                      "children": [
+                                                                                                                                        {
+                                                                                                                                          "id": "5f7305e3-2a96-453e-be81-439609c5a537",
+                                                                                                                                          "step": "group",
+                                                                                                                                          "name": "Safety",
+                                                                                                                                          "children": [
+                                                                                                                                            {
+                                                                                                                                              "step": "wt-cash-equal",
+                                                                                                                                              "id": "7eb76311-4644-4f84-94dd-0240557c0426",
+                                                                                                                                              "children": [
+                                                                                                                                                {
+                                                                                                                                                  "children": [
+                                                                                                                                                    {
+                                                                                                                                                      "ticker": "GLD",
+                                                                                                                                                      "id": "482a7233-862d-488c-aba6-f5f47f94656e",
+                                                                                                                                                      "step": "asset",
+                                                                                                                                                      "children": []
+                                                                                                                                                    },
+                                                                                                                                                    {
+                                                                                                                                                      "ticker": "IEF",
+                                                                                                                                                      "id": "5aba5dd5-e71a-4afb-90c3-c195db89c43d",
+                                                                                                                                                      "step": "asset",
+                                                                                                                                                      "children": []
+                                                                                                                                                    },
+                                                                                                                                                    {
+                                                                                                                                                      "ticker": "UUP",
+                                                                                                                                                      "id": "95533527-15ca-4d07-a83d-ba774a30f174",
+                                                                                                                                                      "step": "asset",
+                                                                                                                                                      "children": []
+                                                                                                                                                    },
+                                                                                                                                                    {
+                                                                                                                                                      "ticker": "TMF",
+                                                                                                                                                      "id": "c59fc52a-e764-4d4b-a41b-63236003733b",
+                                                                                                                                                      "step": "asset",
+                                                                                                                                                      "children": []
+                                                                                                                                                    }
+                                                                                                                                                  ],
+                                                                                                                                                  "select-fn": "top",
+                                                                                                                                                  "select-n": "2",
+                                                                                                                                                  "sort-by-fn": "moving-average-return",
+                                                                                                                                                  "weight": {
+                                                                                                                                                    "num": "45",
+                                                                                                                                                    "den": 100
+                                                                                                                                                  },
+                                                                                                                                                  "id": "55b59051-da0a-4ae1-af0b-aa54f349f0e6",
+                                                                                                                                                  "step": "filter",
+                                                                                                                                                  "sort-by-fn-params": {
+                                                                                                                                                    "window": 60
+                                                                                                                                                  }
+                                                                                                                                                }
+                                                                                                                                              ]
+                                                                                                                                            }
+                                                                                                                                          ]
+                                                                                                                                        },
+                                                                                                                                        {
+                                                                                                                                          "ticker": "TQQQ",
+                                                                                                                                          "id": "791b1800-7126-4067-a6f3-52f4fdfa3ddc",
+                                                                                                                                          "step": "asset",
+                                                                                                                                          "children": []
+                                                                                                                                        }
+                                                                                                                                      ],
+                                                                                                                                      "lhs-fn-params": {
+                                                                                                                                        "window": 2
+                                                                                                                                      },
+                                                                                                                                      "is-else-condition?": false,
+                                                                                                                                      "rhs-fixed-value?": true,
+                                                                                                                                      "lhs-fn": "cumulative-return",
+                                                                                                                                      "lhs-val": "BND",
+                                                                                                                                      "id": "fbfa21cb-6837-4fb3-9cfc-f0cb2bf9fd00",
+                                                                                                                                      "comparator": "gt",
+                                                                                                                                      "rhs-val": "0",
+                                                                                                                                      "step": "if-child"
+                                                                                                                                    },
+                                                                                                                                    {
+                                                                                                                                      "id": "0ffafb77-5393-41a7-b3ab-38e1ec400f41",
+                                                                                                                                      "step": "if-child",
+                                                                                                                                      "is-else-condition?": true,
+                                                                                                                                      "children": [
+                                                                                                                                        {
+                                                                                                                                          "id": "0216b1b7-e433-40b8-9d13-3c063cb3acdd",
+                                                                                                                                          "step": "group",
+                                                                                                                                          "name": "Safety",
+                                                                                                                                          "children": [
+                                                                                                                                            {
+                                                                                                                                              "step": "wt-cash-equal",
+                                                                                                                                              "id": "1a9d306e-86cf-4c87-ad2b-115993f72abc",
+                                                                                                                                              "children": [
+                                                                                                                                                {
+                                                                                                                                                  "children": [
+                                                                                                                                                    {
+                                                                                                                                                      "ticker": "GLD",
+                                                                                                                                                      "id": "0338dbe9-82dd-45dc-8025-8aad0ff10693",
+                                                                                                                                                      "step": "asset",
+                                                                                                                                                      "children": []
+                                                                                                                                                    },
+                                                                                                                                                    {
+                                                                                                                                                      "ticker": "IEF",
+                                                                                                                                                      "id": "f3a4488d-c8c6-4d29-bb61-06182ccbd8c5",
+                                                                                                                                                      "step": "asset",
+                                                                                                                                                      "children": []
+                                                                                                                                                    },
+                                                                                                                                                    {
+                                                                                                                                                      "ticker": "UUP",
+                                                                                                                                                      "id": "951e001d-5475-4f08-89a1-db4452f4ef80",
+                                                                                                                                                      "step": "asset",
+                                                                                                                                                      "children": []
+                                                                                                                                                    },
+                                                                                                                                                    {
+                                                                                                                                                      "ticker": "TMF",
+                                                                                                                                                      "id": "032da490-dd1a-4c05-b4a7-ace6cf987d83",
+                                                                                                                                                      "step": "asset",
+                                                                                                                                                      "children": []
+                                                                                                                                                    }
+                                                                                                                                                  ],
+                                                                                                                                                  "select-fn": "top",
+                                                                                                                                                  "select-n": "2",
+                                                                                                                                                  "sort-by-fn": "moving-average-return",
+                                                                                                                                                  "weight": {
+                                                                                                                                                    "num": "45",
+                                                                                                                                                    "den": 100
+                                                                                                                                                  },
+                                                                                                                                                  "id": "5245078d-f5c8-4e9b-8e91-a1e9af409e2a",
+                                                                                                                                                  "step": "filter",
+                                                                                                                                                  "sort-by-fn-params": {
+                                                                                                                                                    "window": 60
+                                                                                                                                                  }
+                                                                                                                                                }
+                                                                                                                                              ]
+                                                                                                                                            }
+                                                                                                                                          ]
+                                                                                                                                        }
+                                                                                                                                      ]
+                                                                                                                                    }
+                                                                                                                                  ]
+                                                                                                                                }
+                                                                                                                              ]
+                                                                                                                            }
+                                                                                                                          ]
+                                                                                                                        }
+                                                                                                                      ]
+                                                                                                                    }
+                                                                                                                  ]
+                                                                                                                }
+                                                                                                              ]
+                                                                                                            }
+                                                                                                          ]
+                                                                                                        }
+                                                                                                      ],
+                                                                                                      "id": "06c1ed67-0fe8-46c5-bcea-e861a44b8fb5"
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "id": "a2291023-dce1-41e3-be50-237ed2004786"
+            }
+          ],
+          "id": "321a3fa0-bcb2-4692-9b02-3f20b92728ed"
+        }
+      ]
+    }
+  ]
+}

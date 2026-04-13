@@ -1,0 +1,104 @@
+{
+  "oil_st_trading": {
+    "2022": {
+      "sharpe": 1.1,
+      "maxdd": 34.8,
+      "annret": 53.24
+    },
+    "2023": {
+      "sharpe": 0.771,
+      "maxdd": 37.46,
+      "annret": 24.97
+    },
+    "2024": {
+      "sharpe": -1.795,
+      "maxdd": 52.28,
+      "annret": -47.98
+    }
+  },
+  "natural_gas_st_trading": {
+    "2022": {
+      "sharpe": 1.896,
+      "maxdd": 30.88,
+      "annret": 197.76
+    },
+    "2023": {
+      "sharpe": 2.64,
+      "maxdd": 14.74,
+      "annret": 152.48
+    },
+    "2024": {
+      "sharpe": 2.64,
+      "maxdd": 16.35,
+      "annret": 165.84
+    }
+  },
+  "st_leveraged_semiconductors_tr": {
+    "2022": {
+      "sharpe": 0.633,
+      "maxdd": 37.23,
+      "annret": 22.82
+    },
+    "2023": {
+      "sharpe": 1.898,
+      "maxdd": 13.81,
+      "annret": 100.23
+    },
+    "2024": {
+      "sharpe": 1.591,
+      "maxdd": 18.78,
+      "annret": 88.53
+    }
+  },
+  "long_volatility_tests___layere": {
+    "2022": {
+      "sharpe": 0.581,
+      "maxdd": 23.68,
+      "annret": 14.11
+    },
+    "2023": {
+      "sharpe": 1.004,
+      "maxdd": 10.24,
+      "annret": 23.56
+    },
+    "2024": {
+      "sharpe": 1.474,
+      "maxdd": 13.58,
+      "annret": 56.8
+    }
+  },
+  "wild_west_combined": {
+    "2022": {
+      "sharpe": 1.915,
+      "maxdd": 12.52,
+      "annret": 78.06
+    },
+    "2023": {
+      "sharpe": 2.576,
+      "maxdd": 7.26,
+      "annret": 74.94
+    },
+    "2024": {
+      "sharpe": 1.965,
+      "maxdd": 11.68,
+      "annret": 50.57
+    }
+  },
+  "rsi_frankenfest": {
+    "2022": {
+      "sharpe": -0.405,
+      "maxdd": 31.75,
+      "annret": -13.95
+    },
+    "2023": {
+      "sharpe": 2.057,
+      "maxdd": 16.46,
+      "annret": 81.37
+    },
+    "2024": {
+      "sharpe": 2.753,
+      "maxdd": 14.41,
+      "annret": 182.33
+    }
+  }
+}

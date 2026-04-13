@@ -1,0 +1,126 @@
+{
+  "id": "6786f82c-d086-43cd-976e-9d165b803f3e",
+  "step": "root",
+  "name": "oil_st_trading",
+  "description": "",
+  "rebalance": "daily",
+  "children": [
+    {
+      "id": "c8150d45-8fff-4d74-90bd-9aab7389a1b2",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "name": "ProShares Trust - ProShares UltraShort Bloomberg Crude Oil -2x Shares",
+                                      "ticker": "SCO",
+                                      "id": "5d47936f-01a0-4fc8-a8c7-840599ac75e5",
+                                      "exchange": "ARCX",
+                                      "step": "asset"
+                                    }
+                                  ],
+                                  "lhs-fn-params": {
+                                    "window": 2
+                                  },
+                                  "rhs-fn": "moving-average-return",
+                                  "is-else-condition?": false,
+                                  "lhs-fn": "moving-average-return",
+                                  "lhs-val": "KCE",
+                                  "id": "2acd1211-5daa-4bd9-82d9-86ec46b882f1",
+                                  "rhs-fn-params": {
+                                    "window": 2
+                                  },
+                                  "comparator": "gt",
+                                  "rhs-val": "XME",
+                                  "step": "if-child"
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "name": "SPDR Gold Trust - SPDR Gold Shares",
+                                      "ticker": "GLD",
+                                      "id": "1e510f16-fa22-431b-b343-c20cfd083d25",
+                                      "exchange": "ARCX",
+                                      "step": "asset"
+                                    }
+                                  ],
+                                  "is-else-condition?": true,
+                                  "id": "f624a51c-71ce-403b-84b7-6f100ef012a3",
+                                  "step": "if-child"
+                                }
+                              ],
+                              "weight": {
+                                "num": 100,
+                                "den": 100
+                              },
+                              "id": "b5400b7c-6019-43c2-9ed4-f45bbde5cf09",
+                              "step": "if"
+                            }
+                          ],
+                          "id": "9f7acdb7-7470-44d4-a4f1-0bc3b6b5468b",
+                          "step": "wt-cash-equal"
+                        }
+                      ],
+                      "lhs-fn-params": {
+                        "window": 6
+                      },
+                      "rhs-fn": "moving-average-return",
+                      "is-else-condition?": false,
+                      "lhs-fn": "moving-average-return",
+                      "lhs-val": "SHV",
+                      "id": "f00b9b46-c6d9-4763-8f05-476169d44bee",
+                      "rhs-fn-params": {
+                        "window": 6
+                      },
+                      "comparator": "gt",
+                      "rhs-val": "HYG",
+                      "step": "if-child"
+                    },
+                    {
+                      "children": [
+                        {
+                          "name": "United States Commodity Funds LLC - United States Oil Fund",
+                          "ticker": "USO",
+                          "id": "ecb0ed8f-1e36-4451-9dc6-8a476027be9c",
+                          "exchange": "ARCX",
+                          "step": "asset"
+                        }
+                      ],
+                      "is-else-condition?": true,
+                      "id": "24797692-e481-4b05-bd2d-3f032fd76c9a",
+                      "step": "if-child"
+                    }
+                  ],
+                  "weight": {
+                    "num": "0",
+                    "den": 100
+                  },
+                  "id": "5330d2e8-9ad8-4828-bc2b-cc17d7b00c49",
+                  "step": "if"
+                }
+              ],
+              "id": "fda10244-ab6b-46b4-baa5-0947b5a208cb",
+              "step": "wt-cash-equal"
+            }
+          ],
+          "name": "Oil ST Trading",
+          "id": "6d496690-a15f-4bdf-8001-d4f1974e903c",
+          "step": "group",
+          "collapsed?": true
+        }
+      ]
+    }
+  ]
+}

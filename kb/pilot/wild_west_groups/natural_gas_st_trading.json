@@ -1,0 +1,282 @@
+{
+  "id": "dd565e2d-9c89-41bc-aefd-c97171b4328d",
+  "step": "root",
+  "name": "natural_gas_st_trading",
+  "description": "",
+  "rebalance": "daily",
+  "children": [
+    {
+      "id": "531988f2-5f6d-4dfd-bb70-284c6f3a04e4",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "ProShares Trust - ProShares UltraShort Bloomberg Natural Gas -2x Shares",
+                          "ticker": "KOLD",
+                          "id": "7a74d213-dd33-4b54-904e-7f9e7d203a39",
+                          "exchange": "ARCX",
+                          "step": "asset"
+                        }
+                      ],
+                      "lhs-fn-params": {
+                        "window": 6
+                      },
+                      "rhs-fn": "moving-average-return",
+                      "is-else-condition?": false,
+                      "lhs-fn": "moving-average-return",
+                      "lhs-val": "RSP",
+                      "id": "bfe62486-488f-4819-be94-fdaec6badd15",
+                      "rhs-fn-params": {
+                        "window": 6
+                      },
+                      "comparator": "gt",
+                      "rhs-val": "XRT",
+                      "step": "if-child",
+                      "collapsed?": false
+                    },
+                    {
+                      "children": [
+                        {
+                          "name": "United States Commodity Funds LLC - United States Natural Gas Fund",
+                          "ticker": "UNG",
+                          "id": "05ea28a8-b2f9-4c28-8114-e49d99723c44",
+                          "exchange": "ARCX",
+                          "step": "asset"
+                        }
+                      ],
+                      "is-else-condition?": true,
+                      "id": "47de5049-262f-43bc-8b12-db6f9c093c7c",
+                      "step": "if-child"
+                    }
+                  ],
+                  "weight": {
+                    "num": 100,
+                    "den": 100
+                  },
+                  "id": "d71e132f-3d07-4be8-aa90-9d4658765942",
+                  "step": "if"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "ProShares Trust - ProShares UltraShort Bloomberg Natural Gas -2x Shares",
+                          "ticker": "KOLD",
+                          "id": "bb957558-874e-46c0-b01e-c2996adea357",
+                          "exchange": "ARCX",
+                          "step": "asset"
+                        }
+                      ],
+                      "lhs-fn-params": {
+                        "window": 6
+                      },
+                      "rhs-fn": "moving-average-return",
+                      "is-else-condition?": false,
+                      "lhs-fn": "moving-average-return",
+                      "lhs-val": "YCL",
+                      "id": "bd731f7b-753c-467d-b1cc-02f7a006036a",
+                      "rhs-fn-params": {
+                        "window": 6
+                      },
+                      "comparator": "gt",
+                      "rhs-val": "PICB",
+                      "step": "if-child",
+                      "collapsed?": true
+                    },
+                    {
+                      "children": [
+                        {
+                          "name": "United States Commodity Funds LLC - United States Natural Gas Fund",
+                          "ticker": "UNG",
+                          "id": "e3287318-cc30-43c6-9688-fb089cf19ab2",
+                          "exchange": "ARCX",
+                          "step": "asset"
+                        }
+                      ],
+                      "is-else-condition?": true,
+                      "id": "8cb67601-39e3-4ca0-8a1a-59a9d7e9ca24",
+                      "step": "if-child",
+                      "collapsed?": true
+                    }
+                  ],
+                  "weight": {
+                    "num": 0,
+                    "den": 100
+                  },
+                  "id": "a548925b-3f19-4a7b-9949-da3c547fca1c",
+                  "step": "if"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "ProShares Trust - ProShares UltraShort Bloomberg Natural Gas -2x Shares",
+                          "ticker": "KOLD",
+                          "id": "34416157-f206-42e1-9d88-5643db614ab3",
+                          "exchange": "ARCX",
+                          "step": "asset"
+                        }
+                      ],
+                      "lhs-fn-params": {
+                        "window": 10
+                      },
+                      "rhs-fn": "moving-average-return",
+                      "is-else-condition?": false,
+                      "lhs-fn": "moving-average-return",
+                      "lhs-val": "TLT",
+                      "id": "0a0c7bd3-5e78-41fc-8734-1f95d54f4ada",
+                      "rhs-fn-params": {
+                        "window": 10
+                      },
+                      "comparator": "gt",
+                      "rhs-val": "ACWI",
+                      "step": "if-child",
+                      "collapsed?": true
+                    },
+                    {
+                      "children": [
+                        {
+                          "name": "United States Commodity Funds LLC - United States Natural Gas Fund",
+                          "ticker": "UNG",
+                          "id": "4fde27e2-1bcb-4b36-b42b-5268d0f4db0e",
+                          "exchange": "ARCX",
+                          "step": "asset"
+                        }
+                      ],
+                      "is-else-condition?": true,
+                      "id": "879b4708-6740-4d61-a30d-cefeae1e89bf",
+                      "step": "if-child",
+                      "collapsed?": true
+                    }
+                  ],
+                  "weight": {
+                    "num": 0,
+                    "den": 100
+                  },
+                  "id": "962cd758-b875-4f77-a9af-4633674da0d2",
+                  "step": "if"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "ProShares Trust - ProShares UltraShort Bloomberg Natural Gas -2x Shares",
+                          "ticker": "KOLD",
+                          "id": "44dd3edf-9b00-4cb1-bbdb-09c77ce0e72b",
+                          "exchange": "ARCX",
+                          "step": "asset"
+                        }
+                      ],
+                      "lhs-fn-params": {
+                        "window": 3
+                      },
+                      "rhs-fn": "moving-average-return",
+                      "is-else-condition?": false,
+                      "lhs-fn": "moving-average-return",
+                      "lhs-val": "PFF",
+                      "id": "50f49c3d-8a9f-4d69-927d-1a43f907017a",
+                      "rhs-fn-params": {
+                        "window": 3
+                      },
+                      "comparator": "gt",
+                      "rhs-val": "NEAR",
+                      "step": "if-child",
+                      "collapsed?": true
+                    },
+                    {
+                      "children": [
+                        {
+                          "name": "United States Commodity Funds LLC - United States Natural Gas Fund",
+                          "ticker": "UNG",
+                          "id": "51ea06f7-4d99-4937-977a-ab8b5eded5ee",
+                          "exchange": "ARCX",
+                          "step": "asset"
+                        }
+                      ],
+                      "is-else-condition?": true,
+                      "id": "f2846ab1-f49a-49d7-b605-13d3bad53f73",
+                      "step": "if-child",
+                      "collapsed?": true
+                    }
+                  ],
+                  "weight": {
+                    "num": 0,
+                    "den": 100
+                  },
+                  "id": "8f08d3f4-7566-4e6a-9db6-425c6c71b79e",
+                  "step": "if"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "ProShares Trust - ProShares UltraShort Bloomberg Natural Gas -2x Shares",
+                          "ticker": "KOLD",
+                          "id": "9135280a-ae2c-4453-9be7-d4cbe71bbbb7",
+                          "exchange": "ARCX",
+                          "step": "asset"
+                        }
+                      ],
+                      "lhs-fn-params": {
+                        "window": 7
+                      },
+                      "rhs-fn": "moving-average-return",
+                      "is-else-condition?": false,
+                      "lhs-fn": "moving-average-return",
+                      "lhs-val": "MDY",
+                      "id": "c29579bb-3b7f-457b-ba08-c6515929e995",
+                      "rhs-fn-params": {
+                        "window": 7
+                      },
+                      "comparator": "gt",
+                      "rhs-val": "XRT",
+                      "step": "if-child",
+                      "collapsed?": true
+                    },
+                    {
+                      "children": [
+                        {
+                          "name": "United States Commodity Funds LLC - United States Natural Gas Fund",
+                          "ticker": "UNG",
+                          "id": "35b6e750-601c-4ac8-881b-3687ae3407e1",
+                          "exchange": "ARCX",
+                          "step": "asset"
+                        }
+                      ],
+                      "is-else-condition?": true,
+                      "id": "de992dd7-4e02-4277-ad2f-14c8667d5cb4",
+                      "step": "if-child"
+                    }
+                  ],
+                  "weight": {
+                    "num": 100,
+                    "den": 100
+                  },
+                  "id": "0503db75-094f-4fa0-9f46-4e5b6f1029ed",
+                  "step": "if"
+                }
+              ],
+              "id": "1b0213d0-7178-427f-b7a8-f9e53280923a",
+              "step": "wt-cash-equal"
+            }
+          ],
+          "name": "Natural Gas ST Trading",
+          "id": "1d7b73ab-d7a2-421a-b3aa-5e737d151d85",
+          "step": "group",
+          "collapsed?": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "kmlm_switcher": {
+    "avg_corr": 0.266034395124847,
+    "avg_sharpe": 3.4456666666666664,
+    "verdict": "\u2717 too correlated",
+    "corr_detail": {
+      "bonds_zoop": -0.005263135953568386,
+      "hwrt_3": 0.6029028933425035,
+      "em_ftlt": 0.1024784640921237,
+      "gold": -0.06377702836263939,
+      "qqq_ftlt_bonds": 0.5256480985550774,
+      "em_emerging": 0.06323026044021202,
+      "qqq_ftlt_sma": 0.6370212137602205
+    }
+  },
+  "just_run_ftlt": {
+    "avg_corr": 0.22007700323157758,
+    "avg_sharpe": 2.73,
+    "verdict": "\u2191 possible add",
+    "corr_detail": {
+      "bonds_zoop": 0.021053661170814798,
+      "hwrt_3": 0.3957229571582494,
+      "em_ftlt": 0.1377103659599783,
+      "gold": -0.019689393408365653,
+      "qqq_ftlt_bonds": 0.4323672018535165,
+      "em_emerging": 0.14703770302136795,
+      "qqq_ftlt_sma": 0.4263365268654816
+    }
+  },
+  "200d_cross_volmag": {
+    "avg_corr": 0.15213253091251325,
+    "avg_sharpe": 2.731,
+    "verdict": "\u2191 possible add",
+    "corr_detail": {
+      "bonds_zoop": -0.14664171554283023,
+      "hwrt_3": 0.46494306292466053,
+      "em_ftlt": -0.09705451063282283,
+      "gold": 0.12057194502363973,
+      "qqq_ftlt_bonds": 0.46267417288552604,
+      "em_emerging": -0.12432294003752578,
+      "qqq_ftlt_sma": 0.3847577017669454
+    }
+  },
+  "60d_bnd_bil": {
+    "avg_corr": 0.12391933768583312,
+    "avg_sharpe": 2.739666666666667,
+    "verdict": "\u2605 STRONG ADD",
+    "corr_detail": {
+      "bonds_zoop": 0.08540495782512449,
+      "hwrt_3": 0.1831951946056575,
+      "em_ftlt": 0.010661518023526407,
+      "gold": 0.14937676293952876,
+      "qqq_ftlt_bonds": 0.07950855310945126,
+      "em_emerging": 0.0407983831256214,
+      "qqq_ftlt_sma": 0.31848999417192203
+    }
+  },
+  "modified_foreign_rat": {
+    "avg_corr": 0.1452673484970623,
+    "avg_sharpe": 2.709,
+    "verdict": "\u2605 STRONG ADD",
+    "corr_detail": {
+      "bonds_zoop": -0.09124405924850053,
+      "hwrt_3": 0.062233634488997776,
+      "em_ftlt": 0.543339674744555,
+      "gold": 0.0037936712859320074,
+      "qqq_ftlt_bonds": -0.015298286461484484,
+      "em_emerging": 0.6060702796331969,
+      "qqq_ftlt_sma": -0.09202347496326078
+    }
+  },
+  "oil_st_trading": {
+    "avg_corr": 0.10811295599532499,
+    "avg_sharpe": 0.02533333333333339,
+    "verdict": "~ uncorrelated but weak",
+    "corr_detail": {
+      "bonds_zoop": 0.004644435884843001,
+      "hwrt_3": 0.10893531860949573,
+      "em_ftlt": 0.11631307315251552,
+      "gold": 0.18134035610194438,
+      "qqq_ftlt_bonds": 0.07279724483881775,
+      "em_emerging": 0.10575432288515417,
+      "qqq_ftlt_sma": 0.16700594049450435
+    }
+  },
+  "natural_gas_st_trading": {
+    "avg_corr": -0.08371784432929706,
+    "avg_sharpe": 2.392,
+    "verdict": "\u2605 STRONG ADD",
+    "corr_detail": {
+      "bonds_zoop": -0.032290504312850514,
+      "hwrt_3": -0.20702995115047865,
+      "em_ftlt": -0.06085896514607526,
+      "gold": 0.03585769162448103,
+      "qqq_ftlt_bonds": -0.2331743697165172,
+      "em_emerging": -0.049613901892530635,
+      "qqq_ftlt_sma": -0.03891490971110814
+    }
+  },
+  "st_leveraged_semiconductors_tr": {
+    "avg_corr": 0.09992069526958305,
+    "avg_sharpe": 1.3739999999999999,
+    "verdict": "~ uncorrelated but weak",
+    "corr_detail": {
+      "bonds_zoop": -0.0008435544369226714,
+      "hwrt_3": 0.06630908584206491,
+      "em_ftlt": 0.120105023609624,
+      "gold": 0.001330597617876263,
+      "qqq_ftlt_bonds": 0.11678577849934982,
+      "em_emerging": 0.021288389925587237,
+      "qqq_ftlt_sma": 0.37446954582950187
+    }
+  },
+  "long_volatility_tests___layere": {
+    "avg_corr": 0.019724397289584406,
+    "avg_sharpe": 1.0196666666666667,
+    "verdict": "~ uncorrelated but weak",
+    "corr_detail": {
+      "bonds_zoop": 0.08163551366425052,
+      "hwrt_3": -0.05726515455396247,
+      "em_ftlt": -0.025271285175231358,
+      "gold": 0.05302916113828099,
+      "qqq_ftlt_bonds": -0.04729382308206548,
+      "em_emerging": -0.04680478414081011,
+      "qqq_ftlt_sma": 0.18004115317662875
+    }
+  },
+  "wild_west_combined": {
+    "avg_corr": 0.048324317249583734,
+    "avg_sharpe": 2.152,
+    "verdict": "\u2605 STRONG ADD",
+    "corr_detail": {
+      "bonds_zoop": 0.008574089317439122,
+      "hwrt_3": -0.0473639233119393,
+      "em_ftlt": 0.05850763480046788,
+      "gold": 0.10285978988067364,
+      "qqq_ftlt_bonds": -0.049959678470126036,
+      "em_emerging": 0.012205250355670919,
+      "qqq_ftlt_sma": 0.2534470581748999
+    }
+  },
+  "rsi_frankenfest": {
+    "avg_corr": 0.15785145572048404,
+    "avg_sharpe": 1.4683333333333335,
+    "verdict": "~ uncorrelated but weak",
+    "corr_detail": {
+      "bonds_zoop": 0.06579358291316964,
+      "hwrt_3": 0.11533055417836122,
+      "em_ftlt": 0.2339885438713304,
+      "gold": 0.030669074040790383,
+      "qqq_ftlt_bonds": 0.09363417958590897,
+      "em_emerging": 0.18246252982220995,
+      "qqq_ftlt_sma": 0.38308172563161774
+    }
+  }
+}

@@ -1,0 +1,1355 @@
+{
+  "id": "47d18eeb-b122-4733-87aa-cca35207ebf6",
+  "step": "root",
+  "name": "st_leveraged_semiconductors_tr",
+  "description": "",
+  "rebalance": "daily",
+  "children": [
+    {
+      "id": "40b7da5a-4065-42b7-be21-c1883db1b401",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "name": "ProShares Trust - ProShares Ultra Semiconductors 2X Shares",
+                                  "ticker": "USD",
+                                  "id": "e22c49a8-20f1-4cdc-b1fa-b0ab0e12d3ae",
+                                  "exchange": "ARCX",
+                                  "step": "asset"
+                                },
+                                {
+                                  "name": "ProShares Trust - ProShares UltraShort Yen -2x Shares",
+                                  "ticker": "YCS",
+                                  "id": "67ee3049-ed3e-4f57-875c-76b05b1f0d2d",
+                                  "exchange": "ARCX",
+                                  "step": "asset"
+                                }
+                              ],
+                              "lhs-fn-params": {
+                                "window": 13
+                              },
+                              "is-else-condition?": false,
+                              "rhs-fixed-value?": true,
+                              "lhs-fn": "relative-strength-index",
+                              "lhs-val": "JNK",
+                              "id": "a64026dd-e29b-4dc4-9bb3-5dc3742dca3e",
+                              "comparator": "lt",
+                              "rhs-val": "13",
+                              "step": "if-child"
+                            },
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "name": "Direxion Shares ETF Trust - Direxion Daily Semiconductor Bull 3X Shares",
+                                              "ticker": "SOXL",
+                                              "id": "1d316b7f-7837-464a-92eb-d9c4c7ccdf7d",
+                                              "exchange": "ARCX",
+                                              "step": "asset"
+                                            },
+                                            {
+                                              "name": "ProShares Trust - ProShares UltraShort Yen -2x Shares",
+                                              "ticker": "YCS",
+                                              "id": "85c377c9-86b2-4e02-8f01-6bc76cae9ffd",
+                                              "exchange": "ARCX",
+                                              "step": "asset"
+                                            }
+                                          ],
+                                          "lhs-fn-params": {
+                                            "window": 10
+                                          },
+                                          "is-else-condition?": false,
+                                          "rhs-fixed-value?": true,
+                                          "lhs-fn": "relative-strength-index",
+                                          "lhs-val": "QQQ",
+                                          "id": "66712e40-2e59-48ba-90e7-a717a3a45f57",
+                                          "comparator": "lt",
+                                          "rhs-val": "29",
+                                          "step": "if-child"
+                                        },
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "name": "ProShares Trust - ProShares VIX Mid-Term Futures ETF",
+                                                          "ticker": "VIXM",
+                                                          "id": "9a42ae18-eee2-4c89-a135-f8c40d92a7f6",
+                                                          "exchange": "BATS",
+                                                          "step": "asset"
+                                                        }
+                                                      ],
+                                                      "is-else-condition?": false,
+                                                      "rhs-fixed-value?": true,
+                                                      "lhs-fn": "relative-strength-index",
+                                                      "lhs-window-days": "30",
+                                                      "lhs-val": "QQQ",
+                                                      "id": "63adaef9-6bbd-4906-ae58-a0578975c3e6",
+                                                      "comparator": "gt",
+                                                      "rhs-val": "71",
+                                                      "step": "if-child"
+                                                    },
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [
+                                                                {
+                                                                  "children": [
+                                                                    {
+                                                                      "name": "ProShares VIX Short-Term Futures ETF",
+                                                                      "ticker": "VIXY",
+                                                                      "id": "a90e34cf-e1ba-4b41-8620-6adaa096540a",
+                                                                      "exchange": "BATS",
+                                                                      "step": "asset"
+                                                                    }
+                                                                  ],
+                                                                  "is-else-condition?": false,
+                                                                  "rhs-fixed-value?": true,
+                                                                  "lhs-fn": "relative-strength-index",
+                                                                  "lhs-window-days": "20",
+                                                                  "lhs-val": "QQQ",
+                                                                  "id": "20f1ee74-9496-4d94-90d8-4002d2993e28",
+                                                                  "comparator": "gt",
+                                                                  "rhs-val": "75",
+                                                                  "step": "if-child"
+                                                                },
+                                                                {
+                                                                  "children": [
+                                                                    {
+                                                                      "children": [
+                                                                        {
+                                                                          "children": [
+                                                                            {
+                                                                              "children": [
+                                                                                {
+                                                                                  "name": "ProShares VIX Short-Term Futures ETF",
+                                                                                  "ticker": "VIXY",
+                                                                                  "id": "1201055f-7933-4e06-b9bd-07e66eb8cd21",
+                                                                                  "exchange": "BATS",
+                                                                                  "step": "asset"
+                                                                                }
+                                                                              ],
+                                                                              "is-else-condition?": false,
+                                                                              "rhs-fixed-value?": true,
+                                                                              "lhs-fn": "relative-strength-index",
+                                                                              "lhs-window-days": "10",
+                                                                              "lhs-val": "QQQ",
+                                                                              "id": "260e3602-b897-4240-8c18-52a0622b2409",
+                                                                              "comparator": "gt",
+                                                                              "rhs-val": "81",
+                                                                              "step": "if-child"
+                                                                            },
+                                                                            {
+                                                                              "children": [
+                                                                                {
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "name": "Direxion Shares ETF Trust - Direxion Daily Semiconductor Bull 3X Shares",
+                                                                                              "ticker": "SOXL",
+                                                                                              "id": "afcafa46-61b5-436b-832e-0b2311fddc8b",
+                                                                                              "exchange": "ARCX",
+                                                                                              "step": "asset"
+                                                                                            },
+                                                                                            {
+                                                                                              "name": "ProShares Trust - ProShares Short Real Estate -1x Shares",
+                                                                                              "ticker": "REK",
+                                                                                              "id": "ca178a4f-7482-48c1-b182-264b950e3a69",
+                                                                                              "exchange": "ARCX",
+                                                                                              "step": "asset"
+                                                                                            }
+                                                                                          ],
+                                                                                          "lhs-fn-params": {
+                                                                                            "window": 20
+                                                                                          },
+                                                                                          "is-else-condition?": false,
+                                                                                          "rhs-fixed-value?": true,
+                                                                                          "lhs-fn": "relative-strength-index",
+                                                                                          "lhs-val": "MGV",
+                                                                                          "id": "ead9491c-1c34-4a82-909e-e917e4e1f70b",
+                                                                                          "comparator": "lt",
+                                                                                          "rhs-val": "31",
+                                                                                          "step": "if-child"
+                                                                                        },
+                                                                                        {
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "name": "Direxion Shares ETF Trust - Direxion Daily Semiconductor Bull 3X Shares",
+                                                                                                          "ticker": "SOXL",
+                                                                                                          "id": "b96109c8-6f37-4b9f-be0e-bf8d5a888a67",
+                                                                                                          "exchange": "ARCX",
+                                                                                                          "step": "asset"
+                                                                                                        }
+                                                                                                      ],
+                                                                                                      "lhs-fn-params": {
+                                                                                                        "window": 10
+                                                                                                      },
+                                                                                                      "is-else-condition?": false,
+                                                                                                      "rhs-fixed-value?": true,
+                                                                                                      "lhs-fn": "relative-strength-index",
+                                                                                                      "lhs-val": "MGV",
+                                                                                                      "id": "bb6dd57f-bcee-4bdc-880d-e1abdb2a0168",
+                                                                                                      "comparator": "lt",
+                                                                                                      "rhs-val": "24",
+                                                                                                      "step": "if-child"
+                                                                                                    },
+                                                                                                    {
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "children": [
+                                                                                                            {
+                                                                                                              "children": [
+                                                                                                                {
+                                                                                                                  "children": [
+                                                                                                                    {
+                                                                                                                      "children": [
+                                                                                                                        {
+                                                                                                                          "children": [
+                                                                                                                            {
+                                                                                                                              "children": [
+                                                                                                                                {
+                                                                                                                                  "children": [
+                                                                                                                                    {
+                                                                                                                                      "children": [
+                                                                                                                                        {
+                                                                                                                                          "children": [
+                                                                                                                                            {
+                                                                                                                                              "name": "ProShares Trust - ProShares VIX Mid-Term Futures ETF",
+                                                                                                                                              "ticker": "VIXM",
+                                                                                                                                              "id": "31b5d9a5-f472-4ab2-aed2-43cb5590f501",
+                                                                                                                                              "exchange": "BATS",
+                                                                                                                                              "step": "asset"
+                                                                                                                                            },
+                                                                                                                                            {
+                                                                                                                                              "name": "Direxion Shares ETF Trust - Direxion Daily Semiconductor Bull 3X Shares",
+                                                                                                                                              "ticker": "SOXL",
+                                                                                                                                              "id": "2555c8a3-51cb-4e92-887e-4bf3f63e728e",
+                                                                                                                                              "exchange": "ARCX",
+                                                                                                                                              "step": "asset"
+                                                                                                                                            }
+                                                                                                                                          ],
+                                                                                                                                          "id": "5bea3755-e255-4c5f-bc7d-fed1862502a7",
+                                                                                                                                          "step": "wt-cash-equal"
+                                                                                                                                        }
+                                                                                                                                      ],
+                                                                                                                                      "lhs-fn-params": {
+                                                                                                                                        "window": 2
+                                                                                                                                      },
+                                                                                                                                      "rhs-fn": "standard-deviation-return",
+                                                                                                                                      "is-else-condition?": false,
+                                                                                                                                      "lhs-fn": "standard-deviation-return",
+                                                                                                                                      "lhs-val": "VIXY",
+                                                                                                                                      "id": "49fa693d-df29-4194-85ad-0f02b61a510e",
+                                                                                                                                      "rhs-fn-params": {
+                                                                                                                                        "window": 12
+                                                                                                                                      },
+                                                                                                                                      "comparator": "gt",
+                                                                                                                                      "rhs-val": "VIXY",
+                                                                                                                                      "step": "if-child"
+                                                                                                                                    },
+                                                                                                                                    {
+                                                                                                                                      "children": [
+                                                                                                                                        {
+                                                                                                                                          "name": "Direxion Shares ETF Trust - Direxion Daily Semiconductor Bull 3X Shares",
+                                                                                                                                          "ticker": "SOXL",
+                                                                                                                                          "id": "7eece2f5-fd6d-4d5c-a5ab-07afad18dc06",
+                                                                                                                                          "exchange": "ARCX",
+                                                                                                                                          "step": "asset"
+                                                                                                                                        }
+                                                                                                                                      ],
+                                                                                                                                      "is-else-condition?": true,
+                                                                                                                                      "id": "6ae63a70-9402-4e94-885d-7765c9afe976",
+                                                                                                                                      "step": "if-child"
+                                                                                                                                    }
+                                                                                                                                  ],
+                                                                                                                                  "id": "6ff6eb68-5989-4a65-9583-2bc6891d561d",
+                                                                                                                                  "step": "if"
+                                                                                                                                }
+                                                                                                                              ],
+                                                                                                                              "id": "097033d1-5b2c-460a-9ba3-df56be6fbf8e",
+                                                                                                                              "step": "wt-cash-equal"
+                                                                                                                            }
+                                                                                                                          ],
+                                                                                                                          "lhs-fn-params": {
+                                                                                                                            "window": 2
+                                                                                                                          },
+                                                                                                                          "rhs-fn": "moving-average-return",
+                                                                                                                          "is-else-condition?": false,
+                                                                                                                          "lhs-fn": "moving-average-return",
+                                                                                                                          "lhs-val": "PICB",
+                                                                                                                          "id": "6ab8a1e8-72c1-465d-bf4e-811a6b3ff329",
+                                                                                                                          "rhs-fn-params": {
+                                                                                                                            "window": 2
+                                                                                                                          },
+                                                                                                                          "comparator": "gt",
+                                                                                                                          "rhs-val": "IHF",
+                                                                                                                          "step": "if-child",
+                                                                                                                          "collapsed?": true
+                                                                                                                        },
+                                                                                                                        {
+                                                                                                                          "children": [
+                                                                                                                            {
+                                                                                                                              "children": [
+                                                                                                                                {
+                                                                                                                                  "name": "SPDR Gold Trust - SPDR Gold Shares",
+                                                                                                                                  "ticker": "GLD",
+                                                                                                                                  "id": "acd46c94-fb8d-4787-9771-9eb1a43cac1e",
+                                                                                                                                  "exchange": "ARCX",
+                                                                                                                                  "step": "asset"
+                                                                                                                                },
+                                                                                                                                {
+                                                                                                                                  "name": "ProShares Trust - ProShares Short Russell2000 -1x Shares",
+                                                                                                                                  "ticker": "RWM",
+                                                                                                                                  "id": "c5025e7c-6f76-40a8-952a-f87e64052dfd",
+                                                                                                                                  "exchange": "ARCX",
+                                                                                                                                  "step": "asset"
+                                                                                                                                },
+                                                                                                                                {
+                                                                                                                                  "name": "ProShares Trust - ProShares UltraShort Yen -2x Shares",
+                                                                                                                                  "ticker": "YCS",
+                                                                                                                                  "id": "c5f7bd5d-ad22-4085-9d27-9a5ef5c7c745",
+                                                                                                                                  "exchange": "ARCX",
+                                                                                                                                  "step": "asset"
+                                                                                                                                },
+                                                                                                                                {
+                                                                                                                                  "name": "AGF Investments Trust - AGF U.S. Market Neutral Anti-Beta Fund",
+                                                                                                                                  "ticker": "BTAL",
+                                                                                                                                  "id": "c41def5c-e00c-41cc-bc9c-fbe555fe0c94",
+                                                                                                                                  "exchange": "ARCX",
+                                                                                                                                  "step": "asset"
+                                                                                                                                },
+                                                                                                                                {
+                                                                                                                                  "name": "SPDR Series Trust - State Street SPDR Bloomberg Convertible Securities ETF",
+                                                                                                                                  "ticker": "CWB",
+                                                                                                                                  "id": "34d38164-cdfd-4177-a671-a293de5472bc",
+                                                                                                                                  "exchange": "ARCX",
+                                                                                                                                  "step": "asset"
+                                                                                                                                },
+                                                                                                                                {
+                                                                                                                                  "children": [
+                                                                                                                                    {
+                                                                                                                                      "children": [
+                                                                                                                                        {
+                                                                                                                                          "children": [
+                                                                                                                                            {
+                                                                                                                                              "name": "ProShares Trust - ProShares VIX Mid-Term Futures ETF",
+                                                                                                                                              "ticker": "VIXM",
+                                                                                                                                              "id": "0a46b351-ed73-4cce-9184-9091044c6171",
+                                                                                                                                              "exchange": "BATS",
+                                                                                                                                              "step": "asset"
+                                                                                                                                            }
+                                                                                                                                          ],
+                                                                                                                                          "id": "e485b638-0608-4c4e-9af3-6874217c6df1",
+                                                                                                                                          "step": "wt-cash-equal"
+                                                                                                                                        }
+                                                                                                                                      ],
+                                                                                                                                      "lhs-fn-params": {
+                                                                                                                                        "window": 2
+                                                                                                                                      },
+                                                                                                                                      "rhs-fn": "standard-deviation-return",
+                                                                                                                                      "is-else-condition?": false,
+                                                                                                                                      "lhs-fn": "standard-deviation-return",
+                                                                                                                                      "lhs-val": "VIXY",
+                                                                                                                                      "id": "9d111c8c-9df4-41b6-bc74-218d7fe299dd",
+                                                                                                                                      "rhs-fn-params": {
+                                                                                                                                        "window": 12
+                                                                                                                                      },
+                                                                                                                                      "comparator": "gt",
+                                                                                                                                      "rhs-val": "VIXY",
+                                                                                                                                      "step": "if-child"
+                                                                                                                                    },
+                                                                                                                                    {
+                                                                                                                                      "children": [
+                                                                                                                                        {
+                                                                                                                                          "name": "Invesco Capital Management LLC - Invesco QQQ Trust Series 1",
+                                                                                                                                          "ticker": "QQQ",
+                                                                                                                                          "id": "d49fc9b2-b9ef-4a16-9be2-f99c961a9938",
+                                                                                                                                          "exchange": "XNAS",
+                                                                                                                                          "step": "asset"
+                                                                                                                                        }
+                                                                                                                                      ],
+                                                                                                                                      "is-else-condition?": true,
+                                                                                                                                      "id": "5158aeb9-3def-436c-a271-8df8fb5bd8e1",
+                                                                                                                                      "step": "if-child"
+                                                                                                                                    }
+                                                                                                                                  ],
+                                                                                                                                  "id": "20f51519-603d-4943-8946-f14e6d550417",
+                                                                                                                                  "step": "if"
+                                                                                                                                }
+                                                                                                                              ],
+                                                                                                                              "window-days": 20,
+                                                                                                                              "id": "c619a0a7-e1da-43ff-ad65-9e73f03dea55",
+                                                                                                                              "step": "wt-inverse-vol"
+                                                                                                                            }
+                                                                                                                          ],
+                                                                                                                          "is-else-condition?": true,
+                                                                                                                          "id": "576b6cf5-7dc7-43db-8c6e-8616bb7df4cc",
+                                                                                                                          "step": "if-child",
+                                                                                                                          "collapsed?": true
+                                                                                                                        }
+                                                                                                                      ],
+                                                                                                                      "weight": {
+                                                                                                                        "num": 100,
+                                                                                                                        "den": 100
+                                                                                                                      },
+                                                                                                                      "id": "dd2b0b06-2a64-4ae8-aa6a-f25b254b98d6",
+                                                                                                                      "step": "if"
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                      "children": [
+                                                                                                                        {
+                                                                                                                          "children": [
+                                                                                                                            {
+                                                                                                                              "children": [
+                                                                                                                                {
+                                                                                                                                  "children": [
+                                                                                                                                    {
+                                                                                                                                      "children": [
+                                                                                                                                        {
+                                                                                                                                          "children": [
+                                                                                                                                            {
+                                                                                                                                              "name": "ProShares Trust - ProShares VIX Mid-Term Futures ETF",
+                                                                                                                                              "ticker": "VIXM",
+                                                                                                                                              "id": "bec0f900-42a5-4ebd-8b4b-82254e36fb54",
+                                                                                                                                              "exchange": "BATS",
+                                                                                                                                              "step": "asset"
+                                                                                                                                            },
+                                                                                                                                            {
+                                                                                                                                              "name": "Direxion Shares ETF Trust - Direxion Daily Semiconductor Bull 3X Shares",
+                                                                                                                                              "ticker": "SOXL",
+                                                                                                                                              "id": "be639ba7-709f-4d7f-a695-b283bdf134b8",
+                                                                                                                                              "exchange": "ARCX",
+                                                                                                                                              "step": "asset"
+                                                                                                                                            }
+                                                                                                                                          ],
+                                                                                                                                          "id": "e716ea7d-19ce-4e6d-a90d-a6022b8e664b",
+                                                                                                                                          "step": "wt-cash-equal"
+                                                                                                                                        }
+                                                                                                                                      ],
+                                                                                                                                      "lhs-fn-params": {
+                                                                                                                                        "window": 2
+                                                                                                                                      },
+                                                                                                                                      "rhs-fn": "standard-deviation-return",
+                                                                                                                                      "is-else-condition?": false,
+                                                                                                                                      "lhs-fn": "standard-deviation-return",
+                                                                                                                                      "lhs-val": "VIXY",
+                                                                                                                                      "id": "513766b3-c6be-4cda-b37a-d566a02582cc",
+                                                                                                                                      "rhs-fn-params": {
+                                                                                                                                        "window": 12
+                                                                                                                                      },
+                                                                                                                                      "comparator": "gt",
+                                                                                                                                      "rhs-val": "VIXY",
+                                                                                                                                      "step": "if-child"
+                                                                                                                                    },
+                                                                                                                                    {
+                                                                                                                                      "children": [
+                                                                                                                                        {
+                                                                                                                                          "name": "Direxion Shares ETF Trust - Direxion Daily Semiconductor Bull 3X Shares",
+                                                                                                                                          "ticker": "SOXL",
+                                                                                                                                          "id": "e697a158-a48f-44a9-8f48-593712f759e1",
+                                                                                                                                          "exchange": "ARCX",
+                                                                                                                                          "step": "asset"
+                                                                                                                                        }
+                                                                                                                                      ],
+                                                                                                                                      "is-else-condition?": true,
+                                                                                                                                      "id": "0afb8c7e-a392-45a9-87e9-fdd92a9c5006",
+                                                                                                                                      "step": "if-child"
+                                                                                                                                    }
+                                                                                                                                  ],
+                                                                                                                                  "id": "f653aa9e-a305-4e10-9006-32ca8c0e98f4",
+                                                                                                                                  "step": "if"
+                                                                                                                                }
+                                                                                                                              ],
+                                                                                                                              "id": "846c08b4-63cf-43c9-a939-2ccb8d3a67f4",
+                                                                                                                              "step": "wt-cash-equal"
+                                                                                                                            }
+                                                                                                                          ],
+                                                                                                                          "lhs-fn-params": {
+                                                                                                                            "window": 4
+                                                                                                                          },
+                                                                                                                          "rhs-fn": "moving-average-return",
+                                                                                                                          "is-else-condition?": false,
+                                                                                                                          "lhs-fn": "moving-average-return",
+                                                                                                                          "lhs-val": "EMB",
+                                                                                                                          "id": "c6890dd4-77e8-4d38-ae0e-c3f191ef5038",
+                                                                                                                          "rhs-fn-params": {
+                                                                                                                            "window": 4
+                                                                                                                          },
+                                                                                                                          "comparator": "gt",
+                                                                                                                          "rhs-val": "ACWI",
+                                                                                                                          "step": "if-child",
+                                                                                                                          "collapsed?": true
+                                                                                                                        },
+                                                                                                                        {
+                                                                                                                          "children": [
+                                                                                                                            {
+                                                                                                                              "children": [
+                                                                                                                                {
+                                                                                                                                  "name": "SPDR Gold Trust - SPDR Gold Shares",
+                                                                                                                                  "ticker": "GLD",
+                                                                                                                                  "id": "793a7a02-2012-4d89-8075-46097af31404",
+                                                                                                                                  "exchange": "ARCX",
+                                                                                                                                  "step": "asset"
+                                                                                                                                },
+                                                                                                                                {
+                                                                                                                                  "name": "ProShares Trust - ProShares Short Russell2000 -1x Shares",
+                                                                                                                                  "ticker": "RWM",
+                                                                                                                                  "id": "69d23eb6-fc93-4e6b-bcc8-50e46002c882",
+                                                                                                                                  "exchange": "ARCX",
+                                                                                                                                  "step": "asset"
+                                                                                                                                },
+                                                                                                                                {
+                                                                                                                                  "name": "ProShares Trust - ProShares UltraShort Yen -2x Shares",
+                                                                                                                                  "ticker": "YCS",
+                                                                                                                                  "id": "cf8c94a2-3906-40c8-b4c9-369469d3876e",
+                                                                                                                                  "exchange": "ARCX",
+                                                                                                                                  "step": "asset"
+                                                                                                                                },
+                                                                                                                                {
+                                                                                                                                  "name": "AGF Investments Trust - AGF U.S. Market Neutral Anti-Beta Fund",
+                                                                                                                                  "ticker": "BTAL",
+                                                                                                                                  "id": "1c6b7e1c-adb0-4f9d-ba48-9e0ad0d53203",
+                                                                                                                                  "exchange": "ARCX",
+                                                                                                                                  "step": "asset"
+                                                                                                                                },
+                                                                                                                                {
+                                                                                                                                  "name": "SPDR Series Trust - State Street SPDR Bloomberg Convertible Securities ETF",
+                                                                                                                                  "ticker": "CWB",
+                                                                                                                                  "id": "69211cb7-5292-410a-a0d4-90d56c934ce4",
+                                                                                                                                  "exchange": "ARCX",
+                                                                                                                                  "step": "asset"
+                                                                                                                                },
+                                                                                                                                {
+                                                                                                                                  "children": [
+                                                                                                                                    {
+                                                                                                                                      "children": [
+                                                                                                                                        {
+                                                                                                                                          "children": [
+                                                                                                                                            {
+                                                                                                                                              "name": "ProShares Trust - ProShares VIX Mid-Term Futures ETF",
+                                                                                                                                              "ticker": "VIXM",
+                                                                                                                                              "id": "0fce4264-2307-43e7-acf5-d3d7c9e3e494",
+                                                                                                                                              "exchange": "BATS",
+                                                                                                                                              "step": "asset"
+                                                                                                                                            }
+                                                                                                                                          ],
+                                                                                                                                          "id": "194c027b-d6f3-40d5-a594-2594316a7342",
+                                                                                                                                          "step": "wt-cash-equal"
+                                                                                                                                        }
+                                                                                                                                      ],
+                                                                                                                                      "lhs-fn-params": {
+                                                                                                                                        "window": 2
+                                                                                                                                      },
+                                                                                                                                      "rhs-fn": "standard-deviation-return",
+                                                                                                                                      "is-else-condition?": false,
+                                                                                                                                      "lhs-fn": "standard-deviation-return",
+                                                                                                                                      "lhs-val": "VIXY",
+                                                                                                                                      "id": "fe881075-4040-4d0c-a73f-400e70292495",
+                                                                                                                                      "rhs-fn-params": {
+                                                                                                                                        "window": 12
+                                                                                                                                      },
+                                                                                                                                      "comparator": "gt",
+                                                                                                                                      "rhs-val": "VIXY",
+                                                                                                                                      "step": "if-child"
+                                                                                                                                    },
+                                                                                                                                    {
+                                                                                                                                      "children": [
+                                                                                                                                        {
+                                                                                                                                          "name": "Invesco Capital Management LLC - Invesco QQQ Trust Series 1",
+                                                                                                                                          "ticker": "QQQ",
+                                                                                                                                          "id": "61547c52-028d-4f19-96c7-47cf0980ecf2",
+                                                                                                                                          "exchange": "XNAS",
+                                                                                                                                          "step": "asset"
+                                                                                                                                        }
+                                                                                                                                      ],
+                                                                                                                                      "is-else-condition?": true,
+                                                                                                                                      "id": "f1198aa7-9ca4-4480-920d-35aca93da658",
+                                                                                                                                      "step": "if-child"
+                                                                                                                                    }
+                                                                                                                                  ],
+                                                                                                                                  "id": "c5b85ddc-aa03-4bf8-90bf-bdcf03c1215b",
+                                                                                                                                  "step": "if"
+                                                                                                                                }
+                                                                                                                              ],
+                                                                                                                              "window-days": 20,
+                                                                                                                              "id": "e1c18231-7e38-4b2f-9e5e-630ab3e88f79",
+                                                                                                                              "step": "wt-inverse-vol"
+                                                                                                                            }
+                                                                                                                          ],
+                                                                                                                          "is-else-condition?": true,
+                                                                                                                          "id": "1a780b1a-e2f7-4a2b-954f-095496ed9d4e",
+                                                                                                                          "step": "if-child",
+                                                                                                                          "collapsed?": true
+                                                                                                                        }
+                                                                                                                      ],
+                                                                                                                      "weight": {
+                                                                                                                        "num": "0",
+                                                                                                                        "den": 100
+                                                                                                                      },
+                                                                                                                      "id": "f1f42016-da8f-4f97-8ea6-adfcdf78ac06",
+                                                                                                                      "step": "if"
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                      "children": [
+                                                                                                                        {
+                                                                                                                          "children": [
+                                                                                                                            {
+                                                                                                                              "children": [
+                                                                                                                                {
+                                                                                                                                  "children": [
+                                                                                                                                    {
+                                                                                                                                      "children": [
+                                                                                                                                        {
+                                                                                                                                          "children": [
+                                                                                                                                            {
+                                                                                                                                              "name": "ProShares Trust - ProShares VIX Mid-Term Futures ETF",
+                                                                                                                                              "ticker": "VIXM",
+                                                                                                                                              "id": "3bc71fbc-9068-4e8d-a39c-7fbdab0bdb38",
+                                                                                                                                              "exchange": "BATS",
+                                                                                                                                              "step": "asset"
+                                                                                                                                            },
+                                                                                                                                            {
+                                                                                                                                              "name": "Direxion Shares ETF Trust - Direxion Daily Semiconductor Bull 3X Shares",
+                                                                                                                                              "ticker": "SOXL",
+                                                                                                                                              "id": "f5aff8b5-c416-4e18-8f75-a8cb205c123e",
+                                                                                                                                              "exchange": "ARCX",
+                                                                                                                                              "step": "asset"
+                                                                                                                                            }
+                                                                                                                                          ],
+                                                                                                                                          "id": "6ace8558-a18f-4228-bba3-7f030a8ba899",
+                                                                                                                                          "step": "wt-cash-equal"
+                                                                                                                                        }
+                                                                                                                                      ],
+                                                                                                                                      "lhs-fn-params": {
+                                                                                                                                        "window": 2
+                                                                                                                                      },
+                                                                                                                                      "rhs-fn": "standard-deviation-return",
+                                                                                                                                      "is-else-condition?": false,
+                                                                                                                                      "lhs-fn": "standard-deviation-return",
+                                                                                                                                      "lhs-val": "VIXY",
+                                                                                                                                      "id": "b8b3095a-c0f0-4a62-91f2-eb650aa51c4a",
+                                                                                                                                      "rhs-fn-params": {
+                                                                                                                                        "window": 12
+                                                                                                                                      },
+                                                                                                                                      "comparator": "gt",
+                                                                                                                                      "rhs-val": "VIXY",
+                                                                                                                                      "step": "if-child"
+                                                                                                                                    },
+                                                                                                                                    {
+                                                                                                                                      "children": [
+                                                                                                                                        {
+                                                                                                                                          "name": "Direxion Shares ETF Trust - Direxion Daily Semiconductor Bull 3X Shares",
+                                                                                                                                          "ticker": "SOXL",
+                                                                                                                                          "id": "ed48273d-e1cb-490b-b2e9-304ed7e18721",
+                                                                                                                                          "exchange": "ARCX",
+                                                                                                                                          "step": "asset"
+                                                                                                                                        }
+                                                                                                                                      ],
+                                                                                                                                      "is-else-condition?": true,
+                                                                                                                                      "id": "162e754c-f504-485c-a5b1-67bebcd9296e",
+                                                                                                                                      "step": "if-child"
+                                                                                                                                    }
+                                                                                                                                  ],
+                                                                                                                                  "id": "f0acce1b-4aec-4044-a1b4-d72152875be0",
+                                                                                                                                  "step": "if"
+                                                                                                                                }
+                                                                                                                              ],
+                                                                                                                              "id": "43208411-2369-4104-8728-20b95d417640",
+                                                                                                                              "step": "wt-cash-equal"
+                                                                                                                            }
+                                                                                                                          ],
+                                                                                                                          "lhs-fn-params": {
+                                                                                                                            "window": 3
+                                                                                                                          },
+                                                                                                                          "rhs-fn": "moving-average-return",
+                                                                                                                          "is-else-condition?": false,
+                                                                                                                          "lhs-fn": "moving-average-return",
+                                                                                                                          "lhs-val": "EMB",
+                                                                                                                          "id": "7c23fb17-6c6a-41f9-b5da-45acc78047b6",
+                                                                                                                          "rhs-fn-params": {
+                                                                                                                            "window": 3
+                                                                                                                          },
+                                                                                                                          "comparator": "gt",
+                                                                                                                          "rhs-val": "OEF",
+                                                                                                                          "step": "if-child",
+                                                                                                                          "collapsed?": true
+                                                                                                                        },
+                                                                                                                        {
+                                                                                                                          "children": [
+                                                                                                                            {
+                                                                                                                              "children": [
+                                                                                                                                {
+                                                                                                                                  "name": "SPDR Gold Trust - SPDR Gold Shares",
+                                                                                                                                  "ticker": "GLD",
+                                                                                                                                  "id": "1125c346-d33e-4ea6-9e62-5cb540f52276",
+                                                                                                                                  "exchange": "ARCX",
+                                                                                                                                  "step": "asset"
+                                                                                                                                },
+                                                                                                                                {
+                                                                                                                                  "name": "ProShares Trust - ProShares Short Russell2000 -1x Shares",
+                                                                                                                                  "ticker": "RWM",
+                                                                                                                                  "id": "cc703252-6ad0-4275-85c7-079e0b16b44d",
+                                                                                                                                  "exchange": "ARCX",
+                                                                                                                                  "step": "asset"
+                                                                                                                                },
+                                                                                                                                {
+                                                                                                                                  "name": "ProShares Trust - ProShares UltraShort Yen -2x Shares",
+                                                                                                                                  "ticker": "YCS",
+                                                                                                                                  "id": "63db8eb7-1932-44a6-8899-d9b664f1e9dc",
+                                                                                                                                  "exchange": "ARCX",
+                                                                                                                                  "step": "asset"
+                                                                                                                                },
+                                                                                                                                {
+                                                                                                                                  "name": "AGF Investments Trust - AGF U.S. Market Neutral Anti-Beta Fund",
+                                                                                                                                  "ticker": "BTAL",
+                                                                                                                                  "id": "03a4f107-6365-4a85-ad23-6aeeab86d70a",
+                                                                                                                                  "exchange": "ARCX",
+                                                                                                                                  "step": "asset"
+                                                                                                                                },
+                                                                                                                                {
+                                                                                                                                  "name": "SPDR Series Trust - State Street SPDR Bloomberg Convertible Securities ETF",
+                                                                                                                                  "ticker": "CWB",
+                                                                                                                                  "id": "6ca730b1-2d33-42a6-b99b-e3500c0099a9",
+                                                                                                                                  "exchange": "ARCX",
+                                                                                                                                  "step": "asset"
+                                                                                                                                },
+                                                                                                                                {
+                                                                                                                                  "children": [
+                                                                                                                                    {
+                                                                                                                                      "children": [
+                                                                                                                                        {
+                                                                                                                                          "children": [
+                                                                                                                                            {
+                                                                                                                                              "name": "ProShares Trust - ProShares VIX Mid-Term Futures ETF",
+                                                                                                                                              "ticker": "VIXM",
+                                                                                                                                              "id": "73ef5534-82b3-4bd1-841b-454d05ce1dd6",
+                                                                                                                                              "exchange": "BATS",
+                                                                                                                                              "step": "asset"
+                                                                                                                                            }
+                                                                                                                                          ],
+                                                                                                                                          "id": "8cf73fa7-ac2f-4640-89ff-7909abbe2d6e",
+                                                                                                                                          "step": "wt-cash-equal"
+                                                                                                                                        }
+                                                                                                                                      ],
+                                                                                                                                      "lhs-fn-params": {
+                                                                                                                                        "window": 2
+                                                                                                                                      },
+                                                                                                                                      "rhs-fn": "standard-deviation-return",
+                                                                                                                                      "is-else-condition?": false,
+                                                                                                                                      "lhs-fn": "standard-deviation-return",
+                                                                                                                                      "lhs-val": "VIXY",
+                                                                                                                                      "id": "45a7fb23-e1cb-4451-ade4-fb3902d7b5c7",
+                                                                                                                                      "rhs-fn-params": {
+                                                                                                                                        "window": 12
+                                                                                                                                      },
+                                                                                                                                      "comparator": "gt",
+                                                                                                                                      "rhs-val": "VIXY",
+                                                                                                                                      "step": "if-child"
+                                                                                                                                    },
+                                                                                                                                    {
+                                                                                                                                      "children": [
+                                                                                                                                        {
+                                                                                                                                          "name": "Invesco Capital Management LLC - Invesco QQQ Trust Series 1",
+                                                                                                                                          "ticker": "QQQ",
+                                                                                                                                          "id": "c1a8821b-8cce-4550-960f-f706b55264c8",
+                                                                                                                                          "exchange": "XNAS",
+                                                                                                                                          "step": "asset"
+                                                                                                                                        }
+                                                                                                                                      ],
+                                                                                                                                      "is-else-condition?": true,
+                                                                                                                                      "id": "34e3ce30-77de-4c9d-9626-f4abd480e1e0",
+                                                                                                                                      "step": "if-child"
+                                                                                                                                    }
+                                                                                                                                  ],
+                                                                                                                                  "id": "73983094-e8f8-4155-af03-c5bf3c768e5a",
+                                                                                                                                  "step": "if"
+                                                                                                                                }
+                                                                                                                              ],
+                                                                                                                              "window-days": 20,
+                                                                                                                              "id": "16c62131-cd39-4183-84b2-875dc26dcc1c",
+                                                                                                                              "step": "wt-inverse-vol"
+                                                                                                                            }
+                                                                                                                          ],
+                                                                                                                          "is-else-condition?": true,
+                                                                                                                          "id": "ba03447f-705e-4e53-a386-3f9f10def719",
+                                                                                                                          "step": "if-child",
+                                                                                                                          "collapsed?": true
+                                                                                                                        }
+                                                                                                                      ],
+                                                                                                                      "weight": {
+                                                                                                                        "num": 0,
+                                                                                                                        "den": 100
+                                                                                                                      },
+                                                                                                                      "id": "c876fe11-dff9-495d-ba8a-637e7023a46a",
+                                                                                                                      "step": "if"
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                      "children": [
+                                                                                                                        {
+                                                                                                                          "children": [
+                                                                                                                            {
+                                                                                                                              "children": [
+                                                                                                                                {
+                                                                                                                                  "children": [
+                                                                                                                                    {
+                                                                                                                                      "children": [
+                                                                                                                                        {
+                                                                                                                                          "children": [
+                                                                                                                                            {
+                                                                                                                                              "name": "ProShares Trust - ProShares VIX Mid-Term Futures ETF",
+                                                                                                                                              "ticker": "VIXM",
+                                                                                                                                              "id": "bac5d973-408b-4caa-932f-5822e18515e8",
+                                                                                                                                              "exchange": "BATS",
+                                                                                                                                              "step": "asset"
+                                                                                                                                            },
+                                                                                                                                            {
+                                                                                                                                              "name": "Direxion Shares ETF Trust - Direxion Daily Semiconductor Bull 3X Shares",
+                                                                                                                                              "ticker": "SOXL",
+                                                                                                                                              "id": "5d15900e-4398-444b-8f95-ac53129f6084",
+                                                                                                                                              "exchange": "ARCX",
+                                                                                                                                              "step": "asset"
+                                                                                                                                            }
+                                                                                                                                          ],
+                                                                                                                                          "id": "6b303123-1d85-46f3-a713-bd0cc6098204",
+                                                                                                                                          "step": "wt-cash-equal"
+                                                                                                                                        }
+                                                                                                                                      ],
+                                                                                                                                      "lhs-fn-params": {
+                                                                                                                                        "window": 2
+                                                                                                                                      },
+                                                                                                                                      "rhs-fn": "standard-deviation-return",
+                                                                                                                                      "is-else-condition?": false,
+                                                                                                                                      "lhs-fn": "standard-deviation-return",
+                                                                                                                                      "lhs-val": "VIXY",
+                                                                                                                                      "id": "37e709c5-cf8d-40a6-81ba-15ad6d9cd183",
+                                                                                                                                      "rhs-fn-params": {
+                                                                                                                                        "window": 12
+                                                                                                                                      },
+                                                                                                                                      "comparator": "gt",
+                                                                                                                                      "rhs-val": "VIXY",
+                                                                                                                                      "step": "if-child"
+                                                                                                                                    },
+                                                                                                                                    {
+                                                                                                                                      "children": [
+                                                                                                                                        {
+                                                                                                                                          "name": "Direxion Shares ETF Trust - Direxion Daily Semiconductor Bull 3X Shares",
+                                                                                                                                          "ticker": "SOXL",
+                                                                                                                                          "id": "e64bb2b0-7c44-4d2f-84fb-aa18f525eb4b",
+                                                                                                                                          "exchange": "ARCX",
+                                                                                                                                          "step": "asset"
+                                                                                                                                        }
+                                                                                                                                      ],
+                                                                                                                                      "is-else-condition?": true,
+                                                                                                                                      "id": "9ce0dc7b-c2b3-4c4e-96ce-036776c227a0",
+                                                                                                                                      "step": "if-child"
+                                                                                                                                    }
+                                                                                                                                  ],
+                                                                                                                                  "id": "2e6dc38b-fe4e-4303-809e-7497ad08a5e0",
+                                                                                                                                  "step": "if"
+                                                                                                                                }
+                                                                                                                              ],
+                                                                                                                              "id": "21d0c78e-7bdd-438c-a600-6140c092ec4e",
+                                                                                                                              "step": "wt-cash-equal"
+                                                                                                                            }
+                                                                                                                          ],
+                                                                                                                          "lhs-fn-params": {
+                                                                                                                            "window": 2
+                                                                                                                          },
+                                                                                                                          "rhs-fn": "moving-average-return",
+                                                                                                                          "is-else-condition?": false,
+                                                                                                                          "lhs-fn": "moving-average-return",
+                                                                                                                          "lhs-val": "PICB",
+                                                                                                                          "id": "d990f81d-3ac2-4240-b189-629a950f4de0",
+                                                                                                                          "rhs-fn-params": {
+                                                                                                                            "window": 2
+                                                                                                                          },
+                                                                                                                          "comparator": "gt",
+                                                                                                                          "rhs-val": "OEF",
+                                                                                                                          "step": "if-child",
+                                                                                                                          "collapsed?": true
+                                                                                                                        },
+                                                                                                                        {
+                                                                                                                          "children": [
+                                                                                                                            {
+                                                                                                                              "children": [
+                                                                                                                                {
+                                                                                                                                  "name": "SPDR Gold Trust - SPDR Gold Shares",
+                                                                                                                                  "ticker": "GLD",
+                                                                                                                                  "id": "f4be6806-533b-4504-a687-674948858faf",
+                                                                                                                                  "exchange": "ARCX",
+                                                                                                                                  "step": "asset"
+                                                                                                                                },
+                                                                                                                                {
+                                                                                                                                  "name": "ProShares Trust - ProShares Short Russell2000 -1x Shares",
+                                                                                                                                  "ticker": "RWM",
+                                                                                                                                  "id": "5b5323c0-fa55-491c-8203-da01282edbb9",
+                                                                                                                                  "exchange": "ARCX",
+                                                                                                                                  "step": "asset"
+                                                                                                                                },
+                                                                                                                                {
+                                                                                                                                  "name": "ProShares Trust - ProShares UltraShort Yen -2x Shares",
+                                                                                                                                  "ticker": "YCS",
+                                                                                                                                  "id": "335d3c13-4b49-454e-8710-c0cd596e3feb",
+                                                                                                                                  "exchange": "ARCX",
+                                                                                                                                  "step": "asset"
+                                                                                                                                },
+                                                                                                                                {
+                                                                                                                                  "name": "AGF Investments Trust - AGF U.S. Market Neutral Anti-Beta Fund",
+                                                                                                                                  "ticker": "BTAL",
+                                                                                                                                  "id": "bb257bad-01c9-49d6-a200-78526dc233ba",
+                                                                                                                                  "exchange": "ARCX",
+                                                                                                                                  "step": "asset"
+                                                                                                                                },
+                                                                                                                                {
+                                                                                                                                  "name": "SPDR Series Trust - State Street SPDR Bloomberg Convertible Securities ETF",
+                                                                                                                                  "ticker": "CWB",
+                                                                                                                                  "id": "4610747e-ffa4-4dd5-af55-3f73c4fe9324",
+                                                                                                                                  "exchange": "ARCX",
+                                                                                                                                  "step": "asset"
+                                                                                                                                },
+                                                                                                                                {
+                                                                                                                                  "children": [
+                                                                                                                                    {
+                                                                                                                                      "children": [
+                                                                                                                                        {
+                                                                                                                                          "children": [
+                                                                                                                                            {
+                                                                                                                                              "name": "ProShares Trust - ProShares VIX Mid-Term Futures ETF",
+                                                                                                                                              "ticker": "VIXM",
+                                                                                                                                              "id": "a440ac3f-a19d-46f7-98e2-e3b920506b6a",
+                                                                                                                                              "exchange": "BATS",
+                                                                                                                                              "step": "asset"
+                                                                                                                                            }
+                                                                                                                                          ],
+                                                                                                                                          "id": "878883a0-a40e-4ded-b19a-14b583d1f196",
+                                                                                                                                          "step": "wt-cash-equal"
+                                                                                                                                        }
+                                                                                                                                      ],
+                                                                                                                                      "lhs-fn-params": {
+                                                                                                                                        "window": 2
+                                                                                                                                      },
+                                                                                                                                      "rhs-fn": "standard-deviation-return",
+                                                                                                                                      "is-else-condition?": false,
+                                                                                                                                      "lhs-fn": "standard-deviation-return",
+                                                                                                                                      "lhs-val": "VIXY",
+                                                                                                                                      "id": "07ce24af-69d0-4a66-aba3-5bc1f4804b49",
+                                                                                                                                      "rhs-fn-params": {
+                                                                                                                                        "window": 12
+                                                                                                                                      },
+                                                                                                                                      "comparator": "gt",
+                                                                                                                                      "rhs-val": "VIXY",
+                                                                                                                                      "step": "if-child"
+                                                                                                                                    },
+                                                                                                                                    {
+                                                                                                                                      "children": [
+                                                                                                                                        {
+                                                                                                                                          "name": "Invesco Capital Management LLC - Invesco QQQ Trust Series 1",
+                                                                                                                                          "ticker": "QQQ",
+                                                                                                                                          "id": "9536135d-abfd-4ee1-8722-ec0401541ff6",
+                                                                                                                                          "exchange": "XNAS",
+                                                                                                                                          "step": "asset"
+                                                                                                                                        }
+                                                                                                                                      ],
+                                                                                                                                      "is-else-condition?": true,
+                                                                                                                                      "id": "5fe6485f-5b85-4a1e-ae3d-6c37b196ba13",
+                                                                                                                                      "step": "if-child"
+                                                                                                                                    }
+                                                                                                                                  ],
+                                                                                                                                  "id": "3685d9ec-6623-4027-98e3-9dc9fcad3869",
+                                                                                                                                  "step": "if"
+                                                                                                                                }
+                                                                                                                              ],
+                                                                                                                              "window-days": 20,
+                                                                                                                              "id": "f4afde68-5de6-4abd-919d-4d7fca2934e3",
+                                                                                                                              "step": "wt-inverse-vol"
+                                                                                                                            }
+                                                                                                                          ],
+                                                                                                                          "is-else-condition?": true,
+                                                                                                                          "id": "55c903cc-98e6-4c7d-9100-a9a07ec938d8",
+                                                                                                                          "step": "if-child",
+                                                                                                                          "collapsed?": true
+                                                                                                                        }
+                                                                                                                      ],
+                                                                                                                      "weight": {
+                                                                                                                        "num": 0,
+                                                                                                                        "den": 100
+                                                                                                                      },
+                                                                                                                      "id": "9748cab1-5702-46b1-9315-d4746fbb8a6e",
+                                                                                                                      "step": "if"
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                      "children": [
+                                                                                                                        {
+                                                                                                                          "children": [
+                                                                                                                            {
+                                                                                                                              "children": [
+                                                                                                                                {
+                                                                                                                                  "children": [
+                                                                                                                                    {
+                                                                                                                                      "children": [
+                                                                                                                                        {
+                                                                                                                                          "children": [
+                                                                                                                                            {
+                                                                                                                                              "name": "ProShares Trust - ProShares VIX Mid-Term Futures ETF",
+                                                                                                                                              "ticker": "VIXM",
+                                                                                                                                              "id": "8f530182-0509-4845-ac6c-f55f05071c3c",
+                                                                                                                                              "exchange": "BATS",
+                                                                                                                                              "step": "asset"
+                                                                                                                                            },
+                                                                                                                                            {
+                                                                                                                                              "name": "Direxion Shares ETF Trust - Direxion Daily Semiconductor Bull 3X Shares",
+                                                                                                                                              "ticker": "SOXL",
+                                                                                                                                              "id": "515e74fc-083c-4645-bed4-f98d99c6ee29",
+                                                                                                                                              "exchange": "ARCX",
+                                                                                                                                              "step": "asset"
+                                                                                                                                            }
+                                                                                                                                          ],
+                                                                                                                                          "id": "aa3ed7e6-ecae-4d5e-bd5d-2f53b1e3f518",
+                                                                                                                                          "step": "wt-cash-equal"
+                                                                                                                                        }
+                                                                                                                                      ],
+                                                                                                                                      "lhs-fn-params": {
+                                                                                                                                        "window": 2
+                                                                                                                                      },
+                                                                                                                                      "rhs-fn": "standard-deviation-return",
+                                                                                                                                      "is-else-condition?": false,
+                                                                                                                                      "lhs-fn": "standard-deviation-return",
+                                                                                                                                      "lhs-val": "VIXY",
+                                                                                                                                      "id": "7e6906da-7f95-4a35-8d97-000a9a8e0ce9",
+                                                                                                                                      "rhs-fn-params": {
+                                                                                                                                        "window": 12
+                                                                                                                                      },
+                                                                                                                                      "comparator": "gt",
+                                                                                                                                      "rhs-val": "VIXY",
+                                                                                                                                      "step": "if-child"
+                                                                                                                                    },
+                                                                                                                                    {
+                                                                                                                                      "children": [
+                                                                                                                                        {
+                                                                                                                                          "name": "Direxion Shares ETF Trust - Direxion Daily Semiconductor Bull 3X Shares",
+                                                                                                                                          "ticker": "SOXL",
+                                                                                                                                          "id": "6b36a22d-713e-4bef-a66c-0dc376eff5ed",
+                                                                                                                                          "exchange": "ARCX",
+                                                                                                                                          "step": "asset"
+                                                                                                                                        }
+                                                                                                                                      ],
+                                                                                                                                      "is-else-condition?": true,
+                                                                                                                                      "id": "c0c6360b-293a-43c4-88e7-acab84409d71",
+                                                                                                                                      "step": "if-child"
+                                                                                                                                    }
+                                                                                                                                  ],
+                                                                                                                                  "id": "429d85ce-6046-4c14-a6ce-b633b41646fb",
+                                                                                                                                  "step": "if"
+                                                                                                                                }
+                                                                                                                              ],
+                                                                                                                              "id": "f76f8978-eae4-428e-a148-9c739b757460",
+                                                                                                                              "step": "wt-cash-equal"
+                                                                                                                            }
+                                                                                                                          ],
+                                                                                                                          "lhs-fn-params": {
+                                                                                                                            "window": 2
+                                                                                                                          },
+                                                                                                                          "rhs-fn": "moving-average-return",
+                                                                                                                          "is-else-condition?": false,
+                                                                                                                          "lhs-fn": "moving-average-return",
+                                                                                                                          "lhs-val": "PICB",
+                                                                                                                          "id": "1610c736-f9c1-4ac7-8434-2bbbe312d473",
+                                                                                                                          "rhs-fn-params": {
+                                                                                                                            "window": 2
+                                                                                                                          },
+                                                                                                                          "comparator": "gt",
+                                                                                                                          "rhs-val": "OEF",
+                                                                                                                          "step": "if-child",
+                                                                                                                          "collapsed?": true
+                                                                                                                        },
+                                                                                                                        {
+                                                                                                                          "children": [
+                                                                                                                            {
+                                                                                                                              "children": [
+                                                                                                                                {
+                                                                                                                                  "name": "SPDR Gold Trust - SPDR Gold Shares",
+                                                                                                                                  "ticker": "GLD",
+                                                                                                                                  "id": "e4ee986f-c118-40be-9f44-3cca6e8d64ad",
+                                                                                                                                  "exchange": "ARCX",
+                                                                                                                                  "step": "asset"
+                                                                                                                                },
+                                                                                                                                {
+                                                                                                                                  "name": "ProShares Trust - ProShares Short Russell2000 -1x Shares",
+                                                                                                                                  "ticker": "RWM",
+                                                                                                                                  "id": "341267a8-d002-4b14-afe5-3c87449a7735",
+                                                                                                                                  "exchange": "ARCX",
+                                                                                                                                  "step": "asset"
+                                                                                                                                },
+                                                                                                                                {
+                                                                                                                                  "name": "ProShares Trust - ProShares UltraShort Yen -2x Shares",
+                                                                                                                                  "ticker": "YCS",
+                                                                                                                                  "id": "a06b44b6-528e-4244-8b15-51e6d5fb4824",
+                                                                                                                                  "exchange": "ARCX",
+                                                                                                                                  "step": "asset"
+                                                                                                                                },
+                                                                                                                                {
+                                                                                                                                  "name": "AGF Investments Trust - AGF U.S. Market Neutral Anti-Beta Fund",
+                                                                                                                                  "ticker": "BTAL",
+                                                                                                                                  "id": "53a60a64-1301-4335-9cec-05191b12b1ae",
+                                                                                                                                  "exchange": "ARCX",
+                                                                                                                                  "step": "asset"
+                                                                                                                                },
+                                                                                                                                {
+                                                                                                                                  "name": "SPDR Series Trust - State Street SPDR Bloomberg Convertible Securities ETF",
+                                                                                                                                  "ticker": "CWB",
+                                                                                                                                  "id": "d1b748d5-a6ca-4f73-ab71-4f46a151db6b",
+                                                                                                                                  "exchange": "ARCX",
+                                                                                                                                  "step": "asset"
+                                                                                                                                },
+                                                                                                                                {
+                                                                                                                                  "children": [
+                                                                                                                                    {
+                                                                                                                                      "children": [
+                                                                                                                                        {
+                                                                                                                                          "children": [
+                                                                                                                                            {
+                                                                                                                                              "name": "ProShares Trust - ProShares VIX Mid-Term Futures ETF",
+                                                                                                                                              "ticker": "VIXM",
+                                                                                                                                              "id": "05c9034c-8fed-4982-9ce6-0ff6f601488e",
+                                                                                                                                              "exchange": "BATS",
+                                                                                                                                              "step": "asset"
+                                                                                                                                            }
+                                                                                                                                          ],
+                                                                                                                                          "id": "60c65b3f-420f-4d91-adc9-9ddf64efaad9",
+                                                                                                                                          "step": "wt-cash-equal"
+                                                                                                                                        }
+                                                                                                                                      ],
+                                                                                                                                      "lhs-fn-params": {
+                                                                                                                                        "window": 2
+                                                                                                                                      },
+                                                                                                                                      "rhs-fn": "standard-deviation-return",
+                                                                                                                                      "is-else-condition?": false,
+                                                                                                                                      "lhs-fn": "standard-deviation-return",
+                                                                                                                                      "lhs-val": "VIXY",
+                                                                                                                                      "id": "cfe0dd48-de21-4e5a-8d36-6c533118ce9b",
+                                                                                                                                      "rhs-fn-params": {
+                                                                                                                                        "window": 12
+                                                                                                                                      },
+                                                                                                                                      "comparator": "gt",
+                                                                                                                                      "rhs-val": "VIXY",
+                                                                                                                                      "step": "if-child"
+                                                                                                                                    },
+                                                                                                                                    {
+                                                                                                                                      "children": [
+                                                                                                                                        {
+                                                                                                                                          "name": "Invesco Capital Management LLC - Invesco QQQ Trust Series 1",
+                                                                                                                                          "ticker": "QQQ",
+                                                                                                                                          "id": "4d13b039-7fee-4236-ac50-76e69064c636",
+                                                                                                                                          "exchange": "XNAS",
+                                                                                                                                          "step": "asset"
+                                                                                                                                        }
+                                                                                                                                      ],
+                                                                                                                                      "is-else-condition?": true,
+                                                                                                                                      "id": "3255b491-ad18-4dab-bbe6-b3d5aa9b3df5",
+                                                                                                                                      "step": "if-child"
+                                                                                                                                    }
+                                                                                                                                  ],
+                                                                                                                                  "id": "1d3e0392-500e-46b4-86f7-1a4d61812d6f",
+                                                                                                                                  "step": "if"
+                                                                                                                                }
+                                                                                                                              ],
+                                                                                                                              "window-days": 20,
+                                                                                                                              "id": "976c5e52-69c6-42ce-a8d9-deb3de32e9ca",
+                                                                                                                              "step": "wt-inverse-vol"
+                                                                                                                            }
+                                                                                                                          ],
+                                                                                                                          "is-else-condition?": true,
+                                                                                                                          "id": "d53f1b44-25d4-4f95-b2bb-90d574476186",
+                                                                                                                          "step": "if-child",
+                                                                                                                          "collapsed?": true
+                                                                                                                        }
+                                                                                                                      ],
+                                                                                                                      "weight": {
+                                                                                                                        "num": 0,
+                                                                                                                        "den": 100
+                                                                                                                      },
+                                                                                                                      "id": "f6a1846f-0ce9-4bc6-bdbf-7733cbedaa9a",
+                                                                                                                      "step": "if"
+                                                                                                                    }
+                                                                                                                  ],
+                                                                                                                  "window-days": 50,
+                                                                                                                  "id": "a008cf89-c231-4b55-b0e7-b37c4374629a",
+                                                                                                                  "step": "wt-inverse-vol"
+                                                                                                                }
+                                                                                                              ],
+                                                                                                              "name": "NOT oversold / overbought - Proceed to ST Semiconductor Trading",
+                                                                                                              "id": "5425c822-b665-4d91-99c8-7f3f2d8ca1c5",
+                                                                                                              "step": "group"
+                                                                                                            }
+                                                                                                          ],
+                                                                                                          "id": "a7dd2861-e1ab-45dd-9972-7f6fbde0eaa8",
+                                                                                                          "step": "wt-cash-equal"
+                                                                                                        }
+                                                                                                      ],
+                                                                                                      "is-else-condition?": true,
+                                                                                                      "id": "b04dc8e7-e392-4526-b94e-cec3e9311743",
+                                                                                                      "step": "if-child"
+                                                                                                    }
+                                                                                                  ],
+                                                                                                  "weight": {
+                                                                                                    "num": "100",
+                                                                                                    "den": 100
+                                                                                                  },
+                                                                                                  "id": "420a7068-17e2-4cda-9e47-5ebae6dd33c6",
+                                                                                                  "step": "if"
+                                                                                                }
+                                                                                              ],
+                                                                                              "id": "eb846018-cfd7-42c2-921a-e0c428468368",
+                                                                                              "step": "wt-cash-equal"
+                                                                                            }
+                                                                                          ],
+                                                                                          "is-else-condition?": true,
+                                                                                          "id": "154a2fa8-ccb4-48ef-a890-b429ec5facff",
+                                                                                          "step": "if-child"
+                                                                                        }
+                                                                                      ],
+                                                                                      "weight": {
+                                                                                        "num": "100",
+                                                                                        "den": 100
+                                                                                      },
+                                                                                      "id": "f512387c-4130-4749-910f-7cb751453a3d",
+                                                                                      "step": "if"
+                                                                                    }
+                                                                                  ],
+                                                                                  "id": "6f099ab4-9762-4564-b7a2-d7ad0fbaa351",
+                                                                                  "step": "wt-cash-equal"
+                                                                                }
+                                                                              ],
+                                                                              "is-else-condition?": true,
+                                                                              "id": "e77c11f4-d735-466d-8d71-efb4353f3719",
+                                                                              "step": "if-child"
+                                                                            }
+                                                                          ],
+                                                                          "weight": {
+                                                                            "num": 100,
+                                                                            "den": 100
+                                                                          },
+                                                                          "id": "2dba0812-7218-4a79-92a8-36e29ad01c52",
+                                                                          "step": "if"
+                                                                        }
+                                                                      ],
+                                                                      "id": "4661e819-aa37-4c20-98c4-486eaddabd2e",
+                                                                      "step": "wt-cash-equal"
+                                                                    }
+                                                                  ],
+                                                                  "is-else-condition?": true,
+                                                                  "id": "ec737c98-fb13-4e78-b6cc-0a36f5d7dd11",
+                                                                  "step": "if-child"
+                                                                }
+                                                              ],
+                                                              "weight": {
+                                                                "num": 100,
+                                                                "den": 100
+                                                              },
+                                                              "id": "5ed9de6f-1cab-4526-ad2c-bb53b3dca322",
+                                                              "step": "if"
+                                                            }
+                                                          ],
+                                                          "id": "9b5da1cb-2dde-4bc1-b39c-a50a29f626d8",
+                                                          "step": "wt-cash-equal"
+                                                        }
+                                                      ],
+                                                      "is-else-condition?": true,
+                                                      "id": "70a5ed24-7af6-47e8-97cc-7b64c15412c9",
+                                                      "step": "if-child",
+                                                      "collapsed?": false
+                                                    }
+                                                  ],
+                                                  "weight": {
+                                                    "num": 100,
+                                                    "den": 100
+                                                  },
+                                                  "id": "f33e6493-5607-42db-ac2c-a3072564b191",
+                                                  "step": "if"
+                                                }
+                                              ],
+                                              "id": "1e3fe24d-c46d-4ddf-bb94-f890b3fa7826",
+                                              "step": "wt-cash-equal"
+                                            }
+                                          ],
+                                          "is-else-condition?": true,
+                                          "id": "489ac027-effa-4974-958b-1687e9489992",
+                                          "step": "if-child"
+                                        }
+                                      ],
+                                      "id": "b179bbee-9e43-415d-aa8e-33a647221267",
+                                      "step": "if"
+                                    }
+                                  ],
+                                  "id": "120860d1-ebe5-407b-826d-0d040b994d3a",
+                                  "step": "wt-cash-equal"
+                                }
+                              ],
+                              "is-else-condition?": true,
+                              "id": "fc19dbb0-3e57-48ad-ba20-b2043a77ce9b",
+                              "step": "if-child"
+                            }
+                          ],
+                          "id": "949271f9-7093-4e67-8ff2-44270185deeb",
+                          "step": "if"
+                        }
+                      ],
+                      "id": "2ba0d7e5-3905-4b01-a266-09a3a01fa4f4",
+                      "step": "wt-cash-equal"
+                    }
+                  ],
+                  "name": "First Check Overbought / Oversold Conditions to Avoid Mean Reversion",
+                  "weight": {
+                    "num": 100,
+                    "den": 100
+                  },
+                  "id": "d402af59-e438-4af2-bf14-b7c3f4e7d67c",
+                  "step": "group",
+                  "collapsed?": false
+                }
+              ],
+              "window-days": 50,
+              "id": "88fa2753-5456-4e1c-acd1-8a15a1b4e512",
+              "step": "wt-cash-equal"
+            }
+          ],
+          "name": "ST Leveraged Semiconductors Trading",
+          "id": "016fcb9d-c62d-4707-a5a2-e9e9f6c550ea",
+          "step": "group",
+          "collapsed?": true
+        }
+      ]
+    }
+  ]
+}

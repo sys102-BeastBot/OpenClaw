@@ -1,0 +1,642 @@
+{
+  "id": "c48899d0-a94b-42f3-befa-9eced396b938",
+  "step": "root",
+  "name": "rsi_frankenfest",
+  "description": "",
+  "rebalance": "daily",
+  "children": [
+    {
+      "id": "93dd6dfe-5371-4593-a1f6-c1be712ee5e3",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "name": "ProShares Trust - ProShares UltraPro QQQ 3x Shares",
+                                                  "ticker": "TQQQ",
+                                                  "id": "14460629-37d2-4388-88b8-849a4ebce8dc",
+                                                  "exchange": "XNAS",
+                                                  "step": "asset",
+                                                  "collapsed?": false
+                                                },
+                                                {
+                                                  "name": "Direxion Shares ETF Trust - Direxion Daily Technology Bull 3X Shares",
+                                                  "ticker": "TECL",
+                                                  "id": "86f940ee-836c-4275-9363-76e309811a50",
+                                                  "exchange": "ARCX",
+                                                  "step": "asset",
+                                                  "collapsed?": false
+                                                },
+                                                {
+                                                  "name": "Direxion Shares ETF Trust - Direxion Daily Semiconductor Bull 3X Shares",
+                                                  "ticker": "SOXL",
+                                                  "id": "c0f02d2c-ed68-4e5f-a554-fbd25ce23a1c",
+                                                  "exchange": "ARCX",
+                                                  "step": "asset",
+                                                  "collapsed?": false
+                                                },
+                                                {
+                                                  "name": "ProShares Trust - ProShares UltraPro S&P 500 ETF 3x Shares",
+                                                  "ticker": "UPRO",
+                                                  "id": "bc3e515e-2f57-41ff-9713-a5fb2ff60cf7",
+                                                  "exchange": "ARCX",
+                                                  "step": "asset",
+                                                  "collapsed?": false
+                                                },
+                                                {
+                                                  "name": "ProShares Trust - ProShares Ultra QQQ 2x Shares",
+                                                  "ticker": "QLD",
+                                                  "id": "239a88ec-4a62-4831-9b04-74cccc22f281",
+                                                  "exchange": "ARCX",
+                                                  "step": "asset",
+                                                  "collapsed?": false
+                                                },
+                                                {
+                                                  "name": "ProShares Trust - ProShares Ultra Communication Services",
+                                                  "ticker": "LTL",
+                                                  "id": "69a12143-96c2-40a0-afcc-1d4e2b00f247",
+                                                  "exchange": "ARCX",
+                                                  "step": "asset",
+                                                  "collapsed?": false
+                                                },
+                                                {
+                                                  "name": "ProShares Trust - ProShares Ultra Technology 2x Shares",
+                                                  "ticker": "ROM",
+                                                  "id": "3bc544ff-2273-4a4f-adba-cf26ace06390",
+                                                  "exchange": "ARCX",
+                                                  "step": "asset",
+                                                  "collapsed?": false
+                                                }
+                                              ],
+                                              "select-fn": "top",
+                                              "select-n": "2",
+                                              "sort-by-fn": "standard-deviation-price",
+                                              "id": "4fb6fa08-a247-47d7-9305-9887028c7b91",
+                                              "step": "filter",
+                                              "sort-by-fn-params": {
+                                                "window": 20
+                                              },
+                                              "collapsed?": false
+                                            }
+                                          ],
+                                          "id": "bcb3a283-af1f-4bd5-a871-8cfccb07a505",
+                                          "step": "wt-cash-equal",
+                                          "collapsed?": false
+                                        }
+                                      ],
+                                      "lhs-fn-params": {
+                                        "window": 2
+                                      },
+                                      "is-else-condition?": false,
+                                      "rhs-fixed-value?": true,
+                                      "lhs-fn": "relative-strength-index",
+                                      "lhs-val": "TQQQ",
+                                      "id": "c5175d35-b20b-41ee-8c6b-083a71942267",
+                                      "comparator": "lt",
+                                      "rhs-val": "20",
+                                      "step": "if-child",
+                                      "collapsed?": false
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [
+                                                                {
+                                                                  "name": "ProShares Trust - ProShares Ultra QQQ 2x Shares",
+                                                                  "ticker": "QLD",
+                                                                  "id": "49f7f021-417a-47b0-b987-8690d4d07bcd",
+                                                                  "exchange": "ARCX",
+                                                                  "step": "asset",
+                                                                  "collapsed?": false
+                                                                }
+                                                              ],
+                                                              "lhs-fn-params": {
+                                                                "window": 15
+                                                              },
+                                                              "rhs-fn": "relative-strength-index",
+                                                              "is-else-condition?": false,
+                                                              "lhs-fn": "relative-strength-index",
+                                                              "lhs-val": "CORP",
+                                                              "id": "63c8c66c-81bc-4eeb-ad2e-8331732997d6",
+                                                              "rhs-fn-params": {
+                                                                "window": 10
+                                                              },
+                                                              "comparator": "gt",
+                                                              "rhs-val": "XLK",
+                                                              "step": "if-child",
+                                                              "collapsed?": false
+                                                            },
+                                                            {
+                                                              "children": [
+                                                                {
+                                                                  "children": [
+                                                                    {
+                                                                      "children": [
+                                                                        {
+                                                                          "children": [
+                                                                            {
+                                                                              "name": "ProShares Trust - ProShares Ultra QQQ 2x Shares",
+                                                                              "ticker": "QLD",
+                                                                              "id": "171745d3-e8a5-446e-a78b-e4e9a11427e3",
+                                                                              "exchange": "ARCX",
+                                                                              "step": "asset",
+                                                                              "collapsed?": false
+                                                                            }
+                                                                          ],
+                                                                          "lhs-fn-params": {
+                                                                            "window": 21
+                                                                          },
+                                                                          "rhs-fn": "relative-strength-index",
+                                                                          "is-else-condition?": false,
+                                                                          "lhs-fn": "relative-strength-index",
+                                                                          "lhs-val": "IYT",
+                                                                          "id": "3f3a19b6-c2cb-4c9b-9105-d34dcba03e9d",
+                                                                          "rhs-fn-params": {
+                                                                            "window": 21
+                                                                          },
+                                                                          "comparator": "gt",
+                                                                          "rhs-val": "SPY",
+                                                                          "step": "if-child",
+                                                                          "collapsed?": false
+                                                                        },
+                                                                        {
+                                                                          "children": [
+                                                                            {
+                                                                              "children": [
+                                                                                {
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "name": "Vanguard Group, Inc. - Vanguard Short-Term Bond ETF",
+                                                                                      "ticker": "BSV",
+                                                                                      "id": "1ed1bb07-20e1-40c5-ae72-5e202c623f1c",
+                                                                                      "exchange": "ARCX",
+                                                                                      "step": "asset",
+                                                                                      "collapsed?": false
+                                                                                    },
+                                                                                    {
+                                                                                      "name": "BlackRock Institutional Trust Company N.A. - iShares 20+ Year Treasury Bond ETF",
+                                                                                      "ticker": "TLT",
+                                                                                      "id": "795155bb-7c41-43e0-926c-505e5a1b52f6",
+                                                                                      "exchange": "XNAS",
+                                                                                      "step": "asset",
+                                                                                      "collapsed?": false
+                                                                                    },
+                                                                                    {
+                                                                                      "name": "BlackRock Institutional Trust Company N.A. - iShares iBoxx USD Investment Grade Corporate Bond ETF",
+                                                                                      "ticker": "LQD",
+                                                                                      "id": "08740141-b90b-418b-b22d-e58e6ccdd40d",
+                                                                                      "exchange": "ARCX",
+                                                                                      "step": "asset",
+                                                                                      "collapsed?": false
+                                                                                    },
+                                                                                    {
+                                                                                      "name": "Invesco Bond Fund",
+                                                                                      "ticker": "VBF",
+                                                                                      "id": "96cf41bd-175b-4cc3-8be0-14e119645ad6",
+                                                                                      "exchange": "XNYS",
+                                                                                      "step": "asset",
+                                                                                      "collapsed?": false
+                                                                                    },
+                                                                                    {
+                                                                                      "name": "SSgA Active Trust - Consumer Staples Select Sector SPDR",
+                                                                                      "ticker": "XLP",
+                                                                                      "id": "6ceb4290-3038-4bc1-add5-d7e9257cd723",
+                                                                                      "exchange": "ARCX",
+                                                                                      "step": "asset",
+                                                                                      "collapsed?": false
+                                                                                    },
+                                                                                    {
+                                                                                      "name": "ProShares Trust - ProShares Ultra Consumer Staples",
+                                                                                      "ticker": "UGE",
+                                                                                      "id": "ab41a0da-8a84-4da3-bd1d-9b8e56a17b41",
+                                                                                      "exchange": "ARCX",
+                                                                                      "step": "asset",
+                                                                                      "collapsed?": false
+                                                                                    },
+                                                                                    {
+                                                                                      "name": "SSgA Active Trust - Utilities Select Sector SPDR ETF",
+                                                                                      "ticker": "XLU",
+                                                                                      "id": "073fc028-fede-4be7-a366-205af3600821",
+                                                                                      "exchange": "ARCX",
+                                                                                      "step": "asset",
+                                                                                      "collapsed?": false
+                                                                                    },
+                                                                                    {
+                                                                                      "name": "SSgA Active Trust - Health Care Select Sector SPDR",
+                                                                                      "ticker": "XLV",
+                                                                                      "id": "9bd916fe-b7b1-40cb-8696-2b67a2a134d0",
+                                                                                      "exchange": "ARCX",
+                                                                                      "step": "asset",
+                                                                                      "collapsed?": false
+                                                                                    },
+                                                                                    {
+                                                                                      "name": "SPDR Series Trust - State Street SPDR Portfolio Aggregate Bond ETF",
+                                                                                      "ticker": "SPAB",
+                                                                                      "id": "6d126e44-924e-4835-bdde-6cbe9cb2ed7a",
+                                                                                      "exchange": "ARCX",
+                                                                                      "step": "asset",
+                                                                                      "collapsed?": false
+                                                                                    },
+                                                                                    {
+                                                                                      "name": "VanEck ETF Trust - VanEck Fallen Angel High Yield Bond ETF",
+                                                                                      "ticker": "ANGL",
+                                                                                      "id": "1f18a34b-f08e-49a5-aa38-0b66eb6632af",
+                                                                                      "exchange": "XNAS",
+                                                                                      "step": "asset",
+                                                                                      "collapsed?": false
+                                                                                    }
+                                                                                  ],
+                                                                                  "select-fn": "bottom",
+                                                                                  "select-n": "1",
+                                                                                  "sort-by-fn": "relative-strength-index",
+                                                                                  "id": "2ba31909-e3e5-4c69-a259-5b2e6e85ffad",
+                                                                                  "step": "filter",
+                                                                                  "sort-by-fn-params": {
+                                                                                    "window": 10
+                                                                                  },
+                                                                                  "collapsed?": false
+                                                                                }
+                                                                              ],
+                                                                              "id": "d6ac8389-e8d3-44e0-a8e5-3e0efef1a701",
+                                                                              "step": "wt-cash-equal",
+                                                                              "collapsed?": false
+                                                                            }
+                                                                          ],
+                                                                          "is-else-condition?": true,
+                                                                          "id": "05fbcd4e-18f7-4065-9c84-b737e139766d",
+                                                                          "step": "if-child",
+                                                                          "collapsed?": false
+                                                                        }
+                                                                      ],
+                                                                      "id": "9cfd7f0c-3f0a-43ea-baae-2ce7ae46fa0c",
+                                                                      "step": "if",
+                                                                      "collapsed?": false
+                                                                    }
+                                                                  ],
+                                                                  "id": "4d696e4b-3fb4-424e-b8a4-52e92c9722f1",
+                                                                  "step": "wt-cash-equal",
+                                                                  "collapsed?": false
+                                                                }
+                                                              ],
+                                                              "is-else-condition?": true,
+                                                              "id": "a8e89ca1-73f6-4591-ac79-7f25efef04c3",
+                                                              "step": "if-child",
+                                                              "collapsed?": false
+                                                            }
+                                                          ],
+                                                          "weight": {
+                                                            "num": "80",
+                                                            "den": 100
+                                                          },
+                                                          "id": "d9309736-321d-4618-a649-975ec06877cb",
+                                                          "step": "if",
+                                                          "collapsed?": false
+                                                        },
+                                                        {
+                                                          "name": "ProShares Trust - ProShares Ultra QQQ 2x Shares",
+                                                          "ticker": "QLD",
+                                                          "weight": {
+                                                            "num": "20",
+                                                            "den": 100
+                                                          },
+                                                          "id": "5c808df5-b452-4875-8d8f-38d7f4d3a4c6",
+                                                          "exchange": "ARCX",
+                                                          "step": "asset",
+                                                          "collapsed?": false
+                                                        }
+                                                      ],
+                                                      "id": "8ad904a0-06b8-4d5a-a531-bbd435d22c56",
+                                                      "step": "wt-cash-specified",
+                                                      "collapsed?": false
+                                                    }
+                                                  ],
+                                                  "lhs-fn-params": {
+                                                    "window": 10
+                                                  },
+                                                  "rhs-fn": "relative-strength-index",
+                                                  "is-else-condition?": false,
+                                                  "lhs-fn": "relative-strength-index",
+                                                  "lhs-val": "XLK",
+                                                  "id": "e2e435ab-1e06-4916-aa80-aff2144f3425",
+                                                  "rhs-fn-params": {
+                                                    "window": 10
+                                                  },
+                                                  "comparator": "gt",
+                                                  "rhs-val": "KMLM",
+                                                  "step": "if-child",
+                                                  "collapsed?": false
+                                                },
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "Vanguard Group, Inc. - Vanguard Short-Term Bond ETF",
+                                                              "ticker": "BSV",
+                                                              "id": "94ff462f-c13a-4493-8abf-0a771cb706a0",
+                                                              "exchange": "ARCX",
+                                                              "step": "asset",
+                                                              "collapsed?": false
+                                                            },
+                                                            {
+                                                              "name": "BlackRock Institutional Trust Company N.A. - iShares 20+ Year Treasury Bond ETF",
+                                                              "ticker": "TLT",
+                                                              "id": "8b2a5f0f-5988-4404-afd9-df475f161280",
+                                                              "exchange": "XNAS",
+                                                              "step": "asset",
+                                                              "collapsed?": false
+                                                            },
+                                                            {
+                                                              "name": "BlackRock Institutional Trust Company N.A. - iShares iBoxx USD Investment Grade Corporate Bond ETF",
+                                                              "ticker": "LQD",
+                                                              "id": "f20ec2bf-5a75-42b1-9907-293594b8aecc",
+                                                              "exchange": "ARCX",
+                                                              "step": "asset",
+                                                              "collapsed?": false
+                                                            },
+                                                            {
+                                                              "name": "Invesco Bond Fund",
+                                                              "ticker": "VBF",
+                                                              "id": "069aedd6-327b-404c-afd5-a151cc368f6d",
+                                                              "exchange": "XNYS",
+                                                              "step": "asset",
+                                                              "collapsed?": false
+                                                            },
+                                                            {
+                                                              "name": "SSgA Active Trust - Consumer Staples Select Sector SPDR",
+                                                              "ticker": "XLP",
+                                                              "id": "45eac178-dc81-4975-af75-12da7b648246",
+                                                              "exchange": "ARCX",
+                                                              "step": "asset",
+                                                              "collapsed?": false
+                                                            },
+                                                            {
+                                                              "name": "ProShares Trust - ProShares Ultra Consumer Staples",
+                                                              "ticker": "UGE",
+                                                              "id": "3bbef12d-0f78-4ab3-a95a-79dd35c95b82",
+                                                              "exchange": "ARCX",
+                                                              "step": "asset",
+                                                              "collapsed?": false
+                                                            },
+                                                            {
+                                                              "name": "SSgA Active Trust - Utilities Select Sector SPDR ETF",
+                                                              "ticker": "XLU",
+                                                              "id": "b5cdd88f-7744-43bf-b97e-9fa491053bb8",
+                                                              "exchange": "ARCX",
+                                                              "step": "asset",
+                                                              "collapsed?": false
+                                                            },
+                                                            {
+                                                              "name": "SSgA Active Trust - Health Care Select Sector SPDR",
+                                                              "ticker": "XLV",
+                                                              "id": "f928528a-4604-478b-9f1a-2e700e2c9a71",
+                                                              "exchange": "ARCX",
+                                                              "step": "asset",
+                                                              "collapsed?": false
+                                                            },
+                                                            {
+                                                              "name": "SPDR Series Trust - State Street SPDR Portfolio Aggregate Bond ETF",
+                                                              "ticker": "SPAB",
+                                                              "id": "48ce2a85-2da6-4cd3-8b96-a6a5a29f1aa5",
+                                                              "exchange": "ARCX",
+                                                              "step": "asset",
+                                                              "collapsed?": false
+                                                            },
+                                                            {
+                                                              "name": "VanEck ETF Trust - VanEck Fallen Angel High Yield Bond ETF",
+                                                              "ticker": "ANGL",
+                                                              "id": "f9ba4d6b-116a-4c34-9d60-c2edc49ed5f4",
+                                                              "exchange": "XNAS",
+                                                              "step": "asset",
+                                                              "collapsed?": false
+                                                            }
+                                                          ],
+                                                          "select-fn": "bottom",
+                                                          "select-n": "1",
+                                                          "sort-by-fn": "relative-strength-index",
+                                                          "id": "a828e76f-f3c9-4a72-a89e-1cc7ace135c9",
+                                                          "step": "filter",
+                                                          "sort-by-fn-params": {
+                                                            "window": 10
+                                                          },
+                                                          "collapsed?": false
+                                                        }
+                                                      ],
+                                                      "id": "2c16ee15-8143-4787-bee7-73a308b5934b",
+                                                      "step": "wt-cash-equal",
+                                                      "collapsed?": false
+                                                    }
+                                                  ],
+                                                  "is-else-condition?": true,
+                                                  "id": "10927ddd-32b3-4ef2-b266-44672cd65649",
+                                                  "step": "if-child",
+                                                  "collapsed?": false
+                                                }
+                                              ],
+                                              "weight": {
+                                                "num": 100,
+                                                "den": 100
+                                              },
+                                              "id": "2fe5f6bf-db6a-4cd3-aaa3-380f73a14159",
+                                              "step": "if",
+                                              "collapsed?": false
+                                            }
+                                          ],
+                                          "id": "457a211c-365b-4b7f-a49b-6d81a36f4d3a",
+                                          "step": "wt-cash-equal",
+                                          "collapsed?": false
+                                        }
+                                      ],
+                                      "is-else-condition?": true,
+                                      "id": "18e4effd-f0ea-45ae-b708-5ed8c29433e0",
+                                      "step": "if-child",
+                                      "collapsed?": false
+                                    }
+                                  ],
+                                  "id": "101fad14-521a-4e21-8854-1b8257cdfe8e",
+                                  "step": "if",
+                                  "collapsed?": false
+                                }
+                              ],
+                              "id": "0fcc749f-debd-4cd5-ad83-8dd14e2e15d5",
+                              "step": "wt-cash-equal",
+                              "collapsed?": false
+                            }
+                          ],
+                          "lhs-fn-params": {},
+                          "rhs-fn": "exponential-moving-average-price",
+                          "is-else-condition?": false,
+                          "lhs-fn": "current-price",
+                          "lhs-val": "QQQ",
+                          "id": "9d406de1-3fb4-499b-b967-6d791e302116",
+                          "rhs-fn-params": {
+                            "window": 200
+                          },
+                          "comparator": "gt",
+                          "rhs-val": "QQQ",
+                          "step": "if-child",
+                          "collapsed?": false
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "name": "Vanguard Group, Inc. - Vanguard Short-Term Bond ETF",
+                                      "ticker": "BSV",
+                                      "id": "9ed9ecd1-7b56-49b1-b492-0d3e42543cdb",
+                                      "exchange": "ARCX",
+                                      "step": "asset",
+                                      "collapsed?": false
+                                    },
+                                    {
+                                      "name": "BlackRock Institutional Trust Company N.A. - iShares 20+ Year Treasury Bond ETF",
+                                      "ticker": "TLT",
+                                      "id": "3b060deb-5f62-4895-a0a5-775b739b1f01",
+                                      "exchange": "XNAS",
+                                      "step": "asset",
+                                      "collapsed?": false
+                                    },
+                                    {
+                                      "name": "BlackRock Institutional Trust Company N.A. - iShares iBoxx USD Investment Grade Corporate Bond ETF",
+                                      "ticker": "LQD",
+                                      "id": "9bf7393e-3adc-4ba8-8d95-238aefba59fb",
+                                      "exchange": "ARCX",
+                                      "step": "asset",
+                                      "collapsed?": false
+                                    },
+                                    {
+                                      "name": "Invesco Bond Fund",
+                                      "ticker": "VBF",
+                                      "id": "36619e19-ab11-47f5-9dcf-47e90d2c8ca8",
+                                      "exchange": "XNYS",
+                                      "step": "asset",
+                                      "collapsed?": false
+                                    },
+                                    {
+                                      "name": "SSgA Active Trust - Consumer Staples Select Sector SPDR",
+                                      "ticker": "XLP",
+                                      "id": "fe7e9233-9b2a-4563-8225-40995d44cb4a",
+                                      "exchange": "ARCX",
+                                      "step": "asset",
+                                      "collapsed?": false
+                                    },
+                                    {
+                                      "name": "ProShares Trust - ProShares Ultra Consumer Staples",
+                                      "ticker": "UGE",
+                                      "id": "99dc446b-b774-42b6-aafb-bacbe9576237",
+                                      "exchange": "ARCX",
+                                      "step": "asset",
+                                      "collapsed?": false
+                                    },
+                                    {
+                                      "name": "SSgA Active Trust - Utilities Select Sector SPDR ETF",
+                                      "ticker": "XLU",
+                                      "id": "2472eb07-93c7-4c8d-8e88-29bae3c27fe0",
+                                      "exchange": "ARCX",
+                                      "step": "asset",
+                                      "collapsed?": false
+                                    },
+                                    {
+                                      "name": "SSgA Active Trust - Health Care Select Sector SPDR",
+                                      "ticker": "XLV",
+                                      "id": "4ecf32e5-c3ed-46a3-b6cd-68ddec304844",
+                                      "exchange": "ARCX",
+                                      "step": "asset",
+                                      "collapsed?": false
+                                    },
+                                    {
+                                      "name": "SPDR Series Trust - State Street SPDR Portfolio Aggregate Bond ETF",
+                                      "ticker": "SPAB",
+                                      "id": "108a06aa-9540-457d-8a7e-514e970715e9",
+                                      "exchange": "ARCX",
+                                      "step": "asset",
+                                      "collapsed?": false
+                                    },
+                                    {
+                                      "name": "VanEck ETF Trust - VanEck Fallen Angel High Yield Bond ETF",
+                                      "ticker": "ANGL",
+                                      "id": "24099161-0ef3-42fd-a9be-23e2334c2508",
+                                      "exchange": "XNAS",
+                                      "step": "asset",
+                                      "collapsed?": false
+                                    }
+                                  ],
+                                  "select-fn": "bottom",
+                                  "select-n": "1",
+                                  "sort-by-fn": "relative-strength-index",
+                                  "id": "04de4695-959a-43af-b12c-9fc9d0364a22",
+                                  "step": "filter",
+                                  "sort-by-fn-params": {
+                                    "window": 10
+                                  },
+                                  "collapsed?": false
+                                }
+                              ],
+                              "id": "89e7d53c-3934-4c32-b78b-e47bc1571be8",
+                              "step": "wt-cash-equal",
+                              "collapsed?": false
+                            }
+                          ],
+                          "is-else-condition?": true,
+                          "id": "59edeb72-4e40-475a-8f98-19b7931a3b17",
+                          "step": "if-child",
+                          "collapsed?": false
+                        }
+                      ],
+                      "id": "90076e8d-a9d9-45c1-ba5f-2588f042535c",
+                      "step": "if",
+                      "collapsed?": false
+                    }
+                  ],
+                  "id": "f451ecb9-8860-4f1e-b487-234e918d2c2c",
+                  "step": "wt-cash-equal",
+                  "collapsed?": false
+                }
+              ],
+              "id": "a3b797c4-9d91-4078-94ea-c74758e1e974",
+              "step": "wt-cash-equal",
+              "collapsed?": true
+            }
+          ],
+          "name": "RSI Frankenfest",
+          "id": "6c5706d7-333f-4383-b4d4-b2b10167fc8b",
+          "step": "group",
+          "collapsed?": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "bwc_beta_balls": {
+    "2022": {
+      "sharpe": 0,
+      "maxdd": 0,
+      "annret": 0,
+      "error": "insufficient-ticker-data"
+    },
+    "2023": {
+      "sharpe": 0,
+      "maxdd": 0,
+      "annret": 0,
+      "error": "insufficient-ticker-data"
+    },
+    "2024": {
+      "sharpe": 0,
+      "maxdd": 0,
+      "annret": 0,
+      "error": "insufficient-ticker-data"
+    }
+  },
+  "modified_foreign_rat": {
+    "2022": {
+      "sharpe": 1.749,
+      "maxdd": 37.57,
+      "annret": 166.55
+    },
+    "2023": {
+      "sharpe": 3.29,
+      "maxdd": 21.73,
+      "annret": 298.23
+    },
+    "2024": {
+      "sharpe": 3.088,
+      "maxdd": 13.57,
+      "annret": 262.35
+    }
+  },
+  "kmlm_switcher": {
+    "2022": {
+      "sharpe": 3.202,
+      "maxdd": 22.34,
+      "annret": 655.44
+    },
+    "2023": {
+      "sharpe": 3.283,
+      "maxdd": 14.17,
+      "annret": 322.41
+    },
+    "2024": {
+      "sharpe": 3.852,
+      "maxdd": 19.5,
+      "annret": 936.42
+    }
+  },
+  "just_run_ftlt": {
+    "2022": {
+      "sharpe": 2.75,
+      "maxdd": 15.39,
+      "annret": 170.03
+    },
+    "2023": {
+      "sharpe": 2.631,
+      "maxdd": 6.34,
+      "annret": 69.44
+    },
+    "2024": {
+      "sharpe": 2.809,
+      "maxdd": 11.63,
+      "annret": 130.89
+    }
+  },
+  "200d_cross_volmag": {
+    "2022": {
+      "sharpe": 3.264,
+      "maxdd": 19.66,
+      "annret": 484.96
+    },
+    "2023": {
+      "sharpe": 3.291,
+      "maxdd": 11.94,
+      "annret": 189.09
+    },
+    "2024": {
+      "sharpe": 1.638,
+      "maxdd": 20.17,
+      "annret": 185.46
+    }
+  },
+  "60d_bnd_bil": {
+    "2022": {
+      "sharpe": 1.182,
+      "maxdd": 23.46,
+      "annret": 50.08
+    },
+    "2023": {
+      "sharpe": 4.272,
+      "maxdd": 20.31,
+      "annret": 349.08
+    },
+    "2024": {
+      "sharpe": 2.765,
+      "maxdd": 17.1,
+      "annret": 184.48
+    }
+  },
+  "pareto_rsi_obos": {
+    "2022": {
+      "sharpe": 0,
+      "maxdd": 0,
+      "annret": 0,
+      "error": "insufficient-ticker-data"
+    },
+    "2023": {
+      "sharpe": 0,
+      "maxdd": 0,
+      "annret": 0,
+      "error": "insufficient-ticker-data"
+    },
+    "2024": {
+      "sharpe": 0,
+      "maxdd": 0,
+      "annret": 0,
+      "error": "insufficient-ticker-data"
+    }
+  }
+}

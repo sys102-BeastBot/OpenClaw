@@ -1,0 +1,93 @@
+{
+  "v2_components": [
+    "bonds_zoop",
+    "hwrt_3",
+    "em_ftlt",
+    "gold",
+    "qqq_ftlt_bonds",
+    "em_emerging",
+    "qqq_ftlt_sma",
+    "natural_gas",
+    "60d_bnd_bil"
+  ],
+  "results": {
+    "Original Sisyphus (10)": {
+      "2021": {
+        "sharpe": 0,
+        "maxdd": 0,
+        "annret": 0,
+        "sortino": 0
+      },
+      "2022": {
+        "sharpe": 5.208,
+        "maxdd": 7.83,
+        "annret": 337.63,
+        "sortino": 12.87
+      },
+      "2023": {
+        "sharpe": 5.964,
+        "maxdd": 4.91,
+        "annret": 240.51,
+        "sortino": 14.033
+      },
+      "2024": {
+        "sharpe": 4.524,
+        "maxdd": 6.3,
+        "annret": 276.24,
+        "sortino": 12.621
+      }
+    },
+    "Optimized v1 (7)": {
+      "2021": {
+        "sharpe": 0,
+        "maxdd": 0,
+        "annret": 0,
+        "sortino": 0
+      },
+      "2022": {
+        "sharpe": 5.897,
+        "maxdd": 9.05,
+        "annret": 394.51,
+        "sortino": 13.466
+      },
+      "2023": {
+        "sharpe": 6.031,
+        "maxdd": 4.64,
+        "annret": 230.54,
+        "sortino": 13.385
+      },
+      "2024": {
+        "sharpe": 4.303,
+        "maxdd": 7.01,
+        "annret": 219.86,
+        "sortino": 10.088
+      }
+    },
+    "Optimized v2 (9) \u2605": {
+      "2021": {
+        "sharpe": 0,
+        "maxdd": 0,
+        "annret": 0,
+        "sortino": 0
+      },
+      "2022": {
+        "sharpe": 6.586,
+        "maxdd": 4.64,
+        "annret": 332.58,
+        "sortino": 15.338
+      },
+      "2023": {
+        "sharpe": 6.708,
+        "maxdd": 5.09,
+        "annret": 237.35,
+        "sortino": 15.626
+      },
+      "2024": {
+        "sharpe": 4.885,
+        "maxdd": 6.97,
+        "annret": 215.56,
+        "sortino": 11.303
+      }
+    }
+  }
+}
