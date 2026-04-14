@@ -1,0 +1,198 @@
+{
+  "id": "7fe382b2-b351-44c3-95cb-aadd16f2676f",
+  "step": "root",
+  "name": "A Momentary Lapse of Reason",
+  "description": "",
+  "rebalance": "daily",
+  "children": [
+    {
+      "id": "d5334431-6f5b-4067-bf00-f2d380a80536",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "name": "ProShares Trust - ProShares UltraPro QQQ 3x Shares",
+                                  "ticker": "EQUITIES::TQQQ//USD",
+                                  "id": "a54c0bf1-4fd3-4d51-804a-dcc2aa8adadc",
+                                  "step": "asset"
+                                },
+                                {
+                                  "name": "AGF Investments Trust - AGF U.S. Market Neutral Anti-Beta Fund",
+                                  "ticker": "EQUITIES::BTAL//USD",
+                                  "id": "c4a0fb1a-5c7d-442d-a949-720480353f3d",
+                                  "step": "asset"
+                                }
+                              ],
+                              "id": "1ca22227-3279-460b-84c7-0893f23b1d95",
+                              "step": "wt-cash-equal"
+                            }
+                          ],
+                          "rhs-fn": "moving-average-price",
+                          "is-else-condition?": false,
+                          "lhs-fn": "current-price",
+                          "lhs-val": "EQUITIES::TQQQ//USD",
+                          "id": "4c1d7b8d-6ac1-4f30-93c6-3db76bf94c58",
+                          "rhs-fn-params": {
+                            "window": 200
+                          },
+                          "comparator": "gt",
+                          "rhs-val": "EQUITIES::TQQQ//USD",
+                          "step": "if-child"
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "name": "ProShares Trust - ProShares UltraPro QQQ 3x Shares",
+                                          "ticker": "EQUITIES::TQQQ//USD",
+                                          "id": "8a127ad8-3155-4511-a046-093c06c04d81",
+                                          "step": "asset"
+                                        }
+                                      ],
+                                      "lhs-fn-params": {
+                                        "window": 14
+                                      },
+                                      "is-else-condition?": false,
+                                      "rhs-fixed-value?": true,
+                                      "lhs-fn": "relative-strength-index",
+                                      "lhs-val": "EQUITIES::SPY//USD",
+                                      "id": "b18916d1-ecb8-438d-9dc1-529e817fddb9",
+                                      "comparator": "lt",
+                                      "rhs-val": "30",
+                                      "step": "if-child"
+                                    },
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "name": "AGF Investments Trust - AGF U.S. Market Neutral Anti-Beta Fund",
+                                                  "ticker": "EQUITIES::BTAL//USD",
+                                                  "id": "09ab0a2d-fb11-482f-b014-dc3098b7b68e",
+                                                  "step": "asset"
+                                                }
+                                              ],
+                                              "lhs-fn-params": {
+                                                "window": 14
+                                              },
+                                              "is-else-condition?": false,
+                                              "rhs-fixed-value?": true,
+                                              "lhs-fn": "relative-strength-index",
+                                              "lhs-val": "EQUITIES::SPY//USD",
+                                              "id": "0a1039fd-6b47-47fa-9a35-d1309b5d54a2",
+                                              "comparator": "gt",
+                                              "rhs-val": "80",
+                                              "step": "if-child"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "name": "AGF Investments Trust - AGF U.S. Market Neutral Anti-Beta Fund",
+                                                          "ticker": "EQUITIES::BTAL//USD",
+                                                          "id": "fce30e99-14e1-4dac-8668-ee9043193ac2",
+                                                          "step": "asset"
+                                                        }
+                                                      ],
+                                                      "lhs-fn-params": {
+                                                        "window": 20
+                                                      },
+                                                      "rhs-fn": "moving-average-return",
+                                                      "is-else-condition?": false,
+                                                      "lhs-fn": "moving-average-return",
+                                                      "lhs-val": "EQUITIES::BTAL//USD",
+                                                      "id": "4b9da3d7-20a5-4f15-979c-d53f2b09d446",
+                                                      "rhs-fn-params": {
+                                                        "window": 20
+                                                      },
+                                                      "comparator": "gt",
+                                                      "rhs-val": "EQUITIES::SPY//USD",
+                                                      "step": "if-child"
+                                                    },
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "name": "SSgA Active Trust - SPDR S&P 500 ETF Trust",
+                                                          "ticker": "EQUITIES::SPY//USD",
+                                                          "id": "3c85ade3-5b66-46c1-a63a-dc28f196ae36",
+                                                          "step": "asset"
+                                                        }
+                                                      ],
+                                                      "is-else-condition?": true,
+                                                      "id": "c8bf4c59-fcc6-45e6-9794-14e97ee5405d",
+                                                      "step": "if-child"
+                                                    }
+                                                  ],
+                                                  "id": "b3828e1c-28ae-43d4-8443-436a90b0f353",
+                                                  "step": "if"
+                                                }
+                                              ],
+                                              "is-else-condition?": true,
+                                              "id": "da6dbb56-9715-4a9c-a431-ce33e7f6b2f6",
+                                              "step": "if-child"
+                                            }
+                                          ],
+                                          "id": "f222cada-7f33-41d6-b17e-0821c7829a26",
+                                          "step": "if"
+                                        }
+                                      ],
+                                      "is-else-condition?": true,
+                                      "id": "f84bec75-82ce-4af9-baf4-3ce68fde3e46",
+                                      "step": "if-child"
+                                    }
+                                  ],
+                                  "id": "68591d2f-ba9f-4da4-9ed9-1dd22fd62727",
+                                  "step": "if"
+                                }
+                              ],
+                              "id": "788d1cc4-6bd5-492b-a32f-afd77f30f777",
+                              "step": "wt-cash-equal"
+                            }
+                          ],
+                          "is-else-condition?": true,
+                          "id": "500ed6bb-61b0-451a-9c40-a46289cd8174",
+                          "step": "if-child"
+                        }
+                      ],
+                      "id": "1f5bba52-4629-466b-9fe9-3939e871db81",
+                      "step": "if"
+                    }
+                  ],
+                  "id": "443abf9e-54a0-4dd9-9c6a-d7fa6fbb228e",
+                  "step": "wt-cash-equal"
+                }
+              ],
+              "id": "f47266f4-5c79-4a75-baaa-235e6c9fca86",
+              "step": "wt-cash-equal"
+            }
+          ],
+          "name": "A Momentary Lapse of Reason",
+          "id": "ef56261b-9fad-4310-ac31-c1789d19bece",
+          "step": "group",
+          "collapsed?": true
+        }
+      ]
+    }
+  ]
+}

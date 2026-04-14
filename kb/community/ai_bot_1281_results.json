@@ -1,0 +1,22 @@
+{
+  "id": "FDtyAuOcrMy6aS74M4fT",
+  "per_year": {
+    "2022": {
+      "sharpe": 2.863,
+      "annret": 241.2,
+      "maxdd": 26.37
+    },
+    "2023": {
+      "sharpe": 2.403,
+      "annret": 106.7,
+      "maxdd": 16.01
+    },
+    "2024": {
+      "sharpe": 3.364,
+      "annret": 248.2,
+      "maxdd": 11.32
+    }
+  },
+  "avg_sharpe": 2.8766666666666665,
+  "avg_return": 198.70000000000002
+}

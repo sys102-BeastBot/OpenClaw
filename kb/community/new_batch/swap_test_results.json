@@ -1,0 +1,93 @@
+{
+  "v3 current (7)": {
+    "2022": {
+      "sharpe": 6.878,
+      "annret": 303.8,
+      "maxdd": 3.86
+    },
+    "2023": {
+      "sharpe": 7.222,
+      "annret": 224.4,
+      "maxdd": 3.91
+    },
+    "2024": {
+      "sharpe": 5.363,
+      "annret": 197.9,
+      "maxdd": 6.26
+    }
+  },
+  "add numberSeven (8)": {
+    "2022": {
+      "sharpe": 6.958,
+      "annret": 304.3,
+      "maxdd": 3.36
+    },
+    "2023": {
+      "sharpe": 7.201,
+      "annret": 220.4,
+      "maxdd": 4.29
+    },
+    "2024": {
+      "sharpe": 5.402,
+      "annret": 193.0,
+      "maxdd": 6.13
+    }
+  },
+  "swap nat_gas\u2192numberSeven (7)": {
+    "2022": {
+      "sharpe": 6.371,
+      "annret": 304.3,
+      "maxdd": 8.01
+    },
+    "2023": {
+      "sharpe": 6.641,
+      "annret": 227.9,
+      "maxdd": 3.91
+    },
+    "2024": {
+      "sharpe": 4.965,
+      "annret": 194.2,
+      "maxdd": 6.19
+    }
+  },
+  "add bwc (8)": {
+    "2022": {
+      "sharpe": 0,
+      "annret": 0,
+      "maxdd": 0,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "2023": {
+      "sharpe": 0,
+      "annret": 0,
+      "maxdd": 0,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "2024": {
+      "sharpe": 0,
+      "annret": 0,
+      "maxdd": 0,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    }
+  },
+  "swap nat_gas\u2192bwc (7)": {
+    "2022": {
+      "sharpe": 0,
+      "annret": 0,
+      "maxdd": 0,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "2023": {
+      "sharpe": 0,
+      "annret": 0,
+      "maxdd": 0,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "2024": {
+      "sharpe": 0,
+      "annret": 0,
+      "maxdd": 0,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    }
+  }
+}

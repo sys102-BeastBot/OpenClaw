@@ -1,0 +1,128 @@
+{
+  "id": "e4ea3115-244e-46e2-8dd7-834f8222f621",
+  "step": "root",
+  "name": "Interstellar | Agriculture",
+  "description": "",
+  "rebalance": "daily",
+  "children": [
+    {
+      "id": "dac7e3ff-b14d-4328-a3e0-41e8d242b135",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "name": "Invesco DB Agriculture Fund",
+                                          "ticker": "DBA",
+                                          "id": "80d5057e-d21d-4ed0-bc65-6dae84ee5ecb",
+                                          "exchange": "ARCX",
+                                          "step": "asset"
+                                        }
+                                      ],
+                                      "id": "23ce79ce-4981-4104-b92e-261231bd3380",
+                                      "step": "wt-cash-equal"
+                                    }
+                                  ],
+                                  "lhs-fn-params": {
+                                    "window": 8
+                                  },
+                                  "rhs-fn": "moving-average-price",
+                                  "is-else-condition?": false,
+                                  "lhs-fn": "exponential-moving-average-price",
+                                  "lhs-val": "DBA",
+                                  "id": "133334c5-6e6e-4384-8684-191eddd46c5c",
+                                  "rhs-fn-params": {
+                                    "window": 200
+                                  },
+                                  "comparator": "gt",
+                                  "rhs-val": "DBA",
+                                  "step": "if-child"
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "name": "iShares Short Treasury Bond ETF",
+                                      "ticker": "SHV",
+                                      "id": "eca89cac-b49e-432e-9aa5-1bd3205bba07",
+                                      "exchange": "XNAS",
+                                      "step": "asset"
+                                    }
+                                  ],
+                                  "is-else-condition?": true,
+                                  "id": "86d4b535-b74c-429f-a97f-00615c5e53ab",
+                                  "step": "if-child"
+                                }
+                              ],
+                              "id": "d612d424-0316-4136-8df1-1b3a369cef20",
+                              "step": "if"
+                            }
+                          ],
+                          "id": "ba57ab2e-92ca-4e2b-9ec6-f047c1ab9cfb",
+                          "step": "wt-cash-equal"
+                        }
+                      ],
+                      "lhs-fn-params": {},
+                      "rhs-fn": "moving-average-price",
+                      "is-else-condition?": false,
+                      "lhs-fn": "current-price",
+                      "lhs-val": "DBA",
+                      "id": "ecd558ab-50f9-4222-9ee9-f9f8bd22b0c4",
+                      "rhs-fn-params": {
+                        "window": 450
+                      },
+                      "comparator": "gt",
+                      "rhs-val": "DBA",
+                      "step": "if-child",
+                      "collapsed?": true
+                    },
+                    {
+                      "children": [
+                        {
+                          "name": "iShares Short Treasury Bond ETF",
+                          "ticker": "SHV",
+                          "id": "c8acd9df-c138-4586-b44f-feb5ea05972a",
+                          "exchange": "XNAS",
+                          "step": "asset"
+                        }
+                      ],
+                      "is-else-condition?": true,
+                      "id": "5d33f8d4-723e-4506-a3b9-1b5e6df95d38",
+                      "step": "if-child",
+                      "collapsed?": true
+                    }
+                  ],
+                  "weight": {
+                    "num": 100,
+                    "den": 100
+                  },
+                  "id": "3497004b-9b40-48d0-a737-b182729720b4",
+                  "step": "if"
+                }
+              ],
+              "id": "049ddfc1-7bb4-4eef-820e-bd8eb1e2513c",
+              "step": "wt-cash-equal"
+            }
+          ],
+          "name": "Interstellar | Agriculture",
+          "id": "10c97eae-b2b7-4a24-9487-81766991d47a",
+          "step": "group",
+          "collapsed?": true
+        }
+      ]
+    }
+  ]
+}

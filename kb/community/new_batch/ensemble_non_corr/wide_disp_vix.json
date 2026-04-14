@@ -1,0 +1,650 @@
+{
+  "id": "6d2950ff-efd7-4da8-8e7a-7ae4766b8b68",
+  "step": "root",
+  "name": "Wide Disp Vix",
+  "description": "",
+  "rebalance": "daily",
+  "children": [
+    {
+      "id": "1843355a-61f6-4376-a974-be96bd27893b",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "id": "eda79cd6-1864-4984-b2dd-f4fc3c95d306",
+          "step": "group",
+          "name": "Wide Disp Vix",
+          "children": [
+            {
+              "step": "wt-inverse-vol",
+              "id": "5a4d0c1b-5a56-4dd1-ac0c-196d84c2619f",
+              "children": [
+                {
+                  "id": "818d3929-7028-4fea-8f1f-b7b190fca38c",
+                  "step": "group",
+                  "name": "Vixy / Vixm (short term futs vs mid term futs)",
+                  "children": [
+                    {
+                      "step": "wt-cash-equal",
+                      "id": "c9ed6b66-7b19-45fa-a563-b22b7560cd03",
+                      "children": [
+                        {
+                          "weight": {
+                            "num": 100,
+                            "den": 100
+                          },
+                          "id": "77ccbcf2-24e5-4264-986a-dc25751722fa",
+                          "step": "if",
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "ticker": "BTAL",
+                                  "exchange": "ARCX",
+                                  "name": "AGF U.S. Market Neutral Anti-Beta Fund",
+                                  "id": "ad1397f5-42f3-4024-9643-65fcc51925c0",
+                                  "step": "asset"
+                                }
+                              ],
+                              "lhs-fn-params": {
+                                "window": 20
+                              },
+                              "rhs-fn": "moving-average-return",
+                              "is-else-condition?": false,
+                              "lhs-fn": "moving-average-return",
+                              "lhs-val": "VIXY",
+                              "id": "1879867b-ccd9-48e1-a007-58d1ed3d0727",
+                              "rhs-fn-params": {
+                                "window": 20
+                              },
+                              "comparator": "gt",
+                              "rhs-val": "VIXM",
+                              "step": "if-child"
+                            },
+                            {
+                              "id": "183d097f-a507-48b4-acff-d6f8a6d3e5f6",
+                              "step": "if-child",
+                              "is-else-condition?": true,
+                              "children": [
+                                {
+                                  "ticker": "SVXY",
+                                  "exchange": "BATS",
+                                  "name": "ProShares Short VIX Short-Term Futures ETF",
+                                  "id": "60a62cf9-2220-40d5-bc2e-b127d1c57d25",
+                                  "step": "asset"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "weight": {
+                            "num": 100,
+                            "den": 100
+                          },
+                          "id": "d92ba023-3313-4bff-9ddc-39cf0f933f73",
+                          "step": "if",
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "ticker": "BTAL",
+                                  "exchange": "ARCX",
+                                  "name": "AGF U.S. Market Neutral Anti-Beta Fund",
+                                  "id": "40cf26a3-fa79-4bce-9a7e-5e3b8541ee50",
+                                  "step": "asset"
+                                }
+                              ],
+                              "lhs-fn-params": {
+                                "window": 5
+                              },
+                              "rhs-fn": "moving-average-return",
+                              "is-else-condition?": false,
+                              "lhs-fn": "moving-average-return",
+                              "lhs-val": "VIXY",
+                              "id": "c7af0ba7-83cf-494e-8e35-d6ffb1c1c3e0",
+                              "rhs-fn-params": {
+                                "window": 5
+                              },
+                              "comparator": "gt",
+                              "rhs-val": "VIXM",
+                              "step": "if-child"
+                            },
+                            {
+                              "id": "0451d989-1ce6-41a2-bc1a-d16537bd886e",
+                              "step": "if-child",
+                              "is-else-condition?": true,
+                              "children": [
+                                {
+                                  "ticker": "SVXY",
+                                  "exchange": "BATS",
+                                  "name": "ProShares Short VIX Short-Term Futures ETF",
+                                  "id": "9f617298-2ac1-4653-a919-ddb8ff6334c5",
+                                  "step": "asset"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "weight": {
+                            "num": 100,
+                            "den": 100
+                          },
+                          "id": "91cc9117-ce90-457b-95ca-fe355134a3a3",
+                          "step": "if",
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "ticker": "BTAL",
+                                  "exchange": "ARCX",
+                                  "name": "AGF U.S. Market Neutral Anti-Beta Fund",
+                                  "id": "22420738-a158-42c7-9e3c-d3e7d0cc9193",
+                                  "step": "asset"
+                                }
+                              ],
+                              "lhs-fn-params": {
+                                "window": 3
+                              },
+                              "rhs-fn": "moving-average-return",
+                              "is-else-condition?": false,
+                              "lhs-fn": "moving-average-return",
+                              "lhs-val": "VIXY",
+                              "id": "76849db6-90e7-40e3-a0b4-552419eb6c66",
+                              "rhs-fn-params": {
+                                "window": 3
+                              },
+                              "comparator": "gt",
+                              "rhs-val": "VIXM",
+                              "step": "if-child"
+                            },
+                            {
+                              "id": "97512a12-6676-4cdd-9a1f-ff5f20dab641",
+                              "step": "if-child",
+                              "is-else-condition?": true,
+                              "children": [
+                                {
+                                  "ticker": "SVXY",
+                                  "exchange": "BATS",
+                                  "name": "ProShares Short VIX Short-Term Futures ETF",
+                                  "id": "8d2306ad-4771-41c9-bc0b-dc78c6cd3265",
+                                  "step": "asset"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "weight": {
+                            "num": 100,
+                            "den": 100
+                          },
+                          "id": "10c511d9-05c2-45c2-8f0a-6db09de36db2",
+                          "step": "if",
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "ticker": "BTAL",
+                                  "exchange": "ARCX",
+                                  "name": "AGF U.S. Market Neutral Anti-Beta Fund",
+                                  "id": "c72d12ca-48f0-4022-81cf-9970dc0e8002",
+                                  "step": "asset"
+                                }
+                              ],
+                              "lhs-fn-params": {
+                                "window": 2
+                              },
+                              "rhs-fn": "moving-average-return",
+                              "is-else-condition?": false,
+                              "lhs-fn": "moving-average-return",
+                              "lhs-val": "VIXY",
+                              "id": "79ae3ff0-f579-4408-afd3-8de6a092a7b2",
+                              "rhs-fn-params": {
+                                "window": 2
+                              },
+                              "comparator": "gt",
+                              "rhs-val": "VIXM",
+                              "step": "if-child"
+                            },
+                            {
+                              "id": "97abf7f1-d628-4b91-a792-5e0ae335fb8a",
+                              "step": "if-child",
+                              "is-else-condition?": true,
+                              "children": [
+                                {
+                                  "ticker": "SVXY",
+                                  "exchange": "BATS",
+                                  "name": "ProShares Short VIX Short-Term Futures ETF",
+                                  "id": "6c864294-1711-4b19-9d00-127d3b438455",
+                                  "step": "asset"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "weight": {
+                    "num": "0",
+                    "den": 100
+                  },
+                  "collapsed?": true
+                },
+                {
+                  "id": "9569d082-c87d-454e-99cd-1beaa3f45210",
+                  "step": "group",
+                  "name": "Vix St. Dev. ROC",
+                  "children": [
+                    {
+                      "step": "wt-cash-equal",
+                      "id": "1d508161-de40-434d-a1e0-0d4660d4e9d6",
+                      "children": [
+                        {
+                          "weight": {
+                            "num": 100,
+                            "den": 100
+                          },
+                          "id": "95da963e-2efe-4c79-854a-542945bbb302",
+                          "step": "if",
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "ticker": "BTAL",
+                                  "exchange": "ARCX",
+                                  "name": "AGF U.S. Market Neutral Anti-Beta Fund",
+                                  "id": "d3f491d3-4dc6-4afb-bfc0-ae9e48eb6ee1",
+                                  "step": "asset"
+                                }
+                              ],
+                              "lhs-fn-params": {
+                                "window": 5
+                              },
+                              "rhs-fn": "standard-deviation-return",
+                              "is-else-condition?": false,
+                              "lhs-fn": "standard-deviation-return",
+                              "lhs-val": "VIXY",
+                              "id": "c6a764b8-1b1b-4848-8658-c0344a33a267",
+                              "rhs-fn-params": {
+                                "window": 9
+                              },
+                              "comparator": "gt",
+                              "rhs-val": "VIXY",
+                              "step": "if-child"
+                            },
+                            {
+                              "id": "f6a2f819-72dd-4723-9581-f5aa5f0ec00f",
+                              "step": "if-child",
+                              "is-else-condition?": true,
+                              "children": [
+                                {
+                                  "ticker": "SVXY",
+                                  "exchange": "BATS",
+                                  "name": "ProShares Short VIX Short-Term Futures ETF",
+                                  "id": "0a67060e-2522-49ed-9be4-977ce6707c5f",
+                                  "step": "asset"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "weight": {
+                            "num": 100,
+                            "den": 100
+                          },
+                          "id": "c99c892a-48f4-4c40-ba59-e50ef51df2d2",
+                          "step": "if",
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "ticker": "BTAL",
+                                  "exchange": "ARCX",
+                                  "name": "AGF U.S. Market Neutral Anti-Beta Fund",
+                                  "id": "414099c9-c8a9-43b0-a6b2-fc5ad3aff824",
+                                  "step": "asset"
+                                }
+                              ],
+                              "lhs-fn-params": {
+                                "window": 3
+                              },
+                              "rhs-fn": "standard-deviation-return",
+                              "is-else-condition?": false,
+                              "lhs-fn": "standard-deviation-return",
+                              "lhs-val": "VIXY",
+                              "id": "7f92bde5-16fd-495b-a9e4-6ae81c709936",
+                              "rhs-fn-params": {
+                                "window": 8
+                              },
+                              "comparator": "gt",
+                              "rhs-val": "VIXY",
+                              "step": "if-child"
+                            },
+                            {
+                              "id": "9a6e4c33-bb67-4edb-9c30-5caafc911d5c",
+                              "step": "if-child",
+                              "is-else-condition?": true,
+                              "children": [
+                                {
+                                  "ticker": "SVXY",
+                                  "exchange": "BATS",
+                                  "name": "ProShares Short VIX Short-Term Futures ETF",
+                                  "id": "b8296dd5-3468-48b1-a881-fa15954f4365",
+                                  "step": "asset"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "weight": {
+                            "num": 100,
+                            "den": 100
+                          },
+                          "id": "7407e886-8923-467b-8e24-f82a4b74a9b5",
+                          "step": "if",
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "ticker": "BTAL",
+                                  "exchange": "ARCX",
+                                  "name": "AGF U.S. Market Neutral Anti-Beta Fund",
+                                  "id": "b56f753a-69e1-4163-8447-8f553a9d32cd",
+                                  "step": "asset"
+                                }
+                              ],
+                              "lhs-fn-params": {
+                                "window": 2
+                              },
+                              "rhs-fn": "standard-deviation-return",
+                              "is-else-condition?": false,
+                              "lhs-fn": "standard-deviation-return",
+                              "lhs-val": "VIXY",
+                              "id": "04b5236b-6ebd-4527-9720-401aab4920f3",
+                              "rhs-fn-params": {
+                                "window": 8
+                              },
+                              "comparator": "gt",
+                              "rhs-val": "VIXY",
+                              "step": "if-child"
+                            },
+                            {
+                              "id": "f8e0a05e-3f63-4756-9227-cb52011226aa",
+                              "step": "if-child",
+                              "is-else-condition?": true,
+                              "children": [
+                                {
+                                  "ticker": "SVXY",
+                                  "exchange": "BATS",
+                                  "name": "ProShares Short VIX Short-Term Futures ETF",
+                                  "id": "305248ba-938d-43b4-a27d-139f52afb0e2",
+                                  "step": "asset"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "weight": {
+                            "num": 100,
+                            "den": 100
+                          },
+                          "id": "3f86108c-472e-4f33-801a-9bef6702b7e9",
+                          "step": "if",
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "ticker": "BTAL",
+                                  "exchange": "ARCX",
+                                  "name": "AGF U.S. Market Neutral Anti-Beta Fund",
+                                  "id": "98739714-fc9d-4023-a018-02b39657b166",
+                                  "step": "asset"
+                                }
+                              ],
+                              "lhs-fn-params": {
+                                "window": 2
+                              },
+                              "rhs-fn": "standard-deviation-return",
+                              "is-else-condition?": false,
+                              "lhs-fn": "standard-deviation-return",
+                              "lhs-val": "VIXY",
+                              "id": "d2a0c631-0606-4567-a9cc-55139a997d59",
+                              "rhs-fn-params": {
+                                "window": 10
+                              },
+                              "comparator": "gt",
+                              "rhs-val": "VIXY",
+                              "step": "if-child"
+                            },
+                            {
+                              "id": "eb30d86b-ac4b-4e92-8f0d-1356f0e17649",
+                              "step": "if-child",
+                              "is-else-condition?": true,
+                              "children": [
+                                {
+                                  "ticker": "SVXY",
+                                  "exchange": "BATS",
+                                  "name": "ProShares Short VIX Short-Term Futures ETF",
+                                  "id": "ea3308c2-b680-414c-8db5-1d62dd7b31f7",
+                                  "step": "asset"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "weight": {
+                            "num": 100,
+                            "den": 100
+                          },
+                          "id": "ace9f020-9dd7-4afc-846d-1a212208e511",
+                          "step": "if",
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "ticker": "BTAL",
+                                  "exchange": "ARCX",
+                                  "name": "AGF U.S. Market Neutral Anti-Beta Fund",
+                                  "id": "29f2f7c2-73fc-466d-aacb-8b06fbdf5b48",
+                                  "step": "asset"
+                                }
+                              ],
+                              "lhs-fn-params": {
+                                "window": 3
+                              },
+                              "rhs-fn": "standard-deviation-return",
+                              "is-else-condition?": false,
+                              "lhs-fn": "standard-deviation-return",
+                              "lhs-val": "VIXY",
+                              "id": "0162f0ee-1472-42d1-8825-c1d170572116",
+                              "rhs-fn-params": {
+                                "window": 15
+                              },
+                              "comparator": "gt",
+                              "rhs-val": "VIXY",
+                              "step": "if-child"
+                            },
+                            {
+                              "id": "52b88749-d556-4cc5-92a8-310b791740df",
+                              "step": "if-child",
+                              "is-else-condition?": true,
+                              "children": [
+                                {
+                                  "ticker": "SVXY",
+                                  "exchange": "BATS",
+                                  "name": "ProShares Short VIX Short-Term Futures ETF",
+                                  "id": "34f01a0b-62b2-474b-8433-6088a8807734",
+                                  "step": "asset"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "weight": {
+                            "num": 100,
+                            "den": 100
+                          },
+                          "id": "9ec36781-9991-45dc-9e06-26c3ad7ebe4f",
+                          "step": "if",
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "ticker": "BTAL",
+                                  "exchange": "ARCX",
+                                  "name": "AGF U.S. Market Neutral Anti-Beta Fund",
+                                  "id": "a543588c-30db-47ae-aa75-560eafffd4ae",
+                                  "step": "asset"
+                                }
+                              ],
+                              "lhs-fn-params": {
+                                "window": 4
+                              },
+                              "rhs-fn": "standard-deviation-return",
+                              "is-else-condition?": false,
+                              "lhs-fn": "standard-deviation-return",
+                              "lhs-val": "VIXM",
+                              "id": "970c5d29-c470-419e-858b-6c80c7922c65",
+                              "rhs-fn-params": {
+                                "window": 15
+                              },
+                              "comparator": "gt",
+                              "rhs-val": "VIXM",
+                              "step": "if-child"
+                            },
+                            {
+                              "id": "120a748a-dd48-4678-85a0-63020397bec6",
+                              "step": "if-child",
+                              "is-else-condition?": true,
+                              "children": [
+                                {
+                                  "ticker": "SVXY",
+                                  "exchange": "BATS",
+                                  "name": "ProShares Short VIX Short-Term Futures ETF",
+                                  "id": "dca65388-97af-4e01-9fd3-98d6651c1d9c",
+                                  "step": "asset"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "weight": {
+                            "num": 100,
+                            "den": 100
+                          },
+                          "id": "8c756f07-7705-4ecc-be52-18ba56c5ef2b",
+                          "step": "if",
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "ticker": "BTAL",
+                                  "exchange": "ARCX",
+                                  "name": "AGF U.S. Market Neutral Anti-Beta Fund",
+                                  "id": "8de0e2b4-f762-4a9b-9ae3-cbd8f61199c4",
+                                  "step": "asset"
+                                }
+                              ],
+                              "lhs-fn-params": {
+                                "window": 2
+                              },
+                              "rhs-fn": "standard-deviation-return",
+                              "is-else-condition?": false,
+                              "lhs-fn": "standard-deviation-return",
+                              "lhs-val": "VIXM",
+                              "id": "71fe1f64-29db-49b3-9d89-b93f9557dcdf",
+                              "rhs-fn-params": {
+                                "window": 20
+                              },
+                              "comparator": "gt",
+                              "rhs-val": "VIXM",
+                              "step": "if-child"
+                            },
+                            {
+                              "id": "2a873135-170c-4910-8873-fd62f61e168c",
+                              "step": "if-child",
+                              "is-else-condition?": true,
+                              "children": [
+                                {
+                                  "ticker": "SVXY",
+                                  "exchange": "BATS",
+                                  "name": "ProShares Short VIX Short-Term Futures ETF",
+                                  "id": "bd5269d2-8099-4a7e-a855-fb1ae975828e",
+                                  "step": "asset"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "weight": {
+                            "num": 100,
+                            "den": 100
+                          },
+                          "id": "6fa119de-3840-43a4-a06a-0efb77aad460",
+                          "step": "if",
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "ticker": "BTAL",
+                                  "exchange": "ARCX",
+                                  "name": "AGF U.S. Market Neutral Anti-Beta Fund",
+                                  "id": "fe2d1e0b-9dcf-4a2b-95d9-db18ed4e8567",
+                                  "step": "asset"
+                                }
+                              ],
+                              "lhs-fn-params": {
+                                "window": 5
+                              },
+                              "rhs-fn": "standard-deviation-return",
+                              "is-else-condition?": false,
+                              "lhs-fn": "standard-deviation-return",
+                              "lhs-val": "VIXY",
+                              "id": "930ac516-7425-4da9-86c7-6ce08aca1ded",
+                              "rhs-fn-params": {
+                                "window": 12
+                              },
+                              "comparator": "gt",
+                              "rhs-val": "VIXY",
+                              "step": "if-child"
+                            },
+                            {
+                              "id": "470e5ab3-23a5-4aa2-98e5-5f066792c654",
+                              "step": "if-child",
+                              "is-else-condition?": true,
+                              "children": [
+                                {
+                                  "ticker": "SVXY",
+                                  "exchange": "BATS",
+                                  "name": "ProShares Short VIX Short-Term Futures ETF",
+                                  "id": "62d90160-99f6-4bac-8c19-474f136efe02",
+                                  "step": "asset"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "collapsed?": true
+                }
+              ],
+              "window-days": "40"
+            }
+          ],
+          "collapsed?": true
+        }
+      ]
+    }
+  ]
+}

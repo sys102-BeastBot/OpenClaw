@@ -1,0 +1,386 @@
+{
+  "id": "cd5cf45e-f136-4898-893c-c20b5144d989",
+  "step": "root",
+  "name": "Commodities Macro Momentum",
+  "description": "",
+  "rebalance": "daily",
+  "children": [
+    {
+      "id": "4c7a36e2-40f3-430b-a0fe-8059f9f32a18",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "name": "Invesco DB Commodity Index Tracking Fund",
+                                      "ticker": "DBC",
+                                      "has_marketcap": false,
+                                      "id": "c2743138-c1d0-4783-beb5-3f10aad089f4",
+                                      "exchange": "ARCX",
+                                      "price": 22.96,
+                                      "step": "asset",
+                                      "dollar_volume": 49957653.760000005
+                                    }
+                                  ],
+                                  "rhs-fn": "moving-average-price",
+                                  "is-else-condition?": false,
+                                  "lhs-fn": "moving-average-price",
+                                  "rhs-window-days": "100",
+                                  "lhs-window-days": "50",
+                                  "lhs-val": "DBC",
+                                  "id": "cfd619bf-61c2-485e-8b2f-4b944f51b4f4",
+                                  "comparator": "gt",
+                                  "rhs-val": "DBC",
+                                  "step": "if-child"
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "name": "iShares 1-3 Year Treasury Bond ETF",
+                                      "ticker": "SHY",
+                                      "has_marketcap": false,
+                                      "id": "f52ec7bd-6f6f-467f-ad51-934d59b8e99a",
+                                      "exchange": "XNAS",
+                                      "price": 82.38,
+                                      "step": "asset",
+                                      "dollar_volume": 620776879.02
+                                    }
+                                  ],
+                                  "is-else-condition?": true,
+                                  "id": "cdf4f667-536e-4aea-b2f2-98e3a096c451",
+                                  "step": "if-child"
+                                }
+                              ],
+                              "id": "4e24f05b-e5e9-44cf-a794-6296979f217a",
+                              "step": "if"
+                            }
+                          ],
+                          "id": "7ba6d1f7-6450-4278-bddf-e5eb21b33e1b",
+                          "step": "wt-cash-equal"
+                        }
+                      ],
+                      "rhs-fn": "moving-average-price",
+                      "is-else-condition?": false,
+                      "lhs-fn": "moving-average-price",
+                      "rhs-window-days": "252",
+                      "lhs-window-days": "100",
+                      "lhs-val": "DBC",
+                      "id": "6d3ef8bf-f689-4d17-b0f9-9484dd910c8b",
+                      "comparator": "gt",
+                      "rhs-val": "DBC",
+                      "step": "if-child",
+                      "collapsed?": true
+                    },
+                    {
+                      "children": [
+                        {
+                          "name": "iShares 1-3 Year Treasury Bond ETF",
+                          "ticker": "SHY",
+                          "has_marketcap": false,
+                          "id": "8bce8943-ce12-4050-86e9-33ebb83c69cb",
+                          "exchange": "XNAS",
+                          "price": 82.38,
+                          "step": "asset",
+                          "dollar_volume": 620776879.02
+                        }
+                      ],
+                      "is-else-condition?": true,
+                      "id": "b328ddb2-81da-4c56-ba62-3813a18b67b8",
+                      "step": "if-child",
+                      "collapsed?": true
+                    }
+                  ],
+                  "id": "34da36e8-f081-481e-a878-ad339696ae8e",
+                  "step": "if"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "name": "Invesco DB Commodity Index Tracking Fund",
+                                                  "ticker": "DBC",
+                                                  "has_marketcap": false,
+                                                  "id": "4f8e5b57-e3a3-46f5-80d6-785445d81c32",
+                                                  "exchange": "ARCX",
+                                                  "price": 23.47,
+                                                  "step": "asset",
+                                                  "dollar_volume": 29392537.15
+                                                },
+                                                {
+                                                  "name": "SPDR S&P Metals & Mining ETF",
+                                                  "ticker": "XME",
+                                                  "has_marketcap": false,
+                                                  "id": "29d9456e-188e-4b6f-9411-862e73ef8efc",
+                                                  "exchange": "ARCX",
+                                                  "price": 49.71,
+                                                  "step": "asset",
+                                                  "dollar_volume": 190225157.58
+                                                },
+                                                {
+                                                  "name": "Invesco DB Agriculture Fund",
+                                                  "ticker": "DBA",
+                                                  "has_marketcap": false,
+                                                  "id": "4245c071-074d-48ad-b66e-bdd892e43155",
+                                                  "exchange": "ARCX",
+                                                  "price": 21.99,
+                                                  "step": "asset",
+                                                  "dollar_volume": 11743627.559999999
+                                                }
+                                              ],
+                                              "id": "ec092592-ba35-4c7f-b2a9-b7b92ef1d6c0",
+                                              "step": "wt-cash-equal"
+                                            }
+                                          ],
+                                          "rhs-fn": "moving-average-price",
+                                          "is-else-condition?": false,
+                                          "lhs-fn": "moving-average-price",
+                                          "rhs-window-days": "100",
+                                          "lhs-window-days": "50",
+                                          "lhs-val": "DBC",
+                                          "id": "410ceb10-4870-476e-a488-22e74c031844",
+                                          "comparator": "gt",
+                                          "rhs-val": "DBC",
+                                          "step": "if-child"
+                                        },
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "name": "iShares Short Treasury Bond ETF",
+                                                  "ticker": "SHV",
+                                                  "id": "cbb23c15-6cb9-42be-b06c-502aa418212b",
+                                                  "exchange": "XNAS",
+                                                  "step": "asset"
+                                                }
+                                              ],
+                                              "id": "193f3ff3-dd98-4568-96e7-6bf3f7c6f670",
+                                              "step": "wt-cash-equal"
+                                            }
+                                          ],
+                                          "is-else-condition?": true,
+                                          "id": "d0902483-999c-4c6c-897b-2cac60ff77fc",
+                                          "step": "if-child"
+                                        }
+                                      ],
+                                      "id": "e449038e-f61b-4a94-986a-210d5e502fcd",
+                                      "step": "if"
+                                    }
+                                  ],
+                                  "id": "0d09f9eb-57cc-4657-9a80-2135df0db3f3",
+                                  "step": "wt-cash-equal"
+                                }
+                              ],
+                              "rhs-fn": "moving-average-price",
+                              "is-else-condition?": false,
+                              "lhs-fn": "moving-average-price",
+                              "rhs-window-days": "252",
+                              "lhs-window-days": "100",
+                              "lhs-val": "DBC",
+                              "id": "d592d2f4-0e4e-4cd3-b7e4-6c1f6f845cd4",
+                              "comparator": "gt",
+                              "rhs-val": "DBC",
+                              "step": "if-child"
+                            },
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "select?": true,
+                                      "children": [
+                                        {
+                                          "name": "SPDR Gold Shares",
+                                          "ticker": "GLD",
+                                          "has_marketcap": false,
+                                          "id": "6131d316-c921-492d-89db-d21caa9b0112",
+                                          "exchange": "ARCX",
+                                          "price": 181.63,
+                                          "step": "asset",
+                                          "dollar_volume": 1594547206.48
+                                        },
+                                        {
+                                          "name": "United States Copper Index Fund",
+                                          "ticker": "CPER",
+                                          "has_marketcap": false,
+                                          "id": "893aaf0c-ac90-4158-99a7-c827d41f3564",
+                                          "exchange": "ARCX",
+                                          "price": 23.87,
+                                          "step": "asset",
+                                          "dollar_volume": 2610017.41
+                                        },
+                                        {
+                                          "name": "iShares Global Timber & Forestry ETF",
+                                          "ticker": "WOOD",
+                                          "has_marketcap": false,
+                                          "id": "bb0d8d6a-984c-43fe-b05d-ab868c0e61f5",
+                                          "exchange": "XNAS",
+                                          "price": 73.15,
+                                          "step": "asset",
+                                          "dollar_volume": 640428.25
+                                        },
+                                        {
+                                          "name": "Invesco DB Commodity Index Tracking Fund",
+                                          "ticker": "DBC",
+                                          "has_marketcap": false,
+                                          "id": "9055a17a-46fa-4cee-90ea-dd5bd301061f",
+                                          "exchange": "ARCX",
+                                          "price": 23.47,
+                                          "step": "asset",
+                                          "dollar_volume": 29392537.15
+                                        },
+                                        {
+                                          "name": "First Trust Natural Gas ETF",
+                                          "ticker": "FCG",
+                                          "has_marketcap": false,
+                                          "id": "4ec69258-f478-444b-a5e3-4fbb1992d247",
+                                          "exchange": "ARCX",
+                                          "price": 23.26,
+                                          "step": "asset",
+                                          "dollar_volume": 4008232.9800000004
+                                        },
+                                        {
+                                          "name": "Invesco DB Oil Fund",
+                                          "ticker": "DBO",
+                                          "has_marketcap": false,
+                                          "id": "c4862eb9-e660-4b48-ab23-e18d8c3a40eb",
+                                          "exchange": "ARCX",
+                                          "price": 14.24,
+                                          "step": "asset",
+                                          "dollar_volume": 4898859.04
+                                        },
+                                        {
+                                          "name": "Invesco DB Agriculture Fund",
+                                          "ticker": "DBA",
+                                          "has_marketcap": false,
+                                          "id": "5bdf2064-2e9a-44f6-a7c8-9145abf6a371",
+                                          "exchange": "ARCX",
+                                          "price": 21.99,
+                                          "step": "asset",
+                                          "dollar_volume": 11743627.559999999
+                                        },
+                                        {
+                                          "name": "iShares Silver Trust",
+                                          "ticker": "SLV",
+                                          "has_marketcap": false,
+                                          "id": "ec15a154-2961-4568-96c8-1648164ec6fc",
+                                          "exchange": "ARCX",
+                                          "price": 22.18,
+                                          "step": "asset",
+                                          "dollar_volume": 243405959.42
+                                        },
+                                        {
+                                          "name": "SPDR S&P Metals & Mining ETF",
+                                          "ticker": "XME",
+                                          "has_marketcap": false,
+                                          "id": "c3ff126e-492e-4f63-8b8b-ede3bacfcd42",
+                                          "exchange": "ARCX",
+                                          "price": 49.71,
+                                          "step": "asset",
+                                          "dollar_volume": 190225157.58
+                                        },
+                                        {
+                                          "name": "ProShares Short 7-10 Year Treasury",
+                                          "ticker": "TBX",
+                                          "has_marketcap": false,
+                                          "id": "386d3909-b3f2-4528-8fd5-765ee194f755",
+                                          "exchange": "ARCX",
+                                          "price": 28.735,
+                                          "step": "asset",
+                                          "dollar_volume": 280970.83
+                                        },
+                                        {
+                                          "name": "iShares 7-10 Year Treasury Bond ETF",
+                                          "ticker": "IEF",
+                                          "has_marketcap": false,
+                                          "id": "4f30d412-bf41-4a86-8851-fefefbd45021",
+                                          "exchange": "XNAS",
+                                          "price": 96.87,
+                                          "step": "asset",
+                                          "dollar_volume": 633343422.12
+                                        },
+                                        {
+                                          "name": "Consumer Staples Select Sector SPDR Fund",
+                                          "ticker": "XLP",
+                                          "has_marketcap": false,
+                                          "id": "87504b18-93f6-4632-af5c-922fc2152a57",
+                                          "exchange": "ARCX",
+                                          "price": 74.67,
+                                          "step": "asset",
+                                          "dollar_volume": 946290744.57
+                                        }
+                                      ],
+                                      "select-fn": "top",
+                                      "select-n": "2",
+                                      "sort-by-fn": "moving-average-return",
+                                      "sort-by-window-days": "252",
+                                      "weight": {
+                                        "num": 60,
+                                        "den": 100
+                                      },
+                                      "id": "4ec85734-0579-4e91-8738-41a25a29baf1",
+                                      "sort-by?": true,
+                                      "step": "filter"
+                                    }
+                                  ],
+                                  "id": "0419d3f7-9947-48bd-a5aa-ddff5ecf049b",
+                                  "step": "wt-cash-equal"
+                                }
+                              ],
+                              "is-else-condition?": true,
+                              "id": "6d3a910d-aa25-4aee-8ad0-9e3cc56aa1ff",
+                              "step": "if-child"
+                            }
+                          ],
+                          "id": "fa136ec0-3b52-4f10-8c7b-2083a25c37e6",
+                          "step": "if"
+                        }
+                      ],
+                      "id": "5a2c57f9-2226-4b39-9728-3031a2cc9010",
+                      "step": "wt-cash-equal"
+                    }
+                  ],
+                  "name": "Commodities Macro Momentum V2",
+                  "id": "e2eeac69-d54f-4036-b32e-cfe44c795f08",
+                  "step": "group",
+                  "collapsed?": true
+                }
+              ],
+              "id": "710eb5c8-88c9-4af2-9413-7fa5bebdc0c7",
+              "step": "wt-cash-equal"
+            }
+          ],
+          "name": "Commodities Macro Momentum",
+          "id": "1341ed6a-a120-4ae5-99b0-d0b0feba4be6",
+          "step": "group",
+          "collapsed?": true
+        }
+      ]
+    }
+  ]
+}

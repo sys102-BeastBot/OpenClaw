@@ -1,0 +1,658 @@
+{
+  "id": "a7761c3e-cc19-4756-b916-1cdbc0c43264",
+  "step": "root",
+  "name": "Bonds",
+  "description": "",
+  "rebalance": "daily",
+  "children": [
+    {
+      "id": "ff7b1607-e263-4f0b-8060-7befaa507908",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "name": "Direxion Daily 20+ Year Treasury Bull 3X Shares",
+                                  "ticker": "TMF",
+                                  "id": "d9ec738f-d659-4858-956b-1510416e5ba2",
+                                  "exchange": "ARCX",
+                                  "step": "asset"
+                                }
+                              ],
+                              "lhs-fn-params": {
+                                "window": 10
+                              },
+                              "is-else-condition?": false,
+                              "rhs-fixed-value?": true,
+                              "lhs-fn": "relative-strength-index",
+                              "lhs-val": "TMF",
+                              "id": "52ef22e2-3af2-40b0-bbc5-e7030d71cc22",
+                              "comparator": "lt",
+                              "rhs-val": "32",
+                              "step": "if-child",
+                              "collapsed?": false
+                            },
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [
+                                                                {
+                                                                  "children": [
+                                                                    {
+                                                                      "name": "iShares Short Treasury Bond ETF",
+                                                                      "ticker": "SHV",
+                                                                      "id": "41783e6b-1d9e-4f85-a771-d065492f2b1b",
+                                                                      "exchange": "XNAS",
+                                                                      "step": "asset"
+                                                                    }
+                                                                  ],
+                                                                  "lhs-fn-params": {
+                                                                    "window": 10
+                                                                  },
+                                                                  "is-else-condition?": false,
+                                                                  "rhs-fixed-value?": true,
+                                                                  "lhs-fn": "relative-strength-index",
+                                                                  "lhs-val": "TMV",
+                                                                  "id": "225e618e-5aad-43a5-85ef-43f2a8021a78",
+                                                                  "comparator": "gt",
+                                                                  "rhs-val": "71",
+                                                                  "step": "if-child"
+                                                                },
+                                                                {
+                                                                  "children": [
+                                                                    {
+                                                                      "children": [
+                                                                        {
+                                                                          "children": [
+                                                                            {
+                                                                              "children": [
+                                                                                {
+                                                                                  "name": "iShares 20+ Year Treasury Bond ETF",
+                                                                                  "ticker": "TLT",
+                                                                                  "id": "aca59977-9703-4bbb-a76d-c7f69bc50f24",
+                                                                                  "exchange": "XNAS",
+                                                                                  "step": "asset"
+                                                                                }
+                                                                              ],
+                                                                              "lhs-fn-params": {
+                                                                                "window": 60
+                                                                              },
+                                                                              "is-else-condition?": false,
+                                                                              "rhs-fixed-value?": true,
+                                                                              "lhs-fn": "relative-strength-index",
+                                                                              "lhs-val": "TMV",
+                                                                              "id": "8cc8dac2-5def-4658-aed8-1610922711c9",
+                                                                              "comparator": "gt",
+                                                                              "rhs-val": "59",
+                                                                              "step": "if-child"
+                                                                            },
+                                                                            {
+                                                                              "children": [
+                                                                                {
+                                                                                  "name": "Direxion Daily 20+ Year Treasury Bear 3x Shares",
+                                                                                  "ticker": "TMV",
+                                                                                  "id": "ee0cdc4d-84cb-47f6-aeab-c2e551ccf8da",
+                                                                                  "exchange": "ARCX",
+                                                                                  "step": "asset"
+                                                                                }
+                                                                              ],
+                                                                              "is-else-condition?": true,
+                                                                              "id": "0dd821c2-6375-40d6-a3c7-6695970d537f",
+                                                                              "step": "if-child"
+                                                                            }
+                                                                          ],
+                                                                          "id": "bfc34ccd-cde8-4ab7-bf0b-aaf8dd424e04",
+                                                                          "step": "if"
+                                                                        }
+                                                                      ],
+                                                                      "id": "d28d19c3-b5b6-4d7c-963e-f8fe83535597",
+                                                                      "step": "wt-cash-equal"
+                                                                    }
+                                                                  ],
+                                                                  "is-else-condition?": true,
+                                                                  "id": "3a80b67e-c26b-4a35-973e-c440a1a3f7ac",
+                                                                  "step": "if-child"
+                                                                }
+                                                              ],
+                                                              "id": "b991f8c0-46d5-4acf-9bfe-6f8772aa0cf9",
+                                                              "step": "if"
+                                                            }
+                                                          ],
+                                                          "id": "03e471ef-ad56-4ecc-a0b6-b1a8791430df",
+                                                          "step": "wt-cash-equal"
+                                                        }
+                                                      ],
+                                                      "lhs-fn-params": {},
+                                                      "rhs-fn": "moving-average-price",
+                                                      "is-else-condition?": false,
+                                                      "lhs-fn": "current-price",
+                                                      "lhs-val": "TMV",
+                                                      "id": "e2633dbf-8e71-41ec-8299-1fdbf4f307e7",
+                                                      "rhs-fn-params": {
+                                                        "window": 135
+                                                      },
+                                                      "comparator": "gt",
+                                                      "rhs-val": "TMV",
+                                                      "step": "if-child"
+                                                    },
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "name": "Vanguard Total Bond Market ETF",
+                                                          "ticker": "BND",
+                                                          "id": "bc885115-0836-4013-82d4-325417c58042",
+                                                          "exchange": "XNAS",
+                                                          "step": "asset"
+                                                        }
+                                                      ],
+                                                      "is-else-condition?": true,
+                                                      "id": "e5435443-2729-4855-8739-fc310ae8a25f",
+                                                      "step": "if-child"
+                                                    }
+                                                  ],
+                                                  "id": "868ac46c-475e-4305-a879-c1896136ac61",
+                                                  "step": "if"
+                                                }
+                                              ],
+                                              "id": "e4b41a0f-9565-4318-ada8-0cba7d965816",
+                                              "step": "wt-cash-equal"
+                                            }
+                                          ],
+                                          "lhs-fn-params": {
+                                            "window": 15
+                                          },
+                                          "rhs-fn": "moving-average-price",
+                                          "is-else-condition?": false,
+                                          "lhs-fn": "moving-average-price",
+                                          "lhs-val": "TMV",
+                                          "id": "3a786739-3128-4014-b3b7-f694e9fe847c",
+                                          "rhs-fn-params": {
+                                            "window": 50
+                                          },
+                                          "comparator": "gt",
+                                          "rhs-val": "TMV",
+                                          "step": "if-child"
+                                        },
+                                        {
+                                          "children": [
+                                            {
+                                              "name": "Vanguard Total Bond Market ETF",
+                                              "ticker": "BND",
+                                              "id": "066d6429-e727-4605-9c9b-04e720361ee4",
+                                              "exchange": "XNAS",
+                                              "step": "asset"
+                                            }
+                                          ],
+                                          "is-else-condition?": true,
+                                          "id": "906c295a-f0b6-4b3d-b5f8-afb1fc974f36",
+                                          "step": "if-child"
+                                        }
+                                      ],
+                                      "weight": {
+                                        "num": 100,
+                                        "den": 100
+                                      },
+                                      "id": "4ba6582a-4151-423c-a1be-98e68e6a3373",
+                                      "step": "if"
+                                    }
+                                  ],
+                                  "id": "5e45efdd-1815-4e76-b30e-ed9ff26ce593",
+                                  "step": "wt-cash-equal"
+                                }
+                              ],
+                              "is-else-condition?": true,
+                              "id": "a140bf97-0041-4643-81a9-a9aeaa714c56",
+                              "step": "if-child",
+                              "collapsed?": false
+                            }
+                          ],
+                          "weight": {
+                            "num": 100,
+                            "den": 100
+                          },
+                          "id": "a00e2684-70dc-4770-a740-e0d3ba895d1d",
+                          "step": "if"
+                        }
+                      ],
+                      "id": "5b3755af-981d-4fff-a653-98db86a5b358",
+                      "step": "wt-cash-equal"
+                    }
+                  ],
+                  "name": "TMV Momentum",
+                  "weight": {
+                    "num": "12.44",
+                    "den": 100
+                  },
+                  "id": "eadbdf74-0d2d-42d1-ab0f-324bc60b6c7a",
+                  "step": "group",
+                  "collapsed?": true
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "name": "ProShares VIX Short-Term Futures ETF",
+                                  "ticker": "VIXY",
+                                  "id": "60fcdfee-05d3-4454-8091-ff6030e602a6",
+                                  "exchange": "BATS",
+                                  "step": "asset"
+                                }
+                              ],
+                              "is-else-condition?": false,
+                              "rhs-fixed-value?": true,
+                              "lhs-fn": "relative-strength-index",
+                              "lhs-window-days": "10",
+                              "lhs-val": "QQQ",
+                              "id": "c16496b3-6a2a-4e23-ad95-41226ab329e7",
+                              "comparator": "gt",
+                              "rhs-val": "80",
+                              "step": "if-child",
+                              "collapsed?": false
+                            },
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "name": "ProShares VIX Short-Term Futures ETF",
+                                              "ticker": "VIXY",
+                                              "id": "8e605229-f01b-4fb9-926c-d163f900d70f",
+                                              "exchange": "BATS",
+                                              "step": "asset"
+                                            }
+                                          ],
+                                          "is-else-condition?": false,
+                                          "rhs-fixed-value?": true,
+                                          "lhs-fn": "relative-strength-index",
+                                          "lhs-window-days": "10",
+                                          "lhs-val": "SPY",
+                                          "id": "183c2b19-f0f0-4ffe-a4b8-cce650e23b74",
+                                          "comparator": "gt",
+                                          "rhs-val": "80",
+                                          "step": "if-child"
+                                        },
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "name": "Direxion Daily 20+ Year Treasury Bull 3X Shares",
+                                                          "ticker": "TMF",
+                                                          "id": "db4b3e31-7ac2-43ab-9d69-85ef924904f1",
+                                                          "exchange": "ARCX",
+                                                          "step": "asset"
+                                                        }
+                                                      ],
+                                                      "lhs-fn-params": {
+                                                        "window": 10
+                                                      },
+                                                      "is-else-condition?": false,
+                                                      "rhs-fixed-value?": true,
+                                                      "lhs-fn": "relative-strength-index",
+                                                      "lhs-val": "TMF",
+                                                      "id": "001565d4-9253-4be1-8ad0-86ba3364431d",
+                                                      "comparator": "lt",
+                                                      "rhs-val": "32",
+                                                      "step": "if-child",
+                                                      "collapsed?": false
+                                                    },
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [
+                                                                {
+                                                                  "children": [
+                                                                    {
+                                                                      "children": [
+                                                                        {
+                                                                          "children": [
+                                                                            {
+                                                                              "children": [
+                                                                                {
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "name": "iShares Short Treasury Bond ETF",
+                                                                                              "ticker": "SHV",
+                                                                                              "id": "4fb6303e-f365-4151-9e6b-2453bf2b8644",
+                                                                                              "exchange": "XNAS",
+                                                                                              "step": "asset"
+                                                                                            }
+                                                                                          ],
+                                                                                          "lhs-fn-params": {
+                                                                                            "window": 10
+                                                                                          },
+                                                                                          "is-else-condition?": false,
+                                                                                          "rhs-fixed-value?": true,
+                                                                                          "lhs-fn": "relative-strength-index",
+                                                                                          "lhs-val": "TMF",
+                                                                                          "id": "a03fa432-c098-4857-b0bb-a86444203f94",
+                                                                                          "comparator": "gt",
+                                                                                          "rhs-val": "72",
+                                                                                          "step": "if-child"
+                                                                                        },
+                                                                                        {
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "name": "Direxion Daily 20+ Year Treasury Bull 3X Shares",
+                                                                                                  "ticker": "TMF",
+                                                                                                  "id": "a8d6db1b-1bcc-47ea-8109-f3f08dd06260",
+                                                                                                  "exchange": "ARCX",
+                                                                                                  "step": "asset"
+                                                                                                }
+                                                                                              ],
+                                                                                              "id": "95892c10-5443-49cd-be26-9612af6ace9c",
+                                                                                              "step": "wt-cash-equal"
+                                                                                            }
+                                                                                          ],
+                                                                                          "is-else-condition?": true,
+                                                                                          "id": "d4743c56-1f32-42df-83fb-b4927f335efc",
+                                                                                          "step": "if-child"
+                                                                                        }
+                                                                                      ],
+                                                                                      "id": "c3f5bf5b-d12d-4be8-896a-14c6bce2f9c4",
+                                                                                      "step": "if"
+                                                                                    }
+                                                                                  ],
+                                                                                  "id": "5698a121-2f82-4b91-9c3d-c0e8305fee2e",
+                                                                                  "step": "wt-cash-equal"
+                                                                                }
+                                                                              ],
+                                                                              "lhs-fn-params": {
+                                                                                "window": 8
+                                                                              },
+                                                                              "rhs-fn": "moving-average-price",
+                                                                              "is-else-condition?": false,
+                                                                              "lhs-fn": "exponential-moving-average-price",
+                                                                              "lhs-val": "TMF",
+                                                                              "id": "e89a8c1e-fdc3-4fb6-a53c-8542660431ce",
+                                                                              "rhs-fn-params": {
+                                                                                "window": 10
+                                                                              },
+                                                                              "comparator": "lt",
+                                                                              "rhs-val": "TMF",
+                                                                              "step": "if-child"
+                                                                            },
+                                                                            {
+                                                                              "children": [
+                                                                                {
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "name": "Direxion Daily Technology Bull 3x Shares",
+                                                                                              "ticker": "TECL",
+                                                                                              "id": "e32b0fb3-db39-490a-bc94-c5fd6e947ecb",
+                                                                                              "exchange": "ARCX",
+                                                                                              "step": "asset"
+                                                                                            }
+                                                                                          ],
+                                                                                          "lhs-fn-params": {
+                                                                                            "window": 10
+                                                                                          },
+                                                                                          "is-else-condition?": false,
+                                                                                          "rhs-fixed-value?": true,
+                                                                                          "lhs-fn": "relative-strength-index",
+                                                                                          "lhs-val": "TQQQ",
+                                                                                          "id": "e1d69b6c-80de-45e3-96a6-e8684cb496de",
+                                                                                          "comparator": "lt",
+                                                                                          "rhs-val": "31",
+                                                                                          "step": "if-child"
+                                                                                        },
+                                                                                        {
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "name": "iShares Short Treasury Bond ETF",
+                                                                                                  "ticker": "SHV",
+                                                                                                  "id": "a5db71aa-e4bf-4823-a14b-431587223902",
+                                                                                                  "exchange": "XNAS",
+                                                                                                  "step": "asset"
+                                                                                                }
+                                                                                              ],
+                                                                                              "id": "7f22ca2e-81c6-4f8f-a1c1-861656f25b40",
+                                                                                              "step": "wt-cash-equal"
+                                                                                            }
+                                                                                          ],
+                                                                                          "is-else-condition?": true,
+                                                                                          "id": "c1e42d90-e139-4df6-a545-52e7a29499ba",
+                                                                                          "step": "if-child"
+                                                                                        }
+                                                                                      ],
+                                                                                      "weight": {
+                                                                                        "num": 100,
+                                                                                        "den": 100
+                                                                                      },
+                                                                                      "id": "91ace9a8-1316-4bbb-ac1a-b4fb44af365b",
+                                                                                      "step": "if"
+                                                                                    }
+                                                                                  ],
+                                                                                  "id": "fa1b66a0-41df-420f-9d6c-93dea4aed6ae",
+                                                                                  "step": "wt-cash-equal"
+                                                                                }
+                                                                              ],
+                                                                              "is-else-condition?": true,
+                                                                              "id": "45109a97-9040-417c-b1f4-01ebd66152ee",
+                                                                              "step": "if-child"
+                                                                            }
+                                                                          ],
+                                                                          "id": "fbc01d62-e848-4aa2-a31d-0c86f6108dc8",
+                                                                          "step": "if"
+                                                                        }
+                                                                      ],
+                                                                      "id": "d19e4ea0-e442-4e2f-aed4-2f32d1ab5d68",
+                                                                      "step": "wt-cash-equal"
+                                                                    }
+                                                                  ],
+                                                                  "lhs-fn-params": {
+                                                                    "window": 30
+                                                                  },
+                                                                  "rhs-fn": "relative-strength-index",
+                                                                  "is-else-condition?": false,
+                                                                  "lhs-fn": "relative-strength-index",
+                                                                  "lhs-val": "BIL",
+                                                                  "id": "f842f882-380d-499f-8552-03d63c3f29d3",
+                                                                  "rhs-fn-params": {
+                                                                    "window": 20
+                                                                  },
+                                                                  "comparator": "lt",
+                                                                  "rhs-val": "TLT",
+                                                                  "step": "if-child"
+                                                                },
+                                                                {
+                                                                  "children": [
+                                                                    {
+                                                                      "children": [
+                                                                        {
+                                                                          "children": [
+                                                                            {
+                                                                              "children": [
+                                                                                {
+                                                                                  "name": "Direxion Daily Technology Bull 3x Shares",
+                                                                                  "ticker": "TECL",
+                                                                                  "id": "2cb0ed37-b0de-442f-ab2a-b980ee9a7137",
+                                                                                  "exchange": "ARCX",
+                                                                                  "step": "asset"
+                                                                                }
+                                                                              ],
+                                                                              "lhs-fn-params": {
+                                                                                "window": 10
+                                                                              },
+                                                                              "is-else-condition?": false,
+                                                                              "rhs-fixed-value?": true,
+                                                                              "lhs-fn": "relative-strength-index",
+                                                                              "lhs-val": "TQQQ",
+                                                                              "id": "b3a6e774-cbeb-484e-9ae0-d2cad70f67cc",
+                                                                              "comparator": "lt",
+                                                                              "rhs-val": "31",
+                                                                              "step": "if-child"
+                                                                            },
+                                                                            {
+                                                                              "children": [
+                                                                                {
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "name": "iShares Short Treasury Bond ETF",
+                                                                                      "ticker": "SHV",
+                                                                                      "id": "9b383925-448a-48be-801b-add625638c18",
+                                                                                      "exchange": "XNAS",
+                                                                                      "step": "asset"
+                                                                                    }
+                                                                                  ],
+                                                                                  "id": "cd6835f2-f30f-4c48-9ac1-ec92841b670d",
+                                                                                  "step": "wt-cash-equal"
+                                                                                }
+                                                                              ],
+                                                                              "is-else-condition?": true,
+                                                                              "id": "ce4aa027-97ca-4a41-9fe3-237b1d2754b1",
+                                                                              "step": "if-child"
+                                                                            }
+                                                                          ],
+                                                                          "weight": {
+                                                                            "num": 100,
+                                                                            "den": 100
+                                                                          },
+                                                                          "id": "37d18216-dfd1-4841-8a2f-999268139fd4",
+                                                                          "step": "if"
+                                                                        }
+                                                                      ],
+                                                                      "id": "ba810082-768f-48ec-995c-f36a5ac51691",
+                                                                      "step": "wt-cash-equal"
+                                                                    }
+                                                                  ],
+                                                                  "is-else-condition?": true,
+                                                                  "id": "b2c98664-6d44-4403-987a-ba0438dc828a",
+                                                                  "step": "if-child"
+                                                                }
+                                                              ],
+                                                              "weight": {
+                                                                "num": 100,
+                                                                "den": 100
+                                                              },
+                                                              "id": "b00f7b07-4120-4814-8659-6ff2349ac2dc",
+                                                              "step": "if"
+                                                            }
+                                                          ],
+                                                          "id": "c14e9736-1b2e-4f81-874d-346c322f9891",
+                                                          "step": "wt-cash-equal"
+                                                        }
+                                                      ],
+                                                      "is-else-condition?": true,
+                                                      "id": "46981628-ec80-4c55-9207-0b6fdda1b608",
+                                                      "step": "if-child",
+                                                      "collapsed?": false
+                                                    }
+                                                  ],
+                                                  "weight": {
+                                                    "num": 100,
+                                                    "den": 100
+                                                  },
+                                                  "id": "d1a27e85-4809-4234-94bd-dc15bb9f05e0",
+                                                  "step": "if"
+                                                }
+                                              ],
+                                              "id": "127ac5d8-da87-430f-926a-80c9bef6d973",
+                                              "step": "wt-cash-equal"
+                                            }
+                                          ],
+                                          "is-else-condition?": true,
+                                          "id": "ca60c283-f709-4ca4-b54f-4dd0f382e389",
+                                          "step": "if-child"
+                                        }
+                                      ],
+                                      "id": "833d85f0-2ca2-4a7f-bc49-3a3c9c60bd5a",
+                                      "step": "if"
+                                    }
+                                  ],
+                                  "id": "a74b8325-7659-4900-97ab-0365167a9864",
+                                  "step": "wt-cash-equal"
+                                }
+                              ],
+                              "is-else-condition?": true,
+                              "id": "17e8879f-8a26-45ea-980c-088439f362c8",
+                              "step": "if-child",
+                              "collapsed?": false
+                            }
+                          ],
+                          "weight": {
+                            "num": 100,
+                            "den": 100
+                          },
+                          "id": "4d34516a-3c9f-4724-80f0-d0e170f61cca",
+                          "step": "if"
+                        }
+                      ],
+                      "id": "46945a0f-043c-43f9-a827-9395f3a345e5",
+                      "step": "wt-cash-specified"
+                    }
+                  ],
+                  "name": "TMF Momentum",
+                  "weight": {
+                    "num": 6,
+                    "den": 100
+                  },
+                  "id": "5f107638-6052-448d-a83b-a33c4083013b",
+                  "step": "group",
+                  "collapsed?": true
+                }
+              ],
+              "id": "79a672ca-e66d-4453-a860-084fafaccf66",
+              "step": "wt-cash-equal"
+            }
+          ],
+          "name": "Bonds",
+          "id": "c138c95a-415b-448b-9ced-e0e103430db1",
+          "step": "group",
+          "collapsed?": true
+        }
+      ]
+    }
+  ]
+}

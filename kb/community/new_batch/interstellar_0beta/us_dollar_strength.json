@@ -1,0 +1,124 @@
+{
+  "id": "2d469709-987b-4f99-811c-8962e116dcf6",
+  "step": "root",
+  "name": "US Dollar Strength",
+  "description": "",
+  "rebalance": "daily",
+  "children": [
+    {
+      "id": "7c2a5d8a-55a7-4785-bc89-acb92f4f55a9",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "name": "iShares 20+ Year Treasury Bond ETF",
+                                          "ticker": "TLT",
+                                          "id": "94cc170a-ea50-47ea-a41d-224e6fd39cec",
+                                          "exchange": "XNAS",
+                                          "step": "asset"
+                                        }
+                                      ],
+                                      "id": "a52297f6-d3a3-4117-b778-73b29f81ec3e",
+                                      "step": "wt-cash-equal"
+                                    }
+                                  ],
+                                  "rhs-fn": "moving-average-price",
+                                  "is-else-condition?": false,
+                                  "rhs-fixed-value?": true,
+                                  "lhs-fn": "relative-strength-index",
+                                  "rhs-window-days": "200",
+                                  "lhs-window-days": "60",
+                                  "lhs-val": "SPY",
+                                  "id": "1f4bcec4-b825-47d0-969a-7428c9d980ee",
+                                  "comparator": "gt",
+                                  "rhs-val": "60",
+                                  "step": "if-child"
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "name": "Invesco DB US Dollar Index Bullish Fund",
+                                      "ticker": "UUP",
+                                      "id": "40f3e27c-3321-49ce-8fbb-80b8c9457eca",
+                                      "exchange": "ARCX",
+                                      "step": "asset"
+                                    }
+                                  ],
+                                  "is-else-condition?": true,
+                                  "id": "17712f99-504c-4421-a0da-d2b15994e1af",
+                                  "step": "if-child"
+                                }
+                              ],
+                              "id": "ea82fb31-c22c-4a9a-bb5c-8dae3cee9b50",
+                              "step": "if"
+                            }
+                          ],
+                          "id": "15d9978d-aaaf-4303-a176-55103e421a51",
+                          "step": "wt-cash-equal"
+                        }
+                      ],
+                      "rhs-fn": "moving-average-price",
+                      "is-else-condition?": false,
+                      "lhs-fn": "moving-average-price",
+                      "rhs-window-days": "210",
+                      "lhs-window-days": "21",
+                      "lhs-val": "UUP",
+                      "id": "2c57e769-9b34-460f-a98d-55bde7b011f6",
+                      "comparator": "gt",
+                      "rhs-val": "UUP",
+                      "step": "if-child"
+                    },
+                    {
+                      "children": [
+                        {
+                          "name": "iShares 1-3 Year Treasury Bond ETF",
+                          "ticker": "SHY",
+                          "has_marketcap": false,
+                          "id": "ad9c2f04-9fbe-4e15-84a7-e6689299c9a0",
+                          "exchange": "XNAS",
+                          "price": 82.38,
+                          "step": "asset",
+                          "dollar_volume": 620776879.02
+                        }
+                      ],
+                      "is-else-condition?": true,
+                      "id": "100407fd-fda0-4313-bf9b-378451d072d3",
+                      "step": "if-child"
+                    }
+                  ],
+                  "weight": {
+                    "num": "10",
+                    "den": 100
+                  },
+                  "id": "91c353f8-1ebb-453e-ba92-0b6cb4b99121",
+                  "step": "if"
+                }
+              ],
+              "id": "77ad75f8-b709-42ec-ade5-5d43ca6b4e5a",
+              "step": "wt-cash-equal"
+            }
+          ],
+          "name": "US Dollar Strength",
+          "id": "1aed2f9f-6f7d-4bd0-b5c8-0b2a1b20444a",
+          "step": "group",
+          "collapsed?": true
+        }
+      ]
+    }
+  ]
+}

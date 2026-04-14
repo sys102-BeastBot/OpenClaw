@@ -1,0 +1,298 @@
+{
+  "id": "f8d0198e-74e8-47f3-b705-6b46fb0b3480",
+  "step": "root",
+  "name": "TINA",
+  "description": "",
+  "rebalance": "daily",
+  "children": [
+    {
+      "id": "982b8f80-6de5-4f04-aaaf-9048b920362e",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "name": "ProShares Short QQQ",
+                                      "ticker": "PSQ",
+                                      "has_marketcap": false,
+                                      "id": "c2f7e0ea-6546-4776-930f-000e5a2eeffa",
+                                      "exchange": "ARCX",
+                                      "price": 13.94,
+                                      "step": "asset",
+                                      "dollar_volume": 162860378.76
+                                    }
+                                  ],
+                                  "is-else-condition?": false,
+                                  "rhs-fixed-value?": true,
+                                  "lhs-fn": "cumulative-return",
+                                  "lhs-window-days": "10",
+                                  "lhs-val": "QQQ",
+                                  "id": "542c9284-c0fe-4dd2-bb12-ced1c077cf59",
+                                  "comparator": "gt",
+                                  "rhs-val": "5.5",
+                                  "step": "if-child"
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "name": "ProShares UltraPro QQQ",
+                                                  "ticker": "TQQQ",
+                                                  "has_marketcap": false,
+                                                  "id": "2638a2df-4594-4710-ac8d-fca06672492a",
+                                                  "exchange": "XNAS",
+                                                  "price": 25.29,
+                                                  "step": "asset",
+                                                  "dollar_volume": 3438140448.06
+                                                }
+                                              ],
+                                              "is-else-condition?": false,
+                                              "rhs-fixed-value?": true,
+                                              "lhs-fn": "cumulative-return",
+                                              "lhs-window-days": "62",
+                                              "lhs-val": "TQQQ",
+                                              "id": "95b5fa0a-62b6-4803-ab6b-766a00bfb780",
+                                              "comparator": "lt",
+                                              "rhs-val": "-33",
+                                              "step": "if-child"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "name": "iShares Short Treasury Bond ETF",
+                                                      "ticker": "SHV",
+                                                      "id": "1092a754-e62e-412d-9f64-ef5921ab3c3d",
+                                                      "exchange": "XNAS",
+                                                      "step": "asset"
+                                                    }
+                                                  ],
+                                                  "id": "e83a637b-0da0-4173-ae76-10a83de178c0",
+                                                  "step": "wt-cash-equal"
+                                                }
+                                              ],
+                                              "is-else-condition?": true,
+                                              "id": "6781c069-3ae6-49a2-bee4-5f0333c6f149",
+                                              "step": "if-child"
+                                            }
+                                          ],
+                                          "weight": {
+                                            "num": 100,
+                                            "den": 100
+                                          },
+                                          "id": "276231a0-1802-496f-b79a-19727d23866f",
+                                          "step": "if"
+                                        }
+                                      ],
+                                      "id": "9f3129a1-6afe-4f1f-812c-fcd5036b4977",
+                                      "step": "wt-cash-equal"
+                                    }
+                                  ],
+                                  "is-else-condition?": true,
+                                  "id": "b4a2704e-9ba1-45b1-a96b-7f9d3589973c",
+                                  "step": "if-child"
+                                }
+                              ],
+                              "id": "79fcc6d6-8580-44af-a4a6-beaf26454f9a",
+                              "step": "if"
+                            }
+                          ],
+                          "id": "1af8058d-901e-4db7-9104-53bea74c0120",
+                          "step": "wt-cash-equal",
+                          "collapsed?": false
+                        }
+                      ],
+                      "rhs-fn": "moving-average-price",
+                      "is-else-condition?": false,
+                      "lhs-fn": "current-price",
+                      "lhs-window-days": "3",
+                      "lhs-val": "QQQ",
+                      "id": "0dc7e9c3-6d72-4fd0-bc29-e66e173d00f6",
+                      "rhs-fn-params": {
+                        "window": 20
+                      },
+                      "comparator": "gt",
+                      "rhs-val": "QQQ",
+                      "step": "if-child",
+                      "collapsed?": false
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "name": "Direxion Daily Technology Bull 3x Shares",
+                                      "ticker": "TECL",
+                                      "has_marketcap": false,
+                                      "id": "ccdb8f35-a4d5-49b9-a6e2-98049167efba",
+                                      "exchange": "ARCX",
+                                      "price": 26.37,
+                                      "step": "asset",
+                                      "dollar_volume": 58345470.9
+                                    }
+                                  ],
+                                  "is-else-condition?": false,
+                                  "rhs-fixed-value?": true,
+                                  "lhs-fn": "relative-strength-index",
+                                  "lhs-window-days": "10",
+                                  "lhs-val": "QQQ",
+                                  "id": "56829c31-3df0-40f5-b944-ce51f83b57d5",
+                                  "comparator": "lt",
+                                  "rhs-val": "30",
+                                  "step": "if-child"
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "name": "ProShares UltraPro QQQ",
+                                                  "ticker": "TQQQ",
+                                                  "has_marketcap": false,
+                                                  "id": "125fa383-86f6-493e-aa8a-ee70035b87b4",
+                                                  "exchange": "XNAS",
+                                                  "price": 25.29,
+                                                  "step": "asset",
+                                                  "dollar_volume": 3438140448.06
+                                                }
+                                              ],
+                                              "is-else-condition?": false,
+                                              "rhs-fixed-value?": true,
+                                              "lhs-fn": "cumulative-return",
+                                              "lhs-window-days": "62",
+                                              "lhs-val": "TQQQ",
+                                              "id": "4a06a92a-f310-4623-b815-7a96a2a679c6",
+                                              "comparator": "lt",
+                                              "rhs-val": "-33",
+                                              "step": "if-child"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "select?": true,
+                                                      "children": [
+                                                        {
+                                                          "name": "ProShares Short QQQ",
+                                                          "ticker": "PSQ",
+                                                          "has_marketcap": false,
+                                                          "id": "514b52f8-7c6a-43af-a1de-7367170a07f9",
+                                                          "exchange": "ARCX",
+                                                          "price": 12.26,
+                                                          "step": "asset",
+                                                          "dollar_volume": 326323402.42
+                                                        },
+                                                        {
+                                                          "name": "Vanguard Short-Term Bond ETF",
+                                                          "ticker": "BSV",
+                                                          "id": "89582398-004c-4714-a9be-3a43b660c5f2",
+                                                          "exchange": "ARCX",
+                                                          "step": "asset"
+                                                        },
+                                                        {
+                                                          "name": "iShares 20+ Year Treasury Bond ETF",
+                                                          "ticker": "TLT",
+                                                          "id": "48fd9088-e820-4c44-a5ef-605dbd307498",
+                                                          "exchange": "XNAS",
+                                                          "step": "asset"
+                                                        }
+                                                      ],
+                                                      "select-fn": "top",
+                                                      "select-n": "1",
+                                                      "sort-by-fn": "relative-strength-index",
+                                                      "id": "c42e4517-ecb8-431a-857b-40d99ae6299d",
+                                                      "sort-by?": true,
+                                                      "step": "filter",
+                                                      "sort-by-fn-params": {
+                                                        "window": 20
+                                                      }
+                                                    }
+                                                  ],
+                                                  "id": "7bcc69bb-afcc-42ed-abc9-9515dcb7de3b",
+                                                  "step": "wt-cash-equal"
+                                                }
+                                              ],
+                                              "is-else-condition?": true,
+                                              "id": "5799f8b4-90af-4750-b8a0-3fbe56ae757c",
+                                              "step": "if-child"
+                                            }
+                                          ],
+                                          "weight": {
+                                            "num": 100,
+                                            "den": 100
+                                          },
+                                          "id": "faf3cfce-c3f6-4ac8-8be4-5c80ae148456",
+                                          "step": "if"
+                                        }
+                                      ],
+                                      "id": "8f87d637-f7a3-40e5-9126-2da57ee3385e",
+                                      "step": "wt-cash-equal"
+                                    }
+                                  ],
+                                  "is-else-condition?": true,
+                                  "id": "335eeb79-bd1e-4499-8b9a-bbc2d75c0148",
+                                  "step": "if-child"
+                                }
+                              ],
+                              "id": "2794ad86-d1ef-431e-a80d-0b2487ab52ec",
+                              "step": "if"
+                            }
+                          ],
+                          "id": "9fd16dd9-0914-43d8-90ca-d68bb953cfc9",
+                          "step": "wt-cash-equal"
+                        }
+                      ],
+                      "is-else-condition?": true,
+                      "id": "ae04afe1-5532-4b8b-8e22-e46dca5c2811",
+                      "step": "if-child",
+                      "collapsed?": false
+                    }
+                  ],
+                  "weight": {
+                    "num": 100,
+                    "den": 100
+                  },
+                  "id": "6d8df63e-163e-41b0-8396-fb1ebf10bcbb",
+                  "step": "if"
+                }
+              ],
+              "id": "09b3a7f8-8ee6-40c4-8c5c-70000f392df6",
+              "step": "wt-cash-equal"
+            }
+          ],
+          "name": "TINA",
+          "id": "2c7f8aca-0020-4dc8-9df2-dbb014bb0b2a",
+          "step": "group",
+          "collapsed?": true
+        }
+      ]
+    }
+  ]
+}

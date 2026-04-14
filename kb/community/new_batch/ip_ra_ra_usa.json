@@ -1,0 +1,291 @@
+{
+  "id": "7aadf0fa-9c41-4ea1-857c-249ada143666",
+  "step": "root",
+  "name": "Ra Ra USA",
+  "description": "",
+  "rebalance": "daily",
+  "children": [
+    {
+      "id": "31220e6d-3e0a-4af4-9114-62be89b1beb2",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "name": "AMKOR Technology Inc.",
+                      "ticker": "AMKR",
+                      "id": "6870cdf0-92da-4eac-af6f-c42385aa7ad4",
+                      "exchange": "XNAS",
+                      "step": "asset"
+                    },
+                    {
+                      "name": "Albemarle Corp.",
+                      "ticker": "ALB",
+                      "id": "39e47f75-fd9e-4411-8137-34ae8a223ca1",
+                      "exchange": "XNYS",
+                      "step": "asset"
+                    },
+                    {
+                      "name": "Intel Corp.",
+                      "ticker": "INTC",
+                      "id": "65b58783-8e6f-4884-9de5-b967ea197e52",
+                      "exchange": "XNAS",
+                      "step": "asset"
+                    },
+                    {
+                      "name": "ON Semiconductor Corp.",
+                      "ticker": "ON",
+                      "id": "2e1833f7-4c65-4282-8dfd-a05c8addb7de",
+                      "exchange": "XNAS",
+                      "step": "asset"
+                    },
+                    {
+                      "name": "Texas Instruments Inc.",
+                      "ticker": "TXN",
+                      "id": "59ae8685-2b61-42f7-bb8a-45f6deb478e3",
+                      "exchange": "XNAS",
+                      "step": "asset"
+                    },
+                    {
+                      "name": "Microchip Technology, Inc.",
+                      "ticker": "MCHP",
+                      "id": "24065e61-7637-4d75-82f0-dec7beb49683",
+                      "exchange": "XNAS",
+                      "step": "asset"
+                    },
+                    {
+                      "name": "Honeywell International Inc",
+                      "ticker": "HON",
+                      "id": "f25822bd-1465-4520-9207-0444bf7b7a3a",
+                      "exchange": "XNAS",
+                      "step": "asset"
+                    },
+                    {
+                      "name": "Howmet Aerospace Inc",
+                      "ticker": "HWM",
+                      "id": "e81ee287-1ac5-4806-af37-f8c8d6dd6b15",
+                      "exchange": "XNYS",
+                      "step": "asset"
+                    },
+                    {
+                      "name": "MP Materials Corporation",
+                      "ticker": "MP",
+                      "id": "bbb95951-3357-4695-8f09-e2fd953a4c48",
+                      "exchange": "XNYS",
+                      "step": "asset"
+                    },
+                    {
+                      "name": "GrafTech International Ltd.",
+                      "ticker": "EAF",
+                      "id": "2f9a08ff-e940-48a7-be90-3f17ec49d7f2",
+                      "exchange": "XNYS",
+                      "step": "asset"
+                    }
+                  ],
+                  "select-fn": "bottom",
+                  "select-n": "2",
+                  "sort-by-fn": "moving-average-return",
+                  "weight": {
+                    "num": "0",
+                    "den": 100
+                  },
+                  "id": "0834c8a7-82bb-4dec-ac8c-131a886ccad5",
+                  "step": "filter",
+                  "sort-by-fn-params": {
+                    "window": 3
+                  },
+                  "collapsed?": false
+                },
+                {
+                  "children": [
+                    {
+                      "name": "AMKOR Technology Inc.",
+                      "ticker": "AMKR",
+                      "id": "a4dfd165-b250-4dbb-a4c7-d73aadd7c1c1",
+                      "exchange": "XNAS",
+                      "step": "asset"
+                    },
+                    {
+                      "name": "Albemarle Corp.",
+                      "ticker": "ALB",
+                      "id": "df1f900c-7077-4d29-a66c-bffca475391b",
+                      "exchange": "XNYS",
+                      "step": "asset"
+                    },
+                    {
+                      "name": "Intel Corp.",
+                      "ticker": "INTC",
+                      "id": "02c872e1-5010-4a95-828f-18a032ad9858",
+                      "exchange": "XNAS",
+                      "step": "asset"
+                    },
+                    {
+                      "name": "ON Semiconductor Corp.",
+                      "ticker": "ON",
+                      "id": "686eca16-2c9b-4e0f-ba65-053a9cba1fd2",
+                      "exchange": "XNAS",
+                      "step": "asset"
+                    },
+                    {
+                      "name": "Texas Instruments Inc.",
+                      "ticker": "TXN",
+                      "id": "7838223d-08c7-49f5-a567-addf1fad2929",
+                      "exchange": "XNAS",
+                      "step": "asset"
+                    },
+                    {
+                      "name": "Microchip Technology, Inc.",
+                      "ticker": "MCHP",
+                      "id": "d23913bc-6348-4d0f-9f23-7ce3a9544d85",
+                      "exchange": "XNAS",
+                      "step": "asset"
+                    },
+                    {
+                      "name": "Honeywell International Inc",
+                      "ticker": "HON",
+                      "id": "557b1607-5fc9-42a1-97d0-05cee3b2b4e4",
+                      "exchange": "XNAS",
+                      "step": "asset"
+                    },
+                    {
+                      "name": "Howmet Aerospace Inc",
+                      "ticker": "HWM",
+                      "id": "7724d8be-7097-450f-910e-ab60273c132c",
+                      "exchange": "XNYS",
+                      "step": "asset"
+                    },
+                    {
+                      "name": "MP Materials Corporation",
+                      "ticker": "MP",
+                      "id": "8fce24e7-0a68-42f9-94fe-2efc346ee94c",
+                      "exchange": "XNYS",
+                      "step": "asset"
+                    },
+                    {
+                      "name": "GrafTech International Ltd.",
+                      "ticker": "EAF",
+                      "id": "102c0272-b08b-47b4-8733-466437661465",
+                      "exchange": "XNYS",
+                      "step": "asset"
+                    }
+                  ],
+                  "select-fn": "bottom",
+                  "select-n": "3",
+                  "sort-by-fn": "standard-deviation-return",
+                  "weight": {
+                    "num": "0",
+                    "den": 100
+                  },
+                  "id": "22d7dfc3-2e6d-4179-ab1a-628f9ad85fe6",
+                  "step": "filter",
+                  "sort-by-fn-params": {
+                    "window": 17
+                  },
+                  "collapsed?": false
+                },
+                {
+                  "children": [
+                    {
+                      "name": "AMKOR Technology Inc.",
+                      "ticker": "AMKR",
+                      "id": "aca0b548-fb77-4877-bf0f-d2dc9608a68a",
+                      "exchange": "XNAS",
+                      "step": "asset"
+                    },
+                    {
+                      "name": "Albemarle Corp.",
+                      "ticker": "ALB",
+                      "id": "7e22a486-6352-44a4-b263-d4592deca2ac",
+                      "exchange": "XNYS",
+                      "step": "asset"
+                    },
+                    {
+                      "name": "Intel Corp.",
+                      "ticker": "INTC",
+                      "id": "a1ecc943-9739-43c1-8641-20326c5df91f",
+                      "exchange": "XNAS",
+                      "step": "asset"
+                    },
+                    {
+                      "name": "ON Semiconductor Corp.",
+                      "ticker": "ON",
+                      "id": "ea50392d-b314-4468-aa50-6e8e01abe084",
+                      "exchange": "XNAS",
+                      "step": "asset"
+                    },
+                    {
+                      "name": "Texas Instruments Inc.",
+                      "ticker": "TXN",
+                      "id": "3833f097-4d97-48d2-96d1-82a7f0873e14",
+                      "exchange": "XNAS",
+                      "step": "asset"
+                    },
+                    {
+                      "name": "Microchip Technology, Inc.",
+                      "ticker": "MCHP",
+                      "id": "d1f98cd7-315f-4d67-aed5-625dfe8a1410",
+                      "exchange": "XNAS",
+                      "step": "asset"
+                    },
+                    {
+                      "name": "Honeywell International Inc",
+                      "ticker": "HON",
+                      "id": "198652b7-7831-4722-988d-e49a18700549",
+                      "exchange": "XNAS",
+                      "step": "asset"
+                    },
+                    {
+                      "name": "Howmet Aerospace Inc",
+                      "ticker": "HWM",
+                      "id": "4eb8a4f7-3514-466c-9f8e-03050756e372",
+                      "exchange": "XNYS",
+                      "step": "asset"
+                    },
+                    {
+                      "name": "MP Materials Corporation",
+                      "ticker": "MP",
+                      "id": "8539be01-de8a-43ed-abdf-6bd5b77b3173",
+                      "exchange": "XNYS",
+                      "step": "asset"
+                    },
+                    {
+                      "name": "GrafTech International Ltd.",
+                      "ticker": "EAF",
+                      "id": "4604ae12-96f7-4fc6-ab7b-1c7514bbeedf",
+                      "exchange": "XNYS",
+                      "step": "asset"
+                    }
+                  ],
+                  "select-fn": "bottom",
+                  "select-n": "1",
+                  "sort-by-fn": "cumulative-return",
+                  "weight": {
+                    "num": "100",
+                    "den": 100
+                  },
+                  "id": "32841f56-ff16-422c-9f0b-d6f4700adc26",
+                  "step": "filter",
+                  "sort-by-fn-params": {
+                    "window": 4
+                  },
+                  "collapsed?": false
+                }
+              ],
+              "window-days": 3,
+              "id": "9ce59e43-0aa0-4532-87a1-6a46e2413bb3",
+              "step": "wt-inverse-vol"
+            }
+          ],
+          "name": "Ra Ra USA",
+          "id": "4b9edbe2-9372-42ba-a097-2c60615bdd98",
+          "step": "group",
+          "collapsed?": true
+        }
+      ]
+    }
+  ]
+}

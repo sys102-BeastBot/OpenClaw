@@ -1,0 +1,991 @@
+{
+  "ensemble_non_corr/gold_mean_reversions": {
+    "name": "Gold Mean Reversions",
+    "source": "ensemble_non_corr",
+    "results": {
+      "2022": {
+        "sharpe": 0.456,
+        "annret": 4.1,
+        "maxdd": 7.59
+      },
+      "2023": {
+        "sharpe": 1.606,
+        "annret": 14.9,
+        "maxdd": 4.02
+      },
+      "2024": {
+        "sharpe": 1.797,
+        "annret": 14.1,
+        "maxdd": 4.12
+      }
+    }
+  },
+  "ensemble_non_corr/st_treasury_trading": {
+    "name": "ST Treasury Trading",
+    "source": "ensemble_non_corr",
+    "results": {
+      "2022": {
+        "sharpe": 2.232,
+        "annret": 40.4,
+        "maxdd": 4.79
+      },
+      "2023": {
+        "sharpe": 3.564,
+        "annret": 48.6,
+        "maxdd": 3.67
+      },
+      "2024": {
+        "sharpe": 0.352,
+        "annret": 3.2,
+        "maxdd": 8.11
+      }
+    }
+  },
+  "ensemble_non_corr/wide_disp_vix": {
+    "name": "Wide Disp Vix",
+    "source": "ensemble_non_corr",
+    "results": {
+      "2022": {
+        "sharpe": -0.145,
+        "annret": -5.1,
+        "maxdd": 16.97
+      },
+      "2023": {
+        "sharpe": 1.225,
+        "annret": 20.9,
+        "maxdd": 10.87
+      },
+      "2024": {
+        "sharpe": 0.187,
+        "annret": 1.7,
+        "maxdd": 17.21
+      }
+    }
+  },
+  "ensemble_non_corr/bond___duration_curve_trading": {
+    "name": "Bond / Duration Curve Trading",
+    "source": "ensemble_non_corr",
+    "results": {
+      "2022": {
+        "sharpe": 3.747,
+        "annret": 55.0,
+        "maxdd": 4.07
+      },
+      "2023": {
+        "sharpe": 3.393,
+        "annret": 35.8,
+        "maxdd": 6.27
+      },
+      "2024": {
+        "sharpe": 2.593,
+        "annret": 30.0,
+        "maxdd": 4.92
+      }
+    }
+  },
+  "ensemble_non_corr/yield_curve_stuff": {
+    "name": "Yield Curve Stuff",
+    "source": "ensemble_non_corr",
+    "results": {
+      "2022": {
+        "sharpe": 3.655,
+        "annret": 36.3,
+        "maxdd": 4.05
+      },
+      "2023": {
+        "sharpe": 0.957,
+        "annret": 11.0,
+        "maxdd": 6.42
+      },
+      "2024": {
+        "sharpe": 0.547,
+        "annret": 5.1,
+        "maxdd": 6.27
+      }
+    }
+  },
+  "ensemble_non_corr/junk_bond_mean_reversions": {
+    "name": "Junk Bond Mean Reversions",
+    "source": "ensemble_non_corr",
+    "results": {
+      "2022": {
+        "sharpe": 0.995,
+        "annret": 11.2,
+        "maxdd": 7.62
+      },
+      "2023": {
+        "sharpe": 2.173,
+        "annret": 19.0,
+        "maxdd": 3.48
+      },
+      "2024": {
+        "sharpe": 1.388,
+        "annret": 10.2,
+        "maxdd": 3.88
+      }
+    }
+  },
+  "ensemble_non_corr/vol_hedge_3_0": {
+    "name": "Vol Hedge 3.0",
+    "source": "ensemble_non_corr",
+    "results": {
+      "2022": {
+        "sharpe": 0.581,
+        "annret": 14.1,
+        "maxdd": 23.68
+      },
+      "2023": {
+        "sharpe": 1.004,
+        "annret": 23.6,
+        "maxdd": 10.24
+      },
+      "2024": {
+        "sharpe": 1.474,
+        "annret": 56.8,
+        "maxdd": 13.58
+      }
+    }
+  },
+  "ensemble_non_corr/short_term_trading_using_psp_etf_as": {
+    "name": "Short Term Trading Using PSP ETF as signal",
+    "source": "ensemble_non_corr",
+    "results": {
+      "2022": {
+        "sharpe": 0.823,
+        "annret": 7.2,
+        "maxdd": 5.4
+      },
+      "2023": {
+        "sharpe": 2.451,
+        "annret": 25.3,
+        "maxdd": 2.75
+      },
+      "2024": {
+        "sharpe": 2.084,
+        "annret": 15.3,
+        "maxdd": 3.62
+      }
+    }
+  },
+  "ensemble_non_corr/natural_gas_high_vol_short_term_tra": {
+    "name": "Natural Gas High Vol Short Term Trading",
+    "source": "ensemble_non_corr",
+    "results": {
+      "2022": {
+        "sharpe": 1.644,
+        "annret": 164.4,
+        "maxdd": 47.33
+      },
+      "2023": {
+        "sharpe": 0,
+        "annret": 0,
+        "maxdd": 0,
+        "error": "too-many-requests"
+      },
+      "2024": {
+        "sharpe": 1.429,
+        "annret": 63.5,
+        "maxdd": 22.76
+      }
+    }
+  },
+  "interstellar_0beta/us_dollar_strength": {
+    "name": "US Dollar Strength",
+    "source": "interstellar_0beta",
+    "results": {
+      "2022": {
+        "sharpe": 0.95,
+        "annret": 8.7,
+        "maxdd": 8.71
+      },
+      "2023": {
+        "sharpe": 0.785,
+        "annret": 4.5,
+        "maxdd": 3.3
+      },
+      "2024": {
+        "sharpe": -1.338,
+        "annret": -13.5,
+        "maxdd": 15.53
+      }
+    }
+  },
+  "interstellar_0beta/energy_momentum_v3__final": {
+    "name": "Energy Momentum V3 (Final)",
+    "source": "interstellar_0beta",
+    "results": {
+      "2022": {
+        "sharpe": 1.151,
+        "annret": 29.1,
+        "maxdd": 21.76
+      },
+      "2023": {
+        "sharpe": 0.419,
+        "annret": 4.4,
+        "maxdd": 7.97
+      },
+      "2024": {
+        "sharpe": -0.71,
+        "annret": -8.2,
+        "maxdd": 17.35
+      }
+    }
+  },
+  "interstellar_0beta/commodities_macro_momentum": {
+    "name": "Commodities Macro Momentum",
+    "source": "interstellar_0beta",
+    "results": {
+      "2022": {
+        "sharpe": 0.829,
+        "annret": 15.4,
+        "maxdd": 18.87
+      },
+      "2023": {
+        "sharpe": -0.481,
+        "annret": -5.1,
+        "maxdd": 13.18
+      },
+      "2024": {
+        "sharpe": -0.564,
+        "annret": -5.4,
+        "maxdd": 12.73
+      }
+    }
+  },
+  "interstellar_0beta/shorting_spy": {
+    "name": "Shorting SPY",
+    "source": "interstellar_0beta",
+    "results": {
+      "2022": {
+        "sharpe": 1.406,
+        "annret": 28.0,
+        "maxdd": 9.74
+      },
+      "2023": {
+        "sharpe": 1.578,
+        "annret": 9.9,
+        "maxdd": 2.97
+      },
+      "2024": {
+        "sharpe": -0.227,
+        "annret": -1.3,
+        "maxdd": 8.53
+      }
+    }
+  },
+  "interstellar_0beta/bonds": {
+    "name": "Bonds",
+    "source": "interstellar_0beta",
+    "results": {
+      "2022": {
+        "sharpe": 2.81,
+        "annret": 160.9,
+        "maxdd": 20.0
+      },
+      "2023": {
+        "sharpe": 1.535,
+        "annret": 42.8,
+        "maxdd": 14.0
+      },
+      "2024": {
+        "sharpe": 0.886,
+        "annret": 15.9,
+        "maxdd": 14.05
+      }
+    }
+  },
+  "interstellar_0beta/volatility": {
+    "name": "Volatility",
+    "source": "interstellar_0beta",
+    "results": {
+      "2022": {
+        "sharpe": -1.661,
+        "annret": -3.9,
+        "maxdd": 4.95
+      },
+      "2023": {
+        "sharpe": 1.263,
+        "annret": 16.1,
+        "maxdd": 7.51
+      },
+      "2024": {
+        "sharpe": 0.963,
+        "annret": 6.9,
+        "maxdd": 2.51
+      }
+    }
+  },
+  "interstellar_0beta/svxy_ftlt___v2": {
+    "name": "SVXY FTLT | V2",
+    "source": "interstellar_0beta",
+    "results": {
+      "2022": {
+        "sharpe": 1.662,
+        "annret": 32.2,
+        "maxdd": 9.65
+      },
+      "2023": {
+        "sharpe": 2.291,
+        "annret": 29.0,
+        "maxdd": 4.28
+      },
+      "2024": {
+        "sharpe": 0.262,
+        "annret": 2.7,
+        "maxdd": 15.41
+      }
+    }
+  },
+  "interstellar_0beta/interstellar___agriculture": {
+    "name": "Interstellar | Agriculture",
+    "source": "interstellar_0beta",
+    "results": {
+      "2022": {
+        "sharpe": 0.264,
+        "annret": 2.4,
+        "maxdd": 13.19
+      },
+      "2023": {
+        "sharpe": 0.359,
+        "annret": 3.2,
+        "maxdd": 5.72
+      },
+      "2024": {
+        "sharpe": 1.774,
+        "annret": 33.6,
+        "maxdd": 12.36
+      }
+    }
+  },
+  "uncorrelated_outliers/this_is_how_bwc_beta_balls": {
+    "name": "This is How BWC Beta Balls ",
+    "source": "uncorrelated_outliers",
+    "results": {
+      "2022": {
+        "sharpe": 4.749,
+        "annret": 3579.7,
+        "maxdd": 19.3
+      },
+      "2023": {
+        "sharpe": 4.248,
+        "annret": 548.5,
+        "maxdd": 13.83
+      },
+      "2024": {
+        "sharpe": 2.438,
+        "annret": 283.9,
+        "maxdd": 25.65
+      }
+    }
+  },
+  "uncorrelated_outliers/modified_foreign_rat": {
+    "name": "Modified Foreign Rat",
+    "source": "uncorrelated_outliers",
+    "results": {
+      "2022": {
+        "sharpe": 1.749,
+        "annret": 166.6,
+        "maxdd": 37.57
+      },
+      "2023": {
+        "sharpe": 3.29,
+        "annret": 298.2,
+        "maxdd": 21.73
+      },
+      "2024": {
+        "sharpe": 3.088,
+        "annret": 262.3,
+        "maxdd": 13.57
+      }
+    }
+  },
+  "uncorrelated_outliers/kmlm_switcher__single_pops___bt_4_1": {
+    "name": "KMLM switcher (single pops)| BT 4/13/22 = A.R. 466% / D.D. 22%",
+    "source": "uncorrelated_outliers",
+    "results": {
+      "2022": {
+        "sharpe": 3.202,
+        "annret": 655.4,
+        "maxdd": 22.34
+      },
+      "2023": {
+        "sharpe": 3.283,
+        "annret": 322.4,
+        "maxdd": 14.17
+      },
+      "2024": {
+        "sharpe": 3.852,
+        "annret": 936.4,
+        "maxdd": 19.5
+      }
+    }
+  },
+  "uncorrelated_outliers/just_run_this_ftlt___2011_09_13": {
+    "name": "Just Run This FTLT | 2011-09-13",
+    "source": "uncorrelated_outliers",
+    "results": {
+      "2022": {
+        "sharpe": 2.75,
+        "annret": 170.0,
+        "maxdd": 15.39
+      },
+      "2023": {
+        "sharpe": 2.631,
+        "annret": 69.4,
+        "maxdd": 6.34
+      },
+      "2024": {
+        "sharpe": 2.809,
+        "annret": 130.9,
+        "maxdd": 11.63
+      }
+    }
+  },
+  "uncorrelated_outliers/layered_risk": {
+    "name": "Layered Risk",
+    "source": "uncorrelated_outliers",
+    "results": {
+      "2022": {
+        "sharpe": 2.226,
+        "annret": 44.4,
+        "maxdd": 7.68
+      },
+      "2023": {
+        "sharpe": 3.374,
+        "annret": 44.6,
+        "maxdd": 6.9
+      },
+      "2024": {
+        "sharpe": 1.499,
+        "annret": 22.1,
+        "maxdd": 9.57
+      }
+    }
+  },
+  "uncorrelated_outliers/frontier_markets___2_92_sharpe_comp": {
+    "name": "Frontier markets - 2.92 sharpe complete",
+    "source": "uncorrelated_outliers",
+    "results": {
+      "2022": {
+        "sharpe": 0.471,
+        "annret": 5.8,
+        "maxdd": 11.51
+      },
+      "2023": {
+        "sharpe": 1.858,
+        "annret": 20.0,
+        "maxdd": 5.57
+      },
+      "2024": {
+        "sharpe": -0.055,
+        "annret": -1.2,
+        "maxdd": 7.06
+      }
+    }
+  },
+  "hedged_sector_rot/tmv_momentum": {
+    "name": "TMV Momentum",
+    "source": "hedged_sector_rot",
+    "results": {
+      "2022": {
+        "sharpe": 2.955,
+        "annret": 266.9,
+        "maxdd": 20.92
+      },
+      "2023": {
+        "sharpe": 1.487,
+        "annret": 60.5,
+        "maxdd": 16.42
+      },
+      "2024": {
+        "sharpe": -0.03,
+        "annret": -3.1,
+        "maxdd": 20.69
+      }
+    }
+  },
+  "hedged_sector_rot/tmf_momentum": {
+    "name": "TMF Momentum",
+    "source": "hedged_sector_rot",
+    "results": {
+      "2022": {
+        "sharpe": 1.555,
+        "annret": 74.6,
+        "maxdd": 20.0
+      },
+      "2023": {
+        "sharpe": 1.101,
+        "annret": 24.1,
+        "maxdd": 15.86
+      },
+      "2024": {
+        "sharpe": 1.428,
+        "annret": 36.5,
+        "maxdd": 9.04
+      }
+    }
+  },
+  "hedged_sector_rot/svxy_ftlt": {
+    "name": "SVXY FTLT",
+    "source": "hedged_sector_rot",
+    "results": {
+      "2022": {
+        "sharpe": 1.279,
+        "annret": 32.6,
+        "maxdd": 15.59
+      },
+      "2023": {
+        "sharpe": 3.137,
+        "annret": 92.5,
+        "maxdd": 9.26
+      },
+      "2024": {
+        "sharpe": 0.248,
+        "annret": 3.0,
+        "maxdd": 21.85
+      }
+    }
+  },
+  "hedged_sector_rot/tina": {
+    "name": "TINA",
+    "source": "hedged_sector_rot",
+    "results": {
+      "2022": {
+        "sharpe": 2.797,
+        "annret": 436.1,
+        "maxdd": 27.51
+      },
+      "2023": {
+        "sharpe": -0.017,
+        "annret": -1.0,
+        "maxdd": 9.16
+      },
+      "2024": {
+        "sharpe": 0.41,
+        "annret": 4.9,
+        "maxdd": 8.35
+      }
+    }
+  },
+  "hedged_sector_rot/shorting_spy": {
+    "name": "Shorting SPY",
+    "source": "hedged_sector_rot",
+    "results": {
+      "2022": {
+        "sharpe": 1.406,
+        "annret": 28.0,
+        "maxdd": 9.74
+      },
+      "2023": {
+        "sharpe": 1.578,
+        "annret": 9.9,
+        "maxdd": 2.97
+      },
+      "2024": {
+        "sharpe": 0,
+        "annret": 0,
+        "maxdd": 0,
+        "error": "too-many-requests"
+      }
+    }
+  },
+  "hedged_sector_rot/svxy_ftlt___v2": {
+    "name": "SVXY FTLT | V2",
+    "source": "hedged_sector_rot",
+    "results": {
+      "2022": {
+        "sharpe": 1.331,
+        "annret": 24.9,
+        "maxdd": 10.13
+      },
+      "2023": {
+        "sharpe": 2.137,
+        "annret": 40.8,
+        "maxdd": 6.94
+      },
+      "2024": {
+        "sharpe": 0.454,
+        "annret": 5.9,
+        "maxdd": 18.33
+      }
+    }
+  },
+  "dereckn/dereckn_hedge_system": {
+    "name": "DereckN Hedge System",
+    "source": "dereckn",
+    "results": {
+      "2022": {
+        "sharpe": 3.702,
+        "annret": 116.6,
+        "maxdd": 8.3
+      },
+      "2023": {
+        "sharpe": 3.001,
+        "annret": 36.6,
+        "maxdd": 4.59
+      },
+      "2024": {
+        "sharpe": 0.832,
+        "annret": 8.2,
+        "maxdd": 9.16
+      }
+    }
+  },
+  "gold_ftlt": {
+    "name": "gold_ftlt",
+    "source": "standalone",
+    "results": {
+      "2022": {
+        "sharpe": 0.516,
+        "annret": 11.7,
+        "maxdd": 24.34
+      },
+      "2023": {
+        "sharpe": 0.516,
+        "annret": 10.7,
+        "maxdd": 17.72
+      },
+      "2024": {
+        "sharpe": 1.548,
+        "annret": 52.1,
+        "maxdd": 15.95
+      }
+    }
+  },
+  "vix_hack": {
+    "name": "vix_hack",
+    "source": "standalone",
+    "results": {
+      "2022": {
+        "sharpe": -0.326,
+        "annret": -5.1,
+        "maxdd": 14.61
+      },
+      "2023": {
+        "sharpe": 2.463,
+        "annret": 33.7,
+        "maxdd": 4.89
+      },
+      "2024": {
+        "sharpe": 0.422,
+        "annret": 5.4,
+        "maxdd": 13.42
+      }
+    }
+  },
+  "pure_cash_plus": {
+    "name": "pure_cash_plus",
+    "source": "standalone",
+    "results": {
+      "2022": {
+        "sharpe": 0,
+        "annret": 0,
+        "maxdd": 0
+      },
+      "2023": {
+        "sharpe": 0,
+        "annret": 0,
+        "maxdd": 0
+      },
+      "2024": {
+        "sharpe": 4.251,
+        "annret": 24.5,
+        "maxdd": 1.77
+      }
+    }
+  },
+  "dereckn_sub/tmv_momentum": {
+    "name": "TMV Momentum",
+    "source": "dereckn_sub",
+    "results": {
+      "2022": {
+        "sharpe": 2.955,
+        "annret": 266.9,
+        "maxdd": 20.92
+      },
+      "2023": {
+        "sharpe": 1.487,
+        "annret": 60.5,
+        "maxdd": 16.42
+      },
+      "2024": {
+        "sharpe": -0.03,
+        "annret": -3.1,
+        "maxdd": 20.69
+      }
+    }
+  },
+  "dereckn_sub/tmf_momentum": {
+    "name": "TMF Momentum",
+    "source": "dereckn_sub",
+    "results": {
+      "2022": {
+        "sharpe": 1.555,
+        "annret": 74.6,
+        "maxdd": 20.0
+      },
+      "2023": {
+        "sharpe": 1.101,
+        "annret": 24.1,
+        "maxdd": 15.86
+      },
+      "2024": {
+        "sharpe": 1.428,
+        "annret": 36.5,
+        "maxdd": 9.04
+      }
+    }
+  },
+  "dereckn_sub/svxy_ftlt": {
+    "name": "SVXY FTLT",
+    "source": "dereckn_sub",
+    "results": {
+      "2022": {
+        "sharpe": 1.279,
+        "annret": 32.6,
+        "maxdd": 15.59
+      },
+      "2023": {
+        "sharpe": 3.137,
+        "annret": 92.5,
+        "maxdd": 9.26
+      },
+      "2024": {
+        "sharpe": 0.248,
+        "annret": 3.0,
+        "maxdd": 21.85
+      }
+    }
+  },
+  "dereckn_sub/tina": {
+    "name": "TINA",
+    "source": "dereckn_sub",
+    "results": {
+      "2022": {
+        "sharpe": 2.797,
+        "annret": 436.1,
+        "maxdd": 27.51
+      },
+      "2023": {
+        "sharpe": -0.017,
+        "annret": -1.0,
+        "maxdd": 9.16
+      },
+      "2024": {
+        "sharpe": 0.41,
+        "annret": 4.9,
+        "maxdd": 8.35
+      }
+    }
+  },
+  "dereckn_sub/shorting_spy": {
+    "name": "Shorting SPY",
+    "source": "dereckn_sub",
+    "results": {
+      "2022": {
+        "sharpe": 1.406,
+        "annret": 28.0,
+        "maxdd": 9.74
+      },
+      "2023": {
+        "sharpe": 1.578,
+        "annret": 9.9,
+        "maxdd": 2.97
+      },
+      "2024": {
+        "sharpe": -0.227,
+        "annret": -1.3,
+        "maxdd": 8.53
+      }
+    }
+  },
+  "dereckn_sub/svxy_ftlt___v2": {
+    "name": "SVXY FTLT | V2",
+    "source": "dereckn_sub",
+    "results": {
+      "2022": {
+        "sharpe": 1.331,
+        "annret": 24.9,
+        "maxdd": 10.13
+      },
+      "2023": {
+        "sharpe": 2.137,
+        "annret": 40.8,
+        "maxdd": 6.94
+      },
+      "2024": {
+        "sharpe": 0.454,
+        "annret": 5.9,
+        "maxdd": 18.33
+      }
+    }
+  },
+  "ip_theft/numberseven": {
+    "name": "numberSeven",
+    "source": "ip_theft",
+    "results": {
+      "2022": {
+        "sharpe": 2.703,
+        "annret": 202.7,
+        "maxdd": 20.67
+      },
+      "2023": {
+        "sharpe": 3.098,
+        "annret": 180.7,
+        "maxdd": 12.43
+      },
+      "2024": {
+        "sharpe": 2.584,
+        "annret": 146.7,
+        "maxdd": 18.92
+      }
+    }
+  },
+  "ip_theft/numberone": {
+    "name": "numberOne",
+    "source": "ip_theft",
+    "results": {
+      "2022": {
+        "sharpe": 0.531,
+        "annret": 14.1,
+        "maxdd": 39.13
+      },
+      "2023": {
+        "sharpe": 3.008,
+        "annret": 275.4,
+        "maxdd": 22.72
+      },
+      "2024": {
+        "sharpe": 1.444,
+        "annret": 75.4,
+        "maxdd": 29.31
+      }
+    }
+  },
+  "ip_theft/ra_ra_usa": {
+    "name": "Ra Ra USA",
+    "source": "ip_theft",
+    "results": {
+      "2022": {
+        "sharpe": -0.318,
+        "annret": -15.8,
+        "maxdd": 34.1
+      },
+      "2023": {
+        "sharpe": 0.016,
+        "annret": -3.5,
+        "maxdd": 29.75
+      },
+      "2024": {
+        "sharpe": 0.134,
+        "annret": -1.0,
+        "maxdd": 21.94
+      }
+    }
+  },
+  "ip_theft/a_momentary_lapse_of_reason": {
+    "name": "A Momentary Lapse of Reason",
+    "source": "ip_theft",
+    "results": {
+      "2022": {
+        "sharpe": 0.641,
+        "annret": 14.3,
+        "maxdd": 20.53
+      },
+      "2023": {
+        "sharpe": 1.22,
+        "annret": 25.4,
+        "maxdd": 14.46
+      },
+      "2024": {
+        "sharpe": 1.38,
+        "annret": 33.3,
+        "maxdd": 17.7
+      }
+    }
+  },
+  "ip_theft/wartime_performance_based_selection": {
+    "name": "Wartime Performance-Based Selection Symphony (TQQQ & DFEN)",
+    "source": "ip_theft",
+    "results": {
+      "2022": {
+        "sharpe": -0.482,
+        "annret": -46.4,
+        "maxdd": 69.05
+      },
+      "2023": {
+        "sharpe": 1.941,
+        "annret": 123.0,
+        "maxdd": 34.9
+      },
+      "2024": {
+        "sharpe": 1.078,
+        "annret": 53.0,
+        "maxdd": 22.47
+      }
+    }
+  },
+  "ip_theft/rising_rates_vol_switch_simple": {
+    "name": "Rising Rates Vol Switch Simple",
+    "source": "ip_theft",
+    "results": {
+      "2022": {
+        "sharpe": 3.301,
+        "annret": 312.4,
+        "maxdd": 16.82
+      },
+      "2023": {
+        "sharpe": 3.145,
+        "annret": 132.0,
+        "maxdd": 11.04
+      },
+      "2024": {
+        "sharpe": 0.151,
+        "annret": -0.8,
+        "maxdd": 31.97
+      }
+    }
+  },
+  "ip_theft/dollar_hedge": {
+    "name": "Dollar Hedge",
+    "source": "ip_theft",
+    "results": {
+      "2022": {
+        "sharpe": -0.393,
+        "annret": -19.3,
+        "maxdd": 35.3
+      },
+      "2023": {
+        "sharpe": 1.758,
+        "annret": 55.9,
+        "maxdd": 15.42
+      },
+      "2024": {
+        "sharpe": 1.536,
+        "annret": 43.4,
+        "maxdd": 13.88
+      }
+    }
+  },
+  "ip_theft/metals_contrarian_switch__187_35_20": {
+    "name": "Metals Contrarian Switch (187,35,2011)",
+    "source": "ip_theft",
+    "results": {
+      "2022": {
+        "sharpe": 0.492,
+        "annret": 12.5,
+        "maxdd": 23.24
+      },
+      "2023": {
+        "sharpe": 0.226,
+        "annret": 2.5,
+        "maxdd": 27.28
+      },
+      "2024": {
+        "sharpe": 0.758,
+        "annret": 19.3,
+        "maxdd": 15.21
+      }
+    }
+  }
+}

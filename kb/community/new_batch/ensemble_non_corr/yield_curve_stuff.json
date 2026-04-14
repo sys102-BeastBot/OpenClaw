@@ -1,0 +1,1227 @@
+{
+  "id": "45a60447-7495-4e8f-b5bc-5b52263261e7",
+  "step": "root",
+  "name": "Yield Curve Stuff",
+  "description": "",
+  "rebalance": "daily",
+  "children": [
+    {
+      "id": "4eed9bd5-9dfb-41f4-bf8d-4f6c358699e3",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "id": "29fa1c80-648f-409c-8e32-498136025fd8",
+          "step": "group",
+          "name": "Yield Curve Stuff",
+          "children": [
+            {
+              "step": "wt-cash-equal",
+              "id": "4cdc92d1-7e10-4961-9963-f93b51c8b7eb",
+              "children": [
+                {
+                  "weight": {
+                    "num": 100,
+                    "den": 100
+                  },
+                  "id": "11445e7e-3682-4982-b5de-81fc40014fad",
+                  "step": "if",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "id": "89faa62a-f437-4e68-b918-376fa33e18b0",
+                          "step": "wt-cash-equal",
+                          "children": [
+                            {
+                              "id": "6cfbfb8e-7973-41b1-9f6d-5b48c69250a9",
+                              "step": "if",
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "id": "0e3d43f8-796e-4bf4-b7ac-6b4b7c56e31d",
+                                      "step": "group",
+                                      "name": "Bull Steepener",
+                                      "children": [
+                                        {
+                                          "step": "wt-cash-equal",
+                                          "id": "c25188f2-eaee-4988-9749-8b508cc036cd",
+                                          "children": [
+                                            {
+                                              "id": "c2ca1587-b2ed-48d7-8b77-607ad416fdc4",
+                                              "step": "group",
+                                              "name": "Duration + Risk Off Exposure",
+                                              "children": [
+                                                {
+                                                  "step": "wt-cash-equal",
+                                                  "id": "1d663e89-9cb4-42ff-a0a4-fd4258d541ec",
+                                                  "children": [
+                                                    {
+                                                      "ticker": "TLT",
+                                                      "exchange": "XNAS",
+                                                      "name": "iShares 20+ Year Treasury Bond ETF",
+                                                      "id": "4adefa0f-b8d1-4017-a6ef-755d55cd17e0",
+                                                      "step": "asset"
+                                                    },
+                                                    {
+                                                      "ticker": "TLT",
+                                                      "exchange": "XNAS",
+                                                      "name": "iShares 20+ Year Treasury Bond ETF",
+                                                      "id": "690da0ee-ba32-4d79-b9e4-f0559c79f380",
+                                                      "step": "asset"
+                                                    },
+                                                    {
+                                                      "ticker": "GLD",
+                                                      "exchange": "ARCX",
+                                                      "name": "SPDR Gold Shares",
+                                                      "id": "cd50a02c-3f55-4e6f-baf5-4b1a92f29c1d",
+                                                      "step": "asset"
+                                                    },
+                                                    {
+                                                      "ticker": "TIP",
+                                                      "exchange": "ARCX",
+                                                      "name": "iShares TIPS Bond ETF",
+                                                      "id": "c81ac880-cdc9-4787-9294-0bfaa1c4dd82",
+                                                      "step": "asset"
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "id": "df4193ee-86ae-46ef-bebf-82b222bf2e38",
+                                              "step": "if",
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "ticker": "SMH",
+                                                      "exchange": "XNAS",
+                                                      "name": "VanEck Semiconductor ETF",
+                                                      "id": "68390da0-53a1-4eb3-a7f4-e951984e36c2",
+                                                      "step": "asset"
+                                                    },
+                                                    {
+                                                      "ticker": "GDX",
+                                                      "exchange": "ARCX",
+                                                      "name": "VanEck Gold Miners ETF",
+                                                      "id": "caef2e04-1167-4595-99ad-77aa714b640a",
+                                                      "step": "asset"
+                                                    },
+                                                    {
+                                                      "ticker": "QQQ",
+                                                      "exchange": "XNAS",
+                                                      "name": "Invesco QQQ Trust Series I",
+                                                      "id": "77b39502-b71e-4248-a656-ab22ae55544d",
+                                                      "step": "asset"
+                                                    },
+                                                    {
+                                                      "ticker": "EEM",
+                                                      "exchange": "ARCX",
+                                                      "name": "iShares MSCI Emerging Markets ETF",
+                                                      "id": "022c754b-1004-431c-a7bd-b0cba4c4e2be",
+                                                      "step": "asset"
+                                                    }
+                                                  ],
+                                                  "lhs-fn-params": {
+                                                    "window": 13
+                                                  },
+                                                  "is-else-condition?": false,
+                                                  "rhs-fixed-value?": true,
+                                                  "lhs-fn": "relative-strength-index",
+                                                  "lhs-val": "JNK",
+                                                  "id": "c2780515-bd8d-4481-8353-3ae1ab3d5e25",
+                                                  "comparator": "lt",
+                                                  "rhs-val": "22",
+                                                  "step": "if-child"
+                                                },
+                                                {
+                                                  "id": "e6c0f897-12bd-464d-82f4-7c69787cf72f",
+                                                  "step": "if-child",
+                                                  "is-else-condition?": true,
+                                                  "children": [
+                                                    {
+                                                      "step": "wt-cash-equal",
+                                                      "id": "e0f761ad-2de0-4229-afbc-99040615795b",
+                                                      "children": [
+                                                        {
+                                                          "ticker": "TLT",
+                                                          "exchange": "XNAS",
+                                                          "name": "iShares 20+ Year Treasury Bond ETF",
+                                                          "id": "628c0def-23f5-4d0f-98e5-713443db5ed8",
+                                                          "step": "asset"
+                                                        },
+                                                        {
+                                                          "ticker": "TLT",
+                                                          "exchange": "XNAS",
+                                                          "name": "iShares 20+ Year Treasury Bond ETF",
+                                                          "id": "5e1547d6-e92e-4f88-af6b-60c2ec5c749e",
+                                                          "step": "asset"
+                                                        },
+                                                        {
+                                                          "ticker": "GLD",
+                                                          "exchange": "ARCX",
+                                                          "name": "SPDR Gold Shares",
+                                                          "id": "4560b76d-8002-4447-b1ee-5c8f47fac4b5",
+                                                          "step": "asset"
+                                                        },
+                                                        {
+                                                          "ticker": "TIP",
+                                                          "exchange": "ARCX",
+                                                          "name": "iShares TIPS Bond ETF",
+                                                          "id": "c80c05cd-3485-4eb4-afcf-477beec3086a",
+                                                          "step": "asset"
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "lhs-fn-params": {
+                                    "window": 100
+                                  },
+                                  "is-else-condition?": false,
+                                  "rhs-fixed-value?": true,
+                                  "lhs-fn": "cumulative-return",
+                                  "lhs-val": "TLT",
+                                  "id": "d59c24c9-91c0-4367-baf2-8cc7175c97db",
+                                  "comparator": "lt",
+                                  "rhs-val": "8",
+                                  "step": "if-child"
+                                },
+                                {
+                                  "id": "1da8ca63-4284-45b0-bb8e-e90e0bf1729c",
+                                  "step": "if-child",
+                                  "is-else-condition?": true,
+                                  "children": [
+                                    {
+                                      "id": "946108b4-ce7e-47a2-b1b9-a336061d79f9",
+                                      "step": "group",
+                                      "name": "Bull Flattener",
+                                      "children": [
+                                        {
+                                          "step": "wt-cash-equal",
+                                          "id": "1441b5a2-7025-4516-b089-cea4438278ae",
+                                          "children": [
+                                            {
+                                              "id": "a726f80f-edd1-46ee-a9b6-3a7270a385a7",
+                                              "step": "if",
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "ticker": "SMH",
+                                                      "exchange": "XNAS",
+                                                      "name": "VanEck Semiconductor ETF",
+                                                      "id": "d468679a-85f7-4d1a-9955-48dc7d8b1e58",
+                                                      "step": "asset"
+                                                    },
+                                                    {
+                                                      "ticker": "IGV",
+                                                      "exchange": "BATS",
+                                                      "name": "iShares Expanded Tech-Software Sector ETF",
+                                                      "id": "ff0b1f6c-56d0-407a-bfb6-0c9b9da01ba2",
+                                                      "step": "asset"
+                                                    }
+                                                  ],
+                                                  "lhs-fn-params": {
+                                                    "window": 13
+                                                  },
+                                                  "is-else-condition?": false,
+                                                  "rhs-fixed-value?": true,
+                                                  "lhs-fn": "relative-strength-index",
+                                                  "lhs-val": "JNK",
+                                                  "id": "3501c7c4-664b-483f-b68a-a1e1a7f72219",
+                                                  "comparator": "lt",
+                                                  "rhs-val": "22",
+                                                  "step": "if-child"
+                                                },
+                                                {
+                                                  "id": "760eb49d-e735-4e42-8f33-c6e14dd5d304",
+                                                  "step": "if-child",
+                                                  "is-else-condition?": true,
+                                                  "children": [
+                                                    {
+                                                      "step": "wt-cash-equal",
+                                                      "id": "b243f0b0-96cd-46a7-aa54-d84485d57fcd",
+                                                      "children": [
+                                                        {
+                                                          "step": "wt-cash-equal",
+                                                          "id": "234dcd92-0763-4fa6-94aa-344f5b2e696c",
+                                                          "children": [
+                                                            {
+                                                              "ticker": "IGV",
+                                                              "exchange": "BATS",
+                                                              "name": "iShares Expanded Tech-Software Sector ETF",
+                                                              "id": "d1062deb-265c-4086-b783-1c16ca938e63",
+                                                              "step": "asset"
+                                                            },
+                                                            {
+                                                              "ticker": "IWO",
+                                                              "exchange": "ARCX",
+                                                              "name": "iShares Russell 2000 Growth ETF",
+                                                              "id": "1e4ac1e1-de67-407b-af9e-d88222b643c9",
+                                                              "step": "asset"
+                                                            },
+                                                            {
+                                                              "ticker": "QQQ",
+                                                              "exchange": "XNAS",
+                                                              "name": "Invesco QQQ Trust Series I",
+                                                              "id": "da0b501a-56c2-424b-8751-c51ea28199e7",
+                                                              "step": "asset"
+                                                            },
+                                                            {
+                                                              "ticker": "GDX",
+                                                              "exchange": "ARCX",
+                                                              "name": "VanEck Gold Miners ETF",
+                                                              "id": "f00ccb87-8e8a-472c-beb9-6f68c0684d44",
+                                                              "step": "asset"
+                                                            },
+                                                            {
+                                                              "ticker": "SMH",
+                                                              "exchange": "XNAS",
+                                                              "name": "VanEck Semiconductor ETF",
+                                                              "id": "c3c3d53d-ef69-4ede-895d-c7eb7fea40d1",
+                                                              "step": "asset"
+                                                            },
+                                                            {
+                                                              "ticker": "SKF",
+                                                              "exchange": "ARCX",
+                                                              "name": "ProShares UltraShort Financials",
+                                                              "id": "365710a2-ac6d-435d-92d0-5441ac86a40a",
+                                                              "step": "asset"
+                                                            },
+                                                            {
+                                                              "ticker": "RWM",
+                                                              "exchange": "ARCX",
+                                                              "name": "ProShares Short Russell2000",
+                                                              "id": "b4c6af79-c9ec-478a-a575-a5b5b6d92b30",
+                                                              "step": "asset"
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "collapsed?": true
+                        }
+                      ],
+                      "lhs-fn-params": {
+                        "window": 100
+                      },
+                      "is-else-condition?": false,
+                      "rhs-fixed-value?": true,
+                      "lhs-fn": "cumulative-return",
+                      "lhs-val": "SHY",
+                      "id": "7a103e16-036d-4366-b2cb-a958a468442e",
+                      "comparator": "gt",
+                      "rhs-val": ".5",
+                      "step": "if-child"
+                    },
+                    {
+                      "id": "bf591d3b-ad1f-4e81-8e88-ed7f161a5bc6",
+                      "step": "if-child",
+                      "is-else-condition?": true,
+                      "children": [
+                        {
+                          "id": "97ed8249-86ee-4d9e-94cd-d2e4797f5c61",
+                          "step": "wt-cash-equal",
+                          "children": [
+                            {
+                              "weight": {
+                                "num": 100,
+                                "den": 100
+                              },
+                              "id": "50e70218-c84f-4eeb-98d2-b0fe70844795",
+                              "step": "if",
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "id": "2b157546-0f7d-4a54-92b5-dc5470989ed2",
+                                      "step": "wt-cash-equal",
+                                      "children": [
+                                        {
+                                          "id": "4eaf5672-8fa3-4d72-bb4d-d7d97c01a265",
+                                          "step": "if",
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "id": "d4aae8c0-89f6-4e98-b197-1155fae30d4f",
+                                                  "step": "wt-cash-equal",
+                                                  "children": [
+                                                    {
+                                                      "ticker": "EUO",
+                                                      "exchange": "ARCX",
+                                                      "name": "ProShares UltraShort Euro",
+                                                      "id": "95f8f704-c880-4ab2-931a-f5c20231a567",
+                                                      "step": "asset"
+                                                    },
+                                                    {
+                                                      "ticker": "YCS",
+                                                      "exchange": "ARCX",
+                                                      "name": "ProShares UltraShort Yen",
+                                                      "id": "36dea19e-df65-4a9e-a65a-4a91bb1bfd80",
+                                                      "step": "asset"
+                                                    },
+                                                    {
+                                                      "ticker": "DBC",
+                                                      "exchange": "ARCX",
+                                                      "name": "Invesco DB Commodity Index Tracking Fund",
+                                                      "id": "aa42ac26-8348-434a-937d-f382f02cdaf0",
+                                                      "step": "asset"
+                                                    },
+                                                    {
+                                                      "ticker": "EEV",
+                                                      "exchange": "ARCX",
+                                                      "name": "ProShares UltraShort MSCI Emerging Markets",
+                                                      "id": "f9388eb2-d4d8-4006-9c54-1419bf498d72",
+                                                      "step": "asset"
+                                                    },
+                                                    {
+                                                      "ticker": "SMH",
+                                                      "exchange": "XNAS",
+                                                      "name": "VanEck Semiconductor ETF",
+                                                      "id": "39780f51-c552-44ae-8c20-503a8c7283d5",
+                                                      "step": "asset"
+                                                    },
+                                                    {
+                                                      "ticker": "SKF",
+                                                      "exchange": "ARCX",
+                                                      "name": "ProShares UltraShort Financials",
+                                                      "id": "b78abb17-e0c3-4d46-8350-bc1d8f81952a",
+                                                      "step": "asset"
+                                                    },
+                                                    {
+                                                      "ticker": "XLB",
+                                                      "exchange": "ARCX",
+                                                      "name": "Materials Select Sector SPDR Fund",
+                                                      "id": "7518e7b8-02e5-4f97-b27a-ce5b762d9e61",
+                                                      "step": "asset"
+                                                    },
+                                                    {
+                                                      "ticker": "GLD",
+                                                      "exchange": "ARCX",
+                                                      "name": "SPDR Gold Shares",
+                                                      "id": "be4e1c09-c17f-4e38-9db4-07e4d77ea174",
+                                                      "step": "asset"
+                                                    }
+                                                  ]
+                                                }
+                                              ],
+                                              "lhs-fn-params": {
+                                                "window": 75
+                                              },
+                                              "rhs-fn": "moving-average-return",
+                                              "is-else-condition?": false,
+                                              "lhs-fn": "moving-average-return",
+                                              "lhs-val": "SPY",
+                                              "id": "05b74541-3537-4e37-bd49-1e13d6a8489f",
+                                              "rhs-fn-params": {
+                                                "window": 75
+                                              },
+                                              "comparator": "lt",
+                                              "rhs-val": "XLU",
+                                              "step": "if-child"
+                                            },
+                                            {
+                                              "id": "7994ab7f-d774-4d3d-8744-250e55dd6243",
+                                              "step": "if-child",
+                                              "is-else-condition?": true,
+                                              "children": [
+                                                {
+                                                  "id": "f82b6600-2559-46a9-a38d-4ac7eb9a9509",
+                                                  "step": "wt-cash-specified",
+                                                  "children": [
+                                                    {
+                                                      "id": "f8cd4d44-75f8-4c32-8725-5dcbbeb7b548",
+                                                      "step": "wt-cash-equal",
+                                                      "children": [
+                                                        {
+                                                          "ticker": "PSQ",
+                                                          "exchange": "ARCX",
+                                                          "name": "ProShares Short QQQ",
+                                                          "id": "c40690c7-b1b9-462a-b910-cd8872383fb6",
+                                                          "step": "asset"
+                                                        },
+                                                        {
+                                                          "ticker": "XLI",
+                                                          "exchange": "ARCX",
+                                                          "name": "Industrial Select Sector SPDR Fund",
+                                                          "id": "104e1f10-2cfa-46a9-be4d-ba71c35ac557",
+                                                          "step": "asset"
+                                                        },
+                                                        {
+                                                          "ticker": "XLU",
+                                                          "exchange": "ARCX",
+                                                          "name": "Utilities Select Sector SPDR Fund",
+                                                          "id": "410ca76f-067b-479e-a46a-6533b59c90a2",
+                                                          "step": "asset"
+                                                        }
+                                                      ],
+                                                      "weight": {
+                                                        "num": "96",
+                                                        "den": 100
+                                                      }
+                                                    },
+                                                    {
+                                                      "ticker": "KOLD",
+                                                      "exchange": "ARCX",
+                                                      "name": "ProShares UltraShort Bloomberg Natural Gas",
+                                                      "id": "cda4607f-2f67-49ef-94ef-d3783b4b428a",
+                                                      "step": "asset",
+                                                      "weight": {
+                                                        "num": 4,
+                                                        "den": 100
+                                                      }
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "lhs-fn-params": {
+                                    "window": 200
+                                  },
+                                  "is-else-condition?": false,
+                                  "rhs-fixed-value?": true,
+                                  "lhs-fn": "moving-average-return",
+                                  "lhs-val": "SHY",
+                                  "id": "dac9ff2d-f8b0-472b-9368-3c830e8547b6",
+                                  "comparator": "lt",
+                                  "rhs-val": "-.002",
+                                  "step": "if-child"
+                                },
+                                {
+                                  "id": "2a9db28e-2fdb-4ff0-b912-c5e51bbfde0c",
+                                  "step": "if-child",
+                                  "is-else-condition?": true,
+                                  "children": [
+                                    {
+                                      "id": "f7387ebc-f0cd-4b88-af73-5d799382766c",
+                                      "step": "wt-cash-equal",
+                                      "children": [
+                                        {
+                                          "id": "54639b3e-25e1-433e-b678-f7ca59a1a1b7",
+                                          "step": "if",
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "id": "047c0d53-3444-41de-a3bc-bf9056932cb1",
+                                                  "step": "wt-cash-specified",
+                                                  "children": [
+                                                    {
+                                                      "id": "c08db757-37e9-4de1-9e55-92f42bd131d4",
+                                                      "step": "wt-cash-equal",
+                                                      "children": [
+                                                        {
+                                                          "ticker": "VNQ",
+                                                          "exchange": "ARCX",
+                                                          "name": "Vanguard Real Estate ETF",
+                                                          "id": "4227c1fc-fe53-4ba1-9922-ba058281366e",
+                                                          "step": "asset"
+                                                        },
+                                                        {
+                                                          "ticker": "PFF",
+                                                          "exchange": "XNAS",
+                                                          "name": "iShares Preferred & Income Securities ETF",
+                                                          "id": "4d8820b5-f86a-4df2-adc9-22c73d3a2511",
+                                                          "step": "asset"
+                                                        },
+                                                        {
+                                                          "ticker": "SMH",
+                                                          "exchange": "XNAS",
+                                                          "name": "VanEck Semiconductor ETF",
+                                                          "id": "81a0ea8a-8b71-4597-9c64-a7bb03a6b02b",
+                                                          "step": "asset"
+                                                        },
+                                                        {
+                                                          "ticker": "IHI",
+                                                          "exchange": "ARCX",
+                                                          "name": "iShares U.S. Medical Devices ETF",
+                                                          "id": "184e7fe6-8812-483d-8f38-aec485be6908",
+                                                          "step": "asset"
+                                                        },
+                                                        {
+                                                          "ticker": "QQQ",
+                                                          "exchange": "XNAS",
+                                                          "name": "Invesco QQQ Trust Series I",
+                                                          "id": "d6dbfb8d-c4af-4da0-8a06-9506b572e50c",
+                                                          "step": "asset"
+                                                        },
+                                                        {
+                                                          "ticker": "SEF",
+                                                          "exchange": "ARCX",
+                                                          "name": "ProShares Short Financials",
+                                                          "id": "324a0e50-771b-49a8-a3da-23afe5ae4a94",
+                                                          "step": "asset"
+                                                        }
+                                                      ],
+                                                      "weight": {
+                                                        "num": 60,
+                                                        "den": 100
+                                                      }
+                                                    },
+                                                    {
+                                                      "weight": {
+                                                        "num": "40",
+                                                        "den": 100
+                                                      },
+                                                      "id": "2a7f0e5f-c7c0-4bec-afca-525d9df9ce22",
+                                                      "step": "group",
+                                                      "name": "Profit Taking Crude Shorting",
+                                                      "children": [
+                                                        {
+                                                          "step": "wt-cash-equal",
+                                                          "id": "0e076fd1-a872-4a93-8572-9c07885053a8",
+                                                          "children": [
+                                                            {
+                                                              "id": "2ae5ab25-e07e-44a6-8f84-6f56a5193d3f",
+                                                              "step": "if",
+                                                              "children": [
+                                                                {
+                                                                  "children": [
+                                                                    {
+                                                                      "id": "2e2e049d-63c5-45da-aac2-71a6daef8c80",
+                                                                      "step": "wt-cash-equal",
+                                                                      "children": [
+                                                                        {
+                                                                          "id": "7ae49ec2-1813-4dcc-916f-8609c73aca04",
+                                                                          "step": "if",
+                                                                          "children": [
+                                                                            {
+                                                                              "children": [
+                                                                                {
+                                                                                  "id": "52843f74-903a-405a-9445-928bf054f2fe",
+                                                                                  "step": "wt-cash-equal",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "id": "351b3506-3402-44bd-80e1-b4659dbaa109",
+                                                                                      "step": "group",
+                                                                                      "name": "Group",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "step": "wt-cash-equal",
+                                                                                          "id": "7d66c7be-358e-495d-9e18-5dbf62d7f522",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "ticker": "TLT",
+                                                                                              "exchange": "XNAS",
+                                                                                              "name": "iShares 20+ Year Treasury Bond ETF",
+                                                                                              "id": "dc8b7223-b365-4d0c-86ea-9d435f62679f",
+                                                                                              "step": "asset"
+                                                                                            },
+                                                                                            {
+                                                                                              "ticker": "GDX",
+                                                                                              "exchange": "ARCX",
+                                                                                              "name": "VanEck Gold Miners ETF",
+                                                                                              "id": "ab7aa80b-0c88-43d0-8a28-3af8189d087e",
+                                                                                              "step": "asset"
+                                                                                            },
+                                                                                            {
+                                                                                              "ticker": "SMH",
+                                                                                              "exchange": "XNAS",
+                                                                                              "name": "VanEck Semiconductor ETF",
+                                                                                              "id": "bba17775-5a09-4606-bca9-9c24a1f4e68e",
+                                                                                              "step": "asset"
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ],
+                                                                                  "weight": {
+                                                                                    "num": "70",
+                                                                                    "den": 100
+                                                                                  }
+                                                                                }
+                                                                              ],
+                                                                              "lhs-fn-params": {
+                                                                                "window": 10
+                                                                              },
+                                                                              "is-else-condition?": false,
+                                                                              "rhs-fixed-value?": true,
+                                                                              "lhs-fn": "max-drawdown",
+                                                                              "lhs-val": "USO",
+                                                                              "id": "8ca92720-f6f1-4c87-bb61-815ce7a9db65",
+                                                                              "comparator": "gt",
+                                                                              "rhs-val": "8.5",
+                                                                              "step": "if-child"
+                                                                            },
+                                                                            {
+                                                                              "id": "8fab7466-6947-4ebf-8945-cbc338a2671c",
+                                                                              "step": "if-child",
+                                                                              "is-else-condition?": true,
+                                                                              "children": [
+                                                                                {
+                                                                                  "id": "e56fee4f-557f-482e-984b-167a6413484e",
+                                                                                  "step": "wt-cash-equal",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "id": "2be9462d-060e-4e8d-81e2-86bf926d87b6",
+                                                                                      "step": "if",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "id": "1f10ade4-78b5-4f7c-91b8-16470eb11563",
+                                                                                              "step": "wt-cash-equal",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "id": "f23515d9-1988-45c2-ace5-f0675adc730b",
+                                                                                                  "step": "group",
+                                                                                                  "name": "Group",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "step": "wt-cash-equal",
+                                                                                                      "id": "4191c993-d1f7-492a-9e52-7614c8f0d051",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "ticker": "TLT",
+                                                                                                          "exchange": "XNAS",
+                                                                                                          "name": "iShares 20+ Year Treasury Bond ETF",
+                                                                                                          "id": "b9ac4ff8-e3a1-4fe7-be9c-aafb8fc4c4e2",
+                                                                                                          "step": "asset"
+                                                                                                        },
+                                                                                                        {
+                                                                                                          "ticker": "GDX",
+                                                                                                          "exchange": "ARCX",
+                                                                                                          "name": "VanEck Gold Miners ETF",
+                                                                                                          "id": "6bf4d712-fe8b-4234-8b1c-341cc08b97ba",
+                                                                                                          "step": "asset"
+                                                                                                        },
+                                                                                                        {
+                                                                                                          "ticker": "SMH",
+                                                                                                          "exchange": "XNAS",
+                                                                                                          "name": "VanEck Semiconductor ETF",
+                                                                                                          "id": "97a18f1c-d042-48c4-9a1a-b5bc7239ab64",
+                                                                                                          "step": "asset"
+                                                                                                        }
+                                                                                                      ]
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ],
+                                                                                              "weight": {
+                                                                                                "num": "70",
+                                                                                                "den": 100
+                                                                                              }
+                                                                                            }
+                                                                                          ],
+                                                                                          "lhs-fn-params": {
+                                                                                            "window": 3
+                                                                                          },
+                                                                                          "is-else-condition?": false,
+                                                                                          "rhs-fixed-value?": true,
+                                                                                          "lhs-fn": "max-drawdown",
+                                                                                          "lhs-val": "USO",
+                                                                                          "id": "02a975cd-735a-4b44-bf32-65036d58555c",
+                                                                                          "comparator": "gt",
+                                                                                          "rhs-val": "4",
+                                                                                          "step": "if-child"
+                                                                                        },
+                                                                                        {
+                                                                                          "id": "9721aa7b-3349-44e9-9996-a981a7825930",
+                                                                                          "step": "if-child",
+                                                                                          "is-else-condition?": true,
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "ticker": "SCO",
+                                                                                              "exchange": "ARCX",
+                                                                                              "name": "ProShares UltraShort Bloomberg Crude Oil",
+                                                                                              "id": "c4718d54-1e2b-40d9-9edd-f813a9d49705",
+                                                                                              "step": "asset"
+                                                                                            },
+                                                                                            {
+                                                                                              "ticker": "TMF",
+                                                                                              "exchange": "ARCX",
+                                                                                              "name": "Direxion Daily 20+ Year Treasury Bull 3X Shares",
+                                                                                              "id": "1c0ba039-c281-45e2-92b5-c7b433edbe98",
+                                                                                              "step": "asset"
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ],
+                                                                                      "weight": {
+                                                                                        "num": 15,
+                                                                                        "den": 100
+                                                                                      }
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ],
+                                                                          "weight": {
+                                                                            "num": 15,
+                                                                            "den": 100
+                                                                          }
+                                                                        }
+                                                                      ],
+                                                                      "weight": {
+                                                                        "num": "70",
+                                                                        "den": 100
+                                                                      }
+                                                                    }
+                                                                  ],
+                                                                  "lhs-fn-params": {
+                                                                    "window": 30
+                                                                  },
+                                                                  "is-else-condition?": false,
+                                                                  "rhs-fixed-value?": true,
+                                                                  "lhs-fn": "max-drawdown",
+                                                                  "lhs-val": "USO",
+                                                                  "id": "0745fce6-e982-4273-ab60-105d77a84691",
+                                                                  "comparator": "gt",
+                                                                  "rhs-val": "26",
+                                                                  "step": "if-child"
+                                                                },
+                                                                {
+                                                                  "id": "93eabb10-bc9a-4c19-ad27-2ae45946c189",
+                                                                  "step": "if-child",
+                                                                  "is-else-condition?": true,
+                                                                  "children": [
+                                                                    {
+                                                                      "id": "021f6483-defa-4f58-9cfc-9b4a181635e7",
+                                                                      "step": "wt-cash-equal",
+                                                                      "children": [
+                                                                        {
+                                                                          "id": "d31bbc77-e471-4a34-ba55-ce691a6a6f7b",
+                                                                          "step": "if",
+                                                                          "children": [
+                                                                            {
+                                                                              "children": [
+                                                                                {
+                                                                                  "id": "dca5402d-d4b7-4737-86d5-fed260898c00",
+                                                                                  "step": "wt-cash-equal",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "id": "6d58cf24-ef3a-4308-a4d9-e83b83ffee64",
+                                                                                      "step": "group",
+                                                                                      "name": "Group",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "step": "wt-cash-equal",
+                                                                                          "id": "6f48c778-b8e0-4552-a8d7-eef30a799f62",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "ticker": "TLT",
+                                                                                              "exchange": "XNAS",
+                                                                                              "name": "iShares 20+ Year Treasury Bond ETF",
+                                                                                              "id": "d77bfad6-f267-4966-8129-5f44ac74810d",
+                                                                                              "step": "asset"
+                                                                                            },
+                                                                                            {
+                                                                                              "ticker": "GDX",
+                                                                                              "exchange": "ARCX",
+                                                                                              "name": "VanEck Gold Miners ETF",
+                                                                                              "id": "64827a60-ffb5-4db0-b6c4-09f7ac59dd0b",
+                                                                                              "step": "asset"
+                                                                                            },
+                                                                                            {
+                                                                                              "ticker": "SMH",
+                                                                                              "exchange": "XNAS",
+                                                                                              "name": "VanEck Semiconductor ETF",
+                                                                                              "id": "1c0668fc-2f5d-4b9a-9e02-dfb558f40fbf",
+                                                                                              "step": "asset"
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ],
+                                                                                  "weight": {
+                                                                                    "num": "70",
+                                                                                    "den": 100
+                                                                                  }
+                                                                                }
+                                                                              ],
+                                                                              "lhs-fn-params": {
+                                                                                "window": 6
+                                                                              },
+                                                                              "is-else-condition?": false,
+                                                                              "rhs-fixed-value?": true,
+                                                                              "lhs-fn": "max-drawdown",
+                                                                              "lhs-val": "USO",
+                                                                              "id": "74aa6f4b-a69e-419f-8af6-dcadb4b37556",
+                                                                              "comparator": "gt",
+                                                                              "rhs-val": "7.4",
+                                                                              "step": "if-child"
+                                                                            },
+                                                                            {
+                                                                              "id": "d7a7150b-fb1b-47b2-b045-2bb76a24d695",
+                                                                              "step": "if-child",
+                                                                              "is-else-condition?": true,
+                                                                              "children": [
+                                                                                {
+                                                                                  "id": "643ddd1a-5ee4-46b3-b866-c7ec8b9fd936",
+                                                                                  "step": "wt-cash-equal",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "id": "d41c98b8-fece-4ce9-b842-c15aed10ea7a",
+                                                                                      "step": "if",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "id": "3c3028bc-908f-44ad-a517-24b735c664ff",
+                                                                                              "step": "wt-cash-equal",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "id": "9a89eddd-c278-4b01-a43a-5d10e72dc9f5",
+                                                                                                  "step": "group",
+                                                                                                  "name": "Group",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "step": "wt-cash-equal",
+                                                                                                      "id": "e9933588-c964-4dda-83c4-05927712493c",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "ticker": "TLT",
+                                                                                                          "exchange": "XNAS",
+                                                                                                          "name": "iShares 20+ Year Treasury Bond ETF",
+                                                                                                          "id": "01ae8b22-6862-45c0-97f2-50c704b695f6",
+                                                                                                          "step": "asset"
+                                                                                                        },
+                                                                                                        {
+                                                                                                          "ticker": "GDX",
+                                                                                                          "exchange": "ARCX",
+                                                                                                          "name": "VanEck Gold Miners ETF",
+                                                                                                          "id": "b70f073d-4251-4d06-a01e-9e38f518250e",
+                                                                                                          "step": "asset"
+                                                                                                        },
+                                                                                                        {
+                                                                                                          "ticker": "SMH",
+                                                                                                          "exchange": "XNAS",
+                                                                                                          "name": "VanEck Semiconductor ETF",
+                                                                                                          "id": "2366b221-9266-4090-93b8-07e4313ee383",
+                                                                                                          "step": "asset"
+                                                                                                        }
+                                                                                                      ]
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ],
+                                                                                              "weight": {
+                                                                                                "num": "70",
+                                                                                                "den": 100
+                                                                                              }
+                                                                                            }
+                                                                                          ],
+                                                                                          "lhs-fn-params": {
+                                                                                            "window": 3
+                                                                                          },
+                                                                                          "is-else-condition?": false,
+                                                                                          "rhs-fixed-value?": true,
+                                                                                          "lhs-fn": "max-drawdown",
+                                                                                          "lhs-val": "USO",
+                                                                                          "id": "be1e43f1-37ac-41b7-9d63-73485ba6fba3",
+                                                                                          "comparator": "gt",
+                                                                                          "rhs-val": "4",
+                                                                                          "step": "if-child"
+                                                                                        },
+                                                                                        {
+                                                                                          "id": "7241b63c-38ae-4305-b54c-a1acfd79d109",
+                                                                                          "step": "if-child",
+                                                                                          "is-else-condition?": true,
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "ticker": "SCO",
+                                                                                              "exchange": "ARCX",
+                                                                                              "name": "ProShares UltraShort Bloomberg Crude Oil",
+                                                                                              "id": "4d20c234-be2e-4290-9f7f-47908270f210",
+                                                                                              "step": "asset"
+                                                                                            },
+                                                                                            {
+                                                                                              "ticker": "TMF",
+                                                                                              "exchange": "ARCX",
+                                                                                              "name": "Direxion Daily 20+ Year Treasury Bull 3X Shares",
+                                                                                              "id": "709800d0-bec4-4a8e-a517-fcc06f053613",
+                                                                                              "step": "asset"
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ],
+                                                                                      "weight": {
+                                                                                        "num": 15,
+                                                                                        "den": 100
+                                                                                      }
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ],
+                                                                          "weight": {
+                                                                            "num": 15,
+                                                                            "den": 100
+                                                                          }
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ],
+                                                              "weight": {
+                                                                "num": 15,
+                                                                "den": 100
+                                                              }
+                                                            }
+                                                          ]
+                                                        }
+                                                      ],
+                                                      "collapsed?": false
+                                                    }
+                                                  ],
+                                                  "collapsed?": false
+                                                }
+                                              ],
+                                              "lhs-fn-params": {
+                                                "window": 75
+                                              },
+                                              "rhs-fn": "moving-average-return",
+                                              "is-else-condition?": false,
+                                              "lhs-fn": "moving-average-return",
+                                              "lhs-val": "SPY",
+                                              "id": "eb80f9ba-9c3a-4c7c-bfd5-fd7347bc08c9",
+                                              "rhs-fn-params": {
+                                                "window": 75
+                                              },
+                                              "comparator": "lt",
+                                              "rhs-val": "SPLV",
+                                              "step": "if-child"
+                                            },
+                                            {
+                                              "id": "1bf6b2f5-048f-4952-8db2-e644e94109be",
+                                              "step": "if-child",
+                                              "is-else-condition?": true,
+                                              "children": [
+                                                {
+                                                  "id": "ee9a3a37-4b8e-4d8c-8e5d-5d0aa84adfa8",
+                                                  "step": "wt-cash-equal",
+                                                  "children": [
+                                                    {
+                                                      "id": "a26cc0ef-36ba-4427-9ff5-326eeca5fda1",
+                                                      "step": "if",
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "step": "wt-cash-specified",
+                                                              "id": "f4f4e564-f5c1-4aeb-9406-881905b92514",
+                                                              "children": [
+                                                                {
+                                                                  "step": "wt-cash-equal",
+                                                                  "id": "2716c441-5422-419f-81cb-33b1bf334fb8",
+                                                                  "children": [
+                                                                    {
+                                                                      "ticker": "KIE",
+                                                                      "exchange": "ARCX",
+                                                                      "name": "SPDR S&P Insurance ETF",
+                                                                      "id": "f97f353a-963d-4758-ab9f-ac36b36ddd4d",
+                                                                      "step": "asset"
+                                                                    },
+                                                                    {
+                                                                      "ticker": "IAI",
+                                                                      "exchange": "ARCX",
+                                                                      "name": "iShares U.S. Broker-Dealers & Securities Exchanges ETF",
+                                                                      "id": "2cfcdb05-f3d1-4011-b001-5ceb03754ce4",
+                                                                      "step": "asset"
+                                                                    },
+                                                                    {
+                                                                      "ticker": "QUAL",
+                                                                      "exchange": "BATS",
+                                                                      "name": "iShares MSCI USA Quality Factor ETF",
+                                                                      "id": "96e958ba-573d-4578-b3d8-988f6e3f6f08",
+                                                                      "step": "asset"
+                                                                    }
+                                                                  ],
+                                                                  "weight": {
+                                                                    "num": "75",
+                                                                    "den": 100
+                                                                  }
+                                                                },
+                                                                {
+                                                                  "id": "6c32ec75-8d9a-4bb3-9f3e-e3e7d1d369cc",
+                                                                  "step": "wt-cash-equal",
+                                                                  "children": [
+                                                                    {
+                                                                      "ticker": "YCS",
+                                                                      "exchange": "ARCX",
+                                                                      "name": "ProShares UltraShort Yen",
+                                                                      "id": "a4e376d9-dd51-4ec0-959e-2d9ad4974303",
+                                                                      "step": "asset"
+                                                                    },
+                                                                    {
+                                                                      "ticker": "YCS",
+                                                                      "exchange": "ARCX",
+                                                                      "name": "ProShares UltraShort Yen",
+                                                                      "id": "329aeeb2-d1b5-463b-b816-5c2f9877a279",
+                                                                      "step": "asset"
+                                                                    },
+                                                                    {
+                                                                      "ticker": "TBT",
+                                                                      "exchange": "ARCX",
+                                                                      "name": "ProShares UltraShort 20+ Year Treasury",
+                                                                      "id": "12b11064-6ac9-46ea-ae6d-2405955339b5",
+                                                                      "step": "asset"
+                                                                    },
+                                                                    {
+                                                                      "ticker": "TBT",
+                                                                      "exchange": "ARCX",
+                                                                      "name": "ProShares UltraShort 20+ Year Treasury",
+                                                                      "id": "ccf1e8c0-6444-47d8-9f1e-6314f35330b1",
+                                                                      "step": "asset"
+                                                                    },
+                                                                    {
+                                                                      "ticker": "UNL",
+                                                                      "exchange": "ARCX",
+                                                                      "name": "United States 12 Month Natural Gas Fund LP",
+                                                                      "id": "05640452-4ef0-43bf-9f9f-aadc47e94e89",
+                                                                      "step": "asset"
+                                                                    }
+                                                                  ],
+                                                                  "weight": {
+                                                                    "num": 25,
+                                                                    "den": 100
+                                                                  }
+                                                                }
+                                                              ],
+                                                              "collapsed?": false
+                                                            }
+                                                          ],
+                                                          "lhs-fn-params": {
+                                                            "window": 9
+                                                          },
+                                                          "rhs-fn": "moving-average-return",
+                                                          "is-else-condition?": false,
+                                                          "lhs-fn": "moving-average-return",
+                                                          "lhs-val": "SPY",
+                                                          "id": "81d58575-a54a-4062-9138-a5c6bb664af5",
+                                                          "rhs-fn-params": {
+                                                            "window": 9
+                                                          },
+                                                          "comparator": "gt",
+                                                          "rhs-val": "SPLV",
+                                                          "step": "if-child"
+                                                        },
+                                                        {
+                                                          "id": "b8a4c6fc-d880-42b8-b954-9c380c3ca3b8",
+                                                          "step": "if-child",
+                                                          "is-else-condition?": true,
+                                                          "children": [
+                                                            {
+                                                              "id": "f8c81eb3-1ab1-4be8-b492-0bcb5e8d8ae6",
+                                                              "step": "group",
+                                                              "name": "Group",
+                                                              "children": [
+                                                                {
+                                                                  "step": "wt-cash-equal",
+                                                                  "id": "737292f2-1286-4c3d-aea2-31bf72060061",
+                                                                  "children": [
+                                                                    {
+                                                                      "ticker": "IGV",
+                                                                      "exchange": "BATS",
+                                                                      "name": "iShares Expanded Tech-Software Sector ETF",
+                                                                      "id": "6a5a1cbf-f506-4eb4-ad0f-a0c8589bab4a",
+                                                                      "step": "asset"
+                                                                    },
+                                                                    {
+                                                                      "ticker": "ITB",
+                                                                      "exchange": "BATS",
+                                                                      "name": "iShares U.S. Home Construction ETF",
+                                                                      "id": "85e694e7-6134-4daf-9872-ff1d861da7ab",
+                                                                      "step": "asset"
+                                                                    },
+                                                                    {
+                                                                      "ticker": "XBI",
+                                                                      "exchange": "ARCX",
+                                                                      "name": "SPDR S&P BIOTECH ETF",
+                                                                      "id": "3a95a4c9-b577-4375-8883-37878560f02e",
+                                                                      "step": "asset"
+                                                                    },
+                                                                    {
+                                                                      "ticker": "SMH",
+                                                                      "exchange": "XNAS",
+                                                                      "name": "VanEck Semiconductor ETF",
+                                                                      "id": "3a590ec1-7060-4948-bc7d-30a69fba2028",
+                                                                      "step": "asset"
+                                                                    },
+                                                                    {
+                                                                      "ticker": "YCS",
+                                                                      "exchange": "ARCX",
+                                                                      "name": "ProShares UltraShort Yen",
+                                                                      "id": "2efebe87-7334-4094-a101-73065f4a5b8a",
+                                                                      "step": "asset"
+                                                                    },
+                                                                    {
+                                                                      "ticker": "SDP",
+                                                                      "exchange": "ARCX",
+                                                                      "name": "ProShares UltraShort Utilities",
+                                                                      "id": "49bcaebc-e690-43f0-956c-38bba7053bfe",
+                                                                      "step": "asset"
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ],
+                                                      "weight": {
+                                                        "num": 100,
+                                                        "den": 100
+                                                      }
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "collapsed?": false
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "collapsed?": true
+        }
+      ]
+    }
+  ]
+}

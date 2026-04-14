@@ -1,0 +1,112 @@
+{
+  "id": "c845e2ab-85d5-46eb-8741-150d7c430667",
+  "step": "root",
+  "name": "Volatility",
+  "description": "",
+  "rebalance": "daily",
+  "children": [
+    {
+      "id": "3e2a2532-de5c-4a25-9363-e7f274b6d8a7",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "ProShares Ultra VIX Short-Term Futures ETF",
+                          "ticker": "UVXY",
+                          "id": "d4eaabd9-d20b-41b8-98dd-854adf73732a",
+                          "exchange": "BATS",
+                          "step": "asset"
+                        }
+                      ],
+                      "lhs-fn-params": {
+                        "window": 10
+                      },
+                      "is-else-condition?": false,
+                      "rhs-fixed-value?": true,
+                      "lhs-fn": "relative-strength-index",
+                      "lhs-val": "TQQQ",
+                      "id": "cbed2eaa-2de3-4243-9d98-5bb8f55879c1",
+                      "comparator": "gt",
+                      "rhs-val": "79",
+                      "step": "if-child"
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "name": "ProShares Ultra VIX Short-Term Futures ETF",
+                                      "ticker": "UVXY",
+                                      "id": "b0e3437b-0cab-4694-9316-52bcc96465e3",
+                                      "exchange": "BATS",
+                                      "step": "asset"
+                                    }
+                                  ],
+                                  "lhs-fn-params": {
+                                    "window": 10
+                                  },
+                                  "is-else-condition?": false,
+                                  "rhs-fixed-value?": true,
+                                  "lhs-fn": "relative-strength-index",
+                                  "lhs-val": "SPY",
+                                  "id": "76fe0a34-3568-421c-97c1-85e1ee71e1d6",
+                                  "comparator": "gt",
+                                  "rhs-val": "80",
+                                  "step": "if-child"
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "name": "iShares 1-3 Year Treasury Bond ETF",
+                                      "ticker": "SHY",
+                                      "id": "48b773c7-f181-4201-85ce-e7570ede5510",
+                                      "exchange": "XNAS",
+                                      "step": "asset"
+                                    }
+                                  ],
+                                  "is-else-condition?": true,
+                                  "id": "60688494-6fe6-46d0-816f-42ad9c5b8b94",
+                                  "step": "if-child"
+                                }
+                              ],
+                              "id": "e4e92e3e-1c5b-4732-b885-82f1f201c545",
+                              "step": "if"
+                            }
+                          ],
+                          "id": "6f80e00b-77b9-4688-9a13-8d40c634eb12",
+                          "step": "wt-cash-equal"
+                        }
+                      ],
+                      "is-else-condition?": true,
+                      "id": "4c4bdbba-98cf-43b0-a52d-3d937dd6a428",
+                      "step": "if-child"
+                    }
+                  ],
+                  "id": "47ba1f34-654c-488f-9d76-14e611681862",
+                  "step": "if"
+                }
+              ],
+              "id": "8ba9764b-8f05-41e1-84d6-37a372834d8a",
+              "step": "wt-cash-equal"
+            }
+          ],
+          "name": "Volatility",
+          "id": "d3484790-fdb9-4a50-93ef-92989d92f74c",
+          "step": "group",
+          "collapsed?": true
+        }
+      ]
+    }
+  ]
+}

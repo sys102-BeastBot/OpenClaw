@@ -1,0 +1,386 @@
+{
+  "id": "8dfed626-b6f1-4673-8fcf-ab6f0979b7a0",
+  "step": "root",
+  "name": "Rising Rates Vol Switch Simple",
+  "description": "",
+  "rebalance": "daily",
+  "children": [
+    {
+      "id": "efd65837-823c-4b4e-9cf5-b2df0edcd389",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "name": "ProShares Ultra VIX Short-Term Futures ETF",
+                              "ticker": "UVXY",
+                              "has_marketcap": false,
+                              "id": "78024ed1-e4da-4fc0-b28e-bd035147a71e",
+                              "exchange": "BATS",
+                              "price": 4.89,
+                              "step": "asset",
+                              "dollar_volume": 245260600.38
+                            }
+                          ],
+                          "id": "8c51b26f-703d-4bac-ab0d-7d464f509414",
+                          "step": "wt-cash-equal"
+                        }
+                      ],
+                      "is-else-condition?": false,
+                      "rhs-fixed-value?": true,
+                      "lhs-fn": "relative-strength-index",
+                      "lhs-window-days": "10",
+                      "lhs-val": "QQQ",
+                      "id": "80e0c15b-560f-4b4a-be2a-d8d2fc914a56",
+                      "comparator": "gt",
+                      "rhs-val": "79",
+                      "step": "if-child"
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "select?": true,
+                                          "children": [
+                                            {
+                                              "name": "ProShares UltraPro QQQ",
+                                              "ticker": "TQQQ",
+                                              "has_marketcap": false,
+                                              "id": "80cd179a-a790-4c77-94a2-3197229d658b",
+                                              "exchange": "XNAS",
+                                              "price": 25.52,
+                                              "step": "asset",
+                                              "dollar_volume": 6824155617.84
+                                            },
+                                            {
+                                              "name": "Vanguard Short-Term Bond ETF",
+                                              "ticker": "BSV",
+                                              "has_marketcap": false,
+                                              "id": "714b3384-3f44-4d12-8ecb-5866b2d0d8a0",
+                                              "exchange": "ARCX",
+                                              "price": 75.99,
+                                              "step": "asset",
+                                              "dollar_volume": 254117019.14999998
+                                            }
+                                          ],
+                                          "select-fn": "bottom",
+                                          "select-n": "1",
+                                          "sort-by-fn": "relative-strength-index",
+                                          "sort-by-window-days": "10",
+                                          "id": "0b4dcbf9-b55d-4538-9d47-69dc8f1e5558",
+                                          "sort-by?": true,
+                                          "step": "filter"
+                                        }
+                                      ],
+                                      "id": "1513d80c-5e90-497f-98d5-4306ff4c8301",
+                                      "step": "wt-cash-equal"
+                                    }
+                                  ],
+                                  "is-else-condition?": false,
+                                  "rhs-fixed-value?": true,
+                                  "lhs-fn": "relative-strength-index",
+                                  "lhs-window-days": "10",
+                                  "lhs-val": "QQQ",
+                                  "id": "9d7f3938-4e39-46ba-b55a-3fdc0ccfd57b",
+                                  "comparator": "lt",
+                                  "rhs-val": "32",
+                                  "step": "if-child"
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "select?": true,
+                                                          "children": [
+                                                            {
+                                                              "name": "iMGP DBi Managed Futures Strategy ETF",
+                                                              "ticker": "DBMF",
+                                                              "has_marketcap": false,
+                                                              "id": "b3183283-93d3-4f4f-8157-3c3a30e5d520",
+                                                              "exchange": "ARCX",
+                                                              "price": 28.14,
+                                                              "step": "asset",
+                                                              "dollar_volume": 12588035.040000001
+                                                            },
+                                                            {
+                                                              "name": "ProShares UltraPro Short QQQ",
+                                                              "ticker": "SQQQ",
+                                                              "has_marketcap": false,
+                                                              "id": "39e27699-0ce0-4219-8246-b0547686b929",
+                                                              "exchange": "XNAS",
+                                                              "price": 34.67,
+                                                              "step": "asset",
+                                                              "dollar_volume": 7367650903.860001
+                                                            }
+                                                          ],
+                                                          "select-fn": "bottom",
+                                                          "select-n": "1",
+                                                          "sort-by-fn": "moving-average-return",
+                                                          "sort-by-window-days": "25",
+                                                          "id": "c97d4ae0-5503-4928-8498-2f13ad17c00b",
+                                                          "sort-by?": true,
+                                                          "step": "filter"
+                                                        }
+                                                      ],
+                                                      "window-days": 45,
+                                                      "id": "ed106f44-de47-4111-ad69-853dd6f06bf4",
+                                                      "step": "wt-cash-equal"
+                                                    }
+                                                  ],
+                                                  "name": "Risk Off",
+                                                  "id": "c62e087d-7788-4392-9f83-c81345b6c451",
+                                                  "step": "group",
+                                                  "collapsed?": false
+                                                }
+                                              ],
+                                              "is-else-condition?": false,
+                                              "rhs-fixed-value?": true,
+                                              "lhs-fn": "max-drawdown",
+                                              "lhs-window-days": "12",
+                                              "lhs-val": "QQQ",
+                                              "id": "41f79119-282f-4dda-8fb3-6b62e43232fe",
+                                              "comparator": "gt",
+                                              "rhs-val": "6",
+                                              "step": "if-child"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [
+                                                                {
+                                                                  "select?": true,
+                                                                  "children": [
+                                                                    {
+                                                                      "name": "iMGP DBi Managed Futures Strategy ETF",
+                                                                      "ticker": "DBMF",
+                                                                      "has_marketcap": false,
+                                                                      "id": "460793be-ccea-4031-8820-e28afe7f5c8e",
+                                                                      "exchange": "ARCX",
+                                                                      "price": 28.14,
+                                                                      "step": "asset",
+                                                                      "dollar_volume": 12588035.040000001
+                                                                    },
+                                                                    {
+                                                                      "name": "Direxion Daily 20+ Year Treasury Bear 3x Shares",
+                                                                      "ticker": "TMV",
+                                                                      "has_marketcap": false,
+                                                                      "id": "3ef9abdb-cba7-4922-b3b9-bf013440df3a",
+                                                                      "exchange": "ARCX",
+                                                                      "price": 108.95,
+                                                                      "step": "asset",
+                                                                      "dollar_volume": 47910762.5
+                                                                    }
+                                                                  ],
+                                                                  "select-fn": "bottom",
+                                                                  "select-n": "1",
+                                                                  "sort-by-fn": "relative-strength-index",
+                                                                  "sort-by-window-days": "20",
+                                                                  "id": "cfb9caf7-522b-4eee-ad00-20902eb1c3df",
+                                                                  "sort-by?": true,
+                                                                  "step": "filter"
+                                                                }
+                                                              ],
+                                                              "window-days": 45,
+                                                              "id": "1fc64f19-31f4-40ab-b9ff-2fd58de63694",
+                                                              "step": "wt-cash-equal"
+                                                            }
+                                                          ],
+                                                          "rhs-fn": "standard-deviation-return",
+                                                          "is-else-condition?": false,
+                                                          "rhs-fixed-value?": true,
+                                                          "lhs-fn": "max-drawdown",
+                                                          "rhs-window-days": "252",
+                                                          "lhs-window-days": "10",
+                                                          "lhs-val": "TMF",
+                                                          "id": "3b885610-ce7e-4555-823f-e0e327a133fd",
+                                                          "comparator": "gt",
+                                                          "rhs-val": "7",
+                                                          "step": "if-child"
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [
+                                                                {
+                                                                  "name": "Direxion Daily 20+ Year Treasury Bull 3X Shares",
+                                                                  "ticker": "TMF",
+                                                                  "has_marketcap": false,
+                                                                  "weight": {
+                                                                    "num": 100,
+                                                                    "den": 100
+                                                                  },
+                                                                  "id": "abb5e46e-d40c-419b-8a88-310ae7b21818",
+                                                                  "exchange": "ARCX",
+                                                                  "price": 24.3,
+                                                                  "step": "asset",
+                                                                  "dollar_volume": 40718052
+                                                                },
+                                                                {
+                                                                  "name": "Direxion Daily Financial Bull 3x Shares",
+                                                                  "ticker": "FAS",
+                                                                  "has_marketcap": false,
+                                                                  "id": "7307db02-66da-429d-8cbc-c2f92075f2f1",
+                                                                  "exchange": "ARCX",
+                                                                  "price": 137.31,
+                                                                  "step": "asset",
+                                                                  "dollar_volume": 246361464.69
+                                                                },
+                                                                {
+                                                                  "name": "ProShares UltraPro QQQ",
+                                                                  "ticker": "TQQQ",
+                                                                  "has_marketcap": false,
+                                                                  "id": "6e3a56ff-2089-4145-b41f-f5f75725dafb",
+                                                                  "exchange": "XNAS",
+                                                                  "price": 38.34,
+                                                                  "step": "asset",
+                                                                  "dollar_volume": 5447253190.320001
+                                                                },
+                                                                {
+                                                                  "name": "Direxion Daily Healthcare Bull 3x Shares",
+                                                                  "ticker": "CURE",
+                                                                  "has_marketcap": false,
+                                                                  "id": "7bdb3386-eae8-4746-8b1d-e3966d33a27a",
+                                                                  "exchange": "ARCX",
+                                                                  "price": 105.43,
+                                                                  "step": "asset",
+                                                                  "dollar_volume": 6296068.74
+                                                                },
+                                                                {
+                                                                  "name": "Direxion Daily Semiconductor Bull 3x Shares",
+                                                                  "ticker": "SOXL",
+                                                                  "has_marketcap": false,
+                                                                  "id": "8c7a3cfa-abb5-4b64-80f5-6b01c5092ec9",
+                                                                  "exchange": "ARCX",
+                                                                  "price": 16.93,
+                                                                  "step": "asset",
+                                                                  "dollar_volume": 1606108925.11
+                                                                },
+                                                                {
+                                                                  "name": "ProShares UltraPro S&P500",
+                                                                  "ticker": "UPRO",
+                                                                  "has_marketcap": false,
+                                                                  "id": "585c80de-b97b-4b20-b92a-5ee10c8e5adc",
+                                                                  "exchange": "ARCX",
+                                                                  "price": 40.3,
+                                                                  "step": "asset",
+                                                                  "dollar_volume": 645812779.3
+                                                                },
+                                                                {
+                                                                  "name": "Direxion Daily S&P Biotech Bull 3X Shares",
+                                                                  "ticker": "LABU",
+                                                                  "has_marketcap": false,
+                                                                  "id": "371936db-b4b2-4044-bd50-0ae071faa91a",
+                                                                  "exchange": "ARCX",
+                                                                  "price": 8.75,
+                                                                  "step": "asset",
+                                                                  "dollar_volume": 349026343.75
+                                                                }
+                                                              ],
+                                                              "window-days": 45,
+                                                              "weight": {
+                                                                "num": "100",
+                                                                "den": 100
+                                                              },
+                                                              "id": "ae119e16-4a16-4c70-8bfb-3c009f05e179",
+                                                              "step": "wt-inverse-vol"
+                                                            }
+                                                          ],
+                                                          "is-else-condition?": true,
+                                                          "id": "3f9536a8-e91b-497f-a3f2-28425b884231",
+                                                          "step": "if-child"
+                                                        }
+                                                      ],
+                                                      "weight": {
+                                                        "num": "85",
+                                                        "den": 100
+                                                      },
+                                                      "id": "f12a4499-fb07-44f3-94fe-5685cdd50b2f",
+                                                      "step": "if"
+                                                    }
+                                                  ],
+                                                  "id": "970d8356-2472-494f-b1aa-536bef32b92e",
+                                                  "step": "wt-cash-equal"
+                                                }
+                                              ],
+                                              "is-else-condition?": true,
+                                              "id": "b99a8407-7063-4eec-b565-7a0d56def6bc",
+                                              "step": "if-child"
+                                            }
+                                          ],
+                                          "id": "5ef258ad-c532-4614-b766-51dece8a3f8c",
+                                          "step": "if"
+                                        }
+                                      ],
+                                      "id": "ae258b66-00fa-4238-9c95-3e643e4acdb1",
+                                      "step": "wt-cash-equal"
+                                    }
+                                  ],
+                                  "is-else-condition?": true,
+                                  "id": "44efdeab-235d-41b2-a1f9-a5c8022b3421",
+                                  "step": "if-child"
+                                }
+                              ],
+                              "id": "4decb452-5f9b-4544-b9d2-e3dddda69a14",
+                              "step": "if"
+                            }
+                          ],
+                          "id": "d80c6d0d-e226-430e-9d43-e24a405938f6",
+                          "step": "wt-cash-equal"
+                        }
+                      ],
+                      "is-else-condition?": true,
+                      "id": "e1165730-4424-4f73-8e26-e66058b4fa22",
+                      "step": "if-child"
+                    }
+                  ],
+                  "weight": {
+                    "num": 100,
+                    "den": 100
+                  },
+                  "id": "ef79b474-f1eb-4444-b148-44d3bc5fa1bb",
+                  "step": "if"
+                }
+              ],
+              "id": "844f1bff-903d-411f-9bba-cde8afe8ab82",
+              "step": "wt-cash-equal"
+            }
+          ],
+          "name": "Rising Rates Vol Switch Simple",
+          "id": "22a23f1c-baea-4bad-9399-c28aea5233b8",
+          "step": "group",
+          "collapsed?": true
+        }
+      ]
+    }
+  ]
+}

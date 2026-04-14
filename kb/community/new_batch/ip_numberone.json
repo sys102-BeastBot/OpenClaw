@@ -1,0 +1,717 @@
+{
+  "id": "af9b9c1b-20b8-4e48-ae1e-babe0c59fe02",
+  "step": "root",
+  "name": "numberOne",
+  "description": "",
+  "rebalance": "daily",
+  "children": [
+    {
+      "id": "01709f45-88cb-453a-8067-045c3d4ed62f",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "ticker": "UVXY",
+                                      "has_marketcap": false,
+                                      "id": "6bda3a70-d4ab-405c-b3dc-d301ca7a870e",
+                                      "price": 10.52,
+                                      "step": "asset",
+                                      "dollar_volume": 1174265281
+                                    }
+                                  ],
+                                  "is-else-condition?": false,
+                                  "rhs-fixed-value?": true,
+                                  "lhs-fn": "relative-strength-index",
+                                  "lhs-window-days": "10",
+                                  "lhs-val": "QQQ",
+                                  "id": "d8c2f183-912b-4639-9e90-65e398b418c0",
+                                  "comparator": "gt",
+                                  "rhs-val": "79",
+                                  "step": "if-child"
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "ticker": "UVXY",
+                                                  "has_marketcap": false,
+                                                  "id": "871f58bf-ba4f-4842-b592-590a7dee7aad",
+                                                  "price": 9.91,
+                                                  "step": "asset",
+                                                  "dollar_volume": 650525430.03
+                                                }
+                                              ],
+                                              "is-else-condition?": false,
+                                              "rhs-fixed-value?": true,
+                                              "lhs-fn": "relative-strength-index",
+                                              "lhs-window-days": "10",
+                                              "lhs-val": "SPY",
+                                              "id": "5e510f8a-318c-4c8a-ac33-ac6ecef5fd4c",
+                                              "comparator": "gt",
+                                              "rhs-val": "80",
+                                              "step": "if-child"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [
+                                                                {
+                                                                  "children": [
+                                                                    {
+                                                                      "children": [
+                                                                        {
+                                                                          "ticker": "TQQQ",
+                                                                          "has_marketcap": false,
+                                                                          "id": "a616949f-ee1e-4eb6-b103-86dc6ec9e310",
+                                                                          "price": 21.31,
+                                                                          "step": "asset",
+                                                                          "dollar_volume": 5938887884.969999
+                                                                        }
+                                                                      ],
+                                                                      "is-else-condition?": false,
+                                                                      "rhs-fixed-value?": true,
+                                                                      "lhs-fn": "relative-strength-index",
+                                                                      "lhs-window-days": "10",
+                                                                      "lhs-val": "TQQQ",
+                                                                      "id": "fe287850-ba62-4679-8db8-91ae53ea5d4d",
+                                                                      "comparator": "lt",
+                                                                      "rhs-val": "31",
+                                                                      "step": "if-child"
+                                                                    },
+                                                                    {
+                                                                      "children": [
+                                                                        {
+                                                                          "children": [
+                                                                            {
+                                                                              "ticker": "SQQQ",
+                                                                              "id": "ad46b976-0d15-4c91-948e-d27c2d83bb04",
+                                                                              "step": "asset"
+                                                                            }
+                                                                          ],
+                                                                          "id": "f498190e-48a6-40d7-bd4e-02f0fe1a85eb",
+                                                                          "step": "wt-cash-equal"
+                                                                        }
+                                                                      ],
+                                                                      "is-else-condition?": true,
+                                                                      "id": "73df0e18-5d0e-4aff-837f-3a171459548c",
+                                                                      "step": "if-child"
+                                                                    }
+                                                                  ],
+                                                                  "id": "9ba09ef4-14c0-495d-99a7-dc7ce162ada3",
+                                                                  "step": "if"
+                                                                }
+                                                              ],
+                                                              "id": "0d93a421-41f7-4283-9b37-eb720f5ad78a",
+                                                              "step": "wt-cash-equal"
+                                                            }
+                                                          ],
+                                                          "lhs-fn-params": {
+                                                            "window": 6
+                                                          },
+                                                          "is-else-condition?": false,
+                                                          "rhs-fixed-value?": true,
+                                                          "lhs-fn": "cumulative-return",
+                                                          "lhs-val": "TQQQ",
+                                                          "id": "9e64d3a1-e470-4641-94cc-793224391ddb",
+                                                          "comparator": "gt",
+                                                          "rhs-val": "20",
+                                                          "step": "if-child"
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [
+                                                                {
+                                                                  "children": [
+                                                                    {
+                                                                      "children": [
+                                                                        {
+                                                                          "ticker": "QQQ",
+                                                                          "has_marketcap": false,
+                                                                          "id": "cc4704c0-c4a8-4609-b3d7-4b283dd3760f",
+                                                                          "price": 289.39,
+                                                                          "step": "asset",
+                                                                          "dollar_volume": 21221184874.329998
+                                                                        }
+                                                                      ],
+                                                                      "is-else-condition?": false,
+                                                                      "rhs-fixed-value?": true,
+                                                                      "lhs-fn": "relative-strength-index",
+                                                                      "lhs-window-days": "60",
+                                                                      "lhs-val": "TQQQ",
+                                                                      "id": "84de587a-dc3c-4c72-a300-90cfe8d07080",
+                                                                      "comparator": "gt",
+                                                                      "rhs-val": "63",
+                                                                      "step": "if-child"
+                                                                    },
+                                                                    {
+                                                                      "children": [
+                                                                        {
+                                                                          "children": [
+                                                                            {
+                                                                              "children": [
+                                                                                {
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "ticker": "TQQQ",
+                                                                                      "id": "d18e6af7-8f4f-4ffd-b7c6-88eb88f8d380",
+                                                                                      "step": "asset"
+                                                                                    }
+                                                                                  ],
+                                                                                  "is-else-condition?": false,
+                                                                                  "rhs-fixed-value?": true,
+                                                                                  "lhs-fn": "relative-strength-index",
+                                                                                  "lhs-window-days": "60",
+                                                                                  "lhs-val": "TQQQ",
+                                                                                  "id": "2adbbfe7-aa13-4e70-9eaf-bd7b039d4800",
+                                                                                  "comparator": "lt",
+                                                                                  "rhs-val": "55",
+                                                                                  "step": "if-child"
+                                                                                },
+                                                                                {
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "ticker": "QLD",
+                                                                                      "has_marketcap": false,
+                                                                                      "id": "a52816b3-9d35-46a0-b9e9-78b83b21c577",
+                                                                                      "price": 41.96,
+                                                                                      "step": "asset",
+                                                                                      "dollar_volume": 278185065.28000003
+                                                                                    }
+                                                                                  ],
+                                                                                  "is-else-condition?": true,
+                                                                                  "id": "df977eed-f5b7-44ef-80c4-b576b64de4d3",
+                                                                                  "step": "if-child"
+                                                                                }
+                                                                              ],
+                                                                              "id": "1d398852-8030-4a08-81ad-aa08afbe2b80",
+                                                                              "step": "if"
+                                                                            }
+                                                                          ],
+                                                                          "id": "d6c88eb0-fdfe-4ba4-9ff3-63006e91062b",
+                                                                          "step": "wt-cash-equal"
+                                                                        }
+                                                                      ],
+                                                                      "is-else-condition?": true,
+                                                                      "id": "a2cc650b-2400-415a-b67d-28161e595c1e",
+                                                                      "step": "if-child"
+                                                                    }
+                                                                  ],
+                                                                  "id": "c72bbd7d-37bf-4a62-884f-7769dbd840d1",
+                                                                  "step": "if"
+                                                                }
+                                                              ],
+                                                              "id": "03a4125c-449e-45dc-8cfc-e1521ef9521f",
+                                                              "step": "wt-cash-equal"
+                                                            }
+                                                          ],
+                                                          "is-else-condition?": true,
+                                                          "id": "fd7a78b3-c991-4ba9-909b-31797c2d6df0",
+                                                          "step": "if-child"
+                                                        }
+                                                      ],
+                                                      "id": "d4f74696-9a41-467f-a66f-276e7207471e",
+                                                      "step": "if"
+                                                    }
+                                                  ],
+                                                  "id": "f8257c08-9dc5-45ef-ab53-8dc1ad777776",
+                                                  "step": "wt-cash-equal"
+                                                }
+                                              ],
+                                              "is-else-condition?": true,
+                                              "id": "eca83f1a-de92-4fb3-952d-078ebc3c3030",
+                                              "step": "if-child"
+                                            }
+                                          ],
+                                          "id": "75cf2c45-985a-4686-b7e4-ecd77eaa087e",
+                                          "step": "if"
+                                        }
+                                      ],
+                                      "id": "1a392f15-ea38-4878-a641-791de44e863b",
+                                      "step": "wt-cash-equal"
+                                    }
+                                  ],
+                                  "is-else-condition?": true,
+                                  "id": "7e1db6d7-62b7-4077-9148-9eac026c4571",
+                                  "step": "if-child"
+                                }
+                              ],
+                              "id": "4f447cd0-7969-4f3c-a003-f4c80fcfdf36",
+                              "step": "if"
+                            }
+                          ],
+                          "id": "d50fb547-6afd-4369-8f63-ffb5c0364eb9",
+                          "step": "wt-cash-equal"
+                        }
+                      ],
+                      "lhs-fn-params": {},
+                      "rhs-fn": "moving-average-price",
+                      "is-else-condition?": false,
+                      "lhs-fn": "current-price",
+                      "lhs-val": "SPY",
+                      "id": "a4fe3429-ea84-4c6a-8aef-8d6e31869959",
+                      "rhs-fn-params": {
+                        "window": 200
+                      },
+                      "comparator": "gt",
+                      "rhs-val": "SPY",
+                      "step": "if-child"
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "ticker": "SQQQ",
+                                                  "id": "668f3562-35e5-42ba-8550-ff15ed6c4d92",
+                                                  "step": "asset"
+                                                }
+                                              ],
+                                              "lhs-fn-params": {
+                                                "window": 1
+                                              },
+                                              "is-else-condition?": false,
+                                              "rhs-fixed-value?": true,
+                                              "lhs-fn": "cumulative-return",
+                                              "lhs-val": "TQQQ",
+                                              "id": "24f77e98-7803-4c65-afd7-5ecb42e65c1c",
+                                              "comparator": "gt",
+                                              "rhs-val": "5.5",
+                                              "step": "if-child"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "ticker": "TQQQ",
+                                                              "id": "f8ad6f33-9222-4e9f-92e7-e34ceabc0242",
+                                                              "step": "asset"
+                                                            }
+                                                          ],
+                                                          "lhs-fn-params": {
+                                                            "window": 10
+                                                          },
+                                                          "is-else-condition?": false,
+                                                          "rhs-fixed-value?": true,
+                                                          "lhs-fn": "relative-strength-index",
+                                                          "lhs-val": "QQQ",
+                                                          "id": "02206758-9a4b-4315-957b-4ec427d5046a",
+                                                          "comparator": "lt",
+                                                          "rhs-val": "32",
+                                                          "step": "if-child"
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [
+                                                                {
+                                                                  "children": [
+                                                                    {
+                                                                      "children": [
+                                                                        {
+                                                                          "ticker": "TQQQ",
+                                                                          "id": "8a4b378f-bee8-49fa-bb46-267fdee795f1",
+                                                                          "step": "asset"
+                                                                        }
+                                                                      ],
+                                                                      "lhs-fn-params": {
+                                                                        "window": 10
+                                                                      },
+                                                                      "is-else-condition?": false,
+                                                                      "rhs-fixed-value?": true,
+                                                                      "lhs-fn": "max-drawdown",
+                                                                      "lhs-val": "TMF",
+                                                                      "id": "3191a87f-9515-4c14-ae7b-9e46a6c25d51",
+                                                                      "comparator": "lt",
+                                                                      "rhs-val": "7",
+                                                                      "step": "if-child"
+                                                                    },
+                                                                    {
+                                                                      "children": [
+                                                                        {
+                                                                          "ticker": "BIL",
+                                                                          "id": "7772f57f-7f0f-48ec-8754-bc9239033900",
+                                                                          "step": "asset"
+                                                                        }
+                                                                      ],
+                                                                      "is-else-condition?": true,
+                                                                      "id": "b1385726-f95f-4bc6-a301-87ddcc4e53e2",
+                                                                      "step": "if-child"
+                                                                    }
+                                                                  ],
+                                                                  "id": "31446379-d178-4c44-9062-2488b15c4e1e",
+                                                                  "step": "if"
+                                                                }
+                                                              ],
+                                                              "id": "4ffc6e45-b8b0-421f-8bcb-52c55692a1f6",
+                                                              "step": "wt-cash-equal"
+                                                            }
+                                                          ],
+                                                          "is-else-condition?": true,
+                                                          "id": "302ddc05-a673-49dc-a821-86f038ebe011",
+                                                          "step": "if-child"
+                                                        }
+                                                      ],
+                                                      "id": "8737ae41-e4ce-4189-8b24-77f181c2037f",
+                                                      "step": "if"
+                                                    }
+                                                  ],
+                                                  "id": "d8bf4fea-b996-4ef9-bd15-cb90d5623179",
+                                                  "step": "wt-cash-equal"
+                                                }
+                                              ],
+                                              "is-else-condition?": true,
+                                              "id": "bcfe3218-4b67-4d7b-ac8a-1966aac837fa",
+                                              "step": "if-child"
+                                            }
+                                          ],
+                                          "id": "e3d19d22-372f-434b-8fc1-38beb3b35f5d",
+                                          "step": "if"
+                                        }
+                                      ],
+                                      "id": "bd644f16-a932-4454-bf80-7d2c98782f69",
+                                      "step": "wt-cash-equal"
+                                    }
+                                  ],
+                                  "lhs-fn-params": {
+                                    "window": 6
+                                  },
+                                  "is-else-condition?": false,
+                                  "rhs-fixed-value?": true,
+                                  "lhs-fn": "cumulative-return",
+                                  "lhs-val": "TQQQ",
+                                  "id": "fa2eba6d-e204-439c-9021-3f6c5a4157b7",
+                                  "comparator": "lt",
+                                  "rhs-val": "-12",
+                                  "step": "if-child"
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "ticker": "BIL",
+                                                  "id": "9e60cf6d-c16a-4bb9-8219-2140e2d49fd7",
+                                                  "step": "asset"
+                                                }
+                                              ],
+                                              "lhs-fn-params": {
+                                                "window": 10
+                                              },
+                                              "is-else-condition?": false,
+                                              "rhs-fixed-value?": true,
+                                              "lhs-fn": "max-drawdown",
+                                              "lhs-val": "QQQ",
+                                              "id": "95c39a63-5dbd-4460-948a-39e7cc0a6ff5",
+                                              "comparator": "gt",
+                                              "rhs-val": "6",
+                                              "step": "if-child"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "ticker": "TQQQ",
+                                                              "id": "f15558e9-6a84-446e-ae81-cb558f357360",
+                                                              "step": "asset"
+                                                            }
+                                                          ],
+                                                          "lhs-fn-params": {},
+                                                          "rhs-fn": "moving-average-price",
+                                                          "is-else-condition?": false,
+                                                          "lhs-fn": "current-price",
+                                                          "lhs-val": "QQQ",
+                                                          "id": "4b7969ed-9dac-4e13-a201-2786e3adfeaa",
+                                                          "rhs-fn-params": {
+                                                            "window": 25
+                                                          },
+                                                          "comparator": "gt",
+                                                          "rhs-val": "QQQ",
+                                                          "step": "if-child"
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [
+                                                                {
+                                                                  "children": [
+                                                                    {
+                                                                      "children": [
+                                                                        {
+                                                                          "children": [
+                                                                            {
+                                                                              "children": [
+                                                                                {
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "ticker": "TQQQ",
+                                                                                      "id": "cf6fece7-2641-4987-b2f5-314ed2355eb0",
+                                                                                      "step": "asset"
+                                                                                    }
+                                                                                  ],
+                                                                                  "lhs-fn-params": {
+                                                                                    "window": 45
+                                                                                  },
+                                                                                  "rhs-fn": "relative-strength-index",
+                                                                                  "is-else-condition?": false,
+                                                                                  "lhs-fn": "relative-strength-index",
+                                                                                  "lhs-val": "BND",
+                                                                                  "id": "4b069690-b82b-4764-b6f0-76d6ef78742b",
+                                                                                  "rhs-fn-params": {
+                                                                                    "window": 45
+                                                                                  },
+                                                                                  "comparator": "gt",
+                                                                                  "rhs-val": "SPY",
+                                                                                  "step": "if-child"
+                                                                                },
+                                                                                {
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "ticker": "BIL",
+                                                                                      "id": "edd2828c-958d-4eb4-b285-0fbe8030979c",
+                                                                                      "step": "asset"
+                                                                                    }
+                                                                                  ],
+                                                                                  "is-else-condition?": true,
+                                                                                  "id": "7c16e298-ed1a-424e-8eb2-3d77577e635e",
+                                                                                  "step": "if-child"
+                                                                                }
+                                                                              ],
+                                                                              "id": "a8421f5f-bf79-4233-8d3d-ca4bba4945f6",
+                                                                              "step": "if"
+                                                                            }
+                                                                          ],
+                                                                          "id": "713bbc47-fb21-41b8-8350-1555f4d4bd7a",
+                                                                          "step": "wt-cash-equal"
+                                                                        }
+                                                                      ],
+                                                                      "lhs-fn-params": {
+                                                                        "window": 60
+                                                                      },
+                                                                      "is-else-condition?": false,
+                                                                      "rhs-fixed-value?": true,
+                                                                      "lhs-fn": "relative-strength-index",
+                                                                      "lhs-val": "SPY",
+                                                                      "id": "94ea0b45-0f4f-4009-983c-a7d8a23adb9c",
+                                                                      "comparator": "gt",
+                                                                      "rhs-val": "50",
+                                                                      "step": "if-child"
+                                                                    },
+                                                                    {
+                                                                      "children": [
+                                                                        {
+                                                                          "children": [
+                                                                            {
+                                                                              "children": [
+                                                                                {
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "ticker": "TQQQ",
+                                                                                                  "id": "b22985ab-088f-4657-b131-6291505ff672",
+                                                                                                  "step": "asset"
+                                                                                                }
+                                                                                              ],
+                                                                                              "lhs-fn-params": {
+                                                                                                "window": 45
+                                                                                              },
+                                                                                              "rhs-fn": "relative-strength-index",
+                                                                                              "is-else-condition?": false,
+                                                                                              "lhs-fn": "relative-strength-index",
+                                                                                              "lhs-val": "BND",
+                                                                                              "id": "e59fba01-83ad-490d-be06-d140ba73a8d4",
+                                                                                              "rhs-fn-params": {
+                                                                                                "window": 45
+                                                                                              },
+                                                                                              "comparator": "gt",
+                                                                                              "rhs-val": "SPY",
+                                                                                              "step": "if-child"
+                                                                                            },
+                                                                                            {
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "ticker": "BIL",
+                                                                                                  "id": "05c65ad8-1833-40f1-a8b8-c4c591b0b50b",
+                                                                                                  "step": "asset"
+                                                                                                }
+                                                                                              ],
+                                                                                              "is-else-condition?": true,
+                                                                                              "id": "21d424b7-adf6-49a4-aa95-209d07d3ecd2",
+                                                                                              "step": "if-child"
+                                                                                            }
+                                                                                          ],
+                                                                                          "id": "7df9cc43-c4cb-4396-b8da-c06930a83fd2",
+                                                                                          "step": "if"
+                                                                                        }
+                                                                                      ],
+                                                                                      "id": "22615e56-a704-45b7-b40d-602457b0b479",
+                                                                                      "step": "wt-cash-equal"
+                                                                                    }
+                                                                                  ],
+                                                                                  "lhs-fn-params": {
+                                                                                    "window": 200
+                                                                                  },
+                                                                                  "rhs-fn": "relative-strength-index",
+                                                                                  "is-else-condition?": false,
+                                                                                  "lhs-fn": "relative-strength-index",
+                                                                                  "lhs-val": "IEF",
+                                                                                  "id": "c278e95b-f046-477c-9f41-bfac599f47d0",
+                                                                                  "rhs-fn-params": {
+                                                                                    "window": 200
+                                                                                  },
+                                                                                  "comparator": "lt",
+                                                                                  "rhs-val": "TLT",
+                                                                                  "step": "if-child"
+                                                                                },
+                                                                                {
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "ticker": "BIL",
+                                                                                      "id": "734e41e2-c8e8-4303-a8b5-f82d79edb62b",
+                                                                                      "step": "asset"
+                                                                                    }
+                                                                                  ],
+                                                                                  "is-else-condition?": true,
+                                                                                  "id": "a7d44fe1-fabd-497d-a7f5-d14e2006efa9",
+                                                                                  "step": "if-child"
+                                                                                }
+                                                                              ],
+                                                                              "id": "3c8a7169-b14b-488e-a9e5-d9771884a68a",
+                                                                              "step": "if"
+                                                                            }
+                                                                          ],
+                                                                          "id": "d6446a16-2dcb-4421-bb07-b2cbf1b467a0",
+                                                                          "step": "wt-cash-equal"
+                                                                        }
+                                                                      ],
+                                                                      "is-else-condition?": true,
+                                                                      "id": "e47c1a08-471c-4f46-b9c9-ddf626e14b55",
+                                                                      "step": "if-child"
+                                                                    }
+                                                                  ],
+                                                                  "id": "8da08a2f-515a-4c42-9fab-a5d37994f77d",
+                                                                  "step": "if"
+                                                                }
+                                                              ],
+                                                              "id": "6bd2c704-e97b-4423-8a49-c3580934de75",
+                                                              "step": "wt-cash-equal"
+                                                            }
+                                                          ],
+                                                          "is-else-condition?": true,
+                                                          "id": "1191a0b6-7e90-4961-98ba-b07a8788dbc2",
+                                                          "step": "if-child"
+                                                        }
+                                                      ],
+                                                      "id": "f6e8798a-15dd-44ba-bb25-34449a6888d3",
+                                                      "step": "if"
+                                                    }
+                                                  ],
+                                                  "id": "7533339a-03cd-4da8-a56a-28f198ea194b",
+                                                  "step": "wt-cash-equal"
+                                                }
+                                              ],
+                                              "is-else-condition?": true,
+                                              "id": "6d74637e-ddd2-4926-9d73-0a3179184e02",
+                                              "step": "if-child"
+                                            }
+                                          ],
+                                          "id": "33f5b5ac-f249-4592-b393-ecd48048e420",
+                                          "step": "if"
+                                        }
+                                      ],
+                                      "id": "091864bf-a874-4d9b-888d-491a700f3df6",
+                                      "step": "wt-cash-equal"
+                                    }
+                                  ],
+                                  "is-else-condition?": true,
+                                  "id": "7c390ac1-c957-47ec-bdac-90360e01ffe1",
+                                  "step": "if-child"
+                                }
+                              ],
+                              "id": "2ab08832-93ec-4257-b9fe-469c14c7b762",
+                              "step": "if"
+                            }
+                          ],
+                          "id": "2e4a7a2b-c336-49ce-b680-e2fc92463428",
+                          "step": "wt-cash-equal"
+                        }
+                      ],
+                      "is-else-condition?": true,
+                      "id": "b6aae4d4-7892-4231-8d69-c7527fd1cca0",
+                      "step": "if-child"
+                    }
+                  ],
+                  "weight": {
+                    "num": "80",
+                    "den": 100
+                  },
+                  "id": "e84b8ba9-4e9c-4bb3-b75b-cdee37e86880",
+                  "step": "if"
+                }
+              ],
+              "id": "22524ecb-96ca-4bb0-b61e-e41d624b0907",
+              "step": "wt-cash-equal"
+            }
+          ],
+          "name": "numberOne",
+          "id": "c1d9e093-61d3-4ff8-9fe2-0a55c3e0fe21",
+          "step": "group",
+          "collapsed?": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,249 @@
+{
+  "id": "aaa1da40-53fa-4f67-a9f5-a8726c0d0ee5",
+  "step": "root",
+  "name": "TMV Momentum",
+  "description": "",
+  "rebalance": "daily",
+  "children": [
+    {
+      "id": "18711ed7-7d02-4ed8-ab5c-b5cf72fc0502",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "Direxion Daily 20+ Year Treasury Bull 3X Shares",
+                          "ticker": "TMF",
+                          "id": "13dbc1d8-e3e0-4f29-9463-4cac3678b479",
+                          "exchange": "ARCX",
+                          "step": "asset"
+                        }
+                      ],
+                      "lhs-fn-params": {
+                        "window": 10
+                      },
+                      "is-else-condition?": false,
+                      "rhs-fixed-value?": true,
+                      "lhs-fn": "relative-strength-index",
+                      "lhs-val": "TMF",
+                      "id": "a088e8ff-e2cf-4983-a579-9888736e7220",
+                      "comparator": "lt",
+                      "rhs-val": "32",
+                      "step": "if-child",
+                      "collapsed?": false
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "name": "iShares Short Treasury Bond ETF",
+                                                              "ticker": "SHV",
+                                                              "id": "cb95e515-191d-4b89-b3d2-d5793368f540",
+                                                              "exchange": "XNAS",
+                                                              "step": "asset"
+                                                            }
+                                                          ],
+                                                          "lhs-fn-params": {
+                                                            "window": 10
+                                                          },
+                                                          "is-else-condition?": false,
+                                                          "rhs-fixed-value?": true,
+                                                          "lhs-fn": "relative-strength-index",
+                                                          "lhs-val": "TMV",
+                                                          "id": "fb5fc773-8aeb-4d86-baaf-82163a1c0beb",
+                                                          "comparator": "gt",
+                                                          "rhs-val": "71",
+                                                          "step": "if-child"
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [
+                                                                {
+                                                                  "children": [
+                                                                    {
+                                                                      "children": [
+                                                                        {
+                                                                          "name": "iShares 20+ Year Treasury Bond ETF",
+                                                                          "ticker": "TLT",
+                                                                          "id": "8e2a1f53-0d73-40d1-b125-ea4bfad9c0b3",
+                                                                          "exchange": "XNAS",
+                                                                          "step": "asset"
+                                                                        }
+                                                                      ],
+                                                                      "lhs-fn-params": {
+                                                                        "window": 60
+                                                                      },
+                                                                      "is-else-condition?": false,
+                                                                      "rhs-fixed-value?": true,
+                                                                      "lhs-fn": "relative-strength-index",
+                                                                      "lhs-val": "TMV",
+                                                                      "id": "53942375-317a-45c8-9754-82e0a73dcf0d",
+                                                                      "comparator": "gt",
+                                                                      "rhs-val": "59",
+                                                                      "step": "if-child"
+                                                                    },
+                                                                    {
+                                                                      "children": [
+                                                                        {
+                                                                          "name": "Direxion Daily 20+ Year Treasury Bear 3x Shares",
+                                                                          "ticker": "TMV",
+                                                                          "id": "0561c81f-2719-408c-906b-5dabccaa338e",
+                                                                          "exchange": "ARCX",
+                                                                          "step": "asset"
+                                                                        }
+                                                                      ],
+                                                                      "is-else-condition?": true,
+                                                                      "id": "e00d9996-ee71-4f9e-bb16-d137f525925b",
+                                                                      "step": "if-child"
+                                                                    }
+                                                                  ],
+                                                                  "id": "7250b6ea-e76e-4c5b-8a65-2be129f87d65",
+                                                                  "step": "if"
+                                                                }
+                                                              ],
+                                                              "id": "15037d49-0994-4657-bcc1-4fd482a359ec",
+                                                              "step": "wt-cash-equal"
+                                                            }
+                                                          ],
+                                                          "is-else-condition?": true,
+                                                          "id": "06fde001-0020-425a-a988-828a9123c060",
+                                                          "step": "if-child"
+                                                        }
+                                                      ],
+                                                      "id": "2f84cd37-b776-40ac-b7a4-3828c0551507",
+                                                      "step": "if"
+                                                    }
+                                                  ],
+                                                  "id": "195bb12a-aef1-4bbd-9750-7ae178516cd2",
+                                                  "step": "wt-cash-equal"
+                                                }
+                                              ],
+                                              "lhs-fn-params": {},
+                                              "rhs-fn": "moving-average-price",
+                                              "is-else-condition?": false,
+                                              "lhs-fn": "current-price",
+                                              "lhs-val": "TMV",
+                                              "id": "a716f629-bb13-456a-bec1-0385327887e9",
+                                              "rhs-fn-params": {
+                                                "window": 135
+                                              },
+                                              "comparator": "gt",
+                                              "rhs-val": "TMV",
+                                              "step": "if-child"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "name": "Vanguard Total Bond Market ETF",
+                                                  "ticker": "BND",
+                                                  "id": "d9e4d500-a911-4373-84ce-f7fcc3396996",
+                                                  "exchange": "XNAS",
+                                                  "step": "asset"
+                                                }
+                                              ],
+                                              "is-else-condition?": true,
+                                              "id": "9606ee4f-de37-432e-9bce-ec0d18e68ab0",
+                                              "step": "if-child"
+                                            }
+                                          ],
+                                          "id": "d1b73da7-622d-4a4c-8f40-93bd18081366",
+                                          "step": "if"
+                                        }
+                                      ],
+                                      "id": "dacc181b-61c7-419a-885b-c4521d5d8f65",
+                                      "step": "wt-cash-equal"
+                                    }
+                                  ],
+                                  "lhs-fn-params": {
+                                    "window": 15
+                                  },
+                                  "rhs-fn": "moving-average-price",
+                                  "is-else-condition?": false,
+                                  "lhs-fn": "moving-average-price",
+                                  "lhs-val": "TMV",
+                                  "id": "eed4f17b-fe1c-49ea-9405-fc9384be84a8",
+                                  "rhs-fn-params": {
+                                    "window": 50
+                                  },
+                                  "comparator": "gt",
+                                  "rhs-val": "TMV",
+                                  "step": "if-child"
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "name": "Vanguard Total Bond Market ETF",
+                                      "ticker": "BND",
+                                      "id": "de86285c-ca45-4a4d-baf2-89ead80ec413",
+                                      "exchange": "XNAS",
+                                      "step": "asset"
+                                    }
+                                  ],
+                                  "is-else-condition?": true,
+                                  "id": "b4a3dcee-184f-487b-a983-ec9dc9c56a90",
+                                  "step": "if-child"
+                                }
+                              ],
+                              "weight": {
+                                "num": 100,
+                                "den": 100
+                              },
+                              "id": "8396b420-5b94-4831-8a37-9ecff094b3bc",
+                              "step": "if"
+                            }
+                          ],
+                          "id": "03a8b857-9e32-4de5-b7d8-61c1bb2c4e00",
+                          "step": "wt-cash-equal"
+                        }
+                      ],
+                      "is-else-condition?": true,
+                      "id": "5aff1c74-64b4-4eb9-b543-c85300783026",
+                      "step": "if-child",
+                      "collapsed?": false
+                    }
+                  ],
+                  "weight": {
+                    "num": 100,
+                    "den": 100
+                  },
+                  "id": "97d14401-e3a3-41cd-84da-c460704c435c",
+                  "step": "if"
+                }
+              ],
+              "id": "3f6beff0-1ec2-4d14-8d6a-3e6ac93e7d34",
+              "step": "wt-cash-equal"
+            }
+          ],
+          "name": "TMV Momentum",
+          "id": "59043dae-9a52-400f-849e-1dd8e0b342a8",
+          "step": "group",
+          "collapsed?": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,612 @@
+{
+  "id": "4a122fac-84a0-463f-a0bb-6ecc375b649c",
+  "step": "root",
+  "name": "ST Treasury Trading",
+  "description": "",
+  "rebalance": "daily",
+  "children": [
+    {
+      "id": "9ea4498c-afb8-459a-9151-37db567544a1",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "id": "41f1f7de-9eb5-4f70-8735-6dd616564606",
+          "step": "group",
+          "name": "ST Treasury Trading",
+          "children": [
+            {
+              "step": "wt-cash-equal",
+              "id": "3f9c5859-c415-4fc7-b39d-5f7e40533831",
+              "children": [
+                {
+                  "id": "9d8743da-631b-4187-b42a-5c5879fad787",
+                  "step": "if",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "id": "c0c65da9-b05a-4184-942a-1e71d29f062f",
+                          "step": "wt-cash-equal",
+                          "children": [
+                            {
+                              "ticker": "TMV",
+                              "exchange": "ARCX",
+                              "name": "Direxion Daily 20+ Year Treasury Bear 3x Shares",
+                              "id": "7a783f15-9b1d-4c51-b412-5998713a74d4",
+                              "step": "asset"
+                            },
+                            {
+                              "id": "f7675859-5e5a-4b37-9841-d982707bd8e7",
+                              "step": "group",
+                              "name": "Equity component",
+                              "children": [
+                                {
+                                  "step": "wt-cash-equal",
+                                  "id": "3b0dbacf-eb32-4546-a805-0139c6ec24ba",
+                                  "children": [
+                                    {
+                                      "ticker": "XBI",
+                                      "exchange": "ARCX",
+                                      "name": "SPDR S&P BIOTECH ETF",
+                                      "id": "cc031985-6821-4e57-8f66-ee3c2daa4144",
+                                      "step": "asset"
+                                    },
+                                    {
+                                      "ticker": "ITB",
+                                      "exchange": "BATS",
+                                      "name": "iShares U.S. Home Construction ETF",
+                                      "id": "d790412e-a522-4243-8e7a-5814be08e24f",
+                                      "step": "asset"
+                                    },
+                                    {
+                                      "ticker": "VNQ",
+                                      "exchange": "ARCX",
+                                      "name": "Vanguard Real Estate ETF",
+                                      "id": "38ea12dc-8524-468c-8be5-ca56d959373b",
+                                      "step": "asset"
+                                    },
+                                    {
+                                      "ticker": "IGV",
+                                      "exchange": "BATS",
+                                      "name": "iShares Expanded Tech-Software Sector ETF",
+                                      "id": "1e0c3802-1d45-4fc8-b0c2-477ea064c0c9",
+                                      "step": "asset"
+                                    },
+                                    {
+                                      "ticker": "BTAL",
+                                      "exchange": "ARCX",
+                                      "name": "AGF U.S. Market Neutral Anti-Beta Fund",
+                                      "id": "3dc007cc-6470-44a6-b513-e366797fd6cb",
+                                      "step": "asset"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "collapsed?": false
+                            }
+                          ],
+                          "collapsed?": true
+                        }
+                      ],
+                      "lhs-fn-params": {
+                        "window": 3
+                      },
+                      "is-else-condition?": false,
+                      "rhs-fixed-value?": true,
+                      "lhs-fn": "relative-strength-index",
+                      "lhs-val": "TLT",
+                      "id": "0852b6b0-26f7-4048-bf2c-4cdd10f16910",
+                      "comparator": "gt",
+                      "rhs-val": "85",
+                      "step": "if-child",
+                      "collapsed?": false
+                    },
+                    {
+                      "id": "b4b4da27-17df-4d51-bb76-2f9c6f1fc83e",
+                      "step": "if-child",
+                      "is-else-condition?": true,
+                      "children": [
+                        {
+                          "id": "0dafd207-8167-4f9b-9f92-96ad996d9028",
+                          "step": "wt-cash-equal",
+                          "children": [
+                            {
+                              "id": "76086620-d3b5-462a-af3a-42a386cf2e7a",
+                              "step": "if",
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "id": "a343a065-487a-40b5-81a6-27af4e607ceb",
+                                      "step": "wt-cash-specified",
+                                      "children": [
+                                        {
+                                          "ticker": "TMF",
+                                          "exchange": "ARCX",
+                                          "name": "Direxion Daily 20+ Year Treasury Bull 3X Shares",
+                                          "id": "f184e38c-a9bd-49e7-a6c6-ccfc27cffaeb",
+                                          "step": "asset",
+                                          "weight": {
+                                            "num": 100,
+                                            "den": 100
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "lhs-fn-params": {
+                                    "window": 5
+                                  },
+                                  "is-else-condition?": false,
+                                  "rhs-fixed-value?": true,
+                                  "lhs-fn": "relative-strength-index",
+                                  "lhs-val": "TLT",
+                                  "id": "cfee921f-3a68-479c-9963-7b33582b3f25",
+                                  "comparator": "lt",
+                                  "rhs-val": "10",
+                                  "step": "if-child"
+                                },
+                                {
+                                  "id": "1313f630-1cfb-4df1-9091-a5581790a458",
+                                  "step": "if-child",
+                                  "is-else-condition?": true,
+                                  "children": [
+                                    {
+                                      "id": "2fd845f4-2b0a-4582-8bdb-e5d0902606d3",
+                                      "step": "wt-cash-equal",
+                                      "children": [
+                                        {
+                                          "id": "1bc7b9c9-a0b3-4a8e-ad14-b11532afd9e2",
+                                          "step": "if",
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "id": "6445e73b-12ca-4d57-8265-3ac3fcf680ef",
+                                                  "step": "wt-cash-equal",
+                                                  "children": [
+                                                    {
+                                                      "ticker": "TMF",
+                                                      "exchange": "ARCX",
+                                                      "name": "Direxion Daily 20+ Year Treasury Bull 3X Shares",
+                                                      "id": "22171add-01fa-4c5b-9952-d81ef2d805da",
+                                                      "step": "asset"
+                                                    }
+                                                  ]
+                                                }
+                                              ],
+                                              "lhs-fn-params": {
+                                                "window": 3
+                                              },
+                                              "is-else-condition?": false,
+                                              "rhs-fixed-value?": true,
+                                              "lhs-fn": "relative-strength-index",
+                                              "lhs-val": "TLT",
+                                              "id": "a3ae1ccc-94ab-487f-a88f-75f40d80f094",
+                                              "comparator": "lt",
+                                              "rhs-val": "5",
+                                              "step": "if-child",
+                                              "collapsed?": false
+                                            },
+                                            {
+                                              "id": "9f2bf39b-66e5-4c7f-8f99-a394b9500a79",
+                                              "step": "if-child",
+                                              "is-else-condition?": true,
+                                              "children": [
+                                                {
+                                                  "step": "wt-cash-equal",
+                                                  "id": "9305aa25-8a46-443d-8f62-c3ae881229a3",
+                                                  "children": [
+                                                    {
+                                                      "id": "f5784b3c-3b07-4509-9abf-01174db12896",
+                                                      "step": "if",
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "step": "wt-inverse-vol",
+                                                              "id": "c47f429a-9324-4f39-85b4-25f0eda47a18",
+                                                              "children": [
+                                                                {
+                                                                  "ticker": "YCS",
+                                                                  "exchange": "ARCX",
+                                                                  "name": "ProShares UltraShort Yen",
+                                                                  "id": "4bd78ec1-a8e6-4724-bb0d-c6a6f5577b7d",
+                                                                  "step": "asset"
+                                                                },
+                                                                {
+                                                                  "ticker": "YCS",
+                                                                  "exchange": "ARCX",
+                                                                  "name": "ProShares UltraShort Yen",
+                                                                  "id": "d4bff898-685f-4244-87c6-1e34afefad33",
+                                                                  "step": "asset"
+                                                                },
+                                                                {
+                                                                  "ticker": "TMV",
+                                                                  "exchange": "ARCX",
+                                                                  "name": "Direxion Daily 20+ Year Treasury Bear 3x Shares",
+                                                                  "id": "34390e30-1c2d-4a76-8fea-650774f9361d",
+                                                                  "step": "asset"
+                                                                },
+                                                                {
+                                                                  "ticker": "EEV",
+                                                                  "exchange": "ARCX",
+                                                                  "name": "ProShares UltraShort MSCI Emerging Markets",
+                                                                  "id": "36e995ae-541d-4ae5-9a05-87984d54c77e",
+                                                                  "step": "asset"
+                                                                },
+                                                                {
+                                                                  "ticker": "KIE",
+                                                                  "exchange": "ARCX",
+                                                                  "name": "SPDR S&P Insurance ETF",
+                                                                  "id": "bee439e5-ed0a-4ecf-9299-468e058d5732",
+                                                                  "step": "asset"
+                                                                },
+                                                                {
+                                                                  "ticker": "ITA",
+                                                                  "exchange": "BATS",
+                                                                  "name": "iShares U.S. Aerospace & Defense ETF",
+                                                                  "id": "1f4fc7d8-6bed-497f-ba5c-803073a632fd",
+                                                                  "step": "asset"
+                                                                },
+                                                                {
+                                                                  "ticker": "BTAL",
+                                                                  "exchange": "ARCX",
+                                                                  "name": "AGF U.S. Market Neutral Anti-Beta Fund",
+                                                                  "id": "6351d103-ce42-4404-8411-ae20c2a94ac6",
+                                                                  "step": "asset"
+                                                                },
+                                                                {
+                                                                  "ticker": "SRS",
+                                                                  "exchange": "ARCX",
+                                                                  "name": "ProShares UltraShort Real Estate",
+                                                                  "id": "7a08c77f-d957-4ad3-bbb0-4ce9da1d862b",
+                                                                  "step": "asset"
+                                                                },
+                                                                {
+                                                                  "ticker": "SOXX",
+                                                                  "exchange": "XNAS",
+                                                                  "name": "iShares Semiconductor ETF",
+                                                                  "id": "40f7f93e-b4e0-42ec-a899-860a35f1343a",
+                                                                  "step": "asset"
+                                                                },
+                                                                {
+                                                                  "ticker": "IGV",
+                                                                  "exchange": "BATS",
+                                                                  "name": "iShares Expanded Tech-Software Sector ETF",
+                                                                  "id": "a1853058-d958-4891-ae2f-6c009eb8acf8",
+                                                                  "step": "asset"
+                                                                }
+                                                              ],
+                                                              "window-days": "20"
+                                                            }
+                                                          ],
+                                                          "lhs-fn-params": {
+                                                            "window": 20
+                                                          },
+                                                          "rhs-fn": "moving-average-return",
+                                                          "is-else-condition?": false,
+                                                          "lhs-fn": "moving-average-return",
+                                                          "lhs-val": "DBC",
+                                                          "id": "38154cbd-d633-4907-b9d5-8378e617df4c",
+                                                          "rhs-fn-params": {
+                                                            "window": 20
+                                                          },
+                                                          "comparator": "gt",
+                                                          "rhs-val": "DBP",
+                                                          "step": "if-child"
+                                                        },
+                                                        {
+                                                          "id": "b95c4968-86ba-435b-a9a9-987bae6ba4dc",
+                                                          "step": "if-child",
+                                                          "is-else-condition?": true,
+                                                          "children": [
+                                                            {
+                                                              "id": "58f96929-4d6f-4ff4-9820-ef1af656312e",
+                                                              "step": "group",
+                                                              "name": "TLT Positive Momentum",
+                                                              "children": [
+                                                                {
+                                                                  "step": "wt-inverse-vol",
+                                                                  "id": "5a208eb1-02ed-4784-9a51-eeecfb3ba502",
+                                                                  "children": [
+                                                                    {
+                                                                      "ticker": "GLD",
+                                                                      "exchange": "ARCX",
+                                                                      "name": "SPDR Gold Shares",
+                                                                      "id": "83d6fa0a-ff8b-4639-bc7a-10e980550036",
+                                                                      "step": "asset"
+                                                                    },
+                                                                    {
+                                                                      "ticker": "TMF",
+                                                                      "exchange": "ARCX",
+                                                                      "name": "Direxion Daily 20+ Year Treasury Bull 3X Shares",
+                                                                      "id": "9aa4df68-d097-482e-987c-6c3bd364776f",
+                                                                      "step": "asset"
+                                                                    },
+                                                                    {
+                                                                      "ticker": "XLU",
+                                                                      "exchange": "ARCX",
+                                                                      "name": "Utilities Select Sector SPDR Fund",
+                                                                      "id": "0a2026d1-f4db-4395-aa35-7ae8427057b1",
+                                                                      "step": "asset"
+                                                                    },
+                                                                    {
+                                                                      "ticker": "SOXX",
+                                                                      "exchange": "XNAS",
+                                                                      "name": "iShares Semiconductor ETF",
+                                                                      "id": "e119612c-3166-4f61-940e-2164e67016eb",
+                                                                      "step": "asset"
+                                                                    },
+                                                                    {
+                                                                      "ticker": "EUM",
+                                                                      "exchange": "ARCX",
+                                                                      "name": "ProShares Short MSCI Emerging Markets",
+                                                                      "id": "36e402f1-7775-4abc-8f6b-a536e5a106e6",
+                                                                      "step": "asset"
+                                                                    },
+                                                                    {
+                                                                      "ticker": "QQQ",
+                                                                      "exchange": "XNAS",
+                                                                      "name": "Invesco QQQ Trust Series I",
+                                                                      "id": "5d200d88-5f31-4172-83e8-a2b385a3f34c",
+                                                                      "step": "asset"
+                                                                    },
+                                                                    {
+                                                                      "ticker": "CWB",
+                                                                      "exchange": "ARCX",
+                                                                      "name": "SPDR Bloomberg Convertible Securities ETF",
+                                                                      "id": "d180db6a-8e84-46ad-a13e-b8d5ef52471c",
+                                                                      "step": "asset"
+                                                                    },
+                                                                    {
+                                                                      "ticker": "SCO",
+                                                                      "exchange": "ARCX",
+                                                                      "name": "ProShares UltraShort Bloomberg Crude Oil",
+                                                                      "id": "156d66f1-9350-47b0-833d-762c10475765",
+                                                                      "step": "asset"
+                                                                    },
+                                                                    {
+                                                                      "ticker": "KOLD",
+                                                                      "exchange": "ARCX",
+                                                                      "name": "ProShares UltraShort Bloomberg Natural Gas",
+                                                                      "id": "2b1938e1-ef7a-48f3-9e8f-9c20e952ee2e",
+                                                                      "step": "asset"
+                                                                    }
+                                                                  ],
+                                                                  "window-days": "20"
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "id": "b2492085-c328-4ded-a356-96df35aa6573",
+                                                      "step": "if",
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "step": "wt-inverse-vol",
+                                                              "id": "728c3cc1-f008-4702-b382-fb0e2da9c5fa",
+                                                              "children": [
+                                                                {
+                                                                  "ticker": "YCS",
+                                                                  "exchange": "ARCX",
+                                                                  "name": "ProShares UltraShort Yen",
+                                                                  "id": "0e45b5d9-3810-48aa-8f1e-5b04fcaec02e",
+                                                                  "step": "asset"
+                                                                },
+                                                                {
+                                                                  "ticker": "YCS",
+                                                                  "exchange": "ARCX",
+                                                                  "name": "ProShares UltraShort Yen",
+                                                                  "id": "5435ffee-a318-4452-b72d-4787ce84287d",
+                                                                  "step": "asset"
+                                                                },
+                                                                {
+                                                                  "ticker": "TMV",
+                                                                  "exchange": "ARCX",
+                                                                  "name": "Direxion Daily 20+ Year Treasury Bear 3x Shares",
+                                                                  "id": "b8114529-3dcc-4a08-bdcd-c795a9a8c2d1",
+                                                                  "step": "asset"
+                                                                },
+                                                                {
+                                                                  "ticker": "EEV",
+                                                                  "exchange": "ARCX",
+                                                                  "name": "ProShares UltraShort MSCI Emerging Markets",
+                                                                  "id": "87a92787-36ee-447a-bd26-944889719873",
+                                                                  "step": "asset"
+                                                                },
+                                                                {
+                                                                  "ticker": "KIE",
+                                                                  "exchange": "ARCX",
+                                                                  "name": "SPDR S&P Insurance ETF",
+                                                                  "id": "9887b762-bd4c-4f04-97bd-9ca74eef1e73",
+                                                                  "step": "asset"
+                                                                },
+                                                                {
+                                                                  "ticker": "ITA",
+                                                                  "exchange": "BATS",
+                                                                  "name": "iShares U.S. Aerospace & Defense ETF",
+                                                                  "id": "d9baa208-e2dd-481e-affb-b52d46ff4585",
+                                                                  "step": "asset"
+                                                                },
+                                                                {
+                                                                  "ticker": "BTAL",
+                                                                  "exchange": "ARCX",
+                                                                  "name": "AGF U.S. Market Neutral Anti-Beta Fund",
+                                                                  "id": "d6b5aead-20b7-4f2a-86a2-96a68418c859",
+                                                                  "step": "asset"
+                                                                },
+                                                                {
+                                                                  "ticker": "SRS",
+                                                                  "exchange": "ARCX",
+                                                                  "name": "ProShares UltraShort Real Estate",
+                                                                  "id": "e58ed6df-f10c-4454-b96d-07b88ad9066c",
+                                                                  "step": "asset"
+                                                                },
+                                                                {
+                                                                  "ticker": "SOXX",
+                                                                  "exchange": "XNAS",
+                                                                  "name": "iShares Semiconductor ETF",
+                                                                  "id": "c8442fca-806c-448b-ab0b-9ba60b92acac",
+                                                                  "step": "asset"
+                                                                },
+                                                                {
+                                                                  "ticker": "IGV",
+                                                                  "exchange": "BATS",
+                                                                  "name": "iShares Expanded Tech-Software Sector ETF",
+                                                                  "id": "488bfd01-6f96-4da0-9349-c3e46911c70d",
+                                                                  "step": "asset"
+                                                                }
+                                                              ],
+                                                              "window-days": "20"
+                                                            }
+                                                          ],
+                                                          "lhs-fn-params": {
+                                                            "window": 20
+                                                          },
+                                                          "rhs-fn": "moving-average-return",
+                                                          "is-else-condition?": false,
+                                                          "lhs-fn": "moving-average-return",
+                                                          "lhs-val": "FXC",
+                                                          "id": "318b3799-1de7-4fba-9d42-dacf64898b3a",
+                                                          "rhs-fn-params": {
+                                                            "window": 20
+                                                          },
+                                                          "comparator": "gt",
+                                                          "rhs-val": "IEF",
+                                                          "step": "if-child"
+                                                        },
+                                                        {
+                                                          "id": "8b48fb6d-3dd6-4eef-b1e9-2ac79d701e85",
+                                                          "step": "if-child",
+                                                          "is-else-condition?": true,
+                                                          "children": [
+                                                            {
+                                                              "step": "wt-inverse-vol",
+                                                              "id": "86d57b5c-c03c-4ed6-88a5-9c57454d229e",
+                                                              "children": [
+                                                                {
+                                                                  "ticker": "GLD",
+                                                                  "exchange": "ARCX",
+                                                                  "name": "SPDR Gold Shares",
+                                                                  "id": "16dbc205-6daa-422b-82f7-d1974ab6afe6",
+                                                                  "step": "asset"
+                                                                },
+                                                                {
+                                                                  "ticker": "TMF",
+                                                                  "exchange": "ARCX",
+                                                                  "name": "Direxion Daily 20+ Year Treasury Bull 3X Shares",
+                                                                  "id": "b4189ae5-ec27-4a78-be7f-d81507ba067e",
+                                                                  "step": "asset"
+                                                                },
+                                                                {
+                                                                  "ticker": "XLU",
+                                                                  "exchange": "ARCX",
+                                                                  "name": "Utilities Select Sector SPDR Fund",
+                                                                  "id": "1be9dfc9-32bf-4a2a-8ae2-6f329c0e1912",
+                                                                  "step": "asset"
+                                                                },
+                                                                {
+                                                                  "ticker": "KOLD",
+                                                                  "exchange": "ARCX",
+                                                                  "name": "ProShares UltraShort Bloomberg Natural Gas",
+                                                                  "id": "2a1a6ae2-2be6-462f-be11-3be543333a2b",
+                                                                  "step": "asset"
+                                                                },
+                                                                {
+                                                                  "ticker": "SOXX",
+                                                                  "exchange": "XNAS",
+                                                                  "name": "iShares Semiconductor ETF",
+                                                                  "id": "45bab4e2-3655-4401-917d-1a9d5ed17180",
+                                                                  "step": "asset"
+                                                                },
+                                                                {
+                                                                  "ticker": "EUM",
+                                                                  "exchange": "ARCX",
+                                                                  "name": "ProShares Short MSCI Emerging Markets",
+                                                                  "id": "5fb6fd6b-094f-4a24-830b-7f4aef804c57",
+                                                                  "step": "asset"
+                                                                },
+                                                                {
+                                                                  "ticker": "QQQ",
+                                                                  "exchange": "XNAS",
+                                                                  "name": "Invesco QQQ Trust Series I",
+                                                                  "id": "a675b214-32f9-4189-b60b-fc2e2791bf6d",
+                                                                  "step": "asset"
+                                                                },
+                                                                {
+                                                                  "ticker": "CWB",
+                                                                  "exchange": "ARCX",
+                                                                  "name": "SPDR Bloomberg Convertible Securities ETF",
+                                                                  "id": "957cbd2e-f3af-4569-918f-7ccb953e94a0",
+                                                                  "step": "asset"
+                                                                },
+                                                                {
+                                                                  "ticker": "SCO",
+                                                                  "exchange": "ARCX",
+                                                                  "name": "ProShares UltraShort Bloomberg Crude Oil",
+                                                                  "id": "800c0aa3-606a-4a49-95e3-d5a557b682a0",
+                                                                  "step": "asset"
+                                                                },
+                                                                {
+                                                                  "ticker": "XLP",
+                                                                  "exchange": "ARCX",
+                                                                  "name": "Consumer Staples Select Sector SPDR Fund",
+                                                                  "id": "e9a14719-4928-49c7-81e0-8e6fde47e826",
+                                                                  "step": "asset"
+                                                                }
+                                                              ],
+                                                              "window-days": "20"
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "collapsed?": false
+                                                }
+                                              ],
+                                              "collapsed?": false
+                                            }
+                                          ],
+                                          "weight": {
+                                            "num": 100,
+                                            "den": 100
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ],
+                              "weight": {
+                                "num": 100,
+                                "den": 100
+                              }
+                            }
+                          ],
+                          "collapsed?": true
+                        }
+                      ],
+                      "collapsed?": false
+                    }
+                  ],
+                  "weight": {
+                    "num": 100,
+                    "den": 100
+                  }
+                }
+              ]
+            }
+          ],
+          "collapsed?": true
+        }
+      ]
+    }
+  ]
+}

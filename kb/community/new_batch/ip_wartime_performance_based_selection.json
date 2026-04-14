@@ -1,0 +1,72 @@
+{
+  "id": "cbea7f48-8149-4153-809b-74fa18786123",
+  "step": "root",
+  "name": "Wartime Performance-Based Selection Symphony (TQQQ & DFEN)",
+  "description": "",
+  "rebalance": "daily",
+  "children": [
+    {
+      "id": "83379447-c59a-43d4-8057-b02f284eb7b9",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "ProShares UltraPro QQQ",
+                          "ticker": "EQUITIES::TQQQ//USD",
+                          "id": "70a9d669-0f83-410e-bb13-b7111f90207c",
+                          "step": "asset"
+                        }
+                      ],
+                      "lhs-fn-params": {
+                        "window": 90
+                      },
+                      "rhs-fn": "cumulative-return",
+                      "is-else-condition?": false,
+                      "lhs-fn": "cumulative-return",
+                      "lhs-val": "EQUITIES::TQQQ//USD",
+                      "id": "48760f3d-cecb-44a8-b086-9d19cb7e186b",
+                      "rhs-fn-params": {
+                        "window": 90
+                      },
+                      "comparator": "gt",
+                      "rhs-val": "EQUITIES::DFEN//USD",
+                      "step": "if-child"
+                    },
+                    {
+                      "children": [
+                        {
+                          "name": "Direxion Daily Aerospace & Defense Bull 3X Shares",
+                          "ticker": "EQUITIES::DFEN//USD",
+                          "id": "b709839c-6c07-4d9a-aa23-b1516b04b264",
+                          "step": "asset"
+                        }
+                      ],
+                      "is-else-condition?": true,
+                      "id": "4ece14d8-d9d0-4a23-b8bf-1a1f8166343a",
+                      "step": "if-child"
+                    }
+                  ],
+                  "id": "6fe8afce-a95d-48ea-98df-8abd4a1d91c7",
+                  "step": "if"
+                }
+              ],
+              "id": "274b3176-2639-4800-8cde-8afe75d012f7",
+              "step": "wt-cash-equal"
+            }
+          ],
+          "name": "Wartime Performance-Based Selection Symphony (TQQQ & DFEN)",
+          "id": "4a02a32c-eb98-4e0e-9229-74f304ae586c",
+          "step": "group",
+          "collapsed?": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,231 @@
+{
+  "description": "Only uses assets with low correlations to SPY/QQQ. Meant to hedge common symphonies.",
+  "children": [
+    {
+      "id": "b1f3b0d4-6080-4faa-8aa0-32bced52d1cb",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "id": "34dc1060-8492-400e-aab9-da5b0e04765f",
+          "step": "group",
+          "name": "VIX Hack",
+          "children": [
+            {
+              "step": "wt-cash-equal",
+              "id": "3042c206-0416-4c07-9fd1-13c1ced7a876",
+              "children": [
+                {
+                  "id": "f39f9133-61b1-4b73-a9d6-abcbf8e238aa",
+                  "step": "if",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "id": "474d6997-7ee6-4270-9825-73ee8970eb22",
+                          "step": "wt-cash-equal",
+                          "children": [
+                            {
+                              "ticker": "UVXY",
+                              "exchange": "BATS",
+                              "name": "ProShares Ultra VIX Short-Term Futures ETF",
+                              "id": "8ff6549c-6482-45d9-9376-8528bcde9249",
+                              "step": "asset",
+                              "children-count": 0
+                            },
+                            {
+                              "ticker": "TMF",
+                              "exchange": "ARCX",
+                              "name": "Direxion Daily 20+ Year Treasury Bull 3X Shares",
+                              "id": "001a46f6-8504-42af-9151-f6fc611bd15a",
+                              "step": "asset"
+                            }
+                          ],
+                          "window-days": "30"
+                        }
+                      ],
+                      "lhs-fn-params": {
+                        "window": 10
+                      },
+                      "is-else-condition?": false,
+                      "rhs-fixed-value?": true,
+                      "lhs-fn": "relative-strength-index",
+                      "lhs-val": "SPY",
+                      "id": "201ab527-01e5-4129-88e1-703d28908939",
+                      "comparator": "gt",
+                      "rhs-val": "83",
+                      "step": "if-child",
+                      "collapsed?": false
+                    },
+                    {
+                      "id": "d89290ab-8112-4604-84d7-66c354d7e870",
+                      "step": "if-child",
+                      "is-else-condition?": true,
+                      "children": [
+                        {
+                          "id": "6bbdf3b2-e8f6-49d8-bf10-0f9579d9ae77",
+                          "step": "wt-cash-equal",
+                          "children": [
+                            {
+                              "id": "47e0818c-db6d-4cea-a1e9-73c360db6bac",
+                              "step": "if",
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "id": "106eef2a-9784-4b24-9f80-a0fa0f1b243a",
+                                      "step": "wt-cash-equal",
+                                      "children": [
+                                        {
+                                          "step": "filter",
+                                          "id": "e272a9f7-ae4d-4949-99dd-2202df1e725a",
+                                          "sort-by-fn-params": {
+                                            "window": 10
+                                          },
+                                          "sort-by-fn": "relative-strength-index",
+                                          "select-fn": "bottom",
+                                          "select-n": "3",
+                                          "children": [
+                                            {
+                                              "ticker": "VIXM",
+                                              "exchange": "BATS",
+                                              "name": "ProShares VIX Mid-Term Futures ETF",
+                                              "id": "4c5ef753-7440-43c5-a164-298b9c8ab60d",
+                                              "step": "asset"
+                                            },
+                                            {
+                                              "ticker": "BTAL",
+                                              "exchange": "ARCX",
+                                              "name": "AGF U.S. Market Neutral Anti-Beta Fund",
+                                              "id": "ba3a6768-4013-4d28-b230-803aabfb6275",
+                                              "step": "asset"
+                                            },
+                                            {
+                                              "ticker": "EDV",
+                                              "exchange": "ARCX",
+                                              "name": "Vanguard Extended Duration Treasury ETF",
+                                              "id": "be0d430e-bf57-44b3-a472-e17c8cf37211",
+                                              "step": "asset"
+                                            },
+                                            {
+                                              "ticker": "SPLV",
+                                              "exchange": "ARCX",
+                                              "name": "Invesco S&P 500 Low Volatility ETF",
+                                              "id": "169694b3-d3c8-4800-b980-2f2f18d3aa5b",
+                                              "step": "asset"
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "window-days": "30"
+                                    }
+                                  ],
+                                  "lhs-fn-params": {
+                                    "window": 14
+                                  },
+                                  "is-else-condition?": false,
+                                  "rhs-fixed-value?": true,
+                                  "lhs-fn": "relative-strength-index",
+                                  "lhs-val": "SPY",
+                                  "id": "de6d85de-8ad2-432c-8cc9-b92ad71e853e",
+                                  "comparator": "gt",
+                                  "rhs-val": "65",
+                                  "step": "if-child",
+                                  "collapsed?": false
+                                },
+                                {
+                                  "id": "df0b23da-1bd1-4bd9-a71e-d811bc8d2023",
+                                  "step": "if-child",
+                                  "is-else-condition?": true,
+                                  "children": [
+                                    {
+                                      "id": "4cc0d74f-9b21-4a49-9a0b-908086122d22",
+                                      "step": "wt-cash-equal",
+                                      "children": [
+                                        {
+                                          "select?": true,
+                                          "children": [
+                                            {
+                                              "ticker": "SVXY",
+                                              "exchange": "BATS",
+                                              "name": "ProShares Short VIX Short-Term Futures ETF",
+                                              "id": "12818260-4e69-41d8-8109-2052d6a76d85",
+                                              "step": "asset"
+                                            },
+                                            {
+                                              "ticker": "VIXM",
+                                              "exchange": "BATS",
+                                              "name": "ProShares VIX Mid-Term Futures ETF",
+                                              "id": "4e41e1e5-1a93-4471-a620-ddb75376d06f",
+                                              "step": "asset"
+                                            },
+                                            {
+                                              "ticker": "GLD",
+                                              "exchange": "ARCX",
+                                              "name": "SPDR Gold Shares",
+                                              "id": "a0be4ab9-ea96-4085-9ba3-a730ac6ef785",
+                                              "step": "asset"
+                                            },
+                                            {
+                                              "ticker": "VWO",
+                                              "exchange": "ARCX",
+                                              "name": "Vanguard FTSE Emerging Markets ETF",
+                                              "id": "c12936f0-4cda-4db2-96f6-73e5aecbf910",
+                                              "step": "asset"
+                                            }
+                                          ],
+                                          "select-fn": "top",
+                                          "select-n": "3",
+                                          "sort-by-fn": "relative-strength-index",
+                                          "sort-by-window-days": "10",
+                                          "weight": {
+                                            "num": "75",
+                                            "den": 100
+                                          },
+                                          "id": "e2df7b52-efb0-4ce2-9cb9-becc53296073",
+                                          "sort-by?": true,
+                                          "step": "filter",
+                                          "collapsed?": false
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "collapsed?": false
+                                }
+                              ],
+                              "weight": {
+                                "num": "20",
+                                "den": 100
+                              },
+                              "collapsed-specified-weight?": false
+                            }
+                          ]
+                        }
+                      ],
+                      "collapsed?": false
+                    }
+                  ],
+                  "weight": {
+                    "num": "20",
+                    "den": 100
+                  },
+                  "collapsed-specified-weight?": false
+                }
+              ],
+              "window-days": "30"
+            }
+          ],
+          "collapsed?": false,
+          "weight": {
+            "num": "70",
+            "den": 100
+          }
+        }
+      ]
+    }
+  ],
+  "name": "Copy of VIX Hack v1 | nicomavis",
+  "rebalance-corridor-width": 0.2,
+  "rebalance": "none",
+  "id": "x8z8sEghNMWDN3ggWTXe",
+  "step": "root"
+}

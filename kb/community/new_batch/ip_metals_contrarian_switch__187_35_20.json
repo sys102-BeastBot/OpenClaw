@@ -1,0 +1,164 @@
+{
+  "id": "2a247eee-edd1-4c6f-b831-78a8b20ba0c8",
+  "step": "root",
+  "name": "Metals Contrarian Switch (187,35,2011)",
+  "description": "",
+  "rebalance": "daily",
+  "children": [
+    {
+      "id": "5a854dda-412f-422e-b4b5-2560bcd54233",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "name": "ProShares Trust - ProShares UltraPro QQQ 3x Shares",
+                                  "ticker": "TQQQ",
+                                  "id": "32be1a4b-dccd-44e9-b0d7-3c154424fc6d",
+                                  "exchange": "XNAS",
+                                  "step": "asset"
+                                },
+                                {
+                                  "name": "Direxion Shares ETF Trust - Direxion Daily Technology Bull 3X Shares",
+                                  "ticker": "TECL",
+                                  "id": "deac2187-6323-4d72-99a7-8c146528ae1c",
+                                  "exchange": "ARCX",
+                                  "step": "asset"
+                                },
+                                {
+                                  "name": "Direxion Shares ETF Trust - Direxion Daily Semiconductor Bull 3X Shares",
+                                  "ticker": "SOXL",
+                                  "id": "febe2b4f-e72c-452c-8567-76630fe2dce3",
+                                  "exchange": "ARCX",
+                                  "step": "asset"
+                                }
+                              ],
+                              "select-fn": "bottom",
+                              "select-n": "1",
+                              "sort-by-fn": "cumulative-return",
+                              "id": "f94c3349-fb19-441a-88ad-9d948524606f",
+                              "step": "filter",
+                              "sort-by-fn-params": {
+                                "window": 10
+                              }
+                            }
+                          ],
+                          "id": "65de9068-725e-44fc-8dcc-5313a5021a6f",
+                          "step": "wt-cash-equal"
+                        }
+                      ],
+                      "lhs-fn-params": {
+                        "window": 10
+                      },
+                      "is-else-condition?": false,
+                      "rhs-fixed-value?": true,
+                      "lhs-fn": "relative-strength-index",
+                      "lhs-val": "TQQQ",
+                      "id": "fbcaf174-3ff9-4d47-8c17-6677190f48d2",
+                      "comparator": "lt",
+                      "rhs-val": "25",
+                      "step": "if-child",
+                      "collapsed?": false
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "name": "United States Commodity Funds LLC - United States Copper Index Fund",
+                                  "ticker": "CPER",
+                                  "id": "d4bf8130-4526-4d4c-a433-61692e058d5c",
+                                  "exchange": "ARCX",
+                                  "step": "asset"
+                                },
+                                {
+                                  "name": "BlackRock Institutional Trust Company N.A. - iShares Silver Trust",
+                                  "ticker": "SLV",
+                                  "id": "16cf93e8-bbf7-41f2-941e-1010ee0b1056",
+                                  "exchange": "ARCX",
+                                  "step": "asset"
+                                },
+                                {
+                                  "name": "abrdn ETF - abrdn Physical Palladium Shares ETF",
+                                  "ticker": "PALL",
+                                  "id": "ba8dde42-ed59-45f9-8e99-ec33ae9856ee",
+                                  "exchange": "ARCX",
+                                  "step": "asset"
+                                },
+                                {
+                                  "name": "abrdn ETF - abrdn Physical Platinum Shares ETF",
+                                  "ticker": "PPLT",
+                                  "id": "a6c9e8cd-b61c-44eb-a2c0-1267ad9ae6e2",
+                                  "exchange": "ARCX",
+                                  "step": "asset"
+                                },
+                                {
+                                  "name": "VanEck ETF Trust - VanEck Steel ETF",
+                                  "ticker": "SLX",
+                                  "id": "62f4b30f-37f1-4f2e-a016-4d59322ec650",
+                                  "exchange": "ARCX",
+                                  "step": "asset"
+                                },
+                                {
+                                  "name": "ProShares Trust - ProShares Ultra Gold 2x Shares",
+                                  "ticker": "UGL",
+                                  "id": "af4c2e67-862d-4795-8d80-620c326dc306",
+                                  "exchange": "ARCX",
+                                  "step": "asset"
+                                }
+                              ],
+                              "select-fn": "bottom",
+                              "select-n": "1",
+                              "sort-by-fn": "cumulative-return",
+                              "id": "41a49609-65c1-406b-81f8-5aec454d30d6",
+                              "step": "filter",
+                              "sort-by-fn-params": {
+                                "window": 10
+                              }
+                            }
+                          ],
+                          "id": "fe6cfbf7-72fe-4816-88da-ad76d43f5aaf",
+                          "step": "wt-cash-equal"
+                        }
+                      ],
+                      "is-else-condition?": true,
+                      "id": "16edd751-d2f7-4cc9-824a-7f85fd25ff5c",
+                      "step": "if-child",
+                      "collapsed?": false
+                    }
+                  ],
+                  "weight": {
+                    "num": 100,
+                    "den": 100
+                  },
+                  "id": "0e5c6e24-6551-4071-bf9b-15beec49308b",
+                  "step": "if",
+                  "collapsed?": false
+                }
+              ],
+              "id": "f9681d1d-6665-4aeb-b9cd-ac9521cc2d2f",
+              "step": "wt-cash-equal",
+              "collapsed?": false
+            }
+          ],
+          "name": "Metals Contrarian Switch (187,35,2011)",
+          "id": "1fddc94a-7919-4cb6-a3ee-1b4f26798582",
+          "step": "group",
+          "collapsed?": true
+        }
+      ]
+    }
+  ]
+}

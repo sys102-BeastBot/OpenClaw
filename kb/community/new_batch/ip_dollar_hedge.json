@@ -1,0 +1,238 @@
+{
+  "id": "d7a81351-959a-4aec-9347-05a6c78a8a90",
+  "step": "root",
+  "name": "Dollar Hedge",
+  "description": "",
+  "rebalance": "daily",
+  "children": [
+    {
+      "id": "795983bb-38df-4912-a556-28e8f75b543a",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "name": "ProShares Trust - ProShares Ultra Gold 2x Shares",
+                                      "ticker": "UGL",
+                                      "id": "6d4593bd-ba92-4c53-a284-133e4a19d9f6",
+                                      "exchange": "ARCX",
+                                      "step": "asset"
+                                    }
+                                  ],
+                                  "lhs-fn-params": {
+                                    "window": 17
+                                  },
+                                  "is-else-condition?": false,
+                                  "rhs-fixed-value?": true,
+                                  "lhs-fn": "relative-strength-index",
+                                  "lhs-val": "BIL",
+                                  "id": "2d1a728c-7dd2-495d-af19-3eeeda0c8f47",
+                                  "comparator": "gt",
+                                  "rhs-val": "52",
+                                  "step": "if-child"
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "name": "Direxion Shares ETF Trust - Direxion Daily S&P 500 Bull 3X Shares",
+                                      "ticker": "SPXL",
+                                      "id": "695134a1-8f54-4182-af00-f22ceb1f5d7c",
+                                      "exchange": "ARCX",
+                                      "step": "asset"
+                                    }
+                                  ],
+                                  "is-else-condition?": true,
+                                  "id": "da053b85-3dfb-47b6-9a33-d83ea6351c3b",
+                                  "step": "if-child"
+                                }
+                              ],
+                              "id": "dc326ee7-ca20-4fa8-91d7-18fd97d8cec5",
+                              "step": "if"
+                            }
+                          ],
+                          "id": "8e313918-e3b2-47d4-a7d3-765600cdbef0",
+                          "step": "wt-cash-equal"
+                        }
+                      ],
+                      "lhs-fn-params": {
+                        "window": 17
+                      },
+                      "rhs-fn": "relative-strength-index",
+                      "is-else-condition?": false,
+                      "rhs-fixed-value?": true,
+                      "lhs-fn": "relative-strength-index",
+                      "lhs-val": "UUP",
+                      "id": "68baf7ee-4b40-4565-aa0d-33ca1bb88ccd",
+                      "rhs-fn-params": {
+                        "window": 17
+                      },
+                      "comparator": "gt",
+                      "rhs-val": "38",
+                      "step": "if-child"
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "name": "SPDR Series Trust - SPDR Bloomberg 1-3 Month T-Bill ETF",
+                                              "ticker": "BIL",
+                                              "id": "90befdb9-0a54-4670-86c5-c54dc5ffd0e2",
+                                              "exchange": "XNAS",
+                                              "step": "asset"
+                                            },
+                                            {
+                                              "name": "Strategy - Ordinary Shares - Class A",
+                                              "ticker": "MSTR",
+                                              "id": "72ce2be9-8572-43f0-ba3c-3c6bb3b445e2",
+                                              "exchange": "XNAS",
+                                              "step": "asset"
+                                            }
+                                          ],
+                                          "select-fn": "top",
+                                          "select-n": "1",
+                                          "sort-by-fn": "standard-deviation-return",
+                                          "id": "f6d79082-f590-46f0-a7d8-5175ace27b7f",
+                                          "step": "filter",
+                                          "sort-by-fn-params": {
+                                            "window": 20
+                                          }
+                                        }
+                                      ],
+                                      "id": "28fd7bb3-5a6d-4451-b27d-bebe83ca8670",
+                                      "step": "wt-cash-equal"
+                                    }
+                                  ],
+                                  "lhs-fn-params": {
+                                    "window": 17
+                                  },
+                                  "is-else-condition?": false,
+                                  "rhs-fixed-value?": true,
+                                  "lhs-fn": "relative-strength-index",
+                                  "lhs-val": "QQQ",
+                                  "id": "83636285-f69b-4b35-b952-8abc5d40c968",
+                                  "comparator": "gt",
+                                  "rhs-val": "56",
+                                  "step": "if-child"
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "name": "Direxion Shares ETF Trust - Direxion Daily 20+ Year Treasury Bear -3X Shares",
+                                      "ticker": "TMV",
+                                      "id": "279c5533-4fa0-4c40-a2b5-dda7a5059fdf",
+                                      "exchange": "ARCX",
+                                      "step": "asset"
+                                    }
+                                  ],
+                                  "is-else-condition?": true,
+                                  "id": "f87704a6-f9c2-4836-9bbd-dd0b7e614704",
+                                  "step": "if-child"
+                                }
+                              ],
+                              "id": "a9874fb9-d7e0-4bfe-ba01-82a088fe4e53",
+                              "step": "if"
+                            }
+                          ],
+                          "id": "5266a063-2580-4307-a298-84e42d145cf2",
+                          "step": "wt-cash-equal"
+                        }
+                      ],
+                      "is-else-condition?": true,
+                      "id": "527e24eb-489c-4dbd-9847-d14a88d71b41",
+                      "step": "if-child"
+                    }
+                  ],
+                  "weight": {
+                    "num": "80",
+                    "den": 100
+                  },
+                  "id": "89174749-afb9-48ee-a005-38ca34e9b6da",
+                  "step": "if"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "ProShares Trust - ProShares Ultra Yen 2x Shares",
+                          "ticker": "YCL",
+                          "id": "c497abc1-d975-4589-a1ed-ed2aceef18d6",
+                          "exchange": "ARCX",
+                          "step": "asset"
+                        },
+                        {
+                          "name": "ProShares Trust - ProShares UltraShort Yen -2x Shares",
+                          "ticker": "YCS",
+                          "id": "8997a9ff-e8b0-4529-8c8d-49671946a9dc",
+                          "exchange": "ARCX",
+                          "step": "asset"
+                        },
+                        {
+                          "name": "ProShares Trust - ProShares UltraShort Euro -2X Shares",
+                          "ticker": "EUO",
+                          "id": "65825f7f-fc94-4a1d-9633-370d0451ce0a",
+                          "exchange": "ARCX",
+                          "step": "asset"
+                        },
+                        {
+                          "name": "ProShares Trust - ProShares Ultra Euro 2x Shares",
+                          "ticker": "ULE",
+                          "id": "95302f60-4dd5-4dd2-9b2f-f16a3d210d62",
+                          "exchange": "ARCX",
+                          "step": "asset"
+                        }
+                      ],
+                      "select-fn": "top",
+                      "select-n": "2",
+                      "sort-by-fn": "relative-strength-index",
+                      "id": "ba6d0b05-693b-4a3d-bfa6-0ab7bb734be2",
+                      "step": "filter",
+                      "sort-by-fn-params": {
+                        "window": 5
+                      }
+                    }
+                  ],
+                  "window-days": 2,
+                  "weight": {
+                    "num": "20",
+                    "den": 100
+                  },
+                  "id": "2f391125-baa4-447f-ba13-d60be0fd1fb1",
+                  "step": "wt-cash-equal"
+                }
+              ],
+              "window-days": 2,
+              "id": "bdb1c40f-7f95-4ee4-949b-c726c01a482b",
+              "step": "wt-cash-specified"
+            }
+          ],
+          "name": "Dollar Hedge",
+          "id": "bf3b4059-f8d9-4d0b-b5ec-7d249dd2de4a",
+          "step": "group",
+          "collapsed?": true
+        }
+      ]
+    }
+  ]
+}

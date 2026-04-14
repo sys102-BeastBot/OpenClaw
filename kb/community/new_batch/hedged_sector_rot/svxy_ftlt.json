@@ -1,0 +1,230 @@
+{
+  "id": "cd661a9b-0673-40df-8f03-a4afd3228d33",
+  "step": "root",
+  "name": "SVXY FTLT",
+  "description": "",
+  "rebalance": "daily",
+  "children": [
+    {
+      "id": "84aa4af8-a2b4-413a-844e-1b436a4d23d5",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "ProShares VIX Short-Term Futures ETF",
+                          "ticker": "VIXY",
+                          "id": "8fae3330-d203-471a-a4a7-934bc0ca7a3d",
+                          "exchange": "BATS",
+                          "step": "asset"
+                        }
+                      ],
+                      "lhs-fn-params": {
+                        "window": 10
+                      },
+                      "is-else-condition?": false,
+                      "rhs-fixed-value?": true,
+                      "lhs-fn": "relative-strength-index",
+                      "lhs-val": "QQQ",
+                      "id": "ce77c7c8-975b-4417-a4ea-7808219177d5",
+                      "comparator": "gt",
+                      "rhs-val": "80",
+                      "step": "if-child"
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "name": "ProShares VIX Short-Term Futures ETF",
+                                      "ticker": "VIXY",
+                                      "id": "acc5758c-7d17-4093-9d9b-c2d9a9bceb96",
+                                      "exchange": "BATS",
+                                      "step": "asset"
+                                    }
+                                  ],
+                                  "lhs-fn-params": {
+                                    "window": 10
+                                  },
+                                  "is-else-condition?": false,
+                                  "rhs-fixed-value?": true,
+                                  "lhs-fn": "relative-strength-index",
+                                  "lhs-val": "SPY",
+                                  "id": "772abcfa-1f51-4090-ba97-9b4ac0b16e77",
+                                  "comparator": "gt",
+                                  "rhs-val": "80",
+                                  "step": "if-child"
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "name": "Technology Select Sector SPDR Fund",
+                                                  "ticker": "XLK",
+                                                  "id": "01a6e2e7-0f3c-46c1-a417-fcc5648a7da8",
+                                                  "exchange": "ARCX",
+                                                  "step": "asset"
+                                                }
+                                              ],
+                                              "lhs-fn-params": {
+                                                "window": 10
+                                              },
+                                              "is-else-condition?": false,
+                                              "rhs-fixed-value?": true,
+                                              "lhs-fn": "relative-strength-index",
+                                              "lhs-val": "QQQ",
+                                              "id": "39a44cc1-6a42-46e4-aa11-26982de02802",
+                                              "comparator": "lt",
+                                              "rhs-val": "30",
+                                              "step": "if-child"
+                                            },
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [
+                                                                {
+                                                                  "children": [
+                                                                    {
+                                                                      "name": "ProShares Short VIX Short-Term Futures ETF",
+                                                                      "ticker": "SVXY",
+                                                                      "id": "aac2dd0f-742f-447f-9f96-5102e231c296",
+                                                                      "exchange": "BATS",
+                                                                      "step": "asset"
+                                                                    },
+                                                                    {
+                                                                      "name": "Vanguard Total Stock Market ETF",
+                                                                      "ticker": "VTI",
+                                                                      "id": "8b553d67-73fb-44c5-bda4-df74974e41bc",
+                                                                      "exchange": "ARCX",
+                                                                      "step": "asset"
+                                                                    }
+                                                                  ],
+                                                                  "select-fn": "top",
+                                                                  "select-n": "1",
+                                                                  "sort-by-fn": "moving-average-return",
+                                                                  "id": "770717b1-4c78-49aa-8a6b-e47ac6c749d6",
+                                                                  "step": "filter",
+                                                                  "sort-by-fn-params": {
+                                                                    "window": 20
+                                                                  }
+                                                                }
+                                                              ],
+                                                              "id": "377ef50f-f7f4-4b59-8d07-f08363255377",
+                                                              "step": "wt-cash-equal"
+                                                            }
+                                                          ],
+                                                          "lhs-fn-params": {},
+                                                          "rhs-fn": "moving-average-price",
+                                                          "is-else-condition?": false,
+                                                          "lhs-fn": "current-price",
+                                                          "lhs-val": "SVXY",
+                                                          "id": "efb99bbf-c3d3-4786-acb1-4ee498198e7f",
+                                                          "rhs-fn-params": {
+                                                            "window": 24
+                                                          },
+                                                          "comparator": "gt",
+                                                          "rhs-val": "SVXY",
+                                                          "step": "if-child"
+                                                        },
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [
+                                                                {
+                                                                  "name": "AGF U.S. Market Neutral Anti-Beta Fund",
+                                                                  "ticker": "BTAL",
+                                                                  "id": "58edc995-644a-44fd-a87b-39cd962d9a42",
+                                                                  "exchange": "ARCX",
+                                                                  "step": "asset"
+                                                                }
+                                                              ],
+                                                              "id": "232a4215-c15e-4703-b6c6-0d407391c4e5",
+                                                              "step": "wt-cash-equal"
+                                                            }
+                                                          ],
+                                                          "is-else-condition?": true,
+                                                          "id": "473a337a-9a10-40e5-a325-4580fd81dbb7",
+                                                          "step": "if-child"
+                                                        }
+                                                      ],
+                                                      "weight": {
+                                                        "num": 100,
+                                                        "den": 100
+                                                      },
+                                                      "id": "f61584fd-cd6c-4230-9f7b-902703885e9d",
+                                                      "step": "if"
+                                                    }
+                                                  ],
+                                                  "id": "f5ab3a4f-0b44-4240-ac97-0f4917fc2460",
+                                                  "step": "wt-cash-equal"
+                                                }
+                                              ],
+                                              "is-else-condition?": true,
+                                              "id": "08d51fc7-90c7-4528-8dbe-ad0f4f70717d",
+                                              "step": "if-child"
+                                            }
+                                          ],
+                                          "id": "c5528e2e-2e5e-4abe-9bc7-475c26bf2448",
+                                          "step": "if"
+                                        }
+                                      ],
+                                      "id": "8afcf537-1af3-4862-88d4-72bbca9caf00",
+                                      "step": "wt-cash-equal"
+                                    }
+                                  ],
+                                  "is-else-condition?": true,
+                                  "id": "91ad067d-e02c-4eca-b556-7fb0997c3a30",
+                                  "step": "if-child"
+                                }
+                              ],
+                              "id": "770eb211-bb91-429a-82eb-d97fa6c24518",
+                              "step": "if"
+                            }
+                          ],
+                          "id": "f36310a9-75b1-4b18-b099-69e599eb54ad",
+                          "step": "wt-cash-equal"
+                        }
+                      ],
+                      "is-else-condition?": true,
+                      "id": "0392dbe5-db03-4ce6-b01a-6903b49af8c2",
+                      "step": "if-child"
+                    }
+                  ],
+                  "id": "4deb8f78-3c9a-4acc-8ab7-77653c58a27c",
+                  "step": "if"
+                }
+              ],
+              "id": "32deba72-90db-4adf-a78c-4c452e1f825a",
+              "step": "wt-cash-equal"
+            }
+          ],
+          "name": "SVXY FTLT",
+          "id": "bcef0fa1-b13d-42a7-b2ea-c68c6ef916dd",
+          "step": "group",
+          "collapsed?": true
+        }
+      ]
+    }
+  ]
+}

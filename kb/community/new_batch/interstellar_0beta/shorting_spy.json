@@ -1,0 +1,255 @@
+{
+  "id": "db0cbe42-7a39-4c44-946b-14080b6686c0",
+  "step": "root",
+  "name": "Shorting SPY",
+  "description": "",
+  "rebalance": "daily",
+  "children": [
+    {
+      "id": "6179fd64-8cd8-4611-ab34-510a2fbd03f6",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "name": "iShares Short Treasury Bond ETF",
+                                                  "ticker": "SHV",
+                                                  "id": "94f7e41d-f7c1-4fd4-8a6d-3a1cda5592d7",
+                                                  "exchange": "XNAS",
+                                                  "step": "asset"
+                                                }
+                                              ],
+                                              "id": "fd40e2ea-a169-4fbe-af24-ffdba1fbe590",
+                                              "step": "wt-cash-equal"
+                                            }
+                                          ],
+                                          "rhs-fn": "moving-average-price",
+                                          "is-else-condition?": false,
+                                          "lhs-fn": "current-price",
+                                          "rhs-window-days": "200",
+                                          "lhs-val": "SPY",
+                                          "id": "7472f8ac-b47c-45e3-ab3e-7429298002e4",
+                                          "comparator": "gt",
+                                          "rhs-val": "SPY",
+                                          "step": "if-child"
+                                        },
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "name": "Technology Select Sector SPDR Fund",
+                                                          "ticker": "XLK",
+                                                          "id": "05a3400f-9134-4d13-b6c6-2f107db0358c",
+                                                          "exchange": "ARCX",
+                                                          "step": "asset"
+                                                        }
+                                                      ],
+                                                      "is-else-condition?": false,
+                                                      "rhs-fixed-value?": true,
+                                                      "lhs-fn": "relative-strength-index",
+                                                      "lhs-window-days": "10",
+                                                      "lhs-val": "QQQ",
+                                                      "id": "f2a75b14-2582-45d6-83ce-1cee6f2ef2af",
+                                                      "comparator": "lt",
+                                                      "rhs-val": "30",
+                                                      "step": "if-child"
+                                                    },
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "name": "iShares Short Treasury Bond ETF",
+                                                          "ticker": "SHV",
+                                                          "id": "e145be66-6f86-49b5-a4fa-1d27d1490de1",
+                                                          "exchange": "XNAS",
+                                                          "step": "asset"
+                                                        }
+                                                      ],
+                                                      "is-else-condition?": true,
+                                                      "id": "f69bfc1e-89d7-4592-badd-ea7fd37de6c9",
+                                                      "step": "if-child"
+                                                    }
+                                                  ],
+                                                  "id": "b955dc3a-08da-40a6-9162-3ad285ffa52d",
+                                                  "step": "if"
+                                                }
+                                              ],
+                                              "id": "0eb73dee-9903-4e0f-b8b2-cc8ed77010c5",
+                                              "step": "wt-cash-equal"
+                                            }
+                                          ],
+                                          "is-else-condition?": true,
+                                          "id": "2e9b2799-8e53-4f78-a47e-e6614899bd9b",
+                                          "step": "if-child"
+                                        }
+                                      ],
+                                      "id": "08a0d1a3-5776-46dd-8ded-5d92ad1f6b91",
+                                      "step": "if"
+                                    }
+                                  ],
+                                  "id": "a1b80a62-b67e-42f3-9e87-ef3bc95d1e87",
+                                  "step": "wt-cash-equal"
+                                }
+                              ],
+                              "rhs-fn": "relative-strength-index",
+                              "is-else-condition?": false,
+                              "lhs-fn": "relative-strength-index",
+                              "rhs-window-days": "60",
+                              "lhs-window-days": "20",
+                              "lhs-val": "BND",
+                              "id": "356396ca-c4f0-43b8-b186-601c92aca511",
+                              "comparator": "gt",
+                              "rhs-val": "SH",
+                              "step": "if-child"
+                            },
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "name": "Technology Select Sector SPDR Fund",
+                                              "ticker": "XLK",
+                                              "id": "4a5921ac-b6be-444e-bb48-e048018b5b73",
+                                              "exchange": "ARCX",
+                                              "step": "asset"
+                                            }
+                                          ],
+                                          "is-else-condition?": false,
+                                          "rhs-fixed-value?": true,
+                                          "lhs-fn": "relative-strength-index",
+                                          "lhs-window-days": "10",
+                                          "lhs-val": "QQQ",
+                                          "id": "5691181b-efeb-4134-8cbd-5aa2dbc09995",
+                                          "comparator": "lt",
+                                          "rhs-val": "30",
+                                          "step": "if-child"
+                                        },
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "name": "ProShares Short S&P500",
+                                                          "ticker": "SH",
+                                                          "id": "61a05787-0375-48ba-a8a5-f1d497891042",
+                                                          "exchange": "ARCX",
+                                                          "step": "asset"
+                                                        }
+                                                      ],
+                                                      "lhs-fn-params": {
+                                                        "window": 10
+                                                      },
+                                                      "rhs-fn": "moving-average-price",
+                                                      "is-else-condition?": false,
+                                                      "lhs-fn": "exponential-moving-average-price",
+                                                      "lhs-val": "SPY",
+                                                      "id": "63b906f6-87c5-45c9-9a01-0263feee97ab",
+                                                      "rhs-fn-params": {
+                                                        "window": 10
+                                                      },
+                                                      "comparator": "lt",
+                                                      "rhs-val": "SPY",
+                                                      "step": "if-child"
+                                                    },
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "name": "iShares Short Treasury Bond ETF",
+                                                          "ticker": "SHV",
+                                                          "id": "0a61edc0-fa06-4636-bc82-4c819807ad55",
+                                                          "exchange": "XNAS",
+                                                          "step": "asset"
+                                                        }
+                                                      ],
+                                                      "is-else-condition?": true,
+                                                      "id": "4cbeac0c-10d0-4169-84e9-44f415244f64",
+                                                      "step": "if-child"
+                                                    }
+                                                  ],
+                                                  "id": "0788b120-88e5-4c37-b84b-3804b4b3ad4d",
+                                                  "step": "if"
+                                                }
+                                              ],
+                                              "id": "ee3dd559-db44-4701-bb20-90f464103d60",
+                                              "step": "wt-cash-equal"
+                                            }
+                                          ],
+                                          "is-else-condition?": true,
+                                          "id": "91d23790-8357-4315-b944-716d44c69af4",
+                                          "step": "if-child"
+                                        }
+                                      ],
+                                      "id": "e56c53f0-c01a-4b3d-b0ca-1ea59794b2a7",
+                                      "step": "if"
+                                    }
+                                  ],
+                                  "id": "fafa2cf7-9171-4563-9e0a-1aec357aef41",
+                                  "step": "wt-cash-equal"
+                                }
+                              ],
+                              "is-else-condition?": true,
+                              "id": "2a089b18-7d76-43dd-bef4-7fc588088448",
+                              "step": "if-child"
+                            }
+                          ],
+                          "id": "9f216c21-e9a5-4636-9e16-b3139487540d",
+                          "step": "if"
+                        }
+                      ],
+                      "id": "495f0729-1307-48c3-8c58-d0964b728c7f",
+                      "step": "wt-cash-equal"
+                    }
+                  ],
+                  "name": "20d BND vs 60d SH Logic To Go Short",
+                  "weight": {
+                    "num": 100,
+                    "den": 100
+                  },
+                  "id": "15c9bd60-8272-4b01-9a58-487a86ff1991",
+                  "step": "group",
+                  "collapsed?": false
+                }
+              ],
+              "id": "8c84a9e1-805a-4357-8c86-2964d9c31da6",
+              "step": "wt-cash-equal"
+            }
+          ],
+          "name": "Shorting SPY",
+          "id": "d1e895d2-858d-4137-8bcd-3a353ff33481",
+          "step": "group",
+          "collapsed?": true
+        }
+      ]
+    }
+  ]
+}

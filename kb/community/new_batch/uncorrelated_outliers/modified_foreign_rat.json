@@ -1,0 +1,991 @@
+{
+  "id": "9f49e9e7-49ed-4e7e-b3ee-680fd685e70c",
+  "step": "root",
+  "name": "Modified Foreign Rat",
+  "description": "",
+  "rebalance": "daily",
+  "children": [
+    {
+      "id": "8c3d7d84-0031-4a2c-865b-2cfce7056b55",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "id": "03f68b27-2135-46d3-96b5-3bcaf616f9fc",
+          "step": "group",
+          "name": "Modified Foreign Rat",
+          "children": [
+            {
+              "step": "wt-cash-equal",
+              "id": "eeb9866d-2538-4c2f-afca-c71dcb4cd04b",
+              "children": [
+                {
+                  "id": "8f465ae3-9de6-45ef-a15d-6addc78bc5b9",
+                  "step": "if",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "id": "829e1f6e-3c18-42ab-8d11-c1ed17c61fa7",
+                          "step": "group",
+                          "name": "TQQQ or not | BlackSwan MeanRev BondSignal",
+                          "children": [
+                            {
+                              "step": "wt-cash-equal",
+                              "id": "83e137ec-7f76-499d-8eb4-80e178ec23ad",
+                              "children": [
+                                {
+                                  "weight": {
+                                    "num": 100,
+                                    "den": 100
+                                  },
+                                  "id": "c596067d-5cb1-4518-bd2b-850de3fc23b4",
+                                  "step": "if",
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "ticker": "BIL",
+                                          "exchange": "ARCX",
+                                          "name": "SPDR Bloomberg 1-3 Month T-Bill ETF",
+                                          "id": "33eb4d34-8471-4217-a3c8-f98baced489d",
+                                          "step": "asset",
+                                          "collapsed?": true,
+                                          "children": []
+                                        },
+                                        {
+                                          "ticker": "VIXY",
+                                          "exchange": "BATS",
+                                          "name": "ProShares VIX Short-Term Futures ETF",
+                                          "id": "02312210-d11d-4423-bcab-be5d35ce7099",
+                                          "step": "asset",
+                                          "collapsed?": true,
+                                          "children": []
+                                        },
+                                        {
+                                          "ticker": "BTAL",
+                                          "exchange": "ARCX",
+                                          "name": "AGF U.S. Market Neutral Anti-Beta Fund",
+                                          "id": "1ab7585b-c21a-48ae-bd30-d5985a0f5d0f",
+                                          "step": "asset",
+                                          "collapsed?": true,
+                                          "children": []
+                                        }
+                                      ],
+                                      "is-else-condition?": false,
+                                      "rhs-fixed-value?": true,
+                                      "lhs-fn": "relative-strength-index",
+                                      "lhs-window-days": "10",
+                                      "lhs-val": "TQQQ",
+                                      "id": "4cc9f219-8110-497a-aff8-cdf0801bfc01",
+                                      "comparator": "gt",
+                                      "rhs-val": "79",
+                                      "step": "if-child",
+                                      "collapsed?": true
+                                    },
+                                    {
+                                      "id": "bde3838c-7dc5-43c4-bd50-3bef734b07ca",
+                                      "step": "if-child",
+                                      "is-else-condition?": true,
+                                      "children": [
+                                        {
+                                          "id": "ded32bf1-ba56-486d-b5dd-6a31f013de22",
+                                          "step": "wt-cash-equal",
+                                          "children": [
+                                            {
+                                              "id": "159bedcd-5683-41cd-aa43-6c9124a6f39d",
+                                              "step": "group",
+                                              "name": "Huge volatility",
+                                              "children": [
+                                                {
+                                                  "step": "wt-cash-equal",
+                                                  "id": "f3c29707-a79f-4070-a57a-a411b4e3e7c0",
+                                                  "children": [
+                                                    {
+                                                      "weight": {
+                                                        "num": 100,
+                                                        "den": 100
+                                                      },
+                                                      "id": "4bd4833c-ee3f-4bd4-8ca6-2c8d44fd8525",
+                                                      "step": "if",
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "id": "08aa7236-94e0-455c-bdb1-b3144eb71f95",
+                                                              "step": "wt-cash-equal",
+                                                              "children": [
+                                                                {
+                                                                  "id": "10512921-8672-4ef5-9d8a-8ec7155ded53",
+                                                                  "step": "if",
+                                                                  "children": [
+                                                                    {
+                                                                      "children": [
+                                                                        {
+                                                                          "id": "92e71b74-f72a-4641-8ebf-49fbdae8448e",
+                                                                          "step": "wt-cash-equal",
+                                                                          "children": [
+                                                                            {
+                                                                              "ticker": "BIL",
+                                                                              "exchange": "ARCX",
+                                                                              "name": "SPDR Bloomberg 1-3 Month T-Bill ETF",
+                                                                              "id": "88982214-0531-47a2-a9ae-94350d84feb2",
+                                                                              "step": "asset",
+                                                                              "collapsed?": true,
+                                                                              "children": []
+                                                                            },
+                                                                            {
+                                                                              "ticker": "BTAL",
+                                                                              "exchange": "ARCX",
+                                                                              "name": "AGF U.S. Market Neutral Anti-Beta Fund",
+                                                                              "id": "fc6e8015-0d98-4423-bc6d-90767923822c",
+                                                                              "step": "asset",
+                                                                              "collapsed?": true,
+                                                                              "children": []
+                                                                            },
+                                                                            {
+                                                                              "ticker": "VIXY",
+                                                                              "exchange": "BATS",
+                                                                              "name": "ProShares VIX Short-Term Futures ETF",
+                                                                              "id": "98b31a13-3a5a-41d0-baee-1daa0adc459f",
+                                                                              "step": "asset",
+                                                                              "collapsed?": true,
+                                                                              "children": []
+                                                                            }
+                                                                          ],
+                                                                          "collapsed?": true
+                                                                        }
+                                                                      ],
+                                                                      "is-else-condition?": false,
+                                                                      "rhs-fixed-value?": true,
+                                                                      "lhs-fn": "cumulative-return",
+                                                                      "lhs-window-days": "1",
+                                                                      "lhs-val": "TQQQ",
+                                                                      "id": "6bc7f7a5-3360-4c68-a2cf-8142e2007c96",
+                                                                      "comparator": "gt",
+                                                                      "rhs-val": "6",
+                                                                      "step": "if-child",
+                                                                      "collapsed?": true
+                                                                    },
+                                                                    {
+                                                                      "id": "e20ca98a-baf1-4575-8eeb-f54f07bae829",
+                                                                      "step": "if-child",
+                                                                      "is-else-condition?": true,
+                                                                      "children": [
+                                                                        {
+                                                                          "id": "a1f23c84-084f-465f-af6d-5c8f5af02112",
+                                                                          "step": "wt-cash-equal",
+                                                                          "children": [
+                                                                            {
+                                                                              "id": "5d4df616-4da4-48e5-9f48-8ff19ba28e84",
+                                                                              "step": "group",
+                                                                              "name": "Mean Rev",
+                                                                              "children": [
+                                                                                {
+                                                                                  "step": "wt-cash-equal",
+                                                                                  "id": "646e95ad-19ff-4bed-a8df-90e1ad0ef6f7",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "weight": {
+                                                                                        "num": 100,
+                                                                                        "den": 100
+                                                                                      },
+                                                                                      "id": "fedb9de6-a61f-4577-8e6b-0a4c451e7bb1",
+                                                                                      "step": "if",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "children": [],
+                                                                                              "name": "ProShares UltraPro QQQ",
+                                                                                              "ticker": "TQQQ",
+                                                                                              "has_marketcap": false,
+                                                                                              "id": "8b9ba32c-184c-4802-9b77-a6bc2772c034",
+                                                                                              "exchange": "XNAS",
+                                                                                              "price": 22.73,
+                                                                                              "step": "asset",
+                                                                                              "dollar_volume": 4063748614.05,
+                                                                                              "collapsed?": true
+                                                                                            }
+                                                                                          ],
+                                                                                          "is-else-condition?": false,
+                                                                                          "rhs-fixed-value?": true,
+                                                                                          "lhs-fn": "relative-strength-index",
+                                                                                          "lhs-window-days": "10",
+                                                                                          "lhs-val": "TQQQ",
+                                                                                          "id": "e946d642-b444-498c-9abb-b237c6c1ad3b",
+                                                                                          "comparator": "lt",
+                                                                                          "rhs-val": "32",
+                                                                                          "step": "if-child",
+                                                                                          "collapsed?": true
+                                                                                        },
+                                                                                        {
+                                                                                          "id": "44cb8a5f-27ec-4177-8ee4-bb2c27c3fff3",
+                                                                                          "step": "if-child",
+                                                                                          "is-else-condition?": true,
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "id": "05ab207c-eab2-4e43-b874-2c160e0ab9f0",
+                                                                                              "step": "wt-cash-equal",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "id": "6380dcfc-d586-411d-8c6a-d9c80fea1a8b",
+                                                                                                  "step": "if",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "children": [],
+                                                                                                          "name": "ProShares UltraPro QQQ",
+                                                                                                          "ticker": "TQQQ",
+                                                                                                          "has_marketcap": false,
+                                                                                                          "id": "f4555b37-1370-4593-bcb8-70dcf6db71a8",
+                                                                                                          "exchange": "XNAS",
+                                                                                                          "price": 22.26,
+                                                                                                          "step": "asset",
+                                                                                                          "dollar_volume": 1499800778.7,
+                                                                                                          "collapsed?": true
+                                                                                                        }
+                                                                                                      ],
+                                                                                                      "rhs-fn": "standard-deviation-return",
+                                                                                                      "is-else-condition?": false,
+                                                                                                      "rhs-fixed-value?": true,
+                                                                                                      "lhs-fn": "max-drawdown",
+                                                                                                      "rhs-window-days": "252",
+                                                                                                      "lhs-window-days": "10",
+                                                                                                      "lhs-val": "TMF",
+                                                                                                      "id": "ad478007-9b42-457f-9f90-051869e49319",
+                                                                                                      "comparator": "lt",
+                                                                                                      "rhs-val": "7",
+                                                                                                      "step": "if-child",
+                                                                                                      "collapsed?": true
+                                                                                                    },
+                                                                                                    {
+                                                                                                      "id": "164b415d-28ca-4bb9-a7b5-e9e794920af7",
+                                                                                                      "step": "if-child",
+                                                                                                      "is-else-condition?": true,
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "id": "10f5646d-efca-4229-a0be-e57aeaa611d2",
+                                                                                                          "step": "wt-cash-equal",
+                                                                                                          "children": [
+                                                                                                            {
+                                                                                                              "children": [],
+                                                                                                              "name": "SPDR Bloomberg 1-3 Month T-Bill ETF",
+                                                                                                              "ticker": "BIL",
+                                                                                                              "has_marketcap": false,
+                                                                                                              "id": "9e7e5656-babe-4b82-a65e-c9dcf6a77721",
+                                                                                                              "exchange": "ARCX",
+                                                                                                              "price": 91.63,
+                                                                                                              "step": "asset",
+                                                                                                              "dollar_volume": 233023336.7,
+                                                                                                              "collapsed?": true
+                                                                                                            }
+                                                                                                          ],
+                                                                                                          "collapsed?": true
+                                                                                                        }
+                                                                                                      ],
+                                                                                                      "collapsed?": true
+                                                                                                    }
+                                                                                                  ],
+                                                                                                  "weight": {
+                                                                                                    "num": "85",
+                                                                                                    "den": 100
+                                                                                                  },
+                                                                                                  "collapsed?": true
+                                                                                                }
+                                                                                              ],
+                                                                                              "collapsed?": true
+                                                                                            }
+                                                                                          ],
+                                                                                          "collapsed?": true
+                                                                                        }
+                                                                                      ],
+                                                                                      "collapsed?": true
+                                                                                    }
+                                                                                  ],
+                                                                                  "collapsed?": true
+                                                                                }
+                                                                              ],
+                                                                              "collapsed?": true
+                                                                            }
+                                                                          ],
+                                                                          "collapsed?": true
+                                                                        }
+                                                                      ],
+                                                                      "collapsed?": true
+                                                                    }
+                                                                  ],
+                                                                  "collapsed?": true
+                                                                }
+                                                              ],
+                                                              "collapsed?": true
+                                                            }
+                                                          ],
+                                                          "is-else-condition?": false,
+                                                          "rhs-fixed-value?": true,
+                                                          "lhs-fn": "cumulative-return",
+                                                          "lhs-window-days": "6",
+                                                          "lhs-val": "TQQQ",
+                                                          "id": "fd43b77c-d30c-4801-bbca-19950d907609",
+                                                          "comparator": "lt",
+                                                          "rhs-val": "-13",
+                                                          "step": "if-child",
+                                                          "collapsed?": true
+                                                        },
+                                                        {
+                                                          "id": "47809654-d995-4de5-af96-238254e166f8",
+                                                          "step": "if-child",
+                                                          "is-else-condition?": true,
+                                                          "children": [
+                                                            {
+                                                              "id": "61a05f0b-d96b-4014-ade8-10bd59e0fa6c",
+                                                              "step": "wt-cash-equal",
+                                                              "children": [
+                                                                {
+                                                                  "id": "827cf433-45ff-4621-ab39-e2a174833052",
+                                                                  "step": "group",
+                                                                  "name": "Normal market",
+                                                                  "children": [
+                                                                    {
+                                                                      "step": "wt-cash-equal",
+                                                                      "id": "a88a2cc6-11a5-4ceb-a42a-e49374c87c3f",
+                                                                      "children": [
+                                                                        {
+                                                                          "id": "44edcc82-7db6-4da7-b595-74c3b5daad3b",
+                                                                          "step": "if",
+                                                                          "children": [
+                                                                            {
+                                                                              "children": [
+                                                                                {
+                                                                                  "children": [],
+                                                                                  "name": "SPDR Bloomberg 1-3 Month T-Bill ETF",
+                                                                                  "ticker": "BIL",
+                                                                                  "has_marketcap": false,
+                                                                                  "id": "826e071e-a41f-452d-945b-45fa8bf07c53",
+                                                                                  "exchange": "ARCX",
+                                                                                  "price": 91.63,
+                                                                                  "step": "asset",
+                                                                                  "dollar_volume": 379755037.2,
+                                                                                  "collapsed?": true
+                                                                                }
+                                                                              ],
+                                                                              "is-else-condition?": false,
+                                                                              "rhs-fixed-value?": true,
+                                                                              "lhs-fn": "max-drawdown",
+                                                                              "lhs-window-days": "10",
+                                                                              "lhs-val": "QQQ",
+                                                                              "id": "8a4442a4-13b5-4df9-b964-4b809b9cac01",
+                                                                              "comparator": "gt",
+                                                                              "rhs-val": "6",
+                                                                              "step": "if-child",
+                                                                              "collapsed?": true
+                                                                            },
+                                                                            {
+                                                                              "id": "a0e564f4-e423-4b96-8c3d-3c56f4526fa5",
+                                                                              "step": "if-child",
+                                                                              "is-else-condition?": true,
+                                                                              "children": [
+                                                                                {
+                                                                                  "id": "0a9cbb51-03b6-4be1-b4b2-ce34c6d0a2e9",
+                                                                                  "step": "wt-cash-equal",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "id": "b4307861-4631-4bf2-8a0c-cf164d2220cc",
+                                                                                      "step": "if",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "children": [],
+                                                                                              "name": "SPDR Bloomberg 1-3 Month T-Bill ETF",
+                                                                                              "ticker": "BIL",
+                                                                                              "has_marketcap": false,
+                                                                                              "id": "de506842-5678-4523-ab06-d7d7becf04d1",
+                                                                                              "exchange": "ARCX",
+                                                                                              "price": 91.63,
+                                                                                              "step": "asset",
+                                                                                              "dollar_volume": 233023336.7,
+                                                                                              "collapsed?": true
+                                                                                            }
+                                                                                          ],
+                                                                                          "rhs-fn": "standard-deviation-return",
+                                                                                          "is-else-condition?": false,
+                                                                                          "rhs-fixed-value?": true,
+                                                                                          "lhs-fn": "max-drawdown",
+                                                                                          "rhs-window-days": "252",
+                                                                                          "lhs-window-days": "10",
+                                                                                          "lhs-val": "TMF",
+                                                                                          "id": "2c96a2b7-66e4-4f41-9e32-33546d6bc4ab",
+                                                                                          "comparator": "gt",
+                                                                                          "rhs-val": "7",
+                                                                                          "step": "if-child",
+                                                                                          "collapsed?": true
+                                                                                        },
+                                                                                        {
+                                                                                          "id": "3ce5107a-45eb-4025-b436-84fbf87ad8c6",
+                                                                                          "step": "if-child",
+                                                                                          "is-else-condition?": true,
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "id": "1ea13c31-b43c-4e4b-8fe2-881c91842541",
+                                                                                              "step": "wt-cash-equal",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "id": "71c4af5a-23ad-4642-bb8d-2bb977513f51",
+                                                                                                  "step": "if",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "id": "55549173-0dd7-40d9-99d9-28be1ba17958",
+                                                                                                          "step": "wt-cash-equal",
+                                                                                                          "children": [
+                                                                                                            {
+                                                                                                              "children": [],
+                                                                                                              "name": "ProShares UltraPro QQQ",
+                                                                                                              "ticker": "TQQQ",
+                                                                                                              "has_marketcap": false,
+                                                                                                              "id": "af3c1fae-0ed3-4f44-995f-080591084417",
+                                                                                                              "exchange": "XNAS",
+                                                                                                              "price": 22.73,
+                                                                                                              "step": "asset",
+                                                                                                              "dollar_volume": 4063748614.05,
+                                                                                                              "collapsed?": true
+                                                                                                            }
+                                                                                                          ],
+                                                                                                          "collapsed?": true
+                                                                                                        }
+                                                                                                      ],
+                                                                                                      "rhs-fn": "moving-average-price",
+                                                                                                      "is-else-condition?": false,
+                                                                                                      "lhs-fn": "current-price",
+                                                                                                      "rhs-window-days": "25",
+                                                                                                      "lhs-val": "QQQ",
+                                                                                                      "id": "5744f5ff-f367-456a-a158-489e3dd4a3b3",
+                                                                                                      "comparator": "gt",
+                                                                                                      "rhs-val": "QQQ",
+                                                                                                      "step": "if-child",
+                                                                                                      "collapsed?": true
+                                                                                                    },
+                                                                                                    {
+                                                                                                      "id": "fe2d0c1a-7422-4cda-bad5-aa1b2a842a01",
+                                                                                                      "step": "if-child",
+                                                                                                      "is-else-condition?": true,
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "id": "45c15c94-0624-437f-b9a3-aaadbba1c22a",
+                                                                                                          "step": "wt-cash-equal",
+                                                                                                          "children": [
+                                                                                                            {
+                                                                                                              "id": "1407dd15-6c82-41af-b9ef-d18360029555",
+                                                                                                              "step": "if",
+                                                                                                              "children": [
+                                                                                                                {
+                                                                                                                  "children": [
+                                                                                                                    {
+                                                                                                                      "weight": {
+                                                                                                                        "num": 100,
+                                                                                                                        "den": 100
+                                                                                                                      },
+                                                                                                                      "id": "486b0cd1-5c66-484b-b482-cc674b3d215d",
+                                                                                                                      "step": "group",
+                                                                                                                      "name": "Bond > Stock",
+                                                                                                                      "children": [
+                                                                                                                        {
+                                                                                                                          "step": "wt-cash-equal",
+                                                                                                                          "id": "6bc3e2c4-35e7-4f9c-a6bc-a88ee950f0f4",
+                                                                                                                          "children": [
+                                                                                                                            {
+                                                                                                                              "id": "cda707ba-1bba-4271-bfae-acd89a719359",
+                                                                                                                              "step": "if",
+                                                                                                                              "children": [
+                                                                                                                                {
+                                                                                                                                  "children": [
+                                                                                                                                    {
+                                                                                                                                      "children": [],
+                                                                                                                                      "name": "ProShares UltraPro QQQ",
+                                                                                                                                      "ticker": "TQQQ",
+                                                                                                                                      "has_marketcap": false,
+                                                                                                                                      "id": "5731f913-b92f-4483-8b39-36cde3089bd9",
+                                                                                                                                      "exchange": "XNAS",
+                                                                                                                                      "price": 18.52,
+                                                                                                                                      "step": "asset",
+                                                                                                                                      "dollar_volume": 3677529938.12,
+                                                                                                                                      "collapsed?": true
+                                                                                                                                    }
+                                                                                                                                  ],
+                                                                                                                                  "rhs-fn": "relative-strength-index",
+                                                                                                                                  "is-else-condition?": false,
+                                                                                                                                  "lhs-fn": "relative-strength-index",
+                                                                                                                                  "rhs-window-days": "45",
+                                                                                                                                  "lhs-window-days": "45",
+                                                                                                                                  "lhs-val": "BND",
+                                                                                                                                  "id": "51f49890-d403-456e-86e5-3a9be57650e7",
+                                                                                                                                  "comparator": "gt",
+                                                                                                                                  "rhs-val": "SPY",
+                                                                                                                                  "step": "if-child",
+                                                                                                                                  "collapsed?": true
+                                                                                                                                },
+                                                                                                                                {
+                                                                                                                                  "id": "73e44320-4a5b-4148-92c2-00c341229d89",
+                                                                                                                                  "step": "if-child",
+                                                                                                                                  "is-else-condition?": true,
+                                                                                                                                  "children": [
+                                                                                                                                    {
+                                                                                                                                      "children": [],
+                                                                                                                                      "name": "SPDR Bloomberg 1-3 Month T-Bill ETF",
+                                                                                                                                      "ticker": "BIL",
+                                                                                                                                      "has_marketcap": false,
+                                                                                                                                      "id": "28608199-783c-4eed-a939-651d044383bf",
+                                                                                                                                      "exchange": "ARCX",
+                                                                                                                                      "price": 91.46,
+                                                                                                                                      "step": "asset",
+                                                                                                                                      "dollar_volume": 594575240.7199999,
+                                                                                                                                      "collapsed?": true
+                                                                                                                                    }
+                                                                                                                                  ],
+                                                                                                                                  "collapsed?": true
+                                                                                                                                }
+                                                                                                                              ],
+                                                                                                                              "collapsed?": true
+                                                                                                                            }
+                                                                                                                          ],
+                                                                                                                          "collapsed?": true
+                                                                                                                        }
+                                                                                                                      ],
+                                                                                                                      "collapsed?": true
+                                                                                                                    }
+                                                                                                                  ],
+                                                                                                                  "is-else-condition?": false,
+                                                                                                                  "rhs-fixed-value?": true,
+                                                                                                                  "lhs-fn": "relative-strength-index",
+                                                                                                                  "lhs-window-days": "60",
+                                                                                                                  "lhs-val": "SPY",
+                                                                                                                  "id": "da082907-976b-47a4-b485-725b7e07c027",
+                                                                                                                  "comparator": "gt",
+                                                                                                                  "rhs-val": "50",
+                                                                                                                  "step": "if-child",
+                                                                                                                  "collapsed?": true
+                                                                                                                },
+                                                                                                                {
+                                                                                                                  "id": "c2d3d0b8-65de-475a-b304-98e1243e0736",
+                                                                                                                  "step": "if-child",
+                                                                                                                  "is-else-condition?": true,
+                                                                                                                  "children": [
+                                                                                                                    {
+                                                                                                                      "id": "84368c65-30b2-4a79-bbf6-282056bc90ce",
+                                                                                                                      "step": "group",
+                                                                                                                      "name": "Bond Mid-term < Long-term",
+                                                                                                                      "children": [
+                                                                                                                        {
+                                                                                                                          "step": "wt-cash-equal",
+                                                                                                                          "id": "44fe2ebb-06b6-416a-8d91-9b1b24c53f45",
+                                                                                                                          "children": [
+                                                                                                                            {
+                                                                                                                              "id": "cb22cc5f-3c66-425d-9e3c-28d60715aff8",
+                                                                                                                              "step": "if",
+                                                                                                                              "children": [
+                                                                                                                                {
+                                                                                                                                  "children": [
+                                                                                                                                    {
+                                                                                                                                      "id": "1da99a83-8a58-4e52-a0c9-43c536701832",
+                                                                                                                                      "step": "wt-cash-equal",
+                                                                                                                                      "children": [
+                                                                                                                                        {
+                                                                                                                                          "id": "18e386b0-7d7d-4e0c-85fd-84d9f1296310",
+                                                                                                                                          "step": "if",
+                                                                                                                                          "children": [
+                                                                                                                                            {
+                                                                                                                                              "children": [
+                                                                                                                                                {
+                                                                                                                                                  "children": [],
+                                                                                                                                                  "name": "ProShares UltraPro QQQ",
+                                                                                                                                                  "ticker": "TQQQ",
+                                                                                                                                                  "has_marketcap": false,
+                                                                                                                                                  "id": "3bb31ad6-46c6-46e8-9106-50e67a9b8c27",
+                                                                                                                                                  "exchange": "XNAS",
+                                                                                                                                                  "price": 18.52,
+                                                                                                                                                  "step": "asset",
+                                                                                                                                                  "dollar_volume": 3677529938.12,
+                                                                                                                                                  "collapsed?": true
+                                                                                                                                                }
+                                                                                                                                              ],
+                                                                                                                                              "rhs-fn": "relative-strength-index",
+                                                                                                                                              "is-else-condition?": false,
+                                                                                                                                              "lhs-fn": "relative-strength-index",
+                                                                                                                                              "rhs-window-days": "45",
+                                                                                                                                              "lhs-window-days": "45",
+                                                                                                                                              "lhs-val": "BND",
+                                                                                                                                              "id": "57f591f9-0219-445f-9ceb-fa24009a82ff",
+                                                                                                                                              "comparator": "gt",
+                                                                                                                                              "rhs-val": "SPY",
+                                                                                                                                              "step": "if-child",
+                                                                                                                                              "collapsed?": true
+                                                                                                                                            },
+                                                                                                                                            {
+                                                                                                                                              "id": "7a4e318e-04c7-4d06-9898-83241bf0b8a2",
+                                                                                                                                              "step": "if-child",
+                                                                                                                                              "is-else-condition?": true,
+                                                                                                                                              "children": [
+                                                                                                                                                {
+                                                                                                                                                  "children": [],
+                                                                                                                                                  "name": "SPDR Bloomberg 1-3 Month T-Bill ETF",
+                                                                                                                                                  "ticker": "BIL",
+                                                                                                                                                  "has_marketcap": false,
+                                                                                                                                                  "id": "616fdb9e-fc51-4406-ae07-3946f35930fc",
+                                                                                                                                                  "exchange": "ARCX",
+                                                                                                                                                  "price": 91.46,
+                                                                                                                                                  "step": "asset",
+                                                                                                                                                  "dollar_volume": 594575240.7199999,
+                                                                                                                                                  "collapsed?": true
+                                                                                                                                                }
+                                                                                                                                              ],
+                                                                                                                                              "collapsed?": true
+                                                                                                                                            }
+                                                                                                                                          ],
+                                                                                                                                          "collapsed?": true
+                                                                                                                                        }
+                                                                                                                                      ],
+                                                                                                                                      "collapsed?": true
+                                                                                                                                    }
+                                                                                                                                  ],
+                                                                                                                                  "rhs-fn": "relative-strength-index",
+                                                                                                                                  "is-else-condition?": false,
+                                                                                                                                  "lhs-fn": "relative-strength-index",
+                                                                                                                                  "rhs-window-days": "200",
+                                                                                                                                  "lhs-window-days": "200",
+                                                                                                                                  "lhs-val": "IEF",
+                                                                                                                                  "id": "3abfbda4-e272-426a-8aae-09f15c6251d5",
+                                                                                                                                  "comparator": "lt",
+                                                                                                                                  "rhs-val": "TLT",
+                                                                                                                                  "step": "if-child",
+                                                                                                                                  "collapsed?": true
+                                                                                                                                },
+                                                                                                                                {
+                                                                                                                                  "id": "86b47039-3a2d-4d33-81f7-3492f1ae2550",
+                                                                                                                                  "step": "if-child",
+                                                                                                                                  "is-else-condition?": true,
+                                                                                                                                  "children": [
+                                                                                                                                    {
+                                                                                                                                      "children": [],
+                                                                                                                                      "name": "SPDR Bloomberg 1-3 Month T-Bill ETF",
+                                                                                                                                      "ticker": "BIL",
+                                                                                                                                      "has_marketcap": false,
+                                                                                                                                      "id": "d83561e4-fd72-4a1b-be83-f1adfb3b634a",
+                                                                                                                                      "exchange": "ARCX",
+                                                                                                                                      "price": 91.46,
+                                                                                                                                      "step": "asset",
+                                                                                                                                      "dollar_volume": 594575240.7199999,
+                                                                                                                                      "collapsed?": true
+                                                                                                                                    }
+                                                                                                                                  ],
+                                                                                                                                  "collapsed?": true
+                                                                                                                                }
+                                                                                                                              ],
+                                                                                                                              "collapsed?": true
+                                                                                                                            }
+                                                                                                                          ],
+                                                                                                                          "collapsed?": true
+                                                                                                                        }
+                                                                                                                      ],
+                                                                                                                      "collapsed?": true
+                                                                                                                    }
+                                                                                                                  ],
+                                                                                                                  "collapsed?": true
+                                                                                                                }
+                                                                                                              ],
+                                                                                                              "collapsed?": true
+                                                                                                            }
+                                                                                                          ],
+                                                                                                          "collapsed?": true
+                                                                                                        }
+                                                                                                      ],
+                                                                                                      "collapsed?": true
+                                                                                                    }
+                                                                                                  ],
+                                                                                                  "collapsed?": true
+                                                                                                }
+                                                                                              ],
+                                                                                              "collapsed?": true
+                                                                                            }
+                                                                                          ],
+                                                                                          "collapsed?": true
+                                                                                        }
+                                                                                      ],
+                                                                                      "weight": {
+                                                                                        "num": "85",
+                                                                                        "den": 100
+                                                                                      },
+                                                                                      "collapsed?": true
+                                                                                    }
+                                                                                  ],
+                                                                                  "collapsed?": true
+                                                                                }
+                                                                              ],
+                                                                              "collapsed?": true
+                                                                            }
+                                                                          ],
+                                                                          "collapsed?": true
+                                                                        }
+                                                                      ],
+                                                                      "collapsed?": true
+                                                                    }
+                                                                  ],
+                                                                  "collapsed?": true
+                                                                }
+                                                              ],
+                                                              "collapsed?": true
+                                                            }
+                                                          ],
+                                                          "collapsed?": true
+                                                        }
+                                                      ],
+                                                      "collapsed?": true
+                                                    }
+                                                  ],
+                                                  "collapsed?": true
+                                                }
+                                              ],
+                                              "collapsed?": true
+                                            }
+                                          ],
+                                          "collapsed?": true
+                                        }
+                                      ],
+                                      "collapsed?": true
+                                    }
+                                  ],
+                                  "collapsed?": true
+                                }
+                              ],
+                              "collapsed?": true
+                            }
+                          ],
+                          "collapsed?": true
+                        }
+                      ],
+                      "lhs-fn-params": {
+                        "window": 14
+                      },
+                      "is-else-condition?": false,
+                      "rhs-fixed-value?": true,
+                      "lhs-fn": "relative-strength-index",
+                      "lhs-val": "VIXM",
+                      "id": "3170806d-25d7-4fa5-ae22-2f7e4dbfde11",
+                      "comparator": "gt",
+                      "rhs-val": "70",
+                      "step": "if-child",
+                      "collapsed?": true
+                    },
+                    {
+                      "id": "26bd4a31-3bd9-4a74-b3d5-254c663249e7",
+                      "step": "if-child",
+                      "is-else-condition?": true,
+                      "children": [
+                        {
+                          "id": "d8b7969a-3a90-499d-9e17-146eca1162ad",
+                          "step": "wt-cash-equal",
+                          "children": [
+                            {
+                              "id": "b88299c6-511f-4689-a313-be2a9fe2490f",
+                              "step": "if",
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "id": "f4f3dae8-405d-4c22-9766-d45852e51ff6",
+                                      "step": "wt-cash-equal",
+                                      "children": [
+                                        {
+                                          "id": "1834e9bb-845b-41a6-a653-8dbd6ba33c3d",
+                                          "step": "if",
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "id": "aeccad40-bc42-49c5-8c7b-e920371166dc",
+                                                  "step": "wt-cash-equal",
+                                                  "children": [
+                                                    {
+                                                      "ticker": "EDC",
+                                                      "exchange": "ARCX",
+                                                      "name": "Direxion Daily MSCI Emerging Markets Bull 3x Shares",
+                                                      "id": "183a3e5c-c24a-4512-864a-08b96432fef8",
+                                                      "step": "asset",
+                                                      "collapsed?": true,
+                                                      "children": []
+                                                    }
+                                                  ],
+                                                  "window-days": "15",
+                                                  "collapsed?": true
+                                                }
+                                              ],
+                                              "rhs-fn": "relative-strength-index",
+                                              "is-else-condition?": false,
+                                              "rhs-fixed-value?": false,
+                                              "lhs-fn": "relative-strength-index",
+                                              "rhs-window-days": "16",
+                                              "lhs-window-days": "11",
+                                              "lhs-val": "IEI",
+                                              "id": "a19c242f-2383-4f5c-b4a2-7d42603c94c4",
+                                              "comparator": "gt",
+                                              "rhs-val": "IWM",
+                                              "step": "if-child",
+                                              "collapsed?": true
+                                            },
+                                            {
+                                              "id": "f49da7cd-c3d4-4940-a5ec-fd81388d1400",
+                                              "step": "if-child",
+                                              "is-else-condition?": true,
+                                              "children": [
+                                                {
+                                                  "id": "1bd276d0-2837-4bea-8b1d-d9a9f6e20efc",
+                                                  "step": "wt-cash-equal",
+                                                  "children": [
+                                                    {
+                                                      "ticker": "EDZ",
+                                                      "exchange": "ARCX",
+                                                      "name": "Direxion Daily MSCI Emerging Markets Bear 3X Shares",
+                                                      "id": "c40ea06a-9b42-4967-afcc-d7ed5af8c2db",
+                                                      "step": "asset",
+                                                      "collapsed?": true,
+                                                      "children": []
+                                                    }
+                                                  ],
+                                                  "window-days": "15",
+                                                  "collapsed?": true
+                                                }
+                                              ],
+                                              "collapsed?": true
+                                            }
+                                          ],
+                                          "weight": {
+                                            "num": "90",
+                                            "den": 100
+                                          },
+                                          "collapsed?": true
+                                        }
+                                      ],
+                                      "collapsed?": true
+                                    }
+                                  ],
+                                  "lhs-fn-params": {},
+                                  "rhs-fn": "moving-average-price",
+                                  "is-else-condition?": false,
+                                  "lhs-fn": "current-price",
+                                  "lhs-val": "EEM",
+                                  "id": "80220515-7de5-47f9-84d3-14174a0bfc76",
+                                  "rhs-fn-params": {
+                                    "window": 200
+                                  },
+                                  "comparator": "gt",
+                                  "rhs-val": "EEM",
+                                  "step": "if-child",
+                                  "collapsed?": true
+                                },
+                                {
+                                  "id": "9d1c5666-49b4-433c-9ca1-fb9d01b07460",
+                                  "step": "if-child",
+                                  "is-else-condition?": true,
+                                  "children": [
+                                    {
+                                      "id": "8d22338b-620b-4294-b7da-9976128ccdba",
+                                      "step": "wt-cash-equal",
+                                      "children": [
+                                        {
+                                          "id": "faf2aee8-3f86-443c-b12c-1c1f2fb53724",
+                                          "step": "if",
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "id": "9ac44ba9-3cbd-46a6-99b1-b374fefc7c2c",
+                                                  "step": "wt-cash-equal",
+                                                  "children": [
+                                                    {
+                                                      "ticker": "EDC",
+                                                      "exchange": "ARCX",
+                                                      "name": "Direxion Daily MSCI Emerging Markets Bull 3x Shares",
+                                                      "id": "417fa0ea-811b-461d-887b-66b726684805",
+                                                      "step": "asset",
+                                                      "collapsed?": true,
+                                                      "children": []
+                                                    }
+                                                  ],
+                                                  "window-days": "15",
+                                                  "collapsed?": true
+                                                }
+                                              ],
+                                              "rhs-fn": "relative-strength-index",
+                                              "is-else-condition?": false,
+                                              "rhs-fixed-value?": false,
+                                              "lhs-fn": "relative-strength-index",
+                                              "rhs-window-days": "16",
+                                              "lhs-window-days": "11",
+                                              "lhs-val": "IEI",
+                                              "id": "762e2507-9451-4bfb-b93d-4b143cc0c15d",
+                                              "comparator": "gt",
+                                              "rhs-val": "EEM",
+                                              "step": "if-child",
+                                              "collapsed?": true
+                                            },
+                                            {
+                                              "id": "bf305ddf-3133-43e3-80af-36e3bf9c99fd",
+                                              "step": "if-child",
+                                              "is-else-condition?": true,
+                                              "children": [
+                                                {
+                                                  "id": "cbce3ace-aa18-4729-8af5-5a5dabe33c98",
+                                                  "step": "wt-cash-equal",
+                                                  "children": [
+                                                    {
+                                                      "ticker": "EDZ",
+                                                      "exchange": "ARCX",
+                                                      "name": "Direxion Daily MSCI Emerging Markets Bear 3X Shares",
+                                                      "id": "b29bbd23-1bfa-4938-8004-2e29b4c6b44f",
+                                                      "step": "asset",
+                                                      "collapsed?": true,
+                                                      "children": []
+                                                    }
+                                                  ],
+                                                  "window-days": "15",
+                                                  "collapsed?": true
+                                                }
+                                              ],
+                                              "collapsed?": true
+                                            }
+                                          ],
+                                          "weight": {
+                                            "num": "90",
+                                            "den": 100
+                                          },
+                                          "collapsed?": true
+                                        }
+                                      ],
+                                      "collapsed?": true
+                                    }
+                                  ],
+                                  "collapsed?": true
+                                }
+                              ],
+                              "collapsed?": true
+                            }
+                          ],
+                          "collapsed?": true
+                        }
+                      ],
+                      "collapsed?": true
+                    }
+                  ],
+                  "collapsed?": true
+                }
+              ],
+              "collapsed?": true
+            }
+          ],
+          "collapsed?": true
+        }
+      ]
+    }
+  ]
+}

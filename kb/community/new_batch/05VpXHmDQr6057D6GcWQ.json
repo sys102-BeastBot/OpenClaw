@@ -1,0 +1,479 @@
+{
+  "id": "05VpXHmDQr6057D6GcWQ",
+  "step": "root",
+  "name": "Copy of Gold FTLT",
+  "description": "",
+  "rebalance": "daily",
+  "children": [
+    {
+      "id": "2789ae73-12eb-4050-ba5d-9d077a1ab4d3",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "weight": {
+            "num": 100,
+            "den": 100
+          },
+          "id": "c9bab966-341c-4375-9b95-4ad049493323",
+          "step": "if",
+          "children": [
+            {
+              "children": [
+                {
+                  "id": "b110cbcf-cd65-4bf5-b0c1-691dab9ba8fe",
+                  "step": "wt-cash-equal",
+                  "children": [
+                    {
+                      "weight": {
+                        "num": 100,
+                        "den": 100
+                      },
+                      "id": "c1e4a515-3c44-4fbb-a97b-4f461380f03a",
+                      "step": "if",
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "ticker": "GLL",
+                              "exchange": "ARCX",
+                              "name": "ProShares Trust - ProShares UltraShort Gold -2x Shares",
+                              "id": "ff6161f4-fe42-4401-9550-6eb35f7e759c",
+                              "step": "asset",
+                              "children-count": 0
+                            }
+                          ],
+                          "lhs-fn-params": {
+                            "window": 20
+                          },
+                          "rhs-fn": "moving-average-price",
+                          "is-else-condition?": false,
+                          "rhs-fixed-value?": true,
+                          "lhs-fn": "relative-strength-index",
+                          "lhs-val": "UGL",
+                          "id": "60021bac-0afd-4183-a4b8-1e231ca2adb3",
+                          "rhs-fn-params": {
+                            "window": 10
+                          },
+                          "comparator": "gt",
+                          "rhs-val": "80",
+                          "step": "if-child"
+                        },
+                        {
+                          "id": "348b2e54-13e7-4e74-b958-a06c2dbcb313",
+                          "step": "if-child",
+                          "is-else-condition?": true,
+                          "children": [
+                            {
+                              "id": "8a7d3ab3-c2ba-40c1-aa24-55241f368e3e",
+                              "step": "wt-cash-equal",
+                              "children": [
+                                {
+                                  "weight": {
+                                    "num": 100,
+                                    "den": 100
+                                  },
+                                  "id": "a7b6a423-56fb-4eb2-870f-403c1cfa3d3a",
+                                  "step": "if",
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "ticker": "GLL",
+                                          "exchange": "ARCX",
+                                          "name": "ProShares Trust - ProShares UltraShort Gold -2x Shares",
+                                          "id": "10ff9afa-cb0f-43a1-96a0-c69528f18f20",
+                                          "step": "asset"
+                                        }
+                                      ],
+                                      "lhs-fn-params": {
+                                        "window": 10
+                                      },
+                                      "rhs-fn": "moving-average-price",
+                                      "is-else-condition?": false,
+                                      "rhs-fixed-value?": true,
+                                      "lhs-fn": "relative-strength-index",
+                                      "lhs-val": "UGL",
+                                      "id": "4bdbc6e1-ca11-4542-9c08-ab6769c70d5e",
+                                      "condition": {
+                                        "condition-type": "compound",
+                                        "operator": "any",
+                                        "conditions": [
+                                          {
+                                            "condition-type": "binary",
+                                            "comparator": "gt",
+                                            "lhs": {
+                                              "fn": "relative-strength-index",
+                                              "ticker": "UGL",
+                                              "params": {
+                                                "window": 10
+                                              }
+                                            },
+                                            "rhs": {
+                                              "constant": 90.0
+                                            }
+                                          },
+                                          {
+                                            "condition-type": "binary",
+                                            "comparator": "gt",
+                                            "lhs": {
+                                              "fn": "relative-strength-index",
+                                              "ticker": "UGL",
+                                              "params": {
+                                                "window": 2
+                                              }
+                                            },
+                                            "rhs": {
+                                              "constant": 99.9
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      "rhs-fn-params": {
+                                        "window": 10
+                                      },
+                                      "comparator": "gt",
+                                      "rhs-val": "90",
+                                      "step": "if-child"
+                                    },
+                                    {
+                                      "id": "59b3e467-b3b6-4cfc-9244-e9dc776e7a3f",
+                                      "step": "if-child",
+                                      "is-else-condition?": true,
+                                      "children": [
+                                        {
+                                          "ticker": "UGL",
+                                          "exchange": "ARCX",
+                                          "name": "ProShares Trust - ProShares Ultra Gold 2x Shares",
+                                          "id": "a60868ee-769c-4cd4-90e3-b43d2d524b8b",
+                                          "step": "asset"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "collapsed?": true
+                }
+              ],
+              "lhs-fn-params": {
+                "window": 50
+              },
+              "rhs-fn": "moving-average-price",
+              "is-else-condition?": false,
+              "lhs-fn": "moving-average-price",
+              "lhs-val": "UGL",
+              "id": "fbdded9f-ff5a-47dc-a928-03a4c4860e87",
+              "rhs-fn-params": {
+                "window": 200
+              },
+              "comparator": "gt",
+              "rhs-val": "UGL",
+              "step": "if-child"
+            },
+            {
+              "id": "0dc4dea3-7aaa-4338-acce-dee9fabb9f99",
+              "step": "if-child",
+              "is-else-condition?": true,
+              "children": [
+                {
+                  "id": "175bcdd9-dc7d-40f4-bddf-39c943eacc95",
+                  "step": "wt-cash-equal",
+                  "children": [
+                    {
+                      "weight": {
+                        "num": 100,
+                        "den": 100
+                      },
+                      "id": "4a0c6d13-af83-45bf-98c0-03c2386f80b4",
+                      "step": "if",
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "id": "b1a1a9ee-10ac-49d3-82ee-3dd3efe14820",
+                              "step": "wt-cash-equal",
+                              "children": [
+                                {
+                                  "weight": {
+                                    "num": 100,
+                                    "den": 100
+                                  },
+                                  "id": "85687a47-22b9-475d-87f8-c2543955ee41",
+                                  "step": "if",
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "ticker": "GLL",
+                                          "exchange": "ARCX",
+                                          "name": "ProShares Trust - ProShares UltraShort Gold -2x Shares",
+                                          "id": "1ff9c717-a8a9-494b-a3f8-30a3dbd07b1b",
+                                          "step": "asset"
+                                        }
+                                      ],
+                                      "lhs-fn-params": {
+                                        "window": 20
+                                      },
+                                      "rhs-fn": "moving-average-price",
+                                      "is-else-condition?": false,
+                                      "rhs-fixed-value?": true,
+                                      "lhs-fn": "relative-strength-index",
+                                      "lhs-val": "UGL",
+                                      "id": "dde52be8-067f-4e1a-be53-21365511cbf5",
+                                      "condition": {
+                                        "condition-type": "compound",
+                                        "operator": "any",
+                                        "conditions": [
+                                          {
+                                            "condition-type": "binary",
+                                            "comparator": "gt",
+                                            "lhs": {
+                                              "fn": "relative-strength-index",
+                                              "ticker": "UGL",
+                                              "params": {
+                                                "window": 20
+                                              }
+                                            },
+                                            "rhs": {
+                                              "constant": 75.0
+                                            }
+                                          },
+                                          {
+                                            "condition-type": "binary",
+                                            "comparator": "gt",
+                                            "lhs": {
+                                              "fn": "relative-strength-index",
+                                              "ticker": "UGL",
+                                              "params": {
+                                                "window": 2
+                                              }
+                                            },
+                                            "rhs": {
+                                              "constant": 99.9
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      "rhs-fn-params": {
+                                        "window": 10
+                                      },
+                                      "comparator": "gt",
+                                      "rhs-val": "75",
+                                      "step": "if-child"
+                                    },
+                                    {
+                                      "id": "49560470-0dde-4f0c-8e5c-8bc4c2742c29",
+                                      "step": "if-child",
+                                      "is-else-condition?": true,
+                                      "children": [
+                                        {
+                                          "ticker": "UGL",
+                                          "exchange": "ARCX",
+                                          "name": "ProShares Trust - ProShares Ultra Gold 2x Shares",
+                                          "id": "bc6d693c-27f8-4019-a999-f08c082dfbbb",
+                                          "step": "asset"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "lhs-fn-params": {
+                            "window": 20
+                          },
+                          "rhs-fn": "moving-average-price",
+                          "is-else-condition?": false,
+                          "lhs-fn": "moving-average-price",
+                          "lhs-val": "UGL",
+                          "id": "f97767a4-4a7e-45e4-9293-289bd5916bbf",
+                          "rhs-fn-params": {
+                            "window": 50
+                          },
+                          "comparator": "gt",
+                          "rhs-val": "UGL",
+                          "step": "if-child"
+                        },
+                        {
+                          "id": "b9848f86-c9e7-4052-87f1-098d785a4526",
+                          "step": "if-child",
+                          "is-else-condition?": true,
+                          "children": [
+                            {
+                              "id": "670d5155-0b5a-4e15-8de2-7f42a070027f",
+                              "step": "wt-cash-equal",
+                              "children": [
+                                {
+                                  "weight": {
+                                    "num": 100,
+                                    "den": 100
+                                  },
+                                  "id": "84ab7f09-604f-408f-a07c-b90c9613880f",
+                                  "step": "if",
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "id": "c9092da0-da8b-45f0-9477-d75ee5b67eff",
+                                          "step": "wt-cash-equal",
+                                          "children": [
+                                            {
+                                              "weight": {
+                                                "num": 100,
+                                                "den": 100
+                                              },
+                                              "id": "34416e51-3e11-4308-8208-7aa92d5c3998",
+                                              "step": "if",
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "ticker": "GLL",
+                                                      "exchange": "ARCX",
+                                                      "name": "ProShares Trust - ProShares UltraShort Gold -2x Shares",
+                                                      "id": "e83be508-187b-4866-af97-afe227685a48",
+                                                      "step": "asset"
+                                                    }
+                                                  ],
+                                                  "lhs-fn-params": {
+                                                    "window": 10
+                                                  },
+                                                  "rhs-fn": "moving-average-price",
+                                                  "is-else-condition?": false,
+                                                  "rhs-fixed-value?": true,
+                                                  "lhs-fn": "relative-strength-index",
+                                                  "lhs-val": "UGL",
+                                                  "id": "0131bbc4-83fa-4cf9-97b7-f6a2310714c4",
+                                                  "rhs-fn-params": {
+                                                    "window": 10
+                                                  },
+                                                  "comparator": "gt",
+                                                  "rhs-val": "60",
+                                                  "step": "if-child"
+                                                },
+                                                {
+                                                  "id": "9c13499a-5311-4530-90c2-035b2cd9172a",
+                                                  "step": "if-child",
+                                                  "is-else-condition?": true,
+                                                  "children": [
+                                                    {
+                                                      "ticker": "UGL",
+                                                      "exchange": "ARCX",
+                                                      "name": "ProShares Trust - ProShares Ultra Gold 2x Shares",
+                                                      "id": "837373ce-bd9d-4e55-a28a-a82b5924bc86",
+                                                      "step": "asset"
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "lhs-fn-params": {
+                                        "window": 5
+                                      },
+                                      "rhs-fn": "moving-average-price",
+                                      "is-else-condition?": false,
+                                      "lhs-fn": "moving-average-price",
+                                      "lhs-val": "UGL",
+                                      "id": "7b5d5d7a-f353-4e43-8c75-8073b48b2db1",
+                                      "rhs-fn-params": {
+                                        "window": 10
+                                      },
+                                      "comparator": "gt",
+                                      "rhs-val": "UGL",
+                                      "step": "if-child"
+                                    },
+                                    {
+                                      "id": "35536921-aea4-4988-ab60-6d4790ebdb8a",
+                                      "step": "if-child",
+                                      "is-else-condition?": true,
+                                      "children": [
+                                        {
+                                          "id": "4ba17cab-cab3-4660-b43f-081802300bac",
+                                          "step": "wt-cash-equal",
+                                          "children": [
+                                            {
+                                              "weight": {
+                                                "num": 100,
+                                                "den": 100
+                                              },
+                                              "id": "cc0282a1-09af-428c-9b6d-c8c436146edc",
+                                              "step": "if",
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "ticker": "UGL",
+                                                      "exchange": "ARCX",
+                                                      "name": "ProShares Trust - ProShares Ultra Gold 2x Shares",
+                                                      "id": "5bd51595-a257-4414-b303-198b3d22afb2",
+                                                      "step": "asset"
+                                                    }
+                                                  ],
+                                                  "lhs-fn-params": {
+                                                    "window": 20
+                                                  },
+                                                  "rhs-fn": "moving-average-price",
+                                                  "is-else-condition?": false,
+                                                  "rhs-fixed-value?": true,
+                                                  "lhs-fn": "relative-strength-index",
+                                                  "lhs-val": "UGL",
+                                                  "id": "758ac9b7-d51a-46e7-962b-21535d05b6b1",
+                                                  "rhs-fn-params": {
+                                                    "window": 10
+                                                  },
+                                                  "comparator": "lt",
+                                                  "rhs-val": "30",
+                                                  "step": "if-child"
+                                                },
+                                                {
+                                                  "id": "a9c140d8-d883-4a4c-a5a5-6b1882cac7f7",
+                                                  "step": "if-child",
+                                                  "is-else-condition?": true,
+                                                  "children": [
+                                                    {
+                                                      "ticker": "GLL",
+                                                      "exchange": "ARCX",
+                                                      "name": "ProShares Trust - ProShares UltraShort Gold -2x Shares",
+                                                      "id": "26f1b782-4bac-42a6-80b2-a917de467ca1",
+                                                      "step": "asset"
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "asset_classes": [
+    "EQUITIES"
+  ],
+  "asset_class": "EQUITIES"
+}

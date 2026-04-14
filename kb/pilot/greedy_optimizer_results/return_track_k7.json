@@ -1,0 +1,41 @@
+{
+  "selected": [
+    "better_kmlm"
+  ],
+  "history": [
+    {
+      "k": 1,
+      "slug": "better_kmlm",
+      "avg_return": 700.6,
+      "avg_sharpe": 3.122,
+      "marginal": 0
+    },
+    {
+      "k": 2,
+      "slug": "qqq_ftlt_bonds",
+      "avg_return": 513.7,
+      "avg_sharpe": 3.571,
+      "marginal": -186.89999999999998
+    }
+  ],
+  "per_year": {
+    "2022": {
+      "sharpe": 1.777,
+      "annret": 233.8,
+      "cumret": 149.3,
+      "maxdd": 36.06
+    },
+    "2023": {
+      "sharpe": 3.763,
+      "annret": 579.2,
+      "cumret": 568.9,
+      "maxdd": 17.8
+    },
+    "2024": {
+      "sharpe": 3.825,
+      "annret": 1288.8,
+      "cumret": 1288.8,
+      "maxdd": 16.27
+    }
+  }
+}

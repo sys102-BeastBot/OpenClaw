@@ -1,0 +1,719 @@
+{
+  "id": "5ef51150-db56-48a5-9fd1-e1d63124fd42",
+  "step": "root",
+  "name": "Just Run This FTLT | 2011-09-13",
+  "description": "",
+  "rebalance": "daily",
+  "children": [
+    {
+      "id": "aff9e7b7-5cad-442b-b4f9-b91458f73480",
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "id": "07bba9aa-a56a-47f4-8333-910695c3589d",
+          "step": "group",
+          "name": "Just Run This FTLT | 2011-09-13",
+          "children": [
+            {
+              "step": "wt-cash-equal",
+              "id": "7fa45924-55ff-48bf-a174-a747be7e494e",
+              "children": [
+                {
+                  "weight": {
+                    "num": 100,
+                    "den": 100
+                  },
+                  "id": "dad90ac5-8a9b-40e1-86d0-a9e9eb54e63a",
+                  "step": "if",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "id": "da7a5ded-9eba-4cf7-8141-712086e7c69e",
+                          "step": "group",
+                          "name": "Frontrunner -> Inverse Vol Blend",
+                          "children": [
+                            {
+                              "step": "wt-cash-equal",
+                              "id": "9439ff4e-53b7-46cb-8020-d4e4ad4f00fc",
+                              "children": [
+                                {
+                                  "weight": {
+                                    "num": "100",
+                                    "den": 100
+                                  },
+                                  "id": "1abbc119-cb77-485f-8da4-e37889e06796",
+                                  "step": "if",
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "ticker": "VIXY",
+                                          "id": "7844cf61-2c8d-442b-af2d-4ebcbbac9210",
+                                          "step": "asset",
+                                          "collapsed?": true,
+                                          "children": []
+                                        }
+                                      ],
+                                      "rhs-fn": "relative-strength-index",
+                                      "is-else-condition?": false,
+                                      "rhs-fixed-value?": true,
+                                      "lhs-fn": "relative-strength-index",
+                                      "rhs-window-days": "10",
+                                      "lhs-window-days": "10",
+                                      "lhs-val": "SPY",
+                                      "id": "6cf9573a-b184-410e-b76e-5b40e2b0c2e6",
+                                      "comparator": "gt",
+                                      "rhs-val": "80",
+                                      "step": "if-child",
+                                      "collapsed?": true
+                                    },
+                                    {
+                                      "id": "782048e6-08c2-4e1d-ae2a-a58a23e177b2",
+                                      "step": "if-child",
+                                      "is-else-condition?": true,
+                                      "children": [
+                                        {
+                                          "id": "86c8fd36-8230-40f4-8ad7-555a39e9f160",
+                                          "step": "wt-cash-equal",
+                                          "children": [
+                                            {
+                                              "weight": {
+                                                "num": 100,
+                                                "den": 100
+                                              },
+                                              "id": "ade1c814-6ab3-49a7-86ee-51998eeb7fb7",
+                                              "step": "if",
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "ticker": "VIXY",
+                                                      "id": "cf6d9ef0-44b7-4c0a-883f-6e97864cd4fa",
+                                                      "step": "asset",
+                                                      "collapsed?": true,
+                                                      "children": []
+                                                    }
+                                                  ],
+                                                  "is-else-condition?": false,
+                                                  "rhs-fixed-value?": true,
+                                                  "lhs-fn": "relative-strength-index",
+                                                  "lhs-window-days": "10",
+                                                  "lhs-val": "QQQ",
+                                                  "id": "acba7319-bdd2-4bcb-a6f8-ec746748e979",
+                                                  "comparator": "gt",
+                                                  "rhs-val": "79",
+                                                  "step": "if-child",
+                                                  "collapsed?": true
+                                                },
+                                                {
+                                                  "id": "865fa12d-8269-4ed0-93aa-b9d5ba18f1ae",
+                                                  "step": "if-child",
+                                                  "is-else-condition?": true,
+                                                  "children": [
+                                                    {
+                                                      "id": "75684663-5f9f-483a-bab9-4fd4f886d8d1",
+                                                      "step": "wt-cash-equal",
+                                                      "children": [
+                                                        {
+                                                          "weight": {
+                                                            "num": "100",
+                                                            "den": 100
+                                                          },
+                                                          "id": "6a32e7a0-cd49-416d-9b55-e09686dd1d2a",
+                                                          "step": "if",
+                                                          "children": [
+                                                            {
+                                                              "children": [
+                                                                {
+                                                                  "ticker": "VIXY",
+                                                                  "id": "cbf1776f-8e7f-4455-93cd-e350347bf00c",
+                                                                  "step": "asset",
+                                                                  "collapsed?": true,
+                                                                  "children": []
+                                                                }
+                                                              ],
+                                                              "rhs-fn": "relative-strength-index",
+                                                              "is-else-condition?": false,
+                                                              "rhs-fixed-value?": true,
+                                                              "lhs-fn": "relative-strength-index",
+                                                              "rhs-window-days": "10",
+                                                              "lhs-window-days": "10",
+                                                              "lhs-val": "XLK",
+                                                              "id": "0c5a10e5-7ac2-416e-b28c-baf5d8377e33",
+                                                              "comparator": "gt",
+                                                              "rhs-val": "79",
+                                                              "step": "if-child",
+                                                              "collapsed?": true
+                                                            },
+                                                            {
+                                                              "id": "9c25e227-b5cc-45a1-9f15-403b36709bc3",
+                                                              "step": "if-child",
+                                                              "is-else-condition?": true,
+                                                              "children": [
+                                                                {
+                                                                  "id": "a23fcc22-8beb-4fb1-a6db-222fffc821da",
+                                                                  "step": "wt-cash-equal",
+                                                                  "children": [
+                                                                    {
+                                                                      "id": "dcd6fb47-6890-44e3-9a86-7b1f37a7072c",
+                                                                      "step": "if",
+                                                                      "children": [
+                                                                        {
+                                                                          "children": [
+                                                                            {
+                                                                              "ticker": "VIXY",
+                                                                              "id": "33132326-47a1-48eb-8616-aa1fd9ba46b3",
+                                                                              "step": "asset",
+                                                                              "collapsed?": true,
+                                                                              "children": []
+                                                                            }
+                                                                          ],
+                                                                          "is-else-condition?": false,
+                                                                          "rhs-fixed-value?": true,
+                                                                          "lhs-fn": "relative-strength-index",
+                                                                          "lhs-window-days": "10",
+                                                                          "lhs-val": "IYY",
+                                                                          "id": "d068ec34-b8c2-4fb2-b687-06efbba92f91",
+                                                                          "comparator": "gt",
+                                                                          "rhs-val": "79",
+                                                                          "step": "if-child",
+                                                                          "collapsed?": true
+                                                                        },
+                                                                        {
+                                                                          "id": "e64a2c6e-68fe-4201-bf8b-d9429f7b50be",
+                                                                          "step": "if-child",
+                                                                          "is-else-condition?": true,
+                                                                          "children": [
+                                                                            {
+                                                                              "id": "f0752ec6-bc9e-4199-b805-1d60c1f6e7cd",
+                                                                              "step": "wt-cash-equal",
+                                                                              "children": [
+                                                                                {
+                                                                                  "id": "5cb2130f-aca2-4210-890a-b1ef0637cb87",
+                                                                                  "step": "if",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "ticker": "VIXY",
+                                                                                          "id": "c3f5c608-8dff-4cf8-a5b9-edb554f7792f",
+                                                                                          "step": "asset",
+                                                                                          "collapsed?": true,
+                                                                                          "children": []
+                                                                                        }
+                                                                                      ],
+                                                                                      "is-else-condition?": false,
+                                                                                      "rhs-fixed-value?": true,
+                                                                                      "lhs-fn": "relative-strength-index",
+                                                                                      "lhs-window-days": "10",
+                                                                                      "lhs-val": "VTV",
+                                                                                      "id": "ac36ffac-b753-4c7a-9ef4-0e8284093391",
+                                                                                      "comparator": "gt",
+                                                                                      "rhs-val": "79",
+                                                                                      "step": "if-child",
+                                                                                      "collapsed?": true
+                                                                                    },
+                                                                                    {
+                                                                                      "id": "97c9762c-2746-4f79-b383-e7d0b072db71",
+                                                                                      "step": "if-child",
+                                                                                      "is-else-condition?": true,
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "id": "f3543db8-1bca-449f-b267-f381407673d2",
+                                                                                          "step": "wt-cash-equal",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "id": "aaca91ed-1ee6-4557-817b-b197280f5854",
+                                                                                              "step": "if",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "ticker": "VIXY",
+                                                                                                      "id": "010cc7d1-df15-4bf6-9e6a-2d76817b53db",
+                                                                                                      "step": "asset",
+                                                                                                      "collapsed?": true,
+                                                                                                      "children": []
+                                                                                                    }
+                                                                                                  ],
+                                                                                                  "is-else-condition?": false,
+                                                                                                  "rhs-fixed-value?": true,
+                                                                                                  "lhs-fn": "relative-strength-index",
+                                                                                                  "lhs-window-days": "10",
+                                                                                                  "lhs-val": "XLP",
+                                                                                                  "id": "b95db2e2-99eb-46db-a581-795d825d7be5",
+                                                                                                  "comparator": "gt",
+                                                                                                  "rhs-val": "75",
+                                                                                                  "step": "if-child",
+                                                                                                  "collapsed?": true
+                                                                                                },
+                                                                                                {
+                                                                                                  "id": "c9e0e037-43fc-44df-b6d6-6728bb315879",
+                                                                                                  "step": "if-child",
+                                                                                                  "is-else-condition?": true,
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "id": "21819cb0-e181-4fff-b09b-4817c3899b04",
+                                                                                                      "step": "wt-cash-equal",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "id": "848046bb-b546-4cea-a7e6-aac911679c53",
+                                                                                                          "step": "if",
+                                                                                                          "children": [
+                                                                                                            {
+                                                                                                              "children": [
+                                                                                                                {
+                                                                                                                  "ticker": "VIXY",
+                                                                                                                  "id": "ec05b2e9-f17f-4c66-997d-2a4671aea152",
+                                                                                                                  "step": "asset",
+                                                                                                                  "collapsed?": true,
+                                                                                                                  "children": []
+                                                                                                                }
+                                                                                                              ],
+                                                                                                              "is-else-condition?": false,
+                                                                                                              "rhs-fixed-value?": true,
+                                                                                                              "lhs-fn": "relative-strength-index",
+                                                                                                              "lhs-window-days": "10",
+                                                                                                              "lhs-val": "XLF",
+                                                                                                              "id": "9a9cee14-0bf2-4343-9b98-ce7ac252bcba",
+                                                                                                              "comparator": "gt",
+                                                                                                              "rhs-val": "80",
+                                                                                                              "step": "if-child",
+                                                                                                              "collapsed?": true
+                                                                                                            },
+                                                                                                            {
+                                                                                                              "id": "01a2b5c6-ac68-40cc-89d3-e0ff00bad171",
+                                                                                                              "step": "if-child",
+                                                                                                              "is-else-condition?": true,
+                                                                                                              "children": [
+                                                                                                                {
+                                                                                                                  "id": "69e0752b-f93f-460e-bac7-153e7f4edab4",
+                                                                                                                  "step": "wt-cash-equal",
+                                                                                                                  "children": [
+                                                                                                                    {
+                                                                                                                      "id": "66d328d2-8dd4-46ae-b3ec-0f0937f5565a",
+                                                                                                                      "step": "if",
+                                                                                                                      "children": [
+                                                                                                                        {
+                                                                                                                          "children": [
+                                                                                                                            {
+                                                                                                                              "ticker": "VIXY",
+                                                                                                                              "id": "8c4b38d3-af2c-40a2-86b8-cc9f01e65e15",
+                                                                                                                              "step": "asset",
+                                                                                                                              "collapsed?": true,
+                                                                                                                              "children": []
+                                                                                                                            }
+                                                                                                                          ],
+                                                                                                                          "is-else-condition?": false,
+                                                                                                                          "rhs-fixed-value?": true,
+                                                                                                                          "lhs-fn": "relative-strength-index",
+                                                                                                                          "lhs-window-days": "10",
+                                                                                                                          "lhs-val": "VOX",
+                                                                                                                          "id": "6575a8be-156e-4a0a-960a-49a4121c7e56",
+                                                                                                                          "comparator": "gt",
+                                                                                                                          "rhs-val": "79",
+                                                                                                                          "step": "if-child",
+                                                                                                                          "collapsed?": true
+                                                                                                                        },
+                                                                                                                        {
+                                                                                                                          "id": "c1abe4fa-21c8-4271-898d-c469d5c7e684",
+                                                                                                                          "step": "if-child",
+                                                                                                                          "is-else-condition?": true,
+                                                                                                                          "children": [
+                                                                                                                            {
+                                                                                                                              "id": "d54b996d-0a33-496f-83a5-d29205cfa3e9",
+                                                                                                                              "step": "wt-inverse-vol",
+                                                                                                                              "children": [
+                                                                                                                                {
+                                                                                                                                  "ticker": "LLY",
+                                                                                                                                  "id": "f08d8263-b8c4-4881-b991-a819f55d06e8",
+                                                                                                                                  "step": "asset",
+                                                                                                                                  "weight": {
+                                                                                                                                    "num": 40,
+                                                                                                                                    "den": 100
+                                                                                                                                  },
+                                                                                                                                  "collapsed?": true,
+                                                                                                                                  "children": []
+                                                                                                                                },
+                                                                                                                                {
+                                                                                                                                  "ticker": "NVO",
+                                                                                                                                  "id": "cf07f507-0db1-4b7c-9dde-c6057da4f676",
+                                                                                                                                  "step": "asset",
+                                                                                                                                  "collapsed?": true,
+                                                                                                                                  "children": []
+                                                                                                                                },
+                                                                                                                                {
+                                                                                                                                  "ticker": "COST",
+                                                                                                                                  "id": "0aaff6ca-bbf1-42cb-b384-30d0f6ad3df8",
+                                                                                                                                  "step": "asset",
+                                                                                                                                  "collapsed?": true,
+                                                                                                                                  "children": []
+                                                                                                                                },
+                                                                                                                                {
+                                                                                                                                  "ticker": "GE",
+                                                                                                                                  "id": "95519046-b1be-475d-adf9-06afe966a14e",
+                                                                                                                                  "step": "asset",
+                                                                                                                                  "weight": {
+                                                                                                                                    "num": "40",
+                                                                                                                                    "den": 100
+                                                                                                                                  },
+                                                                                                                                  "collapsed?": true,
+                                                                                                                                  "children": []
+                                                                                                                                }
+                                                                                                                              ],
+                                                                                                                              "window-days": "20",
+                                                                                                                              "collapsed?": true
+                                                                                                                            }
+                                                                                                                          ],
+                                                                                                                          "collapsed?": true
+                                                                                                                        }
+                                                                                                                      ],
+                                                                                                                      "collapsed?": true
+                                                                                                                    }
+                                                                                                                  ],
+                                                                                                                  "collapsed?": true
+                                                                                                                }
+                                                                                                              ],
+                                                                                                              "collapsed?": true
+                                                                                                            }
+                                                                                                          ],
+                                                                                                          "collapsed?": true
+                                                                                                        }
+                                                                                                      ],
+                                                                                                      "collapsed?": true
+                                                                                                    }
+                                                                                                  ],
+                                                                                                  "collapsed?": true
+                                                                                                }
+                                                                                              ],
+                                                                                              "collapsed?": true
+                                                                                            }
+                                                                                          ],
+                                                                                          "collapsed?": true
+                                                                                        }
+                                                                                      ],
+                                                                                      "collapsed?": true
+                                                                                    }
+                                                                                  ],
+                                                                                  "collapsed?": true
+                                                                                }
+                                                                              ],
+                                                                              "collapsed?": true
+                                                                            }
+                                                                          ],
+                                                                          "collapsed?": true
+                                                                        }
+                                                                      ],
+                                                                      "collapsed?": true
+                                                                    }
+                                                                  ],
+                                                                  "collapsed?": true
+                                                                }
+                                                              ],
+                                                              "collapsed?": true
+                                                            }
+                                                          ],
+                                                          "collapsed?": true
+                                                        }
+                                                      ],
+                                                      "collapsed?": true
+                                                    }
+                                                  ],
+                                                  "collapsed?": true
+                                                }
+                                              ],
+                                              "collapsed?": true
+                                            }
+                                          ],
+                                          "collapsed?": true
+                                        }
+                                      ],
+                                      "collapsed?": true
+                                    }
+                                  ],
+                                  "collapsed?": true
+                                }
+                              ],
+                              "collapsed?": true
+                            }
+                          ],
+                          "collapsed?": true
+                        }
+                      ],
+                      "rhs-fn": "moving-average-price",
+                      "is-else-condition?": false,
+                      "lhs-fn": "current-price",
+                      "rhs-window-days": "200",
+                      "lhs-val": "SPY",
+                      "id": "d86c044c-5382-4150-bd4b-db06ec450e8d",
+                      "comparator": "gt",
+                      "rhs-val": "SPY",
+                      "step": "if-child",
+                      "collapsed?": true
+                    },
+                    {
+                      "id": "17c19e22-d275-4402-9d4d-7a10b7eb3079",
+                      "step": "if-child",
+                      "is-else-condition?": true,
+                      "children": [
+                        {
+                          "id": "c54551ae-c3d0-4662-9dd2-255ac663b78c",
+                          "step": "group",
+                          "name": "Dip Buy -> High/Low Beta",
+                          "children": [
+                            {
+                              "step": "wt-cash-equal",
+                              "id": "0d8997d5-9cdf-46ff-9fd7-2ee59727ddc8",
+                              "children": [
+                                {
+                                  "id": "54fae9dd-79e3-4b79-a56c-fadad047de6c",
+                                  "step": "if",
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "ticker": "SOXL",
+                                          "exchange": "ARCX",
+                                          "name": "Direxion Daily Semiconductor Bull 3x Shares",
+                                          "id": "4a5f1b84-20e9-40db-97a7-25063d773353",
+                                          "step": "asset",
+                                          "collapsed?": true,
+                                          "children": []
+                                        }
+                                      ],
+                                      "is-else-condition?": false,
+                                      "rhs-fixed-value?": true,
+                                      "lhs-fn": "relative-strength-index",
+                                      "lhs-window-days": "10",
+                                      "lhs-val": "SOXX",
+                                      "id": "1a25282a-3b92-4389-ae4d-6b712e13eeb3",
+                                      "comparator": "lt",
+                                      "rhs-val": "30",
+                                      "step": "if-child",
+                                      "collapsed?": true
+                                    },
+                                    {
+                                      "id": "95779927-b7ad-4744-841b-bc3a07c141fb",
+                                      "step": "if-child",
+                                      "is-else-condition?": true,
+                                      "children": [
+                                        {
+                                          "id": "9618c274-ed2a-4e7f-a24f-41256c6e798d",
+                                          "step": "wt-cash-equal",
+                                          "children": [
+                                            {
+                                              "id": "a838be69-15bd-4151-b6e2-c37acb20e9d6",
+                                              "step": "if",
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "ticker": "TECL",
+                                                      "exchange": "ARCX",
+                                                      "name": "Direxion Daily Technology Bull 3x Shares",
+                                                      "id": "b179ceec-03fa-499d-9fd9-f3eeda866451",
+                                                      "step": "asset",
+                                                      "collapsed?": true,
+                                                      "children": []
+                                                    }
+                                                  ],
+                                                  "is-else-condition?": false,
+                                                  "rhs-fixed-value?": true,
+                                                  "lhs-fn": "relative-strength-index",
+                                                  "lhs-window-days": "10",
+                                                  "lhs-val": "QQQ",
+                                                  "id": "00e82bc8-411d-4cb4-a730-147279dedf90",
+                                                  "comparator": "lt",
+                                                  "rhs-val": "30",
+                                                  "step": "if-child",
+                                                  "collapsed?": true
+                                                },
+                                                {
+                                                  "id": "07660fc3-b29d-435b-bd48-1a6d58e21a05",
+                                                  "step": "if-child",
+                                                  "is-else-condition?": true,
+                                                  "children": [
+                                                    {
+                                                      "id": "d0667e85-1a10-4971-8add-9dedb3b98601",
+                                                      "step": "wt-cash-equal",
+                                                      "children": [
+                                                        {
+                                                          "id": "eefceec4-35dd-40a8-994e-b71293362695",
+                                                          "step": "if",
+                                                          "children": [
+                                                            {
+                                                              "children": [
+                                                                {
+                                                                  "id": "42123fc0-ebd9-46e4-9e23-7ad0cb0319f1",
+                                                                  "step": "wt-cash-equal",
+                                                                  "children": [
+                                                                    {
+                                                                      "id": "66c966dd-6b70-4aca-8982-a6dff502924a",
+                                                                      "step": "if",
+                                                                      "children": [
+                                                                        {
+                                                                          "children": [
+                                                                            {
+                                                                              "ticker": "BTAL",
+                                                                              "exchange": "ARCX",
+                                                                              "name": "AGF U.S. Market Neutral Anti-Beta Fund",
+                                                                              "id": "8cff2928-981b-42b8-bbc6-9a5ddfc20da9",
+                                                                              "step": "asset",
+                                                                              "collapsed?": true,
+                                                                              "children": []
+                                                                            }
+                                                                          ],
+                                                                          "is-else-condition?": false,
+                                                                          "rhs-fixed-value?": true,
+                                                                          "lhs-fn": "relative-strength-index",
+                                                                          "lhs-window-days": "10",
+                                                                          "lhs-val": "PSQ",
+                                                                          "id": "006ec4cf-f576-4b1c-bb64-78dac10de90b",
+                                                                          "comparator": "lt",
+                                                                          "rhs-val": "35",
+                                                                          "step": "if-child",
+                                                                          "collapsed?": true
+                                                                        },
+                                                                        {
+                                                                          "id": "9e6d652d-9dbe-4ec8-bc4e-3ffb05448cc2",
+                                                                          "step": "if-child",
+                                                                          "is-else-condition?": true,
+                                                                          "children": [
+                                                                            {
+                                                                              "ticker": "SPHB",
+                                                                              "exchange": "ARCX",
+                                                                              "name": "Invesco S&P 500 High Beta ETF",
+                                                                              "id": "8b2ef857-96ad-43b8-bfdc-dae6bb8eda32",
+                                                                              "step": "asset",
+                                                                              "collapsed?": true,
+                                                                              "children": []
+                                                                            }
+                                                                          ],
+                                                                          "collapsed?": true
+                                                                        }
+                                                                      ],
+                                                                      "collapsed?": true
+                                                                    }
+                                                                  ],
+                                                                  "collapsed?": true
+                                                                }
+                                                              ],
+                                                              "rhs-fn": "moving-average-price",
+                                                              "is-else-condition?": false,
+                                                              "lhs-fn": "current-price",
+                                                              "lhs-val": "QQQ",
+                                                              "id": "0fbc81e6-d1eb-4577-843a-d2b40a875fe8",
+                                                              "rhs-fn-params": {
+                                                                "window": 30
+                                                              },
+                                                              "comparator": "gt",
+                                                              "rhs-val": "QQQ",
+                                                              "step": "if-child",
+                                                              "collapsed?": true
+                                                            },
+                                                            {
+                                                              "id": "3cd68748-18e9-4595-871f-54d51a74b6bd",
+                                                              "step": "if-child",
+                                                              "is-else-condition?": true,
+                                                              "children": [
+                                                                {
+                                                                  "id": "3a2750ec-55d1-4ac2-937d-43bdf273ac14",
+                                                                  "step": "wt-cash-equal",
+                                                                  "children": [
+                                                                    {
+                                                                      "id": "e4f596c5-9269-4807-890f-851dc68b69df",
+                                                                      "step": "if",
+                                                                      "children": [
+                                                                        {
+                                                                          "children": [
+                                                                            {
+                                                                              "ticker": "SPHB",
+                                                                              "exchange": "ARCX",
+                                                                              "name": "Invesco S&P 500 High Beta ETF",
+                                                                              "id": "e24d1740-e2a9-4783-8a54-349827432423",
+                                                                              "step": "asset",
+                                                                              "collapsed?": true,
+                                                                              "children": []
+                                                                            }
+                                                                          ],
+                                                                          "is-else-condition?": false,
+                                                                          "rhs-fixed-value?": true,
+                                                                          "lhs-fn": "relative-strength-index",
+                                                                          "lhs-window-days": "10",
+                                                                          "lhs-val": "PSQ",
+                                                                          "id": "21241620-7f4d-40e3-8a86-61294ab08f64",
+                                                                          "comparator": "gt",
+                                                                          "rhs-val": "65",
+                                                                          "step": "if-child",
+                                                                          "collapsed?": true
+                                                                        },
+                                                                        {
+                                                                          "id": "03dfb637-1cc8-498c-96f4-a57fa160f173",
+                                                                          "step": "if-child",
+                                                                          "is-else-condition?": true,
+                                                                          "children": [
+                                                                            {
+                                                                              "ticker": "BTAL",
+                                                                              "exchange": "ARCX",
+                                                                              "name": "AGF U.S. Market Neutral Anti-Beta Fund",
+                                                                              "id": "5977a43e-8d46-40b1-9ca6-f1422c97076e",
+                                                                              "step": "asset",
+                                                                              "collapsed?": true,
+                                                                              "children": []
+                                                                            }
+                                                                          ],
+                                                                          "collapsed?": true
+                                                                        }
+                                                                      ],
+                                                                      "collapsed?": true
+                                                                    }
+                                                                  ],
+                                                                  "collapsed?": true
+                                                                }
+                                                              ],
+                                                              "collapsed?": true
+                                                            }
+                                                          ],
+                                                          "collapsed?": true
+                                                        }
+                                                      ],
+                                                      "collapsed?": true
+                                                    }
+                                                  ],
+                                                  "collapsed?": true
+                                                }
+                                              ],
+                                              "collapsed?": true
+                                            }
+                                          ],
+                                          "collapsed?": true
+                                        }
+                                      ],
+                                      "collapsed?": true
+                                    }
+                                  ],
+                                  "collapsed?": true
+                                }
+                              ],
+                              "collapsed?": true
+                            }
+                          ],
+                          "collapsed?": true
+                        }
+                      ],
+                      "collapsed?": true
+                    }
+                  ],
+                  "collapsed?": true
+                }
+              ],
+              "collapsed?": true
+            }
+          ],
+          "collapsed?": true
+        }
+      ]
+    }
+  ]
+}
